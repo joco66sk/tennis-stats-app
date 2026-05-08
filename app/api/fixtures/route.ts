@@ -12,7 +12,20 @@ const HEADERS = {
   'x-rapidapi-key': API_KEY,
 };
 
-const CACHE_DIR = path.join(process.cwd(), 'cache');
+const IS_VERCEL = !!process.env.VERCEL;
+const STATIC_CACHE = path.join(process.cwd(), 'cache');
+const CACHE_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_CACHE;
+
+// On cold start: copy committed cache files to /tmp so they're readable and writable.
+function initCache() {
+  if (!IS_VERCEL || fs.existsSync(CACHE_DIR)) return;
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
+  if (fs.existsSync(STATIC_CACHE)) {
+    for (const file of fs.readdirSync(STATIC_CACHE)) {
+      try { fs.copyFileSync(path.join(STATIC_CACHE, file), path.join(CACHE_DIR, file)); } catch {}
+    }
+  }
+}
 
 async function safeFetch(url: string): Promise<any> {
   try {
@@ -64,6 +77,7 @@ function writeCache(filePath: string, data: any) {
 }
 
 export async function GET(request: NextRequest) {
+  initCache();
   const { searchParams } = new URL(request.url);
   const forceRefresh = searchParams.get('refresh') === 'true';
 

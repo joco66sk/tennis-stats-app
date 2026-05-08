@@ -3,8 +3,22 @@ import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const CACHE_DIR = path.join(process.cwd(), 'cache');
-const MATCH_STATS_DIR = path.join(process.cwd(), 'app', 'api', 'cache');
+const IS_VERCEL = !!process.env.VERCEL;
+const STATIC_CACHE = path.join(process.cwd(), 'cache');
+const STATIC_MATCH_STATS = path.join(process.cwd(), 'app', 'api', 'cache');
+const CACHE_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_CACHE;
+const MATCH_STATS_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_MATCH_STATS;
+
+function initCache() {
+  if (!IS_VERCEL || fs.existsSync(CACHE_DIR)) return;
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
+  for (const srcDir of [STATIC_CACHE, STATIC_MATCH_STATS]) {
+    if (!fs.existsSync(srcDir)) continue;
+    for (const file of fs.readdirSync(srcDir)) {
+      try { fs.copyFileSync(path.join(srcDir, file), path.join(CACHE_DIR, file)); } catch {}
+    }
+  }
+}
 const HOST = process.env.RAPIDAPI_HOST || 'tennis-api-atp-wta-itf.p.rapidapi.com';
 const HEADERS = {
   'x-rapidapi-host': HOST,
@@ -140,6 +154,7 @@ async function fetchAndMergeMatches(playerId: string, pages = 3): Promise<any[]>
 }
 
 export async function GET(request: NextRequest) {
+  initCache();
   const { searchParams } = new URL(request.url);
   const playerId = searchParams.get('playerId');
   const surface = searchParams.get('surface') || 'Clay';
