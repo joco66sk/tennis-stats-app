@@ -1,69 +1,312 @@
-import Image from "next/image";
-import Head from 'next/head';
+'use client';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
+interface Fixture {
+  id: number;
+  date: string;
+  player1?: { id: number; name: string; countryAcr?: string };
+  player2?: { id: number; name: string; countryAcr?: string };
+  tournament: {
+    name: string;
+    rankId?: number;
+    court?: { name: string };
+    rank?: { id?: number; name?: string };
+  };
+  round?: { name: string };
+}
+
+interface PlayerSurfaceStat {
+  wins: number;
+  losses: number;
+}
+
 export default function Home() {
+  const [fixtures, setFixtures] = useState<Fixture[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [playerStats, setPlayerStats] = useState<Record<string, PlayerSurfaceStat>>({});
+  const [refreshing, setRefreshing] = useState(false);
+  const router = useRouter();
+
+  const formatDate = (date: Date) => {
+    const cetDate = new Date(date.getTime() + 2 * 60 * 60 * 1000);
+    return cetDate.toISOString().split('T')[0];
+  };
+
+  const changeDate = (days: number) => {
+    const newDate = new Date(selectedDate);
+    newDate.setDate(newDate.getDate() + days);
+    setSelectedDate(newDate);
+  };
+
+  const loadFixtures = (date: Date, force = false) => {
+    setLoading(true);
+    setError(false);
+    setPlayerStats({});
+    const url = `/api/fixtures?date=${formatDate(date)}${force ? '&refresh=true' : ''}`;
+    fetch(url)
+      .then(r => {
+        if (!r.ok) throw new Error('Failed to fetch');
+        return r.json();
+      })
+      .then(data => {
+        setFixtures(data.fixtures || []);
+        setLoading(false);
+        setRefreshing(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setFixtures([]);
+        setError(true);
+        setLoading(false);
+        setRefreshing(false);
+      });
+  };
+
+  const handleRefresh = () => {
+    setRefreshing(true);
+    loadFixtures(selectedDate, true);
+  };
+
+  useEffect(() => {
+    loadFixtures(selectedDate);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedDate]);
+
+  useEffect(() => {
+    if (fixtures.length === 0) return;
+
+    const atpFixtures = fixtures.filter(f => (f.tournament?.rank?.id ?? 0) >= 2);
+
+    const toFetch = new Map<string, { playerId: number; surface: string }>();
+    atpFixtures.forEach(f => {
+      const surface = f.tournament?.court?.name || 'Hard';
+      if (f.player1?.id) toFetch.set(`${f.player1.id}-${surface}`, { playerId: f.player1.id, surface });
+      if (f.player2?.id) toFetch.set(`${f.player2.id}-${surface}`, { playerId: f.player2.id, surface });
+    });
+
+    const entries = Array.from(toFetch.values());
+    let cancelled = false;
+
+    const pending = [...entries];
+    const runWorker = async () => {
+      while (true) {
+        if (cancelled) break;
+        const entry = pending.shift();
+        if (!entry) break;
+        const { playerId, surface } = entry;
+        try {
+          const res = await fetch(`/api/player-surface-stats?playerId=${playerId}&surface=${surface}&limit=10&basic=true`);
+          if (!res.ok || cancelled) continue;
+          const data = await res.json();
+          if (!cancelled && (data.wins ?? 0) + (data.losses ?? 0) > 0) {
+            setPlayerStats(prev => ({
+              ...prev,
+              [`${playerId}-${surface}`]: { wins: data.wins, losses: data.losses },
+            }));
+          }
+        } catch {}
+      }
+    };
+
+    const workerCount = Math.min(5, entries.length);
+    Promise.allSettled(Array.from({ length: workerCount }, runWorker));
+
+    return () => { cancelled = true; };
+  }, [fixtures]);
+
+  const handleMatchClick = (fixture: Fixture) => {
+    const p1 = fixture.player1?.id || '';
+    const p2 = fixture.player2?.id || '';
+    const surface = fixture.tournament?.court?.name || 'All';
+    router.push(`/compare?p1=${p1}&p2=${p2}&surface=${surface}`);
+  };
+
+  const getCategoryLabel = (rankName?: string) => {
+    if (!rankName) return null;
+    const n = rankName.toLowerCase();
+    if (n.includes('grand slam')) return 'GS';
+    if (n.includes('1000') || n.includes('masters')) return '1000';
+    if (n.includes('500')) return '500';
+    if (n.includes('250')) return '250';
+    return null;
+  };
+
+  const getCategoryColor = (label?: string | null) => {
+    if (label === 'GS') return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/40';
+    if (label === '1000') return 'bg-purple-500/20 text-purple-400 border border-purple-500/40';
+    if (label === '500') return 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/40';
+    return 'bg-zinc-700/50 text-zinc-400 border border-zinc-600';
+  };
+
+  const formatRound = (roundName?: string) => {
+    if (!roundName) return null;
+    const n = roundName.toLowerCase();
+    if (n.includes('semi')) return 'SF';
+    if (n.includes('quarter')) return 'QF';
+    if (n.includes('final')) return 'F';
+    if (n.includes('16')) return 'R16';
+    if (n.includes('32')) return 'R32';
+    if (n.includes('64')) return 'R64';
+    if (n.includes('128')) return 'R128';
+    if (n.includes('first') || n === 'r1') return 'R1';
+    if (n.includes('second') || n === 'r2') return 'R2';
+    if (n.includes('third') || n === 'r3') return 'R3';
+    return roundName;
+  };
+
+  const getSurfaceColor = (surface?: string) => {
+    if (surface === 'Clay') return 'bg-orange-500/20 text-orange-400 border border-orange-500/40';
+    if (surface === 'Hard') return 'bg-blue-500/20 text-blue-400 border border-blue-500/40';
+    if (surface === 'Grass') return 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+    return 'bg-zinc-700/50 text-zinc-400 border border-zinc-600';
+  };
+
+  const getSurfaceBorder = (surface?: string) => {
+    if (surface === 'Clay') return 'border-l-orange-500';
+    if (surface === 'Hard') return 'border-l-blue-500';
+    if (surface === 'Grass') return 'border-l-emerald-500';
+    return 'border-l-zinc-600';
+  };
+
+  const formatTime = (dateStr: string) => {
+    return new Date(dateStr).toLocaleTimeString('en-GB', {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: 'Europe/Paris',
+    });
+  };
+
+  const grouped = fixtures.reduce((acc, f) => {
+    const key = f.tournament?.name || 'Unknown Tournament';
+    if (!acc[key]) acc[key] = [];
+    acc[key].push(f);
+    return acc;
+  }, {} as Record<string, Fixture[]>);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Head>
-  <title>Tennis Deep Stats</title>
-  <meta name="description" content="Deep tennis statistics, player analysis, match history, surface splits and more." />
-       </Head>
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-  Tennis Deep Stats"
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-zinc-950 p-3 md:p-4">
+      <div className="max-w-4xl mx-auto">
+        <header className="mb-3">
+          <h1 className="text-2xl font-black text-white tracking-tight uppercase">Tennis Deep Stats</h1>
+          <p className="text-zinc-500 text-xs mt-0.5 uppercase tracking-wider">ATP Matches · Click to compare</p>
+        </header>
+
+        <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-2.5 mb-3 flex items-center justify-between">
+          <button onClick={() => changeDate(-1)} className="px-4 py-1.5 text-blue-400 hover:bg-zinc-800 rounded-lg transition text-sm font-semibold">← Prev</button>
+          <div className="text-center">
+            <div className="font-bold text-white text-sm">
+              {selectedDate.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })}
+            </div>
+            {formatDate(selectedDate) !== formatDate(new Date()) && (
+              <button onClick={() => setSelectedDate(new Date())} className="text-xs text-blue-400 hover:underline">Today</button>
+            )}
+          </div>
+          <button onClick={() => changeDate(1)} className="px-4 py-1.5 text-blue-400 hover:bg-zinc-800 rounded-lg transition text-sm font-semibold">Next →</button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex justify-end mb-2">
+          <button onClick={handleRefresh} disabled={refreshing || loading}
+            className="text-xs text-zinc-500 hover:text-zinc-300 disabled:opacity-40 transition">
+            {refreshing ? 'Refreshing...' : '↻ Refresh schedule'}
+          </button>
         </div>
-      </main>
-  </div>
-);
+
+        {loading ? (
+          <div className="text-center py-16 text-zinc-500">Loading matches...</div>
+        ) : error ? (
+          <div className="text-center py-16 text-red-400">Failed to load fixtures. API quota might be low.</div>
+        ) : fixtures.length === 0 ? (
+          <div className="text-center py-16 text-zinc-500">No matches found for this date.</div>
+        ) : (
+          <div className="space-y-2.5">
+            {Object.entries(grouped).map(([tournamentName, matches]) => {
+              const isATP = (matches[0]?.tournament?.rank?.id ?? 0) >= 2;
+              const surface = matches[0]?.tournament?.court?.name;
+              const categoryLabel = getCategoryLabel(matches[0]?.tournament?.rank?.name);
+              return (
+                <div key={tournamentName} className={`bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden border-l-4 ${getSurfaceBorder(surface)}`}>
+                  <div className="px-4 py-2 flex items-center justify-between border-b border-zinc-800">
+                    <div className="flex items-center gap-2">
+                      <span className="font-black text-white text-sm uppercase tracking-wide">{tournamentName}</span>
+                      {categoryLabel && (
+                        <span className={`px-2 py-0.5 text-xs font-bold rounded uppercase tracking-wide ${getCategoryColor(categoryLabel)}`}>
+                          {categoryLabel}
+                        </span>
+                      )}
+                    </div>
+                    <span className={`px-2 py-0.5 text-xs font-bold rounded uppercase tracking-wide ${getSurfaceColor(surface)}`}>
+                      {surface || 'Unknown'}
+                    </span>
+                  </div>
+
+                  {matches.map((fixture, i) => {
+                    const matchSurface = fixture.tournament?.court?.name || 'Hard';
+                    const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
+                    const p2Stats = fixture.player2?.id ? playerStats[`${fixture.player2.id}-${matchSurface}`] : undefined;
+                    return (
+                      <div
+                        key={fixture.id}
+                        onClick={() => handleMatchClick(fixture)}
+                        className={`px-4 py-3 cursor-pointer hover:bg-zinc-800/60 active:bg-zinc-800 transition ${i > 0 ? 'border-t border-zinc-800' : ''}`}
+                      >
+                        <div className="grid grid-cols-[1fr_2.5rem_1fr_1.25rem] gap-2 items-start">
+                          <div>
+                            <div className="font-semibold text-white text-sm leading-tight">
+                              {fixture.player1?.name}
+                              {fixture.player1?.countryAcr && (
+                                <span className="text-zinc-500 text-xs ml-1.5">{fixture.player1.countryAcr}</span>
+                              )}
+                            </div>
+                            {isATP && (
+                              <div className="mt-1">
+                                {p1Stats
+                                  ? <span className={`text-sm font-bold ${p1Stats.wins > p1Stats.losses ? 'text-emerald-400' : 'text-red-400'}`}>{p1Stats.wins}W-{p1Stats.losses}L</span>
+                                  : <span className="text-xs text-zinc-600">—</span>
+                                }
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="text-center pt-0.5">
+                            <div className="text-zinc-500 font-mono text-xs leading-tight">{formatTime(fixture.date)}</div>
+                            {formatRound(fixture.round?.name) && (
+                              <div className="text-zinc-400 text-xs font-bold mt-0.5">{formatRound(fixture.round?.name)}</div>
+                            )}
+                            <div className="text-zinc-600 text-xs font-black mt-0.5">VS</div>
+                          </div>
+
+                          <div className="text-right">
+                            <div className="font-semibold text-white text-sm leading-tight">
+                              {fixture.player2?.countryAcr && (
+                                <span className="text-zinc-500 text-xs mr-1.5">{fixture.player2.countryAcr}</span>
+                              )}
+                              {fixture.player2?.name}
+                            </div>
+                            {isATP && (
+                              <div className="mt-1">
+                                {p2Stats
+                                  ? <span className={`text-sm font-bold ${p2Stats.wins > p2Stats.losses ? 'text-emerald-400' : 'text-red-400'}`}>{p2Stats.wins}W-{p2Stats.losses}L</span>
+                                  : <span className="text-xs text-zinc-600">—</span>
+                                }
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="flex items-start justify-end pt-0.5">
+                            <span className="text-blue-500 font-bold text-base leading-tight">→</span>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }

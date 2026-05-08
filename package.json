@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cache:today": "node scripts/prebuild-cache.js today",
+    "cache:date": "node scripts/prebuild-cache.js",
+    "cache:all": "node scripts/prebuild-cache.js all",
+    "cache:seed": "node scripts/seed-historical.js",
+    "cache:seed:force": "node scripts/seed-historical.js --force"
   },
   "dependencies": {
     "next": "16.1.6",

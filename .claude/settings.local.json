@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(head -30)",
+      "Bash(python3 -c ' *)",
+      "PowerShell($data = Get-Content \"c:\\\\Users\\\\Koja\\\\tennis-stats-app\\\\cache\\\\fixtures-2026-05-06.json\" | ConvertFrom-Json; $ids = @\\(\\); foreach \\($f in $data.fixtures\\) { if \\($f.player1.id\\) { $ids += $f.player1.id }; if \\($f.player2.id\\) { $ids += $f.player2.id } }; $ids | Sort-Object -Unique)"
+    ]
+  }
+}
