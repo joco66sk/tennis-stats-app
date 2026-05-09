@@ -1,6 +1,43 @@
 {
   "matches": [
     {
+      "id": "17666904",
+      "date": "2026-05-08T17:05:00.000Z",
+      "roundId": 9,
+      "player1Id": 47387,
+      "player2Id": 95311,
+      "tournamentId": 21657,
+      "match_winner": 47387,
+      "result": "7-5 2-6 6-3",
+      "best_of": null,
+      "odd1": "1.99",
+      "odd2": "1.71",
+      "player1": {
+        "id": 47387,
+        "name": "August Holmgren",
+        "countryAcr": "DEN"
+      },
+      "player2": {
+        "id": 95311,
+        "name": "Max Schoenhaus",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21657,
+        "name": "Francavilla Challenger",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1263085",
       "date": "2026-05-06T14:15:00.000Z",
       "roundId": 5,
@@ -11101,6 +11138,6 @@
       }
     }
   ],
-  "cachedAt": 1778251608943,
+  "cachedAt": 1778298656546,
   "pages": 3
 }

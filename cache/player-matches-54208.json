@@ -1,6 +1,43 @@
 {
   "matches": [
     {
+      "id": "17666934",
+      "date": "2026-05-08T17:10:00.000Z",
+      "roundId": 9,
+      "player1Id": 54208,
+      "player2Id": 50118,
+      "tournamentId": 21659,
+      "match_winner": 54208,
+      "result": "6-3 6-4",
+      "best_of": null,
+      "odd1": "1.84",
+      "odd2": "1.84",
+      "player1": {
+        "id": 54208,
+        "name": "Florent Bax",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 50118,
+        "name": "Mathys Erhard",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21659,
+        "name": "Brazzaville Challenger",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "CGO",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1263123",
       "date": "2026-05-07T20:30:00.000Z",
       "roundId": 5,
@@ -11099,8 +11136,82 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "901087",
+      "date": "2021-10-06T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 55868,
+      "player2Id": 54208,
+      "tournamentId": 17385,
+      "match_winner": 55868,
+      "result": "6-1 6-7(3) 6-2",
+      "best_of": null,
+      "odd1": "1.88",
+      "odd2": "1.88",
+      "player1": {
+        "id": 55868,
+        "name": "Lorenzo Joaquin Rodriguez",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 54208,
+        "name": "Florent Bax",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 17385,
+        "name": "M15 Platja D'Aro 1",
+        "courtId": 2,
+        "date": "2021-10-04T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "901127",
+      "date": "2021-10-03T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 54208,
+      "player2Id": 86070,
+      "tournamentId": 17385,
+      "match_winner": 54208,
+      "result": "6-3 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 54208,
+        "name": "Florent Bax",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 86070,
+        "name": "Leonardo Rossi",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 17385,
+        "name": "M15 Platja D'Aro 1",
+        "courtId": 2,
+        "date": "2021-10-04T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778251596495,
+  "cachedAt": 1778298645742,
   "pages": 3
 }
