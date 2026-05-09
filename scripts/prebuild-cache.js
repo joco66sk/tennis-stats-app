@@ -139,10 +139,18 @@ async function processPlayer(playerId, index, total) {
 
   let matches = await fetchPlayerMatches(playerId, pages);
 
+  // Always supplement with reverse lookup — catches API lag where recent matches
+  // appear in opponents' files before the player's own endpoint returns them.
+  const freshIds = new Set(matches.map(m => String(m.id)));
+  const reversed = reverseLookuFallback(playerId);
+  let supplemented = 0;
+  for (const m of reversed) {
+    if (!freshIds.has(String(m.id))) { freshIds.add(String(m.id)); matches.push(m); supplemented++; }
+  }
   if (matches.length === 0) {
-    console.log(`    Direct API empty — trying reverse lookup...`);
-    matches = reverseLookuFallback(playerId);
-    console.log(`    Reverse lookup found: ${matches.length} matches`);
+    console.log(`    No matches from API or reverse lookup`);
+  } else if (supplemented > 0) {
+    console.log(`    Reverse lookup added: ${supplemented} matches`);
   }
 
   const merged = mergeWithExisting(playerId, matches);

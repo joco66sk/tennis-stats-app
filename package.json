@@ -11,7 +11,9 @@
     "cache:date": "node scripts/prebuild-cache.js",
     "cache:all": "node scripts/prebuild-cache.js all",
     "cache:seed": "node scripts/seed-historical.js",
-    "cache:seed:force": "node scripts/seed-historical.js --force"
+    "cache:seed:force": "node scripts/seed-historical.js --force",
+    "stats:today": "node scripts/prebuild-match-stats.js today",
+    "stats:date": "node scripts/prebuild-match-stats.js"
   },
   "dependencies": {
     "next": "16.1.6",

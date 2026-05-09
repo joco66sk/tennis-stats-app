@@ -111,25 +111,24 @@ async function fetchAndMergeMatches(playerId: string, pages = 3): Promise<any[]>
     });
   } catch {}
 
-  // Fallback: reverse lookup through other cached files when direct API returns nothing.
-  if (freshMatches.length === 0) {
-    const pid = parseInt(playerId);
-    const seen = new Set<string>();
-    try {
-      for (const file of fs.readdirSync(CACHE_DIR)) {
-        if (!file.startsWith('player-matches-') || file === `player-matches-${playerId}.json`) continue;
-        try {
-          const data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, file), 'utf-8'));
-          for (const m of (data.matches ?? [])) {
-            if ((m.player1Id === pid || m.player2Id === pid) && !seen.has(String(m.id))) {
-              seen.add(String(m.id));
-              freshMatches.push(m);
-            }
+  // Supplement with reverse lookup — catches API lag where a player's recent matches
+  // appear in opponents' files before showing in their own endpoint.
+  const pid = parseInt(playerId);
+  const freshIds = new Set<string>(freshMatches.map((m: any) => String(m.id)));
+  try {
+    for (const file of fs.readdirSync(CACHE_DIR)) {
+      if (!file.startsWith('player-matches-') || file === `player-matches-${playerId}.json`) continue;
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, file), 'utf-8'));
+        for (const m of (data.matches ?? [])) {
+          if ((m.player1Id === pid || m.player2Id === pid) && !freshIds.has(String(m.id))) {
+            freshIds.add(String(m.id));
+            freshMatches.push(m);
           }
-        } catch {}
-      }
-    } catch {}
-  }
+        }
+      } catch {}
+    }
+  } catch {}
 
   freshMatches.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
@@ -187,7 +186,7 @@ export async function GET(request: NextRequest) {
       isDeepSeeded = fileData.deepSeeded === true;
       existingSeededAt = fileData.seededAt;
       const isEmpty = (fileData.matches ?? []).length === 0;
-      const fileAge = Date.now() - fs.statSync(matchCachePath).mtimeMs;
+      const fileAge = Date.now() - (fileData.cachedAt ?? fs.statSync(matchCachePath).mtimeMs);
       if (isEmpty && fileAge > EMPTY_RETRY_TTL) { fs.unlinkSync(matchCachePath); needsSeed = true; }
       // deepSeeded files have full history — only a 1-page delta needed when stale
       else if (!basic && !isDeepSeeded && (fileData.pages ?? 1) < 3) needsSeed = true;
@@ -243,8 +242,17 @@ export async function GET(request: NextRequest) {
   }
 
   // Full path: fetch match stats for the last N surface matches.
-  const allStats = await Promise.all(
-    filtered.map(m => getMatchStats(m.tournamentId, m.player1Id, m.player2Id))
+  // Concurrency limited to 3 to avoid rate-limiting on parallel API calls.
+  async function pool<T>(fns: Array<() => Promise<T>>, limit: number): Promise<T[]> {
+    const out: T[] = new Array(fns.length);
+    let i = 0;
+    async function worker() { while (i < fns.length) { const idx = i++; out[idx] = await fns[idx](); } }
+    await Promise.all(Array.from({ length: Math.min(limit, fns.length) }, worker));
+    return out;
+  }
+  const allStats = await pool(
+    filtered.map(m => () => getMatchStats(m.tournamentId, m.player1Id, m.player2Id)),
+    3
   );
 
   let wins = 0, losses = 0, statsCount = 0;
