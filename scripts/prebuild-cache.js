@@ -51,13 +51,15 @@ function needsFetch(playerId, forceToday = false) {
   try {
     const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
     const matches = data.matches || [];
-    const ageMs = Date.now() - fs.statSync(fp).mtimeMs;
-    const ageDays = ageMs / (1000 * 60 * 60 * 24);
+    const ageMs = Date.now() - (data.cachedAt ?? fs.statSync(fp).mtimeMs);
+    const ageHours = ageMs / (1000 * 60 * 60);
     if (matches.length === 0) return true;
     // Non-deep-seeded files need 3 pages — always re-fetch them
     if (!data.deepSeeded && (data.pages ?? 1) < 3) return true;
+    // Skip if fetched within last 2 hours, even for today
+    if (ageHours < 2) return false;
     if (forceToday) return true;
-    if (ageDays > 3) return true;
+    if (ageHours > 72) return true;
     return false;
   } catch { return true; }
 }

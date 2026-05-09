@@ -11101,6 +11101,43 @@
       }
     },
     {
+      "id": "913068",
+      "date": "2022-02-22T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 47275,
+      "player2Id": 36519,
+      "tournamentId": 17547,
+      "match_winner": 47275,
+      "result": "4-6 7-6(6) 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 47275,
+        "name": "Jannik Sinner",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 36519,
+        "name": "Alejandro Davidovich Fokina",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 17547,
+        "name": "Dubai Duty Free Tennis Championships - Dubai",
+        "courtId": 1,
+        "date": "2022-02-21T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "UAE",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "915360",
       "date": "2021-11-29T00:00:00.000Z",
       "roundId": 14,
@@ -11129,6 +11166,43 @@
         "date": "2021-11-29T00:00:00.000Z",
         "rankId": 5,
         "countryAcr": "ITA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "869680",
+      "date": "2021-10-30T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 29939,
+      "player2Id": 47275,
+      "tournamentId": 16948,
+      "match_winner": 29939,
+      "result": "3-6 7-5 6-2",
+      "best_of": null,
+      "odd1": "3.82",
+      "odd2": "1.3",
+      "player1": {
+        "id": 29939,
+        "name": "Frances Tiafoe",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 47275,
+        "name": "Jannik Sinner",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 16948,
+        "name": "Erste Bank Open - Vienna",
+        "courtId": 3,
+        "date": "2021-10-25T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "AUT",
         "court": {
           "id": 3,
           "name": "I.hard"
@@ -11471,6 +11545,6 @@
       }
     }
   ],
-  "cachedAt": 1778298523593,
+  "cachedAt": 1778301497742,
   "pages": 3
 }
