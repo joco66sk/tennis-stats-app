@@ -166,7 +166,9 @@ export async function GET(request: NextRequest) {
   const basicCachePath = path.join(CACHE_DIR, `player-surface-basic-${playerId}-${surface}.json`);
   const BASIC_TTL = 4 * 60 * 60 * 1000;
   const EMPTY_RETRY_TTL = 60 * 60 * 1000;
-  const REFRESH_TTL = 24 * 60 * 60 * 1000;
+  // On Vercel: committed cache is source of truth — never refresh live (saves API calls).
+  // Locally: refresh after 7 days so data stays current during development.
+  const REFRESH_TTL = IS_VERCEL ? Infinity : 7 * 24 * 60 * 60 * 1000;
 
   // Basic path: serve cached W/L if fresh (4h TTL). Skip re-seeding for fixture page speed.
   if (basic && fs.existsSync(basicCachePath)) {
@@ -177,10 +179,11 @@ export async function GET(request: NextRequest) {
   }
 
   // Decide whether to refresh player-matches from API.
+  // On Vercel: only seed if file is completely missing — no live refreshes.
   let needsSeed = !fs.existsSync(matchCachePath);
   let isDeepSeeded = false;
   let existingSeededAt: number | undefined;
-  if (!needsSeed) {
+  if (!needsSeed && !IS_VERCEL) {
     try {
       const fileData = JSON.parse(fs.readFileSync(matchCachePath, 'utf-8'));
       isDeepSeeded = fileData.deepSeeded === true;
@@ -188,10 +191,15 @@ export async function GET(request: NextRequest) {
       const isEmpty = (fileData.matches ?? []).length === 0;
       const fileAge = Date.now() - (fileData.cachedAt ?? fs.statSync(matchCachePath).mtimeMs);
       if (isEmpty && fileAge > EMPTY_RETRY_TTL) { fs.unlinkSync(matchCachePath); needsSeed = true; }
-      // deepSeeded files have full history — only a 1-page delta needed when stale
       else if (!basic && !isDeepSeeded && (fileData.pages ?? 1) < 3) needsSeed = true;
       else if (!basic && fileAge > REFRESH_TTL) needsSeed = true;
     } catch { needsSeed = true; }
+  } else if (!needsSeed) {
+    try {
+      const fileData = JSON.parse(fs.readFileSync(matchCachePath, 'utf-8'));
+      isDeepSeeded = fileData.deepSeeded === true;
+      existingSeededAt = fileData.seededAt;
+    } catch {}
   }
 
   // deepSeeded: delta update (1 page). Non-deep: 3 pages for compare, 1 for basic.

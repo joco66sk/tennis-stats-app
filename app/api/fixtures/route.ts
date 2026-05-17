@@ -52,9 +52,9 @@ function getCacheTTL(date: string): number {
   const tomorrow = new Date(cetNow.getTime() + 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
   if (date < today) return 24 * 60 * 60 * 1000;        // past: 24h
-  if (date === today) return 2 * 60 * 60 * 1000;       // today: 2h
-  if (date === tomorrow) return 45 * 60 * 1000;        // tomorrow: 45 min
-  return 20 * 60 * 1000;                               // future: 20 min
+  if (date === today) return 4 * 60 * 60 * 1000;       // today: 4h
+  if (date === tomorrow) return 90 * 60 * 1000;        // tomorrow: 90 min
+  return 30 * 60 * 1000;                               // future: 30 min
 }
 
 function isCacheValid(filePath: string, date: string): boolean {
