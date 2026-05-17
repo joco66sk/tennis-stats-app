@@ -9,6 +9,19 @@ const STATIC_MATCH_STATS = path.join(process.cwd(), 'app', 'api', 'cache');
 const CACHE_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_CACHE;
 const MATCH_STATS_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_MATCH_STATS;
 
+const HOST = process.env.RAPIDAPI_HOST || 'tennis-api-atp-wta-itf.p.rapidapi.com';
+const HEADERS = {
+  'x-rapidapi-host': HOST,
+  'x-rapidapi-key': process.env.RAPIDAPI_KEY!,
+};
+
+const COURT_ID_MAP: Record<number, string> = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
+const BASIC_TTL = 4 * 60 * 60 * 1000;
+const EMPTY_RETRY_TTL = 60 * 60 * 1000;
+// On Vercel: committed cache is the source of truth — never refresh live.
+// Locally: refresh after 7 days.
+const REFRESH_TTL = IS_VERCEL ? Infinity : 7 * 24 * 60 * 60 * 1000;
+
 function initCache() {
   if (!IS_VERCEL || fs.existsSync(CACHE_DIR)) return;
   fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -19,14 +32,6 @@ function initCache() {
     }
   }
 }
-const HOST = process.env.RAPIDAPI_HOST || 'tennis-api-atp-wta-itf.p.rapidapi.com';
-const HEADERS = {
-  'x-rapidapi-host': HOST,
-  'x-rapidapi-key': process.env.RAPIDAPI_KEY!,
-};
-
-// courtId is always populated; court.name is sometimes null.
-const COURT_ID_MAP: Record<number, string> = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 
 function normalizeSurface(s: string): string {
   if (s === 'I.hard' || s === 'Carpet') return 'Hard';
@@ -65,6 +70,14 @@ function emptyResponse(playerId: string, surface: string) {
     avg1stServe: 0, avg1stWon: 0, avg2ndWon: 0, avgAces: 0, avgDf: 0,
     avgBpSaved: 0, avgServeWon: 0, avgReturnWon: 0, avgReturn1stWon: 0, avgReturn2ndWon: 0,
   };
+}
+
+async function pool<T>(fns: Array<() => Promise<T>>, limit: number): Promise<T[]> {
+  const out: T[] = new Array(fns.length);
+  let i = 0;
+  async function worker() { while (i < fns.length) { const idx = i++; out[idx] = await fns[idx](); } }
+  await Promise.all(Array.from({ length: Math.min(limit, fns.length) }, worker));
+  return out;
 }
 
 async function getMatchStats(tournamentId: number, p1: number, p2: number): Promise<any | null> {
@@ -132,20 +145,17 @@ async function fetchAndMergeMatches(playerId: string, pages = 3): Promise<any[]>
 
   freshMatches.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  // Supplement fresh data with historical matches from the existing file that fall
-  // outside the API's 3-page window. Fresh data always takes precedence — never
-  // return the old file when we have a valid fresh fetch.
+  // Merge with existing file to preserve historical matches outside the API's page window.
   const matchCachePath = path.join(CACHE_DIR, `player-matches-${playerId}.json`);
   if (freshMatches.length > 0 && fs.existsSync(matchCachePath)) {
     try {
       const existing = JSON.parse(fs.readFileSync(matchCachePath, 'utf-8')).matches ?? [];
-      const freshIds = new Set(freshMatches.map((m: any) => String(m.id)));
-      const historicalOnly = existing.filter((m: any) => !freshIds.has(String(m.id)));
-      if (historicalOnly.length > 0) {
-        freshMatches = [...freshMatches, ...historicalOnly].sort(
+      const ids = new Set(freshMatches.map((m: any) => String(m.id)));
+      const historical = existing.filter((m: any) => !ids.has(String(m.id)));
+      if (historical.length > 0)
+        freshMatches = [...freshMatches, ...historical].sort(
           (a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime()
         );
-      }
     } catch {}
   }
 
@@ -164,51 +174,37 @@ export async function GET(request: NextRequest) {
 
   const matchCachePath = path.join(CACHE_DIR, `player-matches-${playerId}.json`);
   const basicCachePath = path.join(CACHE_DIR, `player-surface-basic-${playerId}-${surface}.json`);
-  const BASIC_TTL = 4 * 60 * 60 * 1000;
-  const EMPTY_RETRY_TTL = 60 * 60 * 1000;
-  // On Vercel: committed cache is source of truth — never refresh live (saves API calls).
-  // Locally: refresh after 7 days so data stays current during development.
-  const REFRESH_TTL = IS_VERCEL ? Infinity : 7 * 24 * 60 * 60 * 1000;
 
-  // Basic path: serve cached W/L if fresh (4h TTL). Skip re-seeding for fixture page speed.
+  // Basic path: serve cached W/L if fresh. Skip match-stats fetching entirely.
   if (basic && fs.existsSync(basicCachePath)) {
-    const age = Date.now() - fs.statSync(basicCachePath).mtimeMs;
-    if (age < BASIC_TTL) {
+    if (Date.now() - fs.statSync(basicCachePath).mtimeMs < BASIC_TTL)
       return NextResponse.json({ ...JSON.parse(fs.readFileSync(basicCachePath, 'utf-8')), fromCache: true });
-    }
   }
 
   // Decide whether to refresh player-matches from API.
-  // On Vercel: only seed if file is completely missing — no live refreshes.
   let needsSeed = !fs.existsSync(matchCachePath);
   let isDeepSeeded = false;
   let existingSeededAt: number | undefined;
-  if (!needsSeed && !IS_VERCEL) {
+  if (!needsSeed) {
     try {
       const fileData = JSON.parse(fs.readFileSync(matchCachePath, 'utf-8'));
       isDeepSeeded = fileData.deepSeeded === true;
       existingSeededAt = fileData.seededAt;
-      const isEmpty = (fileData.matches ?? []).length === 0;
-      const fileAge = Date.now() - (fileData.cachedAt ?? fs.statSync(matchCachePath).mtimeMs);
-      if (isEmpty && fileAge > EMPTY_RETRY_TTL) { fs.unlinkSync(matchCachePath); needsSeed = true; }
-      else if (!basic && !isDeepSeeded && (fileData.pages ?? 1) < 3) needsSeed = true;
-      else if (!basic && fileAge > REFRESH_TTL) needsSeed = true;
+      if (!IS_VERCEL) {
+        const isEmpty = (fileData.matches ?? []).length === 0;
+        const fileAge = Date.now() - (fileData.cachedAt ?? fs.statSync(matchCachePath).mtimeMs);
+        if (isEmpty && fileAge > EMPTY_RETRY_TTL) { fs.unlinkSync(matchCachePath); needsSeed = true; }
+        else if (!basic && !isDeepSeeded && (fileData.pages ?? 1) < 3) needsSeed = true;
+        else if (!basic && fileAge > REFRESH_TTL) needsSeed = true;
+      }
     } catch { needsSeed = true; }
-  } else if (!needsSeed) {
-    try {
-      const fileData = JSON.parse(fs.readFileSync(matchCachePath, 'utf-8'));
-      isDeepSeeded = fileData.deepSeeded === true;
-      existingSeededAt = fileData.seededAt;
-    } catch {}
   }
 
-  // deepSeeded: delta update (1 page). Non-deep: 3 pages for compare, 1 for basic.
-  const pagesNeeded = basic ? 1 : (isDeepSeeded ? 1 : 3);
-
   if (needsSeed) {
-    const merged = await fetchAndMergeMatches(playerId, pagesNeeded);
+    const pages = basic ? 1 : (isDeepSeeded ? 1 : 3);
+    const merged = await fetchAndMergeMatches(playerId, pages);
     if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });
-    const payload: Record<string, unknown> = { matches: merged, cachedAt: Date.now(), pages: pagesNeeded };
+    const payload: Record<string, unknown> = { matches: merged, cachedAt: Date.now(), pages };
     if (isDeepSeeded) { payload.deepSeeded = true; payload.seededAt = existingSeededAt; }
     fs.writeFileSync(matchCachePath, JSON.stringify(payload, null, 2));
   }
@@ -217,14 +213,10 @@ export async function GET(request: NextRequest) {
 
   const matchData = JSON.parse(fs.readFileSync(matchCachePath, 'utf-8'));
   const allMatches: any[] = matchData.matches || [];
-
   if (allMatches.length === 0) return NextResponse.json(emptyResponse(playerId, surface));
 
-  // Sort by date descending, assign surface via courtId, filter, take last N.
   const surfaceMap = surface !== 'All' ? loadSurfaceMap() : {};
-  const sorted = [...allMatches].sort(
-    (a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  const sorted = [...allMatches].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const filtered = surface === 'All'
     ? sorted.slice(0, limit)
     : sorted.filter(m => getMatchSurface(m, surfaceMap) === surface).slice(0, limit);
@@ -249,15 +241,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(result);
   }
 
-  // Full path: fetch match stats for the last N surface matches.
-  // Concurrency limited to 3 to avoid rate-limiting on parallel API calls.
-  async function pool<T>(fns: Array<() => Promise<T>>, limit: number): Promise<T[]> {
-    const out: T[] = new Array(fns.length);
-    let i = 0;
-    async function worker() { while (i < fns.length) { const idx = i++; out[idx] = await fns[idx](); } }
-    await Promise.all(Array.from({ length: Math.min(limit, fns.length) }, worker));
-    return out;
-  }
+  // Full path: fetch match stats for the last N surface matches (max 3 concurrent).
   const allStats = await pool(
     filtered.map(m => () => getMatchStats(m.tournamentId, m.player1Id, m.player2Id)),
     3
@@ -286,8 +270,7 @@ export async function GET(request: NextRequest) {
 
     const stats = allStats[i];
     if (!stats) continue;
-    // Use playerId from inside the stats object — file may be stored in reversed order
-    // so m.player1Id === pid is unreliable when stats were fetched via the swapped API call.
+    // Use player1Id from inside the stats object — file may be stored in reversed order.
     const isP1 = stats.player1Stats?.player1Id === pid;
     const my = isP1 ? stats.player1Stats : stats.player2Stats;
     const opp = isP1 ? stats.player2Stats : stats.player1Stats;
@@ -304,10 +287,7 @@ export async function GET(request: NextRequest) {
       totalSvpt += svpt;
       const oppBpChance = opp.breakPointChanceGm || 0;
       const oppBpWon = opp.breakPointWonGm || 0;
-      if (oppBpChance > 0) {
-        totalBpSaved += oppBpChance - oppBpWon;
-        totalBpFaced += oppBpChance;
-      }
+      if (oppBpChance > 0) { totalBpSaved += oppBpChance - oppBpWon; totalBpFaced += oppBpChance; }
     }
     const oppSvpt = opp.firstServeOf || 0;
     if (oppSvpt > 0) {
@@ -315,24 +295,13 @@ export async function GET(request: NextRequest) {
       totalOppSvpt += oppSvpt;
     }
     const opp1stIn = opp.firstServe || 0;
-    if (opp1stIn > 0) {
-      totalReturn1stWon += opp1stIn - (opp.winningOnFirstServe || 0);
-      total1stIn_opp += opp1stIn;
-    }
-    const opp2ndPts = oppSvpt - (opp.firstServe || 0);
-    if (opp2ndPts > 0) {
-      totalReturn2ndWon += opp2ndPts - (opp.winningOnSecondServe || 0);
-      total2ndPts_opp += opp2ndPts;
-    }
+    if (opp1stIn > 0) { totalReturn1stWon += opp1stIn - (opp.winningOnFirstServe || 0); total1stIn_opp += opp1stIn; }
+    const opp2ndPts = oppSvpt - opp1stIn;
+    if (opp2ndPts > 0) { totalReturn2ndWon += opp2ndPts - (opp.winningOnSecondServe || 0); total2ndPts_opp += opp2ndPts; }
   }
 
   return NextResponse.json({
-    playerId: pid,
-    playerName,
-    surface,
-    wins,
-    losses,
-    matchesWithStats: statsCount,
+    playerId: pid, playerName, surface, wins, losses, matchesWithStats: statsCount,
     avg1stServe: totalSvpt ? (total1stIn / totalSvpt) * 100 : 0,
     avg1stWon: total1stIn ? (total1stWon / total1stIn) * 100 : 0,
     avg2ndWon: (totalSvpt - total1stIn) > 0 ? (total2ndWon / (totalSvpt - total1stIn)) * 100 : 0,
