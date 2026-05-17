@@ -278,7 +278,9 @@ export async function GET(request: NextRequest) {
 
     const stats = allStats[i];
     if (!stats) continue;
-    const isP1 = m.player1Id === pid;
+    // Use playerId from inside the stats object — file may be stored in reversed order
+    // so m.player1Id === pid is unreliable when stats were fetched via the swapped API call.
+    const isP1 = stats.player1Stats?.player1Id === pid;
     const my = isP1 ? stats.player1Stats : stats.player2Stats;
     const opp = isP1 ? stats.player2Stats : stats.player1Stats;
     if (!my || !opp) continue;
