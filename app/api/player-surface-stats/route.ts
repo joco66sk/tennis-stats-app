@@ -166,7 +166,7 @@ export async function GET(request: NextRequest) {
   initCache();
   const { searchParams } = new URL(request.url);
   const playerId = searchParams.get('playerId');
-  const surface = searchParams.get('surface') || 'Clay';
+  const surface = normalizeSurface(searchParams.get('surface') || 'Clay');
   const limit = parseInt(searchParams.get('limit') || '10');
   const basic = searchParams.get('basic') === 'true';
 

@@ -271,9 +271,7 @@ export default function Home() {
 
                           <div className="text-center pt-0.5">
                             <div className="text-zinc-500 font-mono text-xs leading-tight">{formatTime(fixture.date)}</div>
-                            {formatRound(fixture.round?.name) && (
-                              <div className="text-zinc-400 text-xs font-bold mt-0.5">{formatRound(fixture.round?.name)}</div>
-                            )}
+                            {(() => { const r = formatRound(fixture.round?.name); return r && <div className="text-zinc-400 text-xs font-bold mt-0.5">{r}</div>; })()}
                             <div className="text-zinc-600 text-xs font-black mt-0.5">VS</div>
                           </div>
 
