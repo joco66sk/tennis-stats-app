@@ -192,6 +192,15 @@ export default function Home() {
     return acc;
   }, {} as Record<string, Fixture[]>);
 
+  const isQualifying = (matches: Fixture[]) => matches.every(m => /^Q\d/i.test(m.round?.name ?? ''));
+  const sortedGroups = Object.entries(grouped).sort(([, a], [, b]) => {
+    const aQual = isQualifying(a) ? 1 : 0;
+    const bQual = isQualifying(b) ? 1 : 0;
+    if (aQual !== bQual) return aQual - bQual;
+    // Among non-qualifying, higher rank first (GS > 1000 > 500 > 250)
+    return (b[0]?.tournament?.rank?.id ?? 0) - (a[0]?.tournament?.rank?.id ?? 0);
+  });
+
   return (
     <div className="min-h-screen bg-zinc-950 p-3 md:p-4">
       <div className="max-w-4xl mx-auto">
@@ -227,7 +236,7 @@ export default function Home() {
           <div className="text-center py-16 text-zinc-500">No matches found for this date.</div>
         ) : (
           <div className="space-y-2.5">
-            {Object.entries(grouped).map(([tournamentName, matches]) => {
+            {sortedGroups.map(([tournamentName, matches]) => {
               const isATP = (matches[0]?.tournament?.rank?.id ?? 0) >= 2;
               const surface = matches[0]?.tournament?.court?.name;
               const categoryLabel = getCategoryLabel(matches[0]?.tournament?.rank?.name);
