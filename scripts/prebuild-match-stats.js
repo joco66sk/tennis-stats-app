@@ -5,9 +5,11 @@
  * Run before deploying to Vercel so stats don't need live API calls.
  *
  * Usage:
- *   node scripts/prebuild-match-stats.js             (today's fixture)
+ *   node scripts/prebuild-match-stats.js             (today's fixture, all surfaces)
  *   node scripts/prebuild-match-stats.js 2026-05-09  (specific date)
  *   node scripts/prebuild-match-stats.js all         (all fixture dates — expensive)
+ *   node scripts/prebuild-match-stats.js today --clay-only   (clay season, saves ~66% API calls)
+ *   node scripts/prebuild-match-stats.js today --surface Hard
  */
 
 const fs = require('fs');
@@ -25,7 +27,7 @@ const MATCH_STATS_DIR = path.join(__dirname, '..', 'app', 'api', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 
 const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
-const SURFACES = ['Clay', 'Hard', 'Grass'];
+const ALL_SURFACES = ['Clay', 'Hard', 'Grass'];
 const LAST_N = 10;
 const MIN_DATE = '2025-01-01';
 const DELAY = 400; // ms between API calls
@@ -97,7 +99,17 @@ async function main() {
   if (!fs.existsSync(MATCH_STATS_DIR)) fs.mkdirSync(MATCH_STATS_DIR, { recursive: true });
 
   const atpOnly = !process.argv.includes('--all-levels');
-  const args = process.argv.slice(2).filter(a => a !== '--all-levels');
+  const clayOnly = process.argv.includes('--clay-only');
+  const surfaceArg = process.argv.find(a => a.startsWith('--surface='))?.split('=')[1]
+    || (process.argv.includes('--surface') ? process.argv[process.argv.indexOf('--surface') + 1] : null);
+  const surfaces = clayOnly ? ['Clay']
+    : surfaceArg ? [surfaceArg]
+    : ALL_SURFACES;
+
+  const args = process.argv.slice(2).filter(a =>
+    a !== '--all-levels' && a !== '--clay-only' && !a.startsWith('--surface')
+    && process.argv.indexOf(a) !== process.argv.indexOf('--surface') + 1
+  );
   const arg = args[0];
   let dates = [];
   if (!arg || arg === 'today') {
@@ -112,6 +124,7 @@ async function main() {
   }
 
   if (atpOnly) console.log('Mode: ATP-only (use --all-levels to include Challenger/ITF)');
+  if (surfaces.length < ALL_SURFACES.length) console.log(`Surface filter: ${surfaces.join(', ')} only`);
 
   const playerIds = getPlayerIdsFromFixtures(dates, atpOnly);
   if (playerIds.length === 0) {
@@ -120,7 +133,7 @@ async function main() {
   }
 
   console.log(`Match stats prebuild: ${playerIds.length} players from ${dates.length} fixture date(s)`);
-  console.log(`Surfaces: ${SURFACES.join(', ')} | Last ${LAST_N} per surface\n`);
+  console.log(`Surfaces: ${surfaces.join(', ')} | Last ${LAST_N} per surface\n`);
 
   let totalFetched = 0, totalCached = 0, totalNone = 0;
 
@@ -138,7 +151,7 @@ async function main() {
 
     // Collect unique matches across all surfaces (deduplicated by ID, 2025+ only)
     const toFetch = new Map();
-    for (const surface of SURFACES) {
+    for (const surface of surfaces) {
       const filtered = matches.filter(m => getSurface(m) === surface && m.date >= MIN_DATE).slice(0, LAST_N);
       for (const m of filtered) toFetch.set(String(m.id), m);
     }
