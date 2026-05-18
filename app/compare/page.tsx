@@ -8,7 +8,6 @@ interface MatchSummary {
   result: string;
   won: boolean;
   opponentName: string;
-  opponentCountry?: string;
 }
 
 interface PlayerStats {
@@ -76,7 +75,7 @@ function CompareContent() {
   const router = useRouter();
   const player1Id = searchParams.get('p1') || '';
   const player2Id = searchParams.get('p2') || '';
-  const [surface, setSurface] = useState(searchParams.get('surface') || 'Clay');
+  const surface = searchParams.get('surface') || 'Clay';
   const [lastN, setLastN] = useState(10);
   const [stats1, setStats1] = useState<PlayerStats | null>(null);
   const [stats2, setStats2] = useState<PlayerStats | null>(null);
@@ -86,7 +85,7 @@ function CompareContent() {
   useEffect(() => {
     if (!player1Id || !player2Id || player1Id === 'undefined' || player2Id === 'undefined') return;
 
-    const cacheKey = `cmp-v19-${player1Id}-${player2Id}-${surface}-${lastN}`;
+    const cacheKey = `cmp-v20-${player1Id}-${player2Id}-${surface}-${lastN}`;
     const SESSION_TTL = 2 * 60 * 60 * 1000;
     try {
       const cached = sessionStorage.getItem(cacheKey);
@@ -114,7 +113,6 @@ function CompareContent() {
       .then(([d1, d2]) => {
         setStats1(d1);
         setStats2(d2);
-        // Only cache when both players have real data — avoids locking in 0W-0L during first-seed
         const hasData = (d1.wins + d1.losses) > 0 && (d2.wins + d2.losses) > 0;
         if (hasData) {
           try { sessionStorage.setItem(cacheKey, JSON.stringify({ stats1: d1, stats2: d2, cachedAt: Date.now() })); } catch {}
@@ -126,12 +124,11 @@ function CompareContent() {
     return () => controller.abort();
   }, [player1Id, player2Id, surface, lastN]);
 
-  const surfaceButtonClass = (s: string) => {
-    if (surface !== s) return 'border-zinc-700 text-zinc-500 hover:border-zinc-600 hover:text-zinc-400';
-    if (s === 'Clay') return 'bg-orange-500/20 text-orange-400 border-orange-500/40';
-    if (s === 'Hard') return 'bg-blue-500/20 text-blue-400 border-blue-500/40';
-    if (s === 'Grass') return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40';
-    return 'bg-zinc-700 text-white border-zinc-600';
+  const surfaceColor = () => {
+    if (surface === 'Clay') return 'text-orange-400';
+    if (surface === 'Hard') return 'text-blue-400';
+    if (surface === 'Grass') return 'text-emerald-400';
+    return 'text-zinc-400';
   };
 
   return (
@@ -141,27 +138,21 @@ function CompareContent() {
           <button onClick={() => router.push('/')} className="text-zinc-400 hover:text-white text-sm font-semibold transition">← Back</button>
           <div>
             <h1 className="text-2xl font-black text-white tracking-tight uppercase">Tennis Deep Stats</h1>
-            <p className="text-zinc-500 text-xs uppercase tracking-wider">Player Comparison</p>
+            <p className="text-zinc-500 text-xs uppercase tracking-wider">
+              Player Comparison · <span className={surfaceColor()}>{surface}</span>
+            </p>
           </div>
         </header>
 
-        <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 mb-3">
-          <div className="flex flex-wrap gap-2 items-center">
-            <select className="bg-zinc-800 border border-zinc-700 text-white rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-blue-500"
-              value={lastN} onChange={e => setLastN(parseInt(e.target.value))}>
-              <option value={5}>Last 5</option>
-              <option value={10}>Last 10</option>
-            </select>
-            <div className="flex gap-1">
-              {['All', 'Clay', 'Hard', 'Grass'].map(s => (
-                <button key={s} onClick={() => setSurface(s)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide transition border ${surfaceButtonClass(s)}`}>
-                  {s}
-                </button>
-              ))}
-            </div>
-            {error && <span className="text-red-400 text-xs">{error}</span>}
-          </div>
+        <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 mb-3 flex items-center gap-3">
+          <span className="text-zinc-500 text-xs uppercase tracking-wider">Last</span>
+          <select
+            className="bg-zinc-800 border border-zinc-700 text-white rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-blue-500"
+            value={lastN} onChange={e => setLastN(parseInt(e.target.value))}>
+            <option value={5}>5 matches</option>
+            <option value={10}>10 matches</option>
+          </select>
+          {error && <span className="text-red-400 text-xs">{error}</span>}
         </div>
 
         {loading && (
@@ -206,7 +197,7 @@ function CompareContent() {
                   <div className="text-zinc-500 text-xs uppercase tracking-wider">
                     Last {stats1.wins + stats1.losses}/{stats2.wins + stats2.losses}
                   </div>
-                  <div className="text-zinc-600 text-xs">{surface !== 'All' ? surface : 'All surfaces'}</div>
+                  <div className={`text-xs font-bold ${surfaceColor()}`}>{surface}</div>
                 </div>
                 <div className="px-3 py-2.5 text-center">
                   <div className="font-black text-white text-xs uppercase tracking-tight truncate">{stats2.playerName}</div>
