@@ -33,14 +33,19 @@ function getTodayStr() {
   return d.toISOString().split('T')[0];
 }
 
-function getPlayerIdsFromFixture(date, atpOnly = true) {
+function isQualifying(f) {
+  return /^Q\d/i.test(f.round?.name ?? '');
+}
+
+function getPlayerIdsFromFixture(date, atpOnly = true, skipQualifying = false) {
   const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
   if (!fs.existsSync(fp)) { console.log(`No fixture file for ${date}`); return []; }
   const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
   const ids = new Set();
   for (const f of (data.fixtures || [])) {
-    if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue; // skip Challenger/ITF
-    if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue; // skip doubles
+    if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue;
+    if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue;
+    if (skipQualifying && isQualifying(f)) continue;
     if (f.player1?.id) ids.add(String(f.player1.id));
     if (f.player2?.id) ids.add(String(f.player2.id));
   }
@@ -231,8 +236,9 @@ async function processPlayer(playerId, index, total) {
 }
 
 async function main() {
-  const args = process.argv.slice(2).filter(a => a !== '--all-levels');
   const atpOnly = !process.argv.includes('--all-levels');
+  const skipQualifying = !process.argv.includes('--with-qualifying');
+  const args = process.argv.slice(2).filter(a => a !== '--all-levels' && a !== '--with-qualifying');
   const arg = args[0];
   let dates = [];
 
@@ -248,13 +254,14 @@ async function main() {
   }
 
   if (atpOnly) console.log('Mode: ATP-only (use --all-levels to include Challenger/ITF)');
+  if (skipQualifying) console.log('Skipping qualifying rounds (use --with-qualifying to include)');
 
   // Collect all unique player IDs across requested dates.
   // Today's players are always re-fetched (API data lag); historical dates skip fresh files.
   const today = getTodayStr();
   const playerMap = new Map(); // id -> forceToday
   for (const date of dates) {
-    const ids = getPlayerIdsFromFixture(date, atpOnly);
+    const ids = getPlayerIdsFromFixture(date, atpOnly, skipQualifying);
     const isToday = date === today;
     ids.forEach(id => {
       // Once marked forceToday, keep it
@@ -270,7 +277,7 @@ async function main() {
     let recentCount = 0;
     for (let d = 1; d <= 14; d++) {
       const pastDate = new Date(Date.now() + 2 * 60 * 60 * 1000 - d * 86400000).toISOString().split('T')[0];
-      const pastIds = getPlayerIdsFromFixture(pastDate, atpOnly);
+      const pastIds = getPlayerIdsFromFixture(pastDate, atpOnly, skipQualifying);
       for (const id of pastIds) {
         if (!todayIds.has(id)) {
           if (!playerMap.has(id)) { playerMap.set(id, false); recentCount++; }

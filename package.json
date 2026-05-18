@@ -14,7 +14,7 @@
     "cache:seed:force": "node scripts/seed-historical.js --force",
     "stats:today": "node scripts/prebuild-match-stats.js today --clay-only",
     "stats:date": "node scripts/prebuild-match-stats.js --clay-only",
-    "stats:all-surfaces": "node scripts/prebuild-match-stats.js",
+    "stats:all-surfaces": "node scripts/prebuild-match-stats.js --with-qualifying",
     "verify": "node scripts/verify-fixtures.js",
     "verify:date": "node scripts/verify-fixtures.js"
   },

@@ -43,7 +43,11 @@ function getSurface(m) {
   return COURT_ID_MAP[m.tournament?.courtId] || m.tournament?.court?.name || null;
 }
 
-function getPlayerIdsFromFixtures(dates, atpOnly = true) {
+function isQualifying(f) {
+  return /^Q\d/i.test(f.round?.name ?? '');
+}
+
+function getPlayerIdsFromFixtures(dates, atpOnly = true, skipQualifying = false) {
   const ids = new Set();
   for (const date of dates) {
     const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
@@ -53,6 +57,7 @@ function getPlayerIdsFromFixtures(dates, atpOnly = true) {
       for (const f of (data.fixtures || [])) {
         if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue;
         if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue;
+        if (skipQualifying && isQualifying(f)) continue;
         if (f.player1?.id) ids.add(String(f.player1.id));
         if (f.player2?.id) ids.add(String(f.player2.id));
       }
@@ -99,6 +104,7 @@ async function main() {
   if (!fs.existsSync(MATCH_STATS_DIR)) fs.mkdirSync(MATCH_STATS_DIR, { recursive: true });
 
   const atpOnly = !process.argv.includes('--all-levels');
+  const skipQualifying = !process.argv.includes('--with-qualifying');
   const clayOnly = process.argv.includes('--clay-only');
   const surfaceArg = process.argv.find(a => a.startsWith('--surface='))?.split('=')[1]
     || (process.argv.includes('--surface') ? process.argv[process.argv.indexOf('--surface') + 1] : null);
@@ -107,7 +113,7 @@ async function main() {
     : ALL_SURFACES;
 
   const args = process.argv.slice(2).filter(a =>
-    a !== '--all-levels' && a !== '--clay-only' && !a.startsWith('--surface')
+    a !== '--all-levels' && a !== '--clay-only' && a !== '--with-qualifying' && !a.startsWith('--surface')
     && process.argv.indexOf(a) !== process.argv.indexOf('--surface') + 1
   );
   const arg = args[0];
@@ -124,9 +130,10 @@ async function main() {
   }
 
   if (atpOnly) console.log('Mode: ATP-only (use --all-levels to include Challenger/ITF)');
+  if (skipQualifying) console.log('Skipping qualifying rounds (use --with-qualifying to include)');
   if (surfaces.length < ALL_SURFACES.length) console.log(`Surface filter: ${surfaces.join(', ')} only`);
 
-  const playerIds = getPlayerIdsFromFixtures(dates, atpOnly);
+  const playerIds = getPlayerIdsFromFixtures(dates, atpOnly, skipQualifying);
   if (playerIds.length === 0) {
     console.log('No players found. Make sure fixture files exist in cache/');
     process.exit(0);
