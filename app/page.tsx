@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 interface Fixture {
   id: number;
@@ -28,7 +28,6 @@ export default function Home() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [playerStats, setPlayerStats] = useState<Record<string, PlayerSurfaceStat>>({});
   const [refreshing, setRefreshing] = useState(false);
-  const router = useRouter();
 
   const normalizeSurface = (s?: string) => {
     if (!s) return s;
@@ -84,6 +83,12 @@ export default function Home() {
   useEffect(() => {
     if (fixtures.length === 0) return;
 
+    const dateKey = `fixture-stats-${formatDate(selectedDate)}`;
+    const cached = sessionStorage.getItem(dateKey);
+    if (cached) {
+      try { setPlayerStats(JSON.parse(cached)); } catch {}
+    }
+
     const atpFixtures = fixtures.filter(f => (f.tournament?.rank?.id ?? 0) >= 2);
 
     const toFetch = new Map<string, { playerId: number; surface: string }>();
@@ -95,6 +100,7 @@ export default function Home() {
 
     const entries = Array.from(toFetch.values());
     let cancelled = false;
+    const accumulated: Record<string, PlayerSurfaceStat> = cached ? JSON.parse(cached) : {};
 
     const pending = [...entries];
     const runWorker = async () => {
@@ -103,15 +109,16 @@ export default function Home() {
         const entry = pending.shift();
         if (!entry) break;
         const { playerId, surface } = entry;
+        const key = `${playerId}-${surface}`;
+        if (accumulated[key]) continue;
         try {
           const res = await fetch(`/api/player-surface-stats?playerId=${playerId}&surface=${surface}&limit=10&basic=true`);
           if (!res.ok || cancelled) continue;
           const data = await res.json();
           if (!cancelled && (data.wins ?? 0) + (data.losses ?? 0) > 0) {
-            setPlayerStats(prev => ({
-              ...prev,
-              [`${playerId}-${surface}`]: { wins: data.wins, losses: data.losses },
-            }));
+            accumulated[key] = { wins: data.wins, losses: data.losses };
+            setPlayerStats(prev => ({ ...prev, [key]: accumulated[key] }));
+            try { sessionStorage.setItem(dateKey, JSON.stringify(accumulated)); } catch {}
           }
         } catch {}
       }
@@ -123,11 +130,11 @@ export default function Home() {
     return () => { cancelled = true; };
   }, [fixtures]);
 
-  const handleMatchClick = (fixture: Fixture) => {
+  const matchUrl = (fixture: Fixture) => {
     const p1 = fixture.player1?.id || '';
     const p2 = fixture.player2?.id || '';
     const surface = normalizeSurface(fixture.tournament?.court?.name) || 'All';
-    router.push(`/compare?p1=${p1}&p2=${p2}&surface=${surface}`);
+    return `/compare?p1=${p1}&p2=${p2}&surface=${surface}`;
   };
 
   const getCategoryLabel = (rankName?: string) => {
@@ -261,10 +268,10 @@ export default function Home() {
                     const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
                     const p2Stats = fixture.player2?.id ? playerStats[`${fixture.player2.id}-${matchSurface}`] : undefined;
                     return (
-                      <div
+                      <Link
                         key={fixture.id}
-                        onClick={() => handleMatchClick(fixture)}
-                        className={`px-4 py-3 cursor-pointer hover:bg-zinc-800/60 active:bg-zinc-800 transition ${i > 0 ? 'border-t border-zinc-800' : ''}`}
+                        href={matchUrl(fixture)}
+                        className={`block px-4 py-3 hover:bg-zinc-800/60 active:bg-zinc-800 transition ${i > 0 ? 'border-t border-zinc-800' : ''}`}
                       >
                         <div className="grid grid-cols-[1fr_2.5rem_1fr_1.25rem] gap-2 items-start">
                           <div>
@@ -311,7 +318,7 @@ export default function Home() {
                             <span className="text-blue-500 font-bold text-base leading-tight">→</span>
                           </div>
                         </div>
-                      </div>
+                      </Link>
                     );
                   })}
                 </div>
