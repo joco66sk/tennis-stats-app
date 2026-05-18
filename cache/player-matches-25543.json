@@ -1,7 +1,44 @@
 {
   "matches": [
     {
-      "id": "144798176",
+      "id": "1243203",
+      "date": "2026-05-13T16:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 33648,
+      "player2Id": 25543,
+      "tournamentId": 21326,
+      "match_winner": 33648,
+      "result": "6-1 1-6 6-2",
+      "best_of": null,
+      "odd1": "1.39",
+      "odd2": "2.98",
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243299",
       "date": "2026-05-12T12:05:00.000Z",
       "roundId": 7,
       "player1Id": 25543,
@@ -38,7 +75,7 @@
       }
     },
     {
-      "id": "84639011",
+      "id": "1243200",
       "date": "2026-05-10T16:05:00.000Z",
       "roundId": 6,
       "player1Id": 25543,
@@ -75,7 +112,7 @@
       }
     },
     {
-      "id": "10811898",
+      "id": "1243268",
       "date": "2026-05-08T12:10:00.000Z",
       "roundId": 5,
       "player1Id": 25543,
@@ -408,7 +445,7 @@
       }
     },
     {
-      "id": "1242234",
+      "id": "1242233",
       "date": "2026-02-24T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 25543,
@@ -519,7 +556,7 @@
       }
     },
     {
-      "id": "1242007",
+      "id": "1242008",
       "date": "2026-02-17T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 25543,
@@ -11212,6 +11249,43 @@
       }
     },
     {
+      "id": "843501",
+      "date": "2020-10-23T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 9305,
+      "player2Id": 25543,
+      "tournamentId": 16496,
+      "match_winner": 9305,
+      "result": "3-6 7-6(7) 6-4",
+      "best_of": null,
+      "odd1": "1.78",
+      "odd2": "2.13",
+      "player1": {
+        "id": 9305,
+        "name": "Daniel Evans",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 16496,
+        "name": "European Open - Antwerp",
+        "courtId": 3,
+        "date": "2020-10-19T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "BEL",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "842884",
       "date": "2020-10-05T00:00:00.000Z",
       "roundId": 7,
@@ -11286,6 +11360,43 @@
       }
     },
     {
+      "id": "842907",
+      "date": "2020-09-28T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 25543,
+      "player2Id": 28898,
+      "tournamentId": 16462,
+      "match_winner": 25543,
+      "result": "7-6(3) 6-3 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "player2": {
+        "id": 28898,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "POL"
+      },
+      "tournament": {
+        "id": 16462,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2020-09-28T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "843207",
       "date": "2020-08-25T00:00:00.000Z",
       "roundId": 6,
@@ -11314,6 +11425,117 @@
         "date": "2020-08-24T00:00:00.000Z",
         "rankId": 3,
         "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "842104",
+      "date": "2020-02-12T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 9305,
+      "player2Id": 25543,
+      "tournamentId": 16440,
+      "match_winner": 9305,
+      "result": "4-6 6-3 6-4",
+      "best_of": null,
+      "odd1": "2.49",
+      "odd2": "1.56",
+      "player1": {
+        "id": 9305,
+        "name": "Daniel Evans",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 16440,
+        "name": "ABN AMRO World Tennis Tournament - Rotterdam",
+        "courtId": 3,
+        "date": "2020-02-10T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "NED",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "841252",
+      "date": "2019-11-23T00:00:00.000Z",
+      "roundId": 14,
+      "player1Id": 33502,
+      "player2Id": 25543,
+      "tournamentId": 16428,
+      "match_winner": 33502,
+      "result": "6-4 4-6 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 33502,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CAN"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 16428,
+        "name": "Davis Cup, Finals, SF, RUS-CAN 1-2",
+        "courtId": 3,
+        "date": "2019-11-18T00:00:00.000Z",
+        "rankId": 5,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "791301",
+      "date": "2019-08-07T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 25543,
+      "player2Id": 1092,
+      "tournamentId": 15652,
+      "match_winner": 25543,
+      "result": "6-4 6-7(3) 6-2",
+      "best_of": null,
+      "odd1": "2.36",
+      "odd2": "1.62",
+      "player1": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "player2": {
+        "id": 1092,
+        "name": "Stan Wawrinka",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 15652,
+        "name": "Coupe Rogers - Montreal",
+        "courtId": 1,
+        "date": "2019-08-05T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "CAN",
         "court": {
           "id": 1,
           "name": "Hard"
@@ -11360,6 +11582,154 @@
       }
     },
     {
+      "id": "790229",
+      "date": "2019-06-21T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 29812,
+      "player2Id": 25543,
+      "tournamentId": 15637,
+      "match_winner": 29812,
+      "result": "6-2 7-6(4)",
+      "best_of": null,
+      "odd1": "1.78",
+      "odd2": "2.13",
+      "player1": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 15637,
+        "name": "Noventi Open - Halle",
+        "courtId": 5,
+        "date": "2019-06-17T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "790126",
+      "date": "2019-06-13T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 29812,
+      "player2Id": 25543,
+      "tournamentId": 15635,
+      "match_winner": 29812,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": "2.01",
+      "odd2": "1.84",
+      "player1": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 15635,
+        "name": "Mercedes Cup - Stuttgart",
+        "courtId": 5,
+        "date": "2019-06-10T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "787405",
+      "date": "2019-01-01T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 1092,
+      "player2Id": 25543,
+      "tournamentId": 15602,
+      "match_winner": 1092,
+      "result": "7-6(7) 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 1092,
+        "name": "Stan Wawrinka",
+        "countryAcr": "SUI"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 15602,
+        "name": "Qatar ExxonMobil Open - Doha",
+        "courtId": 1,
+        "date": "2019-01-01T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "QAT",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "724354",
+      "date": "2018-09-19T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 1092,
+      "player2Id": 25543,
+      "tournamentId": 14758,
+      "match_winner": 1092,
+      "result": "7-6(10) 7-6(1)",
+      "best_of": null,
+      "odd1": "1.96",
+      "odd2": "1.96",
+      "player1": {
+        "id": 1092,
+        "name": "Stan Wawrinka",
+        "countryAcr": "SUI"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 14758,
+        "name": "St. Petersburg Open - St. Petersburg",
+        "courtId": 3,
+        "date": "2018-09-17T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "RUS",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "723801",
       "date": "2018-08-17T00:00:00.000Z",
       "roundId": 6,
@@ -11397,8 +11767,8 @@
       }
     }
   ],
-  "cachedAt": 1778911546005,
-  "pages": 3,
+  "cachedAt": 1779144775257,
+  "pages": 1,
   "deepSeeded": true,
   "seededAt": 1778911546005
 }

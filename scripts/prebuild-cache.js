@@ -86,11 +86,13 @@ function needsFetch(playerId) {
     if (matches.length === 0) return true;
     if (!data.deepSeeded && (data.pages ?? 1) < 3) return true;
     if (ageHours < 2) return false;
-    // Only re-fetch if a fixture exists for this player on a date after the last cache update.
+    // Skip only if we actually have a cached match on/after the last known fixture date.
+    // Using cachedAt was wrong — the API often lags 1-3 days behind match results,
+    // so a cache written after the fixture date can still be missing that match.
     const lastFixture = getFixtureMap()[playerId];
     if (lastFixture) {
-      const lastFixtureEnd = new Date(lastFixture + 'T23:59:59Z').getTime();
-      if (cachedAt > lastFixtureEnd) return false;
+      const lastMatchDate = matches.reduce((max, m) => m.date > max ? m.date : max, '').slice(0, 10);
+      if (lastMatchDate >= lastFixture) return false;
     }
     return true;
   } catch { return true; }

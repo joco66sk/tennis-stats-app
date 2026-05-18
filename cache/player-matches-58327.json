@@ -6735,43 +6735,6 @@
       }
     },
     {
-      "id": "974365",
-      "date": "2023-04-08T00:00:00.000Z",
-      "roundId": 5,
-      "player1Id": 58327,
-      "player2Id": 18736,
-      "tournamentId": 18421,
-      "match_winner": 58327,
-      "result": "6-4 6-4",
-      "best_of": null,
-      "odd1": null,
-      "odd2": null,
-      "player1": {
-        "id": 58327,
-        "name": "Tomas Machac",
-        "countryAcr": "CZE"
-      },
-      "player2": {
-        "id": 18736,
-        "name": "Marcos Giron",
-        "countryAcr": "USA"
-      },
-      "tournament": {
-        "id": 18421,
-        "name": "US Men's Clay Court Championship - Houston",
-        "courtId": 2,
-        "date": "2023-04-03T00:00:00.000Z",
-        "rankId": 2,
-        "countryAcr": "USA",
-        "court": {
-          "id": 2,
-          "name": "Clay"
-        },
-        "rank": null,
-        "country": null
-      }
-    },
-    {
       "id": "974394",
       "date": "2023-04-08T00:00:00.000Z",
       "roundId": 9,
@@ -6792,6 +6755,43 @@
         "id": 58327,
         "name": "Tomas Machac",
         "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 18421,
+        "name": "US Men's Clay Court Championship - Houston",
+        "courtId": 2,
+        "date": "2023-04-03T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "USA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "974365",
+      "date": "2023-04-08T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 58327,
+      "player2Id": 18736,
+      "tournamentId": 18421,
+      "match_winner": 58327,
+      "result": "6-4 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 58327,
+        "name": "Tomas Machac",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 18736,
+        "name": "Marcos Giron",
+        "countryAcr": "USA"
       },
       "tournament": {
         "id": 18421,
@@ -11360,8 +11360,8 @@
       }
     }
   ],
-  "cachedAt": 1779099848672,
-  "pages": 3,
+  "cachedAt": 1779144779103,
+  "pages": 1,
   "deepSeeded": true,
   "seededAt": 1779099848672
 }
