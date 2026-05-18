@@ -9103,43 +9103,6 @@
       }
     },
     {
-      "id": "983756",
-      "date": "2023-01-07T00:00:00.000Z",
-      "roundId": 9,
-      "player1Id": 92985,
-      "player2Id": 58591,
-      "tournamentId": 18524,
-      "match_winner": 92985,
-      "result": "6-0 6-4",
-      "best_of": null,
-      "odd1": null,
-      "odd2": null,
-      "player1": {
-        "id": 92985,
-        "name": "Alex Michelsen",
-        "countryAcr": "USA"
-      },
-      "player2": {
-        "id": 58591,
-        "name": "Garrett Johns",
-        "countryAcr": "USA"
-      },
-      "tournament": {
-        "id": 18524,
-        "name": "M25 Malibu 1",
-        "courtId": 1,
-        "date": "2023-01-02T00:00:00.000Z",
-        "rankId": 0,
-        "countryAcr": "USA",
-        "court": {
-          "id": 1,
-          "name": "Hard"
-        },
-        "rank": null,
-        "country": null
-      }
-    },
-    {
       "id": "983770",
       "date": "2023-01-07T00:00:00.000Z",
       "roundId": 10,
@@ -9159,6 +9122,43 @@
       "player2": {
         "id": 73620,
         "name": "Zachary Svajda",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 18524,
+        "name": "M25 Malibu 1",
+        "courtId": 1,
+        "date": "2023-01-02T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "983756",
+      "date": "2023-01-07T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 92985,
+      "player2Id": 58591,
+      "tournamentId": 18524,
+      "match_winner": 92985,
+      "result": "6-0 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 92985,
+        "name": "Alex Michelsen",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 58591,
+        "name": "Garrett Johns",
         "countryAcr": "USA"
       },
       "tournament": {
@@ -10472,8 +10472,8 @@
       }
     }
   ],
-  "cachedAt": 1779099740818,
-  "pages": 3,
+  "cachedAt": 1779141095130,
+  "pages": 1,
   "deepSeeded": true,
   "seededAt": 1779099740818
 }

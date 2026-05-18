@@ -9843,43 +9843,6 @@
       }
     },
     {
-      "id": "905344",
-      "date": "2021-11-20T00:00:00.000Z",
-      "roundId": 9,
-      "player1Id": 52721,
-      "player2Id": 38876,
-      "tournamentId": 17441,
-      "match_winner": 52721,
-      "result": "2-6 7-6(1) 6-1",
-      "best_of": null,
-      "odd1": "1.139",
-      "odd2": "5.7",
-      "player1": {
-        "id": 52721,
-        "name": "Sebastian Baez",
-        "countryAcr": "ARG"
-      },
-      "player2": {
-        "id": 38876,
-        "name": "Santiago Rodriguez Taverna",
-        "countryAcr": "ARG"
-      },
-      "tournament": {
-        "id": 17441,
-        "name": "Campinas Challenger",
-        "courtId": 2,
-        "date": "2021-11-15T00:00:00.000Z",
-        "rankId": 1,
-        "countryAcr": "BRA",
-        "court": {
-          "id": 2,
-          "name": "Clay"
-        },
-        "rank": null,
-        "country": null
-      }
-    },
-    {
       "id": "905352",
       "date": "2021-11-20T00:00:00.000Z",
       "roundId": 10,
@@ -9899,6 +9862,43 @@
       "player2": {
         "id": 52279,
         "name": "Francisco Cerundolo",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 17441,
+        "name": "Campinas Challenger",
+        "courtId": 2,
+        "date": "2021-11-15T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "BRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "905344",
+      "date": "2021-11-20T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 52721,
+      "player2Id": 38876,
+      "tournamentId": 17441,
+      "match_winner": 52721,
+      "result": "2-6 7-6(1) 6-1",
+      "best_of": null,
+      "odd1": "1.139",
+      "odd2": "5.7",
+      "player1": {
+        "id": 52721,
+        "name": "Sebastian Baez",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 38876,
+        "name": "Santiago Rodriguez Taverna",
         "countryAcr": "ARG"
       },
       "tournament": {
@@ -10213,43 +10213,6 @@
       }
     },
     {
-      "id": "900438",
-      "date": "2021-10-23T00:00:00.000Z",
-      "roundId": 9,
-      "player1Id": 52721,
-      "player2Id": 26153,
-      "tournamentId": 17375,
-      "match_winner": 52721,
-      "result": "7-5 6-2",
-      "best_of": null,
-      "odd1": "1.64",
-      "odd2": "2.26",
-      "player1": {
-        "id": 52721,
-        "name": "Sebastian Baez",
-        "countryAcr": "ARG"
-      },
-      "player2": {
-        "id": 26153,
-        "name": "Juan Pablo Varillas",
-        "countryAcr": "PER"
-      },
-      "tournament": {
-        "id": 17375,
-        "name": "Buenos Aires Challenger",
-        "courtId": 2,
-        "date": "2021-10-18T00:00:00.000Z",
-        "rankId": 1,
-        "countryAcr": "ARG",
-        "court": {
-          "id": 2,
-          "name": "Clay"
-        },
-        "rank": null,
-        "country": null
-      }
-    },
-    {
       "id": "900456",
       "date": "2021-10-23T00:00:00.000Z",
       "roundId": 10,
@@ -10270,6 +10233,43 @@
         "id": 52934,
         "name": "Juan Manuel Cerundolo",
         "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 17375,
+        "name": "Buenos Aires Challenger",
+        "courtId": 2,
+        "date": "2021-10-18T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ARG",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "900438",
+      "date": "2021-10-23T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 52721,
+      "player2Id": 26153,
+      "tournamentId": 17375,
+      "match_winner": 52721,
+      "result": "7-5 6-2",
+      "best_of": null,
+      "odd1": "1.64",
+      "odd2": "2.26",
+      "player1": {
+        "id": 52721,
+        "name": "Sebastian Baez",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 26153,
+        "name": "Juan Pablo Varillas",
+        "countryAcr": "PER"
       },
       "tournament": {
         "id": 17375,
@@ -11286,8 +11286,8 @@
       }
     }
   ],
-  "cachedAt": 1779099737202,
-  "pages": 3,
+  "cachedAt": 1779141093659,
+  "pages": 1,
   "deepSeeded": true,
   "seededAt": 1779099737202
 }

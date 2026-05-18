@@ -1,6 +1,43 @@
 {
   "matches": [
     {
+      "id": "113495876",
+      "date": "2026-05-18T13:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 28170,
+      "player2Id": 52394,
+      "tournamentId": 21328,
+      "match_winner": 28170,
+      "result": "6-4 6-1",
+      "best_of": null,
+      "odd1": "2.1",
+      "odd2": "1.727",
+      "player1": {
+        "id": 28170,
+        "name": "Arthur Rinderknech",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 52394,
+        "name": "Thiago Agustin Tirante",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 21328,
+        "name": "Gonet Geneva Open - Geneva",
+        "courtId": 2,
+        "date": "2026-05-18T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SUI",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1243250",
       "date": "2026-05-12T22:20:00.000Z",
       "roundId": 7,
@@ -11545,8 +11582,8 @@
       }
     }
   ],
-  "cachedAt": 1779099733275,
-  "pages": 3,
+  "cachedAt": 1779141092108,
+  "pages": 1,
   "deepSeeded": true,
   "seededAt": 1779099733275
 }
