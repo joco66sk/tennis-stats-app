@@ -75,7 +75,7 @@ function getFixtureMap() {
   return map;
 }
 
-function needsFetch(playerId, forceToday = false) {
+function needsFetch(playerId) {
   const fp = path.join(CACHE_DIR, `player-matches-${playerId}.json`);
   if (!fs.existsSync(fp)) return true;
   try {
@@ -85,10 +85,8 @@ function needsFetch(playerId, forceToday = false) {
     const ageHours = (Date.now() - cachedAt) / 3600000;
     if (matches.length === 0) return true;
     if (!data.deepSeeded && (data.pages ?? 1) < 3) return true;
-    if (forceToday) return true;
     if (ageHours < 2) return false;
     // Only re-fetch if a fixture exists for this player on a date after the last cache update.
-    // If the cache already covers all known matches, skip — no API call needed.
     const lastFixture = getFixtureMap()[playerId];
     if (lastFixture) {
       const lastFixtureEnd = new Date(lastFixture + 'T23:59:59Z').getTime();
@@ -257,41 +255,31 @@ async function main() {
   if (skipQualifying) console.log('Skipping qualifying rounds (use --with-qualifying to include)');
 
   // Collect all unique player IDs across requested dates.
-  // Today's players are always re-fetched (API data lag); historical dates skip fresh files.
   const today = getTodayStr();
-  const playerMap = new Map(); // id -> forceToday
+  const playerIds = new Set();
   for (const date of dates) {
     const ids = getPlayerIdsFromFixture(date, atpOnly, skipQualifying);
-    const isToday = date === today;
-    ids.forEach(id => {
-      // Once marked forceToday, keep it
-      if (!playerMap.has(id) || isToday) playerMap.set(id, isToday);
-    });
-    console.log(`Date ${date}: ${ids.length} players${isToday ? ' (force re-fetch)' : ''}`);
+    ids.forEach(id => playerIds.add(id));
+    console.log(`Date ${date}: ${ids.length} players`);
   }
 
   // Include players from the last 14 days who are NOT in today's fixtures —
   // covers recently-eliminated players across full tournament runs (even Grand Slams).
   if (dates.includes(today)) {
-    const todayIds = new Set(playerMap.keys());
-    let recentCount = 0;
+    const beforeCount = playerIds.size;
     for (let d = 1; d <= 14; d++) {
       const pastDate = new Date(Date.now() + 2 * 60 * 60 * 1000 - d * 86400000).toISOString().split('T')[0];
-      const pastIds = getPlayerIdsFromFixture(pastDate, atpOnly, skipQualifying);
-      for (const id of pastIds) {
-        if (!todayIds.has(id)) {
-          if (!playerMap.has(id)) { playerMap.set(id, false); recentCount++; }
-        }
-      }
+      getPlayerIdsFromFixture(pastDate, atpOnly, skipQualifying).forEach(id => playerIds.add(id));
     }
+    const recentCount = playerIds.size - beforeCount;
     if (recentCount > 0)
       console.log(`Added ${recentCount} recently-eliminated player(s) from last 14 days`);
   }
 
-  const toFetch = [...playerMap.entries()].filter(([id, force]) => needsFetch(id, force)).map(([id]) => id);
-  const skip = playerMap.size - toFetch.length;
+  const toFetch = [...playerIds].filter(id => needsFetch(id));
+  const skip = playerIds.size - toFetch.length;
 
-  console.log(`\nTotal players: ${playerMap.size} | Fresh (skip): ${skip} | To fetch: ${toFetch.length}`);
+  console.log(`\nTotal players: ${playerIds.size} | Fresh (skip): ${skip} | To fetch: ${toFetch.length}`);
   if (toFetch.length === 0) { console.log('All up to date!'); return; }
 
   const started = Date.now();
