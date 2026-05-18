@@ -49,7 +49,7 @@ export default function Home() {
   const loadFixtures = (date: Date, force = false) => {
     setLoading(true);
     setError(false);
-    setPlayerStats({});
+    setPlayerStats({});  // clear when changing date so stale stats don't show for wrong players
     const url = `/api/fixtures?date=${formatDate(date)}${force ? '&refresh=true' : ''}`;
     fetch(url)
       .then(r => {
@@ -271,6 +271,8 @@ export default function Home() {
                       <Link
                         key={fixture.id}
                         href={matchUrl(fixture)}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`block px-4 py-3 hover:bg-zinc-800/60 active:bg-zinc-800 transition ${i > 0 ? 'border-t border-zinc-800' : ''}`}
                       >
                         <div className="grid grid-cols-[1fr_2.5rem_1fr_1.25rem] gap-2 items-start">
