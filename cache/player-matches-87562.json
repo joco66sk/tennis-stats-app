@@ -1,6 +1,43 @@
 {
   "matches": [
     {
+      "id": "1243301",
+      "date": "2026-05-09T18:20:00.000Z",
+      "roundId": 5,
+      "player1Id": 14716,
+      "player2Id": 87562,
+      "tournamentId": 21326,
+      "match_winner": 14716,
+      "result": "6-4 6-7(5) 6-3",
+      "best_of": null,
+      "odd1": "3.74",
+      "odd2": "1.27",
+      "player1": {
+        "id": 14716,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GEO"
+      },
+      "player2": {
+        "id": 87562,
+        "name": "Ben Shelton",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1243150",
       "date": "2026-04-24T00:00:00.000Z",
       "roundId": 5,
@@ -852,7 +889,7 @@
       }
     },
     {
-      "id": "1174818",
+      "id": "1174819",
       "date": "2025-11-14T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 47275,
@@ -926,7 +963,7 @@
       }
     },
     {
-      "id": "1174819",
+      "id": "1174818",
       "date": "2025-11-09T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 24008,
@@ -6772,7 +6809,7 @@
       }
     },
     {
-      "id": "976006",
+      "id": "976007",
       "date": "2023-06-19T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 87562,
@@ -10546,6 +10583,6 @@
       }
     }
   ],
-  "cachedAt": 1778301543839,
+  "cachedAt": 1779099645611,
   "pages": 3
 }

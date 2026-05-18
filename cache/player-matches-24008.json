@@ -1,7 +1,81 @@
 {
   "matches": [
     {
-      "id": "17646995",
+      "id": "1243198",
+      "date": "2026-05-12T15:20:00.000Z",
+      "roundId": 7,
+      "player1Id": 76127,
+      "player2Id": 24008,
+      "tournamentId": 21326,
+      "match_winner": 76127,
+      "result": "1-6 7-6(10) 6-0",
+      "best_of": null,
+      "odd1": "3.92",
+      "odd2": "1.25",
+      "player1": {
+        "id": 76127,
+        "name": "Luciano Darderi",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243303",
+      "date": "2026-05-10T14:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 24008,
+      "player2Id": 88766,
+      "tournamentId": 21326,
+      "match_winner": 24008,
+      "result": "6-1 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 88766,
+        "name": "Alexander Blockx",
+        "countryAcr": "BEL"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243217",
       "date": "2026-05-08T16:45:00.000Z",
       "roundId": 5,
       "player1Id": 24008,
@@ -1444,7 +1518,7 @@
       }
     },
     {
-      "id": "1174819",
+      "id": "1174818",
       "date": "2025-11-09T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 24008,
@@ -1962,7 +2036,7 @@
       }
     },
     {
-      "id": "1174019",
+      "id": "1174018",
       "date": "2025-09-21T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 29932,
@@ -1999,7 +2073,7 @@
       }
     },
     {
-      "id": "1174018",
+      "id": "1174019",
       "date": "2025-09-20T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 39309,
@@ -5107,7 +5181,7 @@
       }
     },
     {
-      "id": "1104615",
+      "id": "1104614",
       "date": "2024-08-26T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 24008,
@@ -7475,7 +7549,7 @@
       }
     },
     {
-      "id": "1100105",
+      "id": "1100106",
       "date": "2024-01-07T00:00:00.000Z",
       "roundId": 12,
       "player1Id": 24008,
@@ -11212,6 +11286,43 @@
       }
     },
     {
+      "id": "913669",
+      "date": "2022-04-16T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 30470,
+      "player2Id": 24008,
+      "tournamentId": 17554,
+      "match_winner": 30470,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": "1.71",
+      "odd2": "2.24",
+      "player1": {
+        "id": 30470,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GRE"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 17554,
+        "name": "Monte-Carlo Rolex Masters - Monte-Carlo",
+        "courtId": 2,
+        "date": "2022-04-11T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "MON",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "913708",
       "date": "2022-04-15T00:00:00.000Z",
       "roundId": 9,
@@ -11286,6 +11397,43 @@
       }
     },
     {
+      "id": "913409",
+      "date": "2022-03-27T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 24008,
+      "player2Id": 18094,
+      "tournamentId": 17551,
+      "match_winner": 24008,
+      "result": "6-2 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 18094,
+        "name": "Mackenzie Mcdonald",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 17551,
+        "name": "Miami Open - Miami",
+        "courtId": 1,
+        "date": "2022-03-21T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "913269",
       "date": "2022-03-13T00:00:00.000Z",
       "roundId": 5,
@@ -11314,6 +11462,43 @@
         "date": "2022-03-07T00:00:00.000Z",
         "rankId": 3,
         "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "913125",
+      "date": "2022-02-22T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 24008,
+      "player2Id": 40609,
+      "tournamentId": 17548,
+      "match_winner": 24008,
+      "result": "3-6 7-6(10) 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 40609,
+        "name": "Jenson Brooksby",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 17548,
+        "name": "Abierto Mexicano Telcel - Acapulco",
+        "courtId": 1,
+        "date": "2022-02-21T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "MEX",
         "court": {
           "id": 1,
           "name": "Hard"
@@ -11354,6 +11539,117 @@
         "court": {
           "id": 3,
           "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "912493",
+      "date": "2022-02-04T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 24008,
+      "player2Id": 7806,
+      "tournamentId": 17537,
+      "match_winner": 24008,
+      "result": "6-1 6-0",
+      "best_of": null,
+      "odd1": "1.189",
+      "odd2": "5.25",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 7806,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 17537,
+        "name": "Open Sud de France - Montpellier",
+        "courtId": 3,
+        "date": "2022-01-31T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "912502",
+      "date": "2022-02-03T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 24008,
+      "player2Id": 18094,
+      "tournamentId": 17537,
+      "match_winner": 24008,
+      "result": "6-2 7-6(5)",
+      "best_of": null,
+      "odd1": "1.106",
+      "odd2": "7.3",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 18094,
+        "name": "Mackenzie Mcdonald",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 17537,
+        "name": "Open Sud de France - Montpellier",
+        "courtId": 3,
+        "date": "2022-01-31T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "912249",
+      "date": "2022-01-23T00:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 33502,
+      "player2Id": 24008,
+      "tournamentId": 17535,
+      "match_winner": 33502,
+      "result": "6-3 7-6(5) 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 33502,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CAN"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 17535,
+        "name": "Australian Open - Melbourne",
+        "courtId": 1,
+        "date": "2022-01-17T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
         },
         "rank": null,
         "country": null
@@ -11508,6 +11804,80 @@
       }
     },
     {
+      "id": "869817",
+      "date": "2021-11-18T00:00:00.000Z",
+      "roundId": 8,
+      "player1Id": 24008,
+      "player2Id": 26473,
+      "tournamentId": 16952,
+      "match_winner": 24008,
+      "result": "6-2 6-4",
+      "best_of": null,
+      "odd1": "1.3",
+      "odd2": "3.66",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 26473,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "POL"
+      },
+      "tournament": {
+        "id": 16952,
+        "name": "Nitto ATP Finals - Turin",
+        "courtId": 3,
+        "date": "2021-11-15T00:00:00.000Z",
+        "rankId": 7,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "869824",
+      "date": "2021-11-14T00:00:00.000Z",
+      "roundId": 8,
+      "player1Id": 24008,
+      "player2Id": 29812,
+      "tournamentId": 16952,
+      "match_winner": 24008,
+      "result": "7-6(7) 1-0 ret.",
+      "best_of": null,
+      "odd1": "1.46",
+      "odd2": "2.8",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 16952,
+        "name": "Nitto ATP Finals - Turin",
+        "courtId": 3,
+        "date": "2021-11-15T00:00:00.000Z",
+        "rankId": 7,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "869757",
       "date": "2021-11-05T00:00:00.000Z",
       "roundId": 9,
@@ -11528,6 +11898,43 @@
         "id": 33648,
         "name": "Casper Ruud",
         "countryAcr": "NOR"
+      },
+      "tournament": {
+        "id": 16950,
+        "name": "Rolex Paris Masters - Paris",
+        "courtId": 3,
+        "date": "2021-11-01T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "869715",
+      "date": "2021-11-03T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 24008,
+      "player2Id": 12190,
+      "tournamentId": 16950,
+      "match_winner": 24008,
+      "result": "6-3 7-6(5)",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 12190,
+        "name": "Dusan Lajovic",
+        "countryAcr": "SRB"
       },
       "tournament": {
         "id": 16950,
@@ -11619,6 +12026,43 @@
       }
     },
     {
+      "id": "866027",
+      "date": "2021-10-10T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 24008,
+      "player2Id": 40609,
+      "tournamentId": 16896,
+      "match_winner": 24008,
+      "result": "6-4 3-6 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 40609,
+        "name": "Jenson Brooksby",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 16896,
+        "name": "BNP Paribas Open - Indian Wells",
+        "courtId": 1,
+        "date": "2021-10-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "869094",
       "date": "2021-09-10T00:00:00.000Z",
       "roundId": 10,
@@ -11646,6 +12090,80 @@
         "courtId": 1,
         "date": "2021-08-30T00:00:00.000Z",
         "rankId": 4,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "869164",
+      "date": "2021-09-08T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 24008,
+      "player2Id": 36449,
+      "tournamentId": 16934,
+      "match_winner": 24008,
+      "result": "7-6(6) 6-3 6-4",
+      "best_of": null,
+      "odd1": "1.175",
+      "odd2": "5.55",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 36449,
+        "name": "Lloyd Harris",
+        "countryAcr": "RSA"
+      },
+      "tournament": {
+        "id": 16934,
+        "name": "U.S. Open - New York",
+        "courtId": 1,
+        "date": "2021-08-30T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "868846",
+      "date": "2021-08-18T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 24008,
+      "player2Id": 36449,
+      "tournamentId": 16932,
+      "match_winner": 24008,
+      "result": "7-6(3) 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 36449,
+        "name": "Lloyd Harris",
+        "countryAcr": "RSA"
+      },
+      "tournament": {
+        "id": 16932,
+        "name": "Western & Southern Open - Cincinnati",
+        "courtId": 1,
+        "date": "2021-08-16T00:00:00.000Z",
+        "rankId": 3,
         "countryAcr": "USA",
         "court": {
           "id": 1,
@@ -11878,6 +12396,154 @@
       }
     },
     {
+      "id": "866779",
+      "date": "2021-05-09T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 24008,
+      "player2Id": 29812,
+      "tournamentId": 16907,
+      "match_winner": 24008,
+      "result": "6-7(8) 6-4 6-3",
+      "best_of": null,
+      "odd1": "1.49",
+      "odd2": "2.78",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 16907,
+        "name": "Mutua Madrid Open - Madrid",
+        "courtId": 2,
+        "date": "2021-05-03T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "866736",
+      "date": "2021-05-06T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 24008,
+      "player2Id": 9305,
+      "tournamentId": 16907,
+      "match_winner": 24008,
+      "result": "6-3 7-6(3)",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 9305,
+        "name": "Daniel Evans",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 16907,
+        "name": "Mutua Madrid Open - Madrid",
+        "courtId": 2,
+        "date": "2021-05-03T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "866427",
+      "date": "2021-04-15T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 11226,
+      "player2Id": 24008,
+      "tournamentId": 16902,
+      "match_winner": 11226,
+      "result": "6-4 7-6(7)",
+      "best_of": null,
+      "odd1": "2.78",
+      "odd2": "1.49",
+      "player1": {
+        "id": 11226,
+        "name": "David Goffin",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16902,
+        "name": "Monte-Carlo Rolex Masters - Monte-Carlo",
+        "courtId": 2,
+        "date": "2021-04-12T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "MON",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "866443",
+      "date": "2021-04-14T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 24008,
+      "player2Id": 31392,
+      "tournamentId": 16902,
+      "match_winner": 24008,
+      "result": "6-3 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 31392,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 16902,
+        "name": "Monte-Carlo Rolex Masters - Monte-Carlo",
+        "courtId": 2,
+        "date": "2021-04-12T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "MON",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "865080",
       "date": "2021-02-16T00:00:00.000Z",
       "roundId": 9,
@@ -11898,6 +12564,43 @@
         "id": 24008,
         "name": "Alexander Zverev",
         "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16881,
+        "name": "Australian Open - Melbourne",
+        "courtId": 1,
+        "date": "2021-02-08T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "865039",
+      "date": "2021-02-14T00:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 24008,
+      "player2Id": 12190,
+      "tournamentId": 16881,
+      "match_winner": 24008,
+      "result": "6-4 7-6(5) 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 12190,
+        "name": "Dusan Lajovic",
+        "countryAcr": "SRB"
       },
       "tournament": {
         "id": 16881,
@@ -11952,6 +12655,43 @@
       }
     },
     {
+      "id": "864982",
+      "date": "2021-02-03T00:00:00.000Z",
+      "roundId": 8,
+      "player1Id": 24008,
+      "player2Id": 33502,
+      "tournamentId": 16880,
+      "match_winner": 24008,
+      "result": "6-7(5) 6-3 7-6(4)",
+      "best_of": null,
+      "odd1": "1.6",
+      "odd2": "2.4",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 33502,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CAN"
+      },
+      "tournament": {
+        "id": 16880,
+        "name": "ATP Cup - Melbourne",
+        "courtId": 1,
+        "date": "2021-02-01T00:00:00.000Z",
+        "rankId": 5,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "843699",
       "date": "2020-11-20T00:00:00.000Z",
       "roundId": 8,
@@ -11980,6 +12720,43 @@
         "date": "2020-11-16T00:00:00.000Z",
         "rankId": 7,
         "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "843594",
+      "date": "2020-11-06T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 24008,
+      "player2Id": 1092,
+      "tournamentId": 16501,
+      "match_winner": 24008,
+      "result": "6-3 7-6(1)",
+      "best_of": null,
+      "odd1": "1.38",
+      "odd2": "3.26",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 1092,
+        "name": "Stan Wawrinka",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 16501,
+        "name": "Rolex Paris Masters - Paris",
+        "courtId": 3,
+        "date": "2020-11-02T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "FRA",
         "court": {
           "id": 3,
           "name": "I.hard"
@@ -12026,6 +12803,191 @@
       }
     },
     {
+      "id": "860081",
+      "date": "2020-10-16T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 24008,
+      "player2Id": 36449,
+      "tournamentId": 16796,
+      "match_winner": 24008,
+      "result": "6-4 3-6 6-0",
+      "best_of": null,
+      "odd1": "1.171",
+      "odd2": "5.65",
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 36449,
+        "name": "Lloyd Harris",
+        "countryAcr": "RSA"
+      },
+      "tournament": {
+        "id": 16796,
+        "name": "bett1HULKS Indoors - Cologne",
+        "courtId": 3,
+        "date": "2020-10-12T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "841558",
+      "date": "2020-01-29T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 24008,
+      "player2Id": 1092,
+      "tournamentId": 16435,
+      "match_winner": 24008,
+      "result": "1-6 6-3 6-4 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 1092,
+        "name": "Stan Wawrinka",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 16435,
+        "name": "Australian Open - Melbourne",
+        "courtId": 1,
+        "date": "2020-01-20T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "841307",
+      "date": "2020-01-07T00:00:00.000Z",
+      "roundId": 8,
+      "player1Id": 33502,
+      "player2Id": 24008,
+      "tournamentId": 16431,
+      "match_winner": 33502,
+      "result": "6-2 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 33502,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CAN"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16431,
+        "name": "ATP Cup - Brisbane, Perth, Sydney",
+        "courtId": 1,
+        "date": "2020-01-06T00:00:00.000Z",
+        "rankId": 5,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "792352",
+      "date": "2019-10-12T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 24008,
+      "player2Id": 29812,
+      "tournamentId": 15663,
+      "match_winner": 24008,
+      "result": "6-3 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 15663,
+        "name": "Shanghai Rolex Masters - Shanghai",
+        "courtId": 1,
+        "date": "2019-10-07T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "CHN",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "789564",
+      "date": "2019-05-14T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 29812,
+      "player2Id": 24008,
+      "tournamentId": 15630,
+      "match_winner": 29812,
+      "result": "7-5 7-5",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 15630,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2019-05-13T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "725091",
       "date": "2018-11-12T00:00:00.000Z",
       "roundId": 8,
@@ -12063,6 +13025,6 @@
       }
     }
   ],
-  "cachedAt": 1778301613980,
+  "cachedAt": 1779099757102,
   "pages": 3
 }

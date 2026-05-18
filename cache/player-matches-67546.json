@@ -1,6 +1,80 @@
 {
   "matches": [
     {
+      "id": "1243273",
+      "date": "2026-05-11T20:05:00.000Z",
+      "roundId": 6,
+      "player1Id": 52394,
+      "player2Id": 67546,
+      "tournamentId": 21326,
+      "match_winner": 52394,
+      "result": "6-3 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 52394,
+        "name": "Thiago Agustin Tirante",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243272",
+      "date": "2026-05-09T17:45:00.000Z",
+      "roundId": 5,
+      "player1Id": 67546,
+      "player2Id": 67535,
+      "tournamentId": 21326,
+      "match_winner": 67546,
+      "result": "7-6(1) 6-3",
+      "best_of": null,
+      "odd1": "1.5",
+      "odd2": "2.58",
+      "player1": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 67535,
+        "name": "Terence Atmane",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1243122",
       "date": "2026-04-30T00:00:00.000Z",
       "roundId": 9,
@@ -963,7 +1037,7 @@
       }
     },
     {
-      "id": "1241116",
+      "id": "1241115",
       "date": "2026-01-04T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 67546,
@@ -2258,7 +2332,7 @@
       }
     },
     {
-      "id": "1171763",
+      "id": "1171764",
       "date": "2025-05-27T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 67546,
@@ -5551,7 +5625,7 @@
       }
     },
     {
-      "id": "1101083",
+      "id": "1101082",
       "date": "2024-02-16T00:00:00.000Z",
       "roundId": 9,
       "player1Id": 29939,
@@ -5662,7 +5736,7 @@
       }
     },
     {
-      "id": "1101082",
+      "id": "1101083",
       "date": "2024-02-11T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 33284,
@@ -6143,7 +6217,7 @@
       }
     },
     {
-      "id": "983676",
+      "id": "983678",
       "date": "2023-11-28T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 67546,
@@ -10620,7 +10694,7 @@
       }
     },
     {
-      "id": "938405",
+      "id": "938406",
       "date": "2022-06-14T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 67546,
@@ -11138,6 +11212,43 @@
       }
     },
     {
+      "id": "913707",
+      "date": "2022-04-09T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 67546,
+      "player2Id": 46747,
+      "tournamentId": 17554,
+      "match_winner": 67546,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 46747,
+        "name": "Hugo Gaston",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 17554,
+        "name": "Monte-Carlo Rolex Masters - Monte-Carlo",
+        "courtId": 2,
+        "date": "2022-04-11T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "MON",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "922544",
       "date": "2022-03-23T00:00:00.000Z",
       "roundId": 5,
@@ -11195,6 +11306,43 @@
         "id": 67546,
         "name": "Flavio Cobolli",
         "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 17679,
+        "name": "Roseto Degli Abruzzi 1 Challenger",
+        "courtId": 2,
+        "date": "2022-03-07T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "922113",
+      "date": "2022-03-08T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 67546,
+      "player2Id": 12653,
+      "tournamentId": 17679,
+      "match_winner": 67546,
+      "result": "3-2 ret.",
+      "best_of": null,
+      "odd1": "1.75",
+      "odd2": "2.03",
+      "player1": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 12653,
+        "name": "Marco Trungelliti",
+        "countryAcr": "ARG"
       },
       "tournament": {
         "id": 17679,
@@ -11286,6 +11434,43 @@
       }
     },
     {
+      "id": "900120",
+      "date": "2021-10-07T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 12097,
+      "player2Id": 67546,
+      "tournamentId": 17369,
+      "match_winner": 12097,
+      "result": "6-2 6-2",
+      "best_of": null,
+      "odd1": "1.38",
+      "odd2": "3.04",
+      "player1": {
+        "id": 12097,
+        "name": "Stefano Travaglia",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 17369,
+        "name": "Napoli Challenger",
+        "courtId": 2,
+        "date": "2021-10-04T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "895816",
       "date": "2021-10-02T00:00:00.000Z",
       "roundId": 10,
@@ -11312,6 +11497,43 @@
         "name": "Murcia Challenger",
         "courtId": 2,
         "date": "2021-09-27T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "894851",
+      "date": "2021-09-09T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 27358,
+      "player2Id": 67546,
+      "tournamentId": 17289,
+      "match_winner": 27358,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 27358,
+        "name": "Pedro Martinez Portero",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 17289,
+        "name": "Seville Challenger",
+        "courtId": 2,
+        "date": "2021-09-06T00:00:00.000Z",
         "rankId": 1,
         "countryAcr": "ESP",
         "court": {
@@ -11387,6 +11609,80 @@
         "courtId": 2,
         "date": "2021-05-24T00:00:00.000Z",
         "rankId": 2,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "879804",
+      "date": "2021-05-23T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 67546,
+      "player2Id": 18736,
+      "tournamentId": 17085,
+      "match_winner": 67546,
+      "result": "3-6 7-6(6) 7-6(4)",
+      "best_of": null,
+      "odd1": "2.55",
+      "odd2": "1.54",
+      "player1": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 18736,
+        "name": "Marcos Giron",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 17085,
+        "name": "Emilia-Romagna Open - Parma",
+        "courtId": 2,
+        "date": "2021-05-24T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "884021",
+      "date": "2021-05-19T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 26140,
+      "player2Id": 67546,
+      "tournamentId": 17139,
+      "match_winner": 26140,
+      "result": "4-6 6-4 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 26140,
+        "name": "Zhizhen Zhang",
+        "countryAcr": "CHN"
+      },
+      "player2": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 17139,
+        "name": "Biella 6 Challenger",
+        "courtId": 2,
+        "date": "2021-05-17T00:00:00.000Z",
+        "rankId": 1,
         "countryAcr": "ITA",
         "court": {
           "id": 2,
@@ -11508,6 +11804,6 @@
       }
     }
   ],
-  "cachedAt": 1778301554575,
+  "cachedAt": 1779099781098,
   "pages": 3
 }

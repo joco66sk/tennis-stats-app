@@ -1,8 +1,119 @@
 {
   "matches": [
     {
-      "id": "1263060",
-      "date": "2026-05-07T19:05:00.000Z",
+      "id": "1263349",
+      "date": "2026-05-12T12:35:00.000Z",
+      "roundId": 3,
+      "player1Id": 93550,
+      "player2Id": 47557,
+      "tournamentId": 21661,
+      "match_winner": 93550,
+      "result": "7-5 6-1",
+      "best_of": null,
+      "odd1": "1.69",
+      "odd2": "2.02",
+      "player1": {
+        "id": 93550,
+        "name": "Rei Sakamoto",
+        "countryAcr": "JPN"
+      },
+      "player2": {
+        "id": 47557,
+        "name": "Chun Hsin Tseng",
+        "countryAcr": "TPE"
+      },
+      "tournament": {
+        "id": 21661,
+        "name": "Bordeaux Challenger",
+        "courtId": 2,
+        "date": "2026-05-11T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1263343",
+      "date": "2026-05-11T14:05:00.000Z",
+      "roundId": 1,
+      "player1Id": 47557,
+      "player2Id": 39445,
+      "tournamentId": 21661,
+      "match_winner": 47557,
+      "result": "6-2 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 47557,
+        "name": "Chun Hsin Tseng",
+        "countryAcr": "TPE"
+      },
+      "player2": {
+        "id": 39445,
+        "name": "Andrey Chepelev",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 21661,
+        "name": "Bordeaux Challenger",
+        "courtId": 2,
+        "date": "2026-05-11T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1263167",
+      "date": "2026-05-08T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 64741,
+      "player2Id": 47557,
+      "tournamentId": 21657,
+      "match_winner": 64741,
+      "result": "7-6(2) 6-4",
+      "best_of": null,
+      "odd1": "1.55",
+      "odd2": "2.26",
+      "player1": {
+        "id": 64741,
+        "name": "Facundo Diaz Acosta",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 47557,
+        "name": "Chun Hsin Tseng",
+        "countryAcr": "TPE"
+      },
+      "tournament": {
+        "id": 21657,
+        "name": "Francavilla Challenger",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1263156",
+      "date": "2026-05-07T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 47557,
       "player2Id": 20396,
@@ -38,8 +149,8 @@
       }
     },
     {
-      "id": "1263066",
-      "date": "2026-05-05T22:05:00.000Z",
+      "id": "1263163",
+      "date": "2026-05-05T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 47557,
       "player2Id": 40187,
@@ -75,7 +186,7 @@
       }
     },
     {
-      "id": "1259129",
+      "id": "1259215",
       "date": "2026-04-28T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 83314,
@@ -112,7 +223,7 @@
       }
     },
     {
-      "id": "1258773",
+      "id": "1258859",
       "date": "2026-04-21T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 22761,
@@ -149,7 +260,7 @@
       }
     },
     {
-      "id": "1258459",
+      "id": "1258545",
       "date": "2026-04-15T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 97369,
@@ -186,7 +297,7 @@
       }
     },
     {
-      "id": "1258444",
+      "id": "1258530",
       "date": "2026-04-14T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 47557,
@@ -297,7 +408,7 @@
       }
     },
     {
-      "id": "1251696",
+      "id": "1251782",
       "date": "2026-03-11T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 37492,
@@ -482,7 +593,7 @@
       }
     },
     {
-      "id": "1247069",
+      "id": "1247155",
       "date": "2026-02-07T00:00:00.000Z",
       "roundId": 10,
       "player1Id": 70705,
@@ -519,7 +630,7 @@
       }
     },
     {
-      "id": "1247082",
+      "id": "1247167",
       "date": "2026-02-06T00:00:00.000Z",
       "roundId": 9,
       "player1Id": 47557,
@@ -556,7 +667,7 @@
       }
     },
     {
-      "id": "1247052",
+      "id": "1247138",
       "date": "2026-02-04T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 47557,
@@ -593,7 +704,7 @@
       }
     },
     {
-      "id": "1247057",
+      "id": "1247143",
       "date": "2026-02-03T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 47557,
@@ -630,7 +741,7 @@
       }
     },
     {
-      "id": "1244167",
+      "id": "1244253",
       "date": "2026-01-30T00:00:00.000Z",
       "roundId": 9,
       "player1Id": 20104,
@@ -667,7 +778,7 @@
       }
     },
     {
-      "id": "1244145",
+      "id": "1244231",
       "date": "2026-01-29T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 47557,
@@ -704,7 +815,7 @@
       }
     },
     {
-      "id": "1244163",
+      "id": "1244249",
       "date": "2026-01-27T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 47557,
@@ -1333,7 +1444,7 @@
       }
     },
     {
-      "id": "1173239",
+      "id": "1173238",
       "date": "2025-07-28T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 24721,
@@ -1370,7 +1481,7 @@
       }
     },
     {
-      "id": "1173238",
+      "id": "1173239",
       "date": "2025-07-26T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 44595,
@@ -2147,7 +2258,7 @@
       }
     },
     {
-      "id": "1194622",
+      "id": "1194623",
       "date": "2025-05-15T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 47557,
@@ -4182,7 +4293,7 @@
       }
     },
     {
-      "id": "1104065",
+      "id": "1104064",
       "date": "2024-07-25T00:00:00.000Z",
       "roundId": 9,
       "player1Id": 86691,
@@ -4256,7 +4367,7 @@
       }
     },
     {
-      "id": "1104064",
+      "id": "1104065",
       "date": "2024-07-21T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 12594,
@@ -6735,7 +6846,7 @@
       }
     },
     {
-      "id": "1036167",
+      "id": "1036169",
       "date": "2023-07-26T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 47557,
@@ -8215,7 +8326,7 @@
       }
     },
     {
-      "id": "955756",
+      "id": "955757",
       "date": "2022-09-13T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 47557,
@@ -8363,7 +8474,7 @@
       }
     },
     {
-      "id": "926982",
+      "id": "926983",
       "date": "2022-08-22T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 47557,
@@ -8770,7 +8881,7 @@
       }
     },
     {
-      "id": "938252",
+      "id": "938251",
       "date": "2022-06-09T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 47557,
@@ -11099,8 +11210,193 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "891193",
+      "date": "2021-08-26T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 47557,
+      "player2Id": 71221,
+      "tournamentId": 17241,
+      "match_winner": 47557,
+      "result": "5-7 6-2 6-4",
+      "best_of": null,
+      "odd1": "1.61",
+      "odd2": "2.32",
+      "player1": {
+        "id": 47557,
+        "name": "Chun Hsin Tseng",
+        "countryAcr": "TPE"
+      },
+      "player2": {
+        "id": 71221,
+        "name": "Luca Nardi",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 17241,
+        "name": "Barletta Challenger",
+        "courtId": 2,
+        "date": "2021-08-23T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "891646",
+      "date": "2021-08-08T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 47557,
+      "player2Id": 23099,
+      "tournamentId": 17249,
+      "match_winner": 47557,
+      "result": "6-3 3-6 6-0",
+      "best_of": null,
+      "odd1": "1.88",
+      "odd2": "1.92",
+      "player1": {
+        "id": 47557,
+        "name": "Chun Hsin Tseng",
+        "countryAcr": "TPE"
+      },
+      "player2": {
+        "id": 23099,
+        "name": "Hernan Casanova",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 17249,
+        "name": "M25 Pitesti 1",
+        "courtId": 2,
+        "date": "2021-08-02T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "ROU",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "871119",
+      "date": "2021-02-09T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 47557,
+      "player2Id": 27531,
+      "tournamentId": 16970,
+      "match_winner": 47557,
+      "result": "6-1 4-6 6-3",
+      "best_of": null,
+      "odd1": "1.87",
+      "odd2": "1.89",
+      "player1": {
+        "id": 47557,
+        "name": "Chun Hsin Tseng",
+        "countryAcr": "TPE"
+      },
+      "player2": {
+        "id": 27531,
+        "name": "Akira Santillan",
+        "countryAcr": "AUS"
+      },
+      "tournament": {
+        "id": 16970,
+        "name": "Potchefstroom 1 Challenger",
+        "courtId": 1,
+        "date": "2021-02-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "RSA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "861326",
+      "date": "2020-11-07T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 46718,
+      "player2Id": 47557,
+      "tournamentId": 16819,
+      "match_winner": 46718,
+      "result": "7-5 6-7(3) 7-5",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 46718,
+        "name": "Patrick Kypson",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 47557,
+        "name": "Chun Hsin Tseng",
+        "countryAcr": "TPE"
+      },
+      "tournament": {
+        "id": 16819,
+        "name": "Cary Challenger",
+        "courtId": 1,
+        "date": "2020-11-09T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "819486",
+      "date": "2019-09-05T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 26140,
+      "player2Id": 47557,
+      "tournamentId": 16095,
+      "match_winner": 26140,
+      "result": "6-4 6-3",
+      "best_of": null,
+      "odd1": "2.28",
+      "odd2": "1.6",
+      "player1": {
+        "id": 26140,
+        "name": "Zhizhen Zhang",
+        "countryAcr": "CHN"
+      },
+      "player2": {
+        "id": 47557,
+        "name": "Chun Hsin Tseng",
+        "countryAcr": "TPE"
+      },
+      "tournament": {
+        "id": 16095,
+        "name": "Jinan Challenger",
+        "courtId": 1,
+        "date": "2019-09-02T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "CHN",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778251593168,
+  "cachedAt": 1779099453803,
   "pages": 3
 }

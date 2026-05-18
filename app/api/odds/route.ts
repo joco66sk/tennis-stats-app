@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { CACHE_DIR, initCache } from '@/lib/shared';
 
 const ODDS_API_KEY = process.env.ODDS_API_KEY!;
 const ODDS_API_BASE = 'https://api.the-odds-api.com/v4';
-const CACHE_DIR = path.join(process.cwd(), 'cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'tennis-odds.json');
 const CACHE_TTL = 6 * 60 * 60 * 1000; // 6 hours → ~120 calls/month max
 
@@ -45,12 +45,12 @@ function extractOdds(event: any): { home: number; away: number } | null {
 }
 
 export async function GET() {
+  initCache();
   if (isCacheValid()) {
-    console.log('✅ Serving cached tennis odds');
     return NextResponse.json(JSON.parse(fs.readFileSync(CACHE_FILE, 'utf-8')));
   }
 
-  console.log('🔄 Fetching fresh tennis odds (1 API call)');
+  console.log('Fetching fresh tennis odds (1 API call)');
 
   try {
     // Free call — doesn't count toward quota

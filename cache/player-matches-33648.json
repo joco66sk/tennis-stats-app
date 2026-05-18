@@ -1,6 +1,80 @@
 {
   "matches": [
     {
+      "id": "143430564",
+      "date": "2026-05-12T12:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 33648,
+      "player2Id": 63572,
+      "tournamentId": 21326,
+      "match_winner": 33648,
+      "result": "6-3 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 63572,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "77802332",
+      "date": "2026-05-10T12:05:00.000Z",
+      "roundId": 6,
+      "player1Id": 33648,
+      "player2Id": 61838,
+      "tournamentId": 21326,
+      "match_winner": 33648,
+      "result": "6-3 6-4",
+      "best_of": null,
+      "odd1": "1.571",
+      "odd2": "2.39",
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 61838,
+        "name": "Jiri Lehecka",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "14912936",
       "date": "2026-05-08T14:20:00.000Z",
       "roundId": 5,
@@ -11136,8 +11210,304 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "894719",
+      "date": "2021-10-03T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 33648,
+      "player2Id": 27851,
+      "tournamentId": 17287,
+      "match_winner": 33648,
+      "result": "6-0 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 27851,
+        "name": "Cameron Norrie",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 17287,
+        "name": "San Diego Open - San Diego",
+        "courtId": 1,
+        "date": "2021-09-27T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "869154",
+      "date": "2021-09-01T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 24249,
+      "player2Id": 33648,
+      "tournamentId": 16934,
+      "match_winner": 24249,
+      "result": "3-6 6-4 6-3 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 24249,
+        "name": "Botic Van De Zandschulp",
+        "countryAcr": "NED"
+      },
+      "player2": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "tournament": {
+        "id": 16934,
+        "name": "U.S. Open - New York",
+        "courtId": 1,
+        "date": "2021-08-30T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "868693",
+      "date": "2021-08-10T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 33648,
+      "player2Id": 6101,
+      "tournamentId": 16931,
+      "match_winner": 33648,
+      "result": "6-3 3-6 6-3",
+      "best_of": null,
+      "odd1": "2.02",
+      "odd2": "1.83",
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 6101,
+        "name": "Marin Cilic",
+        "countryAcr": "CRO"
+      },
+      "tournament": {
+        "id": 16931,
+        "name": "Rogers Cup - Toronto",
+        "courtId": 1,
+        "date": "2021-08-09T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "CAN",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "867245",
+      "date": "2021-06-04T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 36519,
+      "player2Id": 33648,
+      "tournamentId": 16911,
+      "match_winner": 36519,
+      "result": "7-6(3) 2-6 7-6(6) 0-6 7-5",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 36519,
+        "name": "Alejandro Davidovich Fokina",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "tournament": {
+        "id": 16911,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2021-05-31T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "866769",
+      "date": "2021-05-07T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 33648,
+      "player2Id": 24245,
+      "tournamentId": 16907,
+      "match_winner": 33648,
+      "result": "7-5 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 24245,
+        "name": "Alexander Bublik",
+        "countryAcr": "KAZ"
+      },
+      "tournament": {
+        "id": 16907,
+        "name": "Mutua Madrid Open - Madrid",
+        "courtId": 2,
+        "date": "2021-05-03T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "866648",
+      "date": "2021-05-01T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 14716,
+      "player2Id": 33648,
+      "tournamentId": 16905,
+      "match_winner": 14716,
+      "result": "6-1 6-2",
+      "best_of": null,
+      "odd1": "4.333",
+      "odd2": "1.25",
+      "player1": {
+        "id": 14716,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GEO"
+      },
+      "player2": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "tournament": {
+        "id": 16905,
+        "name": "BMW Open - Munich",
+        "courtId": 2,
+        "date": "2021-04-26T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "842674",
+      "date": "2020-09-20T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 5992,
+      "player2Id": 33648,
+      "tournamentId": 16459,
+      "match_winner": 5992,
+      "result": "7-5 6-3",
+      "best_of": null,
+      "odd1": "1.198",
+      "odd2": "5.1",
+      "player1": {
+        "id": 5992,
+        "name": "Novak Djokovic",
+        "countryAcr": "SRB"
+      },
+      "player2": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "tournament": {
+        "id": 16459,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2020-09-14T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "842589",
+      "date": "2020-09-18T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 33648,
+      "player2Id": 6101,
+      "tournamentId": 16459,
+      "match_winner": 33648,
+      "result": "6-2 7-6(6)",
+      "best_of": null,
+      "odd1": "1.74",
+      "odd2": "2.19",
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 6101,
+        "name": "Marin Cilic",
+        "countryAcr": "CRO"
+      },
+      "tournament": {
+        "id": 16459,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2020-09-14T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778251495109,
+  "cachedAt": 1778911546160,
   "pages": 3
 }

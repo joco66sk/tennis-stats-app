@@ -1,7 +1,7 @@
 {
   "matches": [
     {
-      "id": "1243200",
+      "id": "1243222",
       "date": "2026-05-07T17:30:00.000Z",
       "roundId": 4,
       "player1Id": 58327,
@@ -1370,7 +1370,7 @@
       }
     },
     {
-      "id": "1172269",
+      "id": "1172268",
       "date": "2025-06-17T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 58327,
@@ -2924,7 +2924,7 @@
       }
     },
     {
-      "id": "1156805",
+      "id": "1156806",
       "date": "2024-09-12T00:00:00.000Z",
       "roundId": 14,
       "player1Id": 34233,
@@ -2961,7 +2961,7 @@
       }
     },
     {
-      "id": "1156806",
+      "id": "1156805",
       "date": "2024-09-11T00:00:00.000Z",
       "roundId": 14,
       "player1Id": 68074,
@@ -4404,7 +4404,7 @@
       }
     },
     {
-      "id": "1100591",
+      "id": "1100590",
       "date": "2024-01-14T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 58327,
@@ -4848,7 +4848,7 @@
       }
     },
     {
-      "id": "983455",
+      "id": "983453",
       "date": "2023-10-20T00:00:00.000Z",
       "roundId": 9,
       "player1Id": 24084,
@@ -4922,7 +4922,7 @@
       }
     },
     {
-      "id": "983453",
+      "id": "983457",
       "date": "2023-10-15T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 85899,
@@ -5366,7 +5366,7 @@
       }
     },
     {
-      "id": "1076607",
+      "id": "1076609",
       "date": "2023-09-14T00:00:00.000Z",
       "roundId": 13,
       "player1Id": 58327,
@@ -7031,7 +7031,7 @@
       }
     },
     {
-      "id": "973967",
+      "id": "973966",
       "date": "2023-02-26T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 58327,
@@ -7216,7 +7216,7 @@
       }
     },
     {
-      "id": "977973",
+      "id": "977974",
       "date": "2023-02-15T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 58327,
@@ -11212,6 +11212,43 @@
       }
     },
     {
+      "id": "865141",
+      "date": "2021-02-11T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 29812,
+      "player2Id": 58327,
+      "tournamentId": 16881,
+      "match_winner": 29812,
+      "result": "6-3 6-2 4-6 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 58327,
+        "name": "Tomas Machac",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 16881,
+        "name": "Australian Open - Melbourne",
+        "courtId": 1,
+        "date": "2021-02-08T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "864745",
       "date": "2021-01-10T00:00:00.000Z",
       "roundId": 1,
@@ -11247,8 +11284,82 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "861257",
+      "date": "2020-11-11T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 58327,
+      "player2Id": 28898,
+      "tournamentId": 16818,
+      "match_winner": 58327,
+      "result": "7-5 6-7(5) 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 58327,
+        "name": "Tomas Machac",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 28898,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "POL"
+      },
+      "tournament": {
+        "id": 16818,
+        "name": "Bratislava Challenger",
+        "courtId": 3,
+        "date": "2020-11-09T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "SVK",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "801885",
+      "date": "2019-05-01T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 58327,
+      "player2Id": 20465,
+      "tournamentId": 15824,
+      "match_winner": 58327,
+      "result": "6-1 7-6(4)",
+      "best_of": null,
+      "odd1": "3.62",
+      "odd2": "1.27",
+      "player1": {
+        "id": 58327,
+        "name": "Tomas Machac",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 20465,
+        "name": "Stefano Napolitano",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 15824,
+        "name": "Ostrava Challenger",
+        "courtId": 2,
+        "date": "2019-04-29T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "CZE",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778301603918,
+  "cachedAt": 1779099848672,
   "pages": 3
 }

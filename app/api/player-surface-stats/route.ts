@@ -2,41 +2,17 @@ import { NextResponse } from 'next/server';
 import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import {
+  IS_VERCEL, CACHE_DIR, MATCH_STATS_DIR, HOST, RAPIDAPI_HEADERS as HEADERS,
+  COURT_ID_MAP, initCache, normalizeSurface, pool,
+} from '@/lib/shared';
 
-const IS_VERCEL = !!process.env.VERCEL;
-const STATIC_CACHE = path.join(process.cwd(), 'cache');
-const STATIC_MATCH_STATS = path.join(process.cwd(), 'app', 'api', 'cache');
-const CACHE_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_CACHE;
-const MATCH_STATS_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_MATCH_STATS;
-
-const HOST = process.env.RAPIDAPI_HOST || 'tennis-api-atp-wta-itf.p.rapidapi.com';
-const HEADERS = {
-  'x-rapidapi-host': HOST,
-  'x-rapidapi-key': process.env.RAPIDAPI_KEY!,
-};
-
-const COURT_ID_MAP: Record<number, string> = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 const BASIC_TTL = 4 * 60 * 60 * 1000;
 const EMPTY_RETRY_TTL = 60 * 60 * 1000;
+const MIN_STATS_DATE = '2025-01-01';
 // On Vercel: committed cache is the source of truth — never refresh live.
 // Locally: refresh after 7 days.
 const REFRESH_TTL = IS_VERCEL ? Infinity : 7 * 24 * 60 * 60 * 1000;
-
-function initCache() {
-  if (!IS_VERCEL || fs.existsSync(CACHE_DIR)) return;
-  fs.mkdirSync(CACHE_DIR, { recursive: true });
-  for (const srcDir of [STATIC_CACHE, STATIC_MATCH_STATS]) {
-    if (!fs.existsSync(srcDir)) continue;
-    for (const file of fs.readdirSync(srcDir)) {
-      try { fs.copyFileSync(path.join(srcDir, file), path.join(CACHE_DIR, file)); } catch {}
-    }
-  }
-}
-
-function normalizeSurface(s: string): string {
-  if (s === 'I.hard' || s === 'Carpet') return 'Hard';
-  return s;
-}
 
 function loadSurfaceMap(): Record<number, string> {
   const map: Record<number, string> = {};
@@ -70,14 +46,6 @@ function emptyResponse(playerId: string, surface: string) {
     avg1stServe: 0, avg1stWon: 0, avg2ndWon: 0, avgAces: 0, avgDf: 0,
     avgBpSaved: 0, avgServeWon: 0, avgReturnWon: 0, avgReturn1stWon: 0, avgReturn2ndWon: 0,
   };
-}
-
-async function pool<T>(fns: Array<() => Promise<T>>, limit: number): Promise<T[]> {
-  const out: T[] = new Array(fns.length);
-  let i = 0;
-  async function worker() { while (i < fns.length) { const idx = i++; out[idx] = await fns[idx](); } }
-  await Promise.all(Array.from({ length: Math.min(limit, fns.length) }, worker));
-  return out;
 }
 
 async function getMatchStats(tournamentId: number, p1: number, p2: number): Promise<any | null> {
@@ -143,8 +111,6 @@ async function fetchAndMergeMatches(playerId: string, pages = 3): Promise<any[]>
     }
   } catch {}
 
-  freshMatches.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
   // Merge with existing file to preserve historical matches outside the API's page window.
   const matchCachePath = path.join(CACHE_DIR, `player-matches-${playerId}.json`);
   if (freshMatches.length > 0 && fs.existsSync(matchCachePath)) {
@@ -152,13 +118,23 @@ async function fetchAndMergeMatches(playerId: string, pages = 3): Promise<any[]>
       const existing = JSON.parse(fs.readFileSync(matchCachePath, 'utf-8')).matches ?? [];
       const ids = new Set(freshMatches.map((m: any) => String(m.id)));
       const historical = existing.filter((m: any) => !ids.has(String(m.id)));
-      if (historical.length > 0)
-        freshMatches = [...freshMatches, ...historical].sort(
-          (a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime()
-        );
+      if (historical.length > 0) freshMatches = [...freshMatches, ...historical];
     } catch {}
   }
 
+  // Dedupe by natural key — the API can return the same match with different IDs
+  // depending on which player's endpoint it came from.
+  const naturalSeen = new Set<string>();
+  freshMatches = freshMatches.filter((m: any) => {
+    const p1 = Math.min(m.player1Id || 0, m.player2Id || 0);
+    const p2 = Math.max(m.player1Id || 0, m.player2Id || 0);
+    const key = `${(m.date || '').slice(0, 10)}-${m.tournamentId}-${p1}-${p2}`;
+    if (naturalSeen.has(key)) return false;
+    naturalSeen.add(key);
+    return true;
+  });
+
+  freshMatches.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
   return freshMatches;
 }
 
@@ -167,10 +143,12 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const playerId = searchParams.get('playerId');
   const surface = normalizeSurface(searchParams.get('surface') || 'Clay');
-  const limit = parseInt(searchParams.get('limit') || '10');
+  const limitRaw = parseInt(searchParams.get('limit') || '10');
+  const limit = isNaN(limitRaw) || limitRaw < 1 ? 10 : Math.min(limitRaw, 50);
   const basic = searchParams.get('basic') === 'true';
 
-  if (!playerId) return NextResponse.json({ error: 'playerId required' }, { status: 400 });
+  if (!playerId || !/^\d+$/.test(playerId))
+    return NextResponse.json({ error: 'playerId must be a positive integer' }, { status: 400 });
 
   const matchCachePath = path.join(CACHE_DIR, `player-matches-${playerId}.json`);
   const basicCachePath = path.join(CACHE_DIR, `player-surface-basic-${playerId}-${surface}.json`);
@@ -212,7 +190,15 @@ export async function GET(request: NextRequest) {
   if (!fs.existsSync(matchCachePath)) return NextResponse.json(emptyResponse(playerId, surface));
 
   const matchData = JSON.parse(fs.readFileSync(matchCachePath, 'utf-8'));
-  const allMatches: any[] = matchData.matches || [];
+  const naturalSeen = new Set<string>();
+  const allMatches: any[] = (matchData.matches || []).filter((m: any) => {
+    const p1 = Math.min(m.player1Id || 0, m.player2Id || 0);
+    const p2 = Math.max(m.player1Id || 0, m.player2Id || 0);
+    const key = `${(m.date || '').slice(0, 10)}-${m.tournamentId}-${p1}-${p2}`;
+    if (naturalSeen.has(key)) return false;
+    naturalSeen.add(key);
+    return true;
+  });
   if (allMatches.length === 0) return NextResponse.json(emptyResponse(playerId, surface));
 
   const surfaceMap = surface !== 'All' ? loadSurfaceMap() : {};
@@ -243,7 +229,7 @@ export async function GET(request: NextRequest) {
 
   // Full path: fetch match stats for the last N surface matches (max 3 concurrent).
   const allStats = await pool(
-    filtered.map(m => () => getMatchStats(m.tournamentId, m.player1Id, m.player2Id)),
+    filtered.map(m => () => m.date < MIN_STATS_DATE ? Promise.resolve(null) : getMatchStats(m.tournamentId, m.player1Id, m.player2Id)),
     3
   );
 

@@ -2,27 +2,31 @@ import { NextResponse } from 'next/server';
 import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { CACHE_DIR, HOST, RAPIDAPI_HEADERS as HEADERS, initCache } from '@/lib/shared';
 
-const HOST = process.env.RAPIDAPI_HOST || 'tennis-api-atp-wta-itf.p.rapidapi.com';
-const HEADERS = {
-  'x-rapidapi-host': HOST,
-  'x-rapidapi-key': process.env.RAPIDAPI_KEY!,
-};
-const CACHE_DIR = path.join(process.cwd(), 'cache');
+const CACHE_TTL = 4 * 60 * 60 * 1000; // 4h
 
 function getCachePath(playerId: string) {
   return path.join(CACHE_DIR, `player-matches-${playerId}.json`);
 }
 
 export async function GET(request: NextRequest) {
+  initCache();
   const { searchParams } = new URL(request.url);
   const playerId = searchParams.get('playerId');
-  if (!playerId) return NextResponse.json({ error: 'playerId required' }, { status: 400 });
+  if (!playerId || !/^\d+$/.test(playerId))
+    return NextResponse.json({ error: 'playerId must be a positive integer' }, { status: 400 });
 
   const cachePath = getCachePath(playerId);
   const existing = fs.existsSync(cachePath)
     ? JSON.parse(fs.readFileSync(cachePath, 'utf-8'))
     : null;
+
+  // Serve from cache if fresh — prevents API drain from external callers.
+  if (existing) {
+    const age = Date.now() - (existing.cachedAt ?? 0);
+    if (age < CACHE_TTL) return NextResponse.json({ matches: existing.matches, fromCache: true });
+  }
 
   let freshMatches: any[] = [];
   let apiSuccess = false;

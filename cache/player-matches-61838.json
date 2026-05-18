@@ -1,7 +1,44 @@
 {
   "matches": [
     {
-      "id": "14912891",
+      "id": "1243261",
+      "date": "2026-05-10T12:05:00.000Z",
+      "roundId": 6,
+      "player1Id": 33648,
+      "player2Id": 61838,
+      "tournamentId": 21326,
+      "match_winner": 33648,
+      "result": "6-3 6-4",
+      "best_of": null,
+      "odd1": "1.571",
+      "odd2": "2.39",
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 61838,
+        "name": "Jiri Lehecka",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243191",
       "date": "2026-05-08T13:45:00.000Z",
       "roundId": 5,
       "player1Id": 61838,
@@ -778,7 +815,7 @@
       }
     },
     {
-      "id": "1251345",
+      "id": "1251431",
       "date": "2026-02-07T00:00:00.000Z",
       "roundId": 13,
       "player1Id": 61838,
@@ -3849,7 +3886,7 @@
       }
     },
     {
-      "id": "1156808",
+      "id": "1156807",
       "date": "2024-09-14T00:00:00.000Z",
       "roundId": 14,
       "player1Id": 83135,
@@ -3886,7 +3923,7 @@
       }
     },
     {
-      "id": "1156807",
+      "id": "1156808",
       "date": "2024-09-11T00:00:00.000Z",
       "roundId": 13,
       "player1Id": 1837,
@@ -5477,7 +5514,7 @@
       }
     },
     {
-      "id": "1076616",
+      "id": "1076617",
       "date": "2023-09-13T00:00:00.000Z",
       "roundId": 14,
       "player1Id": 61838,
@@ -6661,7 +6698,7 @@
       }
     },
     {
-      "id": "974707",
+      "id": "974720",
       "date": "2023-04-11T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 61838,
@@ -7586,7 +7623,7 @@
       }
     },
     {
-      "id": "927970",
+      "id": "927969",
       "date": "2022-11-12T00:00:00.000Z",
       "roundId": 12,
       "player1Id": 56846,
@@ -7660,7 +7697,7 @@
       }
     },
     {
-      "id": "927978",
+      "id": "927979",
       "date": "2022-11-10T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 61838,
@@ -7697,7 +7734,7 @@
       }
     },
     {
-      "id": "927969",
+      "id": "927970",
       "date": "2022-11-09T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 56846,
@@ -8659,7 +8696,7 @@
       }
     },
     {
-      "id": "943343",
+      "id": "943342",
       "date": "2022-07-14T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 61838,
@@ -9436,7 +9473,7 @@
       }
     },
     {
-      "id": "913683",
+      "id": "913684",
       "date": "2022-04-10T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 61838,
@@ -11136,8 +11173,156 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "887488",
+      "date": "2021-07-30T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 61838,
+      "player2Id": 24249,
+      "tournamentId": 17193,
+      "match_winner": 61838,
+      "result": "7-5 6-3",
+      "best_of": null,
+      "odd1": "2.17",
+      "odd2": "1.69",
+      "player1": {
+        "id": 61838,
+        "name": "Jiri Lehecka",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 24249,
+        "name": "Botic Van De Zandschulp",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 17193,
+        "name": "Poznan Challenger",
+        "courtId": 2,
+        "date": "2021-07-26T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "POL",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "886314",
+      "date": "2021-06-11T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 33860,
+      "player2Id": 61838,
+      "tournamentId": 17172,
+      "match_winner": 33860,
+      "result": "2-6 6-3 6-2",
+      "best_of": null,
+      "odd1": "1.82",
+      "odd2": "1.99",
+      "player1": {
+        "id": 33860,
+        "name": "Tallon Griekspoor",
+        "countryAcr": "NED"
+      },
+      "player2": {
+        "id": 61838,
+        "name": "Jiri Lehecka",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 17172,
+        "name": "Bratislava Challenger",
+        "courtId": 2,
+        "date": "2021-06-07T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "SVK",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "871651",
+      "date": "2021-02-05T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 40609,
+      "player2Id": 61838,
+      "tournamentId": 16978,
+      "match_winner": 40609,
+      "result": "6-0 4-6 7-5",
+      "best_of": null,
+      "odd1": "1.72",
+      "odd2": "2.12",
+      "player1": {
+        "id": 40609,
+        "name": "Jenson Brooksby",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 61838,
+        "name": "Jiri Lehecka",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 16978,
+        "name": "M25 Villena 1",
+        "courtId": 1,
+        "date": "2021-02-01T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "857356",
+      "date": "2020-09-11T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 28898,
+      "player2Id": 61838,
+      "tournamentId": 16736,
+      "match_winner": 28898,
+      "result": "4-6 6-1 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 28898,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "POL"
+      },
+      "player2": {
+        "id": 61838,
+        "name": "Jiri Lehecka",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 16736,
+        "name": "Prostejov Challenger",
+        "courtId": 2,
+        "date": "2020-09-07T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "CZE",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778251513527,
+  "cachedAt": 1779099803893,
   "pages": 3
 }

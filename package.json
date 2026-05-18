@@ -13,7 +13,9 @@
     "cache:seed": "node scripts/seed-historical.js",
     "cache:seed:force": "node scripts/seed-historical.js --force",
     "stats:today": "node scripts/prebuild-match-stats.js today",
-    "stats:date": "node scripts/prebuild-match-stats.js"
+    "stats:date": "node scripts/prebuild-match-stats.js",
+    "verify": "node scripts/verify-fixtures.js",
+    "verify:date": "node scripts/verify-fixtures.js"
   },
   "dependencies": {
     "next": "16.1.6",

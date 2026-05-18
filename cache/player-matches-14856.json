@@ -2,6 +2,43 @@
   "matches": [
     {
       "id": "1243194",
+      "date": "2026-05-08T23:30:00.000Z",
+      "roundId": 5,
+      "player1Id": 76127,
+      "player2Id": 14856,
+      "tournamentId": 21326,
+      "match_winner": 76127,
+      "result": "6-4 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 76127,
+        "name": "Luciano Darderi",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243206",
       "date": "2026-05-06T14:00:00.000Z",
       "roundId": 4,
       "player1Id": 14856,
@@ -408,7 +445,7 @@
       }
     },
     {
-      "id": "1242288",
+      "id": "1242289",
       "date": "2026-02-27T00:00:00.000Z",
       "roundId": 9,
       "player1Id": 14856,
@@ -593,7 +630,7 @@
       }
     },
     {
-      "id": "1251311",
+      "id": "1251398",
       "date": "2026-02-06T00:00:00.000Z",
       "roundId": 13,
       "player1Id": 14856,
@@ -630,7 +667,7 @@
       }
     },
     {
-      "id": "1244020",
+      "id": "1244106",
       "date": "2026-01-29T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 65904,
@@ -667,7 +704,7 @@
       }
     },
     {
-      "id": "1244064",
+      "id": "1244150",
       "date": "2026-01-28T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 14856,
@@ -1555,7 +1592,7 @@
       }
     },
     {
-      "id": "1221451",
+      "id": "1221452",
       "date": "2025-09-27T00:00:00.000Z",
       "roundId": 9,
       "player1Id": 14856,
@@ -3886,7 +3923,7 @@
       }
     },
     {
-      "id": "1156821",
+      "id": "1156822",
       "date": "2024-09-12T00:00:00.000Z",
       "roundId": 14,
       "player1Id": 14856,
@@ -4145,7 +4182,7 @@
       }
     },
     {
-      "id": "1104026",
+      "id": "1104027",
       "date": "2024-07-24T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 14856,
@@ -6661,7 +6698,7 @@
       }
     },
     {
-      "id": "975477",
+      "id": "975476",
       "date": "2023-06-01T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 52279,
@@ -6735,7 +6772,7 @@
       }
     },
     {
-      "id": "975476",
+      "id": "975477",
       "date": "2023-05-26T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 26218,
@@ -7031,7 +7068,7 @@
       }
     },
     {
-      "id": "975236",
+      "id": "975235",
       "date": "2023-05-09T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 14856,
@@ -11099,8 +11136,267 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "867549",
+      "date": "2021-06-13T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 14716,
+      "player2Id": 14856,
+      "tournamentId": 16916,
+      "match_winner": 14716,
+      "result": "7-6(3) 6-4",
+      "best_of": null,
+      "odd1": "1.71",
+      "odd2": "2.14",
+      "player1": {
+        "id": 14716,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GEO"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16916,
+        "name": "Noventi Open - Halle",
+        "courtId": 5,
+        "date": "2021-06-14T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "867421",
+      "date": "2021-06-10T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 38911,
+      "player2Id": 14856,
+      "tournamentId": 16914,
+      "match_winner": 38911,
+      "result": "7-6(9) 6-2",
+      "best_of": null,
+      "odd1": "1.41",
+      "odd2": "3",
+      "player1": {
+        "id": 38911,
+        "name": "Ugo Humbert",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16914,
+        "name": "Mercedes Cup - Stuttgart",
+        "courtId": 5,
+        "date": "2021-06-07T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "866411",
+      "date": "2021-04-11T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 34233,
+      "player2Id": 14856,
+      "tournamentId": 16902,
+      "match_winner": 34233,
+      "result": "3-6 7-5 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 34233,
+        "name": "Alexei Popyrin",
+        "countryAcr": "AUS"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16902,
+        "name": "Monte-Carlo Rolex Masters - Monte-Carlo",
+        "courtId": 2,
+        "date": "2021-04-12T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "MON",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "877007",
+      "date": "2021-04-09T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 31392,
+      "player2Id": 14856,
+      "tournamentId": 17044,
+      "match_winner": 31392,
+      "result": "3-6 7-6(6) 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 31392,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 17044,
+        "name": "Sardegna Open - Cagliari",
+        "courtId": 2,
+        "date": "2021-04-05T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "866273",
+      "date": "2021-03-26T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 25543,
+      "player2Id": 14856,
+      "tournamentId": 16899,
+      "match_winner": 25543,
+      "result": "6-3 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16899,
+        "name": "Miami Open - Miami",
+        "courtId": 1,
+        "date": "2021-03-22T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "860282",
+      "date": "2020-09-23T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 24840,
+      "player2Id": 14856,
+      "tournamentId": 16800,
+      "match_winner": 24840,
+      "result": "6-2 7-6(3)",
+      "best_of": null,
+      "odd1": "1.73",
+      "odd2": "2.16",
+      "player1": {
+        "id": 24840,
+        "name": "Cristian Garin",
+        "countryAcr": "CHI"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16800,
+        "name": "Hamburg European Open - Hamburg",
+        "courtId": 2,
+        "date": "2020-09-21T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "812474",
+      "date": "2019-07-02T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 14856,
+      "player2Id": 18612,
+      "tournamentId": 15989,
+      "match_winner": 14856,
+      "result": "6-3 3-6 6-1",
+      "best_of": null,
+      "odd1": "1.71",
+      "odd2": "2.04",
+      "player1": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 18612,
+        "name": "Joao Domingues",
+        "countryAcr": "POR"
+      },
+      "tournament": {
+        "id": 15989,
+        "name": "Ludwigshafen Challenger",
+        "courtId": 2,
+        "date": "2019-07-01T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778251428042,
+  "cachedAt": 1779099656981,
   "pages": 3
 }

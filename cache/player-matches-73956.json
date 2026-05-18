@@ -1,7 +1,44 @@
 {
   "matches": [
     {
-      "id": "12178882",
+      "id": "1243282",
+      "date": "2026-05-10T21:35:00.000Z",
+      "roundId": 6,
+      "player1Id": 99691,
+      "player2Id": 73956,
+      "tournamentId": 21326,
+      "match_winner": 99691,
+      "result": "6-1 4-6 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 99691,
+        "name": "Rafael Jodar",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 73956,
+        "name": "Matteo Arnaldi",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243240",
       "date": "2026-05-08T12:00:00.000Z",
       "roundId": 5,
       "player1Id": 73956,
@@ -38,7 +75,7 @@
       }
     },
     {
-      "id": "1243202",
+      "id": "1243224",
       "date": "2026-05-06T16:44:00.000Z",
       "roundId": 4,
       "player1Id": 73956,
@@ -75,7 +112,7 @@
       }
     },
     {
-      "id": "1259067",
+      "id": "1259153",
       "date": "2026-05-03T00:00:00.000Z",
       "roundId": 12,
       "player1Id": 73956,
@@ -112,7 +149,7 @@
       }
     },
     {
-      "id": "1259096",
+      "id": "1259182",
       "date": "2026-05-02T00:00:00.000Z",
       "roundId": 10,
       "player1Id": 73956,
@@ -149,7 +186,7 @@
       }
     },
     {
-      "id": "1259072",
+      "id": "1259158",
       "date": "2026-05-01T00:00:00.000Z",
       "roundId": 9,
       "player1Id": 73956,
@@ -186,7 +223,7 @@
       }
     },
     {
-      "id": "1259081",
+      "id": "1259167",
       "date": "2026-04-30T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 73956,
@@ -223,7 +260,7 @@
       }
     },
     {
-      "id": "1259082",
+      "id": "1259168",
       "date": "2026-04-29T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 73956,
@@ -4330,7 +4367,7 @@
       }
     },
     {
-      "id": "1100261",
+      "id": "1100262",
       "date": "2024-01-09T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 73956,
@@ -6735,7 +6772,7 @@
       }
     },
     {
-      "id": "973966",
+      "id": "973967",
       "date": "2023-02-28T00:00:00.000Z",
       "roundId": 4,
       "player1Id": 22807,
@@ -6772,7 +6809,7 @@
       }
     },
     {
-      "id": "973967",
+      "id": "973966",
       "date": "2023-02-26T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 58327,
@@ -7327,7 +7364,7 @@
       }
     },
     {
-      "id": "927978",
+      "id": "927979",
       "date": "2022-11-10T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 61838,
@@ -7364,7 +7401,7 @@
       }
     },
     {
-      "id": "927979",
+      "id": "927978",
       "date": "2022-11-09T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 63021,
@@ -11099,8 +11136,82 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "896868",
+      "date": "2021-09-12T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 64741,
+      "player2Id": 73956,
+      "tournamentId": 17320,
+      "match_winner": 64741,
+      "result": "7-6(6) 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 64741,
+        "name": "Facundo Diaz Acosta",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 73956,
+        "name": "Matteo Arnaldi",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 17320,
+        "name": "M25 Eupen 1",
+        "courtId": 2,
+        "date": "2021-09-06T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "BEL",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "876335",
+      "date": "2021-03-23T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 73956,
+      "player2Id": 85899,
+      "tournamentId": 17036,
+      "match_winner": 73956,
+      "result": "6-3 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 73956,
+        "name": "Matteo Arnaldi",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 85899,
+        "name": "Dino Prizmic",
+        "countryAcr": "CRO"
+      },
+      "tournament": {
+        "id": 17036,
+        "name": "M15 Opatija 1",
+        "courtId": 2,
+        "date": "2021-03-22T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "CRO",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778251525296,
+  "cachedAt": 1779099807726,
   "pages": 3
 }

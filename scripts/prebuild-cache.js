@@ -33,16 +33,41 @@ function getTodayStr() {
   return d.toISOString().split('T')[0];
 }
 
-function getPlayerIdsFromFixture(date) {
+function getPlayerIdsFromFixture(date, atpOnly = true) {
   const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
   if (!fs.existsSync(fp)) { console.log(`No fixture file for ${date}`); return []; }
   const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
   const ids = new Set();
   for (const f of (data.fixtures || [])) {
+    if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue; // skip Challenger/ITF
+    if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue; // skip doubles
     if (f.player1?.id) ids.add(String(f.player1.id));
     if (f.player2?.id) ids.add(String(f.player2.id));
   }
   return [...ids];
+}
+
+// Built once per run: playerId -> latest past fixture date they appear in.
+let _fixtureMap = null;
+function getFixtureMap() {
+  if (_fixtureMap) return _fixtureMap;
+  const today = getTodayStr();
+  const map = {};
+  try {
+    for (const file of fs.readdirSync(CACHE_DIR)) {
+      const m = file.match(/^fixtures-(\d{4}-\d{2}-\d{2})\.json$/);
+      if (!m || m[1] > today) continue;
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, file), 'utf-8'));
+        for (const f of (data.fixtures || [])) {
+          if (f.player1?.id) { const id = String(f.player1.id); if (!map[id] || m[1] > map[id]) map[id] = m[1]; }
+          if (f.player2?.id) { const id = String(f.player2.id); if (!map[id] || m[1] > map[id]) map[id] = m[1]; }
+        }
+      } catch {}
+    }
+  } catch {}
+  _fixtureMap = map;
+  return map;
 }
 
 function needsFetch(playerId, forceToday = false) {
@@ -51,30 +76,44 @@ function needsFetch(playerId, forceToday = false) {
   try {
     const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
     const matches = data.matches || [];
-    const ageMs = Date.now() - (data.cachedAt ?? fs.statSync(fp).mtimeMs);
-    const ageHours = ageMs / (1000 * 60 * 60);
+    const cachedAt = data.cachedAt ?? fs.statSync(fp).mtimeMs;
+    const ageHours = (Date.now() - cachedAt) / 3600000;
     if (matches.length === 0) return true;
-    // Non-deep-seeded files need 3 pages — always re-fetch them
     if (!data.deepSeeded && (data.pages ?? 1) < 3) return true;
-    // Skip if fetched within last 2 hours, even for today
-    if (ageHours < 2) return false;
     if (forceToday) return true;
-    if (ageHours > 72) return true;
-    return false;
+    if (ageHours < 2) return false;
+    // Only re-fetch if a fixture exists for this player on a date after the last cache update.
+    // If the cache already covers all known matches, skip — no API call needed.
+    const lastFixture = getFixtureMap()[playerId];
+    if (lastFixture) {
+      const lastFixtureEnd = new Date(lastFixture + 'T23:59:59Z').getTime();
+      if (cachedAt > lastFixtureEnd) return false;
+    }
+    return true;
   } catch { return true; }
 }
 
 async function fetchPage(playerId, pageNo) {
   const url = `https://${HOST}/tennis/v2/atp/player/past-matches/${playerId}?pageSize=100&pageNo=${pageNo}&include=tournament,tournament.court`;
-  try {
-    const res = await fetch(url, { headers: HEADERS });
-    if (!res.ok) { console.log(`    page ${pageNo}: HTTP ${res.status}`); return []; }
-    const json = await res.json();
-    return json.data ?? [];
-  } catch (e) {
-    console.log(`    page ${pageNo}: error - ${e.message}`);
-    return [];
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(url, { headers: HEADERS });
+      if (res.status === 429) {
+        const wait = attempt * 15000;
+        console.log(`    page ${pageNo}: rate limited (429) — waiting ${wait / 1000}s before retry ${attempt}/3`);
+        await sleep(wait);
+        continue;
+      }
+      if (!res.ok) { console.log(`    page ${pageNo}: HTTP ${res.status}`); return []; }
+      const json = await res.json();
+      return json.data ?? [];
+    } catch (e) {
+      console.log(`    page ${pageNo}: error - ${e.message}`);
+      return [];
+    }
   }
+  console.log(`    page ${pageNo}: gave up after 3 attempts`);
+  return [];
 }
 
 async function fetchPlayerMatches(playerId, pages = 3) {
@@ -117,6 +156,18 @@ function reverseLookuFallback(playerId) {
   return found;
 }
 
+function dedupeByNaturalKey(matches) {
+  const seen = new Set();
+  return matches.filter(m => {
+    const p1 = Math.min(m.player1Id || 0, m.player2Id || 0);
+    const p2 = Math.max(m.player1Id || 0, m.player2Id || 0);
+    const key = `${(m.date || '').slice(0, 10)}-${m.tournamentId}-${p1}-${p2}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 function mergeWithExisting(playerId, freshMatches) {
   const fp = path.join(CACHE_DIR, `player-matches-${playerId}.json`);
   if (freshMatches.length === 0 || !fs.existsSync(fp)) return freshMatches;
@@ -155,7 +206,7 @@ async function processPlayer(playerId, index, total) {
     console.log(`    Reverse lookup added: ${supplemented} matches`);
   }
 
-  const merged = mergeWithExisting(playerId, matches);
+  const merged = dedupeByNaturalKey(mergeWithExisting(playerId, matches));
   merged.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const payload = { matches: merged, cachedAt: Date.now(), pages };
@@ -180,7 +231,9 @@ async function processPlayer(playerId, index, total) {
 }
 
 async function main() {
-  const arg = process.argv[2];
+  const args = process.argv.slice(2).filter(a => a !== '--all-levels');
+  const atpOnly = !process.argv.includes('--all-levels');
+  const arg = args[0];
   let dates = [];
 
   if (!arg || arg === 'today') {
@@ -194,18 +247,38 @@ async function main() {
     dates = [arg];
   }
 
+  if (atpOnly) console.log('Mode: ATP-only (use --all-levels to include Challenger/ITF)');
+
   // Collect all unique player IDs across requested dates.
   // Today's players are always re-fetched (API data lag); historical dates skip fresh files.
   const today = getTodayStr();
   const playerMap = new Map(); // id -> forceToday
   for (const date of dates) {
-    const ids = getPlayerIdsFromFixture(date);
+    const ids = getPlayerIdsFromFixture(date, atpOnly);
     const isToday = date === today;
     ids.forEach(id => {
       // Once marked forceToday, keep it
       if (!playerMap.has(id) || isToday) playerMap.set(id, isToday);
     });
     console.log(`Date ${date}: ${ids.length} players${isToday ? ' (force re-fetch)' : ''}`);
+  }
+
+  // Include players from the last 14 days who are NOT in today's fixtures —
+  // covers recently-eliminated players across full tournament runs (even Grand Slams).
+  if (dates.includes(today)) {
+    const todayIds = new Set(playerMap.keys());
+    let recentCount = 0;
+    for (let d = 1; d <= 14; d++) {
+      const pastDate = new Date(Date.now() + 2 * 60 * 60 * 1000 - d * 86400000).toISOString().split('T')[0];
+      const pastIds = getPlayerIdsFromFixture(pastDate, atpOnly);
+      for (const id of pastIds) {
+        if (!todayIds.has(id)) {
+          if (!playerMap.has(id)) { playerMap.set(id, false); recentCount++; }
+        }
+      }
+    }
+    if (recentCount > 0)
+      console.log(`Added ${recentCount} recently-eliminated player(s) from last 14 days`);
   }
 
   const toFetch = [...playerMap.entries()].filter(([id, force]) => needsFetch(id, force)).map(([id]) => id);
@@ -221,7 +294,55 @@ async function main() {
   }
 
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
-  console.log(`\nDone! Fetched ${toFetch.length} players in ${elapsed}s`);
+  console.log(`\nFetched ${toFetch.length} players in ${elapsed}s`);
+
+  // ── Final cross-supplement pass ────────────────────────────────────────────
+  // During the main loop, player A's reverse lookup only sees stale caches for
+  // players B, C... that hadn't been fetched yet in this run. Now that every
+  // player is updated, one more scan picks up any matches that are now visible
+  // in freshly-written caches (e.g. Rublev's R4 match appearing in his
+  // opponent's freshly-fetched cache but not yet in his own).
+  // Zero API calls.
+  console.log('\nRunning cross-supplement pass (no API calls)...');
+  let crossAdded = 0;
+  for (const playerId of toFetch) {
+    const fp = path.join(CACHE_DIR, `player-matches-${playerId}.json`);
+    if (!fs.existsSync(fp)) continue;
+    try {
+      const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+      const pid  = parseInt(playerId);
+      const have = new Set(data.matches.map(m => String(m.id)));
+
+      const extra = [];
+      for (const file of fs.readdirSync(CACHE_DIR)) {
+        if (!file.startsWith('player-matches-') || file === `player-matches-${playerId}.json`) continue;
+        try {
+          const other = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, file), 'utf-8'));
+          for (const m of (other.matches || [])) {
+            if ((m.player1Id === pid || m.player2Id === pid) && !have.has(String(m.id))) {
+              have.add(String(m.id));
+              extra.push(m);
+            }
+          }
+        } catch {}
+      }
+
+      if (extra.length > 0) {
+        const merged = dedupeByNaturalKey([...data.matches, ...extra])
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        fs.writeFileSync(fp, JSON.stringify({ ...data, matches: merged }, null, 2));
+        for (const surface of ['Clay', 'Hard', 'Grass', 'All']) {
+          const bp = path.join(CACHE_DIR, `player-surface-basic-${playerId}-${surface}.json`);
+          if (fs.existsSync(bp)) try { fs.unlinkSync(bp); } catch {}
+        }
+        console.log(`  ${playerId}: +${extra.length} match(es) from cross-supplement`);
+        crossAdded += extra.length;
+      }
+    } catch {}
+  }
+  if (crossAdded === 0) console.log('  Nothing new found.');
+
+  console.log(`\nDone! Total cross-supplemented: ${crossAdded} match(es)`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

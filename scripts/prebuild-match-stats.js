@@ -27,6 +27,7 @@ const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 const SURFACES = ['Clay', 'Hard', 'Grass'];
 const LAST_N = 10;
+const MIN_DATE = '2025-01-01';
 const DELAY = 400; // ms between API calls
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -40,7 +41,7 @@ function getSurface(m) {
   return COURT_ID_MAP[m.tournament?.courtId] || m.tournament?.court?.name || null;
 }
 
-function getPlayerIdsFromFixtures(dates) {
+function getPlayerIdsFromFixtures(dates, atpOnly = true) {
   const ids = new Set();
   for (const date of dates) {
     const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
@@ -48,6 +49,8 @@ function getPlayerIdsFromFixtures(dates) {
     try {
       const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
       for (const f of (data.fixtures || [])) {
+        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue;
+        if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue;
         if (f.player1?.id) ids.add(String(f.player1.id));
         if (f.player2?.id) ids.add(String(f.player2.id));
       }
@@ -62,21 +65,30 @@ async function fetchStats(tournamentId, p1, p2) {
     if (fs.existsSync(file)) return 'cached';
   }
   for (const [a, b] of [[p1, p2], [p2, p1]]) {
-    try {
-      const res = await fetch(
-        `https://${HOST}/tennis/v2/atp/h2h/match-stats/${tournamentId}/${a}/${b}`,
-        { headers: HEADERS }
-      );
-      if (!res.ok) continue;
-      const raw = await res.json();
-      if (raw?.data?.player1Stats) {
-        fs.writeFileSync(
-          path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`),
-          JSON.stringify(raw.data, null, 2)
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        const res = await fetch(
+          `https://${HOST}/tennis/v2/atp/h2h/match-stats/${tournamentId}/${a}/${b}`,
+          { headers: HEADERS }
         );
-        return 'fetched';
-      }
-    } catch {}
+        if (res.status === 429) {
+          const wait = attempt * 15000;
+          console.log(`    rate limited (429) — waiting ${wait / 1000}s before retry ${attempt}/3`);
+          await sleep(wait);
+          continue;
+        }
+        if (!res.ok) break;
+        const raw = await res.json();
+        if (raw?.data?.player1Stats) {
+          fs.writeFileSync(
+            path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`),
+            JSON.stringify(raw.data, null, 2)
+          );
+          return 'fetched';
+        }
+        break;
+      } catch { break; }
+    }
   }
   return 'none';
 }
@@ -84,7 +96,9 @@ async function fetchStats(tournamentId, p1, p2) {
 async function main() {
   if (!fs.existsSync(MATCH_STATS_DIR)) fs.mkdirSync(MATCH_STATS_DIR, { recursive: true });
 
-  const arg = process.argv[2];
+  const atpOnly = !process.argv.includes('--all-levels');
+  const args = process.argv.slice(2).filter(a => a !== '--all-levels');
+  const arg = args[0];
   let dates = [];
   if (!arg || arg === 'today') {
     dates = [getTodayStr()];
@@ -97,7 +111,9 @@ async function main() {
     dates = [arg];
   }
 
-  const playerIds = getPlayerIdsFromFixtures(dates);
+  if (atpOnly) console.log('Mode: ATP-only (use --all-levels to include Challenger/ITF)');
+
+  const playerIds = getPlayerIdsFromFixtures(dates, atpOnly);
   if (playerIds.length === 0) {
     console.log('No players found. Make sure fixture files exist in cache/');
     process.exit(0);
@@ -120,10 +136,10 @@ async function main() {
 
     matches.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    // Collect unique matches across all surfaces (deduplicated by ID)
+    // Collect unique matches across all surfaces (deduplicated by ID, 2025+ only)
     const toFetch = new Map();
     for (const surface of SURFACES) {
-      const filtered = matches.filter(m => getSurface(m) === surface).slice(0, LAST_N);
+      const filtered = matches.filter(m => getSurface(m) === surface && m.date >= MIN_DATE).slice(0, LAST_N);
       for (const m of filtered) toFetch.set(String(m.id), m);
     }
 

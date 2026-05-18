@@ -30,6 +30,12 @@ export default function Home() {
   const [refreshing, setRefreshing] = useState(false);
   const router = useRouter();
 
+  const normalizeSurface = (s?: string) => {
+    if (!s) return s;
+    if (s === 'I.hard' || s === 'Carpet') return 'Hard';
+    return s;
+  };
+
   const formatDate = (date: Date) => {
     const cetDate = new Date(date.getTime() + 2 * 60 * 60 * 1000);
     return cetDate.toISOString().split('T')[0];
@@ -52,7 +58,7 @@ export default function Home() {
         return r.json();
       })
       .then(data => {
-        setFixtures(data.fixtures || []);
+        setFixtures((data.fixtures || []).filter((f: Fixture) => !f.player1?.name?.includes('/') && !f.player2?.name?.includes('/')));
         setLoading(false);
         setRefreshing(false);
       })
@@ -82,7 +88,7 @@ export default function Home() {
 
     const toFetch = new Map<string, { playerId: number; surface: string }>();
     atpFixtures.forEach(f => {
-      const surface = f.tournament?.court?.name || 'Hard';
+      const surface = normalizeSurface(f.tournament?.court?.name) || 'Hard';
       if (f.player1?.id) toFetch.set(`${f.player1.id}-${surface}`, { playerId: f.player1.id, surface });
       if (f.player2?.id) toFetch.set(`${f.player2.id}-${surface}`, { playerId: f.player2.id, surface });
     });
@@ -120,7 +126,7 @@ export default function Home() {
   const handleMatchClick = (fixture: Fixture) => {
     const p1 = fixture.player1?.id || '';
     const p2 = fixture.player2?.id || '';
-    const surface = fixture.tournament?.court?.name || 'All';
+    const surface = normalizeSurface(fixture.tournament?.court?.name) || 'All';
     router.push(`/compare?p1=${p1}&p2=${p2}&surface=${surface}`);
   };
 
@@ -242,7 +248,7 @@ export default function Home() {
                   </div>
 
                   {matches.map((fixture, i) => {
-                    const matchSurface = fixture.tournament?.court?.name || 'Hard';
+                    const matchSurface = normalizeSurface(fixture.tournament?.court?.name) || 'Hard';
                     const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
                     const p2Stats = fixture.player2?.id ? playerStats[`${fixture.player2.id}-${matchSurface}`] : undefined;
                     return (

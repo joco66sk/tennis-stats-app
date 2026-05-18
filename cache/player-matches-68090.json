@@ -1,7 +1,44 @@
 {
   "matches": [
     {
-      "id": "1243224",
+      "id": "1263355",
+      "date": "2026-05-12T17:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 59092,
+      "player2Id": 68090,
+      "tournamentId": 21661,
+      "match_winner": 59092,
+      "result": "6-2 6-7(2) 6-2",
+      "best_of": null,
+      "odd1": "1.76",
+      "odd2": "1.93",
+      "player1": {
+        "id": 59092,
+        "name": "Titouan Droguet",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21661,
+        "name": "Bordeaux Challenger",
+        "courtId": 2,
+        "date": "2026-05-11T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243274",
       "date": "2026-05-07T13:50:00.000Z",
       "roundId": 4,
       "player1Id": 71174,
@@ -38,7 +75,7 @@
       }
     },
     {
-      "id": "1243207",
+      "id": "1243239",
       "date": "2026-05-05T14:30:00.000Z",
       "roundId": 3,
       "player1Id": 68090,
@@ -69,6 +106,154 @@
         "court": {
           "id": 2,
           "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1243281",
+      "date": "2026-05-04T16:30:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 73742,
+      "tournamentId": 21326,
+      "match_winner": 68090,
+      "result": "6-3 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 73742,
+        "name": "Shintaro Mochizuki",
+        "countryAcr": "JPN"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1242567",
+      "date": "2026-03-19T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 72574,
+      "player2Id": 68090,
+      "tournamentId": 21318,
+      "match_winner": 72574,
+      "result": "6-0 ret.",
+      "best_of": null,
+      "odd1": "1.9",
+      "odd2": "1.9",
+      "player1": {
+        "id": 72574,
+        "name": "Martin Damm",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21318,
+        "name": "Miami Open - Miami",
+        "courtId": 1,
+        "date": "2026-03-16T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1251844",
+      "date": "2026-03-11T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 70873,
+      "player2Id": 68090,
+      "tournamentId": 21504,
+      "match_winner": 70873,
+      "result": "6-2 3-6 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 70873,
+        "name": "Arthur Cazaux",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21504,
+        "name": "Phoenix Challenger",
+        "courtId": 1,
+        "date": "2026-03-09T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1242409",
+      "date": "2026-03-07T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 29932,
+      "player2Id": 68090,
+      "tournamentId": 21317,
+      "match_winner": 29932,
+      "result": "6-3 6-7(8) 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 29932,
+        "name": "Taylor Fritz",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21317,
+        "name": "BNP Paribas Open - Indian Wells",
+        "courtId": 1,
+        "date": "2026-03-02T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
         },
         "rank": null,
         "country": null
@@ -112,7 +297,303 @@
       }
     },
     {
+      "id": "1248119",
+      "date": "2026-02-23T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 65903,
+      "player2Id": 68090,
+      "tournamentId": 21431,
+      "match_winner": 65903,
+      "result": "6-3 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 65903,
+        "name": "Arthur Bouquier",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21431,
+        "name": "St. Brieuc Challenger",
+        "courtId": 3,
+        "date": "2026-02-23T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1247859",
+      "date": "2026-02-17T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 55828,
+      "player2Id": 68090,
+      "tournamentId": 21427,
+      "match_winner": 55828,
+      "result": "6-3 2-6 6-2",
+      "best_of": null,
+      "odd1": "2.16",
+      "odd2": "1.6",
+      "player1": {
+        "id": 55828,
+        "name": "Clement Chidekh",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21427,
+        "name": "Lille Challenger",
+        "courtId": 3,
+        "date": "2026-02-16T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1251388",
+      "date": "2026-02-06T00:00:00.000Z",
+      "roundId": 16,
+      "player1Id": 68090,
+      "player2Id": 104215,
+      "tournamentId": 21472,
+      "match_winner": 68090,
+      "result": "3-6 6-3 10-7",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 104215,
+        "name": "Nicolai Budkov Kjaer",
+        "countryAcr": "NOR"
+      },
+      "tournament": {
+        "id": 21472,
+        "name": "Davis Cup, World Group, Q, NOR-GBR 0-4",
+        "courtId": 3,
+        "date": "2026-02-02T00:00:00.000Z",
+        "rankId": 5,
+        "countryAcr": "NOR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1244135",
+      "date": "2026-01-30T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 65904,
+      "player2Id": 68090,
+      "tournamentId": 21377,
+      "match_winner": 65904,
+      "result": "7-6(4) 1-6 6-3",
+      "best_of": null,
+      "odd1": "1.9",
+      "odd2": "1.78",
+      "player1": {
+        "id": 65904,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21377,
+        "name": "Manama Challenger",
+        "courtId": 1,
+        "date": "2026-01-26T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "BRN",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1244146",
+      "date": "2026-01-29T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 84323,
+      "tournamentId": 21377,
+      "match_winner": 68090,
+      "result": "3-6 6-4 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 84323,
+        "name": "Lukas Pokorny",
+        "countryAcr": "SVK"
+      },
+      "tournament": {
+        "id": 21377,
+        "name": "Manama Challenger",
+        "courtId": 1,
+        "date": "2026-01-26T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "BRN",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1244144",
+      "date": "2026-01-27T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 83314,
+      "tournamentId": 21377,
+      "match_winner": 68090,
+      "result": "6-3 7-6(4)",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 83314,
+        "name": "Lukas Neumayer",
+        "countryAcr": "AUT"
+      },
+      "tournament": {
+        "id": 21377,
+        "name": "Manama Challenger",
+        "courtId": 1,
+        "date": "2026-01-26T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "BRN",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1241563",
+      "date": "2026-01-19T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 28898,
+      "player2Id": 68090,
+      "tournamentId": 21305,
+      "match_winner": 28898,
+      "result": "7-6(2) 7-5 3-6 7-6(3)",
+      "best_of": null,
+      "odd1": "1.71",
+      "odd2": "2.13",
+      "player1": {
+        "id": 28898,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "POL"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21305,
+        "name": "Australian Open - Melbourne",
+        "courtId": 1,
+        "date": "2026-01-19T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1241300",
+      "date": "2026-01-13T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 25171,
+      "player2Id": 68090,
+      "tournamentId": 21303,
+      "match_winner": 25171,
+      "result": "6-3 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 25171,
+        "name": "Quentin Halys",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21303,
+        "name": "Adelaide International - Adelaide",
+        "courtId": 1,
+        "date": "2026-01-12T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1241299",
       "date": "2026-01-12T00:00:00.000Z",
       "roundId": 3,
       "player1Id": 28267,
@@ -132,6 +613,43 @@
         "id": 68090,
         "name": "Jacob Fearnley",
         "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21303,
+        "name": "Adelaide International - Adelaide",
+        "courtId": 1,
+        "date": "2026-01-12T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1241269",
+      "date": "2026-01-11T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 24721,
+      "tournamentId": 21303,
+      "match_winner": 68090,
+      "result": "7-6(4) 7-6(4)",
+      "best_of": null,
+      "odd1": "1.666",
+      "odd2": "2.05",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 24721,
+        "name": "Christopher O'Connell",
+        "countryAcr": "AUS"
       },
       "tournament": {
         "id": 21303,
@@ -408,6 +926,80 @@
       }
     },
     {
+      "id": "1174559",
+      "date": "2025-10-18T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 63299,
+      "tournamentId": 20371,
+      "match_winner": 68090,
+      "result": "6-4 7-5",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 63299,
+        "name": "Dalibor Svrcina",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 20371,
+        "name": "Erste Bank Open - Vienna",
+        "courtId": 3,
+        "date": "2025-10-20T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "AUT",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1174442",
+      "date": "2025-10-16T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 26218,
+      "player2Id": 68090,
+      "tournamentId": 20369,
+      "match_winner": 26218,
+      "result": "6-2 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 26218,
+        "name": "Elias Ymer",
+        "countryAcr": "SWE"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20369,
+        "name": "BNP Paribas Nordic Open - Stockholm",
+        "courtId": 3,
+        "date": "2025-10-13T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SWE",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1174427",
       "date": "2025-10-13T00:00:00.000Z",
       "roundId": 4,
@@ -436,6 +1028,80 @@
         "date": "2025-10-13T00:00:00.000Z",
         "rankId": 2,
         "countryAcr": "SWE",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1227542",
+      "date": "2025-10-08T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 73196,
+      "player2Id": 68090,
+      "tournamentId": 21107,
+      "match_winner": 73196,
+      "result": "6-4 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 73196,
+        "name": "Dominic Stricker",
+        "countryAcr": "SUI"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21107,
+        "name": "Roanne Challenger",
+        "courtId": 3,
+        "date": "2025-10-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1227549",
+      "date": "2025-10-07T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 82371,
+      "tournamentId": 21107,
+      "match_winner": 68090,
+      "result": "3-6 6-2 6-3",
+      "best_of": null,
+      "odd1": "1.285",
+      "odd2": "3.4",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 82371,
+        "name": "Luca Van Assche",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21107,
+        "name": "Roanne Challenger",
+        "courtId": 3,
+        "date": "2025-10-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
         "court": {
           "id": 3,
           "name": "I.hard"
@@ -556,6 +1222,43 @@
       }
     },
     {
+      "id": "1214270",
+      "date": "2025-08-13T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 83315,
+      "player2Id": 68090,
+      "tournamentId": 20911,
+      "match_winner": 83315,
+      "result": "3-6 7-5 ret.",
+      "best_of": null,
+      "odd1": "3.55",
+      "odd2": "1.26",
+      "player1": {
+        "id": 83315,
+        "name": "James McCabe",
+        "countryAcr": "AUS"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20911,
+        "name": "Sumter Challenger",
+        "courtId": 1,
+        "date": "2025-08-11T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USD",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1214271",
       "date": "2025-08-12T00:00:00.000Z",
       "roundId": 3,
@@ -593,6 +1296,80 @@
       }
     },
     {
+      "id": "1173410",
+      "date": "2025-08-07T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 37741,
+      "player2Id": 68090,
+      "tournamentId": 20357,
+      "match_winner": 37741,
+      "result": "6-1 6-4",
+      "best_of": null,
+      "odd1": "2.15",
+      "odd2": "1.7",
+      "player1": {
+        "id": 37741,
+        "name": "Zizou Bergs",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20357,
+        "name": "Cincinnati Open - Cincinnati",
+        "courtId": 1,
+        "date": "2025-08-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1173268",
+      "date": "2025-07-27T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 29906,
+      "player2Id": 68090,
+      "tournamentId": 20356,
+      "match_winner": 29906,
+      "result": "6-2 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 29906,
+        "name": "Juan Pablo Ficovich",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20356,
+        "name": "National Bank Open - Toronto",
+        "courtId": 1,
+        "date": "2025-07-28T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "CAN",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1172650",
       "date": "2025-06-30T00:00:00.000Z",
       "roundId": 4,
@@ -620,6 +1397,43 @@
         "courtId": 5,
         "date": "2025-06-30T00:00:00.000Z",
         "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1172431",
+      "date": "2025-06-25T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 18736,
+      "player2Id": 68090,
+      "tournamentId": 20347,
+      "match_winner": 18736,
+      "result": "6-3 6-1",
+      "best_of": null,
+      "odd1": "2.36",
+      "odd2": "1.59",
+      "player1": {
+        "id": 18736,
+        "name": "Marcos Giron",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20347,
+        "name": "Rothesay International - Eastbourne",
+        "courtId": 5,
+        "date": "2025-06-23T00:00:00.000Z",
+        "rankId": 2,
         "countryAcr": "GBR",
         "court": {
           "id": 5,
@@ -687,6 +1501,80 @@
         "id": 68090,
         "name": "Jacob Fearnley",
         "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20345,
+        "name": "cinch Championships - London",
+        "courtId": 5,
+        "date": "2025-06-16T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1172309",
+      "date": "2025-06-19T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 36263,
+      "tournamentId": 20345,
+      "match_winner": 68090,
+      "result": "6-3 2-6 6-2",
+      "best_of": null,
+      "odd1": "1.53",
+      "odd2": "2.5",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 36263,
+        "name": "Corentin Moutet",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20345,
+        "name": "cinch Championships - London",
+        "courtId": 5,
+        "date": "2025-06-16T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1172293",
+      "date": "2025-06-16T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 19689,
+      "tournamentId": 20345,
+      "match_winner": 68090,
+      "result": "6-2 6-4",
+      "best_of": null,
+      "odd1": "1.41",
+      "odd2": "2.91",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 19689,
+        "name": "Alex Bolt",
+        "countryAcr": "AUS"
       },
       "tournament": {
         "id": 20345,
@@ -815,6 +1703,43 @@
       }
     },
     {
+      "id": "1171758",
+      "date": "2025-05-26T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 1092,
+      "tournamentId": 20340,
+      "match_winner": 68090,
+      "result": "7-6(6) 6-3 6-2",
+      "best_of": null,
+      "odd1": "1.61",
+      "odd2": "2.32",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 1092,
+        "name": "Stan Wawrinka",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 20340,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2025-05-26T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1171736",
       "date": "2025-05-21T00:00:00.000Z",
       "roundId": 5,
@@ -843,6 +1768,154 @@
         "date": "2025-05-19T00:00:00.000Z",
         "rankId": 2,
         "countryAcr": "SUI",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171706",
+      "date": "2025-05-19T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 12190,
+      "tournamentId": 20339,
+      "match_winner": 68090,
+      "result": "6-4 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 12190,
+        "name": "Dusan Lajovic",
+        "countryAcr": "SRB"
+      },
+      "tournament": {
+        "id": 20339,
+        "name": "Gonet Geneva Open - Geneva",
+        "courtId": 2,
+        "date": "2025-05-19T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SUI",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171590",
+      "date": "2025-05-10T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 29812,
+      "player2Id": 68090,
+      "tournamentId": 20337,
+      "match_winner": 29812,
+      "result": "6-4 7-6(0)",
+      "best_of": null,
+      "odd1": "1.39",
+      "odd2": "2.99",
+      "player1": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20337,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2025-05-05T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171484",
+      "date": "2025-05-08T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 4067,
+      "tournamentId": 20337,
+      "match_winner": 68090,
+      "result": "6-2 6-3",
+      "best_of": null,
+      "odd1": "1.444",
+      "odd2": "2.77",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 4067,
+        "name": "Fabio Fognini",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 20337,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2025-05-05T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171429",
+      "date": "2025-04-29T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 11953,
+      "player2Id": 68090,
+      "tournamentId": 20336,
+      "match_winner": 11953,
+      "result": "6-4 7-6(3)",
+      "best_of": null,
+      "odd1": "1.32",
+      "odd2": "3.38",
+      "player1": {
+        "id": 11953,
+        "name": "Grigor Dimitrov",
+        "countryAcr": "BUL"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20336,
+        "name": "Mutua Madrid Open - Madrid",
+        "courtId": 2,
+        "date": "2025-04-21T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ESP",
         "court": {
           "id": 2,
           "name": "Clay"
@@ -926,7 +1999,81 @@
       }
     },
     {
-      "id": "1171240",
+      "id": "1171339",
+      "date": "2025-04-22T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 18477,
+      "tournamentId": 20336,
+      "match_winner": 68090,
+      "result": "7-5 6-1",
+      "best_of": null,
+      "odd1": "2.13",
+      "odd2": "1.65",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 18477,
+        "name": "Hugo Dellien",
+        "countryAcr": "BOL"
+      },
+      "tournament": {
+        "id": 20336,
+        "name": "Mutua Madrid Open - Madrid",
+        "courtId": 2,
+        "date": "2025-04-21T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171400",
+      "date": "2025-04-21T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 45553,
+      "tournamentId": 20336,
+      "match_winner": 68090,
+      "result": "4-6 6-4 6-1",
+      "best_of": null,
+      "odd1": "1.71",
+      "odd2": "2.04",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 45553,
+        "name": "Pavel Kotov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 20336,
+        "name": "Mutua Madrid Open - Madrid",
+        "courtId": 2,
+        "date": "2025-04-21T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171239",
       "date": "2025-04-17T00:00:00.000Z",
       "roundId": 5,
       "player1Id": 39309,
@@ -946,6 +2093,117 @@
         "id": 68090,
         "name": "Jacob Fearnley",
         "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20334,
+        "name": "Barcelona Open Banc Sabadell - Barcelona",
+        "courtId": 2,
+        "date": "2025-04-14T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171208",
+      "date": "2025-04-14T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 21506,
+      "tournamentId": 20334,
+      "match_winner": 68090,
+      "result": "6-1 7-5",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 21506,
+        "name": "Roberto Carballes Baena",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 20334,
+        "name": "Barcelona Open Banc Sabadell - Barcelona",
+        "courtId": 2,
+        "date": "2025-04-14T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171240",
+      "date": "2025-04-13T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 26845,
+      "player2Id": 68090,
+      "tournamentId": 20334,
+      "match_winner": 26845,
+      "result": "7-5 6-4",
+      "best_of": null,
+      "odd1": "1.61",
+      "odd2": "2.2",
+      "player1": {
+        "id": 26845,
+        "name": "Daniel Elahi Galan",
+        "countryAcr": "COL"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20334,
+        "name": "Barcelona Open Banc Sabadell - Barcelona",
+        "courtId": 2,
+        "date": "2025-04-14T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1171252",
+      "date": "2025-04-12T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 83696,
+      "tournamentId": 20334,
+      "match_winner": 68090,
+      "result": "7-5 7-6(1)",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 83696,
+        "name": "Leo Borg",
+        "countryAcr": "SWE"
       },
       "tournament": {
         "id": 20334,
@@ -1000,6 +2258,117 @@
       }
     },
     {
+      "id": "1170811",
+      "date": "2025-03-20T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 28899,
+      "tournamentId": 20329,
+      "match_winner": 68090,
+      "result": "7-6(6) 2-6 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 28899,
+        "name": "Benjamin Bonzi",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20329,
+        "name": "Miami Open - Miami",
+        "courtId": 1,
+        "date": "2025-03-17T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1170866",
+      "date": "2025-03-18T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 56195,
+      "tournamentId": 20329,
+      "match_winner": 68090,
+      "result": "6-2 6-4",
+      "best_of": null,
+      "odd1": "1.45",
+      "odd2": "2.59",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 56195,
+        "name": "Tristan Boyer",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 20329,
+        "name": "Miami Open - Miami",
+        "courtId": 1,
+        "date": "2025-03-17T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1170916",
+      "date": "2025-03-17T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 103054,
+      "tournamentId": 20329,
+      "match_winner": 68090,
+      "result": "6-4 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 103054,
+        "name": "Thijs Boogaard",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 20329,
+        "name": "Miami Open - Miami",
+        "courtId": 1,
+        "date": "2025-03-17T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1183331",
       "date": "2025-03-13T00:00:00.000Z",
       "roundId": 5,
@@ -1020,6 +2389,43 @@
         "id": 68090,
         "name": "Jacob Fearnley",
         "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20512,
+        "name": "Phoenix Challenger",
+        "courtId": 1,
+        "date": "2025-03-10T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1183299",
+      "date": "2025-03-12T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 11517,
+      "tournamentId": 20512,
+      "match_winner": 68090,
+      "result": "7-6(3) 6-3",
+      "best_of": null,
+      "odd1": "1.52",
+      "odd2": "2.4",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 11517,
+        "name": "James Duckworth",
+        "countryAcr": "AUS"
       },
       "tournament": {
         "id": 20512,
@@ -1074,6 +2480,191 @@
       }
     },
     {
+      "id": "1176331",
+      "date": "2025-02-21T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 37085,
+      "player2Id": 68090,
+      "tournamentId": 20400,
+      "match_winner": 37085,
+      "result": "6-3 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 37085,
+        "name": "Lukas Klein",
+        "countryAcr": "SVK"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20400,
+        "name": "Pau Challenger",
+        "courtId": 3,
+        "date": "2025-02-17T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1176305",
+      "date": "2025-02-20T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 22428,
+      "tournamentId": 20400,
+      "match_winner": 68090,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": "1.185",
+      "odd2": "4.333",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 22428,
+        "name": "Evgeny Karlovskiy",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 20400,
+        "name": "Pau Challenger",
+        "courtId": 3,
+        "date": "2025-02-17T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1176340",
+      "date": "2025-02-18T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 84323,
+      "tournamentId": 20400,
+      "match_winner": 68090,
+      "result": "6-4 6-4",
+      "best_of": null,
+      "odd1": "1.104",
+      "odd2": "5.9",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 84323,
+        "name": "Lukas Pokorny",
+        "countryAcr": "SVK"
+      },
+      "tournament": {
+        "id": 20400,
+        "name": "Pau Challenger",
+        "courtId": 3,
+        "date": "2025-02-17T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1182773",
+      "date": "2025-02-01T00:00:00.000Z",
+      "roundId": 16,
+      "player1Id": 24225,
+      "player2Id": 68090,
+      "tournamentId": 20481,
+      "match_winner": 24225,
+      "result": "6-3 7-6(0)",
+      "best_of": null,
+      "odd1": "2.45",
+      "odd2": "1.5",
+      "player1": {
+        "id": 24225,
+        "name": "Yoshihito Nishioka",
+        "countryAcr": "JPN"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20481,
+        "name": "Davis Cup, World Group, Q, JPN-GBR 3-2",
+        "courtId": 3,
+        "date": "2025-01-27T00:00:00.000Z",
+        "rankId": 5,
+        "countryAcr": "JPN",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1182770",
+      "date": "2025-01-31T00:00:00.000Z",
+      "roundId": 14,
+      "player1Id": 68090,
+      "player2Id": 8806,
+      "tournamentId": 20481,
+      "match_winner": 68090,
+      "result": "6-3 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 8806,
+        "name": "Kei Nishikori",
+        "countryAcr": "JPN"
+      },
+      "tournament": {
+        "id": 20481,
+        "name": "Davis Cup, World Group, Q, JPN-GBR 3-2",
+        "courtId": 3,
+        "date": "2025-01-27T00:00:00.000Z",
+        "rankId": 5,
+        "countryAcr": "JPN",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1169830",
       "date": "2025-01-17T00:00:00.000Z",
       "roundId": 6,
@@ -1094,6 +2685,80 @@
         "id": 68090,
         "name": "Jacob Fearnley",
         "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20315,
+        "name": "Australian Open - Melbourne",
+        "courtId": 1,
+        "date": "2025-01-13T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1169835",
+      "date": "2025-01-15T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 70873,
+      "tournamentId": 20315,
+      "match_winner": 68090,
+      "result": "3-6 7-5 6-2 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 70873,
+        "name": "Arthur Cazaux",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20315,
+        "name": "Australian Open - Melbourne",
+        "courtId": 1,
+        "date": "2025-01-13T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1169672",
+      "date": "2025-01-13T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 22434,
+      "tournamentId": 20315,
+      "match_winner": 68090,
+      "result": "7-6(3) 6-3 7-6(1)",
+      "best_of": null,
+      "odd1": "2",
+      "odd2": "1.81",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 22434,
+        "name": "Nick Kyrgios",
+        "countryAcr": "AUS"
       },
       "tournament": {
         "id": 20315,
@@ -1148,6 +2813,80 @@
       }
     },
     {
+      "id": "1174851",
+      "date": "2025-01-02T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 26381,
+      "tournamentId": 20377,
+      "match_winner": 68090,
+      "result": "4-6 6-2 7-6(3)",
+      "best_of": null,
+      "odd1": "1.5",
+      "odd2": "2.45",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 26381,
+        "name": "Christopher Eubanks",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 20377,
+        "name": "Canberra Challenger",
+        "courtId": 1,
+        "date": "2025-01-01T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1174874",
+      "date": "2025-01-01T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 62166,
+      "tournamentId": 20377,
+      "match_winner": 68090,
+      "result": "6-2 6-4",
+      "best_of": null,
+      "odd1": "1.41",
+      "odd2": "2.73",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 62166,
+        "name": "James Kent Trotter",
+        "countryAcr": "JPN"
+      },
+      "tournament": {
+        "id": 20377,
+        "name": "Canberra Challenger",
+        "courtId": 1,
+        "date": "2025-01-01T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "AUS",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1174862",
       "date": "2024-12-30T00:00:00.000Z",
       "roundId": 4,
@@ -1185,6 +2924,117 @@
       }
     },
     {
+      "id": "1161998",
+      "date": "2024-11-08T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 8806,
+      "player2Id": 68090,
+      "tournamentId": 20199,
+      "match_winner": 8806,
+      "result": "6-4 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 8806,
+        "name": "Kei Nishikori",
+        "countryAcr": "JPN"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20199,
+        "name": "Helsinki Challenger",
+        "courtId": 3,
+        "date": "2024-11-04T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FIN",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1161993",
+      "date": "2024-11-06T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 56197,
+      "tournamentId": 20199,
+      "match_winner": 68090,
+      "result": "6-4 6-3",
+      "best_of": null,
+      "odd1": "1.3",
+      "odd2": "3.26",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 56197,
+        "name": "Emilio Nava",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 20199,
+        "name": "Helsinki Challenger",
+        "courtId": 3,
+        "date": "2024-11-04T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FIN",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1161996",
+      "date": "2024-11-04T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 61857,
+      "tournamentId": 20199,
+      "match_winner": 68090,
+      "result": "6-2 6-3",
+      "best_of": null,
+      "odd1": "1.28",
+      "odd2": "3.4",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 61857,
+        "name": "Valentin Royer",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20199,
+        "name": "Helsinki Challenger",
+        "courtId": 3,
+        "date": "2024-11-04T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FIN",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1157844",
       "date": "2024-11-01T00:00:00.000Z",
       "roundId": 9,
@@ -1205,6 +3055,80 @@
         "id": 68090,
         "name": "Jacob Fearnley",
         "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 20122,
+        "name": "Bratislava 2 Challenger",
+        "courtId": 3,
+        "date": "2024-10-28T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "SVK",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1157848",
+      "date": "2024-10-30T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 72877,
+      "tournamentId": 20122,
+      "match_winner": 68090,
+      "result": "6-2 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 72877,
+        "name": "Alibek Kachmazov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 20122,
+        "name": "Bratislava 2 Challenger",
+        "courtId": 3,
+        "date": "2024-10-28T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "SVK",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1157854",
+      "date": "2024-10-28T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 84323,
+      "tournamentId": 20122,
+      "match_winner": 68090,
+      "result": "7-6(3) 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 84323,
+        "name": "Lukas Pokorny",
+        "countryAcr": "SVK"
       },
       "tournament": {
         "id": 20122,
@@ -1259,6 +3183,43 @@
       }
     },
     {
+      "id": "1105436",
+      "date": "2024-10-19T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 24721,
+      "tournamentId": 19415,
+      "match_winner": 68090,
+      "result": "6-4 1-6 6-4",
+      "best_of": null,
+      "odd1": "1.45",
+      "odd2": "2.59",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 24721,
+        "name": "Christopher O'Connell",
+        "countryAcr": "AUS"
+      },
+      "tournament": {
+        "id": 19415,
+        "name": "Swiss Indoors Basel - Basel",
+        "courtId": 3,
+        "date": "2024-10-21T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SUI",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1105729",
       "date": "2024-10-16T00:00:00.000Z",
       "roundId": 5,
@@ -1287,6 +3248,154 @@
         "date": "2024-10-14T00:00:00.000Z",
         "rankId": 2,
         "countryAcr": "SWE",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1105713",
+      "date": "2024-10-15T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 36263,
+      "tournamentId": 19419,
+      "match_winner": 68090,
+      "result": "6-2 7-6(5)",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 36263,
+        "name": "Corentin Moutet",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 19419,
+        "name": "BNP Paribas Nordic Open - Stockholm",
+        "courtId": 3,
+        "date": "2024-10-14T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SWE",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1105705",
+      "date": "2024-10-13T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 28898,
+      "tournamentId": 19419,
+      "match_winner": 68090,
+      "result": "3-6 6-3 7-6(2)",
+      "best_of": null,
+      "odd1": "1.54",
+      "odd2": "2.35",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 28898,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "POL"
+      },
+      "tournament": {
+        "id": 19419,
+        "name": "BNP Paribas Nordic Open - Stockholm",
+        "courtId": 3,
+        "date": "2024-10-14T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SWE",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1105735",
+      "date": "2024-10-12T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 84323,
+      "tournamentId": 19419,
+      "match_winner": 68090,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": "1.091",
+      "odd2": "6.3",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 84323,
+        "name": "Lukas Pokorny",
+        "countryAcr": "SVK"
+      },
+      "tournament": {
+        "id": 19419,
+        "name": "BNP Paribas Nordic Open - Stockholm",
+        "courtId": 3,
+        "date": "2024-10-14T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SWE",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1150999",
+      "date": "2024-09-29T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 68090,
+      "player2Id": 60140,
+      "tournamentId": 20028,
+      "match_winner": 68090,
+      "result": "6-3 7-6(5)",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 60140,
+        "name": "Harold Mayot",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20028,
+        "name": "Orleans Challenger",
+        "courtId": 3,
+        "date": "2024-09-23T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
         "court": {
           "id": 3,
           "name": "I.hard"
@@ -1333,6 +3442,376 @@
       }
     },
     {
+      "id": "1151007",
+      "date": "2024-09-27T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 80019,
+      "tournamentId": 20028,
+      "match_winner": 68090,
+      "result": "6-1 6-0",
+      "best_of": null,
+      "odd1": "1.25",
+      "odd2": "3.64",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 80019,
+        "name": "Matteo Gigante",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 20028,
+        "name": "Orleans Challenger",
+        "courtId": 3,
+        "date": "2024-09-23T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1151011",
+      "date": "2024-09-25T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 83555,
+      "tournamentId": 20028,
+      "match_winner": 68090,
+      "result": "6-3 6-3",
+      "best_of": null,
+      "odd1": "1.157",
+      "odd2": "4.75",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 83555,
+        "name": "Robin Bertrand",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20028,
+        "name": "Orleans Challenger",
+        "courtId": 3,
+        "date": "2024-09-23T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1150965",
+      "date": "2024-09-24T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 9658,
+      "tournamentId": 20028,
+      "match_winner": 68090,
+      "result": "6-2 3-6 6-1",
+      "best_of": null,
+      "odd1": "1.118",
+      "odd2": "5.55",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 9658,
+        "name": "Jonathan Eysseric",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20028,
+        "name": "Orleans Challenger",
+        "courtId": 3,
+        "date": "2024-09-23T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1150468",
+      "date": "2024-09-15T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 68090,
+      "player2Id": 25171,
+      "tournamentId": 20020,
+      "match_winner": 68090,
+      "result": "0-6 7-6(5) 6-3",
+      "best_of": null,
+      "odd1": "2.33",
+      "odd2": "1.56",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 25171,
+        "name": "Quentin Halys",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20020,
+        "name": "Rennes Challenger",
+        "courtId": 3,
+        "date": "2024-09-09T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1150493",
+      "date": "2024-09-14T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 68090,
+      "player2Id": 60140,
+      "tournamentId": 20020,
+      "match_winner": 68090,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": "2.06",
+      "odd2": "1.71",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 60140,
+        "name": "Harold Mayot",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20020,
+        "name": "Rennes Challenger",
+        "courtId": 3,
+        "date": "2024-09-09T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1150456",
+      "date": "2024-09-13T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 7806,
+      "tournamentId": 20020,
+      "match_winner": 68090,
+      "result": "6-3 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 7806,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20020,
+        "name": "Rennes Challenger",
+        "courtId": 3,
+        "date": "2024-09-09T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1150502",
+      "date": "2024-09-12T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 83554,
+      "tournamentId": 20020,
+      "match_winner": 68090,
+      "result": "1-6 6-2 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 83554,
+        "name": "Sascha Gueymard Wayenburg",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20020,
+        "name": "Rennes Challenger",
+        "courtId": 3,
+        "date": "2024-09-09T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1150457",
+      "date": "2024-09-11T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 12043,
+      "tournamentId": 20020,
+      "match_winner": 68090,
+      "result": "6-1 6-0",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 12043,
+        "name": "Benoit Paire",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 20020,
+        "name": "Rennes Challenger",
+        "courtId": 3,
+        "date": "2024-09-09T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1104758",
+      "date": "2024-08-19T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 50382,
+      "player2Id": 68090,
+      "tournamentId": 19405,
+      "match_winner": 50382,
+      "result": "6-1 7-6(2)",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 50382,
+        "name": "Paul Jubb",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19405,
+        "name": "U.S. Open - New York",
+        "courtId": 1,
+        "date": "2024-08-26T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1144607",
+      "date": "2024-08-11T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 68090,
+      "player2Id": 71166,
+      "tournamentId": 19941,
+      "match_winner": 68090,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": "1.55",
+      "odd2": "2.35",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 71166,
+        "name": "Chak Lam Coleman Wong",
+        "countryAcr": "HKG"
+      },
+      "tournament": {
+        "id": 19941,
+        "name": "Lincoln Challenger",
+        "courtId": 1,
+        "date": "2024-08-05T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1144602",
       "date": "2024-08-10T00:00:00.000Z",
       "roundId": 10,
@@ -1359,6 +3838,191 @@
         "name": "Lincoln Challenger",
         "courtId": 1,
         "date": "2024-08-05T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1144611",
+      "date": "2024-08-09T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 76333,
+      "tournamentId": 19941,
+      "match_winner": 68090,
+      "result": "5-7 6-4 6-3",
+      "best_of": null,
+      "odd1": "1.29",
+      "odd2": "3.38",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 76333,
+        "name": "Aidan Mayo",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 19941,
+        "name": "Lincoln Challenger",
+        "courtId": 1,
+        "date": "2024-08-05T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1144583",
+      "date": "2024-08-08T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 26381,
+      "tournamentId": 19941,
+      "match_winner": 68090,
+      "result": "7-5 4-6 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 26381,
+        "name": "Christopher Eubanks",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 19941,
+        "name": "Lincoln Challenger",
+        "courtId": 1,
+        "date": "2024-08-05T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1144590",
+      "date": "2024-08-06T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 32703,
+      "tournamentId": 19941,
+      "match_winner": 68090,
+      "result": "6-1 6-1",
+      "best_of": null,
+      "odd1": "1.69",
+      "odd2": "2.09",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 32703,
+        "name": "Gijs Brouwer",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 19941,
+        "name": "Lincoln Challenger",
+        "courtId": 1,
+        "date": "2024-08-05T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1138029",
+      "date": "2024-07-27T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 68627,
+      "player2Id": 68090,
+      "tournamentId": 19856,
+      "match_winner": 68627,
+      "result": "6-2 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68627,
+        "name": "Gabriel Diallo",
+        "countryAcr": "CAN"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19856,
+        "name": "Chicago Challenger",
+        "courtId": 1,
+        "date": "2024-07-22T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1138015",
+      "date": "2024-07-26T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 47566,
+      "tournamentId": 19856,
+      "match_winner": 68090,
+      "result": "6-3 6-2",
+      "best_of": null,
+      "odd1": "1.55",
+      "odd2": "2.31",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 47566,
+        "name": "Brandon Holt",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 19856,
+        "name": "Chicago Challenger",
+        "courtId": 1,
+        "date": "2024-07-22T00:00:00.000Z",
         "rankId": 1,
         "countryAcr": "USA",
         "court": {
@@ -1407,6 +4071,191 @@
       }
     },
     {
+      "id": "1138000",
+      "date": "2024-07-23T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 22710,
+      "tournamentId": 19856,
+      "match_winner": 68090,
+      "result": "6-4 6-3",
+      "best_of": null,
+      "odd1": "1.59",
+      "odd2": "2.26",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 22710,
+        "name": "Li Tu",
+        "countryAcr": "AUS"
+      },
+      "tournament": {
+        "id": 19856,
+        "name": "Chicago Challenger",
+        "courtId": 1,
+        "date": "2024-07-22T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1138008",
+      "date": "2024-07-22T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 33298,
+      "tournamentId": 19856,
+      "match_winner": 68090,
+      "result": "4-6 6-3 6-0",
+      "best_of": null,
+      "odd1": "1.36",
+      "odd2": "2.98",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 33298,
+        "name": "Antoine Bellier",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 19856,
+        "name": "Chicago Challenger",
+        "courtId": 1,
+        "date": "2024-07-22T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1138038",
+      "date": "2024-07-21T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 87626,
+      "tournamentId": 19856,
+      "match_winner": 68090,
+      "result": "6-1 7-6(8)",
+      "best_of": null,
+      "odd1": "1.161",
+      "odd2": "4.8",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 87626,
+        "name": "Cooper Williams",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 19856,
+        "name": "Chicago Challenger",
+        "courtId": 1,
+        "date": "2024-07-22T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1103909",
+      "date": "2024-07-15T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 22710,
+      "player2Id": 68090,
+      "tournamentId": 19396,
+      "match_winner": 22710,
+      "result": "6-4 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 22710,
+        "name": "Li Tu",
+        "countryAcr": "AUS"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19396,
+        "name": "Infosys Hall of Fame Open - Newport",
+        "courtId": 5,
+        "date": "2024-07-15T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "USA",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1103899",
+      "date": "2024-07-14T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 32703,
+      "tournamentId": 19396,
+      "match_winner": 68090,
+      "result": "4-6 6-3 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 32703,
+        "name": "Gijs Brouwer",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 19396,
+        "name": "Infosys Hall of Fame Open - Newport",
+        "courtId": 5,
+        "date": "2024-07-15T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "USA",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1103562",
       "date": "2024-07-04T00:00:00.000Z",
       "roundId": 5,
@@ -1444,6 +4293,117 @@
       }
     },
     {
+      "id": "1103540",
+      "date": "2024-07-02T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 60625,
+      "tournamentId": 19391,
+      "match_winner": 68090,
+      "result": "7-5 6-4 7-6(12)",
+      "best_of": null,
+      "odd1": "1.533",
+      "odd2": "2.5",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 60625,
+        "name": "Alejandro Moro Canas",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 19391,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2024-07-01T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1103326",
+      "date": "2024-06-24T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 29180,
+      "player2Id": 68090,
+      "tournamentId": 19390,
+      "match_winner": 29180,
+      "result": "6-4 7-6(7)",
+      "best_of": null,
+      "odd1": "1.95",
+      "odd2": "1.86",
+      "player1": {
+        "id": 29180,
+        "name": "Billy Harris",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19390,
+        "name": "Rothesay International - Eastbourne",
+        "courtId": 5,
+        "date": "2024-06-24T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1131085",
+      "date": "2024-06-16T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 68090,
+      "player2Id": 39438,
+      "tournamentId": 19766,
+      "match_winner": 68090,
+      "result": "4-6 6-4 6-3",
+      "best_of": null,
+      "odd1": "2.22",
+      "odd2": "1.61",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 39438,
+        "name": "Charles Broom",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19766,
+        "name": "Nottingham 2 Challenger",
+        "courtId": 5,
+        "date": "2024-06-10T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1131106",
       "date": "2024-06-16T00:00:00.000Z",
       "roundId": 10,
@@ -1464,6 +4424,80 @@
         "id": 72578,
         "name": "Mattia Bellucci",
         "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 19766,
+        "name": "Nottingham 2 Challenger",
+        "courtId": 5,
+        "date": "2024-06-10T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1131115",
+      "date": "2024-06-15T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 86082,
+      "tournamentId": 19766,
+      "match_winner": 68090,
+      "result": "7-5 7-5",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 86082,
+        "name": "Juncheng Shang",
+        "countryAcr": "CHN"
+      },
+      "tournament": {
+        "id": 19766,
+        "name": "Nottingham 2 Challenger",
+        "courtId": 5,
+        "date": "2024-06-10T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1131092",
+      "date": "2024-06-12T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 50382,
+      "tournamentId": 19766,
+      "match_winner": 68090,
+      "result": "6-1 6-7(14) 6-3",
+      "best_of": null,
+      "odd1": "2.53",
+      "odd2": "1.48",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 50382,
+        "name": "Paul Jubb",
+        "countryAcr": "GBR"
       },
       "tournament": {
         "id": 19766,
@@ -1555,6 +4589,339 @@
       }
     },
     {
+      "id": "1131094",
+      "date": "2024-06-09T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 55828,
+      "tournamentId": 19766,
+      "match_winner": 68090,
+      "result": "2-6 6-3 7-6(4)",
+      "best_of": null,
+      "odd1": "2.14",
+      "odd2": "1.66",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 55828,
+        "name": "Clement Chidekh",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 19766,
+        "name": "Nottingham 2 Challenger",
+        "courtId": 5,
+        "date": "2024-06-10T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1108108",
+      "date": "2024-01-10T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 51966,
+      "tournamentId": 19457,
+      "match_winner": 68090,
+      "result": "7-6(2) 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 51966,
+        "name": "Federico Iannaccone",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 19457,
+        "name": "M25 Loughborough 1",
+        "courtId": 3,
+        "date": "2024-01-08T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1107861",
+      "date": "2024-01-07T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 68090,
+      "player2Id": 66254,
+      "tournamentId": 19454,
+      "match_winner": 68090,
+      "result": "6-4 6-4",
+      "best_of": null,
+      "odd1": "1.65",
+      "odd2": "2.12",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 66254,
+        "name": "Jonas Forejtek",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 19454,
+        "name": "M25 Esch/Alzette 1",
+        "courtId": 3,
+        "date": "2024-01-01T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "LUX",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1107858",
+      "date": "2024-01-06T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 68090,
+      "player2Id": 58726,
+      "tournamentId": 19454,
+      "match_winner": 68090,
+      "result": "6-0 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 58726,
+        "name": "Yanki Erel",
+        "countryAcr": "TUR"
+      },
+      "tournament": {
+        "id": 19454,
+        "name": "M25 Esch/Alzette 1",
+        "courtId": 3,
+        "date": "2024-01-01T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "LUX",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1107874",
+      "date": "2024-01-05T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 88767,
+      "tournamentId": 19454,
+      "match_winner": 68090,
+      "result": "6-3 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 88767,
+        "name": "Kylian Collignon",
+        "countryAcr": "BEL"
+      },
+      "tournament": {
+        "id": 19454,
+        "name": "M25 Esch/Alzette 1",
+        "courtId": 3,
+        "date": "2024-01-01T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "LUX",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1107837",
+      "date": "2024-01-04T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 33166,
+      "tournamentId": 19454,
+      "match_winner": 68090,
+      "result": "6-2 6-1",
+      "best_of": null,
+      "odd1": "1.4",
+      "odd2": "2.75",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 33166,
+        "name": "Tim Handel",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 19454,
+        "name": "M25 Esch/Alzette 1",
+        "courtId": 3,
+        "date": "2024-01-01T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "LUX",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1107830",
+      "date": "2024-01-02T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 18495,
+      "tournamentId": 19454,
+      "match_winner": 68090,
+      "result": "3-6 6-3 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 18495,
+        "name": "Alexey Vatutin",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 19454,
+        "name": "M25 Esch/Alzette 1",
+        "courtId": 3,
+        "date": "2024-01-01T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "LUX",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1107883",
+      "date": "2024-01-01T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 105026,
+      "tournamentId": 19454,
+      "match_winner": 68090,
+      "result": "6-1 6-1",
+      "best_of": null,
+      "odd1": "1.028",
+      "odd2": "9.5",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 105026,
+        "name": "Harold Van Raemdonck",
+        "countryAcr": "BEL"
+      },
+      "tournament": {
+        "id": 19454,
+        "name": "M25 Esch/Alzette 1",
+        "courtId": 3,
+        "date": "2024-01-01T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "LUX",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1107867",
+      "date": "2023-12-31T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 84226,
+      "tournamentId": 19454,
+      "match_winner": 68090,
+      "result": "6-3 7-5",
+      "best_of": null,
+      "odd1": "1.038",
+      "odd2": "8.8",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 84226,
+        "name": "Thijmen Loof",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 19454,
+        "name": "M25 Esch/Alzette 1",
+        "courtId": 3,
+        "date": "2024-01-01T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "LUX",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1092776",
       "date": "2023-11-19T18:00:00.000Z",
       "roundId": 12,
@@ -1575,6 +4942,228 @@
         "id": 68090,
         "name": "Jacob Fearnley",
         "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19270,
+        "name": "M25 Columbus 1",
+        "courtId": 3,
+        "date": "2023-11-13T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1092811",
+      "date": "2023-11-18T18:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 68090,
+      "player2Id": 76125,
+      "tournamentId": 19270,
+      "match_winner": 68090,
+      "result": "6-1 3-6 6-2",
+      "best_of": null,
+      "odd1": "1.33",
+      "odd2": "3.04",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 76125,
+        "name": "Shunsuke Mitsui",
+        "countryAcr": "JPN"
+      },
+      "tournament": {
+        "id": 19270,
+        "name": "M25 Columbus 1",
+        "courtId": 3,
+        "date": "2023-11-13T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1092792",
+      "date": "2023-11-17T20:30:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 70477,
+      "tournamentId": 19270,
+      "match_winner": 68090,
+      "result": "6-2 7-5",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 70477,
+        "name": "Radu Mihai Papoe",
+        "countryAcr": "ROU"
+      },
+      "tournament": {
+        "id": 19270,
+        "name": "M25 Columbus 1",
+        "courtId": 3,
+        "date": "2023-11-13T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1092885",
+      "date": "2023-11-16T19:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 99312,
+      "tournamentId": 19270,
+      "match_winner": 68090,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 99312,
+        "name": "Evan Sharygin",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 19270,
+        "name": "M25 Columbus 1",
+        "courtId": 3,
+        "date": "2023-11-13T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1092819",
+      "date": "2023-11-15T22:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 77192,
+      "tournamentId": 19270,
+      "match_winner": 68090,
+      "result": "2-6 6-4 7-6(3)",
+      "best_of": null,
+      "odd1": "1.52",
+      "odd2": "2.375",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 77192,
+        "name": "Johannus Monday",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19270,
+        "name": "M25 Columbus 1",
+        "courtId": 3,
+        "date": "2023-11-13T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1092865",
+      "date": "2023-11-14T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 95171,
+      "tournamentId": 19270,
+      "match_winner": 68090,
+      "result": "6-2 6-3",
+      "best_of": null,
+      "odd1": "1.048",
+      "odd2": "7.9",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 95171,
+        "name": "Robinson Le Meur",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 19270,
+        "name": "M25 Columbus 1",
+        "courtId": 3,
+        "date": "2023-11-13T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1092736",
+      "date": "2023-11-13T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 32617,
+      "tournamentId": 19270,
+      "match_winner": 68090,
+      "result": "6-2 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 32617,
+        "name": "Mitchell Maroscher",
+        "countryAcr": "USA"
       },
       "tournament": {
         "id": 19270,
@@ -1627,8 +5216,1118 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "1084042",
+      "date": "2023-10-27T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 61856,
+      "tournamentId": 19216,
+      "match_winner": 68090,
+      "result": "6-3 7-5",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 61856,
+        "name": "Tibo Colson",
+        "countryAcr": "BEL"
+      },
+      "tournament": {
+        "id": 19216,
+        "name": "M25 Glasgow 1",
+        "courtId": 3,
+        "date": "2023-10-23T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1084071",
+      "date": "2023-10-26T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 80500,
+      "tournamentId": 19216,
+      "match_winner": 68090,
+      "result": "6-3 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 80500,
+        "name": "Milos Karol",
+        "countryAcr": "SVK"
+      },
+      "tournament": {
+        "id": 19216,
+        "name": "M25 Glasgow 1",
+        "courtId": 3,
+        "date": "2023-10-23T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1083979",
+      "date": "2023-10-25T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 33661,
+      "tournamentId": 19216,
+      "match_winner": 68090,
+      "result": "6-2 6-0",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 33661,
+        "name": "Umberto Giovannini",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 19216,
+        "name": "M25 Glasgow 1",
+        "courtId": 3,
+        "date": "2023-10-23T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1081175",
+      "date": "2023-10-21T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 68090,
+      "player2Id": 20847,
+      "tournamentId": 19202,
+      "match_winner": 68090,
+      "result": "6-3 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 20847,
+        "name": "Kyle Edmund",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19202,
+        "name": "M25 Edgbaston 1",
+        "courtId": 3,
+        "date": "2023-10-16T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1081276",
+      "date": "2023-10-20T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 68090,
+      "player2Id": 71188,
+      "tournamentId": 19202,
+      "match_winner": 68090,
+      "result": "6-3 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 71188,
+        "name": "Giles Hussey",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19202,
+        "name": "M25 Edgbaston 1",
+        "courtId": 3,
+        "date": "2023-10-16T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1081300",
+      "date": "2023-10-19T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 83555,
+      "tournamentId": 19202,
+      "match_winner": 68090,
+      "result": "6-2 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 83555,
+        "name": "Robin Bertrand",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 19202,
+        "name": "M25 Edgbaston 1",
+        "courtId": 3,
+        "date": "2023-10-16T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1081224",
+      "date": "2023-10-18T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 50385,
+      "tournamentId": 19202,
+      "match_winner": 68090,
+      "result": "3-6 6-1 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 50385,
+        "name": "Ewen Lumsden",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19202,
+        "name": "M25 Edgbaston 1",
+        "courtId": 3,
+        "date": "2023-10-16T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1081212",
+      "date": "2023-10-17T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 39438,
+      "tournamentId": 19202,
+      "match_winner": 68090,
+      "result": "6-4 6-2",
+      "best_of": null,
+      "odd1": "2.59",
+      "odd2": "1.44",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 39438,
+        "name": "Charles Broom",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19202,
+        "name": "M25 Edgbaston 1",
+        "courtId": 3,
+        "date": "2023-10-16T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1081251",
+      "date": "2023-10-16T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 57683,
+      "tournamentId": 19202,
+      "match_winner": 68090,
+      "result": "6-2 6-1",
+      "best_of": null,
+      "odd1": "1.059",
+      "odd2": "7.4",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 57683,
+        "name": "David Stevenson",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 19202,
+        "name": "M25 Edgbaston 1",
+        "courtId": 3,
+        "date": "2023-10-16T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1081311",
+      "date": "2023-10-15T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 87510,
+      "tournamentId": 19202,
+      "match_winner": 68090,
+      "result": "6-0 6-1",
+      "best_of": null,
+      "odd1": "1.022",
+      "odd2": "9.8",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 87510,
+        "name": "Elia Joel Affolter",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 19202,
+        "name": "M25 Edgbaston 1",
+        "courtId": 3,
+        "date": "2023-10-16T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1041610",
+      "date": "2023-07-18T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 39438,
+      "player2Id": 68090,
+      "tournamentId": 18941,
+      "match_winner": 39438,
+      "result": "6-4 4-6 6-3",
+      "best_of": null,
+      "odd1": "1.52",
+      "odd2": "2.375",
+      "player1": {
+        "id": 39438,
+        "name": "Charles Broom",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 18941,
+        "name": "M25 Roehampton 1",
+        "courtId": 5,
+        "date": "2023-07-17T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1038644",
+      "date": "2023-07-12T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 33060,
+      "tournamentId": 18926,
+      "match_winner": 68090,
+      "result": "6-2 6-1",
+      "best_of": null,
+      "odd1": "1.333",
+      "odd2": "3.04",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 33060,
+        "name": "Johannes Ingildsen",
+        "countryAcr": "DEN"
+      },
+      "tournament": {
+        "id": 18926,
+        "name": "M25 Nottingham 4",
+        "courtId": 5,
+        "date": "2023-07-10T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "1038717",
+      "date": "2023-07-12T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 39438,
+      "player2Id": 68090,
+      "tournamentId": 18926,
+      "match_winner": 39438,
+      "result": "4-6 6-0 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 39438,
+        "name": "Charles Broom",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 18926,
+        "name": "M25 Nottingham 4",
+        "courtId": 5,
+        "date": "2023-07-10T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "960862",
+      "date": "2022-10-11T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 36594,
+      "player2Id": 68090,
+      "tournamentId": 18234,
+      "match_winner": 36594,
+      "result": "7-6(2) 7-6(5)",
+      "best_of": null,
+      "odd1": "1.137",
+      "odd2": "5.1",
+      "player1": {
+        "id": 36594,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MON"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 18234,
+        "name": "Fairfield Challenger",
+        "courtId": 1,
+        "date": "2022-10-10T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "840413",
+      "date": "2019-11-24T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 27082,
+      "player2Id": 68090,
+      "tournamentId": 16408,
+      "match_winner": 27082,
+      "result": "4-6 6-4 6-4",
+      "best_of": null,
+      "odd1": "1.133",
+      "odd2": "5.5",
+      "player1": {
+        "id": 27082,
+        "name": "Collin Altamirano",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 16408,
+        "name": "M15 Austin 1",
+        "courtId": 1,
+        "date": "2019-11-18T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "840415",
+      "date": "2019-11-23T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 68090,
+      "player2Id": 69654,
+      "tournamentId": 16408,
+      "match_winner": 68090,
+      "result": "6-2 7-6(4)",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 69654,
+        "name": "Siem Woldeab",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 16408,
+        "name": "M15 Austin 1",
+        "courtId": 1,
+        "date": "2019-11-18T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "840414",
+      "date": "2019-11-22T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 68090,
+      "player2Id": 69574,
+      "tournamentId": 16408,
+      "match_winner": 68090,
+      "result": "6-3 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 69574,
+        "name": "Tyler Zink",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 16408,
+        "name": "M15 Austin 1",
+        "courtId": 1,
+        "date": "2019-11-18T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "840391",
+      "date": "2019-11-20T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 37737,
+      "tournamentId": 16408,
+      "match_winner": 68090,
+      "result": "6-4 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 37737,
+        "name": "Francisco Vittar",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 16408,
+        "name": "M15 Austin 1",
+        "courtId": 1,
+        "date": "2019-11-18T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "840403",
+      "date": "2019-11-19T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 57914,
+      "tournamentId": 16408,
+      "match_winner": 68090,
+      "result": "6-3 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 57914,
+        "name": "Connor Johnson",
+        "countryAcr": "AUS"
+      },
+      "tournament": {
+        "id": 16408,
+        "name": "M15 Austin 1",
+        "courtId": 1,
+        "date": "2019-11-18T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "836781",
+      "date": "2019-10-25T00:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 29459,
+      "player2Id": 68090,
+      "tournamentId": 16361,
+      "match_winner": 29459,
+      "result": "6-2 6-2",
+      "best_of": null,
+      "odd1": "1.25",
+      "odd2": "3.95",
+      "player1": {
+        "id": 29459,
+        "name": "Ryan Peniston",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 16361,
+        "name": "M25 Fort Worth 1",
+        "courtId": 1,
+        "date": "2019-10-21T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "836763",
+      "date": "2019-10-24T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 68090,
+      "player2Id": 53159,
+      "tournamentId": 16361,
+      "match_winner": 68090,
+      "result": "6-1 1-0 ret.",
+      "best_of": null,
+      "odd1": "2.26",
+      "odd2": "1.61",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 53159,
+        "name": "Alastair Gray",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 16361,
+        "name": "M25 Fort Worth 1",
+        "courtId": 1,
+        "date": "2019-10-21T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "836768",
+      "date": "2019-10-23T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 68090,
+      "player2Id": 58149,
+      "tournamentId": 16361,
+      "match_winner": 68090,
+      "result": "6-4 3-6 6-4",
+      "best_of": null,
+      "odd1": "5.05",
+      "odd2": "1.154",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 58149,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AUS"
+      },
+      "tournament": {
+        "id": 16361,
+        "name": "M25 Fort Worth 1",
+        "courtId": 1,
+        "date": "2019-10-21T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "836753",
+      "date": "2019-10-22T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 68090,
+      "player2Id": 40819,
+      "tournamentId": 16361,
+      "match_winner": 68090,
+      "result": "2-6 7-5 10-6",
+      "best_of": null,
+      "odd1": "1.88",
+      "odd2": "1.88",
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 40819,
+        "name": "Luc Fomba",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 16361,
+        "name": "M25 Fort Worth 1",
+        "courtId": 1,
+        "date": "2019-10-21T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "836732",
+      "date": "2019-10-21T00:00:00.000Z",
+      "roundId": 2,
+      "player1Id": 68090,
+      "player2Id": 29035,
+      "tournamentId": 16361,
+      "match_winner": 68090,
+      "result": "6-4 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 29035,
+        "name": "A.j. Catanzariti",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 16361,
+        "name": "M25 Fort Worth 1",
+        "courtId": 1,
+        "date": "2019-10-21T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "836743",
+      "date": "2019-10-20T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 34107,
+      "tournamentId": 16361,
+      "match_winner": 68090,
+      "result": "6-2 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 34107,
+        "name": "Tim Ruehl",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 16361,
+        "name": "M25 Fort Worth 1",
+        "courtId": 1,
+        "date": "2019-10-21T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "822714",
+      "date": "2019-07-29T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 39439,
+      "tournamentId": 16144,
+      "match_winner": 68090,
+      "result": "6-4 4-6 10-6",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 39439,
+        "name": "Barnaby Smith",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 16144,
+        "name": "M25 Roehampton 1",
+        "courtId": 1,
+        "date": "2019-07-29T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "822738",
+      "date": "2019-07-29T00:00:00.000Z",
+      "roundId": 3,
+      "player1Id": 28993,
+      "player2Id": 68090,
+      "tournamentId": 16144,
+      "match_winner": 28993,
+      "result": "6-2 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 28993,
+        "name": "Marcus Walters",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 16144,
+        "name": "M25 Roehampton 1",
+        "courtId": 1,
+        "date": "2019-07-29T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "746164",
+      "date": "2018-04-28T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 6431,
+      "player2Id": 68090,
+      "tournamentId": 15078,
+      "match_winner": 6431,
+      "result": "6-4 6-1",
+      "best_of": null,
+      "odd1": "1.005",
+      "odd2": "16.5",
+      "player1": {
+        "id": 6431,
+        "name": "Daniel Brands",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 15078,
+        "name": "Glasgow Challenger",
+        "courtId": 3,
+        "date": "2018-04-30T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "731747",
+      "date": "2018-01-29T00:00:00.000Z",
+      "roundId": 2,
+      "player1Id": 50688,
+      "player2Id": 68090,
+      "tournamentId": 14855,
+      "match_winner": 50688,
+      "result": "6-1 3-6 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 50688,
+        "name": "Sean Hodkin",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 14855,
+        "name": "Great Britain F1 (Glasgow)",
+        "courtId": 3,
+        "date": "2018-01-29T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "731725",
+      "date": "2018-01-28T00:00:00.000Z",
+      "roundId": 1,
+      "player1Id": 68090,
+      "player2Id": 40375,
+      "tournamentId": 14855,
+      "match_winner": 68090,
+      "result": "6-7(3) 6-4 6-1",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 40375,
+        "name": "Patrik Hartmeier",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 14855,
+        "name": "Great Britain F1 (Glasgow)",
+        "courtId": 3,
+        "date": "2018-01-29T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778252516613,
-  "pages": 1
+  "cachedAt": 1779099914058,
+  "pages": 3
 }

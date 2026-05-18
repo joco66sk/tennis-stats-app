@@ -1,6 +1,80 @@
 {
   "matches": [
     {
+      "id": "144798176",
+      "date": "2026-05-12T12:05:00.000Z",
+      "roundId": 7,
+      "player1Id": 25543,
+      "player2Id": 85899,
+      "tournamentId": 21326,
+      "match_winner": 25543,
+      "result": "6-1 7-6(2)",
+      "best_of": null,
+      "odd1": "2.44",
+      "odd2": "1.55",
+      "player1": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "player2": {
+        "id": 85899,
+        "name": "Dino Prizmic",
+        "countryAcr": "CRO"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "84639011",
+      "date": "2026-05-10T16:05:00.000Z",
+      "roundId": 6,
+      "player1Id": 25543,
+      "player2Id": 24249,
+      "tournamentId": 21326,
+      "match_winner": 25543,
+      "result": "5-7 6-4 6-4",
+      "best_of": null,
+      "odd1": "1.5",
+      "odd2": "2.58",
+      "player1": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "player2": {
+        "id": 24249,
+        "name": "Botic Van De Zandschulp",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "10811898",
       "date": "2026-05-08T12:10:00.000Z",
       "roundId": 5,
@@ -11099,8 +11173,230 @@
         "rank": null,
         "country": null
       }
+    },
+    {
+      "id": "843646",
+      "date": "2020-11-02T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 36519,
+      "player2Id": 25543,
+      "tournamentId": 16501,
+      "match_winner": 36519,
+      "result": "6-3 2-6 6-2",
+      "best_of": null,
+      "odd1": "3.2",
+      "odd2": "1.37",
+      "player1": {
+        "id": 36519,
+        "name": "Alejandro Davidovich Fokina",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 16501,
+        "name": "Rolex Paris Masters - Paris",
+        "courtId": 3,
+        "date": "2020-11-02T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 3,
+          "name": "I.hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "842884",
+      "date": "2020-10-05T00:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 5992,
+      "player2Id": 25543,
+      "tournamentId": 16462,
+      "match_winner": 5992,
+      "result": "6-4 6-3 6-3",
+      "best_of": null,
+      "odd1": "1.024",
+      "odd2": "18.25",
+      "player1": {
+        "id": 5992,
+        "name": "Novak Djokovic",
+        "countryAcr": "SRB"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 16462,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2020-09-28T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "842876",
+      "date": "2020-10-03T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 25543,
+      "player2Id": 24840,
+      "tournamentId": 16462,
+      "match_winner": 25543,
+      "result": "6-2 3-6 6-4 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "player2": {
+        "id": 24840,
+        "name": "Cristian Garin",
+        "countryAcr": "CHI"
+      },
+      "tournament": {
+        "id": 16462,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2020-09-28T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "843207",
+      "date": "2020-08-25T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 1837,
+      "player2Id": 25543,
+      "tournamentId": 16483,
+      "match_winner": 1837,
+      "result": "4-6 6-3 6-2",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 1837,
+        "name": "Roberto Bautista Agut",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 16483,
+        "name": "Western & Southern Open - New York",
+        "courtId": 1,
+        "date": "2020-08-24T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "790636",
+      "date": "2019-07-01T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 25543,
+      "player2Id": 28762,
+      "tournamentId": 15641,
+      "match_winner": 25543,
+      "result": "7-6(6) 6-4 4-6 7-5",
+      "best_of": null,
+      "odd1": "1.28",
+      "odd2": "3.84",
+      "player1": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "player2": {
+        "id": 28762,
+        "name": "Soon-Woo Kwon",
+        "countryAcr": "KOR"
+      },
+      "tournament": {
+        "id": 15641,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2019-07-01T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "723801",
+      "date": "2018-08-17T00:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 6101,
+      "player2Id": 25543,
+      "tournamentId": 14753,
+      "match_winner": 6101,
+      "result": "7-6(5) 3-6 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 6101,
+        "name": "Marin Cilic",
+        "countryAcr": "CRO"
+      },
+      "player2": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 14753,
+        "name": "Western & Southern Open - Cincinnati",
+        "courtId": 1,
+        "date": "2018-08-13T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      }
     }
   ],
-  "cachedAt": 1778251516855,
+  "cachedAt": 1778911546005,
   "pages": 3
 }

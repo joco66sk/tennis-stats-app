@@ -1,6 +1,43 @@
 {
   "matches": [
     {
+      "id": "1243235",
+      "date": "2026-05-09T15:30:00.000Z",
+      "roundId": 5,
+      "player1Id": 72578,
+      "player2Id": 37532,
+      "tournamentId": 21326,
+      "match_winner": 72578,
+      "result": "5-7 6-2 6-3",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 72578,
+        "name": "Mattia Bellucci",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 37532,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 21326,
+        "name": "Internazionali BNL d'Italia - Rome",
+        "courtId": 2,
+        "date": "2026-05-04T00:00:00.000Z",
+        "rankId": 3,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "1243080",
       "date": "2026-04-28T00:00:00.000Z",
       "roundId": 7,
@@ -3368,7 +3405,7 @@
       }
     },
     {
-      "id": "1169371",
+      "id": "1169372",
       "date": "2024-12-30T00:00:00.000Z",
       "roundId": 8,
       "player1Id": 37532,
@@ -3812,7 +3849,7 @@
       }
     },
     {
-      "id": "1156837",
+      "id": "1156836",
       "date": "2024-09-14T00:00:00.000Z",
       "roundId": 13,
       "player1Id": 37532,
@@ -11101,6 +11138,154 @@
       }
     },
     {
+      "id": "916012",
+      "date": "2022-01-25T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 61971,
+      "player2Id": 37532,
+      "tournamentId": 17590,
+      "match_winner": 61971,
+      "result": "4-6 7-5 1-0 ret.",
+      "best_of": null,
+      "odd1": "6.25",
+      "odd2": "1.106",
+      "player1": {
+        "id": 61971,
+        "name": "Francisco Comesana",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 37532,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 17590,
+        "name": "Santa Cruz de la Sierra Challenger",
+        "courtId": 2,
+        "date": "2022-01-24T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "BOL",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "905172",
+      "date": "2021-11-09T00:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 37532,
+      "player2Id": 37577,
+      "tournamentId": 17438,
+      "match_winner": 37532,
+      "result": "6-1 6-4",
+      "best_of": null,
+      "odd1": "1.138",
+      "odd2": "5.4",
+      "player1": {
+        "id": 37532,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 37577,
+        "name": "Genaro Alberto Olivieri",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 17438,
+        "name": "Montevideo Challenger",
+        "courtId": 2,
+        "date": "2021-11-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "URU",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "904884",
+      "date": "2021-11-06T00:00:00.000Z",
+      "roundId": 10,
+      "player1Id": 59166,
+      "player2Id": 37532,
+      "tournamentId": 17433,
+      "match_winner": 59166,
+      "result": "7-5 6-3",
+      "best_of": null,
+      "odd1": "2.95",
+      "odd2": "1.4",
+      "player1": {
+        "id": 59166,
+        "name": "Jesper De Jong",
+        "countryAcr": "NED"
+      },
+      "player2": {
+        "id": 37532,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 17433,
+        "name": "Guayaquil Challenger",
+        "courtId": 2,
+        "date": "2021-11-01T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ECU",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
+      "id": "900753",
+      "date": "2021-10-28T00:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 37532,
+      "player2Id": 59166,
+      "tournamentId": 17380,
+      "match_winner": 37532,
+      "result": "7-5 6-4",
+      "best_of": null,
+      "odd1": null,
+      "odd2": null,
+      "player1": {
+        "id": 37532,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 59166,
+        "name": "Jesper De Jong",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 17380,
+        "name": "Lima 2 Challenger",
+        "courtId": 2,
+        "date": "2021-10-25T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "PER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": null,
+        "country": null
+      }
+    },
+    {
       "id": "865710",
       "date": "2021-02-27T00:00:00.000Z",
       "roundId": 1,
@@ -11286,6 +11471,6 @@
       }
     }
   ],
-  "cachedAt": 1778301569471,
+  "cachedAt": 1779099669389,
   "pages": 3
 }
