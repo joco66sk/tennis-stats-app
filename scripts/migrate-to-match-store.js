@@ -40,7 +40,12 @@ function getHistory(pid) {
 function addEntry(pid, surface, entry) {
   const idx = getIndex(pid);
   if (!idx[surface]) idx[surface] = [];
-  if (idx[surface].some(e => e.id === entry.id)) return;
+  // Deduplicate by id OR by natural key (same match can have two IDs from different endpoints)
+  const isDup = idx[surface].some(e =>
+    e.id === entry.id ||
+    (e.date === entry.date && e.tournamentId === entry.tournamentId && e.opponentId === entry.opponentId)
+  );
+  if (isDup) return;
 
   idx[surface].push(entry);
   idx[surface].sort((a, b) => b.date.localeCompare(a.date));
