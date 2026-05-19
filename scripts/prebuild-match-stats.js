@@ -120,6 +120,13 @@ async function main() {
   let dates = [];
   if (!arg || arg === 'today') {
     dates = [getTodayStr()];
+  } else if (arg === 'upcoming') {
+    const today = getTodayStr();
+    dates = [0, 1, 2].map(d => {
+      const dt = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000);
+      return dt.toISOString().split('T')[0];
+    }).filter(d => fs.existsSync(path.join(CACHE_DIR, `fixtures-${d}.json`)));
+    console.log(`Upcoming dates: ${dates.join(', ')}`);
   } else if (arg === 'all') {
     dates = fs.readdirSync(CACHE_DIR)
       .filter(f => /^fixtures-\d{4}-\d{2}-\d{2}\.json$/.test(f))
@@ -146,28 +153,28 @@ async function main() {
 
   for (let i = 0; i < playerIds.length; i++) {
     const playerId = playerIds[i];
-    const matchFile = path.join(CACHE_DIR, `player-matches-${playerId}.json`);
-    if (!fs.existsSync(matchFile)) continue;
+    const pid = parseInt(playerId);
+    const indexFile = path.join(CACHE_DIR, `player-index-${playerId}.json`);
+    if (!fs.existsSync(indexFile)) continue;
 
-    let matches;
-    try {
-      matches = JSON.parse(fs.readFileSync(matchFile, 'utf-8')).matches || [];
-    } catch { continue; }
+    let index;
+    try { index = JSON.parse(fs.readFileSync(indexFile, 'utf-8')); } catch { continue; }
 
-    matches.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-    // Collect unique matches across all surfaces (deduplicated by ID, 2025+ only)
+    // Collect unique (tournamentId, opponentId) pairs across requested surfaces, 2025+ only
     const toFetch = new Map();
     for (const surface of surfaces) {
-      const filtered = matches.filter(m => getSurface(m) === surface && m.date >= MIN_DATE).slice(0, LAST_N);
-      for (const m of filtered) toFetch.set(String(m.id), m);
+      const entries = (index[surface] || []).filter(e => e.date >= MIN_DATE).slice(0, LAST_N);
+      for (const e of entries) {
+        const key = `${e.tournamentId}-${Math.min(pid, e.opponentId)}-${Math.max(pid, e.opponentId)}`;
+        if (!toFetch.has(key)) toFetch.set(key, { tournamentId: e.tournamentId, p1: pid, p2: e.opponentId });
+      }
     }
 
     if (toFetch.size === 0) continue;
 
     let fetched = 0, cached = 0;
-    for (const m of toFetch.values()) {
-      const result = await fetchStats(m.tournamentId, m.player1Id, m.player2Id);
+    for (const { tournamentId, p1, p2 } of toFetch.values()) {
+      const result = await fetchStats(tournamentId, p1, p2);
       if (result === 'fetched') { fetched++; totalFetched++; await sleep(DELAY); }
       else if (result === 'cached') { cached++; totalCached++; }
       else { totalNone++; }
