@@ -136,14 +136,14 @@ function addEntry(pid, surface, entry) {
 }
 
 function needsFetch(playerId, targetSurface) {
+  if (!targetSurface) return false; // unknown court type — skip, don't waste pages
   const fp = path.join(CACHE_DIR, `player-index-${playerId}.json`);
   if (!fs.existsSync(fp)) return true;
   try {
     const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
     const ageHours = (Date.now() - (data.updatedAt || 0)) / 3600000;
     if (ageHours < FRESHNESS_HOURS) {
-      const count = targetSurface ? (data[targetSurface]?.length ?? 0) : 0;
-      if (count >= TARGET_PER_SURFACE) return false;
+      if ((data[targetSurface]?.length ?? 0) >= TARGET_PER_SURFACE) return false;
     }
     return true;
   } catch { return true; }

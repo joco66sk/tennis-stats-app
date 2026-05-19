@@ -13,7 +13,7 @@ export async function GET() {
     const files = fs.readdirSync(CACHE_DIR);
     cacheFiles = files.length;
     fixtureFiles = files.filter(f => f.startsWith('fixtures-')).length;
-    playerFiles = files.filter(f => f.startsWith('player-matches-')).length;
+    playerFiles = files.filter(f => f.startsWith('player-index-')).length;
   } catch {}
   try {
     const statsDir = MATCH_STATS_DIR === CACHE_DIR ? null : MATCH_STATS_DIR;
