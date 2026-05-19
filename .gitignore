@@ -40,4 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# player history files — local archive only, not needed on Vercel
+cache/player-history-*.json
+
 .vercel

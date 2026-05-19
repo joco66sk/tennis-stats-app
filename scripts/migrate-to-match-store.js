@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * One-time migration: converts player-matches-{id}.json files to
- * the new player-index-{id}.json format (matches stored inline per surface).
- * No API calls. Run once, then delete this script.
+ * Migration: converts player-matches-{id}.json files to
+ * player-index-{id}.json (last 10 per surface) + player-history-{id}.json (older matches).
+ * No API calls.
  */
 
 const fs = require('fs');
@@ -10,6 +10,7 @@ const path = require('path');
 
 const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
+const INDEX_LIMIT = 10;
 
 function getSurface(m) {
   const fromId = COURT_ID_MAP[m.tournament?.courtId];
@@ -21,30 +22,45 @@ function getSurface(m) {
   return null;
 }
 
-function loadIndex(pid) {
-  const fp = path.join(CACHE_DIR, `player-index-${pid}.json`);
-  if (fs.existsSync(fp)) {
-    try { return JSON.parse(fs.readFileSync(fp, 'utf-8')); } catch {}
+const indexes = {};   // pid -> { playerName, Clay, Hard, Grass, updatedAt }
+const histories = {}; // pid -> { Clay, Hard, Grass }
+
+function getIndex(pid) {
+  const key = String(pid);
+  if (!indexes[key]) indexes[key] = { Clay: [], Hard: [], Grass: [], updatedAt: 0 };
+  return indexes[key];
+}
+
+function getHistory(pid) {
+  const key = String(pid);
+  if (!histories[key]) histories[key] = { Clay: [], Hard: [], Grass: [] };
+  return histories[key];
+}
+
+function addEntry(pid, surface, entry) {
+  const idx = getIndex(pid);
+  if (!idx[surface]) idx[surface] = [];
+  if (idx[surface].some(e => e.id === entry.id)) return;
+
+  idx[surface].push(entry);
+  idx[surface].sort((a, b) => b.date.localeCompare(a.date));
+
+  // Trim to INDEX_LIMIT — overflow goes to history
+  if (idx[surface].length > INDEX_LIMIT) {
+    const displaced = idx[surface].splice(INDEX_LIMIT);
+    const hist = getHistory(pid);
+    if (!hist[surface]) hist[surface] = [];
+    const histIds = new Set(hist[surface].map(e => e.id));
+    for (const e of displaced) {
+      if (!histIds.has(e.id)) { hist[surface].push(e); histIds.add(e.id); }
+    }
   }
-  return { Clay: [], Hard: [], Grass: [], updatedAt: 0 };
-}
-
-function saveIndex(pid, index) {
-  fs.writeFileSync(path.join(CACHE_DIR, `player-index-${pid}.json`), JSON.stringify(index, null, 2));
-}
-
-function addEntry(index, surface, entry) {
-  if (!index[surface]) index[surface] = [];
-  if (index[surface].some(e => e.id === entry.id)) return;
-  index[surface].push(entry);
-  index[surface].sort((a, b) => b.date.localeCompare(a.date));
 }
 
 const files = fs.readdirSync(CACHE_DIR).filter(f => /^player-matches-\d+\.json$/.test(f));
 console.log(`Migrating ${files.length} player files...`);
 
 let migratedPlayers = 0;
-const indexes = {};  // pid -> index (built in memory, written at end)
 
 for (const file of files) {
   const pid = parseInt(file.replace('player-matches-', '').replace('.json', ''));
@@ -52,9 +68,8 @@ for (const file of files) {
   try { data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, file), 'utf-8')); } catch { continue; }
 
   const matches = data.matches || [];
-  if (!indexes[pid]) indexes[pid] = loadIndex(pid);
-  const myIndex = indexes[pid];
-  myIndex.updatedAt = data.cachedAt || Date.now();
+  const myIdx = getIndex(pid);
+  myIdx.updatedAt = data.cachedAt || Date.now();
 
   for (const m of matches) {
     const surface = getSurface(m);
@@ -64,7 +79,7 @@ for (const file of files) {
     const opponentId = isP1 ? m.player2Id : m.player1Id;
     const opponentName = isP1 ? m.player2?.name : m.player1?.name;
 
-    if (myName && !myIndex.playerName) myIndex.playerName = myName;
+    if (myName && !myIdx.playerName) myIdx.playerName = myName;
 
     const entry = {
       id: String(m.id),
@@ -76,36 +91,39 @@ for (const file of files) {
       won: m.match_winner === pid,
       result: m.result,
     };
-    addEntry(myIndex, surface, entry);
+    addEntry(pid, surface, entry);
 
-    // Write mirror entry into opponent's index too
     if (opponentId) {
-      if (!indexes[opponentId]) indexes[opponentId] = loadIndex(opponentId);
-      const oppEntry = {
-        ...entry,
-        opponentId: pid,
-        opponentName: myName,
-        won: m.match_winner === opponentId,
-      };
-      if (opponentName && !indexes[opponentId].playerName) indexes[opponentId].playerName = opponentName;
-      addEntry(indexes[opponentId], surface, oppEntry);
+      const oppIdx = getIndex(opponentId);
+      if (opponentName && !oppIdx.playerName) oppIdx.playerName = opponentName;
+      const oppEntry = { ...entry, opponentId: pid, opponentName: myName, won: m.match_winner === opponentId };
+      addEntry(opponentId, surface, oppEntry);
     }
   }
   migratedPlayers++;
   if (migratedPlayers % 50 === 0) console.log(`  ${migratedPlayers}/${files.length}...`);
 }
 
-// Write all indexes
-let written = 0;
+// Write indexes and histories
+let idxWritten = 0, histWritten = 0;
 for (const [pid, index] of Object.entries(indexes)) {
-  saveIndex(pid, index);
-  written++;
+  fs.writeFileSync(path.join(CACHE_DIR, `player-index-${pid}.json`), JSON.stringify(index, null, 2));
+  idxWritten++;
+}
+for (const [pid, hist] of Object.entries(histories)) {
+  // Sort each surface descending before saving
+  for (const s of ['Clay', 'Hard', 'Grass']) {
+    if (hist[s]) hist[s].sort((a, b) => b.date.localeCompare(a.date));
+  }
+  fs.writeFileSync(path.join(CACHE_DIR, `player-history-${pid}.json`), JSON.stringify(hist, null, 2));
+  histWritten++;
 }
 
-console.log(`Done. Wrote ${written} player-index files.`);
-console.log(`Clay matches per player (sample):`);
+console.log(`Done. Wrote ${idxWritten} index files, ${histWritten} history files.`);
+console.log(`Sample (index capped at ${INDEX_LIMIT} per surface):`);
 let sample = 0;
 for (const [pid, index] of Object.entries(indexes)) {
   if (sample++ >= 5) break;
-  console.log(`  Player ${pid}: Clay=${index.Clay?.length} Hard=${index.Hard?.length} Grass=${index.Grass?.length}`);
+  const hist = histories[String(pid)];
+  console.log(`  Player ${pid}: index Clay=${index.Clay?.length} Hard=${index.Hard?.length} Grass=${index.Grass?.length} | history Clay=${hist?.Clay?.length ?? 0} Hard=${hist?.Hard?.length ?? 0}`);
 }

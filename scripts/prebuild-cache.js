@@ -25,6 +25,7 @@ const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 const DELAY_BETWEEN_PAGES = 300;
 const DELAY_BETWEEN_PLAYERS = 600;
 const TARGET_PER_SURFACE = 10;
+const INDEX_LIMIT = 10;       // max entries kept per surface in active index
 const FRESHNESS_HOURS = 12;
 const MAX_PAGES = 5;
 const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
@@ -57,8 +58,9 @@ function normalizeSurfaceName(s) {
   return null;
 }
 
-// In-memory index store for this run — shared across all players so opponent entries accumulate
-const indexes = {};
+// In-memory stores shared across all players in this run
+const indexes = {};   // pid -> active index (last INDEX_LIMIT per surface)
+const histories = {}; // pid -> history (older matches)
 
 function loadIndex(pid) {
   const key = String(pid);
@@ -69,6 +71,17 @@ function loadIndex(pid) {
   }
   indexes[key] = { Clay: [], Hard: [], Grass: [], updatedAt: 0 };
   return indexes[key];
+}
+
+function loadHistory(pid) {
+  const key = String(pid);
+  if (histories[key]) return histories[key];
+  const fp = path.join(CACHE_DIR, `player-history-${pid}.json`);
+  if (fs.existsSync(fp)) {
+    try { histories[key] = JSON.parse(fs.readFileSync(fp, 'utf-8')); return histories[key]; } catch {}
+  }
+  histories[key] = { Clay: [], Hard: [], Grass: [] };
+  return histories[key];
 }
 
 function saveIndex(pid) {
@@ -85,12 +98,33 @@ function saveIndex(pid) {
   }
 }
 
+function saveHistory(pid) {
+  const key = String(pid);
+  if (!histories[key]) return;
+  fs.writeFileSync(
+    path.join(CACHE_DIR, `player-history-${pid}.json`),
+    JSON.stringify(histories[key], null, 2)
+  );
+}
+
 function addEntry(pid, surface, entry) {
   const idx = loadIndex(pid);
   if (!idx[surface]) idx[surface] = [];
   if (idx[surface].some(e => e.id === entry.id)) return false;
+
   idx[surface].push(entry);
   idx[surface].sort((a, b) => b.date.localeCompare(a.date));
+
+  // Trim to INDEX_LIMIT — overflow slides into history
+  if (idx[surface].length > INDEX_LIMIT) {
+    const displaced = idx[surface].splice(INDEX_LIMIT);
+    const hist = loadHistory(pid);
+    if (!hist[surface]) hist[surface] = [];
+    const histIds = new Set(hist[surface].map(e => e.id));
+    for (const e of displaced) {
+      if (!histIds.has(e.id)) { hist[surface].push(e); histIds.add(e.id); }
+    }
+  }
   return true;
 }
 
@@ -182,6 +216,7 @@ async function processPlayer(playerId, targetSurface, index, total) {
   }
 
   saveIndex(playerId);
+  saveHistory(playerId);
   console.log(`    Saved: Clay=${myIdx.Clay?.length} Hard=${myIdx.Hard?.length} Grass=${myIdx.Grass?.length}`);
 }
 
@@ -265,14 +300,14 @@ async function main() {
     if (i < toFetch.length - 1) await sleep(DELAY_BETWEEN_PLAYERS);
   }
 
-  // Flush opponent indexes that were updated but not yet saved
+  // Flush opponent indexes + histories that were updated but not yet saved
   let flushed = 0;
   const fetchedIds = new Set(toFetch.map(([id]) => id));
   for (const pid of Object.keys(indexes)) {
-    if (!fetchedIds.has(pid)) {
-      saveIndex(pid);
-      flushed++;
-    }
+    if (!fetchedIds.has(pid)) { saveIndex(pid); flushed++; }
+  }
+  for (const pid of Object.keys(histories)) {
+    saveHistory(pid);
   }
   if (flushed > 0) console.log(`\nFlushed ${flushed} opponent index files.`);
 
