@@ -1,0 +1,3 @@
+# Treat JSON cache files as binary — no line ending conversion
+cache/*.json -text
+app/api/cache/*.json -text

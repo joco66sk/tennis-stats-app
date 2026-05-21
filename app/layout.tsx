@@ -13,13 +13,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tennis Deep Stats",
-  description: "ATP match stats, head-to-head comparisons, and surface performance for professional tennis.",
-  keywords: ["tennis", "ATP", "stats", "head to head", "match stats", "surface stats"],
+  metadataBase: new URL('https://www.tennisdeepstats.com'),
+  title: {
+    default: "Tennis Deep Stats",
+    template: "%s | Tennis Deep Stats",
+  },
+  description: "Free ATP tennis stats tool. Compare players head-to-head on clay, hard, and grass. Surface win rates, serve & return stats for every ATP match.",
+  keywords: ["tennis stats", "ATP stats", "tennis head to head", "clay court stats", "tennis surface stats", "French Open stats", "tennis analytics"],
   openGraph: {
     title: "Tennis Deep Stats",
-    description: "ATP match stats, head-to-head comparisons, and surface performance.",
+    description: "Compare ATP players head-to-head on any surface. Free tennis analytics tool.",
     type: "website",
+    url: "https://www.tennisdeepstats.com",
+    siteName: "Tennis Deep Stats",
+  },
+  twitter: {
+    card: "summary",
+    title: "Tennis Deep Stats",
+    description: "Compare ATP players head-to-head on any surface. Free tennis analytics tool.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

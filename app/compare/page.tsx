@@ -83,6 +83,12 @@ function CompareContent() {
   const [error, setError] = useState('');
 
   useEffect(() => {
+    if (stats1 && stats2) {
+      document.title = `${stats1.playerName} vs ${stats2.playerName} | Tennis Deep Stats`;
+    }
+  }, [stats1, stats2]);
+
+  useEffect(() => {
     if (!player1Id || !player2Id || player1Id === 'undefined' || player2Id === 'undefined') return;
 
     const cacheKey = `cmp-v20-${player1Id}-${player2Id}-${surface}-${lastN}`;
