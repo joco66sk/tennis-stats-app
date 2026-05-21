@@ -57,7 +57,11 @@ export default function Home() {
         return r.json();
       })
       .then(data => {
-        setFixtures((data.fixtures || []).filter((f: Fixture) => !f.player1?.name?.includes('/') && !f.player2?.name?.includes('/')));
+        setFixtures((data.fixtures || []).filter((f: Fixture) =>
+          !f.player1?.name?.includes('/') &&
+          !f.player2?.name?.includes('/') &&
+          (f.tournament?.rank?.id ?? 0) >= 2
+        ));
         setLoading(false);
         setRefreshing(false);
       })
