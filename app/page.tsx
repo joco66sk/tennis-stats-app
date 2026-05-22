@@ -224,9 +224,20 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-950 p-3 md:p-4">
       <div className="max-w-4xl mx-auto">
-        <header className="mb-3">
-          <h1 className="text-2xl font-black text-white tracking-tight uppercase">Tennis Deep Stats</h1>
-          <p className="text-zinc-500 text-xs mt-0.5 uppercase tracking-wider">ATP Matches · Click to compare</p>
+        <header className="mb-3 flex items-start justify-between">
+          <div>
+            <h1 className="text-2xl font-black text-white tracking-tight uppercase">Tennis Deep Stats</h1>
+            <p className="text-zinc-500 text-xs mt-0.5 uppercase tracking-wider">ATP Matches · Click to compare</p>
+          </div>
+          <a
+            href="https://rapidapi.com/jjrm365-kIFr3Nx_odV/api/tennis-api-atp-wta-itf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-right"
+          >
+            <div className="text-xs text-zinc-500 uppercase tracking-wider">Powered by</div>
+            <div className="text-sm font-black text-white uppercase tracking-tight hover:text-blue-400 transition">Matchstat</div>
+          </a>
         </header>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-2.5 mb-3 flex items-center justify-between">
@@ -342,16 +353,6 @@ export default function Home() {
           </div>
         )}
       </div>
-      <footer className="mt-6 text-center">
-        <a
-          href="https://rapidapi.com/jjrm365-kIFr3Nx_odV/api/tennis-api-atp-wta-itf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs text-zinc-600 hover:text-zinc-400 transition"
-        >
-          Powered by Matchstat
-        </a>
-      </footer>
     </div>
   );
 }
