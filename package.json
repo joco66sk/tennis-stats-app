@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "update": "node scripts/daily-update.js",
+    "fixtures:upcoming": "node scripts/prefetch-fixtures.js 3",
     "cache:today": "node scripts/prebuild-cache.js today",
     "cache:date": "node scripts/prebuild-cache.js",
     "cache:all": "node scripts/prebuild-cache.js all",

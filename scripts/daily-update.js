@@ -23,6 +23,7 @@ function runSafe(cmd, label) {
 
 const started = Date.now();
 
+run('node scripts/prefetch-fixtures.js 3', 'Prefetching fixtures (today + 3 days)');
 run('node scripts/prebuild-cache.js today', 'Refreshing player indexes (cache:today)');
 run('node scripts/prebuild-match-stats.js upcoming --clay-only', 'Prebuilding match stats (stats:upcoming)');
 
