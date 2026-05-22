@@ -342,6 +342,16 @@ export default function Home() {
           </div>
         )}
       </div>
+      <footer className="mt-6 text-center">
+        <a
+          href="https://rapidapi.com/jjrm365-kIFr3Nx_odV/api/tennis-api-atp-wta-itf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-zinc-600 hover:text-zinc-400 transition"
+        >
+          Powered by Matchstat
+        </a>
+      </footer>
     </div>
   );
 }
