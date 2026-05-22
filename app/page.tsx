@@ -46,7 +46,7 @@ export default function Home() {
     setSelectedDate(newDate);
   };
 
-  const loadFixtures = (date: Date, force = false) => {
+  const loadFixtures = (date: Date, force = false, retryCount = 0) => {
     setLoading(true);
     setError(false);
     setPlayerStats({});  // clear when changing date so stale stats don't show for wrong players
@@ -57,16 +57,25 @@ export default function Home() {
         return r.json();
       })
       .then(data => {
-        setFixtures((data.fixtures || []).filter((f: Fixture) =>
+        const filtered = (data.fixtures || []).filter((f: Fixture) =>
           !f.player1?.name?.includes('/') &&
           !f.player2?.name?.includes('/') &&
           (f.tournament?.rank?.id ?? 0) >= 2
-        ));
+        );
+        if (filtered.length === 0 && retryCount < 2) {
+          setTimeout(() => loadFixtures(date, force, retryCount + 1), 3000);
+          return;
+        }
+        setFixtures(filtered);
         setLoading(false);
         setRefreshing(false);
       })
       .catch(err => {
         console.error(err);
+        if (retryCount < 2) {
+          setTimeout(() => loadFixtures(date, force, retryCount + 1), 3000);
+          return;
+        }
         setFixtures([]);
         setError(true);
         setLoading(false);
