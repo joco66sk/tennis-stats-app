@@ -212,6 +212,10 @@ export default function Home() {
     return acc;
   }, {} as Record<string, Fixture[]>);
 
+  Object.values(grouped).forEach(matches =>
+    matches.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+  );
+
   const isQualifying = (matches: Fixture[]) => matches.every(m => /^Q\d/i.test(m.round?.name ?? ''));
   const sortedGroups = Object.entries(grouped).sort(([, a], [, b]) => {
     const aQual = isQualifying(a) ? 1 : 0;
