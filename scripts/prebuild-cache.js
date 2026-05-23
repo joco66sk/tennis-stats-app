@@ -292,6 +292,26 @@ async function main() {
     }
     const recentCount = playerSurfaces.size - beforeCount;
     if (recentCount > 0) console.log(`Added ${recentCount} players from last 14 days`);
+
+    // Include players from next 3 days (upcoming fixtures already prefetched)
+    const beforeUpcoming = playerSurfaces.size;
+    for (let d = 1; d <= 3; d++) {
+      const futureDate = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000).toISOString().split('T')[0];
+      const fp = path.join(CACHE_DIR, `fixtures-${futureDate}.json`);
+      if (!fs.existsSync(fp)) continue;
+      const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+      for (const f of (data.fixtures || [])) {
+        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue;
+        const surface = normalizeSurfaceName(f.tournament?.court?.name);
+        for (const player of [f.player1, f.player2]) {
+          if (!player?.id) continue;
+          const id = String(player.id);
+          if (!playerSurfaces.has(id)) playerSurfaces.set(id, surface);
+        }
+      }
+    }
+    const upcomingCount = playerSurfaces.size - beforeUpcoming;
+    if (upcomingCount > 0) console.log(`Added ${upcomingCount} players from next 3 days`);
   }
 
   const toFetch = [...playerSurfaces.entries()].filter(([id, surface]) => needsFetch(id, surface));
