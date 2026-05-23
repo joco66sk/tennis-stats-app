@@ -216,13 +216,22 @@ export default function Home() {
     matches.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
   );
 
+  const categoryPriority = (label: string | null) => {
+    if (label === 'GS') return 4;
+    if (label === '1000') return 3;
+    if (label === '500') return 2;
+    if (label === '250') return 1;
+    return 0;
+  };
+
   const isQualifying = (matches: Fixture[]) => matches.every(m => /^Q\d/i.test(m.round?.name ?? ''));
   const sortedGroups = Object.entries(grouped).sort(([, a], [, b]) => {
     const aQual = isQualifying(a) ? 1 : 0;
     const bQual = isQualifying(b) ? 1 : 0;
     if (aQual !== bQual) return aQual - bQual;
-    // Among non-qualifying, higher rank first (GS > 1000 > 500 > 250)
-    return (b[0]?.tournament?.rank?.id ?? 0) - (a[0]?.tournament?.rank?.id ?? 0);
+    const aPriority = categoryPriority(getCategoryLabel(a[0]?.tournament?.rank?.name));
+    const bPriority = categoryPriority(getCategoryLabel(b[0]?.tournament?.rank?.name));
+    return bPriority - aPriority;
   });
 
   return (
