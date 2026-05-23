@@ -150,20 +150,17 @@ export default function Home() {
     return `/compare?p1=${p1}&p2=${p2}&surface=${surface}`;
   };
 
-  const getCategoryLabel = (rankName?: string) => {
-    if (!rankName) return null;
-    const n = rankName.toLowerCase();
-    if (n.includes('grand slam')) return 'GS';
-    if (n.includes('1000') || n.includes('masters')) return '1000';
-    if (n.includes('500')) return '500';
-    if (n.includes('250')) return '250';
+  const getCategoryLabel = (rankId?: number) => {
+    if (rankId === 4) return 'GS';
+    if (rankId === 3) return '1000';
+    if (rankId === 2) return 'ATP';
     return null;
   };
 
   const getCategoryColor = (label?: string | null) => {
     if (label === 'GS') return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/40';
     if (label === '1000') return 'bg-purple-500/20 text-purple-400 border border-purple-500/40';
-    if (label === '500') return 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/40';
+    if (label === 'ATP') return 'bg-blue-500/20 text-blue-400 border border-blue-500/40';
     return 'bg-zinc-700/50 text-zinc-400 border border-zinc-600';
   };
 
@@ -229,8 +226,8 @@ export default function Home() {
     const aQual = isQualifying(a) ? 1 : 0;
     const bQual = isQualifying(b) ? 1 : 0;
     if (aQual !== bQual) return aQual - bQual;
-    const aPriority = categoryPriority(getCategoryLabel(a[0]?.tournament?.rank?.name));
-    const bPriority = categoryPriority(getCategoryLabel(b[0]?.tournament?.rank?.name));
+    const aPriority = categoryPriority(getCategoryLabel(a[0]?.tournament?.rank?.id));
+    const bPriority = categoryPriority(getCategoryLabel(b[0]?.tournament?.rank?.id));
     return bPriority - aPriority;
   });
 
@@ -283,7 +280,7 @@ export default function Home() {
             {sortedGroups.map(([tournamentName, matches]) => {
               const isATP = (matches[0]?.tournament?.rank?.id ?? 0) >= 2;
               const surface = matches[0]?.tournament?.court?.name;
-              const categoryLabel = getCategoryLabel(matches[0]?.tournament?.rank?.name);
+              const categoryLabel = getCategoryLabel(matches[0]?.tournament?.rank?.id);
               return (
                 <div key={tournamentName} className={`bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden border-l-4 ${getSurfaceBorder(surface)}`}>
                   <div className="px-4 py-2 flex items-center justify-between border-b border-zinc-800">
