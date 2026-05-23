@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "14949015",
+      "date": "2026-05-22",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 53909,
+      "opponentName": "Luka Pavlovic",
+      "won": false,
+      "result": "6-2 6-4"
+    },
+    {
       "id": "1263444",
       "date": "2026-05-11",
       "tournamentId": 21663,
@@ -29,6 +39,16 @@
       "opponentName": "Hugo Gaston",
       "won": true,
       "result": "3-6 6-3 6-0"
+    },
+    {
+      "id": "1243155",
+      "date": "2026-04-20",
+      "tournamentId": 21325,
+      "tournamentName": "Mutua Madrid Open - Madrid",
+      "opponentId": 28899,
+      "opponentName": "Benjamin Bonzi",
+      "won": false,
+      "result": "6-3 7-6(2)"
     },
     {
       "id": "1258697",
@@ -79,26 +99,6 @@
       "opponentName": "Genaro Alberto Olivieri",
       "won": true,
       "result": "6-0 5-7 7-6(5)"
-    },
-    {
-      "id": "1193742",
-      "date": "2025-05-01",
-      "tournamentId": 20644,
-      "tournamentName": "M25 Sabadell 1",
-      "opponentId": 83223,
-      "opponentName": "Daniel Merida Aguilar",
-      "won": false,
-      "result": "6-3 4-6 6-4"
-    },
-    {
-      "id": "1171455",
-      "date": "2025-04-21",
-      "tournamentId": 20336,
-      "tournamentName": "Mutua Madrid Open - Madrid",
-      "opponentId": 28898,
-      "opponentName": "Kamil Majchrzak",
-      "won": false,
-      "result": "6-1 6-4"
     }
   ],
   "Hard": [
@@ -204,6 +204,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1779518187408,
+  "updatedAt": 1779518311388,
   "playerName": "Darwin Blanch"
 }
