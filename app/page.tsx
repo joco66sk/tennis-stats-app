@@ -201,7 +201,7 @@ export default function Home() {
     return new Date(dateStr).toLocaleTimeString('en-GB', {
       hour: '2-digit',
       minute: '2-digit',
-      timeZone: 'Europe/Paris',
+      timeZone: 'Etc/GMT+1',
     });
   };
 
