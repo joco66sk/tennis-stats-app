@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1243486",
+      "date": "2026-05-18",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 100234,
+      "opponentName": "Thomas Faurel",
+      "won": false,
+      "result": "7-6(1) 6-3"
+    },
+    {
       "id": "1263420",
       "date": "2026-05-12",
       "tournamentId": 21663,
@@ -89,16 +99,6 @@
       "opponentName": "Andrea Collarini",
       "won": true,
       "result": "6-1 4-6 7-6(5)"
-    },
-    {
-      "id": "1252035",
-      "date": "2026-03-10",
-      "tournamentId": 21507,
-      "tournamentName": "Santiago Challenger",
-      "opponentId": 74899,
-      "opponentName": "Gustavo Heide",
-      "won": true,
-      "result": "3-6 6-3 4-0 ret."
     }
   ],
   "Hard": [
@@ -235,6 +235,6 @@
       "result": "6-3 6-2"
     }
   ],
-  "updatedAt": 1779518311318,
+  "updatedAt": 1779601904263,
   "playerName": "Genaro Alberto Olivieri"
 }
