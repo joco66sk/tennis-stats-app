@@ -25,31 +25,29 @@ function getCacheTTL(date: string): number {
   const today = cetNow.toISOString().split('T')[0];
   const tomorrow = new Date(cetNow.getTime() + 24 * 60 * 60 * 1000).toISOString().split('T')[0];
   if (date < today) return 24 * 60 * 60 * 1000;
-  if (date === today) return 4 * 60 * 60 * 1000;
-  if (date === tomorrow) return 90 * 60 * 1000;
+  if (date === today) return 60 * 60 * 1000;    // today: 1h (schedule changes throughout day)
+  if (date === tomorrow) return 45 * 60 * 1000; // tomorrow: 45min
   return 30 * 60 * 1000;
 }
 
-function readCache(date: string): { file: string; data: string } | null {
-  for (const dir of [CACHE_DIR, STATIC_CACHE]) {
-    const fp = path.join(dir, `fixtures-${date}.json`);
-    if (!fs.existsSync(fp)) continue;
-    const age = Date.now() - fs.statSync(fp).mtimeMs;
-    if (age < getCacheTTL(date)) return { file: fp, data: fs.readFileSync(fp, 'utf-8') };
-  }
-  return null;
+// Only checks /tmp/cache with TTL — static cache is fallback only
+function readFreshCache(date: string): string | null {
+  const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
+  if (!fs.existsSync(fp)) return null;
+  const age = Date.now() - fs.statSync(fp).mtimeMs;
+  return age < getCacheTTL(date) ? fs.readFileSync(fp, 'utf-8') : null;
 }
 
+// Stale fallback: any non-empty file from /tmp/cache or static cache
 function readStaleCache(date: string): string | null {
   for (const dir of [CACHE_DIR, STATIC_CACHE]) {
     const fp = path.join(dir, `fixtures-${date}.json`);
-    if (fs.existsSync(fp)) {
+    if (!fs.existsSync(fp)) continue;
+    try {
       const raw = fs.readFileSync(fp, 'utf-8');
-      try {
-        const d = JSON.parse(raw) as { fixtures?: unknown[] };
-        if ((d.fixtures?.length ?? 0) > 0) return raw;
-      } catch {}
-    }
+      const d = JSON.parse(raw) as { fixtures?: unknown[] };
+      if ((d.fixtures?.length ?? 0) > 0) return raw;
+    } catch {}
   }
   return null;
 }
@@ -65,10 +63,10 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid date format' }, { status: 400 });
 
   if (!forceRefresh) {
-    const cached = readCache(date);
+    const cached = readFreshCache(date);
     if (cached) {
       console.log(`Serving cached fixtures for ${date}`);
-      return NextResponse.json(JSON.parse(cached.data));
+      return NextResponse.json(JSON.parse(cached));
     }
   }
 
