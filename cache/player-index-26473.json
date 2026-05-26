@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "123225759",
+      "date": "2026-05-25",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 31358,
+      "opponentName": "Jaume Antoni Munar Clar",
+      "won": true,
+      "result": "6-3 6-3 2-6 6-3"
+    },
+    {
       "id": "1243206",
       "date": "2026-05-06",
       "tournamentId": 21326,
@@ -89,16 +99,6 @@
       "opponentName": "Valentin Vacherot",
       "won": false,
       "result": "6-7(4) 6-3 6-4"
-    },
-    {
-      "id": "1242847",
-      "date": "2026-04-08",
-      "tournamentId": 21322,
-      "tournamentName": "Monte-Carlo Rolex Masters - Monte-Carlo",
-      "opponentId": 52140,
-      "opponentName": "Fabian Marozsan",
-      "won": true,
-      "result": "6-2 6-3"
     }
   ],
   "Hard": [
@@ -305,6 +305,6 @@
       "result": "7-6(4) 6-4 6-4"
     }
   ],
-  "updatedAt": 1779689380906,
+  "updatedAt": 1779776206826,
   "playerName": "Hubert Hurkacz"
 }

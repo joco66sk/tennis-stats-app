@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "120484302",
+      "date": "2026-05-25",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 59166,
+      "opponentName": "Jesper De Jong",
+      "won": false,
+      "result": "6-3 3-6 6-3 6-4"
+    },
+    {
       "id": "188810060",
       "date": "2026-05-20",
       "tournamentId": 21328,
@@ -89,16 +99,6 @@
       "opponentName": "Alvaro Guillen Meza",
       "won": true,
       "result": "6-4 6-1"
-    },
-    {
-      "id": "1172873",
-      "date": "2025-07-15",
-      "tournamentId": 20351,
-      "tournamentName": "EFG Swiss Open - Gstaad",
-      "opponentId": 64891,
-      "opponentName": "Alexander Shevchenko",
-      "won": false,
-      "result": "6-3 6-2"
     }
   ],
   "Hard": [
@@ -305,6 +305,6 @@
       "result": "6-3 6-2 6-2"
     }
   ],
-  "updatedAt": 1779689385678,
+  "updatedAt": 1779776212603,
   "playerName": "Stan Wawrinka"
 }
