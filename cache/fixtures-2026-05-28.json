@@ -1,0 +1,49 @@
+{
+  "date": "2026-05-28",
+  "fixtures": [
+    {
+      "id": 1265,
+      "date": "2026-05-28T12:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 31392,
+      "player2Id": 29935,
+      "tournamentId": 21329,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "24",
+      "live": null,
+      "player1": {
+        "id": 31392,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 29935,
+        "name": "Tommy Paul",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21329,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2026-05-25T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    }
+  ],
+  "count": 1
+}

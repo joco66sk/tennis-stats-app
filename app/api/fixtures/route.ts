@@ -72,16 +72,17 @@ export async function GET(request: NextRequest) {
 
   console.log(`Fetching fresh fixtures for ${date}`);
 
-  const [atpPage1, atpPage2] = await Promise.all([
+  const [atpPage1, atpPage2, atpPage3] = await Promise.all([
     safeFetch(`https://${HOST}/tennis/v2/atp/fixtures/${date}?include=tournament,tournament.court,tournament.rank,round&filter=PlayerGroup:singles&pageSize=50&pageNo=1`),
     safeFetch(`https://${HOST}/tennis/v2/atp/fixtures/${date}?include=tournament,tournament.court,tournament.rank,round&filter=PlayerGroup:singles&pageSize=50&pageNo=2`),
+    safeFetch(`https://${HOST}/tennis/v2/atp/fixtures/${date}?include=tournament,tournament.court,tournament.rank,round&filter=PlayerGroup:singles&pageSize=50&pageNo=3`),
   ]);
 
   const toArr = (d: { data?: unknown[] }) => d.data ?? [];
 
   const seen = new Set<number>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const allFixtures: any[] = ([...toArr(atpPage1), ...toArr(atpPage2)] as any[])
+  const allFixtures: any[] = ([...toArr(atpPage1), ...toArr(atpPage2), ...toArr(atpPage3)] as any[])
     .filter(f => { if (seen.has(f.id)) return false; seen.add(f.id); return true; });
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
