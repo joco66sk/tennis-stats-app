@@ -1,5 +1,49 @@
 {
   "date": "2026-05-30",
-  "fixtures": [],
-  "count": 0
+  "fixtures": [
+    {
+      "id": 1351,
+      "date": "2026-05-30T12:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 67546,
+      "player2Id": 93452,
+      "tournamentId": 21329,
+      "timeGame": null,
+      "seed1": "10",
+      "seed2": "18",
+      "live": null,
+      "player1": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 93452,
+        "name": "Learner Tien",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21329,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2026-05-25T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    }
+  ],
+  "count": 1
 }
