@@ -363,8 +363,10 @@ export default function Home() {
           </div>
         )}
         <footer className="mt-6 flex justify-center">
-          <a href="https://info.flagcounter.com/JxLo" target="_blank" rel="noopener noreferrer">
-            <img src="https://s01.flagcounter.com/count/JxLo/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" className="rounded-lg" />
+          <img src="https://s01.flagcounter.com/count/JxLo/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="" className="hidden" />
+          <a href="https://info.flagcounter.com/JxLo" target="_blank" rel="noopener noreferrer"
+            className="px-3 py-1.5 bg-zinc-800 border border-zinc-700 rounded-lg text-zinc-500 hover:text-zinc-300 hover:border-zinc-600 transition text-xs font-black tracking-widest uppercase">
+            Visitor Counter
           </a>
         </footer>
       </div>
