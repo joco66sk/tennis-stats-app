@@ -1,5 +1,49 @@
 {
   "date": "2026-05-31",
-  "fixtures": [],
-  "count": 0
+  "fixtures": [
+    {
+      "id": 1441,
+      "date": "2026-05-31T12:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 99691,
+      "player2Id": 14432,
+      "tournamentId": 21329,
+      "timeGame": null,
+      "seed1": "27",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 99691,
+        "name": "Rafael Jodar",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 14432,
+        "name": "Pablo Carreno-Busta",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 21329,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2026-05-25T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 7,
+        "name": "Fourth"
+      }
+    }
+  ],
+  "count": 1
 }
