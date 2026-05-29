@@ -1,6 +1,26 @@
 {
   "Clay": [
     {
+      "id": "1243591",
+      "date": "2026-05-28",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 70705,
+      "opponentName": "Roman Andres Burruchaga",
+      "won": true,
+      "result": "4-6 6-0 7-5 6-1"
+    },
+    {
+      "id": "1243495",
+      "date": "2026-05-26",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 29732,
+      "opponentName": "Daniel Altmaier",
+      "won": true,
+      "result": "4-6 6-4 4-6 6-1 7-6(7)"
+    },
+    {
       "id": "181960281",
       "date": "2026-05-20",
       "tournamentId": 21327,
@@ -79,26 +99,6 @@
       "opponentName": "Marin Cilic",
       "won": true,
       "result": "7-6(4) 6-3"
-    },
-    {
-      "id": "1171885",
-      "date": "2025-05-27",
-      "tournamentId": 20340,
-      "tournamentName": "French Open - Paris",
-      "opponentId": 73956,
-      "opponentName": "Matteo Arnaldi",
-      "won": false,
-      "result": "5-7 2-6 6-3 6-4 6-2"
-    },
-    {
-      "id": "1171670",
-      "date": "2025-05-23",
-      "tournamentId": 20338,
-      "tournamentName": "Hamburg Open - Hamburg",
-      "opponentId": 29372,
-      "opponentName": "Andrey Rublev",
-      "won": false,
-      "result": "6-1 6-4"
     }
   ],
   "Hard": [
@@ -305,6 +305,6 @@
       "result": "6-4 6-4"
     }
   ],
-  "updatedAt": 1779952471897,
+  "updatedAt": 1780041036602,
   "playerName": "Felix Auger Aliassime"
 }
