@@ -181,7 +181,10 @@ function CompareContent() {
         )}
 
         {!loading && stats1 && stats2 && (
-          <div className="grid grid-cols-[1fr_2fr_1fr] gap-2">
+          <div>
+          <p className="md:hidden text-center text-zinc-600 text-xs mb-2">← swipe to see full comparison →</p>
+          <div className="overflow-x-auto pb-1">
+          <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 min-w-[620px]">
 
             <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden flex flex-col">
               <div className="px-3 py-2.5 border-b border-zinc-800">
@@ -265,6 +268,8 @@ function CompareContent() {
               </div>
             </div>
 
+          </div>
+          </div>
           </div>
         )}
       </div>
