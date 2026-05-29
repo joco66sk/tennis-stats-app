@@ -27,11 +27,11 @@ run('node scripts/prefetch-fixtures.js 3', 'Prefetching fixtures (today + 3 days
 run('node scripts/prebuild-cache.js today', 'Refreshing player indexes (cache:today)');
 run('node scripts/prebuild-match-stats.js upcoming --clay-only', 'Prebuilding match stats (stats:upcoming)');
 
-// Stage updated cache files (including new fixture files not yet tracked)
-runSafe('git add cache/', 'Staging updated cache files');
+// Stage updated cache files (including new fixture/match-stats files not yet tracked)
+runSafe('git add cache/ app/api/cache/', 'Staging updated cache files');
 
 // Check if there's anything to commit
-const status = execSync('git status --porcelain cache/', { cwd: ROOT }).toString().trim();
+const status = execSync('git status --porcelain cache/ app/api/cache/', { cwd: ROOT }).toString().trim();
 if (!status) {
   console.log('\n✓ Nothing new to commit — cache already up to date.');
 } else {
