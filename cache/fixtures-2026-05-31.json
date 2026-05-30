@@ -2,7 +2,136 @@
   "date": "2026-05-31",
   "fixtures": [
     {
-      "id": 1441,
+      "id": 1275,
+      "date": "2026-05-31T12:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 33648,
+      "player2Id": 91521,
+      "tournamentId": 21329,
+      "timeGame": null,
+      "seed1": "15",
+      "seed2": "28",
+      "live": null,
+      "player1": {
+        "id": 33648,
+        "name": "Casper Ruud",
+        "countryAcr": "NOR"
+      },
+      "player2": {
+        "id": 91521,
+        "name": "Joao Fonseca",
+        "countryAcr": "BRA"
+      },
+      "tournament": {
+        "id": 21329,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2026-05-25T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 7,
+        "name": "Fourth"
+      }
+    },
+    {
+      "id": 1325,
+      "date": "2026-05-31T12:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 59166,
+      "player2Id": 24008,
+      "tournamentId": 21329,
+      "timeGame": null,
+      "seed1": "LL",
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 59166,
+        "name": "Jesper De Jong",
+        "countryAcr": "NED"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21329,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2026-05-25T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 7,
+        "name": "Fourth"
+      }
+    },
+    {
+      "id": 1403,
+      "date": "2026-05-31T12:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 86691,
+      "player2Id": 29372,
+      "tournamentId": 21329,
+      "timeGame": null,
+      "seed1": "26",
+      "seed2": "11",
+      "live": null,
+      "player1": {
+        "id": 86691,
+        "name": "Jakub Mensik",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 29372,
+        "name": "Andrey Rublev",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 21329,
+        "name": "French Open - Paris",
+        "courtId": 2,
+        "date": "2026-05-25T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 7,
+        "name": "Fourth"
+      }
+    },
+    {
+      "id": 1443,
       "date": "2026-05-31T12:00:00.000Z",
       "roundId": 7,
       "player1Id": 99691,
@@ -45,5 +174,5 @@
       }
     }
   ],
-  "count": 1
+  "count": 4
 }
