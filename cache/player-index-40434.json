@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "124765711",
+      "date": "2026-06-01",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 30087,
+      "opponentName": "Alejandro Tabilo",
+      "won": true,
+      "result": "6-3 7-5 6-1"
+    },
+    {
       "id": "72613247",
       "date": "2026-05-30",
       "tournamentId": 21329,
@@ -89,16 +99,6 @@
       "opponentName": "Jannik Sinner",
       "won": false,
       "result": "6-3 6-4"
-    },
-    {
-      "id": "1242832",
-      "date": "2026-04-09",
-      "tournamentId": 21322,
-      "tournamentName": "Monte-Carlo Rolex Masters - Monte-Carlo",
-      "opponentId": 33648,
-      "opponentName": "Casper Ruud",
-      "won": true,
-      "result": "7-5 2-2 ret."
     }
   ],
   "Hard": [
@@ -305,6 +305,6 @@
       "result": "6-4 6-4"
     }
   ],
-  "updatedAt": 1780308001842,
+  "updatedAt": 1780352760611,
   "playerName": "Felix Auger Aliassime"
 }
