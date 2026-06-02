@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     title: "Tennis Deep Stats",
     description: "Compare ATP players head-to-head on any surface. Free tennis analytics tool.",
   },
+  alternates: {
+    canonical: 'https://www.tennisdeepstats.com',
+  },
   robots: {
     index: true,
     follow: true,
