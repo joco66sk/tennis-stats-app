@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.tennisdeepstats.com'),
+  metadataBase: new URL('https://tennisdeepstats.com'),
   title: {
     default: "Tennis Deep Stats",
     template: "%s | Tennis Deep Stats",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Tennis Deep Stats",
     description: "Compare ATP players head-to-head on any surface. Free tennis analytics tool.",
     type: "website",
-    url: "https://www.tennisdeepstats.com",
+    url: "https://tennisdeepstats.com",
     siteName: "Tennis Deep Stats",
   },
   twitter: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: "Compare ATP players head-to-head on any surface. Free tennis analytics tool.",
   },
   alternates: {
-    canonical: 'https://www.tennisdeepstats.com',
+    canonical: 'https://tennisdeepstats.com',
   },
   robots: {
     index: true,
