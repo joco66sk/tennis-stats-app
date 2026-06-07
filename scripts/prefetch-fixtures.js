@@ -19,6 +19,7 @@ if (!KEY) { console.error('RAPIDAPI_KEY not found in .env.local'); process.exit(
 const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 const DAYS_AHEAD = parseInt(process.argv[2] || '3', 10);
+const DAYS_PAST = (() => { const m = process.argv.find(a => a.startsWith('--past=')); return m ? parseInt(m.split('=')[1], 10) : 0; })();
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -43,12 +44,15 @@ async function safeFetch(url) {
 async function fetchFixtures(date) {
   const cacheFile = path.join(CACHE_DIR, `fixtures-${date}.json`);
 
-  // Skip if fresh (< 2 hours old)
+  // Skip if fresh (< 2 hours old) AND non-empty — always re-fetch empty files
   if (fs.existsSync(cacheFile)) {
-    const age = Date.now() - fs.statSync(cacheFile).mtimeMs;
-    if (age < 2 * 60 * 60 * 1000) {
-      console.log(`  ${date}: skipped (fresh cache)`);
-      return;
+    const existing = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+    if ((existing.fixtures?.length ?? 0) > 0) {
+      const age = Date.now() - fs.statSync(cacheFile).mtimeMs;
+      if (age < 2 * 60 * 60 * 1000) {
+        console.log(`  ${date}: skipped (fresh cache)`);
+        return;
+      }
     }
   }
 
@@ -94,8 +98,9 @@ async function fetchFixtures(date) {
 
 async function main() {
   if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });
-  console.log(`Prefetching fixtures for today + ${DAYS_AHEAD} days...`);
-  for (let i = 0; i <= DAYS_AHEAD; i++) {
+  const totalDays = DAYS_PAST + DAYS_AHEAD;
+  console.log(`Prefetching fixtures: ${DAYS_PAST} days past, today, ${DAYS_AHEAD} days ahead...`);
+  for (let i = -DAYS_PAST; i <= DAYS_AHEAD; i++) {
     await fetchFixtures(getCetDate(i));
     if (i < DAYS_AHEAD) await sleep(500);
   }

@@ -2,7 +2,8 @@ name: Daily Cache Update
 
 on:
   schedule:
-    - cron: '45 19 * * *'  # 21:45 CET (UTC+2 summer)
+    - cron: '0 7 * * *'   # 9:00 CEST (UTC+2 summer)
+    - cron: '0 19 * * *'  # 21:00 CEST (UTC+2 summer)
   workflow_dispatch:         # allow manual trigger from GitHub UI
 
 jobs:
@@ -30,8 +31,8 @@ jobs:
           echo "RAPIDAPI_KEY=${{ secrets.RAPIDAPI_KEY }}" > .env.local
           echo "RAPIDAPI_HOST=tennis-api-atp-wta-itf.p.rapidapi.com" >> .env.local
 
-      - name: Prefetch fixtures (today + 3 days)
-        run: node scripts/prefetch-fixtures.js 3
+      - name: Prefetch fixtures (past 7 days + today + 3 days)
+        run: node scripts/prefetch-fixtures.js 3 --past=7
 
       - name: Rebuild player indexes
         run: node scripts/prebuild-cache.js today

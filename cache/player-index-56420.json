@@ -41,6 +41,16 @@
       "result": "6-2 6-4"
     },
     {
+      "id": "1192550",
+      "date": "2025-04-18",
+      "tournamentId": 20630,
+      "tournamentName": "M15 Antalya 11",
+      "opponentId": 86351,
+      "opponentName": "Tom Gentzsch",
+      "won": true,
+      "result": "6-2 6-2"
+    },
+    {
       "id": "1191542",
       "date": "2025-04-11",
       "tournamentId": 20619,
@@ -89,16 +99,6 @@
       "opponentName": "Francesco Maestrelli",
       "won": true,
       "result": "1-6 6-3 7-6(8)"
-    },
-    {
-      "id": "1147075",
-      "date": "2024-08-16",
-      "tournamentId": 19975,
-      "tournamentName": "M15 Bielsko Biala 1",
-      "opponentId": 70459,
-      "opponentName": "Martin Krumich",
-      "won": false,
-      "result": "6-0 6-3"
     }
   ],
   "Hard": [
@@ -113,12 +113,32 @@
       "result": "5-7 6-4 6-4"
     },
     {
+      "id": "1251242",
+      "date": "2026-02-25",
+      "tournamentId": 21465,
+      "tournamentName": "M25 Vale do Lobo 1",
+      "opponentId": 56641,
+      "opponentName": "Gauthier Onclin",
+      "won": false,
+      "result": "7-5 6-4"
+    },
+    {
       "id": "1251494",
       "date": "2026-02-07",
       "tournamentId": 21497,
       "tournamentName": "Davis Cup, Group I, PO, LUX-UKR 3-1",
       "opponentId": 54163,
       "opponentName": "Chris Rodesch",
+      "won": false,
+      "result": "6-3 6-1"
+    },
+    {
+      "id": "1182405",
+      "date": "2025-03-01",
+      "tournamentId": 20475,
+      "tournamentName": "M15 Monastir 8",
+      "opponentId": 86351,
+      "opponentName": "Tom Gentzsch",
       "won": false,
       "result": "6-3 6-1"
     },
@@ -131,6 +151,16 @@
       "opponentName": "Fausto Tabacco",
       "won": false,
       "result": "1-6 7-5 6-3"
+    },
+    {
+      "id": "1166503",
+      "date": "2024-11-21",
+      "tournamentId": 20261,
+      "tournamentName": "M15 Heraklion 7",
+      "opponentId": 41473,
+      "opponentName": "Michalis Sakellaridis",
+      "won": true,
+      "result": "6-1 6-0"
     },
     {
       "id": "1165164",
@@ -171,36 +201,6 @@
       "opponentName": "Stefano Travaglia",
       "won": true,
       "result": "7-6(5) 7-5"
-    },
-    {
-      "id": "1062133",
-      "date": "2023-09-21",
-      "tournamentId": 19063,
-      "tournamentName": "St. Tropez Challenger",
-      "opponentId": 27547,
-      "opponentName": "Sebastian Ofner",
-      "won": false,
-      "result": "4-6 6-3 6-4"
-    },
-    {
-      "id": "1076646",
-      "date": "2023-09-14",
-      "tournamentId": 19154,
-      "tournamentName": "Davis Cup, Group I, 1R, UKR-COL 3-2",
-      "opponentId": 34968,
-      "opponentName": "Nicolas Mejia",
-      "won": true,
-      "result": "6-4 6-3"
-    },
-    {
-      "id": "989992",
-      "date": "2023-03-21",
-      "tournamentId": 18623,
-      "tournamentName": "Las Franquesas del Valles Challenger",
-      "opponentId": 29180,
-      "opponentName": "Billy Harris",
-      "won": false,
-      "result": "6-1 6-2"
     }
   ],
   "Grass": [
@@ -225,6 +225,6 @@
       "result": "6-4 3-6 6-3"
     }
   ],
-  "updatedAt": 1780571647008,
+  "updatedAt": 1780801581028,
   "playerName": "Oleksii Krutykh"
 }

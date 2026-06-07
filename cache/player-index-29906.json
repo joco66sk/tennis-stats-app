@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1243504",
+      "date": "2026-05-18",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 12097,
+      "opponentName": "Stefano Travaglia",
+      "won": false,
+      "result": "6-3 6-7(2) 7-5"
+    },
+    {
       "id": "1263527",
       "date": "2026-05-13",
       "tournamentId": 21665,
@@ -89,16 +99,6 @@
       "opponentName": "Luis Queiroz Miguel",
       "won": false,
       "result": "7-6(1) 7-5"
-    },
-    {
-      "id": "1234122",
-      "date": "2025-11-29",
-      "tournamentId": 21197,
-      "tournamentName": "Bogota Challenger",
-      "opponentId": 12276,
-      "opponentName": "Juan Sebastian Gomez",
-      "won": false,
-      "result": "6-7(5) 6-2 6-4"
     }
   ],
   "Hard": [
@@ -205,6 +205,16 @@
   ],
   "Grass": [
     {
+      "id": "45211800",
+      "date": "2026-06-06",
+      "tournamentId": 21331,
+      "tournamentName": "Libema Open - 's-Hertogenbosch",
+      "opponentId": 84226,
+      "opponentName": "Thijmen Loof",
+      "won": true,
+      "result": "7-6(3) 4-6 6-2"
+    },
+    {
       "id": "1172537",
       "date": "2025-06-26",
       "tournamentId": 20348,
@@ -273,8 +283,18 @@
       "opponentName": "Flavio Cobolli",
       "won": true,
       "result": "6-3 6-4"
+    },
+    {
+      "id": "867902",
+      "date": "2021-06-22",
+      "tournamentId": 16919,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 28899,
+      "opponentName": "Benjamin Bonzi",
+      "won": false,
+      "result": "7-5 6-1"
     }
   ],
-  "updatedAt": 1780571646991,
+  "updatedAt": 1780801513605,
   "playerName": "Juan Pablo Ficovich"
 }
