@@ -1,5 +1,1210 @@
 {
   "date": "2026-06-09",
-  "fixtures": [],
-  "count": 0
+  "fixtures": [
+    {
+      "id": 1546,
+      "date": "2026-06-09T12:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 1837,
+      "player2Id": 18736,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 1837,
+        "name": "Roberto Bautista Agut",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 18736,
+        "name": "Marcos Giron",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1558,
+      "date": "2026-06-09T12:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 14177,
+      "player2Id": 39043,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 14177,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 39043,
+        "name": "Alexis Galarneau",
+        "countryAcr": "CAN"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1562,
+      "date": "2026-06-09T12:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 14856,
+      "player2Id": 39152,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 39152,
+        "name": "Aleksandar Kovacevic",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1563,
+      "date": "2026-06-09T12:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 22434,
+      "player2Id": 36263,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": "8",
+      "live": null,
+      "player1": {
+        "id": 22434,
+        "name": "Nick Kyrgios",
+        "countryAcr": "AUS"
+      },
+      "player2": {
+        "id": 36263,
+        "name": "Corentin Moutet",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1564,
+      "date": "2026-06-09T12:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 25171,
+      "player2Id": 39863,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 25171,
+        "name": "Quentin Halys",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 39863,
+        "name": "Sho Shimabukuro",
+        "countryAcr": "JPN"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1566,
+      "date": "2026-06-09T12:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 29732,
+      "player2Id": 29939,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "6",
+      "live": null,
+      "player1": {
+        "id": 29732,
+        "name": "Daniel Altmaier",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 29939,
+        "name": "Frances Tiafoe",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1581,
+      "date": "2026-06-09T12:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 86351,
+      "player2Id": 58149,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 86351,
+        "name": "Tom Gentzsch",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 58149,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AUS"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1588,
+      "date": "2026-06-09T12:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 104494,
+      "player2Id": 11517,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 104494,
+        "name": "Diego Dedura",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 11517,
+        "name": "James Duckworth",
+        "countryAcr": "AUS"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1514,
+      "date": "2026-06-09T11:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 26140,
+      "player2Id": 40609,
+      "tournamentId": 21331,
+      "timeGame": null,
+      "seed1": "PR",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 26140,
+        "name": "Zhizhen Zhang",
+        "countryAcr": "CHN"
+      },
+      "player2": {
+        "id": 40609,
+        "name": "Jenson Brooksby",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21331,
+        "name": "Libema Open - 's-Hertogenbosch",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "NED",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1517,
+      "date": "2026-06-09T11:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 26473,
+      "player2Id": 13674,
+      "tournamentId": 21331,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 26473,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "POL"
+      },
+      "player2": {
+        "id": 13674,
+        "name": "Marton Fucsovics",
+        "countryAcr": "HUN"
+      },
+      "tournament": {
+        "id": 21331,
+        "name": "Libema Open - 's-Hertogenbosch",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "NED",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1524,
+      "date": "2026-06-09T11:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 33860,
+      "player2Id": 24249,
+      "tournamentId": 21331,
+      "timeGame": null,
+      "seed1": "6",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 33860,
+        "name": "Tallon Griekspoor",
+        "countryAcr": "NED"
+      },
+      "player2": {
+        "id": 24249,
+        "name": "Botic Van De Zandschulp",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 21331,
+        "name": "Libema Open - 's-Hertogenbosch",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "NED",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1530,
+      "date": "2026-06-09T11:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 68627,
+      "player2Id": 7806,
+      "tournamentId": 21331,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 68627,
+        "name": "Gabriel Diallo",
+        "countryAcr": "CAN"
+      },
+      "player2": {
+        "id": 7806,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21331,
+        "name": "Libema Open - 's-Hertogenbosch",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "NED",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1540,
+      "date": "2026-06-09T11:05:00.000Z",
+      "roundId": 4,
+      "player1Id": 103054,
+      "player2Id": 39310,
+      "tournamentId": 21331,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 103054,
+        "name": "Thijs Boogaard",
+        "countryAcr": "NED"
+      },
+      "player2": {
+        "id": 39310,
+        "name": "Yibing Wu",
+        "countryAcr": "CHN"
+      },
+      "tournament": {
+        "id": 21331,
+        "name": "Libema Open - 's-Hertogenbosch",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "NED",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1864,
+      "date": "2026-06-09T12:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 29180,
+      "player2Id": 55828,
+      "tournamentId": 21739,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "ALT",
+      "live": null,
+      "player1": {
+        "id": 29180,
+        "name": "Billy Harris",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 55828,
+        "name": "Clement Chidekh",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21739,
+        "name": "Ilkley Challenger",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1876,
+      "date": "2026-06-09T12:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 61667,
+      "player2Id": 54163,
+      "tournamentId": 21739,
+      "timeGame": null,
+      "seed1": "ALT",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 61667,
+        "name": "Bu Yunchaokete",
+        "countryAcr": "CHN"
+      },
+      "player2": {
+        "id": 54163,
+        "name": "Chris Rodesch",
+        "countryAcr": "LUX"
+      },
+      "tournament": {
+        "id": 21739,
+        "name": "Ilkley Challenger",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1877,
+      "date": "2026-06-09T12:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 63737,
+      "player2Id": 87277,
+      "tournamentId": 21739,
+      "timeGame": null,
+      "seed1": "6",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 63737,
+        "name": "Francesco Maestrelli",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 87277,
+        "name": "Arthur Gea",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21739,
+        "name": "Ilkley Challenger",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1881,
+      "date": "2026-06-09T12:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 71221,
+      "player2Id": 68090,
+      "tournamentId": 21739,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "5",
+      "live": null,
+      "player1": {
+        "id": 71221,
+        "name": "Luca Nardi",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 68090,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21739,
+        "name": "Ilkley Challenger",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1890,
+      "date": "2026-06-09T12:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 92243,
+      "player2Id": 24721,
+      "tournamentId": 21739,
+      "timeGame": null,
+      "seed1": "NG",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 92243,
+        "name": "Darwin Blanch",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 24721,
+        "name": "Christopher O'Connell",
+        "countryAcr": "AUS"
+      },
+      "tournament": {
+        "id": 21739,
+        "name": "Ilkley Challenger",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1958,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 12653,
+      "player2Id": 45553,
+      "tournamentId": 21741,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 12653,
+        "name": "Marco Trungelliti",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 45553,
+        "name": "Pavel Kotov",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 21741,
+        "name": "Lyon Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1962,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 25533,
+      "player2Id": 60625,
+      "tournamentId": 21741,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 25533,
+        "name": "Calvin Hemery",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 60625,
+        "name": "Alejandro Moro Canas",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 21741,
+        "name": "Lyon Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1971,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 41083,
+      "player2Id": 79088,
+      "tournamentId": 21741,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "3",
+      "live": null,
+      "player1": {
+        "id": 41083,
+        "name": "Miguel Damas",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 79088,
+        "name": "Vilius Gaubas",
+        "countryAcr": "LTU"
+      },
+      "tournament": {
+        "id": 21741,
+        "name": "Lyon Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1983,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 83554,
+      "player2Id": 47259,
+      "tournamentId": 21741,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "5",
+      "live": null,
+      "player1": {
+        "id": 83554,
+        "name": "Sascha Gueymard Wayenburg",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 47259,
+        "name": "Clement Tabur",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21741,
+        "name": "Lyon Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1984,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 83555,
+      "player2Id": 41484,
+      "tournamentId": 21741,
+      "timeGame": null,
+      "seed1": "ALT",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 83555,
+        "name": "Robin Bertrand",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 41484,
+        "name": "Nikolas Sanchez-Izquierdo",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 21741,
+        "name": "Lyon Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 1989,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 100234,
+      "player2Id": 54208,
+      "tournamentId": 21741,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 100234,
+        "name": "Thomas Faurel",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 54208,
+        "name": "Florent Bax",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21741,
+        "name": "Lyon Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 2006,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 12190,
+      "player2Id": 66254,
+      "tournamentId": 21742,
+      "timeGame": null,
+      "seed1": "3",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 12190,
+        "name": "Dusan Lajovic",
+        "countryAcr": "SRB"
+      },
+      "player2": {
+        "id": 66254,
+        "name": "Jonas Forejtek",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 21742,
+        "name": "Cattolica Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 2015,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 59166,
+      "player2Id": 103193,
+      "tournamentId": 21742,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": "NG",
+      "live": null,
+      "player1": {
+        "id": 59166,
+        "name": "Jesper De Jong",
+        "countryAcr": "NED"
+      },
+      "player2": {
+        "id": 103193,
+        "name": "Ognjen Milic",
+        "countryAcr": "SRB"
+      },
+      "tournament": {
+        "id": 21742,
+        "name": "Cattolica Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 2016,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 66379,
+      "player2Id": 84083,
+      "tournamentId": 21742,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 66379,
+        "name": "Alvaro Guillen Meza",
+        "countryAcr": "ECU"
+      },
+      "player2": {
+        "id": 84083,
+        "name": "Ilia Simakin",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 21742,
+        "name": "Cattolica Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
+      "id": 2022,
+      "date": "2026-06-09T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 84060,
+      "player2Id": 32764,
+      "tournamentId": 21742,
+      "timeGame": null,
+      "seed1": "ALT",
+      "seed2": "WC",
+      "live": null,
+      "player1": {
+        "id": 84060,
+        "name": "Maks Kasnikowski",
+        "countryAcr": "POL"
+      },
+      "player2": {
+        "id": 32764,
+        "name": "Enrico Dalla Valle",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21742,
+        "name": "Cattolica Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    }
+  ],
+  "count": 28
 }
