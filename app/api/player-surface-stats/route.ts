@@ -86,7 +86,7 @@ export async function GET(request: NextRequest) {
   catch { return NextResponse.json(emptyResponse(playerId, surface)); }
 
   const entries: IndexEntry[] = (index[surface as 'Clay' | 'Hard' | 'Grass'] ?? []).slice(0, limit);
-  if (entries.length === 0) return NextResponse.json(emptyResponse(playerId, surface));
+  if (entries.length === 0) return NextResponse.json({ ...emptyResponse(playerId, surface), playerName: index.playerName ?? `Player ${playerId}` });
 
   const pid = parseInt(playerId);
   const playerName = index.playerName ?? `Player ${pid}`;

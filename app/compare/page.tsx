@@ -189,10 +189,16 @@ function CompareContent() {
             <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden flex flex-col">
               <div className="px-3 py-2.5 border-b border-zinc-800">
                 <div className="font-black text-white text-sm truncate">{stats1.playerName}</div>
-                <div className={`text-sm font-bold mt-0.5 ${stats1.wins > stats1.losses ? 'text-emerald-400' : 'text-red-400'}`}>
-                  {stats1.wins}W–{stats1.losses}L
-                </div>
-                <div className="mt-1.5"><FormDots form={stats1.form} /></div>
+                {stats1.wins + stats1.losses === 0 ? (
+                  <div className="text-xs text-zinc-500 mt-0.5">No {surface.toLowerCase()} history</div>
+                ) : (
+                  <>
+                    <div className={`text-sm font-bold mt-0.5 ${stats1.wins > stats1.losses ? 'text-emerald-400' : 'text-red-400'}`}>
+                      {stats1.wins}W–{stats1.losses}L
+                    </div>
+                    <div className="mt-1.5"><FormDots form={stats1.form} /></div>
+                  </>
+                )}
               </div>
               <div className="overflow-y-auto divide-y divide-zinc-800/60">
                 {stats1.matches.slice(0, lastN).map((m, i) => (
@@ -224,6 +230,11 @@ function CompareContent() {
                 </div>
               </div>
               <div className="px-3 pb-2">
+                {(stats1.wins + stats1.losses === 0 || stats2.wins + stats2.losses === 0) && (
+                  <div className="py-3 text-center text-zinc-500 text-xs">
+                    {stats1.wins + stats1.losses === 0 ? stats1.playerName : stats2.playerName} has no {surface.toLowerCase()} match history — stats unavailable
+                  </div>
+                )}
                 <div className="py-2 text-center">
                   <span className="text-xs font-black text-blue-400 uppercase tracking-widest">Serve</span>
                 </div>
@@ -249,10 +260,16 @@ function CompareContent() {
             <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden flex flex-col">
               <div className="px-3 py-2.5 border-b border-zinc-800 text-right">
                 <div className="font-black text-white text-sm truncate">{stats2.playerName}</div>
-                <div className={`text-sm font-bold mt-0.5 ${stats2.wins > stats2.losses ? 'text-emerald-400' : 'text-red-400'}`}>
-                  {stats2.wins}W–{stats2.losses}L
-                </div>
-                <div className="mt-1.5"><FormDots form={stats2.form} align="right" /></div>
+                {stats2.wins + stats2.losses === 0 ? (
+                  <div className="text-xs text-zinc-500 mt-0.5">No {surface.toLowerCase()} history</div>
+                ) : (
+                  <>
+                    <div className={`text-sm font-bold mt-0.5 ${stats2.wins > stats2.losses ? 'text-emerald-400' : 'text-red-400'}`}>
+                      {stats2.wins}W–{stats2.losses}L
+                    </div>
+                    <div className="mt-1.5"><FormDots form={stats2.form} align="right" /></div>
+                  </>
+                )}
               </div>
               <div className="overflow-y-auto divide-y divide-zinc-800/60">
                 {stats2.matches.slice(0, lastN).map((m, i) => (
