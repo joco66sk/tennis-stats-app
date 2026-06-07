@@ -127,6 +127,7 @@ function CompareContent() {
   const [stats2, setStats2] = useState<PlayerStats | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [copied, setCopied] = useState(false);
   const [selectedMatch, setSelectedMatch] = useState<SelectedMatch | null>(null);
   const [matchDetail, setMatchDetail] = useState<{ left: SingleMatchStats; right: SingleMatchStats } | null>(null);
   const [matchDetailLoading, setMatchDetailLoading] = useState(false);
@@ -211,6 +212,18 @@ function CompareContent() {
     return 'text-zinc-400';
   };
 
+  const handleShare = async () => {
+    const url = window.location.href;
+    const title = stats1 && stats2 ? `${stats1.playerName} vs ${stats2.playerName} on ${surface} | Tennis Deep Stats` : 'Tennis Deep Stats';
+    if (navigator.share) {
+      try { await navigator.share({ title, url }); } catch {}
+    } else {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
   const handleMatchClick = (m: MatchSummary, side: 'left' | 'right', playerId: string, playerName: string) => {
     if (selectedMatch?.matchId === m.id && selectedMatch?.side === side) {
       setSelectedMatch(null);
@@ -274,6 +287,14 @@ function CompareContent() {
             <option value={10}>10 matches</option>
           </select>
           {error && <span className="text-red-400 text-xs">{error}</span>}
+          {stats1 && stats2 && (
+            <button
+              onClick={handleShare}
+              className="ml-auto flex items-center gap-1.5 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white rounded-lg px-3 py-1.5 text-xs font-semibold transition"
+            >
+              {copied ? '✓ Copied!' : '⬆ Share'}
+            </button>
+          )}
         </div>
 
         {loading && (
