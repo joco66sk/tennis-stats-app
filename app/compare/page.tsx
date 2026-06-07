@@ -8,6 +8,8 @@ interface MatchSummary {
   result: string;
   won: boolean;
   opponentName: string;
+  tournamentId: number;
+  opponentId: number;
 }
 
 interface PlayerStats {
@@ -27,6 +29,50 @@ interface PlayerStats {
   avgReturn2ndWon: number;
   form: boolean[];
   matches: MatchSummary[];
+}
+
+interface SingleMatchStats {
+  firstServePct: number;
+  firstServeWonPct: number;
+  secondServeWonPct: number;
+  aces: number;
+  dfs: number;
+  servePtsWonPct: number;
+  returnPtsWonPct: number;
+  return1stSrvWonPct: number;
+  return2ndSrvWonPct: number;
+}
+
+interface SelectedMatch {
+  matchId: string;
+  tournamentId: number;
+  playerId: number;
+  opponentId: number;
+  playerName: string;
+  opponentName: string;
+  result: string;
+  date: string;
+  side: 'left' | 'right';
+}
+
+function computeMatchStats(my: any, opp: any): SingleMatchStats {
+  const svpt = my.firstServeOf || 0;
+  const first1stIn = my.firstServe || 0;
+  const secondPts = svpt - first1stIn;
+  const oppSvpt = opp.firstServeOf || 0;
+  const opp1stIn = opp.firstServe || 0;
+  const opp2ndPts = oppSvpt - opp1stIn;
+  return {
+    firstServePct: svpt > 0 ? (first1stIn / svpt) * 100 : 0,
+    firstServeWonPct: first1stIn > 0 ? ((my.winningOnFirstServe || 0) / first1stIn) * 100 : 0,
+    secondServeWonPct: secondPts > 0 ? ((my.winningOnSecondServe || 0) / secondPts) * 100 : 0,
+    aces: my.aces || 0,
+    dfs: my.doubleFaults || 0,
+    servePtsWonPct: svpt > 0 ? (((my.winningOnFirstServe || 0) + (my.winningOnSecondServe || 0)) / svpt) * 100 : 0,
+    returnPtsWonPct: oppSvpt > 0 ? (oppSvpt - (opp.winningOnFirstServe || 0) - (opp.winningOnSecondServe || 0)) / oppSvpt * 100 : 0,
+    return1stSrvWonPct: opp1stIn > 0 ? (opp1stIn - (opp.winningOnFirstServe || 0)) / opp1stIn * 100 : 0,
+    return2ndSrvWonPct: opp2ndPts > 0 ? (opp2ndPts - (opp.winningOnSecondServe || 0)) / opp2ndPts * 100 : 0,
+  };
 }
 
 function StatRow({ label, v1, v2, higherIsBetter = true, isPercent = true }: {
@@ -81,6 +127,9 @@ function CompareContent() {
   const [stats2, setStats2] = useState<PlayerStats | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [selectedMatch, setSelectedMatch] = useState<SelectedMatch | null>(null);
+  const [matchDetail, setMatchDetail] = useState<{ left: SingleMatchStats; right: SingleMatchStats } | null>(null);
+  const [matchDetailLoading, setMatchDetailLoading] = useState(false);
 
   useEffect(() => {
     if (stats1 && stats2) {
@@ -111,6 +160,8 @@ function CompareContent() {
     setError('');
     setStats1(null);
     setStats2(null);
+    setSelectedMatch(null);
+    setMatchDetail(null);
 
     Promise.all([
       fetch(`/api/player-surface-stats?playerId=${player1Id}&surface=${surface}&limit=${lastN}`, { signal: controller.signal }).then(r => { if (!r.ok) throw new Error('Failed to load P1'); return r.json(); }),
@@ -130,12 +181,65 @@ function CompareContent() {
     return () => controller.abort();
   }, [player1Id, player2Id, surface, lastN]);
 
+  useEffect(() => {
+    if (!selectedMatch) { setMatchDetail(null); return; }
+    setMatchDetailLoading(true);
+    setMatchDetail(null);
+    fetch(`/api/match-stats?tournamentId=${selectedMatch.tournamentId}&p1=${selectedMatch.playerId}&p2=${selectedMatch.opponentId}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (!data) return;
+        const isP1 = data.player1Stats?.player1Id === selectedMatch.playerId;
+        const my = isP1 ? data.player1Stats : data.player2Stats;
+        const opp = isP1 ? data.player2Stats : data.player1Stats;
+        if (!my || !opp) return;
+        const myStats = computeMatchStats(my, opp);
+        const oppStats = computeMatchStats(opp, my);
+        setMatchDetail(selectedMatch.side === 'left'
+          ? { left: myStats, right: oppStats }
+          : { left: oppStats, right: myStats }
+        );
+      })
+      .catch(() => {})
+      .finally(() => setMatchDetailLoading(false));
+  }, [selectedMatch]);
+
   const surfaceColor = () => {
     if (surface === 'Clay') return 'text-orange-400';
     if (surface === 'Hard') return 'text-blue-400';
     if (surface === 'Grass') return 'text-emerald-400';
     return 'text-zinc-400';
   };
+
+  const handleMatchClick = (m: MatchSummary, side: 'left' | 'right', playerId: string, playerName: string) => {
+    if (selectedMatch?.matchId === m.id && selectedMatch?.side === side) {
+      setSelectedMatch(null);
+    } else {
+      setSelectedMatch({
+        matchId: m.id,
+        tournamentId: m.tournamentId,
+        playerId: parseInt(playerId),
+        opponentId: m.opponentId,
+        playerName,
+        opponentName: m.opponentName,
+        result: m.result,
+        date: m.date,
+        side,
+      });
+    }
+  };
+
+  const centerLeft = selectedMatch?.side === 'left'
+    ? selectedMatch.playerName
+    : selectedMatch?.side === 'right'
+    ? selectedMatch.opponentName
+    : stats1?.playerName ?? '';
+
+  const centerRight = selectedMatch?.side === 'right'
+    ? selectedMatch.playerName
+    : selectedMatch?.side === 'left'
+    ? selectedMatch.opponentName
+    : stats2?.playerName ?? '';
 
   return (
     <div className="min-h-screen bg-zinc-950 p-3 md:p-4">
@@ -165,7 +269,7 @@ function CompareContent() {
           <span className="text-zinc-500 text-xs uppercase tracking-wider">Last</span>
           <select
             className="bg-zinc-800 border border-zinc-700 text-white rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-blue-500"
-            value={lastN} onChange={e => setLastN(parseInt(e.target.value))}>
+            value={lastN} onChange={e => { setLastN(parseInt(e.target.value)); setSelectedMatch(null); }}>
             <option value={5}>5 matches</option>
             <option value={10}>10 matches</option>
           </select>
@@ -186,6 +290,7 @@ function CompareContent() {
           <div className="overflow-x-auto pb-1">
           <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 min-w-[620px]">
 
+            {/* Left player card */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden flex flex-col">
               <div className="px-3 py-2.5 border-b border-zinc-800">
                 <div className="font-black text-white text-sm truncate">{stats1.playerName}</div>
@@ -202,61 +307,122 @@ function CompareContent() {
               </div>
               <div className="overflow-y-auto divide-y divide-zinc-800/60">
                 {stats1.matches.slice(0, lastN).map((m, i) => (
-                  <div key={i} className="px-3 py-2 flex items-start gap-2">
+                  <button
+                    key={i}
+                    onClick={() => handleMatchClick(m, 'left', player1Id, stats1.playerName)}
+                    className={`w-full px-3 py-2 flex items-start gap-2 text-left transition ${
+                      selectedMatch?.matchId === m.id && selectedMatch?.side === 'left'
+                        ? 'bg-blue-900/30 border-l-2 border-blue-500'
+                        : 'hover:bg-zinc-800/50 cursor-pointer'
+                    }`}
+                  >
                     <span className={`text-xs font-black mt-0.5 shrink-0 w-4 ${m.won ? 'text-emerald-400' : 'text-red-400'}`}>{m.won ? 'W' : 'L'}</span>
                     <div className="min-w-0">
                       <div className="text-xs text-zinc-300 truncate">vs {m.opponentName}</div>
                       <div className="text-xs text-zinc-600">{m.result}</div>
                       <div className="text-xs text-zinc-700">{formatMatchDate(m.date)}</div>
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
 
+            {/* Center stats panel */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
               <div className="grid grid-cols-3 border-b border-zinc-800 bg-zinc-800/40">
                 <div className="px-3 py-2.5 text-center">
-                  <div className="font-black text-white text-xs uppercase tracking-tight truncate">{stats1.playerName}</div>
+                  <div className="font-black text-white text-xs uppercase tracking-tight truncate">{centerLeft}</div>
                 </div>
                 <div className="px-2 py-2.5 text-center border-x border-zinc-800">
-                  <div className="text-zinc-500 text-xs uppercase tracking-wider">
-                    Last {stats1.wins + stats1.losses}/{stats2.wins + stats2.losses}
-                  </div>
-                  <div className={`text-xs font-bold ${surfaceColor()}`}>{surface}</div>
+                  {selectedMatch ? (
+                    <>
+                      <div className="text-zinc-300 text-xs font-bold">{selectedMatch.result}</div>
+                      <div className="text-zinc-500 text-xs">{formatMatchDate(selectedMatch.date)}</div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="text-zinc-500 text-xs uppercase tracking-wider">
+                        Last {stats1.wins + stats1.losses}/{stats2.wins + stats2.losses}
+                      </div>
+                      <div className={`text-xs font-bold ${surfaceColor()}`}>{surface}</div>
+                    </>
+                  )}
                 </div>
                 <div className="px-3 py-2.5 text-center">
-                  <div className="font-black text-white text-xs uppercase tracking-tight truncate">{stats2.playerName}</div>
+                  <div className="font-black text-white text-xs uppercase tracking-tight truncate">{centerRight}</div>
                 </div>
               </div>
+
               <div className="px-3 pb-2">
-                {(stats1.wins + stats1.losses === 0 || stats2.wins + stats2.losses === 0) && (
-                  <div className="py-3 text-center text-zinc-500 text-xs">
-                    {stats1.wins + stats1.losses === 0 ? stats1.playerName : stats2.playerName} has no {surface.toLowerCase()} match history — stats unavailable
-                  </div>
+                {selectedMatch ? (
+                  <>
+                    <div className="py-2 text-center">
+                      <button onClick={() => setSelectedMatch(null)} className="text-zinc-500 hover:text-zinc-300 text-xs transition">
+                        ← overview
+                      </button>
+                    </div>
+                    {matchDetailLoading && (
+                      <div className="py-6 text-center text-zinc-500 text-xs">Loading match stats...</div>
+                    )}
+                    {!matchDetailLoading && !matchDetail && (
+                      <div className="py-6 text-center text-zinc-500 text-xs">No stats available for this match</div>
+                    )}
+                    {!matchDetailLoading && matchDetail && (
+                      <>
+                        <div className="py-2 text-center">
+                          <span className="text-xs font-black text-blue-400 uppercase tracking-widest">Serve</span>
+                        </div>
+                        <StatRow label="1st Serve %" v1={matchDetail.left.firstServePct} v2={matchDetail.right.firstServePct} />
+                        <StatRow label="1st Serve Won %" v1={matchDetail.left.firstServeWonPct} v2={matchDetail.right.firstServeWonPct} />
+                        <StatRow label="2nd Serve Won %" v1={matchDetail.left.secondServeWonPct} v2={matchDetail.right.secondServeWonPct} />
+                        <StatRow label="Aces" v1={matchDetail.left.aces} v2={matchDetail.right.aces} isPercent={false} />
+                        <StatRow label="Dbl Faults" v1={matchDetail.left.dfs} v2={matchDetail.right.dfs} higherIsBetter={false} isPercent={false} />
+                        <StatRow label="Serve Pts Won %" v1={matchDetail.left.servePtsWonPct} v2={matchDetail.right.servePtsWonPct} />
+                        <div className="py-2 text-center mt-1">
+                          <span className="text-xs font-black text-amber-400 uppercase tracking-widest">Return</span>
+                        </div>
+                        <StatRow label="Return Pts Won %" v1={matchDetail.left.returnPtsWonPct} v2={matchDetail.right.returnPtsWonPct} />
+                        <StatRow label="Ret 1st Srv Won %" v1={matchDetail.left.return1stSrvWonPct} v2={matchDetail.right.return1stSrvWonPct} />
+                        <StatRow label="Ret 2nd Srv Won %" v1={matchDetail.left.return2ndSrvWonPct} v2={matchDetail.right.return2ndSrvWonPct} />
+                        <div className="py-2 text-center mt-1">
+                          <span className="text-xs font-black text-violet-400 uppercase tracking-widest">Combined</span>
+                        </div>
+                        <StatRow label="Serve + Return %" v1={matchDetail.left.servePtsWonPct + matchDetail.left.returnPtsWonPct} v2={matchDetail.right.servePtsWonPct + matchDetail.right.returnPtsWonPct} />
+                      </>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    {(stats1.wins + stats1.losses === 0 || stats2.wins + stats2.losses === 0) && (
+                      <div className="py-3 text-center text-zinc-500 text-xs">
+                        {stats1.wins + stats1.losses === 0 ? stats1.playerName : stats2.playerName} has no {surface.toLowerCase()} match history — stats unavailable
+                      </div>
+                    )}
+                    <div className="py-2 text-center">
+                      <span className="text-xs font-black text-blue-400 uppercase tracking-widest">Serve</span>
+                    </div>
+                    <StatRow label="1st Serve %" v1={stats1.avg1stServe} v2={stats2.avg1stServe} />
+                    <StatRow label="1st Serve Won %" v1={stats1.avg1stWon} v2={stats2.avg1stWon} />
+                    <StatRow label="2nd Serve Won %" v1={stats1.avg2ndWon} v2={stats2.avg2ndWon} />
+                    <StatRow label="Aces / match" v1={stats1.avgAces} v2={stats2.avgAces} isPercent={false} />
+                    <StatRow label="Dbl Faults" v1={stats1.avgDf} v2={stats2.avgDf} higherIsBetter={false} isPercent={false} />
+                    <StatRow label="Serve Pts Won %" v1={stats1.avgServeWon} v2={stats2.avgServeWon} />
+                    <div className="py-2 text-center mt-1">
+                      <span className="text-xs font-black text-amber-400 uppercase tracking-widest">Return</span>
+                    </div>
+                    <StatRow label="Return Pts Won %" v1={stats1.avgReturnWon} v2={stats2.avgReturnWon} />
+                    <StatRow label="Ret 1st Srv Won %" v1={stats1.avgReturn1stWon} v2={stats2.avgReturn1stWon} />
+                    <StatRow label="Ret 2nd Srv Won %" v1={stats1.avgReturn2ndWon} v2={stats2.avgReturn2ndWon} />
+                    <div className="py-2 text-center mt-1">
+                      <span className="text-xs font-black text-violet-400 uppercase tracking-widest">Combined</span>
+                    </div>
+                    <StatRow label="Serve + Return %" v1={stats1.avgServeWon + stats1.avgReturnWon} v2={stats2.avgServeWon + stats2.avgReturnWon} />
+                  </>
                 )}
-                <div className="py-2 text-center">
-                  <span className="text-xs font-black text-blue-400 uppercase tracking-widest">Serve</span>
-                </div>
-                <StatRow label="1st Serve %" v1={stats1.avg1stServe} v2={stats2.avg1stServe} />
-                <StatRow label="1st Serve Won %" v1={stats1.avg1stWon} v2={stats2.avg1stWon} />
-                <StatRow label="2nd Serve Won %" v1={stats1.avg2ndWon} v2={stats2.avg2ndWon} />
-                <StatRow label="Aces / match" v1={stats1.avgAces} v2={stats2.avgAces} isPercent={false} />
-                <StatRow label="Dbl Faults" v1={stats1.avgDf} v2={stats2.avgDf} higherIsBetter={false} isPercent={false} />
-                <StatRow label="Serve Pts Won %" v1={stats1.avgServeWon} v2={stats2.avgServeWon} />
-                <div className="py-2 text-center mt-1">
-                  <span className="text-xs font-black text-amber-400 uppercase tracking-widest">Return</span>
-                </div>
-                <StatRow label="Return Pts Won %" v1={stats1.avgReturnWon} v2={stats2.avgReturnWon} />
-                <StatRow label="Ret 1st Srv Won %" v1={stats1.avgReturn1stWon} v2={stats2.avgReturn1stWon} />
-                <StatRow label="Ret 2nd Srv Won %" v1={stats1.avgReturn2ndWon} v2={stats2.avgReturn2ndWon} />
-                <div className="py-2 text-center mt-1">
-                  <span className="text-xs font-black text-violet-400 uppercase tracking-widest">Combined</span>
-                </div>
-                <StatRow label="Serve + Return %" v1={stats1.avgServeWon + stats1.avgReturnWon} v2={stats2.avgServeWon + stats2.avgReturnWon} />
               </div>
             </div>
 
+            {/* Right player card */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden flex flex-col">
               <div className="px-3 py-2.5 border-b border-zinc-800 text-right">
                 <div className="font-black text-white text-sm truncate">{stats2.playerName}</div>
@@ -273,14 +439,22 @@ function CompareContent() {
               </div>
               <div className="overflow-y-auto divide-y divide-zinc-800/60">
                 {stats2.matches.slice(0, lastN).map((m, i) => (
-                  <div key={i} className="px-3 py-2 flex items-start gap-2 justify-end">
+                  <button
+                    key={i}
+                    onClick={() => handleMatchClick(m, 'right', player2Id, stats2.playerName)}
+                    className={`w-full px-3 py-2 flex items-start gap-2 justify-end text-right transition ${
+                      selectedMatch?.matchId === m.id && selectedMatch?.side === 'right'
+                        ? 'bg-blue-900/30 border-r-2 border-blue-500'
+                        : 'hover:bg-zinc-800/50 cursor-pointer'
+                    }`}
+                  >
                     <div className="min-w-0 text-right">
                       <div className="text-xs text-zinc-300 truncate">vs {m.opponentName}</div>
                       <div className="text-xs text-zinc-600">{m.result}</div>
                       <div className="text-xs text-zinc-700">{formatMatchDate(m.date)}</div>
                     </div>
                     <span className={`text-xs font-black mt-0.5 shrink-0 w-4 text-right ${m.won ? 'text-emerald-400' : 'text-red-400'}`}>{m.won ? 'W' : 'L'}</span>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>

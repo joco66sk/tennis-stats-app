@@ -121,7 +121,7 @@ export async function GET(request: NextRequest) {
   for (let i = 0; i < entries.length; i++) {
     const e = entries[i];
     e.won ? wins++ : losses++;
-    matchList.push({ id: e.id, date: e.date, result: e.result, won: e.won, opponentName: e.opponentName });
+    matchList.push({ id: e.id, date: e.date, result: e.result, won: e.won, opponentName: e.opponentName, tournamentId: e.tournamentId, opponentId: e.opponentId });
 
     const stats = allStats[i];
     if (!stats) continue;
