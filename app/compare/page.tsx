@@ -140,7 +140,7 @@ function CompareContent() {
   useEffect(() => {
     if (!player1Id || !player2Id || player1Id === 'undefined' || player2Id === 'undefined') return;
 
-    const cacheKey = `cmp-v20-${player1Id}-${player2Id}-${surface}-${lastN}`;
+    const cacheKey = `cmp-v21-${player1Id}-${player2Id}-${surface}-${lastN}`;
     const SESSION_TTL = 2 * 60 * 60 * 1000;
     try {
       const cached = sessionStorage.getItem(cacheKey);
