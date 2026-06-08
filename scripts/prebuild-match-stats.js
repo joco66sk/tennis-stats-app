@@ -108,7 +108,7 @@ async function main() {
   const clayOnly = process.argv.includes('--clay-only');
   const surfaceArg = process.argv.find(a => a.startsWith('--surface='))?.split('=')[1]
     || (process.argv.includes('--surface') ? process.argv[process.argv.indexOf('--surface') + 1] : null);
-  const surfaces = clayOnly ? ['Clay']
+  let surfaces = clayOnly ? ['Clay']
     : surfaceArg ? [surfaceArg]
     : ALL_SURFACES;
 
@@ -126,6 +126,23 @@ async function main() {
       return dt.toISOString().split('T')[0];
     }).filter(d => fs.existsSync(path.join(CACHE_DIR, `fixtures-${d}.json`)));
     console.log(`Upcoming dates: ${dates.join(', ')}`);
+    // Auto-detect surfaces from upcoming fixtures so we only build what the compare page actually shows
+    if (!surfaceArg && !clayOnly) {
+      const detected = new Set();
+      for (const date of dates) {
+        const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
+        if (!fs.existsSync(fp)) continue;
+        try {
+          const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+          for (const f of (data.fixtures || [])) {
+            if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
+            const s = COURT_ID_MAP[f.tournament?.courtId];
+            if (s) detected.add(s);
+          }
+        } catch {}
+      }
+      if (detected.size > 0) surfaces = [...detected];
+    }
   } else if (arg === 'all') {
     dates = fs.readdirSync(CACHE_DIR)
       .filter(f => /^fixtures-\d{4}-\d{2}-\d{2}\.json$/.test(f))
