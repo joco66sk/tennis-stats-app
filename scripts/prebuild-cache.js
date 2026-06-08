@@ -260,7 +260,7 @@ async function main() {
     const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
     let added = 0;
     for (const f of (data.fixtures || [])) {
-      if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue;
+      if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
       if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue;
       if (skipQualifying && isQualifying(f) && (f.tournament?.rank?.id ?? 0) < 2) continue;
       const surface = normalizeSurfaceName(f.tournament?.court?.name);
@@ -282,7 +282,7 @@ async function main() {
       if (!fs.existsSync(fp)) continue;
       const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
       for (const f of (data.fixtures || [])) {
-        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue;
+        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
         if (skipQualifying && isQualifying(f) && (f.tournament?.rank?.id ?? 0) < 2) continue;
         const surface = normalizeSurfaceName(f.tournament?.court?.name);
         for (const player of [f.player1, f.player2]) {
@@ -303,7 +303,7 @@ async function main() {
       if (!fs.existsSync(fp)) continue;
       const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
       for (const f of (data.fixtures || [])) {
-        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue;
+        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
         const surface = normalizeSurfaceName(f.tournament?.court?.name);
         for (const player of [f.player1, f.player2]) {
           if (!player?.id) continue;
