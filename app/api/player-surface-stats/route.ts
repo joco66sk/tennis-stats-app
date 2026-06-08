@@ -3,8 +3,8 @@ import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import {
-  CACHE_DIR, MATCH_STATS_DIR, HOST, RAPIDAPI_HEADERS as HEADERS,
-  initCache, normalizeSurface, pool,
+  CACHE_DIR, MATCH_STATS_DIR,
+  initCache, normalizeSurface,
 } from '@/lib/shared';
 
 const MIN_STATS_DATE = '2025-01-01';
@@ -37,31 +37,12 @@ function emptyResponse(playerId: string, surface: string) {
   };
 }
 
-async function getMatchStats(tournamentId: number, pid: number, opponentId: number): Promise<any | null> {
+function getMatchStats(tournamentId: number, pid: number, opponentId: number): any | null {
   for (const [a, b] of [[pid, opponentId], [opponentId, pid]]) {
     const file = path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`);
     if (fs.existsSync(file)) {
       try { return JSON.parse(fs.readFileSync(file, 'utf-8')); } catch {}
     }
-  }
-  // Not cached locally — fetch from API
-  for (const [a, b] of [[pid, opponentId], [opponentId, pid]]) {
-    try {
-      const res = await fetch(
-        `https://${HOST}/tennis/v2/atp/h2h/match-stats/${tournamentId}/${a}/${b}`,
-        { headers: HEADERS }
-      );
-      if (!res.ok) continue;
-      const raw = await res.json();
-      if (raw?.data?.player1Stats) {
-        if (!fs.existsSync(MATCH_STATS_DIR)) fs.mkdirSync(MATCH_STATS_DIR, { recursive: true });
-        fs.writeFileSync(
-          path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`),
-          JSON.stringify(raw.data, null, 2)
-        );
-        return raw.data;
-      }
-    } catch {}
   }
   return null;
 }
@@ -103,11 +84,8 @@ export async function GET(request: NextRequest) {
   }
 
   // Full path: load match stats for each entry (max 3 concurrent)
-  const allStats = await pool(
-    entries.map(e => () =>
-      e.date < MIN_STATS_DATE ? Promise.resolve(null) : getMatchStats(e.tournamentId, pid, e.opponentId)
-    ),
-    3
+  const allStats = entries.map(e =>
+    e.date < MIN_STATS_DATE ? null : getMatchStats(e.tournamentId, pid, e.opponentId)
   );
 
   let wins = 0, losses = 0, statsCount = 0;

@@ -21,6 +21,7 @@ const HOST = env.match(/RAPIDAPI_HOST=(.+)/)?.[1]?.trim() || 'tennis-api-atp-wta
 if (!KEY) { console.error('RAPIDAPI_KEY not found in .env.local'); process.exit(1); }
 
 const CACHE_DIR = path.join(__dirname, '..', 'cache');
+const MATCH_STATS_DIR = path.join(__dirname, '..', 'app', 'api', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 const DELAY_BETWEEN_PAGES = 300;
 const DELAY_BETWEEN_PLAYERS = 600;
@@ -28,6 +29,7 @@ const TARGET_PER_SURFACE = 10;
 const INDEX_LIMIT = 10;       // max entries kept per surface in active index
 const FRESHNESS_HOURS = 12;
 const MAX_PAGES = 5;
+const MIN_STATS_DATE = '2025-01-01';
 const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -172,6 +174,33 @@ async function fetchPage(playerId, pageNo) {
   return [];
 }
 
+async function prefetchMatchStats(pid, surface) {
+  const idx = loadIndex(pid);
+  const entries = (idx[surface] || []).filter(e => e.date >= MIN_STATS_DATE);
+  if (entries.length === 0) return;
+  if (!fs.existsSync(MATCH_STATS_DIR)) fs.mkdirSync(MATCH_STATS_DIR, { recursive: true });
+  let fetched = 0;
+  for (const e of entries) {
+    const pairs = [[pid, e.opponentId], [e.opponentId, pid]];
+    const cached = pairs.some(([a, b]) => fs.existsSync(path.join(MATCH_STATS_DIR, `match-stats-${e.tournamentId}-${a}-${b}.json`)));
+    if (cached) continue;
+    for (const [a, b] of pairs) {
+      try {
+        const res = await fetch(`https://${HOST}/tennis/v2/atp/h2h/match-stats/${e.tournamentId}/${a}/${b}`, { headers: HEADERS });
+        if (!res.ok) continue;
+        const raw = await res.json();
+        if (raw?.data?.player1Stats) {
+          fs.writeFileSync(path.join(MATCH_STATS_DIR, `match-stats-${e.tournamentId}-${a}-${b}.json`), JSON.stringify(raw.data, null, 2));
+          fetched++;
+          break;
+        }
+      } catch {}
+    }
+    if (fetched > 0) await sleep(200);
+  }
+  if (fetched > 0) console.log(`    Match stats pre-fetched: ${fetched} new files`);
+}
+
 async function processPlayer(playerId, targetSurface, index, total) {
   console.log(`\n[${index}/${total}] Player ${playerId} (surface: ${targetSurface || 'any'})`);
 
@@ -227,6 +256,8 @@ async function processPlayer(playerId, targetSurface, index, total) {
   saveIndex(playerId);
   saveHistory(playerId);
   console.log(`    Saved: Clay=${myIdx.Clay?.length} Hard=${myIdx.Hard?.length} Grass=${myIdx.Grass?.length}`);
+
+  if (targetSurface) await prefetchMatchStats(pid, targetSurface);
 }
 
 async function main() {
