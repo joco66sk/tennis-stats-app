@@ -142,7 +142,9 @@ function needsFetch(playerId, targetSurface) {
   try {
     const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
     const ageHours = (Date.now() - (data.updatedAt || 0)) / 3600000;
-    if (ageHours < FRESHNESS_HOURS) {
+    // Only skip if updated *today* (CET) and recently — prevents skipping cross-midnight
+    const updatedToday = new Date(data.updatedAt + 2 * 60 * 60 * 1000).toISOString().slice(0, 10) === getTodayStr();
+    if (updatedToday && ageHours < FRESHNESS_HOURS) {
       if ((data[targetSurface]?.length ?? 0) >= TARGET_PER_SURFACE) return false;
     }
     return true;
