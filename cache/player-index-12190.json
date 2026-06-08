@@ -1,6 +1,26 @@
 {
   "Clay": [
     {
+      "id": "1269493",
+      "date": "2026-06-04",
+      "tournamentId": 21734,
+      "tournamentName": "Perugia Challenger",
+      "opponentId": 83794,
+      "opponentName": "Henrique Rocha",
+      "won": false,
+      "result": "6-4 7-5"
+    },
+    {
+      "id": "1269516",
+      "date": "2026-06-02",
+      "tournamentId": 21734,
+      "tournamentName": "Perugia Challenger",
+      "opponentId": 73983,
+      "opponentName": "Gonzalo Bueno",
+      "won": true,
+      "result": "6-4 6-1"
+    },
+    {
       "id": "1243451",
       "date": "2026-05-19",
       "tournamentId": 21329,
@@ -79,26 +99,6 @@
       "opponentName": "Lorenzo Sonego",
       "won": true,
       "result": "6-3 7-6(1)"
-    },
-    {
-      "id": "1243103",
-      "date": "2026-04-21",
-      "tournamentId": 21325,
-      "tournamentName": "Mutua Madrid Open - Madrid",
-      "opponentId": 54163,
-      "opponentName": "Chris Rodesch",
-      "won": true,
-      "result": "6-4 6-4"
-    },
-    {
-      "id": "1243127",
-      "date": "2026-04-20",
-      "tournamentId": 21325,
-      "tournamentName": "Mutua Madrid Open - Madrid",
-      "opponentId": 73956,
-      "opponentName": "Matteo Arnaldi",
-      "won": true,
-      "result": "6-0 3-6 6-4"
     }
   ],
   "Hard": [
@@ -305,6 +305,6 @@
       "result": "6-3 6-3 6-4"
     }
   ],
-  "updatedAt": 1780863645484,
+  "updatedAt": 1780919913306,
   "playerName": "Dusan Lajovic"
 }

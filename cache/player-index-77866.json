@@ -1,6 +1,36 @@
 {
   "Clay": [
     {
+      "id": "1264430",
+      "date": "2026-05-26",
+      "tournamentId": 21671,
+      "tournamentName": "Chisinau Challenger",
+      "opponentId": 37577,
+      "opponentName": "Genaro Alberto Olivieri",
+      "won": false,
+      "result": "6-4 4-6 7-5"
+    },
+    {
+      "id": "1264230",
+      "date": "2026-05-23",
+      "tournamentId": 21668,
+      "tournamentName": "Istanbul Challenger",
+      "opponentId": 18669,
+      "opponentName": "David Jorda Sanchis",
+      "won": false,
+      "result": "6-4 6-4"
+    },
+    {
+      "id": "1264202",
+      "date": "2026-05-22",
+      "tournamentId": 21668,
+      "tournamentName": "Istanbul Challenger",
+      "opponentId": 17972,
+      "opponentName": "Franco Agamenone",
+      "won": true,
+      "result": "6-4 6-2"
+    },
+    {
       "id": "1264215",
       "date": "2026-05-21",
       "tournamentId": 21668,
@@ -9,6 +39,16 @@
       "opponentName": "Mert Alkaya",
       "won": true,
       "result": "6-1 6-4"
+    },
+    {
+      "id": "1264214",
+      "date": "2026-05-19",
+      "tournamentId": 21668,
+      "tournamentName": "Istanbul Challenger",
+      "opponentId": 43553,
+      "opponentName": "Sergey Fomin",
+      "won": true,
+      "result": "6-4 6-2"
     },
     {
       "id": "1259482",
@@ -31,77 +71,47 @@
       "result": "6-4 2-6 6-2"
     },
     {
-      "id": "1258279",
-      "date": "2026-04-06",
+      "id": "1259504",
+      "date": "2026-04-24",
+      "tournamentId": 21604,
+      "tournamentName": "Shymkent 1 Challenger",
+      "opponentId": 43553,
+      "opponentName": "Sergey Fomin",
+      "won": false,
+      "result": "4-6 6-1 6-4"
+    },
+    {
+      "id": "1259505",
+      "date": "2026-04-23",
+      "tournamentId": 21604,
+      "tournamentName": "Shymkent 1 Challenger",
+      "opponentId": 78285,
+      "opponentName": "Dali Blanch",
+      "won": true,
+      "result": "6-2 6-2"
+    },
+    {
+      "id": "1258756",
+      "date": "2026-04-07",
       "tournamentId": 21592,
       "tournamentName": "Madrid Challenger",
-      "opponentId": 25533,
-      "opponentName": "Calvin Hemery",
-      "won": true,
-      "result": "2-6 6-4 6-1"
-    },
-    {
-      "id": "1245795",
-      "date": "2026-01-20",
-      "tournamentId": 21400,
-      "tournamentName": "M25 Antalya 3",
-      "opponentId": 98292,
-      "opponentName": "Miguel Tobon",
-      "won": true,
-      "result": "3-6 6-1 6-3"
-    },
-    {
-      "id": "1233775",
-      "date": "2025-11-21",
-      "tournamentId": 21191,
-      "tournamentName": "Montemar Challenger",
-      "opponentId": 12653,
-      "opponentName": "Marco Trungelliti",
+      "opponentId": 73196,
+      "opponentName": "Dominic Stricker",
       "won": false,
-      "result": "2-6 6-3 6-3"
-    },
-    {
-      "id": "1210279",
-      "date": "2025-07-19",
-      "tournamentId": 20860,
-      "tournamentName": "M25 Kramsach 1",
-      "opponentId": 48013,
-      "opponentName": "Henri Squire",
-      "won": true,
-      "result": "3-0 ret."
-    },
-    {
-      "id": "1195242",
-      "date": "2025-05-10",
-      "tournamentId": 20666,
-      "tournamentName": "M25 Kursumlijska Banja 1",
-      "opponentId": 47259,
-      "opponentName": "Clement Tabur",
-      "won": true,
-      "result": "6-3 6-1"
-    },
-    {
-      "id": "1181854",
-      "date": "2025-02-21",
-      "tournamentId": 20468,
-      "tournamentName": "M15 Antalya 5",
-      "opponentId": 89700,
-      "opponentName": "Arthur Nagel",
-      "won": true,
-      "result": "6-2 3-6 6-4"
-    },
-    {
-      "id": "936629",
-      "date": "2022-05-26",
-      "tournamentId": 17894,
-      "tournamentName": "M15 Brcko 1",
-      "opponentId": 56641,
-      "opponentName": "Gauthier Onclin",
-      "won": false,
-      "result": "6-3 6-1"
+      "result": "6-3 6-7(1) 6-2"
     }
   ],
   "Hard": [
+    {
+      "id": "1251909",
+      "date": "2026-02-08",
+      "tournamentId": 21489,
+      "tournamentName": "Davis Cup, Group I, PO, NZL-BIH 3-2",
+      "opponentId": 99755,
+      "opponentName": "James Watt",
+      "won": false,
+      "result": "6-3 7-6(4)"
+    },
     {
       "id": "1114105",
       "date": "2024-02-04",
@@ -114,6 +124,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1780863645684,
+  "updatedAt": 1780920225858,
   "playerName": "Andrej Nedic"
 }

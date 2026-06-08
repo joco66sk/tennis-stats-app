@@ -21,6 +21,16 @@
       "result": "6-2 7-5"
     },
     {
+      "id": "1191231",
+      "date": "2025-04-30",
+      "tournamentId": 20615,
+      "tournamentName": "Ostrava Challenger",
+      "opponentId": 93848,
+      "opponentName": "Petr Brunclik",
+      "won": false,
+      "result": "6-7(4) 6-3 6-3"
+    },
+    {
       "id": "1191270",
       "date": "2025-04-29",
       "tournamentId": 20615,
@@ -29,6 +39,16 @@
       "opponentName": "Elmer Moller",
       "won": true,
       "result": "6-3 6-2"
+    },
+    {
+      "id": "1171045",
+      "date": "2025-03-30",
+      "tournamentId": 20332,
+      "tournamentName": "Grand Prix Hassan II - Marrakech",
+      "opponentId": 60140,
+      "opponentName": "Harold Mayot",
+      "won": false,
+      "result": "6-4 3-0 ret."
     },
     {
       "id": "1102693",
@@ -79,26 +99,6 @@
       "opponentName": "Fabian Marozsan",
       "won": false,
       "result": "7-6(6) 7-6(2)"
-    },
-    {
-      "id": "975489",
-      "date": "2023-06-01",
-      "tournamentId": 18432,
-      "tournamentName": "French Open - Paris",
-      "opponentId": 29939,
-      "opponentName": "Frances Tiafoe",
-      "won": false,
-      "result": "3-6 6-3 7-5 6-2"
-    },
-    {
-      "id": "975582",
-      "date": "2023-05-29",
-      "tournamentId": 18432,
-      "tournamentName": "French Open - Paris",
-      "opponentId": 34233,
-      "opponentName": "Alexei Popyrin",
-      "won": true,
-      "result": "6-3 6-7(4) 6-1 6-2"
     }
   ],
   "Hard": [
@@ -143,6 +143,16 @@
       "result": "6-2 7-5"
     },
     {
+      "id": "1183565",
+      "date": "2025-03-11",
+      "tournamentId": 20516,
+      "tournamentName": "Hersonissos 2 Challenger",
+      "opponentId": 84561,
+      "opponentName": "Marko Topo",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
       "id": "1183274",
       "date": "2025-03-05",
       "tournamentId": 20511,
@@ -163,6 +173,26 @@
       "result": "2-6 7-6(2) 6-2"
     },
     {
+      "id": "1175914",
+      "date": "2025-02-06",
+      "tournamentId": 20394,
+      "tournamentName": "Chennai Challenger",
+      "opponentId": 55257,
+      "opponentName": "Timofey Skatov",
+      "won": false,
+      "result": "6-4 7-5"
+    },
+    {
+      "id": "1174972",
+      "date": "2025-01-02",
+      "tournamentId": 20379,
+      "tournamentName": "Nonthaburi 1 Challenger",
+      "opponentId": 32764,
+      "opponentName": "Enrico Dalla Valle",
+      "won": true,
+      "result": "6-1 6-1"
+    },
+    {
       "id": "1107767",
       "date": "2024-11-02",
       "tournamentId": 19452,
@@ -171,36 +201,6 @@
       "opponentName": "Marton Fucsovics",
       "won": false,
       "result": "6-4 6-1"
-    },
-    {
-      "id": "1157820",
-      "date": "2024-11-01",
-      "tournamentId": 20122,
-      "tournamentName": "Bratislava 2 Challenger",
-      "opponentId": 28900,
-      "opponentName": "Roman Safiullin",
-      "won": false,
-      "result": "6-3 6-2"
-    },
-    {
-      "id": "1105379",
-      "date": "2024-10-16",
-      "tournamentId": 19414,
-      "tournamentName": "Almaty Open - Almaty",
-      "opponentId": 64891,
-      "opponentName": "Alexander Shevchenko",
-      "won": false,
-      "result": "6-1 6-7(5) 7-5"
-    },
-    {
-      "id": "1105384",
-      "date": "2024-10-15",
-      "tournamentId": 19414,
-      "tournamentName": "Almaty Open - Almaty",
-      "opponentId": 26140,
-      "opponentName": "Zhizhen Zhang",
-      "won": true,
-      "result": "6-4 7-6(2)"
     }
   ],
   "Grass": [
@@ -295,6 +295,6 @@
       "result": "6-7(4) 6-1 6-2"
     }
   ],
-  "updatedAt": 1780801580649,
+  "updatedAt": 1780920225641,
   "playerName": "Aslan Karatsev"
 }

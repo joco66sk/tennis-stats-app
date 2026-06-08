@@ -11,6 +11,26 @@
       "result": "7-5 6-3"
     },
     {
+      "id": "1243651",
+      "date": "2026-05-20",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 83794,
+      "opponentName": "Henrique Rocha",
+      "won": true,
+      "result": "6-3 3-6 7-6(9)"
+    },
+    {
+      "id": "1243649",
+      "date": "2026-05-19",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 83554,
+      "opponentName": "Sascha Gueymard Wayenburg",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
       "id": "1243064",
       "date": "2026-04-20",
       "tournamentId": 21325,
@@ -41,6 +61,16 @@
       "result": "6-4 3-6 6-2"
     },
     {
+      "id": "1171689",
+      "date": "2025-05-17",
+      "tournamentId": 20338,
+      "tournamentName": "Hamburg Open - Hamburg",
+      "opponentId": 100215,
+      "opponentName": "Mika Petkovic",
+      "won": true,
+      "result": "6-3 6-2"
+    },
+    {
       "id": "1191014",
       "date": "2025-05-03",
       "tournamentId": 20611,
@@ -61,44 +91,14 @@
       "result": "6-2 6-3"
     },
     {
-      "id": "1191025",
-      "date": "2025-04-30",
+      "id": "1191003",
+      "date": "2025-05-01",
       "tournamentId": 20611,
       "tournamentName": "Aix En Provence Challenger",
-      "opponentId": 46747,
-      "opponentName": "Hugo Gaston",
+      "opponentId": 26845,
+      "opponentName": "Daniel Elahi Galan",
       "won": true,
-      "result": "7-6(4) 2-1 ret."
-    },
-    {
-      "id": "1171376",
-      "date": "2025-04-23",
-      "tournamentId": 20336,
-      "tournamentName": "Mutua Madrid Open - Madrid",
-      "opponentId": 5917,
-      "opponentName": "Gael Monfils",
-      "won": false,
-      "result": "1-6 6-2 6-4"
-    },
-    {
-      "id": "1171332",
-      "date": "2025-04-21",
-      "tournamentId": 20336,
-      "tournamentName": "Mutua Madrid Open - Madrid",
-      "opponentId": 13674,
-      "opponentName": "Marton Fucsovics",
-      "won": true,
-      "result": "2-6 6-3 6-2"
-    },
-    {
-      "id": "1171282",
-      "date": "2025-04-14",
-      "tournamentId": 20335,
-      "tournamentName": "BMW Open - Munich",
-      "opponentId": 87562,
-      "opponentName": "Ben Shelton",
-      "won": false,
-      "result": "4-6 7-6(6) 7-6(3)"
+      "result": "4-6 7-6(5) 7-5"
     }
   ],
   "Hard": [
@@ -131,6 +131,26 @@
       "opponentName": "Quinn Vandecasteele",
       "won": true,
       "result": "6-3 6-7(6) 7-5"
+    },
+    {
+      "id": "1252833",
+      "date": "2026-03-23",
+      "tournamentId": 21514,
+      "tournamentName": "Morelia Challenger",
+      "opponentId": 17123,
+      "opponentName": "Mitchell Krueger",
+      "won": true,
+      "result": "7-6(5) 6-4"
+    },
+    {
+      "id": "1252394",
+      "date": "2026-03-14",
+      "tournamentId": 21506,
+      "tournamentName": "Cherbourg Challenger",
+      "opponentId": 45553,
+      "opponentName": "Pavel Kotov",
+      "won": false,
+      "result": "6-4 3-6 6-3"
     },
     {
       "id": "1251948",
@@ -173,37 +193,27 @@
       "result": "6-3 4-6 6-4"
     },
     {
-      "id": "1247209",
-      "date": "2026-02-06",
-      "tournamentId": 21418,
-      "tournamentName": "Cleveland Challenger",
-      "opponentId": 71628,
-      "opponentName": "Quinn Vandecasteele",
+      "id": "1248348",
+      "date": "2026-02-16",
+      "tournamentId": 21428,
+      "tournamentName": "Metepec Challenger",
+      "opponentId": 14898,
+      "opponentName": "Facundo Mena",
       "won": true,
-      "result": "6-4 6-4"
-    },
-    {
-      "id": "1243986",
-      "date": "2026-01-24",
-      "tournamentId": 21375,
-      "tournamentName": "Soma Bay Challenger",
-      "opponentId": 79067,
-      "opponentName": "Jack Pinnington Jones",
-      "won": false,
-      "result": "7-6(5) 6-1"
-    },
-    {
-      "id": "1244016",
-      "date": "2026-01-23",
-      "tournamentId": 21375,
-      "tournamentName": "Soma Bay Challenger",
-      "opponentId": 83314,
-      "opponentName": "Lukas Neumayer",
-      "won": true,
-      "result": "5-7 7-5 6-3"
+      "result": "6-7(7) 6-4 7-6(5)"
     }
   ],
   "Grass": [
+    {
+      "id": "1172540",
+      "date": "2025-06-23",
+      "tournamentId": 20348,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 83315,
+      "opponentName": "James McCabe",
+      "won": false,
+      "result": "6-4 7-5"
+    },
     {
       "id": "1200108",
       "date": "2025-06-10",
@@ -265,6 +275,6 @@
       "result": "6-3 6-7(10) 7-6(6)"
     }
   ],
-  "updatedAt": 1780863645549,
+  "updatedAt": 1780920225690,
   "playerName": "Borna Gojo"
 }

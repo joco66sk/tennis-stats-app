@@ -21,6 +21,16 @@
       "result": "6-3 6-4"
     },
     {
+      "id": "1252957",
+      "date": "2026-03-22",
+      "tournamentId": 21516,
+      "tournamentName": "Alicante Challenger",
+      "opponentId": 10828,
+      "opponentName": "Radu Albot",
+      "won": true,
+      "result": "6-3 6-7(8) 6-3"
+    },
+    {
       "id": "975552",
       "date": "2023-05-29",
       "tournamentId": 18432,
@@ -89,16 +99,6 @@
       "opponentName": "Daniel Evans",
       "won": true,
       "result": "2-6 6-2 6-3"
-    },
-    {
-      "id": "974772",
-      "date": "2023-04-08",
-      "tournamentId": 18424,
-      "tournamentName": "Monte-Carlo Rolex Masters - Monte-Carlo",
-      "opponentId": 46747,
-      "opponentName": "Hugo Gaston",
-      "won": true,
-      "result": "6-4 6-4"
     }
   ],
   "Hard": [
@@ -113,6 +113,26 @@
       "result": "7-6(0) 4-6 6-4"
     },
     {
+      "id": "1259242",
+      "date": "2026-04-19",
+      "tournamentId": 21600,
+      "tournamentName": "Gwangju Challenger",
+      "opponentId": 29953,
+      "opponentName": "Tung-Lin Wu",
+      "won": false,
+      "result": "6-2 6-4"
+    },
+    {
+      "id": "1258919",
+      "date": "2026-04-16",
+      "tournamentId": 21595,
+      "tournamentName": "Busan Challenger",
+      "opponentId": 18016,
+      "opponentName": "Liam Broady",
+      "won": false,
+      "result": "6-1 6-3"
+    },
+    {
       "id": "1258494",
       "date": "2026-04-14",
       "tournamentId": 21595,
@@ -121,6 +141,26 @@
       "opponentName": "Dane Sweeny",
       "won": true,
       "result": "7-6(1) 6-7(4) 6-2"
+    },
+    {
+      "id": "1252147",
+      "date": "2026-03-02",
+      "tournamentId": 21501,
+      "tournamentName": "Fujairah 1 Challenger",
+      "opponentId": 91428,
+      "opponentName": "Carlo Alberto Caniato",
+      "won": true,
+      "result": "7-6(3) 7-6(5)"
+    },
+    {
+      "id": "1248673",
+      "date": "2026-02-25",
+      "tournamentId": 21433,
+      "tournamentName": "Pune Challenger",
+      "opponentId": 94055,
+      "opponentName": "Manas Manoj Dhamne",
+      "won": false,
+      "result": "6-3 ret."
     },
     {
       "id": "1248228",
@@ -143,6 +183,16 @@
       "result": "6-2 2-1 ret."
     },
     {
+      "id": "1214414",
+      "date": "2025-08-13",
+      "tournamentId": 20914,
+      "tournamentName": "Hersonissos 3 Challenger",
+      "opponentId": 65558,
+      "opponentName": "Harry Wendelken",
+      "won": false,
+      "result": "2-6 6-2 6-3"
+    },
+    {
       "id": "1213947",
       "date": "2025-08-04",
       "tournamentId": 20906,
@@ -151,56 +201,6 @@
       "opponentName": "Kamil Majchrzak",
       "won": false,
       "result": "3-6 6-0 7-5"
-    },
-    {
-      "id": "1194308",
-      "date": "2025-05-06",
-      "tournamentId": 20651,
-      "tournamentName": "Wuxi Challenger",
-      "opponentId": 67535,
-      "opponentName": "Terence Atmane",
-      "won": false,
-      "result": "7-6(2) 4-6 6-2"
-    },
-    {
-      "id": "1193291",
-      "date": "2025-04-23",
-      "tournamentId": 20639,
-      "tournamentName": "M15 Luan 3",
-      "opponentId": 54358,
-      "opponentName": "Ye Cong Mo",
-      "won": true,
-      "result": "7-5 6-2"
-    },
-    {
-      "id": "1107712",
-      "date": "2024-02-27",
-      "tournamentId": 19451,
-      "tournamentName": "Tenerife 3 Challenger",
-      "opponentId": 47387,
-      "opponentName": "August Holmgren",
-      "won": false,
-      "result": "6-3 7-5"
-    },
-    {
-      "id": "1073880",
-      "date": "2023-10-09",
-      "tournamentId": 19131,
-      "tournamentName": "Malaga Challenger",
-      "opponentId": 52394,
-      "opponentName": "Thiago Agustin Tirante",
-      "won": false,
-      "result": "6-3 6-2"
-    },
-    {
-      "id": "981015",
-      "date": "2023-08-28",
-      "tournamentId": 18507,
-      "tournamentName": "U.S. Open - New York",
-      "opponentId": 52934,
-      "opponentName": "Juan Manuel Cerundolo",
-      "won": false,
-      "result": "2-6 6-7(4) 6-3 6-3 6-3"
     }
   ],
   "Grass": [
@@ -305,6 +305,6 @@
       "result": "6-4 6-3 6-1"
     }
   ],
-  "updatedAt": 1780863645536,
+  "updatedAt": 1780920225677,
   "playerName": "Ilya Ivashka"
 }

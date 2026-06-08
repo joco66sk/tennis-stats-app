@@ -11,6 +11,26 @@
       "result": "4-6 6-1 6-0"
     },
     {
+      "id": "1212467",
+      "date": "2025-07-27",
+      "tournamentId": 20887,
+      "tournamentName": "M15 Kursumlijska Banja 12",
+      "opponentId": 54380,
+      "opponentName": "Tommaso Compagnucci",
+      "won": true,
+      "result": "6-4 6-2"
+    },
+    {
+      "id": "1201461",
+      "date": "2025-06-03",
+      "tournamentId": 20745,
+      "tournamentName": "M25 Belgrade 1",
+      "opponentId": 60139,
+      "opponentName": "Lilian Marmousez",
+      "won": false,
+      "result": "2-0 ret."
+    },
+    {
       "id": "1194788",
       "date": "2025-05-13",
       "tournamentId": 20659,
@@ -79,29 +99,19 @@
       "opponentName": "Moerani Bouzige",
       "won": true,
       "result": "6-3 6-2"
-    },
-    {
-      "id": "990086",
-      "date": "2023-03-21",
-      "tournamentId": 18625,
-      "tournamentName": "Zadar Challenger",
-      "opponentId": 85899,
-      "opponentName": "Dino Prizmic",
-      "won": false,
-      "result": "6-1 6-3"
-    },
-    {
-      "id": "989880",
-      "date": "2023-03-13",
-      "tournamentId": 18621,
-      "tournamentName": "Szekesfehervar Challenger",
-      "opponentId": 71174,
-      "opponentName": "Giovanni Mpetshi Perricard",
-      "won": true,
-      "result": "6-4 3-6 6-3"
     }
   ],
   "Hard": [
+    {
+      "id": "1248602",
+      "date": "2026-02-24",
+      "tournamentId": 21432,
+      "tournamentName": "Lugano Challenger",
+      "opponentId": 97369,
+      "opponentName": "Joel Schwaerzler",
+      "won": false,
+      "result": "6-3 6-3"
+    },
     {
       "id": "1248633",
       "date": "2026-02-23",
@@ -121,6 +131,36 @@
       "opponentName": "Jacopo Vasami",
       "won": false,
       "result": "6-4 6-3"
+    },
+    {
+      "id": "1250239",
+      "date": "2026-02-18",
+      "tournamentId": 21453,
+      "tournamentName": "M25 Trento 1",
+      "opponentId": 21524,
+      "opponentName": "Jelle Sels",
+      "won": true,
+      "result": "6-1 6-4"
+    },
+    {
+      "id": "1251911",
+      "date": "2026-02-07",
+      "tournamentId": 21489,
+      "tournamentName": "Davis Cup, Group I, PO, NZL-BIH 3-2",
+      "opponentId": 99755,
+      "opponentName": "James Watt",
+      "won": true,
+      "result": "6-2 7-6(5)"
+    },
+    {
+      "id": "1234327",
+      "date": "2025-11-28",
+      "tournamentId": 21201,
+      "tournamentName": "Manama 2 Challenger",
+      "opponentId": 93848,
+      "opponentName": "Petr Brunclik",
+      "won": false,
+      "result": "6-1 6-3"
     },
     {
       "id": "1234366",
@@ -143,6 +183,16 @@
       "result": "6-2 6-4"
     },
     {
+      "id": "1161893",
+      "date": "2024-09-15",
+      "tournamentId": 20183,
+      "tournamentName": "Davis Cup, World Group I, 1R, TPE-BIH 3-2",
+      "opponentId": 29953,
+      "opponentName": "Tung-Lin Wu",
+      "won": false,
+      "result": "6-1 6-4"
+    },
+    {
       "id": "1161897",
       "date": "2024-09-14",
       "tournamentId": 20183,
@@ -151,56 +201,6 @@
       "opponentName": "Chun Hsin Tseng",
       "won": true,
       "result": "3-6 7-5 6-4"
-    },
-    {
-      "id": "1150074",
-      "date": "2024-09-01",
-      "tournamentId": 20014,
-      "tournamentName": "Shanghai Challenger",
-      "opponentId": 50143,
-      "opponentName": "Rio Noguchi",
-      "won": false,
-      "result": "6-7(6) 7-5 6-0"
-    },
-    {
-      "id": "1075630",
-      "date": "2023-10-24",
-      "tournamentId": 19143,
-      "tournamentName": "Ortisei Challenger",
-      "opponentId": 60625,
-      "opponentName": "Alejandro Moro Canas",
-      "won": true,
-      "result": "7-6(3) 6-3"
-    },
-    {
-      "id": "983922",
-      "date": "2023-01-10",
-      "tournamentId": 18526,
-      "tournamentName": "M25 Loughborough 1",
-      "opponentId": 62404,
-      "opponentName": "Tristan Mccormick",
-      "won": true,
-      "result": "6-3 6-4"
-    },
-    {
-      "id": "970826",
-      "date": "2022-11-30",
-      "tournamentId": 18365,
-      "tournamentName": "M25 Trnava 1",
-      "opponentId": 74880,
-      "opponentName": "Stefanos Sakellaridis",
-      "won": true,
-      "result": "6-4 7-5"
-    },
-    {
-      "id": "960932",
-      "date": "2022-10-09",
-      "tournamentId": 18235,
-      "tournamentName": "Ismaning Challenger",
-      "opponentId": 86351,
-      "opponentName": "Tom Gentzsch",
-      "won": true,
-      "result": "3-6 6-4 7-5"
     }
   ],
   "Grass": [
@@ -215,6 +215,6 @@
       "result": "7-6(4) 6-4"
     }
   ],
-  "updatedAt": 1780863645478,
+  "updatedAt": 1780920225620,
   "playerName": "Mirza Basic"
 }

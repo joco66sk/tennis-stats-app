@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1196002",
+      "date": "2025-05-16",
+      "tournamentId": 20676,
+      "tournamentName": "M25 Vic 1",
+      "opponentId": 11981,
+      "opponentName": "Lorenzo Giustino",
+      "won": false,
+      "result": "6-1 2-1 ret."
+    },
+    {
       "id": "1190745",
       "date": "2025-04-20",
       "tournamentId": 20607,
@@ -51,6 +61,16 @@
       "result": "7-5 6-3"
     },
     {
+      "id": "1115020",
+      "date": "2024-03-25",
+      "tournamentId": 19564,
+      "tournamentName": "Girona Challenger",
+      "opponentId": 73608,
+      "opponentName": "Felix Gill",
+      "won": false,
+      "result": "6-3 1-0 ret."
+    },
+    {
       "id": "1089975",
       "date": "2023-11-28",
       "tournamentId": 19254,
@@ -79,26 +99,6 @@
       "opponentName": "Hugo Gaston",
       "won": false,
       "result": "6-4 6-4"
-    },
-    {
-      "id": "1034368",
-      "date": "2023-07-12",
-      "tournamentId": 18895,
-      "tournamentName": "Iasi Challenger",
-      "opponentId": 29906,
-      "opponentName": "Juan Pablo Ficovich",
-      "won": true,
-      "result": "6-3 6-4"
-    },
-    {
-      "id": "1034396",
-      "date": "2023-07-11",
-      "tournamentId": 18895,
-      "tournamentName": "Iasi Challenger",
-      "opponentId": 51846,
-      "opponentName": "Alex Marti Pujolras",
-      "won": true,
-      "result": "6-1 6-1"
     }
   ],
   "Hard": [
@@ -111,6 +111,16 @@
       "opponentName": "Toby Samuel",
       "won": true,
       "result": "5-7 6-4 2-1 ret."
+    },
+    {
+      "id": "1176232",
+      "date": "2025-02-13",
+      "tournamentId": 20399,
+      "tournamentName": "Tenerife 2 Challenger",
+      "opponentId": 46748,
+      "opponentName": "Nicolas Alvarez Varona",
+      "won": false,
+      "result": "2-2 ret."
     },
     {
       "id": "1176264",
@@ -191,19 +201,20 @@
       "opponentName": "Henri Squire",
       "won": false,
       "result": "6-2 6-4"
-    },
+    }
+  ],
+  "Grass": [
     {
-      "id": "1107596",
-      "date": "2024-02-18",
-      "tournamentId": 19449,
-      "tournamentName": "Tenerife 2 Challenger",
-      "opponentId": 50391,
-      "opponentName": "Imanol Lopez Morillo",
-      "won": true,
+      "id": "976034",
+      "date": "2023-06-24",
+      "tournamentId": 18438,
+      "tournamentName": "Mallorca Championships - Mallorca",
+      "opponentId": 22710,
+      "opponentName": "Li Tu",
+      "won": false,
       "result": "6-4 6-3"
     }
   ],
-  "Grass": [],
-  "updatedAt": 1780863645487,
+  "updatedAt": 1780920225628,
   "playerName": "Steven Diez"
 }

@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1264800",
+      "date": "2026-05-05",
+      "tournamentId": 21677,
+      "tournamentName": "M25 Sabadell",
+      "opponentId": 76010,
+      "opponentName": "Daniel Rincon",
+      "won": false,
+      "result": "6-0 6-0"
+    },
+    {
       "id": "1259491",
       "date": "2026-04-30",
       "tournamentId": 21611,
@@ -9,6 +19,26 @@
       "opponentName": "Edas Butvilas",
       "won": false,
       "result": "7-5 6-1"
+    },
+    {
+      "id": "1259901",
+      "date": "2026-04-28",
+      "tournamentId": 21611,
+      "tournamentName": "Shymkent 2 Challenger",
+      "opponentId": 10828,
+      "opponentName": "Radu Albot",
+      "won": true,
+      "result": "2-6 6-1 7-5"
+    },
+    {
+      "id": "1252806",
+      "date": "2026-03-16",
+      "tournamentId": 21513,
+      "tournamentName": "Zadar Challenger",
+      "opponentId": 85763,
+      "opponentName": "Samuele Pieri",
+      "won": false,
+      "result": "6-4 5-7 6-4"
     },
     {
       "id": "1240581",
@@ -21,6 +51,26 @@
       "result": "7-6(8) 6-4"
     },
     {
+      "id": "1234136",
+      "date": "2025-11-25",
+      "tournamentId": 21197,
+      "tournamentName": "Bogota Challenger",
+      "opponentId": 18669,
+      "opponentName": "David Jorda Sanchis",
+      "won": false,
+      "result": "6-3 6-1"
+    },
+    {
+      "id": "1234137",
+      "date": "2025-11-24",
+      "tournamentId": 21197,
+      "tournamentName": "Bogota Challenger",
+      "opponentId": 12276,
+      "opponentName": "Juan Sebastian Gomez",
+      "won": false,
+      "result": "6-4 6-3"
+    },
+    {
       "id": "1233780",
       "date": "2025-11-16",
       "tournamentId": 21191,
@@ -31,74 +81,24 @@
       "result": "6-3 6-7(2) 6-1"
     },
     {
-      "id": "1207536",
-      "date": "2025-07-06",
-      "tournamentId": 20821,
-      "tournamentName": "Iasi Challenger",
-      "opponentId": 92247,
-      "opponentName": "Federico Bondioli",
+      "id": "1226885",
+      "date": "2025-10-03",
+      "tournamentId": 21079,
+      "tournamentName": "M25 Zaragoza 1",
+      "opponentId": 11981,
+      "opponentName": "Lorenzo Giustino",
+      "won": false,
+      "result": "6-4 6-2"
+    },
+    {
+      "id": "1226872",
+      "date": "2025-10-02",
+      "tournamentId": 21079,
+      "tournamentName": "M25 Zaragoza 1",
+      "opponentId": 68297,
+      "opponentName": "Alex Martinez",
       "won": true,
-      "result": "6-1 7-6(8)"
-    },
-    {
-      "id": "1200181",
-      "date": "2025-06-08",
-      "tournamentId": 20726,
-      "tournamentName": "Perugia Challenger",
-      "opponentId": 42990,
-      "opponentName": "Masamichi Imamura",
-      "won": true,
-      "result": "6-4 6-3"
-    },
-    {
-      "id": "1184150",
-      "date": "2025-04-02",
-      "tournamentId": 20525,
-      "tournamentName": "Menorca Challenger",
-      "opponentId": 87277,
-      "opponentName": "Arthur Gea",
-      "won": false,
-      "result": "6-3 4-6 6-0"
-    },
-    {
-      "id": "1162906",
-      "date": "2024-11-25",
-      "tournamentId": 20213,
-      "tournamentName": "Maia Challenger",
-      "opponentId": 51846,
-      "opponentName": "Alex Marti Pujolras",
-      "won": false,
-      "result": "6-3 6-1"
-    },
-    {
-      "id": "1162328",
-      "date": "2024-11-11",
-      "tournamentId": 20204,
-      "tournamentName": "Montevideo Challenger",
-      "opponentId": 29673,
-      "opponentName": "Orlando Luz",
-      "won": false,
-      "result": "3-6 7-6(2) 6-2"
-    },
-    {
-      "id": "1162319",
-      "date": "2024-11-10",
-      "tournamentId": 20204,
-      "tournamentName": "Montevideo Challenger",
-      "opponentId": 75042,
-      "opponentName": "Alex Barrena",
-      "won": true,
-      "result": "2-6 6-3 6-4"
-    },
-    {
-      "id": "1162142",
-      "date": "2024-11-04",
-      "tournamentId": 20201,
-      "tournamentName": "Lima 2 Challenger",
-      "opponentId": 58723,
-      "opponentName": "Franco Roncadelli",
-      "won": false,
-      "result": "6-1 6-3"
+      "result": "3-6 6-3 6-2"
     }
   ],
   "Hard": [
@@ -143,6 +143,16 @@
       "result": "6-4 6-4"
     },
     {
+      "id": "1190393",
+      "date": "2025-04-15",
+      "tournamentId": 20601,
+      "tournamentName": "Busan Challenger",
+      "opponentId": 67986,
+      "opponentName": "Tristan Schoolkate",
+      "won": true,
+      "result": "6-4 3-6 6-3"
+    },
+    {
       "id": "1182782",
       "date": "2025-01-31",
       "tournamentId": 20483,
@@ -164,6 +174,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1780863645710,
+  "updatedAt": 1780920225890,
   "playerName": "Gerard Campana Lee"
 }

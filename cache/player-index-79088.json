@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1269518",
+      "date": "2026-06-01",
+      "tournamentId": 21734,
+      "tournamentName": "Perugia Challenger",
+      "opponentId": 55257,
+      "opponentName": "Timofey Skatov",
+      "won": false,
+      "result": "4-6 6-4 6-2"
+    },
+    {
       "id": "117743133",
       "date": "2026-05-25",
       "tournamentId": 21329,
@@ -19,6 +29,26 @@
       "opponentName": "Pablo Llamas Ruiz",
       "won": false,
       "result": "6-3 6-1"
+    },
+    {
+      "id": "1243567",
+      "date": "2026-05-20",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 50000,
+      "opponentName": "Joao Lucas Reis Da Silva",
+      "won": true,
+      "result": "4-6 6-3 6-4"
+    },
+    {
+      "id": "1243461",
+      "date": "2026-05-18",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 18720,
+      "opponentName": "Federico Coria",
+      "won": true,
+      "result": "6-4 6-1"
     },
     {
       "id": "1263437",
@@ -69,36 +99,6 @@
       "opponentName": "Sebastian Baez",
       "won": true,
       "result": "7-5 6-1"
-    },
-    {
-      "id": "1243158",
-      "date": "2026-04-21",
-      "tournamentId": 21325,
-      "tournamentName": "Mutua Madrid Open - Madrid",
-      "opponentId": 93550,
-      "opponentName": "Rei Sakamoto",
-      "won": true,
-      "result": "7-6(5) 6-7(5) 7-6(4)"
-    },
-    {
-      "id": "1243149",
-      "date": "2026-04-20",
-      "tournamentId": 21325,
-      "tournamentName": "Mutua Madrid Open - Madrid",
-      "opponentId": 87277,
-      "opponentName": "Arthur Gea",
-      "won": true,
-      "result": "6-2 6-4"
-    },
-    {
-      "id": "1242939",
-      "date": "2026-04-11",
-      "tournamentId": 21323,
-      "tournamentName": "Barcelona Open Banc Sabadell - Barcelona",
-      "opponentId": 79060,
-      "opponentName": "Hamad Medjedovic",
-      "won": false,
-      "result": "7-6(13) 6-4"
     }
   ],
   "Hard": [
@@ -225,6 +225,6 @@
       "result": "6-7(2) 6-4 6-4"
     }
   ],
-  "updatedAt": 1780863645687,
+  "updatedAt": 1780920041599,
   "playerName": "Vilius Gaubas"
 }

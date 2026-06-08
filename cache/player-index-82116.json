@@ -1,6 +1,36 @@
 {
   "Clay": [
     {
+      "id": "1207754",
+      "date": "2025-07-14",
+      "tournamentId": 20825,
+      "tournamentName": "San Marino Challenger",
+      "opponentId": 51965,
+      "opponentName": "Francesco Forti",
+      "won": true,
+      "result": "6-7(4) 6-4 6-4"
+    },
+    {
+      "id": "1207735",
+      "date": "2025-07-13",
+      "tournamentId": 20825,
+      "tournamentName": "San Marino Challenger",
+      "opponentId": 13048,
+      "opponentName": "Jozef Kovalik",
+      "won": true,
+      "result": "7-6(5) 7-6(4)"
+    },
+    {
+      "id": "1207518",
+      "date": "2025-07-06",
+      "tournamentId": 20821,
+      "tournamentName": "Iasi Challenger",
+      "opponentId": 84561,
+      "opponentName": "Marko Topo",
+      "won": false,
+      "result": "6-3 6-4"
+    },
+    {
       "id": "1201096",
       "date": "2025-07-01",
       "tournamentId": 20740,
@@ -11,6 +41,16 @@
       "result": "7-6(6) 6-4"
     },
     {
+      "id": "1200607",
+      "date": "2025-06-17",
+      "tournamentId": 20733,
+      "tournamentName": "Royan Challenger",
+      "opponentId": 17928,
+      "opponentName": "Norbert Gombos",
+      "won": true,
+      "result": "6-1 6-3"
+    },
+    {
       "id": "1198572",
       "date": "2025-05-29",
       "tournamentId": 20706,
@@ -19,6 +59,26 @@
       "opponentName": "Tiago Pereira",
       "won": false,
       "result": "3-6 7-6(6) 6-4"
+    },
+    {
+      "id": "1198550",
+      "date": "2025-05-28",
+      "tournamentId": 20706,
+      "tournamentName": "M25 Bol 2",
+      "opponentId": 40187,
+      "opponentName": "Andrea Guerrieri",
+      "won": true,
+      "result": "6-0 6-2"
+    },
+    {
+      "id": "1188755",
+      "date": "2025-03-30",
+      "tournamentId": 20581,
+      "tournamentName": "M15 Opatija 1",
+      "opponentId": 85851,
+      "opponentName": "Luka Mikrut",
+      "won": false,
+      "result": "6-3 7-6(4)"
     },
     {
       "id": "1162902",
@@ -39,66 +99,6 @@
       "opponentName": "Clement Tabur",
       "won": false,
       "result": "7-6(4) 7-6(3)"
-    },
-    {
-      "id": "1043819",
-      "date": "2023-07-29",
-      "tournamentId": 18954,
-      "tournamentName": "M25 Kramsach 1",
-      "opponentId": 50118,
-      "opponentName": "Mathys Erhard",
-      "won": true,
-      "result": "4-6 6-2 6-2"
-    },
-    {
-      "id": "1021584",
-      "date": "2023-05-23",
-      "tournamentId": 18747,
-      "tournamentName": "Skopje Challenger",
-      "opponentId": 85899,
-      "opponentName": "Dino Prizmic",
-      "won": false,
-      "result": "6-4 6-1"
-    },
-    {
-      "id": "1022832",
-      "date": "2023-05-14",
-      "tournamentId": 18763,
-      "tournamentName": "M25 Kursumlijska Banja 1",
-      "opponentId": 47259,
-      "opponentName": "Clement Tabur",
-      "won": false,
-      "result": "6-4 3-6 6-2"
-    },
-    {
-      "id": "995707",
-      "date": "2023-04-16",
-      "tournamentId": 18636,
-      "tournamentName": "Oeiras 3 Challenger",
-      "opponentId": 29180,
-      "opponentName": "Billy Harris",
-      "won": false,
-      "result": "6-2 4-6 6-4"
-    },
-    {
-      "id": "954719",
-      "date": "2022-07-26",
-      "tournamentId": 18135,
-      "tournamentName": "M15 Kottingbrunn 1",
-      "opponentId": 70909,
-      "opponentName": "Fausto Tabacco",
-      "won": true,
-      "result": "4-6 6-3 6-3"
-    },
-    {
-      "id": "941098",
-      "date": "2022-06-15",
-      "tournamentId": 17952,
-      "tournamentName": "M15 Skopje 1",
-      "opponentId": 29673,
-      "opponentName": "Orlando Luz",
-      "won": false,
-      "result": "7-6(2) 6-3"
     }
   ],
   "Hard": [
@@ -204,6 +204,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1780863645694,
+  "updatedAt": 1780920225871,
   "playerName": "Kalin Ivanovski"
 }

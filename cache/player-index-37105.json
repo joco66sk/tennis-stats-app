@@ -1,6 +1,26 @@
 {
   "Clay": [
     {
+      "id": "1194791",
+      "date": "2025-05-14",
+      "tournamentId": 20659,
+      "tournamentName": "Zagreb Challenger",
+      "opponentId": 76298,
+      "opponentName": "Jerome Kym",
+      "won": false,
+      "result": "6-2 6-0"
+    },
+    {
+      "id": "1194821",
+      "date": "2025-05-12",
+      "tournamentId": 20659,
+      "tournamentName": "Zagreb Challenger",
+      "opponentId": 85851,
+      "opponentName": "Luka Mikrut",
+      "won": true,
+      "result": "6-4 3-6 6-3"
+    },
+    {
       "id": "1102792",
       "date": "2024-05-27",
       "tournamentId": 19383,
@@ -79,26 +99,6 @@
       "opponentName": "Ugo Humbert",
       "won": true,
       "result": "7-6(6) 7-6(4)"
-    },
-    {
-      "id": "974865",
-      "date": "2023-04-20",
-      "tournamentId": 18425,
-      "tournamentName": "Barcelona Open Banc Sabadell - Barcelona",
-      "opponentId": 36519,
-      "opponentName": "Alejandro Davidovich Fokina",
-      "won": false,
-      "result": "6-4 7-5"
-    },
-    {
-      "id": "974853",
-      "date": "2023-04-18",
-      "tournamentId": 18425,
-      "tournamentName": "Barcelona Open Banc Sabadell - Barcelona",
-      "opponentId": 29939,
-      "opponentName": "Frances Tiafoe",
-      "won": true,
-      "result": "6-4 6-7(3) 6-4"
     }
   ],
   "Hard": [
@@ -173,6 +173,16 @@
       "result": "5-7 7-6(8) 6-2"
     },
     {
+      "id": "1221914",
+      "date": "2025-09-29",
+      "tournamentId": 21016,
+      "tournamentName": "Mouilleron-Le-Captif Challenger",
+      "opponentId": 73196,
+      "opponentName": "Dominic Stricker",
+      "won": true,
+      "result": "2-6 6-3 6-4"
+    },
+    {
       "id": "1221401",
       "date": "2025-09-23",
       "tournamentId": 21008,
@@ -191,16 +201,6 @@
       "opponentName": "Alexei Popyrin",
       "won": false,
       "result": "6-3 6-4 7-6(3)"
-    },
-    {
-      "id": "1190702",
-      "date": "2025-04-23",
-      "tournamentId": 20606,
-      "tournamentName": "Gwangju Challenger",
-      "opponentId": 84083,
-      "opponentName": "Ilia Simakin",
-      "won": false,
-      "result": "6-2 6-3"
     }
   ],
   "Grass": [
@@ -305,6 +305,6 @@
       "result": "6-3 3-6 6-3"
     }
   ],
-  "updatedAt": 1780863645579,
+  "updatedAt": 1780920225727,
   "playerName": "Emil Ruusuvuori"
 }

@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1200285",
+      "date": "2025-06-08",
+      "tournamentId": 20728,
+      "tournamentName": "Lyon Challenger",
+      "opponentId": 78284,
+      "opponentName": "Timo Legout",
+      "won": false,
+      "result": "6-1 4-6 6-3"
+    },
+    {
       "id": "1194923",
       "date": "2025-05-21",
       "tournamentId": 20661,
@@ -9,6 +19,16 @@
       "opponentName": "Jay Clarke",
       "won": false,
       "result": "6-4 6-4"
+    },
+    {
+      "id": "1194953",
+      "date": "2025-05-20",
+      "tournamentId": 20661,
+      "tournamentName": "Skopje Challenger",
+      "opponentId": 94055,
+      "opponentName": "Manas Manoj Dhamne",
+      "won": true,
+      "result": "6-2 6-1"
     },
     {
       "id": "1194370",
@@ -79,29 +99,19 @@
       "opponentName": "Botic Van De Zandschulp",
       "won": false,
       "result": "6-2 6-7(5) 6-3"
-    },
-    {
-      "id": "1131236",
-      "date": "2024-06-13",
-      "tournamentId": 19768,
-      "tournamentName": "Bratislava 1 Challenger",
-      "opponentId": 83314,
-      "opponentName": "Lukas Neumayer",
-      "won": true,
-      "result": "7-6(5) 7-6(4)"
-    },
-    {
-      "id": "1102713",
-      "date": "2024-05-27",
-      "tournamentId": 19383,
-      "tournamentName": "French Open - Paris",
-      "opponentId": 29935,
-      "opponentName": "Tommy Paul",
-      "won": false,
-      "result": "6-2 6-3 6-1"
     }
   ],
   "Hard": [
+    {
+      "id": "1176234",
+      "date": "2025-02-13",
+      "tournamentId": 20399,
+      "tournamentName": "Tenerife 2 Challenger",
+      "opponentId": 76010,
+      "opponentName": "Daniel Rincon",
+      "won": false,
+      "result": "6-1 7-6(5)"
+    },
     {
       "id": "1176276",
       "date": "2025-02-11",
@@ -111,6 +121,16 @@
       "opponentName": "Henrique Rocha",
       "won": true,
       "result": "6-2 ret."
+    },
+    {
+      "id": "1176044",
+      "date": "2025-02-04",
+      "tournamentId": 20396,
+      "tournamentName": "Tenerife 1 Challenger",
+      "opponentId": 51853,
+      "opponentName": "Pol Martin Tiffon",
+      "won": false,
+      "result": "2-6 6-4 6-2"
     },
     {
       "id": "1104610",
@@ -181,26 +201,6 @@
       "opponentName": "Aleksandar Kovacevic",
       "won": false,
       "result": "6-4 7-6(7)"
-    },
-    {
-      "id": "982103",
-      "date": "2023-10-05",
-      "tournamentId": 18514,
-      "tournamentName": "Shanghai Rolex Masters - Shanghai",
-      "opponentId": 46722,
-      "opponentName": "Jeff Wolf",
-      "won": false,
-      "result": "3-6 6-3 6-4"
-    },
-    {
-      "id": "980917",
-      "date": "2023-08-28",
-      "tournamentId": 18507,
-      "tournamentName": "U.S. Open - New York",
-      "opponentId": 87562,
-      "opponentName": "Ben Shelton",
-      "won": false,
-      "result": "1-6 6-3 6-2 6-4"
     }
   ],
   "Grass": [
@@ -225,6 +225,6 @@
       "result": "6-2 6-1"
     }
   ],
-  "updatedAt": 1780863645513,
+  "updatedAt": 1780920225655,
   "playerName": "Pedro Cachin"
 }

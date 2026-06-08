@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1208449",
+      "date": "2025-07-28",
+      "tournamentId": 20836,
+      "tournamentName": "Liberec Challenger",
+      "opponentId": 34539,
+      "opponentName": "Alex Molcan",
+      "won": false,
+      "result": "1-6 6-1 6-3"
+    },
+    {
       "id": "1172834",
       "date": "2025-07-16",
       "tournamentId": 20350,
@@ -11,6 +21,16 @@
       "result": "6-4 6-1"
     },
     {
+      "id": "1201062",
+      "date": "2025-07-01",
+      "tournamentId": 20740,
+      "tournamentName": "Troyes Challenger",
+      "opponentId": 84377,
+      "opponentName": "Mika Brunold",
+      "won": false,
+      "result": "4-6 6-4 3-0 ret."
+    },
+    {
       "id": "1201093",
       "date": "2025-06-29",
       "tournamentId": 20740,
@@ -19,6 +39,16 @@
       "opponentName": "Alec Beckley",
       "won": true,
       "result": "6-3 6-4"
+    },
+    {
+      "id": "1202391",
+      "date": "2025-06-11",
+      "tournamentId": 20757,
+      "tournamentName": "M25 Varnamo 1",
+      "opponentId": 52968,
+      "opponentName": "Marvin Moeller",
+      "won": true,
+      "result": "6-1 6-1"
     },
     {
       "id": "1182882",
@@ -69,36 +99,6 @@
       "opponentName": "Hamad Medjedovic",
       "won": true,
       "result": "2-6 6-3 7-5"
-    },
-    {
-      "id": "926601",
-      "date": "2022-07-25",
-      "tournamentId": 17735,
-      "tournamentName": "Plava Laguna Croatia Open - Umag",
-      "opponentId": 31358,
-      "opponentName": "Jaume Antoni Munar Clar",
-      "won": false,
-      "result": "4-6 6-1 6-4"
-    },
-    {
-      "id": "943087",
-      "date": "2022-07-07",
-      "tournamentId": 17979,
-      "tournamentName": "Salzburg Challenger",
-      "opponentId": 36263,
-      "opponentName": "Corentin Moutet",
-      "won": false,
-      "result": "7-6(2) 6-3"
-    },
-    {
-      "id": "914490",
-      "date": "2022-05-28",
-      "tournamentId": 17563,
-      "tournamentName": "French Open - Paris",
-      "opponentId": 30470,
-      "opponentName": "Stefanos Tsitsipas",
-      "won": false,
-      "result": "6-2 6-2 6-1"
     }
   ],
   "Hard": [
@@ -121,6 +121,26 @@
       "opponentName": "Billy Harris",
       "won": false,
       "result": "6-7(6) 7-6(5) 6-3"
+    },
+    {
+      "id": "1175803",
+      "date": "2025-02-03",
+      "tournamentId": 20392,
+      "tournamentName": "Lille Challenger",
+      "opponentId": 48011,
+      "opponentName": "Patrick Zahraj",
+      "won": false,
+      "result": "7-6(2) 7-5"
+    },
+    {
+      "id": "1175794",
+      "date": "2025-02-02",
+      "tournamentId": 20392,
+      "tournamentName": "Lille Challenger",
+      "opponentId": 28685,
+      "opponentName": "Viktor Durasovic",
+      "won": true,
+      "result": "6-3 1-6 7-5"
     },
     {
       "id": "1182767",
@@ -153,6 +173,16 @@
       "result": "6-7(2) 6-2 6-3"
     },
     {
+      "id": "1178270",
+      "date": "2025-01-24",
+      "tournamentId": 20425,
+      "tournamentName": "M25 Esch/Alzette 1",
+      "opponentId": 17928,
+      "opponentName": "Norbert Gombos",
+      "won": true,
+      "result": "4-6 6-4 6-3"
+    },
+    {
       "id": "974288",
       "date": "2023-03-22",
       "tournamentId": 18420,
@@ -171,36 +201,6 @@
       "opponentName": "Alexei Popyrin",
       "won": false,
       "result": "6-2 6-2"
-    },
-    {
-      "id": "974128",
-      "date": "2023-03-09",
-      "tournamentId": 18419,
-      "tournamentName": "BNP Paribas Open - Indian Wells",
-      "opponentId": 58149,
-      "opponentName": "Rinky Hijikata",
-      "won": false,
-      "result": "6-4 7-5"
-    },
-    {
-      "id": "973946",
-      "date": "2023-03-01",
-      "tournamentId": 18417,
-      "tournamentName": "Dubai Duty Free Tennis Championships - Dubai",
-      "opponentId": 24249,
-      "opponentName": "Botic Van De Zandschulp",
-      "won": false,
-      "result": "3-6 6-3 6-3"
-    },
-    {
-      "id": "973778",
-      "date": "2023-02-24",
-      "tournamentId": 18414,
-      "tournamentName": "Open 13 Provence - Marseille",
-      "opponentId": 26473,
-      "opponentName": "Hubert Hurkacz",
-      "won": false,
-      "result": "6-3 3-6 7-6(6)"
     }
   ],
   "Grass": [
@@ -295,6 +295,6 @@
       "result": "6-3 7-5"
     }
   ],
-  "updatedAt": 1780863645572,
+  "updatedAt": 1780920225717,
   "playerName": "Mikael Ymer"
 }

@@ -21,12 +21,32 @@
       "result": "7-5 6-2"
     },
     {
+      "id": "1194611",
+      "date": "2025-05-14",
+      "tournamentId": 20656,
+      "tournamentName": "Turin Challenger",
+      "opponentId": 36042,
+      "opponentName": "Oleg Prihodko",
+      "won": true,
+      "result": "7-5 6-4"
+    },
+    {
       "id": "1171484",
       "date": "2025-05-08",
       "tournamentId": 20337,
       "tournamentName": "Internazionali BNL d'Italia - Rome",
       "opponentId": 68090,
       "opponentName": "Jacob Fearnley",
+      "won": false,
+      "result": "6-2 6-3"
+    },
+    {
+      "id": "1171320",
+      "date": "2025-04-23",
+      "tournamentId": 20336,
+      "tournamentName": "Mutua Madrid Open - Madrid",
+      "opponentId": 24084,
+      "opponentName": "Laslo Djere",
       "won": false,
       "result": "6-2 6-3"
     },
@@ -79,29 +99,29 @@
       "opponentName": "Lukas Neumayer",
       "won": true,
       "result": "6-3 2-6 6-3"
-    },
-    {
-      "id": "1138243",
-      "date": "2024-08-03",
-      "tournamentId": 19860,
-      "tournamentName": "San Marino Challenger",
-      "opponentId": 28108,
-      "opponentName": "Alexandre Muller",
-      "won": false,
-      "result": "6-2 7-5"
-    },
-    {
-      "id": "1104043",
-      "date": "2024-07-24",
-      "tournamentId": 19399,
-      "tournamentName": "Plava Laguna Croatia Open - Umag",
-      "opponentId": 47557,
-      "opponentName": "Chun Hsin Tseng",
-      "won": false,
-      "result": "6-1 6-0"
     }
   ],
   "Hard": [
+    {
+      "id": "1183372",
+      "date": "2025-03-11",
+      "tournamentId": 20513,
+      "tournamentName": "Cap Cana Challenger",
+      "opponentId": 67986,
+      "opponentName": "Tristan Schoolkate",
+      "won": true,
+      "result": "1-6 6-3 6-2"
+    },
+    {
+      "id": "1170609",
+      "date": "2025-03-03",
+      "tournamentId": 20328,
+      "tournamentName": "BNP Paribas Open - Indian Wells",
+      "opponentId": 89108,
+      "opponentName": "Colton Smith",
+      "won": false,
+      "result": "6-3 6-4"
+    },
     {
       "id": "1169512",
       "date": "2025-01-05",
@@ -181,26 +201,6 @@
       "opponentName": "Tommy Paul",
       "won": false,
       "result": "6-1 6-3"
-    },
-    {
-      "id": "1105286",
-      "date": "2024-10-02",
-      "tournamentId": 19412,
-      "tournamentName": "Shanghai Rolex Masters - Shanghai",
-      "opponentId": 76127,
-      "opponentName": "Luciano Darderi",
-      "won": true,
-      "result": "6-4 6-7(5) 6-4"
-    },
-    {
-      "id": "1105098",
-      "date": "2024-09-24",
-      "tournamentId": 19411,
-      "tournamentName": "China Open - Beijing",
-      "opponentId": 28170,
-      "opponentName": "Arthur Rinderknech",
-      "won": false,
-      "result": "3-6 6-2 6-3"
     }
   ],
   "Grass": [
@@ -213,6 +213,16 @@
       "opponentName": "Daniel Altmaier",
       "won": false,
       "result": "6-3 3-6 6-3"
+    },
+    {
+      "id": "1200410",
+      "date": "2025-06-16",
+      "tournamentId": 20730,
+      "tournamentName": "Nottingham 2 Challenger",
+      "opponentId": 79065,
+      "opponentName": "Arthur Fery",
+      "won": false,
+      "result": "6-3 7-6(5)"
     },
     {
       "id": "1172176",
@@ -285,6 +295,6 @@
       "result": "6-3 7-6(4)"
     }
   ],
-  "updatedAt": 1780863645470,
+  "updatedAt": 1780920225609,
   "playerName": "Fabio Fognini"
 }

@@ -1,6 +1,26 @@
 {
   "Clay": [
     {
+      "id": "1207739",
+      "date": "2025-07-13",
+      "tournamentId": 20825,
+      "tournamentName": "San Marino Challenger",
+      "opponentId": 36042,
+      "opponentName": "Oleg Prihodko",
+      "won": false,
+      "result": "6-4 6-1"
+    },
+    {
+      "id": "1194602",
+      "date": "2025-05-12",
+      "tournamentId": 20656,
+      "tournamentName": "Turin Challenger",
+      "opponentId": 36042,
+      "opponentName": "Oleg Prihodko",
+      "won": false,
+      "result": "7-6(3) 6-2"
+    },
+    {
       "id": "1194517",
       "date": "2025-05-08",
       "tournamentId": 20654,
@@ -79,26 +99,6 @@
       "opponentName": "Max Hans Rehberg",
       "won": true,
       "result": "6-3 3-6 6-1"
-    },
-    {
-      "id": "1145162",
-      "date": "2024-08-28",
-      "tournamentId": 19950,
-      "tournamentName": "Porto 2 Challenger",
-      "opponentId": 85899,
-      "opponentName": "Dino Prizmic",
-      "won": false,
-      "result": "2-0 ret."
-    },
-    {
-      "id": "1137939",
-      "date": "2024-07-23",
-      "tournamentId": 19855,
-      "tournamentName": "Verona Challenger",
-      "opponentId": 59166,
-      "opponentName": "Jesper De Jong",
-      "won": false,
-      "result": "6-4 7-5"
     }
   ],
   "Hard": [
@@ -121,6 +121,16 @@
       "opponentName": "Titouan Droguet",
       "won": true,
       "result": "6-4 3-6 6-3"
+    },
+    {
+      "id": "1175001",
+      "date": "2024-12-31",
+      "tournamentId": 20379,
+      "tournamentName": "Nonthaburi 1 Challenger",
+      "opponentId": 81980,
+      "opponentName": "Murphy Cassone",
+      "won": true,
+      "result": "7-6(6) 2-6 6-3"
     },
     {
       "id": "1162483",
@@ -191,16 +201,6 @@
       "opponentName": "Felix Auger Aliassime",
       "won": false,
       "result": "4-6 6-4 6-1"
-    },
-    {
-      "id": "865947",
-      "date": "2021-10-08",
-      "tournamentId": 16896,
-      "tournamentName": "BNP Paribas Open - Indian Wells",
-      "opponentId": 13674,
-      "opponentName": "Marton Fucsovics",
-      "won": true,
-      "result": "1-6 6-3 6-2"
     }
   ],
   "Grass": [
@@ -225,6 +225,6 @@
       "result": "4-6 6-2 6-0"
     }
   ],
-  "updatedAt": 1780863645503,
+  "updatedAt": 1780920225645,
   "playerName": "Gianluca Mager"
 }

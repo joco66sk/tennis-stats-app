@@ -1,6 +1,26 @@
 {
   "Clay": [
     {
+      "id": "1269516",
+      "date": "2026-06-02",
+      "tournamentId": 21734,
+      "tournamentName": "Perugia Challenger",
+      "opponentId": 12190,
+      "opponentName": "Dusan Lajovic",
+      "won": false,
+      "result": "6-4 6-1"
+    },
+    {
+      "id": "1264544",
+      "date": "2026-05-26",
+      "tournamentId": 21673,
+      "tournamentName": "Vicenza Challenger",
+      "opponentId": 54380,
+      "opponentName": "Tommaso Compagnucci",
+      "won": false,
+      "result": "7-6(2) 6-3"
+    },
+    {
       "id": "1243522",
       "date": "2026-05-21",
       "tournamentId": 21329,
@@ -9,6 +29,26 @@
       "opponentName": "Toby Samuel",
       "won": false,
       "result": "5-7 6-1 6-3"
+    },
+    {
+      "id": "1243495",
+      "date": "2026-05-20",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 28904,
+      "opponentName": "Vitaliy Sachko",
+      "won": true,
+      "result": "6-2 6-4"
+    },
+    {
+      "id": "1243579",
+      "date": "2026-05-18",
+      "tournamentId": 21329,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 54208,
+      "opponentName": "Florent Bax",
+      "won": true,
+      "result": "6-0 7-6(2)"
     },
     {
       "id": "1258613",
@@ -59,46 +99,6 @@
       "opponentName": "Lautaro Midon",
       "won": true,
       "result": "5-7 6-3 6-1"
-    },
-    {
-      "id": "1258126",
-      "date": "2026-04-10",
-      "tournamentId": 21591,
-      "tournamentName": "Campinas Challenger",
-      "opponentId": 23099,
-      "opponentName": "Hernan Casanova",
-      "won": true,
-      "result": "3-6 6-2 7-6(5)"
-    },
-    {
-      "id": "1258254",
-      "date": "2026-04-09",
-      "tournamentId": 21591,
-      "tournamentName": "Campinas Challenger",
-      "opponentId": 91721,
-      "opponentName": "Lucio Ratti",
-      "won": true,
-      "result": "6-2 6-2"
-    },
-    {
-      "id": "1258248",
-      "date": "2026-04-07",
-      "tournamentId": 21591,
-      "tournamentName": "Campinas Challenger",
-      "opponentId": 89517,
-      "opponentName": "Bruno Fernandez",
-      "won": true,
-      "result": "6-2 7-5"
-    },
-    {
-      "id": "1253048",
-      "date": "2026-03-30",
-      "tournamentId": 21524,
-      "tournamentName": "Sao Leopoldo Challenger",
-      "opponentId": 67172,
-      "opponentName": "Paulo Saraiva Dos Santos",
-      "won": false,
-      "result": "6-2 3-6 6-4"
     }
   ],
   "Hard": [
@@ -204,6 +204,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1780863645679,
+  "updatedAt": 1780919983990,
   "playerName": "Gonzalo Bueno"
 }

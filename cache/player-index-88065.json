@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1266548",
+      "date": "2026-05-13",
+      "tournamentId": 21698,
+      "tournamentName": "M15 Prijedor",
+      "opponentId": 71177,
+      "opponentName": "Peter Fajta",
+      "won": true,
+      "result": "7-6(4) 6-1"
+    },
+    {
       "id": "1259238",
       "date": "2026-04-27",
       "tournamentId": 21607,
@@ -19,6 +29,16 @@
       "opponentName": "Iliyan Radulov",
       "won": false,
       "result": "3-6 6-3 6-1"
+    },
+    {
+      "id": "1224231",
+      "date": "2025-09-12",
+      "tournamentId": 21045,
+      "tournamentName": "M15 Kursumlijska Banja 16",
+      "opponentId": 103193,
+      "opponentName": "Ognjen Milic",
+      "won": false,
+      "result": "7-5 3-6 6-4"
     },
     {
       "id": "1210300",
@@ -61,6 +81,16 @@
       "result": "6-3 3-6 6-4"
     },
     {
+      "id": "1186358",
+      "date": "2025-03-13",
+      "tournamentId": 20553,
+      "tournamentName": "M15 Porec 1",
+      "opponentId": 44209,
+      "opponentName": "Sandro Kopp",
+      "won": false,
+      "result": "6-0 4-6 6-3"
+    },
+    {
       "id": "1150188",
       "date": "2024-09-01",
       "tournamentId": 20015,
@@ -69,36 +99,6 @@
       "opponentName": "Petr Nesterov",
       "won": false,
       "result": "6-1 6-4"
-    },
-    {
-      "id": "1133625",
-      "date": "2024-06-12",
-      "tournamentId": 19799,
-      "tournamentName": "M15 Nyiregyhaza 1",
-      "opponentId": 90029,
-      "opponentName": "Juan Estevez",
-      "won": false,
-      "result": "6-7(2) 7-6(7) 6-3"
-    },
-    {
-      "id": "1097866",
-      "date": "2023-11-28",
-      "tournamentId": 19303,
-      "tournamentName": "M15 Antalya 18",
-      "opponentId": 44573,
-      "opponentName": "Mert Alkaya",
-      "won": false,
-      "result": "4-6 6-3 6-0"
-    },
-    {
-      "id": "1095512",
-      "date": "2023-11-22",
-      "tournamentId": 19285,
-      "tournamentName": "M25 Antalya 4",
-      "opponentId": 44573,
-      "opponentName": "Mert Alkaya",
-      "won": true,
-      "result": "6-2 6-1"
     }
   ],
   "Hard": [
@@ -124,6 +124,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1780863645717,
+  "updatedAt": 1780920225899,
   "playerName": "Matthias Ujvary"
 }

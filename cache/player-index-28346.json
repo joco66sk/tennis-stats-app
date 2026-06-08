@@ -1,6 +1,36 @@
 {
   "Clay": [
     {
+      "id": "1214552",
+      "date": "2025-08-18",
+      "tournamentId": 20916,
+      "tournamentName": "Sofia 2 Challenger",
+      "opponentId": 43553,
+      "opponentName": "Sergey Fomin",
+      "won": true,
+      "result": "7-5 6-0"
+    },
+    {
+      "id": "1214556",
+      "date": "2025-08-17",
+      "tournamentId": 20916,
+      "tournamentName": "Sofia 2 Challenger",
+      "opponentId": 54563,
+      "opponentName": "Stefan Latinovic",
+      "won": true,
+      "result": "6-3 6-3"
+    },
+    {
+      "id": "1198547",
+      "date": "2025-05-29",
+      "tournamentId": 20706,
+      "tournamentName": "M25 Bol 2",
+      "opponentId": 95464,
+      "opponentName": "Matej Dodig",
+      "won": false,
+      "result": "6-4 ret."
+    },
+    {
       "id": "1197307",
       "date": "2025-05-23",
       "tournamentId": 20691,
@@ -9,6 +39,16 @@
       "opponentName": "Tiago Pereira",
       "won": false,
       "result": "6-4 7-6(2)"
+    },
+    {
+      "id": "1183791",
+      "date": "2025-03-16",
+      "tournamentId": 20520,
+      "tournamentName": "Zadar Challenger",
+      "opponentId": 85851,
+      "opponentName": "Luka Mikrut",
+      "won": false,
+      "result": "7-5 1-0 ret."
     },
     {
       "id": "1151103",
@@ -51,54 +91,14 @@
       "result": "6-3 6-3"
     },
     {
-      "id": "1130961",
-      "date": "2024-06-04",
-      "tournamentId": 19764,
-      "tournamentName": "Zagreb Challenger",
-      "opponentId": 37577,
-      "opponentName": "Genaro Alberto Olivieri",
-      "won": true,
-      "result": "6-1 6-2"
-    },
-    {
-      "id": "1119435",
-      "date": "2024-03-30",
-      "tournamentId": 19616,
-      "tournamentName": "M25 Santa Margherita di Pula 1",
-      "opponentId": 61857,
-      "opponentName": "Valentin Royer",
+      "id": "1131211",
+      "date": "2024-06-09",
+      "tournamentId": 19768,
+      "tournamentName": "Bratislava 1 Challenger",
+      "opponentId": 76298,
+      "opponentName": "Jerome Kym",
       "won": false,
-      "result": "6-3 6-3"
-    },
-    {
-      "id": "1114623",
-      "date": "2024-03-10",
-      "tournamentId": 19557,
-      "tournamentName": "Szekesfehervar Challenger",
-      "opponentId": 87766,
-      "opponentName": "Edas Butvilas",
-      "won": true,
-      "result": "6-2 4-6 6-3"
-    },
-    {
-      "id": "1079406",
-      "date": "2023-10-14",
-      "tournamentId": 19193,
-      "tournamentName": "M25 Telavi 1",
-      "opponentId": 70459,
-      "opponentName": "Martin Krumich",
-      "won": false,
-      "result": "6-3 6-7(4) 7-6(4)"
-    },
-    {
-      "id": "1060321",
-      "date": "2023-09-05",
-      "tournamentId": 19051,
-      "tournamentName": "Genova Challenger",
-      "opponentId": 18720,
-      "opponentName": "Federico Coria",
-      "won": false,
-      "result": "7-5 6-4"
+      "result": "3-6 6-0 6-3"
     }
   ],
   "Hard": [
@@ -215,6 +215,6 @@
       "result": "6-3 7-5"
     }
   ],
-  "updatedAt": 1780863645536,
+  "updatedAt": 1780920225677,
   "playerName": "Nino Serdarusic"
 }
