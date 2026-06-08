@@ -2,8 +2,10 @@ name: Daily Cache Update
 
 on:
   schedule:
-    - cron: '0 7 * * *'   # 9:00 CEST (UTC+2 summer)
-    - cron: '0 19 * * *'  # 21:00 CEST (UTC+2 summer)
+    - cron: '0 7 * * *'   #  9:00 CEST — full rebuild (indexes + stats)
+    - cron: '0 11 * * *'  # 13:00 CEST — fixture refresh + new-player catch-up
+    - cron: '0 15 * * *'  # 17:00 CEST — fixture refresh + new-player catch-up
+    - cron: '0 19 * * *'  # 21:00 CEST — full rebuild (indexes + stats)
   workflow_dispatch:         # allow manual trigger from GitHub UI
 
 jobs:

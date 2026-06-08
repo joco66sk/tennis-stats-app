@@ -44,13 +44,13 @@ async function safeFetch(url) {
 async function fetchFixtures(date) {
   const cacheFile = path.join(CACHE_DIR, `fixtures-${date}.json`);
 
-  // Skip if fresh (< 2 hours old) AND non-empty — always re-fetch empty files
+  // Skip only if very recently fetched (< 90 min) — always re-fetch to catch rain delays / withdrawals
   if (fs.existsSync(cacheFile)) {
     const existing = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
     if ((existing.fixtures?.length ?? 0) > 0) {
       const age = Date.now() - fs.statSync(cacheFile).mtimeMs;
-      if (age < 2 * 60 * 60 * 1000) {
-        console.log(`  ${date}: skipped (fresh cache)`);
+      if (age < 90 * 60 * 1000) {
+        console.log(`  ${date}: skipped (fetched ${Math.round(age / 60000)}m ago)`);
         return;
       }
     }
