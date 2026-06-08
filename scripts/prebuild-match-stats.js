@@ -29,7 +29,7 @@ const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 const ALL_SURFACES = ['Clay', 'Hard', 'Grass'];
 const LAST_N = 10;
-const MIN_DATE = '2025-01-01';
+const MIN_DATE = '2024-01-01';
 const DELAY = 400; // ms between API calls
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }

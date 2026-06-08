@@ -26,7 +26,7 @@ const path = require('path');
 const CACHE_DIR       = path.join(__dirname, '..', 'cache');
 const MATCH_STATS_DIR = path.join(__dirname, '..', 'app', 'api', 'cache');
 const COURT_ID_MAP    = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
-const MIN_STATS_DATE  = '2025-01-01';
+const MIN_STATS_DATE  = '2024-01-01';
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 

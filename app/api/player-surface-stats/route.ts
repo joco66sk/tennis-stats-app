@@ -7,7 +7,7 @@ import {
   initCache, normalizeSurface,
 } from '@/lib/shared';
 
-const MIN_STATS_DATE = '2025-01-01';
+const MIN_STATS_DATE = '2024-01-01';
 
 interface IndexEntry {
   id: string;
