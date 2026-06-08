@@ -140,11 +140,8 @@ function needsFetch(playerId, targetSurface) {
   if (!fs.existsSync(fp)) return true;
   try {
     const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
-    // Only skip if updated today (CET) and has enough matches — age check omitted
-    // because the workflow runs exactly 12h apart, making ageHours < 12 unreliable
     const updatedToday = new Date((data.updatedAt || 0) + 2 * 60 * 60 * 1000).toISOString().slice(0, 10) === getTodayStr();
-    if (updatedToday && (data[targetSurface]?.length ?? 0) >= TARGET_PER_SURFACE) return false;
-    return true;
+    return !updatedToday;
   } catch { return true; }
 }
 
