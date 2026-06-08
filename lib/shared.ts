@@ -32,7 +32,6 @@ export function initCache() {
   for (const srcDir of [STATIC_CACHE, STATIC_MATCH_STATS]) {
     if (!fs.existsSync(srcDir)) continue;
     for (const file of fs.readdirSync(srcDir)) {
-      if (/^fixtures-\d{4}-\d{2}-\d{2}\.json$/.test(file)) continue; // always fetch fresh
       try { fs.copyFileSync(path.join(srcDir, file), path.join(CACHE_DIR, file)); } catch {}
     }
   }
