@@ -66,7 +66,9 @@ export async function GET(request: NextRequest) {
   try { index = JSON.parse(fs.readFileSync(indexPath, 'utf-8')); }
   catch { return NextResponse.json(emptyResponse(playerId, surface)); }
 
-  const entries: IndexEntry[] = (index[surface as 'Clay' | 'Hard' | 'Grass'] ?? []).slice(0, limit);
+  const entries: IndexEntry[] = (index[surface as 'Clay' | 'Hard' | 'Grass'] ?? [])
+    .filter(e => e.date >= MIN_STATS_DATE)
+    .slice(0, limit);
   if (entries.length === 0) return NextResponse.json({ ...emptyResponse(playerId, surface), playerName: index.playerName ?? `Player ${playerId}` });
 
   const pid = parseInt(playerId);
@@ -84,9 +86,7 @@ export async function GET(request: NextRequest) {
   }
 
   // Full path: load match stats for each entry (max 3 concurrent)
-  const allStats = entries.map(e =>
-    e.date < MIN_STATS_DATE ? null : getMatchStats(e.tournamentId, pid, e.opponentId)
-  );
+  const allStats = entries.map(e => getMatchStats(e.tournamentId, pid, e.opponentId));
 
   let wins = 0, losses = 0, statsCount = 0;
   let total1stIn = 0, total1stWon = 0, total2ndWon = 0, totalSvpt = 0;
