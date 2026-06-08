@@ -256,8 +256,6 @@ async function processPlayer(playerId, targetSurface, index, total) {
   saveIndex(playerId);
   saveHistory(playerId);
   console.log(`    Saved: Clay=${myIdx.Clay?.length} Hard=${myIdx.Hard?.length} Grass=${myIdx.Grass?.length}`);
-
-  if (targetSurface) await prefetchMatchStats(pid, targetSurface);
 }
 
 async function main() {
@@ -373,6 +371,15 @@ async function main() {
 
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
   console.log(`\nDone! Fetched ${toFetch.length} players in ${elapsed}s`);
+
+  // Pre-fetch match stats for ALL fixture players (not just those whose index was updated).
+  // Skips any file already on disk — after the first run these are nearly all cache hits (0 API calls).
+  console.log(`\nPre-fetching match stats for all ${playerSurfaces.size} fixture players...`);
+  for (const [playerId, surface] of playerSurfaces.entries()) {
+    if (!surface) continue;
+    await prefetchMatchStats(parseInt(playerId), surface);
+  }
+  console.log(`Match stats pass complete.`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
