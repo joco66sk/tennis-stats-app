@@ -282,6 +282,7 @@ async function main() {
 
   // Collect players and their target surface from fixtures
   const playerSurfaces = new Map(); // playerId -> surface
+  const upcomingPlayers = new Set(); // players in today + next 3 days (get match stats prefetched)
 
   for (const date of dates) {
     const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
@@ -297,12 +298,13 @@ async function main() {
         if (!player?.id) continue;
         const id = String(player.id);
         if (!playerSurfaces.has(id)) { playerSurfaces.set(id, surface); added++; }
+        upcomingPlayers.add(id);
       }
     }
     console.log(`Date ${date}: ${added} players`);
   }
 
-  // Include players from last 14 days when fetching today
+  // Include players from last 14 days when fetching today (index updates only, not stats prefetch)
   if (dates.includes(today)) {
     const beforeCount = playerSurfaces.size;
     for (let d = 1; d <= 14; d++) {
@@ -324,7 +326,7 @@ async function main() {
     const recentCount = playerSurfaces.size - beforeCount;
     if (recentCount > 0) console.log(`Added ${recentCount} players from last 14 days`);
 
-    // Include players from next 3 days (upcoming fixtures already prefetched)
+    // Include players from next 3 days — these also get match stats prefetched
     const beforeUpcoming = playerSurfaces.size;
     for (let d = 1; d <= 3; d++) {
       const futureDate = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000).toISOString().split('T')[0];
@@ -338,6 +340,7 @@ async function main() {
           if (!player?.id) continue;
           const id = String(player.id);
           if (!playerSurfaces.has(id)) playerSurfaces.set(id, surface);
+          upcomingPlayers.add(id);
         }
       }
     }
@@ -372,10 +375,12 @@ async function main() {
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
   console.log(`\nDone! Fetched ${toFetch.length} players in ${elapsed}s`);
 
-  // Pre-fetch match stats for ALL fixture players (not just those whose index was updated).
-  // Skips any file already on disk — after the first run these are nearly all cache hits (0 API calls).
-  console.log(`\nPre-fetching match stats for all ${playerSurfaces.size} fixture players...`);
-  for (const [playerId, surface] of playerSurfaces.entries()) {
+  // Pre-fetch match stats only for upcoming players (today + next 3 days).
+  // Historical players (14-day lookback) get index updates but not stats prefetch.
+  // Skips files already on disk — zero API calls for already-cached matches.
+  const statTargets = [...playerSurfaces.entries()].filter(([id]) => upcomingPlayers.has(id));
+  console.log(`\nPre-fetching match stats for ${statTargets.length} upcoming players...`);
+  for (const [playerId, surface] of statTargets) {
     if (!surface) continue;
     await prefetchMatchStats(parseInt(playerId), surface);
   }
