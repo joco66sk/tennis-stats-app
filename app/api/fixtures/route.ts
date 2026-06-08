@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import { CACHE_DIR, STATIC_CACHE, HOST, RAPIDAPI_HEADERS, IS_VERCEL, initCache } from '@/lib/shared';
+import { CACHE_DIR, STATIC_CACHE, HOST, RAPIDAPI_HEADERS, initCache } from '@/lib/shared';
 
 async function safeFetch(url: string): Promise<{ data?: unknown[] }> {
   for (let attempt = 0; attempt < 2; attempt++) {
@@ -61,13 +61,6 @@ export async function GET(request: NextRequest) {
 
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date))
     return NextResponse.json({ error: 'Invalid date format' }, { status: 400 });
-
-  // On Vercel: always serve from committed static cache — no live API calls
-  if (IS_VERCEL && !forceRefresh) {
-    const stale = readStaleCache(date);
-    if (stale) return NextResponse.json(JSON.parse(stale));
-    return NextResponse.json({ date, fixtures: [], count: 0 });
-  }
 
   if (!forceRefresh) {
     const cached = readFreshCache(date);
