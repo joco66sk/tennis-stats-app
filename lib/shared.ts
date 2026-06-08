@@ -86,20 +86,3 @@ export interface MatchStatsData {
   player2Stats: PlayerStatBlock & { player2Id: number };
 }
 
-export interface PlayerMatchCache {
-  matches: Match[];
-  cachedAt: number;
-  pages: number;
-  deepSeeded?: boolean;
-  seededAt?: number;
-}
-
-// ── Concurrency pool ───────────────────────────────────────────────────────────
-
-export async function pool<T>(fns: Array<() => Promise<T>>, limit: number): Promise<T[]> {
-  const out: T[] = new Array(fns.length);
-  let i = 0;
-  async function worker() { while (i < fns.length) { const idx = i++; out[idx] = await fns[idx](); } }
-  await Promise.all(Array.from({ length: Math.min(limit, fns.length) }, worker));
-  return out;
-}

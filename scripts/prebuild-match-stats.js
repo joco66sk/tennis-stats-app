@@ -55,7 +55,7 @@ function getPlayerIdsFromFixtures(dates, atpOnly = true, skipQualifying = false)
     try {
       const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
       for (const f of (data.fixtures || [])) {
-        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 2) continue;
+        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
         if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue;
         if (skipQualifying && isQualifying(f)) continue;
         if (f.player1?.id) ids.add(String(f.player1.id));
@@ -121,8 +121,7 @@ async function main() {
   if (!arg || arg === 'today') {
     dates = [getTodayStr()];
   } else if (arg === 'upcoming') {
-    const today = getTodayStr();
-    dates = [0, 1, 2].map(d => {
+    dates = [0, 1, 2, 3].map(d => {
       const dt = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000);
       return dt.toISOString().split('T')[0];
     }).filter(d => fs.existsSync(path.join(CACHE_DIR, `fixtures-${d}.json`)));

@@ -38,7 +38,14 @@ jobs:
         run: node scripts/prebuild-cache.js today
 
       - name: Prebuild match stats
-        run: node scripts/prebuild-match-stats.js upcoming --clay-only
+        run: node scripts/prebuild-match-stats.js upcoming
+
+      - name: Verify upcoming fixtures
+        run: |
+          TODAY=$(TZ=Europe/Paris date +%Y-%m-%d)
+          TOMORROW=$(TZ=Europe/Paris date -d tomorrow +%Y-%m-%d)
+          node scripts/verify-fixtures.js $TODAY || true
+          [ -f cache/fixtures-${TOMORROW}.json ] && node scripts/verify-fixtures.js $TOMORROW || true
 
       - name: Commit and push
         run: |

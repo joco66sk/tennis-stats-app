@@ -1,25 +1,23 @@
 #!/usr/bin/env node
 /**
- * Deep-verifies fixture data correctness.
+ * Deep-verifies fixture data correctness using player-index-*.json format.
  *
  * For clean players: one compact summary line.
  * For any issue: expands to show the exact file, field values, and what the
  * code would do with them — so you know the precise problem, not just "something's wrong".
  *
  * Issues detected:
- *   - Missing player-matches cache
- *   - Zero matches on the fixture surface
+ *   - Missing player-index cache
+ *   - Zero matches on the fixture surface (post-2025)
  *   - Stats perspective: player ID in stats file doesn't match either player slot
  *   - Stats sanity: impossible serve numbers (div/0, out-of-range %)
- *   - Surface detection: shows the source (courtId / court.name / surfmap / unknown)
- *   - Stale / shallow cache: old age, < 3 pages on non-deepSeeded file
- *   - Duplicate match IDs in cache
  *
  * Usage:
  *   node scripts/verify-fixtures.js               today
  *   node scripts/verify-fixtures.js 2026-05-10    specific date
  *   node scripts/verify-fixtures.js 2026-05-10 5  limit=5 matches
  *   node scripts/verify-fixtures.js 2026-05-10 10 --all   show match list for OK players too
+ *   node scripts/verify-fixtures.js --all-levels  include Challenger/ITF
  */
 
 const fs   = require('fs');
@@ -28,6 +26,7 @@ const path = require('path');
 const CACHE_DIR       = path.join(__dirname, '..', 'cache');
 const MATCH_STATS_DIR = path.join(__dirname, '..', 'app', 'api', 'cache');
 const COURT_ID_MAP    = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
+const MIN_STATS_DATE  = '2025-01-01';
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -37,31 +36,8 @@ function normalizeSurface(s) {
   return s;
 }
 
-function getMatchSurface(m, surfaceMap) {
-  const courtId = m.tournament?.courtId;
-  if (COURT_ID_MAP[courtId]) return { surface: COURT_ID_MAP[courtId], source: `courtId:${courtId}` };
-  const name = m.tournament?.court?.name;
-  if (name) return { surface: normalizeSurface(name), source: 'court.name' };
-  const mapped = surfaceMap[m.tournamentId];
-  if (mapped) return { surface: normalizeSurface(mapped), source: 'surfmap' };
-  return { surface: null, source: '?' };
-}
-
-function loadSurfaceMap() {
-  const map = {};
-  try {
-    for (const file of fs.readdirSync(CACHE_DIR)) {
-      if (!/^surfaces-\d{4}\.json$/.test(file)) continue;
-      const data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, file), 'utf-8'));
-      for (const [id, surface] of Object.entries(data))
-        map[parseInt(id)] = surface;
-    }
-  } catch {}
-  return map;
-}
-
-function loadMatchStats(tournamentId, p1id, p2id) {
-  for (const [a, b] of [[p1id, p2id], [p2id, p1id]]) {
+function loadMatchStats(tournamentId, pid, opponentId) {
+  for (const [a, b] of [[pid, opponentId], [opponentId, pid]]) {
     const fp = path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`);
     if (fs.existsSync(fp)) {
       try { return { data: JSON.parse(fs.readFileSync(fp, 'utf-8')), file: `match-stats-${tournamentId}-${a}-${b}.json` }; }
@@ -76,12 +52,12 @@ function fmtPct(num, den) {
   return (num / den * 100).toFixed(0) + '%';
 }
 
-function computeStats(s, pid) {
+function computeStats(s) {
   if (!s) return null;
   const svPct  = fmtPct(s.firstServe, s.firstServeOf);
   const fswPct = fmtPct(s.winningOnFirstServe, s.firstServe);
   const sswPct = fmtPct(s.winningOnSecondServe, s.firstServeOf - s.firstServe);
-  return `1sv:${svPct} 1sw:${fswPct} 2sw:${sswPct} ace:${s.aces ?? '?'} df:${s.doubleFaults ?? '?'} bp:${s.breakPointSavedGm ?? '?'}/${s.breakPointFacedGm ?? '?'}`;
+  return `1sv:${svPct} 1sw:${fswPct} 2sw:${sswPct} ace:${s.aces ?? '?'} df:${s.doubleFaults ?? '?'}`;
 }
 
 function sanityCheck(s) {
@@ -100,29 +76,6 @@ function getTodayStr() {
   return new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString().split('T')[0];
 }
 
-// Scans fixture files between afterDate and beforeDate to find dates where
-// `pid` appears in a match for `tournId` — these are the dates to run
-// prebuild-cache.js on to fetch the missing opponents.
-function findMissingOpponentDates(pid, tournId, afterDate, beforeDate) {
-  const dates = [];
-  try {
-    for (const file of fs.readdirSync(CACHE_DIR)) {
-      if (!/^fixtures-(\d{4}-\d{2}-\d{2})\.json$/.test(file)) continue;
-      const fileDate = file.slice(9, 19);
-      if (afterDate && fileDate <= afterDate) continue;
-      if (fileDate >= beforeDate) continue;
-      try {
-        const data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, file), 'utf-8'));
-        const hasMatch = (data.fixtures || []).some(
-          f => f.tournamentId === tournId && (f.player1Id === pid || f.player2Id === pid)
-        );
-        if (hasMatch && !dates.includes(fileDate)) dates.push(fileDate);
-      } catch {}
-    }
-  } catch {}
-  return dates.sort();
-}
-
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 const args      = process.argv.slice(2);
@@ -131,13 +84,10 @@ const LIMIT     = parseInt(args.find(a => /^\d+$/.test(a)) || '10');
 const SHOW_ALL       = args.includes('--all');
 const ATP_ONLY       = !args.includes('--all-levels');
 const SKIP_QUALIFYING = !args.includes('--with-qualifying');
-const today     = getTodayStr();
-// Stale threshold: 4h for today's fixtures, 24h for tomorrow, ignore for past
-const STALE_H  = date === today ? 4 : (date > today ? 24 : Infinity);
 
 const fixturePath = path.join(CACHE_DIR, `fixtures-${date}.json`);
 if (!fs.existsSync(fixturePath)) {
-  console.error(`No fixture cache for ${date}.\nRun: node scripts/prebuild-cache.js ${date}`);
+  console.error(`No fixture cache for ${date}.\nRun: node scripts/prefetch-fixtures.js`);
   process.exit(1);
 }
 
@@ -146,17 +96,16 @@ const allFixtures = (fixtureData.fixtures || []).filter(f =>
   f.player1?.id && f.player2?.id &&
   !String(f.player1?.name ?? '').includes('/') && !String(f.player2?.name ?? '').includes('/')
 );
-let fixtures = ATP_ONLY ? allFixtures.filter(f => (f.tournament?.rank?.id ?? 0) >= 2) : allFixtures;
-const skippedChallengerITF = allFixtures.length - fixtures.length;
+let fixtures = ATP_ONLY ? allFixtures.filter(f => (f.tournament?.rank?.id ?? 0) >= 1) : allFixtures;
+const skippedITF = allFixtures.length - fixtures.length;
 const skippedQualifying = SKIP_QUALIFYING ? fixtures.filter(f => /^Q\d/i.test(f.round?.name ?? '')).length : 0;
 if (SKIP_QUALIFYING) fixtures = fixtures.filter(f => !/^Q\d/i.test(f.round?.name ?? ''));
-const surfaceMap  = loadSurfaceMap();
 
 const skipNotes = [
-  ATP_ONLY && skippedChallengerITF > 0 ? `skipping ${skippedChallengerITF} Challenger/ITF` : null,
+  ATP_ONLY && skippedITF > 0 ? `skipping ${skippedITF} ITF` : null,
   SKIP_QUALIFYING && skippedQualifying > 0 ? `skipping ${skippedQualifying} qualifying` : null,
 ].filter(Boolean).join(', ');
-console.log(`\nVerifying ${fixtures.length} fixtures for ${date}  (last ${LIMIT} surface matches${SHOW_ALL ? ', --all' : ''}${skipNotes ? ` — ${skipNotes}` : ''})`);
+console.log(`\nVerifying ${fixtures.length} fixtures for ${date}  (last ${LIMIT} surface matches post-${MIN_STATS_DATE}${SHOW_ALL ? ', --all' : ''}${skipNotes ? ` — ${skipNotes}` : ''})`);
 
 let totalIssues  = 0;
 let totalChecked = 0;
@@ -172,8 +121,8 @@ for (const f of fixtures) {
 
 for (const [tournName, matches] of byTournament) {
   const sample    = matches[0];
-  const surface   = normalizeSurface(sample.tournament?.court?.name) || 'Unknown';
   const courtId   = sample.tournament?.courtId;
+  const surface   = COURT_ID_MAP[courtId] || normalizeSurface(sample.tournament?.court?.name) || 'Unknown';
   const surfLabel = courtId ? `${surface} · courtId:${courtId}` : surface;
 
   console.log(`\n${'─'.repeat(62)}`);
@@ -184,103 +133,43 @@ for (const [tournName, matches] of byTournament) {
 
     for (const player of [fixture.player1, fixture.player2]) {
       const pid       = player.id;
-      const matchPath = path.join(CACHE_DIR, `player-matches-${pid}.json`);
+      const indexPath = path.join(CACHE_DIR, `player-index-${pid}.json`);
 
-      // ── Missing cache ────────────────────────────────────────────────────
-      if (!fs.existsSync(matchPath)) {
-        console.log(`  ✗ ${player.name.padEnd(24)} NO CACHE FILE  → npm run cache:date ${date}`);
+      // ── Missing index ────────────────────────────────────────────────────
+      if (!fs.existsSync(indexPath)) {
+        console.log(`  ✗ ${player.name.padEnd(24)} NO INDEX FILE  → node scripts/prebuild-cache.js ${date}`);
         totalIssues++;
         continue;
       }
 
-      const matchData    = JSON.parse(fs.readFileSync(matchPath, 'utf-8'));
-      const allMatches   = matchData.matches || [];
-      const ageH         = ((Date.now() - (matchData.cachedAt ?? 0)) / 3600000).toFixed(0);
-      const pages        = matchData.pages ?? '?';
-      const deepSeeded   = matchData.deepSeeded ? 'deep' : `${pages}p`;
-      const cacheNote    = `cache:${ageH}h ${deepSeeded}`;
-
-      // ── Duplicate IDs ────────────────────────────────────────────────────
-      const idCounts = {};
-      for (const m of allMatches) idCounts[m.id] = (idCounts[m.id] || 0) + 1;
-      const dupes = Object.entries(idCounts).filter(([, c]) => c > 1).map(([id]) => id);
+      let indexData;
+      try { indexData = JSON.parse(fs.readFileSync(indexPath, 'utf-8')); }
+      catch { console.log(`  ✗ ${player.name.padEnd(24)} INDEX PARSE ERROR`); totalIssues++; continue; }
 
       // ── Surface filter — same logic as the app ───────────────────────────
-      const sorted         = [...allMatches].sort((a, b) => new Date(b.date) - new Date(a.date));
-      const surfaceMatches = sorted.filter(m => getMatchSurface(m, surfaceMap).surface === surface).slice(0, LIMIT);
+      const surfaceEntries = (indexData[surface] || [])
+        .filter(e => e.date >= MIN_STATS_DATE)
+        .slice(0, LIMIT);
 
-      if (surfaceMatches.length === 0) {
-        const found = [...new Set(sorted.map(m => getMatchSurface(m, surfaceMap).surface).filter(Boolean))];
-        console.log(`  ? ${player.name.padEnd(24)} 0 ${surface} matches  (surfaces in cache: ${found.join(', ') || 'none'})  ${cacheNote}`);
+      if (surfaceEntries.length === 0) {
+        const found = ['Clay', 'Hard', 'Grass'].filter(s => (indexData[s] || []).filter(e => e.date >= MIN_STATS_DATE).length > 0);
+        const rawCounts = ['Clay', 'Hard', 'Grass'].map(s => `${s}:${(indexData[s] || []).length}`).join(' ');
+        console.log(`  ? ${player.name.padEnd(24)} 0 ${surface} matches post-${MIN_STATS_DATE}  (all: ${rawCounts})`);
         totalIssues++;
         continue;
       }
 
-      const wins   = surfaceMatches.filter(m => m.match_winner === pid).length;
-      const losses = surfaceMatches.length - wins;
-
-      // ── Tournament-completeness check ────────────────────────────────────
-      // Detects missing intermediate rounds (e.g. Rublev in QF but last cached
-      // match was R3 three days earlier — R4 is missing from cache).
+      const wins   = surfaceEntries.filter(e => e.won).length;
+      const losses = surfaceEntries.length - wins;
       const printLines = [];
       let   hasError   = false;
 
-      const tournId = fixture.tournamentId;
-      const fixtureDate = (fixture.date || '').slice(0, 10);
-      const tournInCache = allMatches
-        .filter(m => m.tournamentId === tournId)
-        .sort((a, b) => new Date(b.date) - new Date(a.date));
+      for (const e of surfaceEntries) {
+        const wl     = e.won ? 'W' : 'L';
+        const result = e.result || '—';
+        const baseLine = `    ${wl}  ${e.date}  ${(e.opponentName || 'Unknown').padEnd(22)}  ${result.padEnd(16)}`;
 
-      if (tournInCache.length > 0) {
-        const lastTM    = tournInCache[0];
-        const lastDate  = (lastTM.date || '').slice(0, 10);
-        const gapDays   = Math.round((new Date(fixtureDate) - new Date(lastDate)) / 86400000);
-        if (gapDays >= 3) {
-          const oppName = lastTM.player1Id === pid ? lastTM.player2?.name : lastTM.player1?.name;
-          printLines.push(`       ⚠ TOURNAMENT GAP: last cached match was ${lastDate} vs ${oppName || '?'} — ${gapDays}d before this fixture`);
-          printLines.push(`         ${tournInCache.length} match(es) from this tournament in cache; intermediate round(s) likely missing`);
-
-          // Scan intermediate fixture files to find the missing opponents
-          const missingDates = findMissingOpponentDates(pid, tournId, lastDate, fixtureDate);
-          if (missingDates.length > 0) {
-            printLines.push(`         Missing rounds found in fixture files on: ${missingDates.join(', ')}`);
-            for (const md of missingDates)
-              printLines.push(`         Fix: node scripts/prebuild-cache.js ${md}`);
-          } else {
-            printLines.push(`         Fix: node scripts/prebuild-cache.js ${today}  (re-fetch after API lag clears)`);
-          }
-          hasError = true;
-        }
-      } else if (fixtureDate < today) {
-        // Past fixture — player should have at least one match from this tournament
-        const missingDates = findMissingOpponentDates(pid, tournId, null, fixtureDate);
-        printLines.push(`       ⚠ TOURNAMENT GAP: 0 matches from this tournament in cache`);
-        if (missingDates.length > 0) {
-          for (const md of missingDates)
-            printLines.push(`         Fix: node scripts/prebuild-cache.js ${md}`);
-        }
-        hasError = true;
-      }
-
-      for (let i = 0; i < surfaceMatches.length; i++) {
-        const m      = surfaceMatches[i];
-        const dateS  = (m.date || '').slice(0, 10);
-        const opp    = m.player1Id === pid ? m.player2?.name : m.player1?.name;
-        const wl     = m.match_winner === pid ? 'W' : (m.match_winner == null ? '?' : 'L');
-        const result = m.result || '—';
-        const { surface: detectedSurf, source: surfSource } = getMatchSurface(m, surfaceMap);
-        const surfTag = detectedSurf === surface ? `[${surfSource}]` : `[${surfSource}→${detectedSurf} ← WRONG]`;
-        const baseLine = `    ${wl}  ${dateS}  ${(opp || 'Unknown').padEnd(22)}  ${result.padEnd(16)}`;
-
-        // Winner sanity
-        if (m.match_winner != null && m.match_winner !== m.player1Id && m.match_winner !== m.player2Id) {
-          printLines.push(`${baseLine}  ⚠ match_winner=${m.match_winner} ≠ player1Id(${m.player1Id}) or player2Id(${m.player2Id})`);
-          hasError = true;
-          continue;
-        }
-
-        // Stats file check
-        const found = loadMatchStats(m.tournamentId, m.player1Id, m.player2Id);
+        const found = loadMatchStats(e.tournamentId, pid, e.opponentId);
         if (found) {
           const { data: stats, file: statsFile } = found;
           const statsP1id = stats.player1Stats?.player1Id;
@@ -288,54 +177,43 @@ for (const [tournName, matches] of byTournament) {
           const isP1      = statsP1id === pid;
           const isP2      = statsP2id === pid;
           const myStats   = isP1 ? stats.player1Stats : (isP2 ? stats.player2Stats : null);
-          const statStr   = myStats ? computeStats(myStats) : null;
           const sane      = myStats ? sanityCheck(myStats) : [];
 
           if (!isP1 && !isP2) {
-            printLines.push(`${baseLine}  ${surfTag}`);
+            printLines.push(`${baseLine}`);
             printLines.push(`       ✗ STATS MISMATCH  file: ${statsFile}`);
             printLines.push(`         file has: p1Stats.player1Id=${statsP1id}  p2Stats.player2Id=${statsP2id}`);
-            printLines.push(`         expected pid ${pid} in either slot — this match's stats will be SKIPPED by the app`);
+            printLines.push(`         expected pid ${pid} in either slot — stats will be SKIPPED by the app`);
             hasError = true;
           } else if (sane.length > 0) {
-            printLines.push(`${baseLine}  ${surfTag}`);
+            printLines.push(`${baseLine}`);
             printLines.push(`       ✗ STATS SANITY FAIL: ${sane.join(', ')}`);
             printLines.push(`         file: ${statsFile}  pid:${pid} is ${isP1 ? 'p1' : 'p2'}`);
             hasError = true;
-          } else if (detectedSurf !== surface) {
-            printLines.push(`${baseLine}  ${surfTag}  ← wrong surface, should not appear in ${surface} filter`);
-            hasError = true;
           } else if (SHOW_ALL) {
-            printLines.push(`${baseLine}  ${statStr}  ${surfTag}`);
+            const statStr = myStats ? computeStats(myStats) : '[no stats]';
+            printLines.push(`${baseLine}  ${statStr}`);
           }
         } else {
-          // No stats file
-          if (detectedSurf !== surface) {
-            printLines.push(`${baseLine}  [no stats]  ${surfTag}  ← wrong surface`);
-            hasError = true;
-          } else if (SHOW_ALL) {
-            printLines.push(`${baseLine}  [no stats]  ${surfTag}`);
-          }
+          // No stats file — not an error, just noted with --all
+          if (SHOW_ALL) printLines.push(`${baseLine}  [no stats]`);
         }
       }
 
-      // ── Stale / shallow cache warnings (don't count as ✗ errors) ────────
-      const cacheWarnings = [];
-      if (parseInt(ageH) > STALE_H) cacheWarnings.push(`cache ${ageH}h old`);
-      if (!matchData.deepSeeded && (matchData.pages ?? 1) < 3)
-        cacheWarnings.push(`only ${pages}p fetched (non-deepSeeded needs 3)`);
-      if (dupes.length > 0)
-        cacheWarnings.push(`${dupes.length} duplicate match ID(s): ${dupes.slice(0,3).join(', ')}`);
+      const statsCount = surfaceEntries.filter(e => loadMatchStats(e.tournamentId, pid, e.opponentId)).length;
+      // Warn if player has enough matches but zero stats files — likely a missing prebuild
+      if (!hasError && statsCount === 0 && surfaceEntries.length >= 3) {
+        printLines.push(`       ⚠ NO STATS: ${surfaceEntries.length} ${surface} matches found but 0 stats files — run: node scripts/prebuild-match-stats.js upcoming`);
+        hasError = true;
+      }
 
-      const hasIssues = hasError;
-      if (hasIssues) totalIssues++;
+      if (hasError) totalIssues++;
       totalChecked++;
 
-      const statsCount = surfaceMatches.filter(m => loadMatchStats(m.tournamentId, m.player1Id, m.player2Id)).length;
-      const icon       = hasIssues ? '✗' : '✓';
+      const icon       = hasError ? '✗' : '✓';
       const roundTag   = round ? `  [${round}]` : '';
-      const warnStr    = cacheWarnings.length > 0 ? `  ⚠ ${cacheWarnings.join(' | ')}` : '';
-      console.log(`  ${icon} ${player.name.padEnd(24)} ${wins}W-${losses}L  ${surfaceMatches.length}/${LIMIT} ${surface}  stats:${statsCount}/${surfaceMatches.length}  ${cacheNote}${roundTag}${warnStr}`);
+      const updatedAt  = indexData.updatedAt ? new Date(indexData.updatedAt).toISOString().slice(0, 16).replace('T', ' ') : '?';
+      console.log(`  ${icon} ${player.name.padEnd(24)} ${wins}W-${losses}L  ${surfaceEntries.length}/${LIMIT} ${surface}  stats:${statsCount}/${surfaceEntries.length}  updated:${updatedAt}${roundTag}`);
 
       for (const l of printLines) console.log(l);
     }

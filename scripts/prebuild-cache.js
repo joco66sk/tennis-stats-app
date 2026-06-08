@@ -21,15 +21,12 @@ const HOST = env.match(/RAPIDAPI_HOST=(.+)/)?.[1]?.trim() || 'tennis-api-atp-wta
 if (!KEY) { console.error('RAPIDAPI_KEY not found in .env.local'); process.exit(1); }
 
 const CACHE_DIR = path.join(__dirname, '..', 'cache');
-const MATCH_STATS_DIR = path.join(__dirname, '..', 'app', 'api', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 const DELAY_BETWEEN_PAGES = 300;
 const DELAY_BETWEEN_PLAYERS = 600;
 const TARGET_PER_SURFACE = 10;
 const INDEX_LIMIT = 10;       // max entries kept per surface in active index
-const FRESHNESS_HOURS = 12;
 const MAX_PAGES = 5;
-const MIN_STATS_DATE = '2025-01-01';
 const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -143,12 +140,10 @@ function needsFetch(playerId, targetSurface) {
   if (!fs.existsSync(fp)) return true;
   try {
     const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
-    const ageHours = (Date.now() - (data.updatedAt || 0)) / 3600000;
-    // Only skip if updated *today* (CET) and recently — prevents skipping cross-midnight
-    const updatedToday = new Date(data.updatedAt + 2 * 60 * 60 * 1000).toISOString().slice(0, 10) === getTodayStr();
-    if (updatedToday && ageHours < FRESHNESS_HOURS) {
-      if ((data[targetSurface]?.length ?? 0) >= TARGET_PER_SURFACE) return false;
-    }
+    // Only skip if updated today (CET) and has enough matches — age check omitted
+    // because the workflow runs exactly 12h apart, making ageHours < 12 unreliable
+    const updatedToday = new Date((data.updatedAt || 0) + 2 * 60 * 60 * 1000).toISOString().slice(0, 10) === getTodayStr();
+    if (updatedToday && (data[targetSurface]?.length ?? 0) >= TARGET_PER_SURFACE) return false;
     return true;
   } catch { return true; }
 }
@@ -172,33 +167,6 @@ async function fetchPage(playerId, pageNo) {
     }
   }
   return [];
-}
-
-async function prefetchMatchStats(pid, surface) {
-  const idx = loadIndex(pid);
-  const entries = (idx[surface] || []).filter(e => e.date >= MIN_STATS_DATE);
-  if (entries.length === 0) return;
-  if (!fs.existsSync(MATCH_STATS_DIR)) fs.mkdirSync(MATCH_STATS_DIR, { recursive: true });
-  let fetched = 0;
-  for (const e of entries) {
-    const pairs = [[pid, e.opponentId], [e.opponentId, pid]];
-    const cached = pairs.some(([a, b]) => fs.existsSync(path.join(MATCH_STATS_DIR, `match-stats-${e.tournamentId}-${a}-${b}.json`)));
-    if (cached) continue;
-    for (const [a, b] of pairs) {
-      try {
-        const res = await fetch(`https://${HOST}/tennis/v2/atp/h2h/match-stats/${e.tournamentId}/${a}/${b}`, { headers: HEADERS });
-        if (!res.ok) continue;
-        const raw = await res.json();
-        if (raw?.data?.player1Stats) {
-          fs.writeFileSync(path.join(MATCH_STATS_DIR, `match-stats-${e.tournamentId}-${a}-${b}.json`), JSON.stringify(raw.data, null, 2));
-          fetched++;
-          break;
-        }
-      } catch {}
-    }
-    if (fetched > 0) await sleep(200);
-  }
-  if (fetched > 0) console.log(`    Match stats pre-fetched: ${fetched} new files`);
 }
 
 async function processPlayer(playerId, targetSurface, index, total) {
@@ -282,7 +250,6 @@ async function main() {
 
   // Collect players and their target surface from fixtures
   const playerSurfaces = new Map(); // playerId -> surface
-  const upcomingPlayers = new Set(); // players in today + next 3 days (get match stats prefetched)
 
   for (const date of dates) {
     const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
@@ -298,13 +265,12 @@ async function main() {
         if (!player?.id) continue;
         const id = String(player.id);
         if (!playerSurfaces.has(id)) { playerSurfaces.set(id, surface); added++; }
-        upcomingPlayers.add(id);
       }
     }
     console.log(`Date ${date}: ${added} players`);
   }
 
-  // Include players from last 14 days when fetching today (index updates only, not stats prefetch)
+  // Include players from last 14 days and next 3 days when fetching today
   if (dates.includes(today)) {
     const beforeCount = playerSurfaces.size;
     for (let d = 1; d <= 14; d++) {
@@ -326,8 +292,7 @@ async function main() {
     const recentCount = playerSurfaces.size - beforeCount;
     if (recentCount > 0) console.log(`Added ${recentCount} players from last 14 days`);
 
-    // Include players from next 3 days — these also get match stats prefetched
-    const beforeUpcoming = playerSurfaces.size;
+    const beforeFuture = playerSurfaces.size;
     for (let d = 1; d <= 3; d++) {
       const futureDate = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000).toISOString().split('T')[0];
       const fp = path.join(CACHE_DIR, `fixtures-${futureDate}.json`);
@@ -340,12 +305,11 @@ async function main() {
           if (!player?.id) continue;
           const id = String(player.id);
           if (!playerSurfaces.has(id)) playerSurfaces.set(id, surface);
-          upcomingPlayers.add(id);
         }
       }
     }
-    const upcomingCount = playerSurfaces.size - beforeUpcoming;
-    if (upcomingCount > 0) console.log(`Added ${upcomingCount} players from next 3 days`);
+    const futureCount = playerSurfaces.size - beforeFuture;
+    if (futureCount > 0) console.log(`Added ${futureCount} players from next 3 days`);
   }
 
   const toFetch = [...playerSurfaces.entries()].filter(([id, surface]) => needsFetch(id, surface));
@@ -374,17 +338,6 @@ async function main() {
 
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
   console.log(`\nDone! Fetched ${toFetch.length} players in ${elapsed}s`);
-
-  // Pre-fetch match stats only for upcoming players (today + next 3 days).
-  // Historical players (14-day lookback) get index updates but not stats prefetch.
-  // Skips files already on disk — zero API calls for already-cached matches.
-  const statTargets = [...playerSurfaces.entries()].filter(([id]) => upcomingPlayers.has(id));
-  console.log(`\nPre-fetching match stats for ${statTargets.length} upcoming players...`);
-  for (const [playerId, surface] of statTargets) {
-    if (!surface) continue;
-    await prefetchMatchStats(parseInt(playerId), surface);
-  }
-  console.log(`Match stats pass complete.`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
