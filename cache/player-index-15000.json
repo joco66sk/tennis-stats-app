@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1258019",
+      "date": "2026-03-31",
+      "tournamentId": 21583,
+      "tournamentName": "M25 Reus 1",
+      "opponentId": 42963,
+      "opponentName": "Carlos Sanchez Jover",
+      "won": false,
+      "result": "6-4 1-6 6-3"
+    },
+    {
       "id": "1256889",
       "date": "2026-03-24",
       "tournamentId": 21568,
@@ -21,6 +31,16 @@
       "result": "6-3 6-3"
     },
     {
+      "id": "1225797",
+      "date": "2025-09-24",
+      "tournamentId": 21066,
+      "tournamentName": "M25 Sabadell 2",
+      "opponentId": 42963,
+      "opponentName": "Carlos Sanchez Jover",
+      "won": false,
+      "result": "6-2 1-6 6-3"
+    },
+    {
       "id": "1213274",
       "date": "2025-07-31",
       "tournamentId": 20897,
@@ -29,6 +49,16 @@
       "opponentName": "Giannicola Misasi",
       "won": true,
       "result": "6-3 6-4"
+    },
+    {
+      "id": "1211523",
+      "date": "2025-07-22",
+      "tournamentId": 20876,
+      "tournamentName": "M25 Denia 1",
+      "opponentId": 42963,
+      "opponentName": "Carlos Sanchez Jover",
+      "won": false,
+      "result": "6-2 6-4"
     },
     {
       "id": "1210363",
@@ -69,36 +99,6 @@
       "opponentName": "Hayato Matsuoka",
       "won": false,
       "result": "2-6 6-4 7-5"
-    },
-    {
-      "id": "1187048",
-      "date": "2025-03-20",
-      "tournamentId": 20562,
-      "tournamentName": "M25 Badalona 1",
-      "opponentId": 51853,
-      "opponentName": "Pol Martin Tiffon",
-      "won": false,
-      "result": "6-3 6-3"
-    },
-    {
-      "id": "1179673",
-      "date": "2025-02-06",
-      "tournamentId": 20442,
-      "tournamentName": "M15 Valencia 1",
-      "opponentId": 68981,
-      "opponentName": "Max Alcala Gurri",
-      "won": false,
-      "result": "6-2 6-3"
-    },
-    {
-      "id": "1167975",
-      "date": "2024-12-05",
-      "tournamentId": 20278,
-      "tournamentName": "M15 Madrid 4",
-      "opponentId": 95537,
-      "opponentName": "Iliyan Radulov",
-      "won": false,
-      "result": "6-0 6-2"
     }
   ],
   "Hard": [
@@ -204,6 +204,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1780941029835,
+  "updatedAt": 1781001774274,
   "playerName": "Oscar Jose Gutierrez"
 }
