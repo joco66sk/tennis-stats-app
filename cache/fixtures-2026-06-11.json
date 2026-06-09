@@ -1,5 +1,49 @@
 {
   "date": "2026-06-11",
-  "fixtures": [],
-  "count": 0
+  "fixtures": [
+    {
+      "id": 1509,
+      "date": "2026-06-11T12:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 76010,
+      "player2Id": 78285,
+      "tournamentId": 21741,
+      "timeGame": null,
+      "seed1": "ALT",
+      "seed2": "ALT",
+      "live": null,
+      "player1": {
+        "id": 76010,
+        "name": "Daniel Rincon",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 78285,
+        "name": "Dali Blanch",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21741,
+        "name": "Lyon Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    }
+  ],
+  "count": 1
 }
