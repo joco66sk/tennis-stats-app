@@ -121,7 +121,7 @@ async function main() {
   if (!arg || arg === 'today') {
     dates = [getTodayStr()];
   } else if (arg === 'upcoming') {
-    dates = Array.from({ length: 15 }, (_, d) => {
+    dates = Array.from({ length: 5 }, (_, d) => {
       const dt = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000);
       return dt.toISOString().split('T')[0];
     }).filter(d => fs.existsSync(path.join(CACHE_DIR, `fixtures-${d}.json`)));

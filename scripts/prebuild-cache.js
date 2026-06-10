@@ -267,10 +267,10 @@ async function main() {
     console.log(`Date ${date}: ${added} players`);
   }
 
-  // Include players from next 14 days (catches draws when published 1-3 days before round 1)
+  // Include players from next 4 days — round 1 of any draw spans at most 3-4 days, all players visible then
   if (dates.includes(today)) {
     const beforeFuture = playerSurfaces.size;
-    for (let d = 1; d <= 14; d++) {
+    for (let d = 1; d <= 4; d++) {
       const futureDate = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000).toISOString().split('T')[0];
       const fp = path.join(CACHE_DIR, `fixtures-${futureDate}.json`);
       if (!fs.existsSync(fp)) continue;
