@@ -39,13 +39,8 @@ jobs:
       - name: Prebuild match stats
         run: node scripts/prebuild-match-stats.js upcoming
 
-      - name: Verify upcoming fixtures
-        run: |
-          for i in $(seq 0 4); do
-            DATE=$(TZ=Europe/Paris date -d "+${i} days" +%Y-%m-%d)
-            FILE="cache/fixtures-${DATE}.json"
-            [ -f "$FILE" ] && node scripts/verify-fixtures.js $DATE || true
-          done
+      - name: Verify and repair upcoming fixtures
+        run: node scripts/repair-upcoming.js || true
 
       - name: Commit and push
         run: |
