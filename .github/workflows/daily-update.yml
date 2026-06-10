@@ -41,10 +41,11 @@ jobs:
 
       - name: Verify upcoming fixtures
         run: |
-          TODAY=$(TZ=Europe/Paris date +%Y-%m-%d)
-          TOMORROW=$(TZ=Europe/Paris date -d tomorrow +%Y-%m-%d)
-          node scripts/verify-fixtures.js $TODAY || true
-          [ -f cache/fixtures-${TOMORROW}.json ] && node scripts/verify-fixtures.js $TOMORROW || true
+          for i in $(seq 0 14); do
+            DATE=$(TZ=Europe/Paris date -d "+${i} days" +%Y-%m-%d)
+            FILE="cache/fixtures-${DATE}.json"
+            [ -f "$FILE" ] && node scripts/verify-fixtures.js $DATE || true
+          done
 
       - name: Commit and push
         run: |
