@@ -30,12 +30,20 @@ function getCacheTTL(date: string): number {
   return 30 * 60 * 1000;
 }
 
-// Only checks /tmp/cache with TTL — static cache is fallback only
+// Uses fetchedAt embedded in JSON so mtime from git checkout / initCache copy doesn't matter.
+// Past dates served unconditionally (completed data never changes).
 function readFreshCache(date: string): string | null {
+  const cetNow = new Date(Date.now() + 2 * 60 * 60 * 1000);
+  const today = cetNow.toISOString().split('T')[0];
   const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
   if (!fs.existsSync(fp)) return null;
-  const age = Date.now() - fs.statSync(fp).mtimeMs;
-  return age < getCacheTTL(date) ? fs.readFileSync(fp, 'utf-8') : null;
+  try {
+    const raw = fs.readFileSync(fp, 'utf-8');
+    if (date < today) return raw; // past dates: static cache is authoritative
+    const data = JSON.parse(raw) as { fetchedAt?: number };
+    if (!data.fetchedAt) return null; // no timestamp → treat as stale
+    return Date.now() - data.fetchedAt < getCacheTTL(date) ? raw : null;
+  } catch { return null; }
 }
 
 // Stale fallback: any non-empty file from /tmp/cache or static cache
@@ -100,7 +108,7 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  const result = { date, fixtures: enriched, count: enriched.length };
+  const result = { date, fixtures: enriched, count: enriched.length, fetchedAt: Date.now() };
   if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });
   const cacheFile = path.join(CACHE_DIR, `fixtures-${date}.json`);
   fs.writeFileSync(cacheFile, JSON.stringify(result, null, 2), 'utf-8');

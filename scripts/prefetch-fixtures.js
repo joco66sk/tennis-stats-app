@@ -92,7 +92,7 @@ async function fetchFixtures(date) {
     }
   }
 
-  fs.writeFileSync(cacheFile, JSON.stringify({ date, fixtures, count: fixtures.length }, null, 2));
+  fs.writeFileSync(cacheFile, JSON.stringify({ date, fixtures, count: fixtures.length, fetchedAt: Date.now() }, null, 2));
   console.log(`  ${date}: saved ${fixtures.length} fixtures`);
 }
 
