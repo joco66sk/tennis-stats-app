@@ -44,11 +44,12 @@ async function safeFetch(url) {
 async function fetchFixtures(date) {
   const cacheFile = path.join(CACHE_DIR, `fixtures-${date}.json`);
 
-  // Skip only if very recently fetched (< 90 min) — always re-fetch to catch rain delays / withdrawals
+  // Skip only if very recently fetched (< 90 min) — use fetchedAt from JSON, not file mtime
+  // (git checkout resets mtime to checkout time, making mtime-based checks always stale)
   if (fs.existsSync(cacheFile)) {
     const existing = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
-    if ((existing.fixtures?.length ?? 0) > 0) {
-      const age = Date.now() - fs.statSync(cacheFile).mtimeMs;
+    if ((existing.fixtures?.length ?? 0) > 0 && existing.fetchedAt) {
+      const age = Date.now() - existing.fetchedAt;
       if (age < 90 * 60 * 1000) {
         console.log(`  ${date}: skipped (fetched ${Math.round(age / 60000)}m ago)`);
         return;

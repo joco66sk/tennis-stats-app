@@ -121,7 +121,7 @@ async function main() {
   if (!arg || arg === 'today') {
     dates = [getTodayStr()];
   } else if (arg === 'upcoming') {
-    dates = [0, 1, 2, 3].map(d => {
+    dates = Array.from({ length: 15 }, (_, d) => {
       const dt = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000);
       return dt.toISOString().split('T')[0];
     }).filter(d => fs.existsSync(path.join(CACHE_DIR, `fixtures-${d}.json`)));
@@ -135,7 +135,7 @@ async function main() {
         try {
           const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
           for (const f of (data.fixtures || [])) {
-            if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
+            if ((f.tournament?.rank?.id ?? 0) < 2) continue; // ATP250+ only for surface detection
             const s = COURT_ID_MAP[f.tournament?.courtId];
             if (s) detected.add(s);
           }

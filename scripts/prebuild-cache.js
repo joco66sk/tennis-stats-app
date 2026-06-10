@@ -267,30 +267,10 @@ async function main() {
     console.log(`Date ${date}: ${added} players`);
   }
 
-  // Include players from last 14 days and next 3 days when fetching today
+  // Include players from next 14 days (catches draws when published 1-3 days before round 1)
   if (dates.includes(today)) {
-    const beforeCount = playerSurfaces.size;
-    for (let d = 1; d <= 14; d++) {
-      const pastDate = new Date(Date.now() + 2 * 60 * 60 * 1000 - d * 86400000).toISOString().split('T')[0];
-      const fp = path.join(CACHE_DIR, `fixtures-${pastDate}.json`);
-      if (!fs.existsSync(fp)) continue;
-      const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
-      for (const f of (data.fixtures || [])) {
-        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
-        if (skipQualifying && isQualifying(f) && (f.tournament?.rank?.id ?? 0) < 2) continue;
-        const surface = normalizeSurfaceName(f.tournament?.court?.name);
-        for (const player of [f.player1, f.player2]) {
-          if (!player?.id) continue;
-          const id = String(player.id);
-          if (!playerSurfaces.has(id)) playerSurfaces.set(id, surface);
-        }
-      }
-    }
-    const recentCount = playerSurfaces.size - beforeCount;
-    if (recentCount > 0) console.log(`Added ${recentCount} players from last 14 days`);
-
     const beforeFuture = playerSurfaces.size;
-    for (let d = 1; d <= 3; d++) {
+    for (let d = 1; d <= 14; d++) {
       const futureDate = new Date(Date.now() + 2 * 60 * 60 * 1000 + d * 86400000).toISOString().split('T')[0];
       const fp = path.join(CACHE_DIR, `fixtures-${futureDate}.json`);
       if (!fs.existsSync(fp)) continue;
@@ -306,7 +286,7 @@ async function main() {
       }
     }
     const futureCount = playerSurfaces.size - beforeFuture;
-    if (futureCount > 0) console.log(`Added ${futureCount} players from next 3 days`);
+    if (futureCount > 0) console.log(`Added ${futureCount} players from next 14 days`);
   }
 
   const toFetch = [...playerSurfaces.entries()].filter(([id, surface]) => needsFetch(id, surface));
