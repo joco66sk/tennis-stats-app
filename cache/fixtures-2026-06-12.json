@@ -1,6 +1,265 @@
 {
   "date": "2026-06-12",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1781059021964
+  "fixtures": [
+    {
+      "id": 1285,
+      "date": "2026-06-12T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 71174,
+      "player2Id": 24245,
+      "tournamentId": 21332,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "3",
+      "live": null,
+      "player1": {
+        "id": 71174,
+        "name": "Giovanni Mpetshi Perricard",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 24245,
+        "name": "Alexander Bublik",
+        "countryAcr": "KAZ"
+      },
+      "tournament": {
+        "id": 21332,
+        "name": "Boss Open - Stuttgart",
+        "courtId": 5,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1451,
+      "date": "2026-06-12T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 30856,
+      "player2Id": 95698,
+      "tournamentId": 21740,
+      "timeGame": null,
+      "seed1": "6",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 30856,
+        "name": "Zdenek Kolar",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 95698,
+        "name": "Federico Cina",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21740,
+        "name": "Bratislava Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "SVK",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1477,
+      "date": "2026-06-12T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 93848,
+      "player2Id": 28904,
+      "tournamentId": 21740,
+      "timeGame": null,
+      "seed1": "NG",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 93848,
+        "name": "Petr Brunclik",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 28904,
+        "name": "Vitaliy Sachko",
+        "countryAcr": "UKR"
+      },
+      "tournament": {
+        "id": 21740,
+        "name": "Bratislava Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "SVK",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1518,
+      "date": "2026-06-12T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 56195,
+      "player2Id": 41484,
+      "tournamentId": 21741,
+      "timeGame": null,
+      "seed1": "6",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 56195,
+        "name": "Tristan Boyer",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 41484,
+        "name": "Nikolas Sanchez-Izquierdo",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 21741,
+        "name": "Lyon Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "FRA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1568,
+      "date": "2026-06-12T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 33904,
+      "player2Id": 21506,
+      "tournamentId": 21742,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "9",
+      "live": null,
+      "player1": {
+        "id": 33904,
+        "name": "Raul Brancaccio",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 21506,
+        "name": "Roberto Carballes Baena",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 21742,
+        "name": "Cattolica Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1577,
+      "date": "2026-06-12T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 51965,
+      "player2Id": 40187,
+      "tournamentId": 21742,
+      "timeGame": null,
+      "seed1": "q",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 51965,
+        "name": "Francesco Forti",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 40187,
+        "name": "Andrea Guerrieri",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21742,
+        "name": "Cattolica Challenger",
+        "courtId": 2,
+        "date": "2026-06-08T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    }
+  ],
+  "count": 6,
+  "fetchedAt": 1781131922764
 }
