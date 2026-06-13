@@ -26,7 +26,6 @@ const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 const MIN_DATE = '2024-01-01';
 const LAST_N = 10;
-const MIN_COVERAGE = 5;   // warn if fewer than 5/10 matches have stats
 const DELAY = 400;
 const DRY_RUN = process.argv.includes('--dry-run');
 
@@ -132,38 +131,20 @@ async function main() {
       const entries = (index[surface] || []).filter(e => e.date >= MIN_DATE).slice(0, LAST_N);
       if (entries.length === 0) continue;
 
-      const wins   = entries.filter(e => e.won);
-      const losses = entries.filter(e => !e.won);
-      const withStats  = entries.filter(e => statsFileExists(e.tournamentId, pid, e.opponentId));
-      const winsStats  = wins.filter(e => statsFileExists(e.tournamentId, pid, e.opponentId));
-      const lossStats  = losses.filter(e => statsFileExists(e.tournamentId, pid, e.opponentId));
-      const missing    = entries.filter(e => !statsFileExists(e.tournamentId, pid, e.opponentId));
+      const missing = entries.filter(e => !statsFileExists(e.tournamentId, pid, e.opponentId));
+      if (missing.length === 0) continue;
 
-      const coverage = withStats.length;
-      const top5 = entries.slice(0, 5);
-      const top5WithStats = top5.filter(e => statsFileExists(e.tournamentId, pid, e.opponentId));
-      const samplingBias = losses.length >= 3 && lossStats.length === 0 && winsStats.length > 0;
-      const lowCoverage  = coverage < MIN_COVERAGE && entries.length >= MIN_COVERAGE;
-      const lowTop5      = top5.length >= 5 && top5WithStats.length < 3;
+      console.log(`  MISSING ${name.padEnd(26)} ${surface}: ${entries.length - missing.length}/${entries.length} have stats | missing: ${missing.length}`);
 
-      if (!samplingBias && !lowCoverage && !lowTop5) continue;
+      if (DRY_RUN) { issues += missing.length; continue; }
 
-      const tag = samplingBias ? 'BIAS' : 'LOW';
-      console.log(`  ${tag.padEnd(4)} ${name.padEnd(26)} ${surface}: ${coverage}/${entries.length} stats | ${winsStats.length}W/${lossStats.length}L covered | missing: ${missing.length}`);
-
-      if (missing.length > 0) {
-        if (DRY_RUN) {
-          issues += missing.length;
-          continue;
-        }
-        let fixed = 0;
-        for (const e of missing) {
-          const result = await fetchStats(e.tournamentId, pid, e.opponentId);
-          if (result === 'fetched') { fixed++; totalFetched++; await sleep(DELAY); }
-        }
-        console.log(`       → repaired ${fixed}/${missing.length} missing files`);
-        if (fixed < missing.length) issues += (missing.length - fixed);
+      let fixed = 0;
+      for (const e of missing) {
+        const result = await fetchStats(e.tournamentId, pid, e.opponentId);
+        if (result === 'fetched') { fixed++; totalFetched++; await sleep(DELAY); }
       }
+      console.log(`         → repaired ${fixed}/${missing.length}`);
+      if (fixed < missing.length) issues += (missing.length - fixed);
     }
   }
 
