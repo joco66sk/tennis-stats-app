@@ -30,14 +30,14 @@ jobs:
           echo "RAPIDAPI_KEY=${{ secrets.RAPIDAPI_KEY }}" > .env.local
           echo "RAPIDAPI_HOST=tennis-api-atp-wta-itf.p.rapidapi.com" >> .env.local
 
-      - name: Prefetch fixtures (past 7 days + today + 14 days ahead)
-        run: node scripts/prefetch-fixtures.js 14 --past=7
+      - name: Prefetch fixtures (past 2 days + today + 6 days ahead)
+        run: node scripts/prefetch-fixtures.js 6 --past=2 || true
 
       - name: Rebuild player indexes
-        run: node scripts/prebuild-cache.js today
+        run: node scripts/prebuild-cache.js today || true
 
       - name: Prebuild match stats
-        run: node scripts/prebuild-match-stats.js upcoming
+        run: node scripts/prebuild-match-stats.js upcoming || true
 
       - name: Repair missing indexes and stats
         run: node scripts/repair-upcoming.js || true
@@ -46,6 +46,7 @@ jobs:
         run: node scripts/sanity-check.js || true
 
       - name: Commit and push
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
