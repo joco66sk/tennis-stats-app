@@ -213,7 +213,11 @@ async function processPlayer(playerId, targetSurface, index, total) {
     console.log(`    → ${newForMe} new | ${targetSurface}: ${surfaceCount()} matches`);
 
     if (matches.length === 0) break;
-    if (surfaceCount() >= TARGET_PER_SURFACE) break;
+    if (surfaceCount() >= TARGET_PER_SURFACE) {
+      const oldest = myIdx[targetSurface]?.[myIdx[targetSurface].length - 1]?.date ?? '';
+      const pageEnd = (matches[matches.length - 1]?.date ?? '').slice(0, 10);
+      if (pageEnd <= oldest) break; // next page only has older matches — done
+    }
     if (matches.length < 100) break;
     if (page < MAX_PAGES) await sleep(DELAY_BETWEEN_PAGES);
   }
