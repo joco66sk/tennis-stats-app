@@ -140,10 +140,13 @@ async function main() {
       const missing    = entries.filter(e => !statsFileExists(e.tournamentId, pid, e.opponentId));
 
       const coverage = withStats.length;
+      const top5 = entries.slice(0, 5);
+      const top5WithStats = top5.filter(e => statsFileExists(e.tournamentId, pid, e.opponentId));
       const samplingBias = losses.length >= 3 && lossStats.length === 0 && winsStats.length > 0;
       const lowCoverage  = coverage < MIN_COVERAGE && entries.length >= MIN_COVERAGE;
+      const lowTop5      = top5.length >= 5 && top5WithStats.length < 3;
 
-      if (!samplingBias && !lowCoverage) continue;
+      if (!samplingBias && !lowCoverage && !lowTop5) continue;
 
       const tag = samplingBias ? 'BIAS' : 'LOW';
       console.log(`  ${tag.padEnd(4)} ${name.padEnd(26)} ${surface}: ${coverage}/${entries.length} stats | ${winsStats.length}W/${lossStats.length}L covered | missing: ${missing.length}`);
