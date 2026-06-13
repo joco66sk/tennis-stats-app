@@ -991,6 +991,49 @@
       }
     },
     {
+      "id": 1393,
+      "date": "2026-06-15T11:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 88766,
+      "player2Id": 52279,
+      "tournamentId": 21334,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "7",
+      "live": null,
+      "player1": {
+        "id": 88766,
+        "name": "Alexander Blockx",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 52279,
+        "name": "Francisco Cerundolo",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 21334,
+        "name": "HSBC Championships - London",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    },
+    {
       "id": 1734,
       "date": "2026-06-15T12:00:00.000Z",
       "roundId": 4,
@@ -1335,6 +1378,6 @@
       }
     }
   ],
-  "count": 31,
-  "fetchedAt": 1781388062659
+  "count": 32,
+  "fetchedAt": 1781393133481
 }
