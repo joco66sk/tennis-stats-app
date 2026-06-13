@@ -57,7 +57,7 @@ function getPlayerIdsFromFixtures(dates, atpOnly = true, skipQualifying = false)
       for (const f of (data.fixtures || [])) {
         if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
         if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue;
-        if (skipQualifying && isQualifying(f)) continue;
+        if (skipQualifying && isQualifying(f) && (f.tournament?.rank?.id ?? 0) < 2) continue; // keep ATP250+ qualifying
         if (f.player1?.id) ids.add(String(f.player1.id));
         if (f.player2?.id) ids.add(String(f.player2.id));
       }

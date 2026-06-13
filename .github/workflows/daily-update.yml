@@ -39,8 +39,11 @@ jobs:
       - name: Prebuild match stats
         run: node scripts/prebuild-match-stats.js upcoming
 
-      - name: Verify and repair upcoming fixtures
+      - name: Repair missing indexes and stats
         run: node scripts/repair-upcoming.js || true
+
+      - name: Sanity check — catch bias and low coverage, auto-repair
+        run: node scripts/sanity-check.js || true
 
       - name: Commit and push
         run: |
