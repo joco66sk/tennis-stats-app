@@ -1,6 +1,36 @@
 {
   "Clay": [
     {
+      "id": "1258149",
+      "date": "2026-03-31",
+      "tournamentId": 21583,
+      "tournamentName": "M25 Reus 1",
+      "opponentId": 96290,
+      "opponentName": "Luis Garcia Paez",
+      "won": false,
+      "result": "6-3 4-6 10-8"
+    },
+    {
+      "id": "1258193",
+      "date": "2026-03-30",
+      "tournamentId": 21583,
+      "tournamentName": "M25 Reus 1",
+      "opponentId": 118531,
+      "opponentName": "Arnau Escriva Gaya",
+      "won": true,
+      "result": "6-2 6-1"
+    },
+    {
+      "id": "1258187",
+      "date": "2026-03-29",
+      "tournamentId": 21583,
+      "tournamentName": "M25 Reus 1",
+      "opponentId": 114054,
+      "opponentName": "Riku Kato",
+      "won": true,
+      "result": "7-6(3) 7-5"
+    },
+    {
       "id": "1256316",
       "date": "2026-03-26",
       "tournamentId": 21568,
@@ -9,6 +39,46 @@
       "opponentName": "Oriol Roca Batalla",
       "won": false,
       "result": "6-2 4-6 6-4"
+    },
+    {
+      "id": "1256961",
+      "date": "2026-03-25",
+      "tournamentId": 21568,
+      "tournamentName": "M25 Tarragona 1",
+      "opponentId": 100852,
+      "opponentName": "Hugo Ruiz Rodriguez",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
+      "id": "1256947",
+      "date": "2026-03-24",
+      "tournamentId": 21568,
+      "tournamentName": "M25 Tarragona 1",
+      "opponentId": 94535,
+      "opponentName": "Sergi Fita Juan",
+      "won": true,
+      "result": "6-2 6-4"
+    },
+    {
+      "id": "1256955",
+      "date": "2026-03-23",
+      "tournamentId": 21568,
+      "tournamentName": "M25 Tarragona 1",
+      "opponentId": 96296,
+      "opponentName": "Andrea Motta",
+      "won": true,
+      "result": "6-3 7-6(1)"
+    },
+    {
+      "id": "1256994",
+      "date": "2026-03-22",
+      "tournamentId": 21568,
+      "tournamentName": "M25 Tarragona 1",
+      "opponentId": 127200,
+      "opponentName": "Victor Palomar-Marquina",
+      "won": true,
+      "result": "6-2 6-3"
     },
     {
       "id": "1256257",
@@ -21,84 +91,14 @@
       "result": "6-2 6-4"
     },
     {
-      "id": "1250935",
-      "date": "2026-02-24",
-      "tournamentId": 21468,
-      "tournamentName": "M15 Antalya 4",
-      "opponentId": 68981,
-      "opponentName": "Max Alcala Gurri",
-      "won": false,
-      "result": "6-3 6-1"
-    },
-    {
-      "id": "1219949",
-      "date": "2025-08-31",
-      "tournamentId": 20985,
-      "tournamentName": "M15 Allershausen 1",
-      "opponentId": 50391,
-      "opponentName": "Imanol Lopez Morillo",
-      "won": false,
-      "result": "6-2 6-2"
-    },
-    {
-      "id": "1145188",
-      "date": "2024-08-25",
-      "tournamentId": 19950,
-      "tournamentName": "Porto 2 Challenger",
-      "opponentId": 68981,
-      "opponentName": "Max Alcala Gurri",
+      "id": "1256339",
+      "date": "2026-03-20",
+      "tournamentId": 21560,
+      "tournamentName": "M15 Foggia 1",
+      "opponentId": 80018,
+      "opponentName": "Pietro Marino",
       "won": true,
-      "result": "6-4 2-6 6-4"
-    },
-    {
-      "id": "1147669",
-      "date": "2024-08-23",
-      "tournamentId": 19982,
-      "tournamentName": "M25 Lesa 1",
-      "opponentId": 35296,
-      "opponentName": "Remy Bertola",
-      "won": false,
-      "result": "6-7(0) 7-5 3-0 ret."
-    },
-    {
-      "id": "1147666",
-      "date": "2024-08-20",
-      "tournamentId": 19982,
-      "tournamentName": "M25 Lesa 1",
-      "opponentId": 89099,
-      "opponentName": "Joao Eduardo Schiessl",
-      "won": true,
-      "result": "6-4 6-2"
-    },
-    {
-      "id": "1144878",
-      "date": "2024-08-11",
-      "tournamentId": 19945,
-      "tournamentName": "Todi Challenger",
-      "opponentId": 53909,
-      "opponentName": "Luka Pavlovic",
-      "won": false,
-      "result": "6-4 6-4"
-    },
-    {
-      "id": "1144560",
-      "date": "2024-08-04",
-      "tournamentId": 19940,
-      "tournamentName": "Cordenons Challenger",
-      "opponentId": 24841,
-      "opponentName": "Gonzalo Villanueva",
-      "won": false,
-      "result": "6-1 6-3"
-    },
-    {
-      "id": "1129365",
-      "date": "2024-05-25",
-      "tournamentId": 19743,
-      "tournamentName": "M15 Cervia 1",
-      "opponentId": 93550,
-      "opponentName": "Rei Sakamoto",
-      "won": true,
-      "result": "6-3 6-1"
+      "result": "7-5 6-3"
     }
   ],
   "Hard": [
@@ -113,6 +113,16 @@
       "result": "7-6(3) 6-4"
     },
     {
+      "id": "1269901",
+      "date": "2026-05-31",
+      "tournamentId": 21738,
+      "tournamentName": "Centurion 2 Challenger",
+      "opponentId": 116162,
+      "opponentName": "Mark Nawa",
+      "won": true,
+      "result": "6-1 6-1"
+    },
+    {
       "id": "1264622",
       "date": "2026-05-24",
       "tournamentId": 21674,
@@ -123,87 +133,77 @@
       "result": "6-3 7-6(3)"
     },
     {
-      "id": "1196584",
-      "date": "2025-05-13",
-      "tournamentId": 20683,
-      "tournamentName": "M15 Monastir 19",
-      "opponentId": 76148,
-      "opponentName": "Nino Ehrenschneider",
+      "id": "1247045",
+      "date": "2026-01-26",
+      "tournamentId": 21408,
+      "tournamentName": "M25 Nussloch 1",
+      "opponentId": 115591,
+      "opponentName": "Vincent Dullinger",
       "won": false,
-      "result": "7-5 6-1"
+      "result": "7-6(5) 6-2"
     },
     {
-      "id": "1194072",
-      "date": "2025-04-30",
-      "tournamentId": 20648,
-      "tournamentName": "M15 Monastir 17",
-      "opponentId": 84941,
-      "opponentName": "Dimitris Sakellaridis",
-      "won": false,
-      "result": "7-5 2-0 ret."
-    },
-    {
-      "id": "1193221",
-      "date": "2025-04-25",
-      "tournamentId": 20638,
-      "tournamentName": "M15 Monastir 16",
-      "opponentId": 85842,
-      "opponentName": "Tuncay Duran",
-      "won": false,
-      "result": "6-3 6-1"
-    },
-    {
-      "id": "1192332",
-      "date": "2025-04-17",
-      "tournamentId": 20628,
-      "tournamentName": "M15 Monastir 15",
-      "opponentId": 64479,
-      "opponentName": "Robert Strombachs",
+      "id": "1247058",
+      "date": "2026-01-26",
+      "tournamentId": 21408,
+      "tournamentName": "M25 Nussloch 1",
+      "opponentId": 103831,
+      "opponentName": "Alexander Glomb",
       "won": true,
-      "result": "7-6(6) 7-6(2)"
+      "result": "6-4 6-0"
     },
     {
-      "id": "1176156",
-      "date": "2025-02-09",
-      "tournamentId": 20397,
-      "tournamentName": "Manama Challenger",
-      "opponentId": 28904,
-      "opponentName": "Vitaliy Sachko",
+      "id": "1232849",
+      "date": "2025-10-30",
+      "tournamentId": 21177,
+      "tournamentName": "M15 Szabolcsveresmart 1",
+      "opponentId": 57254,
+      "opponentName": "Herman Hoeyeraal",
       "won": false,
-      "result": "6-3 6-3"
+      "result": "5-7 6-4 6-1"
     },
     {
-      "id": "1162587",
-      "date": "2024-11-17",
-      "tournamentId": 20208,
-      "tournamentName": "Rovereto Challenger",
-      "opponentId": 36042,
-      "opponentName": "Oleg Prihodko",
-      "won": false,
-      "result": "7-5 6-1"
+      "id": "1232883",
+      "date": "2025-10-28",
+      "tournamentId": 21177,
+      "tournamentName": "M15 Szabolcsveresmart 1",
+      "opponentId": 119747,
+      "opponentName": "Marcell Kovacs",
+      "won": true,
+      "result": "6-3 6-4"
     },
     {
-      "id": "1159779",
-      "date": "2024-10-19",
-      "tournamentId": 20147,
-      "tournamentName": "M15 Monastir 42",
-      "opponentId": 70909,
-      "opponentName": "Fausto Tabacco",
-      "won": false,
-      "result": "6-1 6-4"
+      "id": "1226925",
+      "date": "2025-10-03",
+      "tournamentId": 21080,
+      "tournamentName": "M15 Kayseri 9",
+      "opponentId": 23830,
+      "opponentName": "Alp Horoz",
+      "won": true,
+      "result": "3-6 6-3 7-5"
     },
     {
-      "id": "1137845",
-      "date": "2024-07-16",
-      "tournamentId": 19853,
-      "tournamentName": "Pozoblanco Challenger",
-      "opponentId": 95537,
-      "opponentName": "Iliyan Radulov",
+      "id": "1226962",
+      "date": "2025-10-03",
+      "tournamentId": 21080,
+      "tournamentName": "M15 Kayseri 9",
+      "opponentId": 48023,
+      "opponentName": "Aleksandr Braynin",
       "won": false,
-      "result": "6-3 6-3"
+      "result": "6-4 6-4"
+    },
+    {
+      "id": "1226952",
+      "date": "2025-10-01",
+      "tournamentId": 21080,
+      "tournamentName": "M15 Kayseri 9",
+      "opponentId": 84948,
+      "opponentName": "Radovan Michalik",
+      "won": true,
+      "result": "6-4 6-1"
     }
   ],
   "Grass": [],
-  "updatedAt": 1781388244758,
+  "updatedAt": 1781475109965,
   "playerName": "Peter Buldorini"
 }

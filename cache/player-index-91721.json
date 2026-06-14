@@ -11,6 +11,16 @@
       "result": "7-6(1) 3-6 6-2"
     },
     {
+      "id": "1270105",
+      "date": "2026-06-07",
+      "tournamentId": 21742,
+      "tournamentName": "Cattolica Challenger",
+      "opponentId": 102841,
+      "opponentName": "Filippo Mazzola",
+      "won": true,
+      "result": "6-0 6-2"
+    },
+    {
       "id": "1269525",
       "date": "2026-06-02",
       "tournamentId": 21734,
@@ -29,6 +39,16 @@
       "opponentName": "Maks Kasnikowski",
       "won": false,
       "result": "6-4 3-6 6-3"
+    },
+    {
+      "id": "1269652",
+      "date": "2026-05-31",
+      "tournamentId": 21734,
+      "tournamentName": "Perugia Challenger",
+      "opponentId": 128977,
+      "opponentName": "Neri Bartolucci",
+      "won": true,
+      "result": "6-0 6-0"
     },
     {
       "id": "1268206",
@@ -51,54 +71,34 @@
       "result": "7-6(4) 6-4"
     },
     {
-      "id": "1262796",
-      "date": "2026-05-03",
-      "tournamentId": 21646,
-      "tournamentName": "M25 Lujan",
-      "opponentId": 109920,
-      "opponentName": "Carlos Maria Zarate",
+      "id": "1268271",
+      "date": "2026-05-28",
+      "tournamentId": 21718,
+      "tournamentName": "M25 Grado",
+      "opponentId": 23993,
+      "opponentName": "Gabriele Maria Noce",
+      "won": true,
+      "result": "6-1 6-3"
+    },
+    {
+      "id": "1268275",
+      "date": "2026-05-27",
+      "tournamentId": 21718,
+      "tournamentName": "M25 Grado",
+      "opponentId": 37376,
+      "opponentName": "Nicola Rispoli",
+      "won": true,
+      "result": "6-4 6-3"
+    },
+    {
+      "id": "1268059",
+      "date": "2026-05-21",
+      "tournamentId": 21715,
+      "tournamentName": "M15 Klagenfurt",
+      "opponentId": 56420,
+      "opponentName": "Oleksii Krutykh",
       "won": false,
-      "result": "6-2 6-2"
-    },
-    {
-      "id": "1262246",
-      "date": "2026-05-02",
-      "tournamentId": 21646,
-      "tournamentName": "M25 Lujan",
-      "opponentId": 64916,
-      "opponentName": "Matheus Pucinelli De Almeida",
-      "won": true,
-      "result": "6-1 6-4"
-    },
-    {
-      "id": "1262252",
-      "date": "2026-05-01",
-      "tournamentId": 21646,
-      "tournamentName": "M25 Lujan",
-      "opponentId": 77659,
-      "opponentName": "Juan Bautista Torres",
-      "won": true,
-      "result": "1-6 6-2 6-1"
-    },
-    {
-      "id": "1262262",
-      "date": "2026-04-29",
-      "tournamentId": 21646,
-      "tournamentName": "M25 Lujan",
-      "opponentId": 90029,
-      "opponentName": "Juan Estevez",
-      "won": true,
-      "result": "7-5 1-6 6-2"
-    },
-    {
-      "id": "1258254",
-      "date": "2026-04-09",
-      "tournamentId": 21591,
-      "tournamentName": "Campinas Challenger",
-      "opponentId": 73983,
-      "opponentName": "Gonzalo Bueno",
-      "won": false,
-      "result": "6-2 6-2"
+      "result": "6-0 3-6 7-6(0)"
     }
   ],
   "Hard": [
@@ -113,6 +113,26 @@
       "result": "4-6 7-5 7-5"
     },
     {
+      "id": "1234055",
+      "date": "2025-11-25",
+      "tournamentId": 21196,
+      "tournamentName": "Temuco Challenger",
+      "opponentId": 34349,
+      "opponentName": "Hady Habib",
+      "won": true,
+      "result": "7-6(2) 3-6 6-3"
+    },
+    {
+      "id": "1234085",
+      "date": "2025-11-24",
+      "tournamentId": 21196,
+      "tournamentName": "Temuco Challenger",
+      "opponentId": 108027,
+      "opponentName": "Bautista De La Pena",
+      "won": true,
+      "result": "6-4 6-2"
+    },
+    {
       "id": "1234872",
       "date": "2025-11-08",
       "tournamentId": 21209,
@@ -121,9 +141,69 @@
       "opponentName": "Ryan Dickerson",
       "won": true,
       "result": "7-6(4) 6-2"
+    },
+    {
+      "id": "1234856",
+      "date": "2025-11-07",
+      "tournamentId": 21209,
+      "tournamentName": "M15 Valledupar 1",
+      "opponentId": 26319,
+      "opponentName": "Davide Pontoglio",
+      "won": true,
+      "result": "3-6 6-3 6-0"
+    },
+    {
+      "id": "1234858",
+      "date": "2025-11-07",
+      "tournamentId": 21209,
+      "tournamentName": "M15 Valledupar 1",
+      "opponentId": 30230,
+      "opponentName": "Peter Bertran",
+      "won": true,
+      "result": "7-6(3) 6-3"
+    },
+    {
+      "id": "1234877",
+      "date": "2025-11-05",
+      "tournamentId": 21209,
+      "tournamentName": "M15 Valledupar 1",
+      "opponentId": 88550,
+      "opponentName": "Lucca Pinto",
+      "won": true,
+      "result": "6-0 6-1"
+    },
+    {
+      "id": "1234904",
+      "date": "2025-11-03",
+      "tournamentId": 21209,
+      "tournamentName": "M15 Valledupar 1",
+      "opponentId": 120972,
+      "opponentName": "Lucas Martin Velasco",
+      "won": true,
+      "result": "6-0 6-1"
+    },
+    {
+      "id": "1218955",
+      "date": "2025-08-27",
+      "tournamentId": 20973,
+      "tournamentName": "M25 Trelew 1",
+      "opponentId": 78906,
+      "opponentName": "Samir Banerjee",
+      "won": false,
+      "result": "6-1 6-1"
+    },
+    {
+      "id": "1218942",
+      "date": "2025-08-26",
+      "tournamentId": 20973,
+      "tournamentName": "M25 Trelew 1",
+      "opponentId": 85002,
+      "opponentName": "Enzo Camargo Lima",
+      "won": true,
+      "result": "6-1 6-1"
     }
   ],
   "Grass": [],
-  "updatedAt": 1781321450595,
+  "updatedAt": 1781474917280,
   "playerName": "Lucio Ratti"
 }
