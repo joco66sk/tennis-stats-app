@@ -45,6 +45,9 @@ jobs:
       - name: Sanity check — catch bias and low coverage, auto-repair
         run: node scripts/sanity-check.js || true
 
+      - name: Validate stats — flag and re-fetch suspicious averages
+        run: node scripts/validate-stats.js || true
+
       - name: Commit and push
         if: always()
         run: |

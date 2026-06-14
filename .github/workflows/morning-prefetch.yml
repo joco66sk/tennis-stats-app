@@ -39,6 +39,9 @@ jobs:
       - name: Sanity check — fetch any missing stats files
         run: node scripts/sanity-check.js || true
 
+      - name: Validate stats — flag and re-fetch suspicious averages
+        run: node scripts/validate-stats.js || true
+
       - name: Commit and push
         if: always()
         run: |
