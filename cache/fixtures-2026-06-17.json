@@ -1,6 +1,50 @@
 {
   "date": "2026-06-17",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1781474835548
+  "fixtures": [
+    {
+      "id": 1291,
+      "date": "2026-06-17T12:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 18094,
+      "player2Id": 73742,
+      "tournamentId": 21744,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 18094,
+        "name": "Mackenzie Mcdonald",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 73742,
+        "name": "Shintaro Mochizuki",
+        "countryAcr": "JPN"
+      },
+      "tournament": {
+        "id": 21744,
+        "name": "Nottingham 2 Challenger",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1781519006281
 }
