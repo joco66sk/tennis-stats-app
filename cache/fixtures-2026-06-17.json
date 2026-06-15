@@ -2,7 +2,93 @@
   "date": "2026-06-17",
   "fixtures": [
     {
-      "id": 1291,
+      "id": 1238,
+      "date": "2026-06-17T12:30:00.000Z",
+      "roundId": 5,
+      "player1Id": 93452,
+      "player2Id": 40434,
+      "tournamentId": 21333,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 93452,
+        "name": "Learner Tien",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 40434,
+        "name": "Felix Auger Aliassime",
+        "countryAcr": "CAN"
+      },
+      "tournament": {
+        "id": 21333,
+        "name": "Terra Wortmann Open - Halle",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1265,
+      "date": "2026-06-17T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 29935,
+      "player2Id": 24249,
+      "tournamentId": 21334,
+      "timeGame": null,
+      "seed1": "8",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 29935,
+        "name": "Tommy Paul",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 24249,
+        "name": "Botic Van De Zandschulp",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 21334,
+        "name": "HSBC Championships - London",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1302,
       "date": "2026-06-17T12:00:00.000Z",
       "roundId": 5,
       "player1Id": 18094,
@@ -43,8 +129,51 @@
         "id": 5,
         "name": "Second"
       }
+    },
+    {
+      "id": 1304,
+      "date": "2026-06-17T12:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 24721,
+      "player2Id": 28992,
+      "tournamentId": 21744,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 24721,
+        "name": "Christopher O'Connell",
+        "countryAcr": "AUS"
+      },
+      "player2": {
+        "id": 28992,
+        "name": "Jay Clarke",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21744,
+        "name": "Nottingham 2 Challenger",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1781519006281
+  "count": 4,
+  "fetchedAt": 1781564470765
 }

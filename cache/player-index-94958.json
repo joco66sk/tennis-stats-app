@@ -1,6 +1,26 @@
 {
   "Clay": [
     {
+      "id": "115448865",
+      "date": "2026-06-15",
+      "tournamentId": 21745,
+      "tournamentName": "Parma Challenger",
+      "opponentId": 54380,
+      "opponentName": "Tommaso Compagnucci",
+      "won": true,
+      "result": "6-3 6-7(7) 6-4"
+    },
+    {
+      "id": "78307721",
+      "date": "2026-06-14",
+      "tournamentId": 21745,
+      "tournamentName": "Parma Challenger",
+      "opponentId": 55642,
+      "opponentName": "Niccolo Catini",
+      "won": true,
+      "result": "6-1 6-2"
+    },
+    {
       "id": "113940657",
       "date": "2026-06-08",
       "tournamentId": 21742,
@@ -9,6 +29,56 @@
       "opponentName": "Carlo Alberto Caniato",
       "won": false,
       "result": "7-5 6-4"
+    },
+    {
+      "id": "1270076",
+      "date": "2026-06-07",
+      "tournamentId": 21742,
+      "tournamentName": "Cattolica Challenger",
+      "opponentId": 55657,
+      "opponentName": "Lorenzo Rottoli",
+      "won": true,
+      "result": "7-5 6-2"
+    },
+    {
+      "id": "1270198",
+      "date": "2026-06-05",
+      "tournamentId": 21757,
+      "tournamentName": "M25 Caltanissetta",
+      "opponentId": 48872,
+      "opponentName": "Alexandre Reco",
+      "won": false,
+      "result": "6-1 6-4"
+    },
+    {
+      "id": "1270196",
+      "date": "2026-06-04",
+      "tournamentId": 21757,
+      "tournamentName": "M25 Caltanissetta",
+      "opponentId": 93403,
+      "opponentName": "Adam Lynch",
+      "won": true,
+      "result": "6-4 6-1"
+    },
+    {
+      "id": "1270203",
+      "date": "2026-06-02",
+      "tournamentId": 21757,
+      "tournamentName": "M25 Caltanissetta",
+      "opponentId": 102798,
+      "opponentName": "Jacopo Borsoi",
+      "won": true,
+      "result": "6-2 7-5"
+    },
+    {
+      "id": "1268648",
+      "date": "2026-05-25",
+      "tournamentId": 21722,
+      "tournamentName": "M25 Carnac",
+      "opponentId": 62996,
+      "opponentName": "Marlon Vankan",
+      "won": false,
+      "result": "6-1 6-4"
     },
     {
       "id": "1264366",
@@ -29,76 +99,6 @@
       "opponentName": "Michele Ribecai",
       "won": true,
       "result": "5-7 6-3 6-4"
-    },
-    {
-      "id": "1243313",
-      "date": "2026-05-04",
-      "tournamentId": 21326,
-      "tournamentName": "Internazionali BNL d'Italia - Rome",
-      "opponentId": 59092,
-      "opponentName": "Titouan Droguet",
-      "won": false,
-      "result": "5-7 6-1 7-5"
-    },
-    {
-      "id": "1260251",
-      "date": "2026-04-18",
-      "tournamentId": 21620,
-      "tournamentName": "M25 Santa Margherita di Pula",
-      "opponentId": 111498,
-      "opponentName": "Moise Kouame",
-      "won": false,
-      "result": "6-3 4-6 6-3"
-    },
-    {
-      "id": "1260259",
-      "date": "2026-04-17",
-      "tournamentId": 21620,
-      "tournamentName": "M25 Santa Margherita di Pula",
-      "opponentId": 100196,
-      "opponentName": "Lorenzo Carboni",
-      "won": true,
-      "result": "2-6 6-2 6-4"
-    },
-    {
-      "id": "1260241",
-      "date": "2026-04-17",
-      "tournamentId": 21620,
-      "tournamentName": "M25 Santa Margherita di Pula",
-      "opponentId": 71979,
-      "opponentName": "Gianmarco Ferrari",
-      "won": true,
-      "result": "6-2 2-6 6-2"
-    },
-    {
-      "id": "1260246",
-      "date": "2026-04-16",
-      "tournamentId": 21620,
-      "tournamentName": "M25 Santa Margherita di Pula",
-      "opponentId": 91428,
-      "opponentName": "Carlo Alberto Caniato",
-      "won": true,
-      "result": "6-3 6-1"
-    },
-    {
-      "id": "1260253",
-      "date": "2026-04-14",
-      "tournamentId": 21620,
-      "tournamentName": "M25 Santa Margherita di Pula",
-      "opponentId": 95311,
-      "opponentName": "Max Schoenhaus",
-      "won": true,
-      "result": "3-6 6-2 6-2"
-    },
-    {
-      "id": "1252876",
-      "date": "2026-03-30",
-      "tournamentId": 21521,
-      "tournamentName": "Menorca Challenger",
-      "opponentId": 24647,
-      "opponentName": "Christoph Negritu",
-      "won": false,
-      "result": "6-4 6-4"
     }
   ],
   "Hard": [
@@ -174,6 +174,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1781475182463,
+  "updatedAt": 1781564732109,
   "playerName": "Juan Cruz Martin Manzano"
 }
