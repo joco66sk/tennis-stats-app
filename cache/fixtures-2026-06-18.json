@@ -1,6 +1,179 @@
 {
   "date": "2026-06-18",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1781602017675
+  "fixtures": [
+    {
+      "id": 1211,
+      "date": "2026-06-18T12:30:00.000Z",
+      "roundId": 5,
+      "player1Id": 24008,
+      "player2Id": 14856,
+      "tournamentId": 21333,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21333,
+        "name": "Terra Wortmann Open - Halle",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1236,
+      "date": "2026-06-18T12:30:00.000Z",
+      "roundId": 5,
+      "player1Id": 84235,
+      "player2Id": 72578,
+      "tournamentId": 21333,
+      "timeGame": null,
+      "seed1": "q",
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 84235,
+        "name": "Raphael Collignon",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 72578,
+        "name": "Mattia Bellucci",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21333,
+        "name": "Terra Wortmann Open - Halle",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "GER",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1313,
+      "date": "2026-06-18T12:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 26140,
+      "player2Id": 28900,
+      "tournamentId": 21744,
+      "timeGame": null,
+      "seed1": "q",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 26140,
+        "name": "Zhizhen Zhang",
+        "countryAcr": "CHN"
+      },
+      "player2": {
+        "id": 28900,
+        "name": "Roman Safiullin",
+        "countryAcr": "RUS"
+      },
+      "tournament": {
+        "id": 21744,
+        "name": "Nottingham 2 Challenger",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1347,
+      "date": "2026-06-18T12:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 73742,
+      "player2Id": 35296,
+      "tournamentId": 21744,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 73742,
+        "name": "Shintaro Mochizuki",
+        "countryAcr": "JPN"
+      },
+      "player2": {
+        "id": 35296,
+        "name": "Remy Bertola",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 21744,
+        "name": "Nottingham 2 Challenger",
+        "courtId": 5,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    }
+  ],
+  "count": 4,
+  "fetchedAt": 1781650355097
 }
