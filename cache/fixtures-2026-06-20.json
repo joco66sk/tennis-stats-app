@@ -1,6 +1,47 @@
 {
   "date": "2026-06-20",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1781823342418
+  "fixtures": [
+    {
+      "id": 2262,
+      "date": "2026-06-20T04:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 91485,
+      "player2Id": 119381,
+      "tournamentId": 21793,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": "8",
+      "live": null,
+      "player1": {
+        "id": 91485,
+        "name": "Bryce Nakashima",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 119381,
+        "name": "Ronit Karki",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21793,
+        "name": "M15 Irvine",
+        "courtId": 1,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 0,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": null,
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1781859915816
 }
