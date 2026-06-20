@@ -389,25 +389,25 @@
       }
     },
     {
-      "id": 1599,
+      "id": 1628,
       "date": "2026-06-19T22:05:00.000Z",
       "roundId": 10,
-      "player1Id": 36772,
-      "player2Id": 90029,
+      "player1Id": 90029,
+      "player2Id": 36772,
       "tournamentId": 21748,
       "timeGame": null,
-      "seed1": "q",
-      "seed2": "8",
+      "seed1": "8",
+      "seed2": "q",
       "live": null,
       "player1": {
-        "id": 36772,
-        "name": "Conner Huertas Del Pino",
-        "countryAcr": "PER"
-      },
-      "player2": {
         "id": 90029,
         "name": "Juan Estevez",
         "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 36772,
+        "name": "Conner Huertas Del Pino",
+        "countryAcr": "PER"
       },
       "tournament": {
         "id": 21748,
@@ -3223,5 +3223,5 @@
     }
   ],
   "count": 79,
-  "fetchedAt": 1781904398204
+  "fetchedAt": 1781918271883
 }
