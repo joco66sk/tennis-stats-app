@@ -1,6 +1,50 @@
 {
   "date": "2026-06-21",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1781918283629
+  "fixtures": [
+    {
+      "id": 1605,
+      "date": "2026-06-21T00:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 38973,
+      "player2Id": 90029,
+      "tournamentId": 21748,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "8",
+      "live": null,
+      "player1": {
+        "id": 38973,
+        "name": "Nick Hardt",
+        "countryAcr": "DOM"
+      },
+      "player2": {
+        "id": 90029,
+        "name": "Juan Estevez",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 21748,
+        "name": "Asuncion Challenger",
+        "courtId": 2,
+        "date": "2026-06-15T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "PAR",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 12,
+        "name": "Final"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1781941789116
 }
