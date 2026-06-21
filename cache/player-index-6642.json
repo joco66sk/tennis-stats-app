@@ -1,5 +1,36 @@
 {
-  "Clay": [],
+  "Clay": [
+    {
+      "id": "867072",
+      "date": "2021-05-26",
+      "tournamentId": 16911,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 18477,
+      "opponentName": "Hugo Dellien",
+      "won": false,
+      "result": "7-6(4) 6-7(4) 6-4"
+    },
+    {
+      "id": "874039",
+      "date": "2021-03-22",
+      "tournamentId": 17011,
+      "tournamentName": "Zadar Challenger",
+      "opponentId": 29457,
+      "opponentName": "Andrea Pellegrino",
+      "won": true,
+      "result": "6-3 6-1"
+    },
+    {
+      "id": "860358",
+      "date": "2020-09-30",
+      "tournamentId": 16801,
+      "tournamentName": "Biella Challenger",
+      "opponentId": 47557,
+      "opponentName": "Chun Hsin Tseng",
+      "won": true,
+      "result": "3-6 6-3 6-3"
+    }
+  ],
   "Hard": [
     {
       "id": "868981",
@@ -20,6 +51,16 @@
       "opponentName": "Jeff Wolf",
       "won": true,
       "result": "6-3 2-0 ret."
+    },
+    {
+      "id": "844488",
+      "date": "2020-02-05",
+      "tournamentId": 16516,
+      "tournamentName": "Launceston Challenger",
+      "opponentId": 11981,
+      "opponentName": "Lorenzo Giustino",
+      "won": false,
+      "result": "0-6 7-5 7-6(7)"
     },
     {
       "id": "843787",
@@ -52,6 +93,16 @@
       "result": "7-6(3) 6-3"
     },
     {
+      "id": "770348",
+      "date": "2018-10-23",
+      "tournamentId": 15378,
+      "tournamentName": "Liuzhou Challenger",
+      "opponentId": 23298,
+      "opponentName": "Kimmer Coppejans",
+      "won": true,
+      "result": "6-3 6-2"
+    },
+    {
       "id": "702640",
       "date": "2017-11-03",
       "tournamentId": 14475,
@@ -74,6 +125,6 @@
       "result": "4-6 6-4 6-3"
     }
   ],
-  "updatedAt": 1781918368440,
+  "updatedAt": 1782080607613,
   "playerName": "Blaz Kavcic"
 }

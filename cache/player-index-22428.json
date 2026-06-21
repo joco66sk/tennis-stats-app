@@ -11,6 +11,26 @@
       "result": "6-3 3-6 7-6(2)"
     },
     {
+      "id": "1201116",
+      "date": "2025-06-03",
+      "tournamentId": 20741,
+      "tournamentName": "M25 Grasse 1",
+      "opponentId": 40605,
+      "opponentName": "Dan Added",
+      "won": false,
+      "result": "6-7(5) 6-1 6-4"
+    },
+    {
+      "id": "1137232",
+      "date": "2024-07-05",
+      "tournamentId": 19844,
+      "tournamentName": "Troyes Challenger",
+      "opponentId": 11981,
+      "opponentName": "Lorenzo Giustino",
+      "won": false,
+      "result": "6-0 6-7(4) 7-5"
+    },
+    {
       "id": "1137265",
       "date": "2024-07-01",
       "tournamentId": 19844,
@@ -29,6 +49,16 @@
       "opponentName": "Florent Bax",
       "won": false,
       "result": "6-3 6-4"
+    },
+    {
+      "id": "1124704",
+      "date": "2024-05-02",
+      "tournamentId": 19685,
+      "tournamentName": "M25 Sabadell 1",
+      "opponentId": 41484,
+      "opponentName": "Nikolas Sanchez-Izquierdo",
+      "won": false,
+      "result": "6-7(1) 6-1 6-1"
     },
     {
       "id": "1124716",
@@ -69,36 +99,6 @@
       "opponentName": "Daniel Merida Aguilar",
       "won": false,
       "result": "7-6(2) 7-6(4)"
-    },
-    {
-      "id": "991344",
-      "date": "2023-04-09",
-      "tournamentId": 18635,
-      "tournamentName": "Madrid Challenger",
-      "opponentId": 48013,
-      "opponentName": "Henri Squire",
-      "won": false,
-      "result": "3-6 6-4 6-1"
-    },
-    {
-      "id": "990481",
-      "date": "2023-04-02",
-      "tournamentId": 18631,
-      "tournamentName": "Murcia Challenger",
-      "opponentId": 87766,
-      "opponentName": "Edas Butvilas",
-      "won": false,
-      "result": "5-7 6-1 7-6(4)"
-    },
-    {
-      "id": "967940",
-      "date": "2022-11-30",
-      "tournamentId": 18331,
-      "tournamentName": "Maia Challenger",
-      "opponentId": 28267,
-      "opponentName": "Aleksandar Vukic",
-      "won": false,
-      "result": "6-3 6-1"
     }
   ],
   "Hard": [
@@ -193,17 +193,28 @@
       "result": "6-3 6-3"
     },
     {
-      "id": "1162800",
-      "date": "2024-11-19",
-      "tournamentId": 20212,
-      "tournamentName": "Puerto Vallarta Challenger",
-      "opponentId": 53532,
-      "opponentName": "Liam Draxl",
+      "id": "1182700",
+      "date": "2025-01-26",
+      "tournamentId": 20478,
+      "tournamentName": "Koblenz Challenger",
+      "opponentId": 17837,
+      "opponentName": "Dimitar Kuzmanov",
       "won": false,
-      "result": "6-0 6-0"
+      "result": "7-6(5) 7-6(5)"
     }
   ],
-  "Grass": [],
-  "updatedAt": 1781993221986,
+  "Grass": [
+    {
+      "id": "790602",
+      "date": "2019-06-24",
+      "tournamentId": 15641,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 23298,
+      "opponentName": "Kimmer Coppejans",
+      "won": true,
+      "result": "6-3 7-5"
+    }
+  ],
+  "updatedAt": 1782080607662,
   "playerName": "Evgeny Karlovskiy"
 }

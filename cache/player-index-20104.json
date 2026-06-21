@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1270414",
+      "date": "2026-06-18",
+      "tournamentId": 21745,
+      "tournamentName": "Parma Challenger",
+      "opponentId": 82371,
+      "opponentName": "Luca Van Assche",
+      "won": false,
+      "result": "3-6 6-0 6-1"
+    },
+    {
       "id": "184254220",
       "date": "2026-06-17",
       "tournamentId": 21745,
@@ -89,16 +99,6 @@
       "opponentName": "Yu Hsiou Hsu",
       "won": false,
       "result": "6-4 7-6(3)"
-    },
-    {
-      "id": "1243457",
-      "date": "2026-05-21",
-      "tournamentId": 21329,
-      "tournamentName": "French Open - Paris",
-      "opponentId": 29457,
-      "opponentName": "Andrea Pellegrino",
-      "won": false,
-      "result": "7-6(5) 6-2"
     }
   ],
   "Hard": [
@@ -233,8 +233,78 @@
       "opponentName": "Liam Broady",
       "won": false,
       "result": "6-3 6-4 6-0"
+    },
+    {
+      "id": "790579",
+      "date": "2019-07-02",
+      "tournamentId": 15641,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 39309,
+      "opponentName": "Alex De Minaur",
+      "won": false,
+      "result": "6-0 6-4 7-6(5)"
+    },
+    {
+      "id": "790390",
+      "date": "2019-06-24",
+      "tournamentId": 15640,
+      "tournamentName": "Nature Valley International - Eastbourne",
+      "opponentId": 26473,
+      "opponentName": "Hubert Hurkacz",
+      "won": false,
+      "result": "6-4 6-4"
+    },
+    {
+      "id": "790280",
+      "date": "2019-06-19",
+      "tournamentId": 15638,
+      "tournamentName": "Fever-Tree Championships - London",
+      "opponentId": 11704,
+      "opponentName": "Milos Raonic",
+      "won": false,
+      "result": "6-3 6-2"
+    },
+    {
+      "id": "722907",
+      "date": "2018-07-03",
+      "tournamentId": 14741,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 39309,
+      "opponentName": "Alex De Minaur",
+      "won": false,
+      "result": "6-4 6-7(6) 7-6(5) 6-4"
+    },
+    {
+      "id": "722714",
+      "date": "2018-06-29",
+      "tournamentId": 14740,
+      "tournamentName": "AEGON International - Eastbourne",
+      "opponentId": 5127,
+      "opponentName": "Lukas Lacko",
+      "won": false,
+      "result": "6-3 6-4"
+    },
+    {
+      "id": "722703",
+      "date": "2018-06-28",
+      "tournamentId": 14740,
+      "tournamentName": "AEGON International - Eastbourne",
+      "opponentId": 9831,
+      "opponentName": "John Millman",
+      "won": true,
+      "result": "5-7 6-3 6-2"
+    },
+    {
+      "id": "722695",
+      "date": "2018-06-27",
+      "tournamentId": 14740,
+      "tournamentName": "AEGON International - Eastbourne",
+      "opponentId": 3492,
+      "opponentName": "Denis Istomin",
+      "won": true,
+      "result": "4-6 6-4 7-5"
     }
   ],
-  "updatedAt": 1781993221982,
+  "updatedAt": 1782079968354,
   "playerName": "Marco Cecchinato"
 }

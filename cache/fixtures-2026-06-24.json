@@ -1,6 +1,50 @@
 {
   "date": "2026-06-24",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1781993077682
+  "fixtures": [
+    {
+      "id": 1236,
+      "date": "2026-06-24T12:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 76127,
+      "player2Id": 14856,
+      "tournamentId": 21335,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 76127,
+        "name": "Luciano Darderi",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 14856,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21335,
+        "name": "Mallorca Championships - Mallorca",
+        "courtId": 5,
+        "date": "2026-06-22T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "ESP",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1782079912256
 }

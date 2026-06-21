@@ -1,5 +1,16 @@
 {
-  "Clay": [],
+  "Clay": [
+    {
+      "id": "789877",
+      "date": "2019-05-26",
+      "tournamentId": 15633,
+      "tournamentName": "French Open - Paris",
+      "opponentId": 20104,
+      "opponentName": "Marco Cecchinato",
+      "won": true,
+      "result": "2-6 6-7(6) 6-4 6-2 6-4"
+    }
+  ],
   "Hard": [
     {
       "id": "866218",
@@ -10,6 +21,16 @@
       "opponentName": "Jason Jung",
       "won": false,
       "result": "6-4 3-6 6-1"
+    },
+    {
+      "id": "800599",
+      "date": "2019-03-27",
+      "tournamentId": 15803,
+      "tournamentName": "St. Brieuc Challenger",
+      "opponentId": 12097,
+      "opponentName": "Stefano Travaglia",
+      "won": true,
+      "result": "6-7(6) 6-4 6-3"
     }
   ],
   "Grass": [
@@ -24,6 +45,6 @@
       "result": "3-6 7-5 7-6(2)"
     }
   ],
-  "updatedAt": 1781057659437,
+  "updatedAt": 1782080607601,
   "playerName": "Nicolas Mahut"
 }

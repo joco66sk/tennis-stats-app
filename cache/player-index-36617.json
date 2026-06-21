@@ -31,6 +31,16 @@
       "result": "6-2 3-6 6-2"
     },
     {
+      "id": "1253271",
+      "date": "2026-03-24",
+      "tournamentId": 21517,
+      "tournamentName": "Sao Paulo Challenger",
+      "opponentId": 91266,
+      "opponentName": "Victor Braga",
+      "won": true,
+      "result": "6-1 6-0"
+    },
+    {
       "id": "1252230",
       "date": "2026-03-12",
       "tournamentId": 21507,
@@ -39,6 +49,16 @@
       "opponentName": "Adolfo Daniel Vallejo",
       "won": false,
       "result": "6-4 3-6 6-3"
+    },
+    {
+      "id": "1252706",
+      "date": "2026-03-10",
+      "tournamentId": 21507,
+      "tournamentName": "Santiago Challenger",
+      "opponentId": 92755,
+      "opponentName": "Benjamin Torrealba",
+      "won": true,
+      "result": "5-7 6-1 6-3"
     },
     {
       "id": "1251485",
@@ -71,37 +91,37 @@
       "result": "6-3 6-1"
     },
     {
-      "id": "1207501",
-      "date": "2025-07-09",
-      "tournamentId": 20821,
-      "tournamentName": "Iasi Challenger",
-      "opponentId": 50000,
-      "opponentName": "Joao Lucas Reis Da Silva",
+      "id": "1244916",
+      "date": "2026-01-27",
+      "tournamentId": 21379,
+      "tournamentName": "Concepcion Challenger",
+      "opponentId": 26153,
+      "opponentName": "Juan Pablo Varillas",
       "won": false,
-      "result": "7-6(3) ret."
-    },
-    {
-      "id": "1207527",
-      "date": "2025-07-07",
-      "tournamentId": 20821,
-      "tournamentName": "Iasi Challenger",
-      "opponentId": 80391,
-      "opponentName": "Adolfo Daniel Vallejo",
-      "won": true,
-      "result": "7-6(10) 6-3"
-    },
-    {
-      "id": "1200941",
-      "date": "2025-07-01",
-      "tournamentId": 20738,
-      "tournamentName": "Brasov Challenger",
-      "opponentId": 63737,
-      "opponentName": "Francesco Maestrelli",
-      "won": false,
-      "result": "4-6 6-3 6-4"
+      "result": "7-5 6-2"
     }
   ],
   "Hard": [
+    {
+      "id": "1184305",
+      "date": "2025-04-01",
+      "tournamentId": 20528,
+      "tournamentName": "Cuernavaca Challenger",
+      "opponentId": 23142,
+      "opponentName": "Dmitry Popko",
+      "won": false,
+      "result": "6-3 7-6(2)"
+    },
+    {
+      "id": "1183859",
+      "date": "2025-03-26",
+      "tournamentId": 20521,
+      "tournamentName": "Morelia Challenger",
+      "opponentId": 56274,
+      "opponentName": "Beibit Zhukayev",
+      "won": false,
+      "result": "7-6(5) 6-4"
+    },
     {
       "id": "1183868",
       "date": "2025-03-25",
@@ -143,6 +163,16 @@
       "result": "6-4 3-6 6-4"
     },
     {
+      "id": "1162649",
+      "date": "2024-11-19",
+      "tournamentId": 20209,
+      "tournamentName": "Sao Paulo Challenger",
+      "opponentId": 90203,
+      "opponentName": "Lautaro Midon",
+      "won": true,
+      "result": "6-2 7-5"
+    },
+    {
       "id": "1145112",
       "date": "2024-08-27",
       "tournamentId": 19949,
@@ -153,6 +183,16 @@
       "result": "7-6(4) 6-4"
     },
     {
+      "id": "1104686",
+      "date": "2024-08-20",
+      "tournamentId": 19405,
+      "tournamentName": "U.S. Open - New York",
+      "opponentId": 14861,
+      "opponentName": "Antoine Escoffier",
+      "won": false,
+      "result": "2-6 6-2 6-3"
+    },
+    {
       "id": "1101680",
       "date": "2024-03-18",
       "tournamentId": 19371,
@@ -161,46 +201,6 @@
       "opponentName": "Zizou Bergs",
       "won": false,
       "result": "2-6 6-1 6-4"
-    },
-    {
-      "id": "1101524",
-      "date": "2024-03-04",
-      "tournamentId": 19370,
-      "tournamentName": "BNP Paribas Open - Indian Wells",
-      "opponentId": 33284,
-      "opponentName": "Nicolas Moreno De Alboran",
-      "won": false,
-      "result": "6-3 6-1"
-    },
-    {
-      "id": "1100504",
-      "date": "2024-01-11",
-      "tournamentId": 19355,
-      "tournamentName": "Australian Open - Melbourne",
-      "opponentId": 59166,
-      "opponentName": "Jesper De Jong",
-      "won": false,
-      "result": "7-6(5) 6-1"
-    },
-    {
-      "id": "1100452",
-      "date": "2024-01-09",
-      "tournamentId": 19355,
-      "tournamentName": "Australian Open - Melbourne",
-      "opponentId": 26925,
-      "opponentName": "Michael Mmoh",
-      "won": true,
-      "result": "6-1 6-3"
-    },
-    {
-      "id": "981126",
-      "date": "2023-08-31",
-      "tournamentId": 18507,
-      "tournamentName": "U.S. Open - New York",
-      "opponentId": 52721,
-      "opponentName": "Sebastian Baez",
-      "won": false,
-      "result": "6-7(6) 6-4 6-4 ret."
     }
   ],
   "Grass": [
@@ -225,6 +225,46 @@
       "result": "6-3 0-6 7-6(4)"
     },
     {
+      "id": "1103483",
+      "date": "2024-07-01",
+      "tournamentId": 19391,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 25165,
+      "opponentName": "Borna Coric",
+      "won": false,
+      "result": "6-3 7-6(2) 6-3"
+    },
+    {
+      "id": "1103526",
+      "date": "2024-06-27",
+      "tournamentId": 19391,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 54207,
+      "opponentName": "Maxime Cressy",
+      "won": true,
+      "result": "6-4 1-6 7-6(5) 4-6 6-4"
+    },
+    {
+      "id": "1103402",
+      "date": "2024-06-26",
+      "tournamentId": 19391,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 21329,
+      "opponentName": "Joris De Loore",
+      "won": true,
+      "result": "7-6(3) 6-4"
+    },
+    {
+      "id": "1103354",
+      "date": "2024-06-24",
+      "tournamentId": 19391,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 5136,
+      "opponentName": "Illya Marchenko",
+      "won": true,
+      "result": "6-2 6-4"
+    },
+    {
       "id": "1131407",
       "date": "2024-06-18",
       "tournamentId": 19771,
@@ -233,8 +273,38 @@
       "opponentName": "Lloyd Harris",
       "won": false,
       "result": "6-4 6-2"
+    },
+    {
+      "id": "976313",
+      "date": "2023-06-29",
+      "tournamentId": 18440,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 10828,
+      "opponentName": "Radu Albot",
+      "won": false,
+      "result": "4-6 6-3 6-2 7-6(6)"
+    },
+    {
+      "id": "976141",
+      "date": "2023-06-28",
+      "tournamentId": 18440,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 3577,
+      "opponentName": "Pablo Cuevas",
+      "won": true,
+      "result": "6-4 7-6(3)"
+    },
+    {
+      "id": "976149",
+      "date": "2023-06-26",
+      "tournamentId": 18440,
+      "tournamentName": "Wimbledon - London",
+      "opponentId": 9094,
+      "opponentName": "Vasek Pospisil",
+      "won": true,
+      "result": "6-2 7-6(2)"
     }
   ],
-  "updatedAt": 1781993222024,
+  "updatedAt": 1782079962966,
   "playerName": "Felipe Meligeni Alves"
 }
