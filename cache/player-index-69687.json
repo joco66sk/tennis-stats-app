@@ -1,6 +1,16 @@
 {
   "Clay": [
     {
+      "id": "1270603",
+      "date": "2026-06-15",
+      "tournamentId": 21748,
+      "tournamentName": "Asuncion Challenger",
+      "opponentId": 99991,
+      "opponentName": "Maximo Zeitune",
+      "won": false,
+      "result": "6-3 3-6 6-2"
+    },
+    {
       "id": "1269880",
       "date": "2026-06-03",
       "tournamentId": 21759,
@@ -11,6 +21,16 @@
       "result": "6-1 6-2"
     },
     {
+      "id": "1263945",
+      "date": "2026-05-05",
+      "tournamentId": 21660,
+      "tournamentName": "Santos Challenger",
+      "opponentId": 86687,
+      "opponentName": "Nicolas Zanellato",
+      "won": false,
+      "result": "7-5 6-1"
+    },
+    {
       "id": "1258678",
       "date": "2026-04-05",
       "tournamentId": 21591,
@@ -19,6 +39,16 @@
       "opponentName": "Santiago De La Fuente",
       "won": false,
       "result": "6-4 6-2"
+    },
+    {
+      "id": "1236008",
+      "date": "2025-11-11",
+      "tournamentId": 21223,
+      "tournamentName": "M15 Criciuma 1",
+      "opponentId": 86687,
+      "opponentName": "Nicolas Zanellato",
+      "won": false,
+      "result": "6-2 3-6 6-3"
     },
     {
       "id": "1213725",
@@ -69,36 +99,6 @@
       "opponentName": "Bruno Fernandez",
       "won": true,
       "result": "3-6 7-5 10-8"
-    },
-    {
-      "id": "1167170",
-      "date": "2024-11-27",
-      "tournamentId": 20268,
-      "tournamentName": "M15 Santiago 2",
-      "opponentId": 75042,
-      "opponentName": "Alex Barrena",
-      "won": false,
-      "result": "6-2 6-2"
-    },
-    {
-      "id": "1167171",
-      "date": "2024-11-26",
-      "tournamentId": 20268,
-      "tournamentName": "M15 Santiago 2",
-      "opponentId": 70491,
-      "opponentName": "Santiago De La Fuente",
-      "won": true,
-      "result": "6-4 6-2"
-    },
-    {
-      "id": "1164129",
-      "date": "2024-11-07",
-      "tournamentId": 20231,
-      "tournamentName": "M15 Recife 1",
-      "opponentId": 86275,
-      "opponentName": "Juan Manuel La Serna",
-      "won": false,
-      "result": "6-0 6-0"
     }
   ],
   "Hard": [
@@ -154,6 +154,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1782168657330,
+  "updatedAt": 1782252995329,
   "playerName": "Joao Victor Couto Loureiro"
 }
