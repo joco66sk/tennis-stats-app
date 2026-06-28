@@ -1,6 +1,26 @@
 {
   "Clay": [
     {
+      "id": "1275037",
+      "date": "2026-06-24",
+      "tournamentId": 21806,
+      "tournamentName": "M25 Brussels",
+      "opponentId": 85763,
+      "opponentName": "Samuele Pieri",
+      "won": false,
+      "result": "3-6 6-3 6-1"
+    },
+    {
+      "id": "1273677",
+      "date": "2026-06-19",
+      "tournamentId": 21789,
+      "tournamentName": "M25 Klosters",
+      "opponentId": 73196,
+      "opponentName": "Dominic Stricker",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
       "id": "1271680",
       "date": "2026-06-07",
       "tournamentId": 21769,
@@ -9,6 +29,16 @@
       "opponentName": "Niels Mcdonald",
       "won": false,
       "result": "6-7(2) 6-3 6-4"
+    },
+    {
+      "id": "1272039",
+      "date": "2026-06-03",
+      "tournamentId": 21769,
+      "tournamentName": "M15 Rosbach",
+      "opponentId": 18348,
+      "opponentName": "Pedro Sakamoto",
+      "won": true,
+      "result": "6-2 6-4"
     },
     {
       "id": "1270597",
@@ -69,36 +99,6 @@
       "opponentName": "Michele Ribecai",
       "won": false,
       "result": "6-4 6-7(4) 6-1"
-    },
-    {
-      "id": "1217978",
-      "date": "2025-08-22",
-      "tournamentId": 20961,
-      "tournamentName": "M25 Muttenz 1",
-      "opponentId": 35225,
-      "opponentName": "Alexander Weis",
-      "won": true,
-      "result": "7-6(1) 7-5"
-    },
-    {
-      "id": "1202243",
-      "date": "2025-06-03",
-      "tournamentId": 20755,
-      "tournamentName": "M15 Caltanissetta 1",
-      "opponentId": 85763,
-      "opponentName": "Samuele Pieri",
-      "won": false,
-      "result": "7-6(5) 6-1"
-    },
-    {
-      "id": "1197990",
-      "date": "2025-05-20",
-      "tournamentId": 20699,
-      "tournamentName": "M15 Bucharest 3",
-      "opponentId": 53726,
-      "opponentName": "Cezar Cretu",
-      "won": false,
-      "result": "6-2 6-1"
     }
   ],
   "Hard": [
@@ -204,6 +204,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1782597990213,
+  "updatedAt": 1782684504227,
   "playerName": "Kai Wehnelt"
 }

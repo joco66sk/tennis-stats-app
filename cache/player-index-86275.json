@@ -1,6 +1,36 @@
 {
   "Clay": [
     {
+      "id": "53677523",
+      "date": "2026-06-27",
+      "tournamentId": 21751,
+      "tournamentName": "Piracicaba Challenger",
+      "opponentId": 36858,
+      "opponentName": "Thiago Seyboth Wild",
+      "won": false,
+      "result": "6-3 6-3"
+    },
+    {
+      "id": "24714642",
+      "date": "2026-06-26",
+      "tournamentId": 21751,
+      "tournamentName": "Piracicaba Challenger",
+      "opponentId": 38973,
+      "opponentName": "Nick Hardt",
+      "won": true,
+      "result": "6-2 2-0 ret."
+    },
+    {
+      "id": "19198091",
+      "date": "2026-06-26",
+      "tournamentId": 21751,
+      "tournamentName": "Piracicaba Challenger",
+      "opponentId": 38876,
+      "opponentName": "Santiago Rodriguez Taverna",
+      "won": true,
+      "result": "6-2 1-0 ret."
+    },
+    {
       "id": "217578463",
       "date": "2026-06-25",
       "tournamentId": 21751,
@@ -69,36 +99,6 @@
       "opponentName": "Enzo Kohlmann De Freitas",
       "won": true,
       "result": "6-1 6-0"
-    },
-    {
-      "id": "1270361",
-      "date": "2026-06-03",
-      "tournamentId": 21759,
-      "tournamentName": "M25 Cuiaba",
-      "opponentId": 110478,
-      "opponentName": "Samuel Alejandro Linde Palacios",
-      "won": true,
-      "result": "6-1 6-4"
-    },
-    {
-      "id": "1264151",
-      "date": "2026-05-16",
-      "tournamentId": 21667,
-      "tournamentName": "Cordoba Challenger",
-      "opponentId": 58723,
-      "opponentName": "Franco Roncadelli",
-      "won": true,
-      "result": "7-5 2-6 6-3"
-    },
-    {
-      "id": "1264160",
-      "date": "2026-05-15",
-      "tournamentId": 21667,
-      "tournamentName": "Cordoba Challenger",
-      "opponentId": 77659,
-      "opponentName": "Juan Bautista Torres",
-      "won": true,
-      "result": "6-4 6-2"
     }
   ],
   "Hard": [
@@ -204,6 +204,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1782597990339,
+  "updatedAt": 1782684261529,
   "playerName": "Juan Manuel La Serna"
 }

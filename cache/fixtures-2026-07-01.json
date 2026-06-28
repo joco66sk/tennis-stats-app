@@ -1,6 +1,50 @@
 {
   "date": "2026-07-01",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1782597690731
+  "fixtures": [
+    {
+      "id": 1336,
+      "date": "2026-07-01T13:00:00.000Z",
+      "roundId": 4,
+      "player1Id": 46718,
+      "player2Id": 18094,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 46718,
+        "name": "Patrick Kypson",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 18094,
+        "name": "Mackenzie Mcdonald",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 4,
+        "name": "First"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1782684056887
 }
