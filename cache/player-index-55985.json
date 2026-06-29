@@ -1,6 +1,56 @@
 {
   "Clay": [
     {
+      "id": "1270981",
+      "date": "2026-06-21",
+      "tournamentId": 21750,
+      "tournamentName": "Targu Mures Challenger",
+      "opponentId": 97368,
+      "opponentName": "Radu David Turcanu",
+      "won": false,
+      "result": "6-7(5) 6-2 6-3"
+    },
+    {
+      "id": "1274211",
+      "date": "2026-06-20",
+      "tournamentId": 21796,
+      "tournamentName": "M15 Constanta",
+      "opponentId": 37486,
+      "opponentName": "Dan Alexandru Tomescu",
+      "won": false,
+      "result": "7-6(4) 6-4"
+    },
+    {
+      "id": "1274217",
+      "date": "2026-06-19",
+      "tournamentId": 21796,
+      "tournamentName": "M15 Constanta",
+      "opponentId": 72640,
+      "opponentName": "Stefan Adrian Andreescu",
+      "won": true,
+      "result": "6-4 6-3"
+    },
+    {
+      "id": "1274227",
+      "date": "2026-06-18",
+      "tournamentId": 21796,
+      "tournamentName": "M15 Constanta",
+      "opponentId": 93283,
+      "opponentName": "Nicolas Garcia Longo",
+      "won": true,
+      "result": "6-0 6-0"
+    },
+    {
+      "id": "1274224",
+      "date": "2026-06-16",
+      "tournamentId": 21796,
+      "tournamentName": "M15 Constanta",
+      "opponentId": 88200,
+      "opponentName": "Julio Cesar Porras",
+      "won": true,
+      "result": "6-1 5-7 6-3"
+    },
+    {
       "id": "1270763",
       "date": "2026-06-03",
       "tournamentId": 21758,
@@ -9,6 +59,26 @@
       "opponentName": "Gabriel Ghetu",
       "won": false,
       "result": "6-0 6-1"
+    },
+    {
+      "id": "1268460",
+      "date": "2026-05-20",
+      "tournamentId": 21716,
+      "tournamentName": "M15 Bucharest",
+      "opponentId": 96819,
+      "opponentName": "Robert Guna",
+      "won": false,
+      "result": "6-2 6-4"
+    },
+    {
+      "id": "1260242",
+      "date": "2026-04-26",
+      "tournamentId": 21609,
+      "tournamentName": "Ostrava Challenger",
+      "opponentId": 29591,
+      "opponentName": "Dominik Recek",
+      "won": false,
+      "result": "7-6(8) 6-2"
     },
     {
       "id": "1258741",
@@ -21,84 +91,14 @@
       "result": "7-6(3) 6-1"
     },
     {
-      "id": "1252338",
-      "date": "2026-03-17",
-      "tournamentId": 21513,
-      "tournamentName": "Zadar Challenger",
-      "opponentId": 48013,
-      "opponentName": "Henri Squire",
-      "won": false,
-      "result": "6-4 5-3 ret."
-    },
-    {
-      "id": "1248749",
-      "date": "2026-02-27",
-      "tournamentId": 21434,
-      "tournamentName": "Tigre 2 Challenger",
-      "opponentId": 66379,
-      "opponentName": "Alvaro Guillen Meza",
-      "won": false,
-      "result": "6-3 6-0"
-    },
-    {
-      "id": "1248287",
-      "date": "2026-02-26",
-      "tournamentId": 21434,
-      "tournamentName": "Tigre 2 Challenger",
-      "opponentId": 37577,
-      "opponentName": "Genaro Alberto Olivieri",
+      "id": "1259179",
+      "date": "2026-04-05",
+      "tournamentId": 21592,
+      "tournamentName": "Madrid Challenger",
+      "opponentId": 44990,
+      "opponentName": "Michiel De Krom",
       "won": true,
-      "result": "4-6 6-4 7-6(4)"
-    },
-    {
-      "id": "1248734",
-      "date": "2026-02-24",
-      "tournamentId": 21434,
-      "tournamentName": "Tigre 2 Challenger",
-      "opponentId": 18348,
-      "opponentName": "Pedro Sakamoto",
-      "won": true,
-      "result": "6-3 7-5"
-    },
-    {
-      "id": "1248210",
-      "date": "2026-02-23",
-      "tournamentId": 21434,
-      "tournamentName": "Tigre 2 Challenger",
-      "opponentId": 55868,
-      "opponentName": "Lorenzo Joaquin Rodriguez",
-      "won": true,
-      "result": "6-3 6-1"
-    },
-    {
-      "id": "1248492",
-      "date": "2026-02-19",
-      "tournamentId": 21430,
-      "tournamentName": "Tigre 1 Challenger",
-      "opponentId": 42963,
-      "opponentName": "Carlos Sanchez Jover",
-      "won": false,
-      "result": "0-6 6-1 6-0"
-    },
-    {
-      "id": "1248487",
-      "date": "2026-02-18",
-      "tournamentId": 21430,
-      "tournamentName": "Tigre 1 Challenger",
-      "opponentId": 38876,
-      "opponentName": "Santiago Rodriguez Taverna",
-      "won": true,
-      "result": "6-4 3-6 6-4"
-    },
-    {
-      "id": "1248695",
-      "date": "2026-02-16",
-      "tournamentId": 21430,
-      "tournamentName": "Tigre 1 Challenger",
-      "opponentId": 36772,
-      "opponentName": "Conner Huertas Del Pino",
-      "won": true,
-      "result": "6-1 7-5"
+      "result": "6-2 2-6 7-6(0)"
     }
   ],
   "Hard": [
@@ -204,6 +204,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1782684504293,
+  "updatedAt": 1782771134933,
   "playerName": "Stefan Palosi"
 }
