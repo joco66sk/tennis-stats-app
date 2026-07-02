@@ -1,6 +1,308 @@
 {
   "date": "2026-07-04",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1782977455219
+  "fixtures": [
+    {
+      "id": 1228,
+      "date": "2026-07-04T13:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 18736,
+      "player2Id": 24008,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 18736,
+        "name": "Marcos Giron",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    },
+    {
+      "id": 1246,
+      "date": "2026-07-04T13:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 25543,
+      "player2Id": 67546,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "19",
+      "seed2": "9",
+      "live": null,
+      "player1": {
+        "id": 25543,
+        "name": "Karen Khachanov",
+        "countryAcr": "RUS"
+      },
+      "player2": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    },
+    {
+      "id": 1274,
+      "date": "2026-07-04T13:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 29932,
+      "player2Id": 31392,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "6",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 29932,
+        "name": "Taylor Fritz",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 31392,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    },
+    {
+      "id": 1278,
+      "date": "2026-07-04T13:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 29939,
+      "player2Id": 24245,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "17",
+      "seed2": "10",
+      "live": null,
+      "player1": {
+        "id": 29939,
+        "name": "Frances Tiafoe",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 24245,
+        "name": "Alexander Bublik",
+        "countryAcr": "KAZ"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    },
+    {
+      "id": 1304,
+      "date": "2026-07-04T13:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 37741,
+      "player2Id": 79065,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "WC",
+      "live": null,
+      "player1": {
+        "id": 37741,
+        "name": "Zizou Bergs",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 79065,
+        "name": "Arthur Fery",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    },
+    {
+      "id": 1309,
+      "date": "2026-07-04T13:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 39309,
+      "player2Id": 73620,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "5",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 39309,
+        "name": "Alex De Minaur",
+        "countryAcr": "AUS"
+      },
+      "player2": {
+        "id": 73620,
+        "name": "Zachary Svajda",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    },
+    {
+      "id": 1355,
+      "date": "2026-07-04T13:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 61838,
+      "player2Id": 31358,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "13",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 61838,
+        "name": "Jiri Lehecka",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 31358,
+        "name": "Jaume Antoni Munar Clar",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    }
+  ],
+  "count": 7,
+  "fetchedAt": 1783029882973
 }
