@@ -2,6 +2,49 @@
   "date": "2026-07-04",
   "fixtures": [
     {
+      "id": 1211,
+      "date": "2026-07-04T13:00:00.000Z",
+      "roundId": 6,
+      "player1Id": 11953,
+      "player2Id": 29812,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 11953,
+        "name": "Grigor Dimitrov",
+        "countryAcr": "BUL"
+      },
+      "player2": {
+        "id": 29812,
+        "name": "Matteo Berrettini",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 6,
+        "name": "Third"
+      }
+    },
+    {
       "id": 1228,
       "date": "2026-07-04T13:00:00.000Z",
       "roundId": 6,
@@ -301,8 +344,94 @@
         "id": 6,
         "name": "Third"
       }
+    },
+    {
+      "id": 1565,
+      "date": "2026-07-04T02:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 78284,
+      "player2Id": 82492,
+      "tournamentId": 21753,
+      "timeGame": null,
+      "seed1": "CO",
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 78284,
+        "name": "Timo Legout",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 82492,
+        "name": "Ozan Baris",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21753,
+        "name": "Cary Challenger",
+        "courtId": 1,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1575,
+      "date": "2026-07-04T02:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 83105,
+      "player2Id": 107077,
+      "tournamentId": 21753,
+      "timeGame": null,
+      "seed1": "q",
+      "seed2": "WC",
+      "live": null,
+      "player1": {
+        "id": 83105,
+        "name": "Edward Winter",
+        "countryAcr": "AUS"
+      },
+      "player2": {
+        "id": 107077,
+        "name": "William Manning",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21753,
+        "name": "Cary Challenger",
+        "courtId": 1,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
     }
   ],
-  "count": 7,
-  "fetchedAt": 1783029882973
+  "count": 10,
+  "fetchedAt": 1783063150716
 }
