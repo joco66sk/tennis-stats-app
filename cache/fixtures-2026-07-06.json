@@ -1,6 +1,93 @@
 {
   "date": "2026-07-06",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1783147580656
+  "fixtures": [
+    {
+      "id": 1308,
+      "date": "2026-07-06T13:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 39309,
+      "player2Id": 67546,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "5",
+      "seed2": "9",
+      "live": null,
+      "player1": {
+        "id": 39309,
+        "name": "Alex De Minaur",
+        "countryAcr": "AUS"
+      },
+      "player2": {
+        "id": 67546,
+        "name": "Flavio Cobolli",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 7,
+        "name": "Fourth"
+      }
+    },
+    {
+      "id": 1359,
+      "date": "2026-07-06T13:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 61838,
+      "player2Id": 24008,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "13",
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 61838,
+        "name": "Jiri Lehecka",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 7,
+        "name": "Fourth"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1783202209589
 }
