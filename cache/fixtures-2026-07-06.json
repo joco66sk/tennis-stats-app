@@ -2,6 +2,92 @@
   "date": "2026-07-06",
   "fixtures": [
     {
+      "id": 1212,
+      "date": "2026-07-06T13:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 11953,
+      "player2Id": 79065,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": "WC",
+      "live": null,
+      "player1": {
+        "id": 11953,
+        "name": "Grigor Dimitrov",
+        "countryAcr": "BUL"
+      },
+      "player2": {
+        "id": 79065,
+        "name": "Arthur Fery",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 7,
+        "name": "Fourth"
+      }
+    },
+    {
+      "id": 1275,
+      "date": "2026-07-06T13:00:00.000Z",
+      "roundId": 7,
+      "player1Id": 29932,
+      "player2Id": 24245,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "6",
+      "seed2": "10",
+      "live": null,
+      "player1": {
+        "id": 29932,
+        "name": "Taylor Fritz",
+        "countryAcr": "USA"
+      },
+      "player2": {
+        "id": 24245,
+        "name": "Alexander Bublik",
+        "countryAcr": "KAZ"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 7,
+        "name": "Fourth"
+      }
+    },
+    {
       "id": 1308,
       "date": "2026-07-06T13:00:00.000Z",
       "roundId": 7,
@@ -86,8 +172,51 @@
         "id": 7,
         "name": "Fourth"
       }
+    },
+    {
+      "id": 1626,
+      "date": "2026-07-06T02:30:00.000Z",
+      "roundId": 12,
+      "player1Id": 78284,
+      "player2Id": 88050,
+      "tournamentId": 21753,
+      "timeGame": null,
+      "seed1": "CO",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 78284,
+        "name": "Timo Legout",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 88050,
+        "name": "Braden Shick",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21753,
+        "name": "Cary Challenger",
+        "courtId": 1,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "USA",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 12,
+        "name": "Final"
+      }
     }
   ],
-  "count": 2,
-  "fetchedAt": 1783202209589
+  "count": 5,
+  "fetchedAt": 1783236252039
 }
