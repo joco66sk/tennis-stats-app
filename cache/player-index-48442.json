@@ -1,6 +1,36 @@
 {
   "Clay": [
     {
+      "id": "111771288",
+      "date": "2026-07-06",
+      "tournamentId": 21835,
+      "tournamentName": "Braunschweig Challenger",
+      "opponentId": 85763,
+      "opponentName": "Samuele Pieri",
+      "won": true,
+      "result": "6-1 4-6 6-3"
+    },
+    {
+      "id": "75861682",
+      "date": "2026-07-05",
+      "tournamentId": 21835,
+      "tournamentName": "Braunschweig Challenger",
+      "opponentId": 6764,
+      "opponentName": "Stefan Seifert",
+      "won": true,
+      "result": "6-4 6-2"
+    },
+    {
+      "id": "1276703",
+      "date": "2026-07-01",
+      "tournamentId": 21822,
+      "tournamentName": "M25 Marburg",
+      "opponentId": 23197,
+      "opponentName": "Jonathan Mridha",
+      "won": false,
+      "result": "4-6 6-1 7-6(5)"
+    },
+    {
       "id": "1270485",
       "date": "2026-06-15",
       "tournamentId": 21746,
@@ -9,6 +39,36 @@
       "opponentName": "Mathys Erhard",
       "won": false,
       "result": "5-7 7-6(3) 6-0"
+    },
+    {
+      "id": "1272547",
+      "date": "2026-06-12",
+      "tournamentId": 21770,
+      "tournamentName": "M25 Ceska Lipa",
+      "opponentId": 52552,
+      "opponentName": "Georgii Kravchenko",
+      "won": false,
+      "result": "7-5 7-6(6)"
+    },
+    {
+      "id": "1272543",
+      "date": "2026-06-11",
+      "tournamentId": 21770,
+      "tournamentName": "M25 Ceska Lipa",
+      "opponentId": 29591,
+      "opponentName": "Dominik Recek",
+      "won": true,
+      "result": "7-6(4) 6-2"
+    },
+    {
+      "id": "1272569",
+      "date": "2026-06-11",
+      "tournamentId": 21770,
+      "tournamentName": "M25 Ceska Lipa",
+      "opponentId": 90924,
+      "opponentName": "Jan Hrazdil",
+      "won": true,
+      "result": "7-5 4-6 6-3"
     },
     {
       "id": "1259794",
@@ -31,74 +91,14 @@
       "result": "6-4 4-6 6-3"
     },
     {
-      "id": "1258613",
-      "date": "2026-04-05",
-      "tournamentId": 21590,
-      "tournamentName": "Monza Challenger",
-      "opponentId": 91428,
-      "opponentName": "Carlo Alberto Caniato",
-      "won": false,
-      "result": "6-3 3-6 7-5"
-    },
-    {
-      "id": "1252444",
-      "date": "2026-03-23",
-      "tournamentId": 21516,
-      "tournamentName": "Alicante Challenger",
-      "opponentId": 92649,
-      "opponentName": "Tiago Pereira",
-      "won": false,
-      "result": "4-6 6-2 6-0"
-    },
-    {
-      "id": "1252273",
-      "date": "2026-03-16",
-      "tournamentId": 21512,
-      "tournamentName": "Murcia Challenger",
-      "opponentId": 20396,
-      "opponentName": "Frederico Ferreira Silva",
-      "won": false,
-      "result": "6-7(4) 7-6(6) 6-4"
-    },
-    {
-      "id": "1245020",
-      "date": "2026-01-10",
-      "tournamentId": 21384,
-      "tournamentName": "M25 Antalya 1",
-      "opponentId": 55290,
-      "opponentName": "Filip Cristian Jianu",
-      "won": false,
-      "result": "6-1 6-0"
-    },
-    {
-      "id": "1220705",
-      "date": "2025-09-11",
-      "tournamentId": 20997,
-      "tournamentName": "Szczecin Challenger",
-      "opponentId": 29457,
-      "opponentName": "Andrea Pellegrino",
-      "won": false,
-      "result": "6-3 6-2"
-    },
-    {
-      "id": "1220686",
-      "date": "2025-09-09",
-      "tournamentId": 20997,
-      "tournamentName": "Szczecin Challenger",
-      "opponentId": 38876,
-      "opponentName": "Santiago Rodriguez Taverna",
+      "id": "1260393",
+      "date": "2026-04-28",
+      "tournamentId": 21609,
+      "tournamentName": "Ostrava Challenger",
+      "opponentId": 78282,
+      "opponentName": "Daniel Siniakov",
       "won": true,
-      "result": "7-5 5-7 7-5"
-    },
-    {
-      "id": "1220434",
-      "date": "2025-09-04",
-      "tournamentId": 20993,
-      "tournamentName": "Tulln Challenger",
-      "opponentId": 36042,
-      "opponentName": "Oleg Prihodko",
-      "won": false,
-      "result": "6-2 7-5"
+      "result": "7-6(4) 6-0"
     }
   ],
   "Hard": [
@@ -111,6 +111,26 @@
       "opponentName": "Martin Krumich",
       "won": false,
       "result": "7-6(3) 6-3"
+    },
+    {
+      "id": "1252529",
+      "date": "2026-03-01",
+      "tournamentId": 21498,
+      "tournamentName": "Thionville Challenger",
+      "opponentId": 26500,
+      "opponentName": "Ivan Gakhov",
+      "won": true,
+      "result": "7-5 6-4"
+    },
+    {
+      "id": "1249200",
+      "date": "2026-02-22",
+      "tournamentId": 21432,
+      "tournamentName": "Lugano Challenger",
+      "opponentId": 101156,
+      "opponentName": "Flynn Thomas",
+      "won": false,
+      "result": "6-1 1-6 6-4"
     },
     {
       "id": "1248134",
@@ -181,26 +201,6 @@
       "opponentName": "Alastair Gray",
       "won": false,
       "result": "6-2 2-6 7-5"
-    },
-    {
-      "id": "1235756",
-      "date": "2025-11-14",
-      "tournamentId": 21220,
-      "tournamentName": "M25 Vale do Lobo 2",
-      "opponentId": 31335,
-      "opponentName": "Alberto Barroso Campos",
-      "won": true,
-      "result": "7-6(5) 6-1"
-    },
-    {
-      "id": "1235783",
-      "date": "2025-11-11",
-      "tournamentId": 21220,
-      "tournamentName": "M25 Vale do Lobo 2",
-      "opponentId": 73241,
-      "opponentName": "Niels Visker",
-      "won": true,
-      "result": "6-4 3-6 6-3"
     }
   ],
   "Grass": [
@@ -255,6 +255,6 @@
       "result": "7-5 6-3"
     }
   ],
-  "updatedAt": 1783289011323,
+  "updatedAt": 1783376150039,
   "playerName": "Rudolf Molleker"
 }

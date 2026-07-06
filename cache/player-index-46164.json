@@ -1,6 +1,36 @@
 {
   "Clay": [
     {
+      "id": "114533461",
+      "date": "2026-07-06",
+      "tournamentId": 21840,
+      "tournamentName": "Liege Challenger",
+      "opponentId": 62990,
+      "opponentName": "Saba Purtseladze",
+      "won": true,
+      "result": "7-6(4) 2-6 6-3"
+    },
+    {
+      "id": "85531114",
+      "date": "2026-07-05",
+      "tournamentId": 21840,
+      "tournamentName": "Liege Challenger",
+      "opponentId": 23993,
+      "opponentName": "Gabriele Maria Noce",
+      "won": true,
+      "result": "1-6 6-2 6-3"
+    },
+    {
+      "id": "1271444",
+      "date": "2026-06-28",
+      "tournamentId": 21756,
+      "tournamentName": "Troyes Challenger",
+      "opponentId": 87282,
+      "opponentName": "Theo Papamalamis",
+      "won": false,
+      "result": "6-2 6-2"
+    },
+    {
       "id": "1277567",
       "date": "2026-06-21",
       "tournamentId": 21921,
@@ -21,6 +51,46 @@
       "result": "6-2 6-3"
     },
     {
+      "id": "1195457",
+      "date": "2025-05-06",
+      "tournamentId": 20669,
+      "tournamentName": "M25 Baotou 1",
+      "opponentId": 61852,
+      "opponentName": "Jordan Chiu",
+      "won": true,
+      "result": "5-7 6-1 7-5"
+    },
+    {
+      "id": "1129876",
+      "date": "2024-05-28",
+      "tournamentId": 19750,
+      "tournamentName": "M25 Baotou 1",
+      "opponentId": 103059,
+      "opponentName": "Xirui Han",
+      "won": false,
+      "result": "6-3 4-6 7-6(4)"
+    },
+    {
+      "id": "1053813",
+      "date": "2023-08-19",
+      "tournamentId": 19013,
+      "tournamentName": "M25 Tainan 1",
+      "opponentId": 38936,
+      "opponentName": "Ergi Kirkin",
+      "won": false,
+      "result": "6-3 6-0"
+    },
+    {
+      "id": "1053823",
+      "date": "2023-08-18",
+      "tournamentId": 19013,
+      "tournamentName": "M25 Tainan 1",
+      "opponentId": 49285,
+      "opponentName": "Matyas Fuele",
+      "won": true,
+      "result": "6-2 6-4"
+    },
+    {
       "id": "1053855",
       "date": "2023-08-17",
       "tournamentId": 19013,
@@ -29,49 +99,79 @@
       "opponentName": "Takuya Kumasaka",
       "won": true,
       "result": "6-2 4-6 7-6(5)"
-    },
-    {
-      "id": "917153",
-      "date": "2022-01-19",
-      "tournamentId": 17609,
-      "tournamentName": "M15 Cairo 3",
-      "opponentId": 77559,
-      "opponentName": "Karim Ibrahim",
-      "won": false,
-      "result": "6-3 3-6 6-3"
-    },
-    {
-      "id": "916714",
-      "date": "2022-01-12",
-      "tournamentId": 17602,
-      "tournamentName": "M15 Cairo 2",
-      "opponentId": 47534,
-      "opponentName": "Arvid Nordquist",
-      "won": true,
-      "result": "6-2 7-6(5)"
-    },
-    {
-      "id": "910467",
-      "date": "2021-12-09",
-      "tournamentId": 17505,
-      "tournamentName": "M15 Cairo 19",
-      "opponentId": 66500,
-      "opponentName": "Samir Hamza Reguig",
-      "won": false,
-      "result": "6-3 6-3"
-    },
-    {
-      "id": "832456",
-      "date": "2019-10-03",
-      "tournamentId": 16299,
-      "tournamentName": "M15 Nanchang 3",
-      "opponentId": 5885,
-      "opponentName": "N. Vijay Sundar Prashanth",
-      "won": true,
-      "result": "6-4 7-5"
     }
   ],
   "Hard": [
+    {
+      "id": "1273097",
+      "date": "2026-06-09",
+      "tournamentId": 21777,
+      "tournamentName": "M15 Maanshan",
+      "opponentId": 62492,
+      "opponentName": "Dong Ju Kim",
+      "won": false,
+      "result": "6-0 6-2"
+    },
+    {
+      "id": "1271807",
+      "date": "2026-06-05",
+      "tournamentId": 21761,
+      "tournamentName": "M15 Luan",
+      "opponentId": 62960,
+      "opponentName": "Yaojie Zeng",
+      "won": false,
+      "result": "3-6 6-2 6-3"
+    },
+    {
+      "id": "1271829",
+      "date": "2026-06-04",
+      "tournamentId": 21761,
+      "tournamentName": "M15 Luan",
+      "opponentId": 94959,
+      "opponentName": "James Van Herzeele",
+      "won": true,
+      "result": "2-6 6-4 2-0"
+    },
+    {
+      "id": "1271815",
+      "date": "2026-06-03",
+      "tournamentId": 21761,
+      "tournamentName": "M15 Luan",
+      "opponentId": 62699,
+      "opponentName": "Zhenxiong Dong",
+      "won": true,
+      "result": "7-5 6-3"
+    },
+    {
+      "id": "1269683",
+      "date": "2026-05-28",
+      "tournamentId": 21729,
+      "tournamentName": "M15 Luan",
+      "opponentId": 99444,
+      "opponentName": "Minghui Zhang",
+      "won": false,
+      "result": "3-6 6-1 6-1"
+    },
+    {
+      "id": "1269708",
+      "date": "2026-05-27",
+      "tournamentId": 21729,
+      "tournamentName": "M15 Luan",
+      "opponentId": 99846,
+      "opponentName": "Ryotaro Taguchi",
+      "won": true,
+      "result": "6-3 6-1"
+    },
+    {
+      "id": "1268031",
+      "date": "2026-05-20",
+      "tournamentId": 21709,
+      "tournamentName": "M15 Luan",
+      "opponentId": 94076,
+      "opponentName": "Yuta Tomida",
+      "won": false,
+      "result": "3-6 6-3 7-5"
+    },
     {
       "id": "1263557",
       "date": "2026-05-03",
@@ -93,87 +193,17 @@
       "result": "4-1 ret."
     },
     {
-      "id": "1252140",
-      "date": "2026-03-02",
-      "tournamentId": 21501,
-      "tournamentName": "Fujairah 1 Challenger",
-      "opponentId": 106767,
-      "opponentName": "Felix Balshaw",
+      "id": "1254127",
+      "date": "2026-03-29",
+      "tournamentId": 21525,
+      "tournamentName": "Miyazaki Challenger",
+      "opponentId": 77191,
+      "opponentName": "Yusuke Kusuhara",
       "won": false,
-      "result": "6-1 6-2"
-    },
-    {
-      "id": "1248777",
-      "date": "2026-02-24",
-      "tournamentId": 21433,
-      "tournamentName": "Pune Challenger",
-      "opponentId": 50133,
-      "opponentName": "Oliver Crawford",
-      "won": false,
-      "result": "6-2 4-6 6-0"
-    },
-    {
-      "id": "1248148",
-      "date": "2026-02-23",
-      "tournamentId": 21433,
-      "tournamentName": "Pune Challenger",
-      "opponentId": 95918,
-      "opponentName": "Mitsuki Wei Kang Leong",
-      "won": false,
-      "result": "6-2 6-3"
-    },
-    {
-      "id": "1252116",
-      "date": "2026-02-07",
-      "tournamentId": 21488,
-      "tournamentName": "Davis Cup, Group I, PO, TPE-LIB 3-1",
-      "opponentId": 32887,
-      "opponentName": "Benjamin Hassan",
-      "won": false,
-      "result": "6-4 6-4"
-    },
-    {
-      "id": "1233810",
-      "date": "2025-11-16",
-      "tournamentId": 21192,
-      "tournamentName": "Yokohama Challenger",
-      "opponentId": 16996,
-      "opponentName": "Yasutaka Uchiyama",
-      "won": false,
-      "result": "6-4 7-6(11)"
-    },
-    {
-      "id": "1233007",
-      "date": "2025-11-06",
-      "tournamentId": 21179,
-      "tournamentName": "Taipei Challenger",
-      "opponentId": 71166,
-      "opponentName": "Chak Lam Coleman Wong",
-      "won": false,
-      "result": "6-4 6-4"
-    },
-    {
-      "id": "1228425",
-      "date": "2025-10-26",
-      "tournamentId": 21121,
-      "tournamentName": "Seoul Challenger",
-      "opponentId": 45942,
-      "opponentName": "Uisung Park",
-      "won": false,
-      "result": "4-6 6-3 7-5"
-    },
-    {
-      "id": "1228296",
-      "date": "2025-10-22",
-      "tournamentId": 21119,
-      "tournamentName": "Suzhou Challenger",
-      "opponentId": 36449,
-      "opponentName": "Lloyd Harris",
-      "won": false,
-      "result": "4-6 6-2 6-3"
+      "result": "5-4 ret."
     }
   ],
   "Grass": [],
-  "updatedAt": 1783289011320,
+  "updatedAt": 1783376088096,
   "playerName": "Tsung-Hao Huang"
 }

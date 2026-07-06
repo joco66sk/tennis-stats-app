@@ -1,6 +1,36 @@
 {
   "Clay": [
     {
+      "id": "113152380",
+      "date": "2026-07-06",
+      "tournamentId": 21839,
+      "tournamentName": "Trieste Challenger",
+      "opponentId": 8721,
+      "opponentName": "Andrej Martin",
+      "won": true,
+      "result": "6-1 6-3"
+    },
+    {
+      "id": "78624374",
+      "date": "2026-07-05",
+      "tournamentId": 21839,
+      "tournamentName": "Trieste Challenger",
+      "opponentId": 93893,
+      "opponentName": "Leonardo Iemmi",
+      "won": true,
+      "result": "6-2 6-2"
+    },
+    {
+      "id": "1275886",
+      "date": "2026-06-23",
+      "tournamentId": 21811,
+      "tournamentName": "M15 Bergamo",
+      "opponentId": 85844,
+      "opponentName": "Marcello Serafini",
+      "won": false,
+      "result": "3-6 6-3 6-3"
+    },
+    {
       "id": "13670335",
       "date": "2026-06-19",
       "tournamentId": 21789,
@@ -9,6 +39,26 @@
       "opponentName": "Sandro Kopp",
       "won": false,
       "result": "6-4 7-6(4)"
+    },
+    {
+      "id": "1274127",
+      "date": "2026-06-18",
+      "tournamentId": 21789,
+      "tournamentName": "M25 Klosters",
+      "opponentId": 101156,
+      "opponentName": "Flynn Thomas",
+      "won": true,
+      "result": "6-1 6-3"
+    },
+    {
+      "id": "1274115",
+      "date": "2026-06-17",
+      "tournamentId": 21789,
+      "tournamentName": "M25 Klosters",
+      "opponentId": 85196,
+      "opponentName": "Jan Sebesta",
+      "won": true,
+      "result": "6-2 6-2"
     },
     {
       "id": "1271937",
@@ -21,84 +71,34 @@
       "result": "6-1 6-1"
     },
     {
-      "id": "47789434",
-      "date": "2026-05-16",
-      "tournamentId": 21328,
-      "tournamentName": "Gonet Geneva Open - Geneva",
-      "opponentId": 61971,
-      "opponentName": "Francisco Comesana",
-      "won": false,
-      "result": "6-3 6-1"
+      "id": "1272711",
+      "date": "2026-06-12",
+      "tournamentId": 21772,
+      "tournamentName": "M25 Varnamo",
+      "opponentId": 74711,
+      "opponentName": "Noah Schlagenhauf",
+      "won": true,
+      "result": "4-6 6-3 6-4"
     },
     {
-      "id": "1263503",
-      "date": "2026-05-11",
-      "tournamentId": 21664,
-      "tournamentName": "Tunis Challenger",
-      "opponentId": 63299,
-      "opponentName": "Dalibor Svrcina",
-      "won": false,
-      "result": "6-1 6-2"
-    },
-    {
-      "id": "1263200",
-      "date": "2026-05-05",
-      "tournamentId": 21657,
-      "tournamentName": "Francavilla Challenger",
-      "opponentId": 64741,
-      "opponentName": "Facundo Diaz Acosta",
-      "won": false,
-      "result": "5-7 6-3 6-1"
-    },
-    {
-      "id": "1258892",
-      "date": "2026-04-23",
-      "tournamentId": 21601,
-      "tournamentName": "Rome Challenger",
-      "opponentId": 63299,
-      "opponentName": "Dalibor Svrcina",
-      "won": false,
-      "result": "6-4 6-4"
-    },
-    {
-      "id": "1259077",
-      "date": "2026-04-20",
-      "tournamentId": 21601,
-      "tournamentName": "Rome Challenger",
-      "opponentId": 53909,
-      "opponentName": "Luka Pavlovic",
+      "id": "1272740",
+      "date": "2026-06-11",
+      "tournamentId": 21772,
+      "tournamentName": "M25 Varnamo",
+      "opponentId": 115591,
+      "opponentName": "Vincent Dullinger",
       "won": true,
       "result": "6-3 6-4"
     },
     {
-      "id": "1260474",
-      "date": "2026-04-14",
-      "tournamentId": 21620,
-      "tournamentName": "M25 Santa Margherita di Pula",
-      "opponentId": 111498,
-      "opponentName": "Moise Kouame",
-      "won": false,
-      "result": "7-5 2-6 6-4"
-    },
-    {
-      "id": "1258319",
-      "date": "2026-04-07",
-      "tournamentId": 21592,
-      "tournamentName": "Madrid Challenger",
-      "opponentId": 60625,
-      "opponentName": "Alejandro Moro Canas",
-      "won": false,
-      "result": "6-4 6-1"
-    },
-    {
-      "id": "1219221",
-      "date": "2025-08-29",
-      "tournamentId": 20976,
-      "tournamentName": "M25 Sion 1",
-      "opponentId": 35225,
-      "opponentName": "Alexander Weis",
-      "won": false,
-      "result": "3-6 7-6(3) 7-5"
+      "id": "1272727",
+      "date": "2026-06-10",
+      "tournamentId": 21772,
+      "tournamentName": "M25 Varnamo",
+      "opponentId": 96554,
+      "opponentName": "Henrik Bladelius",
+      "won": true,
+      "result": "6-4 6-4"
     }
   ],
   "Hard": [
@@ -111,6 +111,16 @@
       "opponentName": "Stefan Dostanic",
       "won": false,
       "result": "6-3 6-4"
+    },
+    {
+      "id": "1252781",
+      "date": "2026-03-01",
+      "tournamentId": 21502,
+      "tournamentName": "Hersonissos 1 Challenger",
+      "opponentId": 35986,
+      "opponentName": "Adria Soriano Barrera",
+      "won": false,
+      "result": "6-1 6-4"
     },
     {
       "id": "1248200",
@@ -191,19 +201,9 @@
       "opponentName": "Thiago Agustin Tirante",
       "won": true,
       "result": "7-5 6-4"
-    },
-    {
-      "id": "1174520",
-      "date": "2025-10-20",
-      "tournamentId": 20370,
-      "tournamentName": "Swiss Indoors Basel - Basel",
-      "opponentId": 86691,
-      "opponentName": "Jakub Mensik",
-      "won": false,
-      "result": "7-6(1) 6-7(7) 6-3"
     }
   ],
   "Grass": [],
-  "updatedAt": 1783289011452,
+  "updatedAt": 1783376111285,
   "playerName": "Henry Bernet"
 }
