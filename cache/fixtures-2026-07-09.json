@@ -1,6 +1,136 @@
 {
   "date": "2026-07-09",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1783409806596
+  "fixtures": [
+    {
+      "id": 1911,
+      "date": "2026-07-09T13:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 67853,
+      "player2Id": 31327,
+      "tournamentId": 21841,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 67853,
+        "name": "Max Basing",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 31327,
+        "name": "Luca Castelnuovo",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 21841,
+        "name": "Nottingham 3 Challenger",
+        "courtId": 5,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1798,
+      "date": "2026-07-09T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 41484,
+      "player2Id": 75042,
+      "tournamentId": 21839,
+      "timeGame": null,
+      "seed1": "8",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 41484,
+        "name": "Nikolas Sanchez-Izquierdo",
+        "countryAcr": "ESP"
+      },
+      "player2": {
+        "id": 75042,
+        "name": "Alex Barrena",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 21839,
+        "name": "Trieste Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1672,
+      "date": "2026-07-09T10:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 20648,
+      "player2Id": 30856,
+      "tournamentId": 21837,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "8",
+      "live": null,
+      "player1": {
+        "id": 20648,
+        "name": "Taro Daniel",
+        "countryAcr": "JPN"
+      },
+      "player2": {
+        "id": 30856,
+        "name": "Zdenek Kolar",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 21837,
+        "name": "Iasi Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ROU",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    }
+  ],
+  "count": 3,
+  "fetchedAt": 1783462192119
 }
