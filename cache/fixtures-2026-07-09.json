@@ -2,7 +2,136 @@
   "date": "2026-07-09",
   "fixtures": [
     {
-      "id": 1911,
+      "id": 1728,
+      "date": "2026-07-09T18:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 14898,
+      "player2Id": 62404,
+      "tournamentId": 21838,
+      "timeGame": null,
+      "seed1": "7",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 14898,
+        "name": "Facundo Mena",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 62404,
+        "name": "Tristan Mccormick",
+        "countryAcr": "USA"
+      },
+      "tournament": {
+        "id": 21838,
+        "name": "Bogota Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "COL",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1730,
+      "date": "2026-07-09T18:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 23099,
+      "player2Id": 81995,
+      "tournamentId": 21838,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "5",
+      "live": null,
+      "player1": {
+        "id": 23099,
+        "name": "Hernan Casanova",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 81995,
+        "name": "Luciano Emanuel Ambrogi",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 21838,
+        "name": "Bogota Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "COL",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1795,
+      "date": "2026-07-09T15:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 35376,
+      "player2Id": 101158,
+      "tournamentId": 21839,
+      "timeGame": null,
+      "seed1": "7",
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 35376,
+        "name": "Federico Agustin Gomez",
+        "countryAcr": "ARG"
+      },
+      "player2": {
+        "id": 101158,
+        "name": "Henry Bernet",
+        "countryAcr": "SUI"
+      },
+      "tournament": {
+        "id": 21839,
+        "name": "Trieste Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1913,
       "date": "2026-07-09T13:00:00.000Z",
       "roundId": 5,
       "player1Id": 67853,
@@ -45,7 +174,394 @@
       }
     },
     {
+      "id": 1917,
+      "date": "2026-07-09T13:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 77192,
+      "player2Id": 67026,
+      "tournamentId": 21841,
+      "timeGame": null,
+      "seed1": "8",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 77192,
+        "name": "Johannus Monday",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 67026,
+        "name": "Arda Azkara",
+        "countryAcr": "TUR"
+      },
+      "tournament": {
+        "id": 21841,
+        "name": "Nottingham 3 Challenger",
+        "courtId": 5,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1919,
+      "date": "2026-07-09T13:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 80008,
+      "player2Id": 73608,
+      "tournamentId": 21841,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 80008,
+        "name": "Filip Jeff Planinsek",
+        "countryAcr": "SLO"
+      },
+      "player2": {
+        "id": 73608,
+        "name": "Felix Gill",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21841,
+        "name": "Nottingham 3 Challenger",
+        "courtId": 5,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1923,
+      "date": "2026-07-09T13:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 86599,
+      "player2Id": 92094,
+      "tournamentId": 21841,
+      "timeGame": null,
+      "seed1": "q",
+      "seed2": "4",
+      "live": null,
+      "player1": {
+        "id": 86599,
+        "name": "Amit Vales",
+        "countryAcr": "ISR"
+      },
+      "player2": {
+        "id": 92094,
+        "name": "Henry Searle",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21841,
+        "name": "Nottingham 3 Challenger",
+        "courtId": 5,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1580,
+      "date": "2026-07-09T12:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 46747,
+      "player2Id": 100215,
+      "tournamentId": 21835,
+      "timeGame": null,
+      "seed1": "8",
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 46747,
+        "name": "Hugo Gaston",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 100215,
+        "name": "Mika Petkovic",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21835,
+        "name": "Braunschweig Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1859,
+      "date": "2026-07-09T12:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 56641,
+      "player2Id": 45938,
+      "tournamentId": 21840,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 56641,
+        "name": "Gauthier Onclin",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 45938,
+        "name": "Florian Broska",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21840,
+        "name": "Liege Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "BEL",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1584,
+      "date": "2026-07-09T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 52968,
+      "player2Id": 80391,
+      "tournamentId": 21835,
+      "timeGame": null,
+      "seed1": "SE",
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 52968,
+        "name": "Marvin Moeller",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 80391,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PAR"
+      },
+      "tournament": {
+        "id": 21835,
+        "name": "Braunschweig Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1594,
+      "date": "2026-07-09T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 79088,
+      "player2Id": 64741,
+      "tournamentId": 21835,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 79088,
+        "name": "Vilius Gaubas",
+        "countryAcr": "LTU"
+      },
+      "player2": {
+        "id": 64741,
+        "name": "Facundo Diaz Acosta",
+        "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 21835,
+        "name": "Braunschweig Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1604,
+      "date": "2026-07-09T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 104451,
+      "player2Id": 70459,
+      "tournamentId": 21835,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 104451,
+        "name": "Niels Mcdonald",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 70459,
+        "name": "Martin Krumich",
+        "countryAcr": "CZE"
+      },
+      "tournament": {
+        "id": 21835,
+        "name": "Braunschweig Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
       "id": 1798,
+      "date": "2026-07-09T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 40187,
+      "player2Id": 18477,
+      "tournamentId": 21839,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 40187,
+        "name": "Andrea Guerrieri",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 18477,
+        "name": "Hugo Dellien",
+        "countryAcr": "BOL"
+      },
+      "tournament": {
+        "id": 21839,
+        "name": "Trieste Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1800,
       "date": "2026-07-09T11:00:00.000Z",
       "roundId": 5,
       "player1Id": 41484,
@@ -64,6 +580,49 @@
         "id": 75042,
         "name": "Alex Barrena",
         "countryAcr": "ARG"
+      },
+      "tournament": {
+        "id": 21839,
+        "name": "Trieste Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ITA",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1823,
+      "date": "2026-07-09T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 97984,
+      "player2Id": 92247,
+      "tournamentId": 21839,
+      "timeGame": null,
+      "seed1": "NG",
+      "seed2": "ALT",
+      "live": null,
+      "player1": {
+        "id": 97984,
+        "name": "Maxim Mrva",
+        "countryAcr": "CZE"
+      },
+      "player2": {
+        "id": 92247,
+        "name": "Federico Bondioli",
+        "countryAcr": "ITA"
       },
       "tournament": {
         "id": 21839,
@@ -129,8 +688,137 @@
         "id": 5,
         "name": "Second"
       }
+    },
+    {
+      "id": 1692,
+      "date": "2026-07-09T10:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 53726,
+      "player2Id": 74899,
+      "tournamentId": 21837,
+      "timeGame": null,
+      "seed1": "ALT",
+      "seed2": "7",
+      "live": null,
+      "player1": {
+        "id": 53726,
+        "name": "Cezar Cretu",
+        "countryAcr": "ROU"
+      },
+      "player2": {
+        "id": 74899,
+        "name": "Gustavo Heide",
+        "countryAcr": "BRA"
+      },
+      "tournament": {
+        "id": 21837,
+        "name": "Iasi Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ROU",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1695,
+      "date": "2026-07-09T10:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 59092,
+      "player2Id": 53909,
+      "tournamentId": 21837,
+      "timeGame": null,
+      "seed1": "4",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 59092,
+        "name": "Titouan Droguet",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 53909,
+        "name": "Luka Pavlovic",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21837,
+        "name": "Iasi Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ROU",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1697,
+      "date": "2026-07-09T10:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 61857,
+      "player2Id": 79842,
+      "tournamentId": 21837,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 61857,
+        "name": "Valentin Royer",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 79842,
+        "name": "Olle Wallin",
+        "countryAcr": "SWE"
+      },
+      "tournament": {
+        "id": 21837,
+        "name": "Iasi Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "ROU",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
     }
   ],
-  "count": 3,
-  "fetchedAt": 1783462192119
+  "count": 19,
+  "fetchedAt": 1783492037830
 }

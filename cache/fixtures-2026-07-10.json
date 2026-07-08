@@ -1,6 +1,50 @@
 {
   "date": "2026-07-10",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1783462202953
+  "fixtures": [
+    {
+      "id": 1328,
+      "date": "2026-07-10T15:30:00.000Z",
+      "roundId": 10,
+      "player1Id": 47275,
+      "player2Id": 5992,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": "7",
+      "live": null,
+      "player1": {
+        "id": 47275,
+        "name": "Jannik Sinner",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 5992,
+        "name": "Novak Djokovic",
+        "countryAcr": "SRB"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 10,
+        "name": "1/2"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1783492048585
 }
