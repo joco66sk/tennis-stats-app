@@ -2,7 +2,50 @@
   "date": "2026-07-10",
   "fixtures": [
     {
-      "id": 1328,
+      "id": 1403,
+      "date": "2026-07-10T18:30:00.000Z",
+      "roundId": 10,
+      "player1Id": 79065,
+      "player2Id": 24008,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 79065,
+        "name": "Arthur Fery",
+        "countryAcr": "GBR"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 10,
+        "name": "1/2"
+      }
+    },
+    {
+      "id": 1326,
       "date": "2026-07-10T15:30:00.000Z",
       "roundId": 10,
       "player1Id": 47275,
@@ -43,8 +86,180 @@
         "id": 10,
         "name": "1/2"
       }
+    },
+    {
+      "id": 1936,
+      "date": "2026-07-10T13:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 55828,
+      "player2Id": 99980,
+      "tournamentId": 21841,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 55828,
+        "name": "Clement Chidekh",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 99980,
+        "name": "Ivan Ivanov",
+        "countryAcr": "BUL"
+      },
+      "tournament": {
+        "id": 21841,
+        "name": "Nottingham 3 Challenger",
+        "courtId": 5,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1963,
+      "date": "2026-07-10T13:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 97973,
+      "player2Id": 53159,
+      "tournamentId": 21841,
+      "timeGame": null,
+      "seed1": "3",
+      "seed2": "5",
+      "live": null,
+      "player1": {
+        "id": 97973,
+        "name": "Yi Zhou",
+        "countryAcr": "CHN"
+      },
+      "player2": {
+        "id": 53159,
+        "name": "Alastair Gray",
+        "countryAcr": "GBR"
+      },
+      "tournament": {
+        "id": 21841,
+        "name": "Nottingham 3 Challenger",
+        "courtId": 5,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1899,
+      "date": "2026-07-10T12:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 96547,
+      "player2Id": 11981,
+      "tournamentId": 21840,
+      "timeGame": null,
+      "seed1": "ALT",
+      "seed2": "4",
+      "live": null,
+      "player1": {
+        "id": 96547,
+        "name": "Jack Loge",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 11981,
+        "name": "Lorenzo Giustino",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21840,
+        "name": "Liege Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "BEL",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1572,
+      "date": "2026-07-10T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 24084,
+      "player2Id": 76010,
+      "tournamentId": 21835,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 24084,
+        "name": "Laslo Djere",
+        "countryAcr": "SRB"
+      },
+      "player2": {
+        "id": 76010,
+        "name": "Daniel Rincon",
+        "countryAcr": "ESP"
+      },
+      "tournament": {
+        "id": 21835,
+        "name": "Braunschweig Challenger",
+        "courtId": 2,
+        "date": "2026-07-06T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "GER",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1783492048585
+  "count": 6,
+  "fetchedAt": 1783548178347
 }
