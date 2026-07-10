@@ -1,6 +1,50 @@
 {
   "date": "2026-07-12",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1783668854594
+  "fixtures": [
+    {
+      "id": 1327,
+      "date": "2026-07-12T18:00:00.000Z",
+      "roundId": 12,
+      "player1Id": 47275,
+      "player2Id": 24008,
+      "tournamentId": 21337,
+      "timeGame": null,
+      "seed1": "1",
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 47275,
+        "name": "Jannik Sinner",
+        "countryAcr": "ITA"
+      },
+      "player2": {
+        "id": 24008,
+        "name": "Alexander Zverev",
+        "countryAcr": "GER"
+      },
+      "tournament": {
+        "id": 21337,
+        "name": "Wimbledon - London",
+        "courtId": 5,
+        "date": "2026-06-29T00:00:00.000Z",
+        "rankId": 4,
+        "countryAcr": "GBR",
+        "court": {
+          "id": 5,
+          "name": "Grass"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 12,
+        "name": "Final"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1783720772852
 }
