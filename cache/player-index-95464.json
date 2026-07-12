@@ -1,6 +1,26 @@
 {
   "Clay": [
     {
+      "id": "81496060",
+      "date": "2026-07-12",
+      "tournamentId": 21839,
+      "tournamentName": "Trieste Challenger",
+      "opponentId": 18477,
+      "opponentName": "Hugo Dellien",
+      "won": false,
+      "result": "5-7 6-4 6-2"
+    },
+    {
+      "id": "48299335",
+      "date": "2026-07-11",
+      "tournamentId": 21839,
+      "tournamentName": "Trieste Challenger",
+      "opponentId": 48013,
+      "opponentName": "Henri Squire",
+      "won": true,
+      "result": "6-4 3-6 6-3"
+    },
+    {
       "id": "19255170",
       "date": "2026-07-10",
       "tournamentId": 21839,
@@ -79,26 +99,6 @@
       "opponentName": "Yi Zhou",
       "won": true,
       "result": "1-6 6-3 7-5"
-    },
-    {
-      "id": "1263555",
-      "date": "2026-05-13",
-      "tournamentId": 21665,
-      "tournamentName": "Zagreb Challenger",
-      "opponentId": 47387,
-      "opponentName": "August Holmgren",
-      "won": false,
-      "result": "7-6(8) 3-6 6-3"
-    },
-    {
-      "id": "1253194",
-      "date": "2026-03-27",
-      "tournamentId": 21519,
-      "tournamentName": "Split Challenger",
-      "opponentId": 84120,
-      "opponentName": "Mili Poljicak",
-      "won": false,
-      "result": "4-1 ret."
     }
   ],
   "Hard": [
@@ -225,6 +225,6 @@
       "result": "3-6 7-6(0) 7-6"
     }
   ],
-  "updatedAt": 1783720839168,
+  "updatedAt": 1783892993167,
   "playerName": "Matej Dodig"
 }

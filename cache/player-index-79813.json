@@ -1,6 +1,76 @@
 {
   "Clay": [
     {
+      "id": "81496212",
+      "date": "2026-07-12",
+      "tournamentId": 21843,
+      "tournamentName": "Cordenons Challenger",
+      "opponentId": 23082,
+      "opponentName": "David Poljak",
+      "won": true,
+      "result": "6-4 6-4"
+    },
+    {
+      "id": "1276036",
+      "date": "2026-06-24",
+      "tournamentId": 21811,
+      "tournamentName": "M15 Bergamo",
+      "opponentId": 66363,
+      "opponentName": "Pietro Romeo Scomparin",
+      "won": false,
+      "result": "6-4 7-5"
+    },
+    {
+      "id": "1270937",
+      "date": "2026-06-14",
+      "tournamentId": 21745,
+      "tournamentName": "Parma Challenger",
+      "opponentId": 98265,
+      "opponentName": "Alejo Sanchez Quilez",
+      "won": false,
+      "result": "6-2 7-5"
+    },
+    {
+      "id": "1273464",
+      "date": "2026-06-11",
+      "tournamentId": 21779,
+      "tournamentName": "M15 Kursumlijska Banja",
+      "opponentId": 93278,
+      "opponentName": "Carlos Giraldi",
+      "won": false,
+      "result": "6-2 3-0 ret."
+    },
+    {
+      "id": "1273458",
+      "date": "2026-06-09",
+      "tournamentId": 21779,
+      "tournamentName": "M15 Kursumlijska Banja",
+      "opponentId": 67633,
+      "opponentName": "Ali Habib",
+      "won": true,
+      "result": "6-2 7-6(6)"
+    },
+    {
+      "id": "1272091",
+      "date": "2026-06-04",
+      "tournamentId": 21762,
+      "tournamentName": "M15 Kursumlijska Banja",
+      "opponentId": 61968,
+      "opponentName": "Lorenzo Gagliardo",
+      "won": false,
+      "result": "6-2 7-5"
+    },
+    {
+      "id": "1272081",
+      "date": "2026-06-03",
+      "tournamentId": 21762,
+      "tournamentName": "M15 Kursumlijska Banja",
+      "opponentId": 37210,
+      "opponentName": "Boris Butulija",
+      "won": true,
+      "result": "6-3 7-5"
+    },
+    {
       "id": "84772981",
       "date": "2026-05-17",
       "tournamentId": 21670,
@@ -11,6 +81,16 @@
       "result": "3-6 6-3 6-4"
     },
     {
+      "id": "1213646",
+      "date": "2025-07-30",
+      "tournamentId": 20901,
+      "tournamentName": "M15 Kursumlijska Banja 13",
+      "opponentId": 71795,
+      "opponentName": "Alexandre Aubriot",
+      "won": false,
+      "result": "7-5 1-1 ret."
+    },
+    {
       "id": "1205800",
       "date": "2025-06-24",
       "tournamentId": 20799,
@@ -19,86 +99,6 @@
       "opponentName": "Carlo Alberto Caniato",
       "won": false,
       "result": "6-1 6-2"
-    },
-    {
-      "id": "1200199",
-      "date": "2025-06-08",
-      "tournamentId": 20726,
-      "tournamentName": "Perugia Challenger",
-      "opponentId": 92247,
-      "opponentName": "Federico Bondioli",
-      "won": false,
-      "result": "6-3 6-2"
-    },
-    {
-      "id": "1190902",
-      "date": "2025-04-21",
-      "tournamentId": 20609,
-      "tournamentName": "Rome Challenger",
-      "opponentId": 36042,
-      "opponentName": "Oleg Prihodko",
-      "won": false,
-      "result": "7-5 6-1"
-    },
-    {
-      "id": "1184202",
-      "date": "2025-03-30",
-      "tournamentId": 20526,
-      "tournamentName": "Barletta Challenger",
-      "opponentId": 92649,
-      "opponentName": "Tiago Pereira",
-      "won": false,
-      "result": "6-1 6-3"
-    },
-    {
-      "id": "1183951",
-      "date": "2025-03-23",
-      "tournamentId": 20522,
-      "tournamentName": "Naples Challenger",
-      "opponentId": 35323,
-      "opponentName": "Matteo Martineau",
-      "won": false,
-      "result": "6-4 4-5 ret."
-    },
-    {
-      "id": "1162898",
-      "date": "2024-11-25",
-      "tournamentId": 20213,
-      "tournamentName": "Maia Challenger",
-      "opponentId": 23298,
-      "opponentName": "Kimmer Coppejans",
-      "won": false,
-      "result": "6-4 6-0"
-    },
-    {
-      "id": "1149986",
-      "date": "2024-09-03",
-      "tournamentId": 20012,
-      "tournamentName": "Genova Challenger",
-      "opponentId": 12097,
-      "opponentName": "Stefano Travaglia",
-      "won": false,
-      "result": "6-3 6-2"
-    },
-    {
-      "id": "1144548",
-      "date": "2024-08-08",
-      "tournamentId": 19940,
-      "tournamentName": "Cordenons Challenger",
-      "opponentId": 11981,
-      "opponentName": "Lorenzo Giustino",
-      "won": false,
-      "result": "6-1 6-1"
-    },
-    {
-      "id": "1144538",
-      "date": "2024-08-06",
-      "tournamentId": 19940,
-      "tournamentName": "Cordenons Challenger",
-      "opponentId": 63737,
-      "opponentName": "Francesco Maestrelli",
-      "won": true,
-      "result": "7-5 7-6(5)"
     }
   ],
   "Hard": [
@@ -113,6 +113,16 @@
       "result": "6-4 1-6 6-3"
     },
     {
+      "id": "1262320",
+      "date": "2026-04-22",
+      "tournamentId": 21631,
+      "tournamentName": "M25 Sharm ElSheikh",
+      "opponentId": 113066,
+      "opponentName": "Andrei Kunitsyn",
+      "won": true,
+      "result": "7-6(4) 4-6 6-1"
+    },
+    {
       "id": "1260591",
       "date": "2026-04-15",
       "tournamentId": 21619,
@@ -121,6 +131,16 @@
       "opponentName": "Robert Strombachs",
       "won": false,
       "result": "6-0 3-6 6-3"
+    },
+    {
+      "id": "1260682",
+      "date": "2026-04-08",
+      "tournamentId": 21612,
+      "tournamentName": "M25 Sharm ElSheikh",
+      "opponentId": 65267,
+      "opponentName": "Fares Zakaria",
+      "won": false,
+      "result": "6-4 4-0 ret."
     },
     {
       "id": "1257913",
@@ -133,6 +153,26 @@
       "result": "6-4 7-6(3)"
     },
     {
+      "id": "1259152",
+      "date": "2026-04-01",
+      "tournamentId": 21588,
+      "tournamentName": "M15 Sharm ElSheikh 10",
+      "opponentId": 88579,
+      "opponentName": "Christian Djonov",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
+      "id": "1256849",
+      "date": "2026-03-21",
+      "tournamentId": 21559,
+      "tournamentName": "M15 Sharm ElSheikh 8",
+      "opponentId": 79692,
+      "opponentName": "Alessandro Pecci",
+      "won": false,
+      "result": "6-4 6-4"
+    },
+    {
       "id": "1256145",
       "date": "2026-03-20",
       "tournamentId": 21559,
@@ -143,67 +183,27 @@
       "result": "6-1 7-5"
     },
     {
-      "id": "1254802",
-      "date": "2026-03-13",
-      "tournamentId": 21542,
-      "tournamentName": "M15 Sharm ElSheikh 7",
-      "opponentId": 85764,
-      "opponentName": "Michal Krajci",
-      "won": false,
-      "result": "6-3 6-2"
-    },
-    {
-      "id": "1254265",
-      "date": "2026-03-11",
-      "tournamentId": 21542,
-      "tournamentName": "M15 Sharm ElSheikh 7",
-      "opponentId": 77559,
-      "opponentName": "Karim Ibrahim",
+      "id": "1256875",
+      "date": "2026-03-19",
+      "tournamentId": 21559,
+      "tournamentName": "M15 Sharm ElSheikh 8",
+      "opponentId": 108324,
+      "opponentName": "Ruslan Kastsiukevich",
       "won": true,
-      "result": "6-0 6-3"
+      "result": "6-4 6-1"
     },
     {
-      "id": "1249469",
-      "date": "2026-02-13",
-      "tournamentId": 21449,
-      "tournamentName": "M15 Sharm ElSheikh 3",
-      "opponentId": 84352,
-      "opponentName": "Romain Faucon",
-      "won": false,
-      "result": "7-6(6) 6-1"
-    },
-    {
-      "id": "1248586",
-      "date": "2026-02-05",
-      "tournamentId": 21439,
-      "tournamentName": "M15 Sharm ElSheikh 2",
-      "opponentId": 83338,
-      "opponentName": "Igor Kudriashov",
-      "won": true,
-      "result": "6-1 6-1"
-    },
-    {
-      "id": "1247170",
-      "date": "2026-02-01",
-      "tournamentId": 21411,
-      "tournamentName": "M15 Sharm ElSheikh 1",
-      "opponentId": 59353,
-      "opponentName": "Semen Pankin",
+      "id": "1256863",
+      "date": "2026-03-18",
+      "tournamentId": 21559,
+      "tournamentName": "M15 Sharm ElSheikh 8",
+      "opponentId": 100617,
+      "opponentName": "Sydney Zick",
       "won": true,
       "result": "6-2 6-4"
-    },
-    {
-      "id": "1239361",
-      "date": "2025-12-04",
-      "tournamentId": 21263,
-      "tournamentName": "M15 Sharm ElSheikh 20",
-      "opponentId": 89402,
-      "opponentName": "Erik Arutiunian",
-      "won": false,
-      "result": "7-6(5) 5-7 6-1"
     }
   ],
   "Grass": [],
-  "updatedAt": 1783720847473,
+  "updatedAt": 1783892927734,
   "playerName": "Samuel Vincent Ruggeri"
 }

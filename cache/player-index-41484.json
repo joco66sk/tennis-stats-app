@@ -1,6 +1,46 @@
 {
   "Clay": [
     {
+      "id": "88378679",
+      "date": "2026-07-12",
+      "tournamentId": 21341,
+      "tournamentName": "Plava Laguna Croatia Open - Umag",
+      "opponentId": 89131,
+      "opponentName": "Juan Carlos Prado Angelo",
+      "won": false,
+      "result": "6-3 7-6(4)"
+    },
+    {
+      "id": "56564637",
+      "date": "2026-07-11",
+      "tournamentId": 21341,
+      "tournamentName": "Plava Laguna Croatia Open - Umag",
+      "opponentId": 17928,
+      "opponentName": "Norbert Gombos",
+      "won": true,
+      "result": "7-6(4) 6-2"
+    },
+    {
+      "id": "20638137",
+      "date": "2026-07-10",
+      "tournamentId": 21839,
+      "tournamentName": "Trieste Challenger",
+      "opponentId": 18477,
+      "opponentName": "Hugo Dellien",
+      "won": false,
+      "result": "3-6 6-0 7-5"
+    },
+    {
+      "id": "1278171",
+      "date": "2026-07-09",
+      "tournamentId": 21839,
+      "tournamentName": "Trieste Challenger",
+      "opponentId": 75042,
+      "opponentName": "Alex Barrena",
+      "won": true,
+      "result": "6-4 6-3"
+    },
+    {
       "id": "147685004",
       "date": "2026-07-07",
       "tournamentId": 21839,
@@ -59,46 +99,6 @@
       "opponentName": "Sebastian Baez",
       "won": false,
       "result": "6-2 7-6(2)"
-    },
-    {
-      "id": "19130513",
-      "date": "2026-06-05",
-      "tournamentId": 21736,
-      "tournamentName": "Prostejov Challenger",
-      "opponentId": 90203,
-      "opponentName": "Lautaro Midon",
-      "won": true,
-      "result": "6-7(6) 6-3 6-3"
-    },
-    {
-      "id": "182450065",
-      "date": "2026-06-03",
-      "tournamentId": 21736,
-      "tournamentName": "Prostejov Challenger",
-      "opponentId": 64891,
-      "opponentName": "Alexander Shevchenko",
-      "won": true,
-      "result": "7-6(8) 6-1"
-    },
-    {
-      "id": "149498294",
-      "date": "2026-06-02",
-      "tournamentId": 21736,
-      "tournamentName": "Prostejov Challenger",
-      "opponentId": 53909,
-      "opponentName": "Luka Pavlovic",
-      "won": true,
-      "result": "6-3 4-6 6-3"
-    },
-    {
-      "id": "1264201",
-      "date": "2026-05-21",
-      "tournamentId": 21668,
-      "tournamentName": "Istanbul Challenger",
-      "opponentId": 17837,
-      "opponentName": "Dimitar Kuzmanov",
-      "won": true,
-      "result": "6-0 6-7(4) 6-1"
     }
   ],
   "Hard": [
@@ -215,6 +215,6 @@
       "result": "7-6(7) 6-3"
     }
   ],
-  "updatedAt": 1783767942578,
+  "updatedAt": 1783892781350,
   "playerName": "Nikolas Sanchez-Izquierdo"
 }
