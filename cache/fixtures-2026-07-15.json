@@ -1,6 +1,93 @@
 {
   "date": "2026-07-15",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1783925535194
+  "fixtures": [
+    {
+      "id": 1267,
+      "date": "2026-07-15T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 28170,
+      "player2Id": 47259,
+      "tournamentId": 21340,
+      "timeGame": null,
+      "seed1": "4",
+      "seed2": "q",
+      "live": null,
+      "player1": {
+        "id": 28170,
+        "name": "Arthur Rinderknech",
+        "countryAcr": "FRA"
+      },
+      "player2": {
+        "id": 47259,
+        "name": "Clement Tabur",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21340,
+        "name": "EFG Swiss Open - Gstaad",
+        "courtId": 2,
+        "date": "2026-07-13T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SUI",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    },
+    {
+      "id": 1283,
+      "date": "2026-07-15T11:00:00.000Z",
+      "roundId": 5,
+      "player1Id": 84235,
+      "player2Id": 31392,
+      "tournamentId": 21340,
+      "timeGame": null,
+      "seed1": "7",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 84235,
+        "name": "Raphael Collignon",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 31392,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21340,
+        "name": "EFG Swiss Open - Gstaad",
+        "courtId": 2,
+        "date": "2026-07-13T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SUI",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1783979646850
 }
