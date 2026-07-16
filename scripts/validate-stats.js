@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /**
  * Validates computed averages for all upcoming fixture players.
- * Replicates the exact same math as player-surface-stats/route.ts.
- * Flags stats outside plausible ATP ranges, re-fetches stats files for flagged
- * players, recomputes, and reports anything still suspicious.
+ * Replicates the same math as player-surface-stats/route.ts.
+ * Flags stats outside plausible ATP ranges, re-fetches on suspicion.
  *
  * Usage:
  *   node scripts/validate-stats.js            (validate + re-fetch on suspicion)
@@ -16,7 +15,7 @@ const path = require('path');
 const envPath = path.join(__dirname, '..', '.env.local');
 const env = fs.readFileSync(envPath, 'utf-8');
 const KEY = env.match(/RAPIDAPI_KEY=(.+)/)?.[1]?.trim();
-const HOST = env.match(/RAPIDAPI_HOST=(.+)/)?.[1]?.trim() || 'tennis-api-atp-wta-itf.p.rapidapi.com';
+const HOST = env.match(/RAPIDAPI_HOST=(.+)/)?.[1]?.trim() || 'tennisapi1.p.rapidapi.com';
 
 if (!KEY) { console.error('RAPIDAPI_KEY not found'); process.exit(1); }
 
@@ -24,24 +23,21 @@ const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const MATCH_STATS_DIR = path.join(__dirname, '..', 'app', 'api', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 
-const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 const MIN_DATE = '2024-01-01';
 const LAST_N = 10;
 const DELAY = 400;
 const DRY_RUN = process.argv.includes('--dry-run');
 
-// Plausible ATP ranges — generous to avoid false positives on hot streaks
 const THRESHOLDS = {
-  serveWon:    { min: 48,  max: 82  },
-  returnWon:   { min: 18,  max: 54  },
-  combined:    { min: 78,  max: 112 },
-  firstServe:  { min: 38,  max: 80  },
-  firstWon:    { min: 52,  max: 92  },
-  secondWon:   { min: 35,  max: 74  },
+  serveWon:   { min: 48, max: 82  },
+  returnWon:  { min: 18, max: 54  },
+  combined:   { min: 78, max: 112 },
+  firstServe: { min: 38, max: 80  },
+  firstWon:   { min: 52, max: 92  },
+  secondWon:  { min: 35, max: 74  },
 };
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-function isQualifying(f) { return /^Q\d/i.test(f.round?.name ?? ''); }
 
 function getUpcomingDates() {
   return Array.from({ length: 5 }, (_, d) => {
@@ -60,8 +56,7 @@ function detectActiveSurfaces(dates) {
     try {
       const data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, `fixtures-${date}.json`), 'utf-8'));
       for (const f of (data.fixtures || [])) {
-        if ((f.tournament?.rank?.id ?? 0) < 2) continue;
-        const s = COURT_ID_MAP[f.tournament?.courtId];
+        const s = f.tournament?.court?.name;
         if (s) detected.add(s);
       }
     } catch {}
@@ -75,10 +70,8 @@ function getUpcomingPlayers(dates) {
     try {
       const data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, `fixtures-${date}.json`), 'utf-8'));
       for (const f of (data.fixtures || [])) {
-        if ((f.tournament?.rank?.id ?? 0) < 1) continue;
-        if (isQualifying(f) && (f.tournament?.rank?.id ?? 0) < 2) continue;
         if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue;
-        const surface = COURT_ID_MAP[f.tournament?.courtId];
+        const surface = f.tournament?.court?.name || null;
         for (const p of [f.player1, f.player2]) {
           if (p?.id && !players.has(String(p.id)))
             players.set(String(p.id), { name: p.name, surface });
@@ -89,15 +82,11 @@ function getUpcomingPlayers(dates) {
   return players;
 }
 
-function getStatsFile(tournamentId, p1, p2) {
-  for (const [a, b] of [[p1, p2], [p2, p1]]) {
-    const fp = path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`);
-    if (fs.existsSync(fp)) return fp;
-  }
-  return null;
+function getStatsFile(eventId) {
+  const fp = path.join(MATCH_STATS_DIR, `match-stats-${eventId}.json`);
+  return fs.existsSync(fp) ? fp : null;
 }
 
-// Exact same math as player-surface-stats/route.ts
 function computeAvgs(pid, entries) {
   let statsCount = 0;
   let total1stIn = 0, total1stWon = 0, total2ndWon = 0, totalSvpt = 0;
@@ -105,13 +94,14 @@ function computeAvgs(pid, entries) {
   let totalReturnWon = 0, totalOppSvpt = 0;
 
   for (const e of entries) {
-    const fp = getStatsFile(e.tournamentId, pid, e.opponentId);
+    if (!e.tournamentId) continue;
+    const fp = getStatsFile(e.tournamentId);
     if (!fp) continue;
     let stats;
     try { stats = JSON.parse(fs.readFileSync(fp, 'utf-8')); } catch { continue; }
-    const isP1 = stats.player1Stats?.player1Id === pid;
-    const my = isP1 ? stats.player1Stats : stats.player2Stats;
-    const opp = isP1 ? stats.player2Stats : stats.player1Stats;
+    const isHome = stats.homeId === pid;
+    const my = isHome ? stats.home : stats.away;
+    const opp = isHome ? stats.away : stats.home;
     if (!my || !opp) continue;
     const svpt = my.firstServeOf || 0;
     if (svpt === 0) continue;
@@ -130,13 +120,12 @@ function computeAvgs(pid, entries) {
   }
 
   if (statsCount === 0) return null;
-  const serveWon   = totalSvpt ? ((total1stWon + total2ndWon) / totalSvpt) * 100 : 0;
-  const returnWon  = totalOppSvpt ? (totalReturnWon / totalOppSvpt) * 100 : 0;
+  const serveWon  = totalSvpt ? ((total1stWon + total2ndWon) / totalSvpt) * 100 : 0;
+  const returnWon = totalOppSvpt ? (totalReturnWon / totalOppSvpt) * 100 : 0;
   const firstServe = totalSvpt ? (total1stIn / totalSvpt) * 100 : 0;
-  const firstWon   = total1stIn ? (total1stWon / total1stIn) * 100 : 0;
-  const secondWon  = (totalSvpt - total1stIn) > 0 ? (total2ndWon / (totalSvpt - total1stIn)) * 100 : 0;
-  return { statsCount, serveWon, returnWon, combined: serveWon + returnWon, firstServe, firstWon, secondWon,
-           avgAces: totalAces / statsCount, avgDf: totalDf / statsCount };
+  const firstWon  = total1stIn ? (total1stWon / total1stIn) * 100 : 0;
+  const secondWon = (totalSvpt - total1stIn) > 0 ? (total2ndWon / (totalSvpt - total1stIn)) * 100 : 0;
+  return { statsCount, serveWon, returnWon, combined: serveWon + returnWon, firstServe, firstWon, secondWon };
 }
 
 function checkThresholds(avgs) {
@@ -149,37 +138,47 @@ function checkThresholds(avgs) {
   return flags;
 }
 
+function parseMatchStats(raw, homeId, awayId, eventId) {
+  const allPeriod = raw.statistics?.find(s => s.period === 'ALL');
+  if (!allPeriod) return null;
+  const allItems = allPeriod.groups.flatMap(g => g.statisticsItems);
+  const getStat = (key) => allItems.find(i => i.key === key);
+  const fsa  = getStat('firstServeAccuracy');
+  const fspa = getStat('firstServePointsAccuracy');
+  const sspa = getStat('secondServePointsAccuracy');
+  const acesS = getStat('aces');
+  const dfS  = getStat('doubleFaults');
+  const bpsS = getStat('breakPointsSaved');
+  if (!fsa) return null;
+  const extract = (side) => ({
+    firstServeOf: fsa?.[`${side}Total`] ?? 0,
+    firstServe: fsa?.[`${side}Value`] ?? 0,
+    winningOnFirstServe: fspa?.[`${side}Value`] ?? 0,
+    winningOnSecondServe: sspa?.[`${side}Value`] ?? 0,
+    aces: acesS?.[`${side}Value`] ?? 0,
+    doubleFaults: dfS?.[`${side}Value`] ?? 0,
+    breakPointsFaced: bpsS?.[`${side}Total`] ?? 0,
+    breakPointsSaved: bpsS?.[`${side}Value`] ?? 0,
+  });
+  return { eventId, homeId, awayId, home: extract('home'), away: extract('away') };
+}
+
 async function refetchPlayerStats(pid, entries) {
   let fetched = 0;
   for (const e of entries) {
-    if (getStatsFile(e.tournamentId, pid, e.opponentId)) continue; // already have it
-    // shouldn't happen — sanity check ran first — but safety net
-    for (const [a, b] of [[pid, e.opponentId], [e.opponentId, pid]]) {
-      try {
-        const res = await fetch(`https://${HOST}/tennis/v2/atp/h2h/match-stats/${e.tournamentId}/${a}/${b}`, { headers: HEADERS });
-        if (!res.ok) continue;
-        const raw = await res.json();
-        if (raw?.data?.player1Stats) {
-          fs.writeFileSync(path.join(MATCH_STATS_DIR, `match-stats-${e.tournamentId}-${a}-${b}.json`), JSON.stringify(raw.data, null, 2));
-          fetched++; await sleep(DELAY); break;
-        }
-      } catch {}
-    }
-  }
-
-  // Re-fetch ALL existing stats files for this player — might have wrong data
-  for (const e of entries) {
-    const fp = getStatsFile(e.tournamentId, pid, e.opponentId);
-    if (!fp) continue;
-    const [, , tid, a, b] = fp.match(/match-stats-(\d+)-(\d+)-(\d+)\.json$/) || [];
-    if (!tid) continue;
+    if (!e.tournamentId) continue;
+    const fp = path.join(MATCH_STATS_DIR, `match-stats-${e.tournamentId}.json`);
+    const homeId = e.homeId ?? pid;
+    const awayId = homeId === pid ? e.opponentId : pid;
     try {
-      const res = await fetch(`https://${HOST}/tennis/v2/atp/h2h/match-stats/${tid}/${a}/${b}`, { headers: HEADERS });
+      const res = await fetch(`https://${HOST}/api/tennis/event/${e.tournamentId}/statistics`, { headers: HEADERS });
       if (!res.ok) continue;
       const raw = await res.json();
-      if (raw?.data?.player1Stats) {
-        fs.writeFileSync(fp, JSON.stringify(raw.data, null, 2));
-        fetched++; await sleep(DELAY);
+      const parsed = parseMatchStats(raw, homeId, awayId, e.tournamentId);
+      if (parsed) {
+        fs.writeFileSync(fp, JSON.stringify(parsed, null, 2));
+        fetched++;
+        await sleep(DELAY);
       }
     } catch {}
   }
@@ -196,8 +195,7 @@ async function main() {
   console.log(`Stats validation: ${players.size} players | ${dates[0]} to ${dates[dates.length - 1]} | surfaces: ${surfaces.join(', ')}`);
   if (DRY_RUN) console.log('DRY RUN\n'); else console.log('');
 
-  let totalRefetched = 0;
-  let stillSuspicious = 0;
+  let totalRefetched = 0, stillSuspicious = 0;
 
   for (const [playerId, { name }] of players) {
     const pid = parseInt(playerId);
@@ -220,7 +218,6 @@ async function main() {
 
       if (DRY_RUN) { stillSuspicious++; continue; }
 
-      // Re-fetch all stats files for this player and recompute
       const fetched = await refetchPlayerStats(pid, entries);
       totalRefetched += fetched;
 

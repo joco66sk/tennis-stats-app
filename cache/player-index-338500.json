@@ -1,17 +1,6 @@
 {
   "Clay": [
     {
-      "id": "16214895",
-      "date": "2026-05-25",
-      "tournamentId": 16214895,
-      "homeId": 14548,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 14548,
-      "opponentName": "Stan Wawrinka",
-      "won": false,
-      "result": ""
-    },
-    {
       "id": "16098940",
       "date": "2026-05-09",
       "tournamentId": 16098940,
@@ -31,7 +20,7 @@
       "opponentId": 206570,
       "opponentName": "Jannik Sinner",
       "won": false,
-      "result": "6-2 6-4"
+      "result": "2-6 4-6"
     },
     {
       "id": "16013076",
@@ -97,7 +86,7 @@
       "opponentId": 458834,
       "opponentName": "Rafael Jodar",
       "won": true,
-      "result": "6-3 3-6 2-6"
+      "result": "3-6 6-3 6-2"
     },
     {
       "id": "15980139",
@@ -109,6 +98,17 @@
       "opponentName": "Lorenzo Musetti",
       "won": true,
       "result": "6-3 6-4"
+    },
+    {
+      "id": "15980141",
+      "date": "2026-04-16",
+      "tournamentId": 15980141,
+      "homeId": 338500,
+      "tournamentName": "Barcelona",
+      "opponentId": 235576,
+      "opponentName": "Brandon Nakashima",
+      "won": true,
+      "result": "6-2 6-3"
     }
   ],
   "Hard": [
@@ -154,7 +154,7 @@
       "opponentId": 122366,
       "opponentName": "Stefanos Tsitsipas",
       "won": true,
-      "result": "0-6 1-6"
+      "result": "6-0 6-1"
     },
     {
       "id": "15708853",
@@ -176,7 +176,7 @@
       "opponentId": 57163,
       "opponentName": "Alexander Zverev",
       "won": false,
-      "result": "6-2 6-3"
+      "result": "2-6 3-6"
     },
     {
       "id": "15624985",
@@ -187,7 +187,7 @@
       "opponentId": 192013,
       "opponentName": "Felix Auger-Aliassime",
       "won": true,
-      "result": "3-6 6-7"
+      "result": "6-3 7-6"
     },
     {
       "id": "15624959",
@@ -209,18 +209,18 @@
       "opponentId": 349089,
       "opponentName": "Dino Prižmić",
       "won": true,
-      "result": "2-6 2-3"
+      "result": "6-2 3-2"
     },
     {
-      "id": "15593321",
-      "date": "2026-02-24",
-      "tournamentId": 15593321,
-      "homeId": 338500,
-      "tournamentName": "Dubai",
-      "opponentId": 254742,
-      "opponentName": "Jiri Lehečka",
+      "id": "15522221",
+      "date": "2026-02-21",
+      "tournamentId": 15522221,
+      "homeId": 275923,
+      "tournamentName": "Doha",
+      "opponentId": 275923,
+      "opponentName": "Carlos Alcaraz",
       "won": false,
-      "result": ""
+      "result": "2-6 1-6"
     }
   ],
   "Grass": [
@@ -233,7 +233,7 @@
       "opponentId": 112783,
       "opponentName": "Matteo Berrettini",
       "won": false,
-      "result": "6-4 7-5 3-6 6-3"
+      "result": "4-6 5-7 6-3 3-6"
     },
     {
       "id": "16397394",
@@ -335,6 +335,6 @@
       "result": "3-6 6-7"
     }
   ],
-  "updatedAt": 1784228748300,
+  "updatedAt": 1784233419890,
   "playerName": "Arthur Fils"
 }

@@ -4,6 +4,10 @@ import fs from 'fs';
 import path from 'path';
 import { CACHE_DIR, STATIC_CACHE, HOST, RAPIDAPI_HEADERS, groundTypeToSurface, initCache } from '@/lib/shared';
 
+function getStockholmDate(timestamp: number): string {
+  return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Stockholm' }).format(new Date(timestamp * 1000));
+}
+
 function tennisPointsToRankId(points?: number): number {
   if (!points) return 0;
   if (points >= 2000) return 4;
@@ -128,7 +132,8 @@ export async function GET(request: NextRequest) {
       if (!e.homeTeam || !e.awayTeam) return false;
       if ((e.homeTeam.name || '').includes('/') || (e.awayTeam.name || '').includes('/')) return false;
       const tp: number = e.tournament?.uniqueTournament?.tennisPoints ?? 0;
-      return tp >= 250;
+      if (tp < 250) return false;
+      return e.startTimestamp && getStockholmDate(e.startTimestamp as number) === date;
     })
     .map(transformEvent)
     .sort((a: any, b: any) => (b.tournament?.rank?.id ?? 0) - (a.tournament?.rank?.id ?? 0));

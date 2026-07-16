@@ -31,7 +31,7 @@
       "opponentId": 458834,
       "opponentName": "Rafael Jodar",
       "won": false,
-      "result": "4-6 4-6 6-1 6-2 6-2"
+      "result": "6-4 6-4 1-6 2-6 2-6"
     },
     {
       "id": "16198520",
@@ -67,6 +67,39 @@
       "result": "6-3 7-6 6-3"
     },
     {
+      "id": "16134979",
+      "date": "2026-05-15",
+      "tournamentId": 16134979,
+      "homeId": 40800,
+      "tournamentName": "Valencia, Spain",
+      "opponentId": 126356,
+      "opponentName": "Jaume Munar",
+      "won": false,
+      "result": ""
+    },
+    {
+      "id": "16134977",
+      "date": "2026-05-14",
+      "tournamentId": 16134977,
+      "homeId": 221806,
+      "tournamentName": "Valencia, Spain",
+      "opponentId": 221806,
+      "opponentName": "Sebastián Báez",
+      "won": true,
+      "result": "5-7 7-5 7-5"
+    },
+    {
+      "id": "16159675",
+      "date": "2026-05-12",
+      "tournamentId": 16159675,
+      "homeId": 40800,
+      "tournamentName": "Valencia, Spain",
+      "opponentId": 255420,
+      "opponentName": "Francisco Comesaña",
+      "won": true,
+      "result": "6-4 6-3"
+    },
+    {
       "id": "16133472",
       "date": "2026-05-06",
       "tournamentId": 16133472,
@@ -76,39 +109,6 @@
       "opponentName": "Alejandro Tabilo",
       "won": false,
       "result": "2-6 1-6"
-    },
-    {
-      "id": "16125550",
-      "date": "2026-05-05",
-      "tournamentId": 16125550,
-      "homeId": 40800,
-      "tournamentName": "ATP Rome Masters",
-      "opponentId": 14548,
-      "opponentName": "Stan Wawrinka",
-      "won": true,
-      "result": ""
-    },
-    {
-      "id": "16119509",
-      "date": "2026-05-04",
-      "tournamentId": 16119509,
-      "homeId": 40800,
-      "tournamentName": "ATP Rome Masters",
-      "opponentId": 51345,
-      "opponentName": "Martin Damm Jr",
-      "won": true,
-      "result": "3-6 3-6"
-    },
-    {
-      "id": "16012152",
-      "date": "2026-04-25",
-      "tournamentId": 16012152,
-      "homeId": 157456,
-      "tournamentName": "ATP Madrid Masters",
-      "opponentId": 157456,
-      "opponentName": "Alejandro Davidovich Fokina",
-      "won": false,
-      "result": "3-6 3-6"
     }
   ],
   "Hard": [
@@ -154,7 +154,7 @@
       "opponentId": 102339,
       "opponentName": "Botic Van de Zandschulp",
       "won": true,
-      "result": "3-6 2-6"
+      "result": "6-3 6-2"
     },
     {
       "id": "15553837",
@@ -166,17 +166,6 @@
       "opponentName": "Quentin Halys",
       "won": false,
       "result": "6-4 5-7 3-6"
-    },
-    {
-      "id": "15549218",
-      "date": "2026-02-17",
-      "tournamentId": 15549218,
-      "homeId": 40800,
-      "tournamentName": "Doha",
-      "opponentId": 163480,
-      "opponentName": "Alexander Bublik",
-      "won": false,
-      "result": ""
     },
     {
       "id": "15543105",
@@ -221,6 +210,17 @@
       "opponentName": "Tallon Griekspoor",
       "won": false,
       "result": "4-6 4-6"
+    },
+    {
+      "id": "15459231",
+      "date": "2026-02-03",
+      "tournamentId": 15459231,
+      "homeId": 198592,
+      "tournamentName": "Montpellier",
+      "opponentId": 198592,
+      "opponentName": "Miomir Kecmanović",
+      "won": true,
+      "result": "4-6 6-3 7-6"
     }
   ],
   "Grass": [
@@ -233,7 +233,7 @@
       "opponentId": 458834,
       "opponentName": "Rafael Jodar",
       "won": false,
-      "result": "3-6 6-3 1-6 6-3 6-4"
+      "result": "6-3 3-6 6-1 3-6 4-6"
     },
     {
       "id": "16397304",
@@ -245,28 +245,6 @@
       "opponentName": "Denis Shapovalov",
       "won": true,
       "result": "6-3 7-6"
-    },
-    {
-      "id": "14061795",
-      "date": "2025-06-30",
-      "tournamentId": 14061795,
-      "homeId": 40800,
-      "tournamentName": "Wimbledon, Men",
-      "opponentId": 225273,
-      "opponentName": "Chris Rodesch",
-      "won": false,
-      "result": ""
-    },
-    {
-      "id": "12477684",
-      "date": "2024-07-01",
-      "tournamentId": 12477684,
-      "homeId": 40800,
-      "tournamentName": "Wimbledon, Men",
-      "opponentId": 122368,
-      "opponentName": "Tallon Griekspoor",
-      "won": false,
-      "result": ""
     },
     {
       "id": "12452381",
@@ -333,8 +311,30 @@
       "opponentName": "Holger Rune",
       "won": true,
       "result": "6-3 7-6"
+    },
+    {
+      "id": "9595797",
+      "date": "2021-06-30",
+      "tournamentId": 9595797,
+      "homeId": 15301,
+      "tournamentName": "Wimbledon, Men",
+      "opponentId": 15301,
+      "opponentName": "Sam Querrey",
+      "won": false,
+      "result": "6-7 4-6 5-7"
+    },
+    {
+      "id": "9593420",
+      "date": "2021-06-25",
+      "tournamentId": 9593420,
+      "homeId": 163504,
+      "tournamentName": "Mallorca",
+      "opponentId": 163504,
+      "opponentName": "Daniil Medvedev",
+      "won": false,
+      "result": "6-3 3-6 2-6"
     }
   ],
-  "updatedAt": 1784228694693,
+  "updatedAt": 1784233382202,
   "playerName": "Pablo Carreño Busta"
 }

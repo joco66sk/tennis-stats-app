@@ -8,8 +8,8 @@
       "tournamentName": "Umag",
       "opponentId": 299538,
       "opponentName": "Matteo Arnaldi",
-      "won": false,
-      "result": "7-6 6-7 3-2"
+      "won": true,
+      "result": "7-6 6-7 7-6"
     },
     {
       "id": "16465689",
@@ -42,7 +42,29 @@
       "opponentId": 157456,
       "opponentName": "Alejandro Davidovich Fokina",
       "won": false,
-      "result": "6-7 6-3 2-6 7-5 6-3"
+      "result": "7-6 3-6 6-2 5-7 3-6"
+    },
+    {
+      "id": "16134976",
+      "date": "2026-05-14",
+      "tournamentId": 16134976,
+      "homeId": 49172,
+      "tournamentName": "Valencia, Spain",
+      "opponentId": 126356,
+      "opponentName": "Jaume Munar",
+      "won": false,
+      "result": "2-6 6-7"
+    },
+    {
+      "id": "16169808",
+      "date": "2026-05-13",
+      "tournamentId": 16169808,
+      "homeId": 49172,
+      "tournamentName": "Valencia, Spain",
+      "opponentId": 451920,
+      "opponentName": "Alejo Sanchez Quilez",
+      "won": true,
+      "result": "6-1 6-7 6-4"
     },
     {
       "id": "16098949",
@@ -64,7 +86,18 @@
       "opponentId": 15894,
       "opponentName": "Adrian Mannarino",
       "won": true,
-      "result": "4-6 0-6"
+      "result": "6-4 6-0"
+    },
+    {
+      "id": "16075769",
+      "date": "2026-04-29",
+      "tournamentId": 16075769,
+      "homeId": 232057,
+      "tournamentName": "Cagliari, Italy",
+      "opponentId": 232057,
+      "opponentName": "Emilio Nava",
+      "won": false,
+      "result": "4-6 0-3"
     },
     {
       "id": "16012156",
@@ -76,39 +109,6 @@
       "opponentName": "Tallon Griekspoor",
       "won": false,
       "result": "3-6 4-6"
-    },
-    {
-      "id": "16040150",
-      "date": "2026-04-22",
-      "tournamentId": 16040150,
-      "homeId": 49172,
-      "tournamentName": "ATP Madrid Masters",
-      "opponentId": 294337,
-      "opponentName": "Mattia Bellucci",
-      "won": true,
-      "result": "6-2 6-4"
-    },
-    {
-      "id": "15989243",
-      "date": "2026-04-11",
-      "tournamentId": 15989243,
-      "homeId": 49172,
-      "tournamentName": "Munich",
-      "opponentId": 100069,
-      "opponentName": "Vitaliy Sachko",
-      "won": false,
-      "result": "5-7 4-6"
-    },
-    {
-      "id": "15969039",
-      "date": "2026-04-07",
-      "tournamentId": 15969039,
-      "homeId": 49172,
-      "tournamentName": "Monte Carlo",
-      "opponentId": 218259,
-      "opponentName": "Fábián Marozsán",
-      "won": false,
-      "result": "2-6 1-6"
     }
   ],
   "Hard": [
@@ -121,7 +121,7 @@
       "opponentId": 206570,
       "opponentName": "Jannik Sinner",
       "won": false,
-      "result": "6-3 6-3"
+      "result": "3-6 3-6"
     },
     {
       "id": "15791043",
@@ -143,7 +143,7 @@
       "opponentId": 275948,
       "opponentName": "Jacob Fearnley",
       "won": false,
-      "result": "6-3 6-3"
+      "result": "3-6 3-6"
     },
     {
       "id": "15595986",
@@ -187,18 +187,7 @@
       "opponentId": 264344,
       "opponentName": "Aleksandr Shevchenko",
       "won": false,
-      "result": "4-6 6-4 7-5"
-    },
-    {
-      "id": "15340342",
-      "date": "2026-01-12",
-      "tournamentId": 15340342,
-      "homeId": 49172,
-      "tournamentName": "Adelaide",
-      "opponentId": 235576,
-      "opponentName": "Brandon Nakashima",
-      "won": true,
-      "result": ""
+      "result": "6-4 4-6 5-7"
     },
     {
       "id": "15309881",
@@ -209,7 +198,7 @@
       "opponentId": 125006,
       "opponentName": "Nuno Borges",
       "won": false,
-      "result": "6-4 6-3"
+      "result": "4-6 3-6"
     },
     {
       "id": "14956426",
@@ -221,6 +210,17 @@
       "opponentName": "Sebastian Korda",
       "won": false,
       "result": "6-4 3-6 3-6"
+    },
+    {
+      "id": "14982498",
+      "date": "2025-11-03",
+      "tournamentId": 14982498,
+      "homeId": 49172,
+      "tournamentName": "ATP Athens, Greece Men Singles",
+      "opponentId": 275948,
+      "opponentName": "Jacob Fearnley",
+      "won": true,
+      "result": "6-4 6-2"
     }
   ],
   "Grass": [
@@ -233,7 +233,7 @@
       "opponentId": 321789,
       "opponentName": "Arthur Fery",
       "won": false,
-      "result": "3-6 6-2 6-2 6-1"
+      "result": "6-3 2-6 2-6 1-6"
     },
     {
       "id": "16373775",
@@ -255,7 +255,7 @@
       "opponentId": 298247,
       "opponentName": "Zachary Svajda",
       "won": true,
-      "result": "3-6 3-6"
+      "result": "6-3 6-3"
     },
     {
       "id": "16365700",
@@ -277,9 +277,20 @@
       "opponentId": 63606,
       "opponentName": "Arthur Rinderknech",
       "won": false,
-      "result": "6-4 4-6 7-5"
+      "result": "4-6 6-4 5-7"
+    },
+    {
+      "id": "13985785",
+      "date": "2025-06-10",
+      "tournamentId": 13985785,
+      "homeId": 49172,
+      "tournamentName": "Stuttgart",
+      "opponentId": 44553,
+      "opponentName": "Pierre-Hugues Herbert",
+      "won": false,
+      "result": "4-6 0-3"
     }
   ],
-  "updatedAt": 1784228882960,
+  "updatedAt": 1784233908568,
   "playerName": "Damir Džumhur"
 }

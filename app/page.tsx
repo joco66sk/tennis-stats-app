@@ -198,7 +198,7 @@ export default function Home() {
     return new Date(dateStr).toLocaleTimeString('en-GB', {
       hour: '2-digit',
       minute: '2-digit',
-      timeZone: 'Etc/GMT+1',
+      timeZone: 'Europe/Stockholm',
     });
   };
 

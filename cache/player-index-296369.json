@@ -1,17 +1,6 @@
 {
   "Clay": [
     {
-      "id": "16523877",
-      "date": "2026-07-16",
-      "tournamentId": 16523877,
-      "homeId": 264344,
-      "tournamentName": "Gstaad",
-      "opponentId": 264344,
-      "opponentName": "Aleksandr Shevchenko",
-      "won": true,
-      "result": "3-4"
-    },
-    {
       "id": "16495256",
       "date": "2026-07-13",
       "tournamentId": 16495256,
@@ -20,7 +9,18 @@
       "opponentId": 126356,
       "opponentName": "Jaume Munar",
       "won": true,
-      "result": "2-6 4-6"
+      "result": "6-2 6-4"
+    },
+    {
+      "id": "14581492",
+      "date": "2025-09-02",
+      "tournamentId": 14581492,
+      "homeId": 296369,
+      "tournamentName": "Tulln, Austria",
+      "opponentId": 348701,
+      "opponentName": "Marko Topo",
+      "won": false,
+      "result": "4-6 4-6"
     },
     {
       "id": "14147216",
@@ -64,7 +64,7 @@
       "opponentId": 102339,
       "opponentName": "Botic Van de Zandschulp",
       "won": false,
-      "result": "6-3 6-3"
+      "result": "3-6 3-6"
     },
     {
       "id": "11424521",
@@ -113,6 +113,28 @@
   ],
   "Hard": [
     {
+      "id": "14786091",
+      "date": "2025-09-29",
+      "tournamentId": 14786091,
+      "homeId": 296369,
+      "tournamentName": "Mouilleron-Le-Captif, France",
+      "opponentId": 167370,
+      "opponentName": "Emil Ruusuvuori",
+      "won": false,
+      "result": "6-2 3-6 4-6"
+    },
+    {
+      "id": "14731578",
+      "date": "2025-09-22",
+      "tournamentId": 14731578,
+      "homeId": 417196,
+      "tournamentName": "Orleans, France",
+      "opponentId": 417196,
+      "opponentName": "Martin Landaluce",
+      "won": false,
+      "result": "2-6 2-6"
+    },
+    {
       "id": "14466728",
       "date": "2025-08-18",
       "tournamentId": 14466728,
@@ -132,7 +154,7 @@
       "opponentId": 39711,
       "opponentName": "James Duckworth",
       "won": false,
-      "result": "6-2 6-4 6-2"
+      "result": "2-6 4-6 2-6"
     },
     {
       "id": "13295907",
@@ -176,7 +198,7 @@
       "opponentId": 23581,
       "opponentName": "Grigor Dimitrov",
       "won": false,
-      "result": "6-3 6-2"
+      "result": "3-6 2-6"
     },
     {
       "id": "12962223",
@@ -187,7 +209,7 @@
       "opponentId": 112783,
       "opponentName": "Matteo Berrettini",
       "won": true,
-      "result": "6-7 4-6"
+      "result": "7-6 6-4"
     },
     {
       "id": "12973231",
@@ -199,28 +221,6 @@
       "opponentName": "Aleksandar Kovačević",
       "won": true,
       "result": "6-4 5-7 6-4"
-    },
-    {
-      "id": "12730009",
-      "date": "2024-08-26",
-      "tournamentId": 12730009,
-      "homeId": 296369,
-      "tournamentName": "US Open, Men",
-      "opponentId": 255420,
-      "opponentName": "Francisco Comesaña",
-      "won": false,
-      "result": "6-4 3-6 6-7 3-6"
-    },
-    {
-      "id": "12679896",
-      "date": "2024-08-20",
-      "tournamentId": 12679896,
-      "homeId": 104847,
-      "tournamentName": "Winston Salem",
-      "opponentId": 104847,
-      "opponentName": "Lorenzo Sonego",
-      "won": false,
-      "result": "4-6 1-6"
     }
   ],
   "Grass": [
@@ -233,7 +233,7 @@
       "opponentId": 298795,
       "opponentName": "Shintaro Mochizuki",
       "won": false,
-      "result": "7-6 3-6 6-2 6-4"
+      "result": "6-7 6-3 2-6 4-6"
     },
     {
       "id": "14043326",
@@ -266,7 +266,7 @@
       "opponentId": 338500,
       "opponentName": "Arthur Fils",
       "won": false,
-      "result": "6-3 6-2 3-6 6-4"
+      "result": "3-6 2-6 6-3 4-6"
     },
     {
       "id": "11390617",
@@ -324,6 +324,6 @@
       "result": "7-5 6-4"
     }
   ],
-  "updatedAt": 1784228880939,
+  "updatedAt": 1784233735537,
   "playerName": "Dominic Stricker"
 }

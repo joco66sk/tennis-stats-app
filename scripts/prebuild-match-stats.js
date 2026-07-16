@@ -2,14 +2,12 @@
 /**
  * Pre-builds match-stats cache for players in fixture files.
  * Fetches serve/return stats for each player's last N clay/hard/grass matches.
- * Run before deploying to Vercel so stats don't need live API calls.
  *
  * Usage:
- *   node scripts/prebuild-match-stats.js             (today's fixture, all surfaces)
+ *   node scripts/prebuild-match-stats.js             (today)
  *   node scripts/prebuild-match-stats.js 2026-05-09  (specific date)
- *   node scripts/prebuild-match-stats.js all         (all fixture dates — expensive)
- *   node scripts/prebuild-match-stats.js today --clay-only   (clay season, saves ~66% API calls)
- *   node scripts/prebuild-match-stats.js today --surface Hard
+ *   node scripts/prebuild-match-stats.js upcoming    (next 5 days)
+ *   node scripts/prebuild-match-stats.js all         (all dates)
  */
 
 const fs = require('fs');
@@ -18,7 +16,7 @@ const path = require('path');
 const envPath = path.join(__dirname, '..', '.env.local');
 const env = fs.readFileSync(envPath, 'utf-8');
 const KEY = env.match(/RAPIDAPI_KEY=(.+)/)?.[1]?.trim();
-const HOST = env.match(/RAPIDAPI_HOST=(.+)/)?.[1]?.trim() || 'tennis-api-atp-wta-itf.p.rapidapi.com';
+const HOST = env.match(/RAPIDAPI_HOST=(.+)/)?.[1]?.trim() || 'tennisapi1.p.rapidapi.com';
 
 if (!KEY) { console.error('RAPIDAPI_KEY not found in .env.local'); process.exit(1); }
 
@@ -26,28 +24,18 @@ const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const MATCH_STATS_DIR = path.join(__dirname, '..', 'app', 'api', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 
-const COURT_ID_MAP = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
 const ALL_SURFACES = ['Clay', 'Hard', 'Grass'];
 const LAST_N = 10;
 const MIN_DATE = '2024-01-01';
-const DELAY = 400; // ms between API calls
+const DELAY = 400;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 function getTodayStr() {
-  const d = new Date(Date.now() + 2 * 60 * 60 * 1000);
-  return d.toISOString().split('T')[0];
+  return new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString().split('T')[0];
 }
 
-function getSurface(m) {
-  return COURT_ID_MAP[m.tournament?.courtId] || m.tournament?.court?.name || null;
-}
-
-function isQualifying(f) {
-  return /^Q\d/i.test(f.round?.name ?? '');
-}
-
-function getPlayerIdsFromFixtures(dates, atpOnly = true, skipQualifying = false) {
+function getPlayerIdsFromFixtures(dates) {
   const ids = new Set();
   for (const date of dates) {
     const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
@@ -55,9 +43,7 @@ function getPlayerIdsFromFixtures(dates, atpOnly = true, skipQualifying = false)
     try {
       const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
       for (const f of (data.fixtures || [])) {
-        if (atpOnly && (f.tournament?.rank?.id ?? 0) < 1) continue;
         if ((f.player1?.name ?? '').includes('/') || (f.player2?.name ?? '').includes('/')) continue;
-        if (skipQualifying && isQualifying(f) && (f.tournament?.rank?.id ?? 0) < 2) continue; // keep ATP250+ qualifying
         if (f.player1?.id) ids.add(String(f.player1.id));
         if (f.player2?.id) ids.add(String(f.player2.id));
       }
@@ -66,36 +52,62 @@ function getPlayerIdsFromFixtures(dates, atpOnly = true, skipQualifying = false)
   return [...ids];
 }
 
-async function fetchStats(tournamentId, p1, p2) {
-  for (const [a, b] of [[p1, p2], [p2, p1]]) {
-    const file = path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`);
-    if (fs.existsSync(file)) return 'cached';
-  }
-  for (const [a, b] of [[p1, p2], [p2, p1]]) {
-    for (let attempt = 1; attempt <= 3; attempt++) {
-      try {
-        const res = await fetch(
-          `https://${HOST}/tennis/v2/atp/h2h/match-stats/${tournamentId}/${a}/${b}`,
-          { headers: HEADERS }
-        );
-        if (res.status === 429) {
-          const wait = attempt * 15000;
-          console.log(`    rate limited (429) — waiting ${wait / 1000}s before retry ${attempt}/3`);
-          await sleep(wait);
-          continue;
-        }
-        if (!res.ok) break;
-        const raw = await res.json();
-        if (raw?.data?.player1Stats) {
-          fs.writeFileSync(
-            path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`),
-            JSON.stringify(raw.data, null, 2)
-          );
-          return 'fetched';
-        }
-        break;
-      } catch { break; }
-    }
+// Parse Sofascore statistics response into our normalized format
+function parseMatchStats(raw, homeId, awayId, eventId) {
+  const allPeriod = raw.statistics?.find(s => s.period === 'ALL');
+  if (!allPeriod) return null;
+
+  const allItems = allPeriod.groups.flatMap(g => g.statisticsItems);
+  const getStat = (key) => allItems.find(i => i.key === key);
+
+  const fsa  = getStat('firstServeAccuracy');
+  const fspa = getStat('firstServePointsAccuracy');
+  const sspa = getStat('secondServePointsAccuracy');
+  const acesS = getStat('aces');
+  const dfS  = getStat('doubleFaults');
+  const bpsS = getStat('breakPointsSaved');
+
+  if (!fsa) return null;
+
+  const extract = (side) => ({
+    firstServeOf: fsa?.[`${side}Total`] ?? 0,
+    firstServe: fsa?.[`${side}Value`] ?? 0,
+    winningOnFirstServe: fspa?.[`${side}Value`] ?? 0,
+    winningOnSecondServe: sspa?.[`${side}Value`] ?? 0,
+    aces: acesS?.[`${side}Value`] ?? 0,
+    doubleFaults: dfS?.[`${side}Value`] ?? 0,
+    breakPointsFaced: bpsS?.[`${side}Total`] ?? 0,
+    breakPointsSaved: bpsS?.[`${side}Value`] ?? 0,
+  });
+
+  return { eventId, homeId, awayId, home: extract('home'), away: extract('away') };
+}
+
+async function fetchStats(eventId, homeId, awayId) {
+  const file = path.join(MATCH_STATS_DIR, `match-stats-${eventId}.json`);
+  if (fs.existsSync(file)) return 'cached';
+
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(
+        `https://${HOST}/api/tennis/event/${eventId}/statistics`,
+        { headers: HEADERS }
+      );
+      if (res.status === 429) {
+        const wait = attempt * 15000;
+        console.log(`    rate limited — waiting ${wait / 1000}s before retry ${attempt}/3`);
+        await sleep(wait);
+        continue;
+      }
+      if (!res.ok) break;
+      const raw = await res.json();
+      const parsed = parseMatchStats(raw, homeId, awayId, eventId);
+      if (parsed) {
+        fs.writeFileSync(file, JSON.stringify(parsed, null, 2));
+        return 'fetched';
+      }
+      break;
+    } catch { break; }
   }
   return 'none';
 }
@@ -103,21 +115,18 @@ async function fetchStats(tournamentId, p1, p2) {
 async function main() {
   if (!fs.existsSync(MATCH_STATS_DIR)) fs.mkdirSync(MATCH_STATS_DIR, { recursive: true });
 
-  const atpOnly = !process.argv.includes('--all-levels');
-  const skipQualifying = !process.argv.includes('--with-qualifying');
-  const clayOnly = process.argv.includes('--clay-only');
   const surfaceArg = process.argv.find(a => a.startsWith('--surface='))?.split('=')[1]
     || (process.argv.includes('--surface') ? process.argv[process.argv.indexOf('--surface') + 1] : null);
-  let surfaces = clayOnly ? ['Clay']
-    : surfaceArg ? [surfaceArg]
-    : ALL_SURFACES;
+  const clayOnly = process.argv.includes('--clay-only');
+  let surfaces = clayOnly ? ['Clay'] : surfaceArg ? [surfaceArg] : ALL_SURFACES;
 
   const args = process.argv.slice(2).filter(a =>
-    a !== '--all-levels' && a !== '--clay-only' && a !== '--with-qualifying' && !a.startsWith('--surface')
-    && process.argv.indexOf(a) !== process.argv.indexOf('--surface') + 1
+    a !== '--clay-only' && !a.startsWith('--surface') &&
+    process.argv.indexOf(a) !== process.argv.indexOf('--surface') + 1
   );
   const arg = args[0];
   let dates = [];
+
   if (!arg || arg === 'today') {
     dates = [getTodayStr()];
   } else if (arg === 'upcoming') {
@@ -126,17 +135,13 @@ async function main() {
       return dt.toISOString().split('T')[0];
     }).filter(d => fs.existsSync(path.join(CACHE_DIR, `fixtures-${d}.json`)));
     console.log(`Upcoming dates: ${dates.join(', ')}`);
-    // Auto-detect surfaces from upcoming fixtures so we only build what the compare page actually shows
     if (!surfaceArg && !clayOnly) {
       const detected = new Set();
       for (const date of dates) {
-        const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
-        if (!fs.existsSync(fp)) continue;
         try {
-          const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+          const data = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, `fixtures-${date}.json`), 'utf-8'));
           for (const f of (data.fixtures || [])) {
-            if ((f.tournament?.rank?.id ?? 0) < 2) continue; // ATP250+ only for surface detection
-            const s = COURT_ID_MAP[f.tournament?.courtId];
+            const s = f.tournament?.court?.name;
             if (s) detected.add(s);
           }
         } catch {}
@@ -152,11 +157,9 @@ async function main() {
     dates = [arg];
   }
 
-  if (atpOnly) console.log('Mode: ATP-only (use --all-levels to include Challenger/ITF)');
-  if (skipQualifying) console.log('Skipping qualifying rounds (use --with-qualifying to include)');
   if (surfaces.length < ALL_SURFACES.length) console.log(`Surface filter: ${surfaces.join(', ')} only`);
 
-  const playerIds = getPlayerIdsFromFixtures(dates, atpOnly, skipQualifying);
+  const playerIds = getPlayerIdsFromFixtures(dates);
   if (playerIds.length === 0) {
     console.log('No players found. Make sure fixture files exist in cache/');
     process.exit(0);
@@ -176,21 +179,25 @@ async function main() {
     let index;
     try { index = JSON.parse(fs.readFileSync(indexFile, 'utf-8')); } catch { continue; }
 
-    // Collect unique (tournamentId, opponentId) pairs across requested surfaces, 2025+ only
     const toFetch = new Map();
     for (const surface of surfaces) {
       const entries = (index[surface] || []).filter(e => e.date >= MIN_DATE).slice(0, LAST_N);
       for (const e of entries) {
-        const key = `${e.tournamentId}-${Math.min(pid, e.opponentId)}-${Math.max(pid, e.opponentId)}`;
-        if (!toFetch.has(key)) toFetch.set(key, { tournamentId: e.tournamentId, p1: pid, p2: e.opponentId });
+        if (!e.tournamentId) continue;
+        const key = String(e.tournamentId);
+        if (!toFetch.has(key)) {
+          const homeId = e.homeId ?? pid;
+          const awayId = homeId === pid ? e.opponentId : pid;
+          toFetch.set(key, { eventId: e.tournamentId, homeId, awayId });
+        }
       }
     }
 
     if (toFetch.size === 0) continue;
 
     let fetched = 0, cached = 0;
-    for (const { tournamentId, p1, p2 } of toFetch.values()) {
-      const result = await fetchStats(tournamentId, p1, p2);
+    for (const { eventId, homeId, awayId } of toFetch.values()) {
+      const result = await fetchStats(eventId, homeId, awayId);
       if (result === 'fetched') { fetched++; totalFetched++; await sleep(DELAY); }
       else if (result === 'cached') { cached++; totalCached++; }
       else { totalNone++; }

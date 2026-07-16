@@ -1,17 +1,6 @@
 {
   "Clay": [
     {
-      "id": "16465443",
-      "date": "2026-07-17",
-      "tournamentId": 16465443,
-      "homeId": 125006,
-      "tournamentName": "Bastad",
-      "opponentId": 125006,
-      "opponentName": "Nuno Borges",
-      "won": true,
-      "result": ""
-    },
-    {
       "id": "16465448",
       "date": "2026-07-15",
       "tournamentId": 16465448,
@@ -20,7 +9,7 @@
       "opponentId": 127208,
       "opponentName": "Daniel Altmaier",
       "won": true,
-      "result": "4-6 4-6"
+      "result": "6-4 6-4"
     },
     {
       "id": "16198502",
@@ -42,7 +31,7 @@
       "opponentId": 83397,
       "opponentName": "Sebastian Ofner",
       "won": true,
-      "result": "6-7 2-6 3-6"
+      "result": "7-6 6-2 6-3"
     },
     {
       "id": "16175528",
@@ -53,7 +42,7 @@
       "opponentId": 201239,
       "opponentName": "Alex de Minaur",
       "won": false,
-      "result": "6-0 6-3"
+      "result": "0-6 3-6"
     },
     {
       "id": "16175524",
@@ -64,7 +53,7 @@
       "opponentId": 47975,
       "opponentName": "Yannick Hanfmann",
       "won": true,
-      "result": "6-7 5-7"
+      "result": "7-6 7-5"
     },
     {
       "id": "16190547",
@@ -75,7 +64,7 @@
       "opponentId": 287181,
       "opponentName": "Roman Andres Burruchaga",
       "won": true,
-      "result": "3-6 6-7"
+      "result": "6-3 7-6"
     },
     {
       "id": "16098978",
@@ -86,7 +75,7 @@
       "opponentId": 119248,
       "opponentName": "Casper Ruud",
       "won": false,
-      "result": "6-1 6-1"
+      "result": "1-6 1-6"
     },
     {
       "id": "16098975",
@@ -97,7 +86,7 @@
       "opponentId": 458834,
       "opponentName": "Rafael Jodar",
       "won": true,
-      "result": "6-7 7-5 0-6"
+      "result": "7-6 5-7 6-0"
     },
     {
       "id": "16098977",
@@ -108,7 +97,18 @@
       "opponentId": 57163,
       "opponentName": "Alexander Zverev",
       "won": true,
-      "result": "6-1 6-7 0-6"
+      "result": "1-6 7-6 6-0"
+    },
+    {
+      "id": "16098964",
+      "date": "2026-05-10",
+      "tournamentId": 16098964,
+      "homeId": 138546,
+      "tournamentName": "ATP Rome Masters",
+      "opponentId": 138546,
+      "opponentName": "Tommy Paul",
+      "won": true,
+      "result": "3-6 6-3 6-2"
     }
   ],
   "Hard": [
@@ -143,7 +143,7 @@
       "opponentId": 206570,
       "opponentName": "Jannik Sinner",
       "won": false,
-      "result": "6-1 6-3 7-6"
+      "result": "1-6 3-6 6-7"
     },
     {
       "id": "15345283",
@@ -154,7 +154,7 @@
       "opponentId": 90080,
       "opponentName": "Karen Khachanov",
       "won": true,
-      "result": "6-7 6-3 3-6 4-6"
+      "result": "7-6 3-6 6-3 6-4"
     },
     {
       "id": "15345269",
@@ -165,7 +165,7 @@
       "opponentId": 221806,
       "opponentName": "Sebastián Báez",
       "won": true,
-      "result": "3-6 6-1 4-6 3-6"
+      "result": "6-3 1-6 6-4 6-3"
     },
     {
       "id": "15372381",
@@ -187,7 +187,7 @@
       "opponentId": 42379,
       "opponentName": "Marcos Giron",
       "won": false,
-      "result": "1-6 7-5 6-4"
+      "result": "6-1 5-7 4-6"
     },
     {
       "id": "15327188",
@@ -209,7 +209,7 @@
       "opponentId": 198592,
       "opponentName": "Miomir Kecmanović",
       "won": false,
-      "result": "4-6 6-2 6-3"
+      "result": "6-4 2-6 3-6"
     },
     {
       "id": "14909961",
@@ -220,7 +220,7 @@
       "opponentId": 235576,
       "opponentName": "Brandon Nakashima",
       "won": false,
-      "result": "6-2 7-5"
+      "result": "2-6 5-7"
     }
   ],
   "Grass": [
@@ -233,7 +233,7 @@
       "opponentId": 334293,
       "opponentName": "Ethan Quinn",
       "won": false,
-      "result": "7-6 7-5 6-2"
+      "result": "6-7 5-7 2-6"
     },
     {
       "id": "16345041",
@@ -244,7 +244,7 @@
       "opponentId": 125006,
       "opponentName": "Nuno Borges",
       "won": false,
-      "result": "7-6 6-4"
+      "result": "6-7 4-6"
     },
     {
       "id": "16345029",
@@ -255,7 +255,7 @@
       "opponentId": 47975,
       "opponentName": "Yannick Hanfmann",
       "won": true,
-      "result": "5-7 3-6"
+      "result": "7-5 6-3"
     },
     {
       "id": "14061805",
@@ -266,18 +266,7 @@
       "opponentId": 124930,
       "opponentName": "Roman Safiullin",
       "won": true,
-      "result": "6-7 6-1 7-6 3-6 1-6"
-    },
-    {
-      "id": "14010199",
-      "date": "2025-06-16",
-      "tournamentId": 14010199,
-      "homeId": 122366,
-      "tournamentName": "Halle",
-      "opponentId": 122366,
-      "opponentName": "Stefanos Tsitsipas",
-      "won": false,
-      "result": "6-4 3-6 7-6"
+      "result": "7-6 1-6 6-7 6-3 6-1"
     },
     {
       "id": "12477715",
@@ -288,9 +277,9 @@
       "opponentId": 105607,
       "opponentName": "Jan Choinski",
       "won": true,
-      "result": "5-7 6-4 6-2 5-7 2-6"
+      "result": "7-5 4-6 2-6 7-5 6-2"
     }
   ],
-  "updatedAt": 1784229505625,
+  "updatedAt": 1784233908574,
   "playerName": "Luciano Darderi"
 }

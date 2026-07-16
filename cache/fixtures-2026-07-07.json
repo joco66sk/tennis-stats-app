@@ -2,90 +2,6 @@
   "date": "2026-07-07",
   "fixtures": [
     {
-      "id": 16385338,
-      "date": "2026-07-06T12:00:00.000Z",
-      "player1": {
-        "id": 201239,
-        "name": "Alex de Minaur",
-        "countryAcr": "AU"
-      },
-      "player2": {
-        "id": 273680,
-        "name": "Flavio Cobolli",
-        "countryAcr": "IT"
-      },
-      "tournament": {
-        "id": 2361,
-        "name": "Wimbledon, Men",
-        "court": {
-          "name": "Grass"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
-      "id": 16385324,
-      "date": "2026-07-06T15:20:00.000Z",
-      "player1": {
-        "id": 23581,
-        "name": "Grigor Dimitrov",
-        "countryAcr": "BG"
-      },
-      "player2": {
-        "id": 321789,
-        "name": "Arthur Fery",
-        "countryAcr": "GB"
-      },
-      "tournament": {
-        "id": 2361,
-        "name": "Wimbledon, Men",
-        "court": {
-          "name": "Grass"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
-      "id": 16385342,
-      "date": "2026-07-06T17:10:00.000Z",
-      "player1": {
-        "id": 136042,
-        "name": "Taylor Fritz",
-        "countryAcr": "US"
-      },
-      "player2": {
-        "id": 163480,
-        "name": "Alexander Bublik",
-        "countryAcr": "KZ"
-      },
-      "tournament": {
-        "id": 2361,
-        "name": "Wimbledon, Men",
-        "court": {
-          "name": "Grass"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
       "id": 16385340,
       "date": "2026-07-07T12:00:00.000Z",
       "player1": {
@@ -168,64 +84,8 @@
       "round": {
         "name": "Quarterfinals"
       }
-    },
-    {
-      "id": 16465687,
-      "date": "2026-07-15T18:20:00.000Z",
-      "player1": {
-        "id": 335102,
-        "name": "Luca Van Assche",
-        "countryAcr": "FR"
-      },
-      "player2": {
-        "id": 243925,
-        "name": "Titouan Droguet",
-        "countryAcr": "FR"
-      },
-      "tournament": {
-        "id": 2426,
-        "name": "Umag",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
-      "id": 16465683,
-      "date": "2026-07-15T19:00:00.000Z",
-      "player1": {
-        "id": 349089,
-        "name": "Dino Prižmić",
-        "countryAcr": "HR"
-      },
-      "player2": {
-        "id": 145130,
-        "name": "Alex Molčan",
-        "countryAcr": "SK"
-      },
-      "tournament": {
-        "id": 2426,
-        "name": "Umag",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
     }
   ],
-  "count": 8,
-  "fetchedAt": 1784228451568
+  "count": 3,
+  "fetchedAt": 1784230914062
 }

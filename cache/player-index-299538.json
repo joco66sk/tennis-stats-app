@@ -8,8 +8,8 @@
       "tournamentName": "Umag",
       "opponentId": 49172,
       "opponentName": "Damir Džumhur",
-      "won": true,
-      "result": "7-6 6-7 3-2"
+      "won": false,
+      "result": "6-7 7-6 6-7"
     },
     {
       "id": "16465681",
@@ -42,7 +42,7 @@
       "opponentId": 112783,
       "opponentName": "Matteo Berrettini",
       "won": true,
-      "result": "5-7 2-5"
+      "result": "7-5 5-2"
     },
     {
       "id": "16198517",
@@ -53,7 +53,7 @@
       "opponentId": 101101,
       "opponentName": "Frances Tiafoe",
       "won": true,
-      "result": "6-7 7-6 6-3 6-7 4-6"
+      "result": "7-6 6-7 3-6 7-6 6-4"
     },
     {
       "id": "16198525",
@@ -75,7 +75,7 @@
       "opponentId": 122366,
       "opponentName": "Stefanos Tsitsipas",
       "won": true,
-      "result": "6-7 7-5 3-6 2-6"
+      "result": "7-6 5-7 6-3 6-2"
     },
     {
       "id": "16214954",
@@ -97,7 +97,7 @@
       "opponentId": 458834,
       "opponentName": "Rafael Jodar",
       "won": false,
-      "result": "6-1 4-6 6-3"
+      "result": "1-6 6-4 3-6"
     },
     {
       "id": "16098956",
@@ -108,7 +108,7 @@
       "opponentId": 201239,
       "opponentName": "Alex de Minaur",
       "won": true,
-      "result": "6-4 6-7 4-6"
+      "result": "4-6 7-6 6-4"
     }
   ],
   "Hard": [
@@ -121,7 +121,7 @@
       "opponentId": 264344,
       "opponentName": "Aleksandr Shevchenko",
       "won": false,
-      "result": "7-6 6-7 6-2"
+      "result": "6-7 7-6 2-6"
     },
     {
       "id": "15655161",
@@ -144,17 +144,6 @@
       "opponentName": "Andrey Rublev",
       "won": false,
       "result": "4-6 2-6 3-6"
-    },
-    {
-      "id": "15313781",
-      "date": "2026-01-05",
-      "tournamentId": 15313781,
-      "homeId": 299538,
-      "tournamentName": "Brisbane",
-      "opponentId": 127208,
-      "opponentName": "Daniel Altmaier",
-      "won": false,
-      "result": ""
     },
     {
       "id": "15310491",
@@ -187,7 +176,7 @@
       "opponentId": 275948,
       "opponentName": "Jacob Fearnley",
       "won": false,
-      "result": "7-5 6-2"
+      "result": "5-7 2-6"
     },
     {
       "id": "14896617",
@@ -221,6 +210,17 @@
       "opponentName": "Tristan Schoolkate",
       "won": true,
       "result": "7-6 6-3"
+    },
+    {
+      "id": "14906269",
+      "date": "2025-10-18",
+      "tournamentId": 14906269,
+      "homeId": 244420,
+      "tournamentName": "Vienna",
+      "opponentId": 244420,
+      "opponentName": "Jesper De Jong",
+      "won": true,
+      "result": "6-4 7-6"
     }
   ],
   "Grass": [
@@ -233,7 +233,7 @@
       "opponentId": 90798,
       "opponentName": "Quentin Halys",
       "won": false,
-      "result": "3-6 6-1 7-6 6-3"
+      "result": "6-3 1-6 6-7 3-6"
     },
     {
       "id": "16373936",
@@ -277,29 +277,7 @@
       "opponentId": 102339,
       "opponentName": "Botic Van de Zandschulp",
       "won": false,
-      "result": "7-6 7-6 6-4"
-    },
-    {
-      "id": "14036681",
-      "date": "2025-06-23",
-      "tournamentId": 14036681,
-      "homeId": 299538,
-      "tournamentName": "Eastbourne",
-      "opponentId": 130400,
-      "opponentName": "Reilly Opelka",
-      "won": false,
-      "result": ""
-    },
-    {
-      "id": "14009853",
-      "date": "2025-06-16",
-      "tournamentId": 14009853,
-      "homeId": 283070,
-      "tournamentName": "London",
-      "opponentId": 283070,
-      "opponentName": "Holger Rune",
-      "won": false,
-      "result": ""
+      "result": "6-7 6-7 4-6"
     },
     {
       "id": "13982609",
@@ -310,9 +288,9 @@
       "opponentId": 46391,
       "opponentName": "Jan-Lennard Struff",
       "won": false,
-      "result": "6-4 6-4"
+      "result": "4-6 4-6"
     }
   ],
-  "updatedAt": 1784228885885,
+  "updatedAt": 1784233908574,
   "playerName": "Matteo Arnaldi"
 }
