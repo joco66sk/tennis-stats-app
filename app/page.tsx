@@ -143,11 +143,15 @@ export default function Home() {
     return () => { cancelled = true; };
   }, [fixtures]);
 
-  const matchUrl = (fixture: Fixture) => {
+const matchUrl = (fixture: Fixture) => {
     const p1 = fixture.player1?.id || '';
     const p2 = fixture.player2?.id || '';
     const surface = normalizeSurface(fixture.tournament?.court?.name) || 'All';
-    return `/compare?p1=${p1}&p2=${p2}&surface=${surface}`;
+    const p1Slug = (fixture.player1?.name || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    const p2Slug = (fixture.player2?.name || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    const tournament = (fixture.tournament?.name || '').toLowerCase().split(' ')[0].replace(/[^a-z0-9]/g, '');
+    const date = formatDate(selectedDate).replace(/-/g, '');
+    return `/compare/${p1Slug}-vs-${p2Slug}-${tournament}-${date}?p1=${p1}&p2=${p2}&surface=${surface}`;
   };
 
   const getCategoryLabel = (rankId?: number) => {
