@@ -9,7 +9,7 @@ export const STATIC_MATCH_STATS = path.join(process.cwd(), 'app', 'api', 'cache'
 export const CACHE_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_CACHE;
 export const MATCH_STATS_DIR = IS_VERCEL ? '/tmp/cache' : STATIC_MATCH_STATS;
 
-export const HOST = process.env.RAPIDAPI_HOST || 'tennis-api-atp-wta-itf.p.rapidapi.com';
+export const HOST = process.env.RAPIDAPI_HOST || 'tennisapi1.p.rapidapi.com';
 export const RAPIDAPI_HEADERS = {
   'x-rapidapi-host': HOST,
   'x-rapidapi-key': process.env.RAPIDAPI_KEY ?? '',
@@ -17,7 +17,14 @@ export const RAPIDAPI_HEADERS = {
 
 // ── Surface mapping ────────────────────────────────────────────────────────────
 
-export const COURT_ID_MAP: Record<number, string> = { 1: 'Hard', 2: 'Clay', 3: 'Hard', 5: 'Grass' };
+export function groundTypeToSurface(groundType?: string): string | null {
+  if (!groundType) return null;
+  const g = groundType.toLowerCase();
+  if (g.includes('clay')) return 'Clay';
+  if (g.includes('grass')) return 'Grass';
+  if (g.includes('hard')) return 'Hard';
+  return null;
+}
 
 export function normalizeSurface(s: string): string {
   if (s === 'I.hard' || s === 'Carpet') return 'Hard';
@@ -45,44 +52,21 @@ export interface MatchPlayer {
   countryAcr?: string;
 }
 
-export interface Tournament {
-  id?: number;
-  name: string;
-  courtId?: number;
-  court?: { name: string };
-  rank?: { id: number; name: string };
-}
-
-export interface Match {
-  id: number;
-  date: string;
-  result?: string;
-  tournamentId: number;
-  tournament?: Tournament;
-  player1Id: number;
-  player2Id: number;
-  player1?: MatchPlayer;
-  player2?: MatchPlayer;
-  match_winner?: number;
-}
-
 export interface PlayerStatBlock {
-  player1Id?: number;
-  player2Id?: number;
   aces: number;
   doubleFaults: number;
   firstServe: number;
   firstServeOf: number;
   winningOnFirstServe: number;
   winningOnSecondServe: number;
-  breakPointFacedGm: number;
-  breakPointSavedGm: number;
-  breakPointChanceGm: number;
-  breakPointWonGm: number;
+  breakPointsFaced: number;
+  breakPointsSaved: number;
 }
 
 export interface MatchStatsData {
-  player1Stats: PlayerStatBlock & { player1Id: number };
-  player2Stats: PlayerStatBlock & { player2Id: number };
+  eventId: number;
+  homeId: number;
+  awayId: number;
+  home: PlayerStatBlock;
+  away: PlayerStatBlock;
 }
-

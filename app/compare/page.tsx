@@ -10,6 +10,7 @@ interface MatchSummary {
   opponentName: string;
   tournamentId: number;
   opponentId: number;
+  homeId?: number;
 }
 
 interface PlayerStats {
@@ -48,6 +49,7 @@ interface SelectedMatch {
   tournamentId: number;
   playerId: number;
   opponentId: number;
+  homeId?: number;
   playerName: string;
   opponentName: string;
   result: string;
@@ -186,13 +188,15 @@ function CompareContent() {
     if (!selectedMatch) { setMatchDetail(null); return; }
     setMatchDetailLoading(true);
     setMatchDetail(null);
-    fetch(`/api/match-stats?tournamentId=${selectedMatch.tournamentId}&p1=${selectedMatch.playerId}&p2=${selectedMatch.opponentId}`)
+    const homeId = selectedMatch.homeId ?? 0;
+    const awayId = homeId === selectedMatch.playerId ? selectedMatch.opponentId : selectedMatch.playerId;
+    fetch(`/api/match-stats?tournamentId=${selectedMatch.tournamentId}&homeId=${homeId}&awayId=${awayId}`)
       .then(r => r.ok ? r.json() : null)
       .then(data => {
         if (!data) return;
-        const isP1 = data.player1Stats?.player1Id === selectedMatch.playerId;
-        const my = isP1 ? data.player1Stats : data.player2Stats;
-        const opp = isP1 ? data.player2Stats : data.player1Stats;
+        const isHome = data.homeId === selectedMatch.playerId;
+        const my = isHome ? data.home : data.away;
+        const opp = isHome ? data.away : data.home;
         if (!my || !opp) return;
         const myStats = computeMatchStats(my, opp);
         const oppStats = computeMatchStats(opp, my);
@@ -233,6 +237,7 @@ function CompareContent() {
         tournamentId: m.tournamentId,
         playerId: parseInt(playerId),
         opponentId: m.opponentId,
+        homeId: m.homeId,
         playerName,
         opponentName: m.opponentName,
         result: m.result,
@@ -267,15 +272,6 @@ function CompareContent() {
               </p>
             </div>
           </div>
-          <a
-            href="https://rapidapi.com/jjrm365-kIFr3Nx_odV/api/tennis-api-atp-wta-itf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-right"
-          >
-            <div className="text-xs text-zinc-500 uppercase tracking-wider">Powered by</div>
-            <div className="text-sm font-black text-white uppercase tracking-tight hover:text-blue-400 transition">Matchstat</div>
-          </a>
         </header>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 mb-3 flex items-center gap-3">

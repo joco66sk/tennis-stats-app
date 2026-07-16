@@ -2,22 +2,60 @@ import { NextResponse } from 'next/server';
 import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import { CACHE_DIR, STATIC_CACHE, HOST, RAPIDAPI_HEADERS, initCache } from '@/lib/shared';
+import { CACHE_DIR, STATIC_CACHE, HOST, RAPIDAPI_HEADERS, groundTypeToSurface, initCache } from '@/lib/shared';
 
-async function safeFetch(url: string): Promise<{ data?: unknown[] }> {
+function tennisPointsToRankId(points?: number): number {
+  if (!points) return 0;
+  if (points >= 2000) return 4;
+  if (points >= 1000) return 3;
+  if (points >= 250) return 2;
+  return 1;
+}
+
+// Transforms a Sofascore event into the fixture shape expected by page.tsx
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function transformEvent(event: any): any {
+  const surface = groundTypeToSurface(event.groundType)
+    ?? groundTypeToSurface(event.tournament?.uniqueTournament?.groundType);
+  const tp: number = event.tournament?.uniqueTournament?.tennisPoints ?? 0;
+  const rankId = tennisPointsToRankId(tp);
+  return {
+    id: event.id,
+    date: new Date((event.startTimestamp as number) * 1000).toISOString(),
+    player1: event.homeTeam ? {
+      id: event.homeTeam.id,
+      name: event.homeTeam.name,
+      countryAcr: event.homeTeam.country?.alpha2 || undefined,
+    } : undefined,
+    player2: event.awayTeam ? {
+      id: event.awayTeam.id,
+      name: event.awayTeam.name,
+      countryAcr: event.awayTeam.country?.alpha2 || undefined,
+    } : undefined,
+    tournament: {
+      id: event.tournament?.uniqueTournament?.id,
+      name: event.tournament?.uniqueTournament?.name || event.tournament?.name || '',
+      court: surface ? { name: surface } : undefined,
+      rank: { id: rankId, name: rankId >= 4 ? 'Grand Slam' : rankId >= 3 ? 'Masters 1000' : 'ATP250' },
+    },
+    round: event.roundInfo ? { name: event.roundInfo.name } : undefined,
+  };
+}
+
+async function safeFetch(url: string): Promise<{ events?: unknown[] }> {
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
       const res = await fetch(url, { headers: RAPIDAPI_HEADERS, next: { revalidate: 3600 } });
-      if (!res.ok) return { data: [] };
-      const json = await res.json() as { data?: unknown[] };
-      if ((json.data?.length ?? 0) > 0 || attempt === 1) return json;
+      if (!res.ok) return { events: [] };
+      const json = await res.json() as { events?: unknown[] };
+      if ((json.events?.length ?? 0) > 0 || attempt === 1) return json;
       await new Promise(r => setTimeout(r, 1000));
     } catch {
-      if (attempt === 1) return { data: [] };
+      if (attempt === 1) return { events: [] };
       await new Promise(r => setTimeout(r, 1000));
     }
   }
-  return { data: [] };
+  return { events: [] };
 }
 
 function getCacheTTL(date: string): number {
@@ -25,13 +63,11 @@ function getCacheTTL(date: string): number {
   const today = cetNow.toISOString().split('T')[0];
   const tomorrow = new Date(cetNow.getTime() + 24 * 60 * 60 * 1000).toISOString().split('T')[0];
   if (date < today) return 24 * 60 * 60 * 1000;
-  if (date === today) return 60 * 60 * 1000;    // today: 1h (schedule changes throughout day)
-  if (date === tomorrow) return 45 * 60 * 1000; // tomorrow: 45min
+  if (date === today) return 60 * 60 * 1000;
+  if (date === tomorrow) return 45 * 60 * 1000;
   return 30 * 60 * 1000;
 }
 
-// Uses fetchedAt embedded in JSON so mtime from git checkout / initCache copy doesn't matter.
-// Past dates served unconditionally (completed data never changes).
 function readFreshCache(date: string): string | null {
   const cetNow = new Date(Date.now() + 2 * 60 * 60 * 1000);
   const today = cetNow.toISOString().split('T')[0];
@@ -39,14 +75,13 @@ function readFreshCache(date: string): string | null {
   if (!fs.existsSync(fp)) return null;
   try {
     const raw = fs.readFileSync(fp, 'utf-8');
-    if (date < today) return raw; // past dates: static cache is authoritative
+    if (date < today) return raw;
     const data = JSON.parse(raw) as { fetchedAt?: number };
-    if (!data.fetchedAt) return null; // no timestamp → treat as stale
+    if (!data.fetchedAt) return null;
     return Date.now() - data.fetchedAt < getCacheTTL(date) ? raw : null;
   } catch { return null; }
 }
 
-// Stale fallback: any non-empty file from /tmp/cache or static cache
 function readStaleCache(date: string): string | null {
   for (const dir of [CACHE_DIR, STATIC_CACHE]) {
     const fp = path.join(dir, `fixtures-${date}.json`);
@@ -80,26 +115,25 @@ export async function GET(request: NextRequest) {
 
   console.log(`Fetching fresh fixtures for ${date}`);
 
-  const [atpPage1, atpPage2, atpPage3] = await Promise.all([
-    safeFetch(`https://${HOST}/tennis/v2/atp/fixtures/${date}?include=tournament,tournament.court,tournament.rank,round&filter=PlayerGroup:singles&pageSize=50&pageNo=1`),
-    safeFetch(`https://${HOST}/tennis/v2/atp/fixtures/${date}?include=tournament,tournament.court,tournament.rank,round&filter=PlayerGroup:singles&pageSize=50&pageNo=2`),
-    safeFetch(`https://${HOST}/tennis/v2/atp/fixtures/${date}?include=tournament,tournament.court,tournament.rank,round&filter=PlayerGroup:singles&pageSize=50&pageNo=3`),
-  ]);
-
-  const toArr = (d: { data?: unknown[] }) => d.data ?? [];
+  const [y, m, d] = date.split('-');
+  const url = `https://${HOST}/api/tennis/category/3/events/${parseInt(d)}/${parseInt(m)}/${y}`;
+  const fetched = await safeFetch(url);
+  const rawEvents = (fetched.events ?? []) as any[];
 
   const seen = new Set<number>();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const allFixtures: any[] = ([...toArr(atpPage1), ...toArr(atpPage2), ...toArr(atpPage3)] as any[])
-    .filter(f => { if (seen.has(f.id)) return false; seen.add(f.id); return true; });
+  const fixtures = rawEvents
+    .filter(e => {
+      if (seen.has(e.id)) return false;
+      seen.add(e.id);
+      if (!e.homeTeam || !e.awayTeam) return false;
+      if ((e.homeTeam.name || '').includes('/') || (e.awayTeam.name || '').includes('/')) return false;
+      const tp: number = e.tournament?.uniqueTournament?.tennisPoints ?? 0;
+      return tp >= 250;
+    })
+    .map(transformEvent)
+    .sort((a: any, b: any) => (b.tournament?.rank?.id ?? 0) - (a.tournament?.rank?.id ?? 0));
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const enriched: any[] = allFixtures
-    .filter(f => !String(f.player1?.name ?? '').includes('/') && !String(f.player2?.name ?? '').includes('/'))
-    .sort((a, b) => (b.tournament?.rank?.id ?? 0) - (a.tournament?.rank?.id ?? 0));
-
-  // Never overwrite a non-empty cache with zero results (API may be rate-limited)
-  if (enriched.length === 0) {
+  if (fixtures.length === 0) {
     const stale = readStaleCache(date);
     if (stale) {
       const existing = JSON.parse(stale) as { fixtures?: unknown[] };
@@ -108,23 +142,9 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  const result = { date, fixtures: enriched, count: enriched.length, fetchedAt: Date.now() };
+  const result = { date, fixtures, count: fixtures.length, fetchedAt: Date.now() };
   if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });
-  const cacheFile = path.join(CACHE_DIR, `fixtures-${date}.json`);
-  fs.writeFileSync(cacheFile, JSON.stringify(result, null, 2), 'utf-8');
-
-  // Persist tournament → surface map
-  try {
-    const year = cetNow.getFullYear();
-    const surfacesPath = path.join(CACHE_DIR, `surfaces-${year}.json`);
-    const surfacesMap: Record<number, string> = fs.existsSync(surfacesPath)
-      ? JSON.parse(fs.readFileSync(surfacesPath, 'utf-8')) as Record<number, string>
-      : {};
-    for (const f of enriched as Array<{ tournamentId: number; tournament?: { court?: { name: string } } }>) {
-      if (f.tournamentId && f.tournament?.court?.name) surfacesMap[f.tournamentId] = f.tournament.court.name;
-    }
-    fs.writeFileSync(surfacesPath, JSON.stringify(surfacesMap, null, 2), 'utf-8');
-  } catch {}
+  fs.writeFileSync(path.join(CACHE_DIR, `fixtures-${date}.json`), JSON.stringify(result, null, 2), 'utf-8');
 
   return NextResponse.json(result);
 }

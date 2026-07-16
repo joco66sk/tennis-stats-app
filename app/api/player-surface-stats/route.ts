@@ -2,10 +2,7 @@ import { NextResponse } from 'next/server';
 import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import {
-  CACHE_DIR, MATCH_STATS_DIR,
-  initCache, normalizeSurface,
-} from '@/lib/shared';
+import { CACHE_DIR, MATCH_STATS_DIR, initCache, normalizeSurface } from '@/lib/shared';
 
 const MIN_STATS_DATE = '2024-01-01';
 
@@ -13,6 +10,7 @@ interface IndexEntry {
   id: string;
   date: string;
   tournamentId: number;
+  homeId?: number;
   tournamentName: string;
   opponentId: number;
   opponentName: string;
@@ -37,12 +35,10 @@ function emptyResponse(playerId: string, surface: string) {
   };
 }
 
-function getMatchStats(tournamentId: number, pid: number, opponentId: number): any | null {
-  for (const [a, b] of [[pid, opponentId], [opponentId, pid]]) {
-    const file = path.join(MATCH_STATS_DIR, `match-stats-${tournamentId}-${a}-${b}.json`);
-    if (fs.existsSync(file)) {
-      try { return JSON.parse(fs.readFileSync(file, 'utf-8')); } catch {}
-    }
+function getMatchStats(eventId: number): any | null {
+  const file = path.join(MATCH_STATS_DIR, `match-stats-${eventId}.json`);
+  if (fs.existsSync(file)) {
+    try { return JSON.parse(fs.readFileSync(file, 'utf-8')); } catch {}
   }
   return null;
 }
@@ -85,8 +81,7 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  // Full path: load match stats for each entry (max 3 concurrent)
-  const allStats = entries.map(e => getMatchStats(e.tournamentId, pid, e.opponentId));
+  const allStats = entries.map(e => e.tournamentId ? getMatchStats(e.tournamentId) : null);
 
   let wins = 0, losses = 0, statsCount = 0;
   let total1stIn = 0, total1stWon = 0, total2ndWon = 0, totalSvpt = 0;
@@ -99,13 +94,17 @@ export async function GET(request: NextRequest) {
   for (let i = 0; i < entries.length; i++) {
     const e = entries[i];
     e.won ? wins++ : losses++;
-    matchList.push({ id: e.id, date: e.date, result: e.result, won: e.won, opponentName: e.opponentName, tournamentId: e.tournamentId, opponentId: e.opponentId });
+    matchList.push({
+      id: e.id, date: e.date, result: e.result, won: e.won,
+      opponentName: e.opponentName, tournamentId: e.tournamentId, opponentId: e.opponentId,
+      homeId: e.homeId,
+    });
 
     const stats = allStats[i];
     if (!stats) continue;
-    const isP1 = stats.player1Stats?.player1Id === pid;
-    const my = isP1 ? stats.player1Stats : stats.player2Stats;
-    const opp = isP1 ? stats.player2Stats : stats.player1Stats;
+    const isHome = stats.homeId === pid;
+    const my = isHome ? stats.home : stats.away;
+    const opp = isHome ? stats.away : stats.home;
     if (!my || !opp) continue;
 
     const svpt = my.firstServeOf || 0;
@@ -117,9 +116,8 @@ export async function GET(request: NextRequest) {
       total1stWon += my.winningOnFirstServe || 0;
       total2ndWon += my.winningOnSecondServe || 0;
       totalSvpt += svpt;
-      const oppBpChance = opp.breakPointChanceGm || 0;
-      const oppBpWon = opp.breakPointWonGm || 0;
-      if (oppBpChance > 0) { totalBpSaved += oppBpChance - oppBpWon; totalBpFaced += oppBpChance; }
+      const myBpFaced = my.breakPointsFaced || 0;
+      if (myBpFaced > 0) { totalBpSaved += my.breakPointsSaved || 0; totalBpFaced += myBpFaced; }
     }
     const oppSvpt = opp.firstServeOf || 0;
     if (oppSvpt > 0) {

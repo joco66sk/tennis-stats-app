@@ -143,15 +143,11 @@ export default function Home() {
     return () => { cancelled = true; };
   }, [fixtures]);
 
-const matchUrl = (fixture: Fixture) => {
+  const matchUrl = (fixture: Fixture) => {
     const p1 = fixture.player1?.id || '';
     const p2 = fixture.player2?.id || '';
     const surface = normalizeSurface(fixture.tournament?.court?.name) || 'All';
-    const p1Slug = (fixture.player1?.name || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-    const p2Slug = (fixture.player2?.name || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-    const tournament = (fixture.tournament?.name || '').toLowerCase().split(' ')[0].replace(/[^a-z0-9]/g, '');
-    const date = formatDate(selectedDate).replace(/-/g, '');
-    return `/compare/${p1Slug}-vs-${p2Slug}-${tournament}-${date}?p1=${p1}&p2=${p2}&surface=${surface}`;
+    return `/compare?p1=${p1}&p2=${p2}&surface=${surface}`;
   };
 
   const getCategoryLabel = (rankId?: number) => {
@@ -243,15 +239,6 @@ const matchUrl = (fixture: Fixture) => {
             <h1 className="text-2xl font-black text-white tracking-tight uppercase">Tennis Deep Stats</h1>
             <p className="text-zinc-500 text-xs mt-0.5 uppercase tracking-wider">ATP Matches · Click to compare</p>
           </div>
-          <a
-            href="https://rapidapi.com/jjrm365-kIFr3Nx_odV/api/tennis-api-atp-wta-itf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-right"
-          >
-            <div className="text-xs text-zinc-500 uppercase tracking-wider">Powered by</div>
-            <div className="text-sm font-black text-white uppercase tracking-tight hover:text-blue-400 transition">Matchstat</div>
-          </a>
         </header>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-2.5 mb-3 flex items-center justify-between">
