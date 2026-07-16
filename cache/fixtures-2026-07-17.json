@@ -1,6 +1,222 @@
 {
   "date": "2026-07-17",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1784152831266
+  "fixtures": [
+    {
+      "id": 1222,
+      "date": "2026-07-17T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 31446,
+      "player2Id": 76127,
+      "tournamentId": 21339,
+      "timeGame": null,
+      "seed1": "5",
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 31446,
+        "name": "Nuno Borges",
+        "countryAcr": "POR"
+      },
+      "player2": {
+        "id": 76127,
+        "name": "Luciano Darderi",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21339,
+        "name": "Nordea Open - Bastad",
+        "courtId": 2,
+        "date": "2026-07-13T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SWE",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1238,
+      "date": "2026-07-17T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 80391,
+      "player2Id": 12097,
+      "tournamentId": 21339,
+      "timeGame": null,
+      "seed1": null,
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 80391,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PAR"
+      },
+      "player2": {
+        "id": 12097,
+        "name": "Stefano Travaglia",
+        "countryAcr": "ITA"
+      },
+      "tournament": {
+        "id": 21339,
+        "name": "Nordea Open - Bastad",
+        "courtId": 2,
+        "date": "2026-07-13T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SWE",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1292,
+      "date": "2026-07-17T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 84235,
+      "player2Id": 36594,
+      "tournamentId": 21340,
+      "timeGame": null,
+      "seed1": "7",
+      "seed2": "3",
+      "live": null,
+      "player1": {
+        "id": 84235,
+        "name": "Raphael Collignon",
+        "countryAcr": "BEL"
+      },
+      "player2": {
+        "id": 36594,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MON"
+      },
+      "tournament": {
+        "id": 21340,
+        "name": "EFG Swiss Open - Gstaad",
+        "courtId": 2,
+        "date": "2026-07-13T00:00:00.000Z",
+        "rankId": 2,
+        "countryAcr": "SUI",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "Main tour"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1400,
+      "date": "2026-07-17T11:00:00.000Z",
+      "roundId": 9,
+      "player1Id": 86351,
+      "player2Id": 68393,
+      "tournamentId": 21842,
+      "timeGame": null,
+      "seed1": "5",
+      "seed2": null,
+      "live": null,
+      "player1": {
+        "id": 86351,
+        "name": "Tom Gentzsch",
+        "countryAcr": "GER"
+      },
+      "player2": {
+        "id": 68393,
+        "name": "Max Houkes",
+        "countryAcr": "NED"
+      },
+      "tournament": {
+        "id": 21842,
+        "name": "Bunschoten Challenger",
+        "courtId": 2,
+        "date": "2026-07-13T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "NED",
+        "court": {
+          "id": 2,
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 9,
+        "name": "1/4"
+      }
+    },
+    {
+      "id": 1530,
+      "date": "2026-07-17T02:30:00.000Z",
+      "roundId": 5,
+      "player1Id": 98811,
+      "player2Id": 87277,
+      "tournamentId": 21844,
+      "timeGame": null,
+      "seed1": "WC",
+      "seed2": "2",
+      "live": null,
+      "player1": {
+        "id": 98811,
+        "name": "Keegan Rice",
+        "countryAcr": "CAN"
+      },
+      "player2": {
+        "id": 87277,
+        "name": "Arthur Gea",
+        "countryAcr": "FRA"
+      },
+      "tournament": {
+        "id": 21844,
+        "name": "Granby Challenger",
+        "courtId": 1,
+        "date": "2026-07-13T00:00:00.000Z",
+        "rankId": 1,
+        "countryAcr": "CAN",
+        "court": {
+          "id": 1,
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 1,
+          "name": "Challengers/ITF tournaments > $10K"
+        },
+        "country": null
+      },
+      "round": {
+        "id": 5,
+        "name": "Second"
+      }
+    }
+  ],
+  "count": 5,
+  "fetchedAt": 1784164657985
 }
