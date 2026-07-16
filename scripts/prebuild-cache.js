@@ -48,7 +48,9 @@ function isATPSingles(event) {
   if (!event.homeTeam || !event.awayTeam) return false;
   if ((event.homeTeam.name || '').includes('/') || (event.awayTeam.name || '').includes('/')) return false;
   const tp = event.tournament?.uniqueTournament?.tennisPoints ?? 0;
-  return tp >= 50; // include ATP Challengers (tp ~100-175), exclude ITF (tp 0-25)
+  const catSlug = (event.tournament?.uniqueTournament?.category?.slug || event.tournament?.category?.slug || '').toLowerCase();
+  // ATP main tour (tp>=250) or Challenger category — excludes ITF which have catSlug='itf' or tp=0
+  return tp >= 250 || catSlug === 'challenger';
 }
 
 function reverseResult(result) {

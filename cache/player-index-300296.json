@@ -1,16 +1,61 @@
 {
-  "Clay": [],
+  "Clay": [
+    {
+      "id": "15903140",
+      "date": "2026-03-31",
+      "tournamentId": 15903140,
+      "homeId": 300296,
+      "tournamentName": "San Luis, Mexico",
+      "opponentId": 208222,
+      "opponentName": "Patrick Zahraj",
+      "won": false,
+      "result": "4-6 4-6"
+    },
+    {
+      "id": "13965561",
+      "date": "2025-06-03",
+      "tournamentId": 13965561,
+      "homeId": 300296,
+      "tournamentName": "Heilbronn, Germany",
+      "opponentId": 255449,
+      "opponentName": "Valentin Royer",
+      "won": false,
+      "result": "6-7 7-5 4-6"
+    }
+  ],
   "Hard": [
     {
-      "id": "15024004",
-      "date": "2025-11-12",
-      "tournamentId": 15024004,
-      "homeId": 342835,
-      "tournamentName": "Drummondville, Canada",
-      "opponentId": 342835,
-      "opponentName": "Maks Kasnikowski",
+      "id": "15460024",
+      "date": "2026-02-04",
+      "tournamentId": 15460024,
+      "homeId": 300296,
+      "tournamentName": "Koblenz, Germany",
+      "opponentId": 484006,
+      "opponentName": "Niels McDonald",
+      "won": true,
+      "result": "7-5 2-6 6-3"
+    },
+    {
+      "id": "14857974",
+      "date": "2025-10-16",
+      "tournamentId": 14857974,
+      "homeId": 458834,
+      "tournamentName": "ATP Challenger Lincoln (NE), USA Men Singles",
+      "opponentId": 458834,
+      "opponentName": "Rafael Jodar",
       "won": false,
-      "result": "6-3 4-6 1-6"
+      "result": "4-6 1-6"
+    },
+    {
+      "id": "14241810",
+      "date": "2025-07-22",
+      "tournamentId": 14241810,
+      "homeId": 458834,
+      "tournamentName": "Segovia, Spain",
+      "opponentId": 458834,
+      "opponentName": "Rafael Jodar",
+      "won": false,
+      "result": "2-6 3-6"
     }
   ],
   "Grass": [
@@ -26,6 +71,6 @@
       "result": "4-6 2-6"
     }
   ],
-  "updatedAt": 1784233837976,
+  "updatedAt": 1784237025828,
   "playerName": "Max Wiskandt"
 }

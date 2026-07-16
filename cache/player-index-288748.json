@@ -14,17 +14,6 @@
   ],
   "Hard": [
     {
-      "id": "15506151",
-      "date": "2026-02-11",
-      "tournamentId": 15506151,
-      "homeId": 39711,
-      "tournamentName": "Dallas",
-      "opponentId": 39711,
-      "opponentName": "James Duckworth",
-      "won": true,
-      "result": "6-2 6-4"
-    },
-    {
       "id": "15345293",
       "date": "2026-01-24",
       "tournamentId": 15345293,
@@ -34,6 +23,17 @@
       "opponentName": "Jannik Sinner",
       "won": false,
       "result": "6-4 3-6 4-6 4-6"
+    },
+    {
+      "id": "15372379",
+      "date": "2026-01-20",
+      "tournamentId": 15372379,
+      "homeId": 403869,
+      "tournamentName": "Australian Open, Men",
+      "opponentId": 403869,
+      "opponentName": "Joao Fonseca",
+      "won": true,
+      "result": "6-4 2-6 6-1 6-2"
     },
     {
       "id": "15327201",
@@ -124,7 +124,19 @@
       "result": "6-2 2-6 1-6"
     }
   ],
-  "Grass": [],
-  "updatedAt": 1784233908573,
+  "Grass": [
+    {
+      "id": "14013559",
+      "date": "2025-06-16",
+      "tournamentId": 14013559,
+      "homeId": 288748,
+      "tournamentName": "Nottingham 2, Great Britain",
+      "opponentId": 105607,
+      "opponentName": "Jan Choinski",
+      "won": false,
+      "result": "7-5 4-6 4-6"
+    }
+  ],
+  "updatedAt": 1784237025819,
   "playerName": "Eliot Spizzirri"
 }

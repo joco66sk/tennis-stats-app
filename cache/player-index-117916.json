@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "16220212",
+      "date": "2026-05-26",
+      "tournamentId": 16220212,
+      "homeId": 341818,
+      "tournamentName": "Roland Garros, Men",
+      "opponentId": 341818,
+      "opponentName": "Jaime Faria",
+      "won": false,
+      "result": "4-6 5-7 4-6"
+    },
+    {
       "id": "16125572",
       "date": "2026-05-07",
       "tournamentId": 16125572,
@@ -69,6 +80,17 @@
   ],
   "Hard": [
     {
+      "id": "15757457",
+      "date": "2026-03-19",
+      "tournamentId": 15757457,
+      "homeId": 117916,
+      "tournamentName": "Miami",
+      "opponentId": 102339,
+      "opponentName": "Botic Van de Zandschulp",
+      "won": false,
+      "result": "5-7 3-6"
+    },
+    {
       "id": "15625025",
       "date": "2026-03-08",
       "tournamentId": 15625025,
@@ -135,48 +157,37 @@
       "result": "6-1 6-2"
     },
     {
-      "id": "14895970",
-      "date": "2025-10-23",
-      "tournamentId": 14895970,
-      "homeId": 255449,
-      "tournamentName": "Basel",
-      "opponentId": 255449,
-      "opponentName": "Valentin Royer",
-      "won": true,
-      "result": "7-6 6-2"
-    },
-    {
-      "id": "14914131",
-      "date": "2025-10-21",
-      "tournamentId": 14914131,
-      "homeId": 42379,
-      "tournamentName": "Basel",
-      "opponentId": 42379,
-      "opponentName": "Marcos Giron",
-      "won": true,
-      "result": "6-7 6-0 7-6"
-    },
-    {
-      "id": "14851805",
-      "date": "2025-10-18",
-      "tournamentId": 14851805,
+      "id": "15313776",
+      "date": "2026-01-06",
+      "tournamentId": 15313776,
       "homeId": 117916,
-      "tournamentName": "Stockholm",
-      "opponentId": 119248,
-      "opponentName": "Casper Ruud",
+      "tournamentName": "Brisbane",
+      "opponentId": 355525,
+      "opponentName": "Raphael Collignon",
       "won": false,
-      "result": "3-6 4-6"
+      "result": "4-6 2-6"
     },
     {
-      "id": "14762076",
-      "date": "2025-10-06",
-      "tournamentId": 14762076,
+      "id": "14946178",
+      "date": "2025-10-28",
+      "tournamentId": 14946178,
       "homeId": 117916,
-      "tournamentName": "Shanghai",
-      "opponentId": 254742,
-      "opponentName": "Jiri Lehečka",
+      "tournamentName": "Paris",
+      "opponentId": 403869,
+      "opponentName": "Joao Fonseca",
       "won": false,
-      "result": "4-6 4-6"
+      "result": "7-5 4-6 3-6"
+    },
+    {
+      "id": "14895972",
+      "date": "2025-10-24",
+      "tournamentId": 14895972,
+      "homeId": 403869,
+      "tournamentName": "Basel",
+      "opponentId": 403869,
+      "opponentName": "Joao Fonseca",
+      "won": false,
+      "result": "6-3 3-6 1-4"
     }
   ],
   "Grass": [
@@ -203,17 +214,6 @@
       "result": "4-6 1-6"
     },
     {
-      "id": "13993906",
-      "date": "2025-06-19",
-      "tournamentId": 13993906,
-      "homeId": 117916,
-      "tournamentName": "Halle",
-      "opponentId": 273680,
-      "opponentName": "Flavio Cobolli",
-      "won": false,
-      "result": "6-7 6-4 6-7"
-    },
-    {
       "id": "13982599",
       "date": "2025-06-10",
       "tournamentId": 13982599,
@@ -225,6 +225,6 @@
       "result": "4-6 6-2 0-6"
     }
   ],
-  "updatedAt": 1784233837884,
+  "updatedAt": 1784237025726,
   "playerName": "Denis Shapovalov"
 }

@@ -49,7 +49,9 @@ function groundTypeToSurface(groundType) {
 function isATPSingles(event) {
   if (!event.homeTeam || !event.awayTeam) return false;
   if ((event.homeTeam.name || '').includes('/') || (event.awayTeam.name || '').includes('/')) return false;
-  return (event.tournament?.uniqueTournament?.tennisPoints ?? 0) >= 50; // include ATP Challengers
+  const tp = event.tournament?.uniqueTournament?.tennisPoints ?? 0;
+  const catSlug = (event.tournament?.uniqueTournament?.category?.slug || event.tournament?.category?.slug || '').toLowerCase();
+  return tp >= 250 || catSlug === 'challenger';
 }
 
 function reverseResult(result) {

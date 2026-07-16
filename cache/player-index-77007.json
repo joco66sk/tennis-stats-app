@@ -1,5 +1,28 @@
 {
-  "Clay": [],
+  "Clay": [
+    {
+      "id": "15997861",
+      "date": "2026-04-13",
+      "tournamentId": 15997861,
+      "homeId": 77007,
+      "tournamentName": "Tallahassee, USA",
+      "opponentId": 377489,
+      "opponentName": "Kilian Feldbausch",
+      "won": true,
+      "result": "6-1 4-6 7-6"
+    },
+    {
+      "id": "15921199",
+      "date": "2026-04-08",
+      "tournamentId": 15921199,
+      "homeId": 39711,
+      "tournamentName": "Mexico City, Mexico",
+      "opponentId": 39711,
+      "opponentName": "James Duckworth",
+      "won": false,
+      "result": "3-6 2-6"
+    }
+  ],
   "Hard": [
     {
       "id": "15591867",
@@ -13,15 +36,26 @@
       "result": "6-7 0-6"
     },
     {
-      "id": "13448319",
-      "date": "2025-02-08",
-      "tournamentId": 13448319,
+      "id": "15366160",
+      "date": "2026-01-22",
+      "tournamentId": 15366160,
       "homeId": 77007,
-      "tournamentName": "Delray Beach",
-      "opponentId": 298247,
-      "opponentName": "Zachary Svajda",
+      "tournamentName": "Oeiras, Portugal",
+      "opponentId": 258908,
+      "opponentName": "Francesco Passaro",
       "won": false,
-      "result": "3-6 0-6"
+      "result": "3-6 6-1 1-6"
+    },
+    {
+      "id": "13676114",
+      "date": "2025-04-02",
+      "tournamentId": 13676114,
+      "homeId": 77007,
+      "tournamentName": "ATP Challenger Cuernavaca, Mexico Men Singles",
+      "opponentId": 458834,
+      "opponentName": "Rafael Jodar",
+      "won": false,
+      "result": "5-7 6-3 2-6"
     },
     {
       "id": "13108405",
@@ -35,18 +69,30 @@
       "result": "6-1 6-7 4-6"
     },
     {
-      "id": "11683683",
-      "date": "2023-09-24",
-      "tournamentId": 11683683,
-      "homeId": 385285,
-      "tournamentName": "Charleston, SC, USA",
-      "opponentId": 385285,
-      "opponentName": "Michael Zheng",
+      "id": "11026075",
+      "date": "2023-01-31",
+      "tournamentId": 11026075,
+      "homeId": 77007,
+      "tournamentName": "Cleveland, USA",
+      "opponentId": 210490,
+      "opponentName": "Patrick Kypson",
       "won": true,
-      "result": "7-5 6-3"
+      "result": "6-4 7-6"
     }
   ],
-  "Grass": [],
-  "updatedAt": 1784233837861,
+  "Grass": [
+    {
+      "id": "16425107",
+      "date": "2026-07-10",
+      "tournamentId": 16425107,
+      "homeId": 275948,
+      "tournamentName": "ATP Challenger Newport, USA Men Singles",
+      "opponentId": 275948,
+      "opponentName": "Jacob Fearnley",
+      "won": false,
+      "result": "6-3 3-6 2-6"
+    }
+  ],
+  "updatedAt": 1784237025706,
   "playerName": "Stefan Kozlov"
 }
