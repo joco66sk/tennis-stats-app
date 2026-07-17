@@ -35,6 +35,9 @@ function fixtureUrls(): MetadataRoute.Sitemap {
     catch { continue; }
 
     const isPast = date < new Date().toISOString().split('T')[0];
+    const dd = date.slice(8, 10);
+    const mm = date.slice(5, 7);
+    const yy = date.slice(2, 4);
 
     for (const f of fixtures) {
       const rankId = f.tournament?.rank?.id ?? 0;
@@ -45,10 +48,8 @@ function fixtureUrls(): MetadataRoute.Sitemap {
       const surface = normalizeSurface(f.tournament?.court?.name) || 'Hard';
       const p1Slug = toSlug(f.player1.name);
       const p2Slug = toSlug(f.player2.name);
-      const tournament = toSlug((f.tournament?.name || '').split(' ')[0]);
-      const dateCompact = date.replace(/-/g, '');
-      const slug = `${p1Slug}-vs-${p2Slug}-${tournament}-${dateCompact}`;
-      const url = `${BASE}/compare/${slug}?p1=${f.player1.id}&p2=${f.player2.id}&surface=${surface}`;
+      const slug = `${p1Slug}-${p2Slug}-${dd}${mm}${yy}-${surface}-${f.player1.id}-${f.player2.id}`;
+      const url = `${BASE}/compare/${slug}`;
 
       if (seen.has(url)) continue;
       seen.add(url);
