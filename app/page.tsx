@@ -8,6 +8,7 @@ interface Fixture {
   player1?: { id: number; name: string; countryAcr?: string; ranking?: number };
   player2?: { id: number; name: string; countryAcr?: string; ranking?: number };
   tournament: {
+    id?: number;
     name: string;
     rankId?: number;
     court?: { name: string };
@@ -321,7 +322,17 @@ export default function Home() {
                         <span style={{ fontSize: 11, fontWeight: 700, color: accent.dot, background: 'transparent', border: `1px solid ${accent.dot}`, borderRadius: 4, padding: '1px 6px', opacity: 0.9 }}>{categoryLabel}</span>
                       )}
                     </div>
-                    <span style={{ fontSize: 15, fontWeight: 800, color: accent.dot }}>{surface}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      {matches[0]?.tournament?.id && (
+                        <Link href={`/tournament/${matches[0].tournament.id}`}
+                          onClick={e => e.stopPropagation()}
+                          style={{ fontSize: 12, fontWeight: 700, color: accent.dot, textDecoration: 'none', opacity: 0.85, padding: '2px 6px', border: `1px solid ${accent.dot}40`, borderRadius: 5, lineHeight: 1.4 }}
+                          title="Full draw">
+                          Draw
+                        </Link>
+                      )}
+                      <span style={{ fontSize: 15, fontWeight: 800, color: accent.dot }}>{surface}</span>
+                    </div>
                   </div>
 
                   {/* Match rows — side-by-side VS */}

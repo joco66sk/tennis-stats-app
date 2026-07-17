@@ -66,6 +66,30 @@ function fixtureUrls(): MetadataRoute.Sitemap {
   return entries;
 }
 
+function tournamentUrls(): MetadataRoute.Sitemap {
+  const dates = dateRange(0, 14);
+  const seen = new Set<string>();
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const date of dates) {
+    const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
+    if (!fs.existsSync(fp)) continue;
+    let fixtures: any[];
+    try { fixtures = JSON.parse(fs.readFileSync(fp, 'utf-8')).fixtures ?? []; }
+    catch { continue; }
+
+    for (const f of fixtures) {
+      if (!f.tournament?.id) continue;
+      const url = `${BASE}/tournament/${f.tournament.id}`;
+      if (seen.has(url)) continue;
+      seen.add(url);
+      entries.push({ url, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 });
+    }
+  }
+
+  return entries;
+}
+
 function playerUrls(): MetadataRoute.Sitemap {
   const dates = dateRange(0, 14);
   const seen = new Set<string>();
@@ -101,6 +125,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...fixtureUrls(),
+    ...tournamentUrls(),
     ...playerUrls(),
   ];
 }
