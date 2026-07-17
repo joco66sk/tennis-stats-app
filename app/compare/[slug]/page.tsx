@@ -116,13 +116,20 @@ export default async function MatchSlugPage({
     name: `${player1Name} vs ${player2Name}`,
     sport: 'Tennis',
     startDate,
+    endDate: startDate,
+    eventStatus: 'https://schema.org/EventScheduled',
     location: { '@type': 'Place', name: `${surface} Court` },
-    description: narrative || `${player1Name} vs ${player2Name} ${surface} surface stats — serve, return and combined performance data.`,
-    url: `https://tennisdeepstats.com/compare/${slug}`,
+    organizer: { '@type': 'Organization', name: 'ATP Tour', url: 'https://www.atptour.com' },
+    performer: [
+      { '@type': 'Person', name: player1Name },
+      { '@type': 'Person', name: player2Name },
+    ],
     competitor: [
       { '@type': 'SportsTeam', name: player1Name },
       { '@type': 'SportsTeam', name: player2Name },
     ],
+    description: narrative || `${player1Name} vs ${player2Name} ${surface} surface stats — serve, return and combined performance data.`,
+    url: `https://tennisdeepstats.com/compare/${slug}`,
   };
 
   return (
