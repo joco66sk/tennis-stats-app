@@ -129,6 +129,7 @@ export default async function MatchSlugPage({
       price: '0',
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
+      validFrom: startDate,
       url: `https://tennisdeepstats.com/compare/${slug}`,
     },
     organizer: { '@type': 'Organization', name: 'ATP Tour', url: 'https://www.atptour.com' },
