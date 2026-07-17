@@ -262,7 +262,7 @@ export default function Home() {
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <div>
-            <div className="text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase mb-0.5">Tennis Deep Stats</div>
+            <div className="text-sm font-black tracking-[0.15em] uppercase mb-0.5" style={{ color: '#ccff00' }}>Tennis Deep Stats</div>
             <div className="text-xl font-black text-white tracking-tight">
               {selectedDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })}
             </div>
