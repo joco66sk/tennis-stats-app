@@ -325,7 +325,19 @@ async function main() {
   let flushed = 0;
   const fetchedIds = new Set(toFetch.map(([id]) => id));
   for (const pid of Object.keys(indexes)) {
-    if (!fetchedIds.has(pid)) { saveIndex(pid); flushed++; }
+    if (fetchedIds.has(pid)) continue;
+    // Don't overwrite indexes that were already directly fetched today — opponent
+    // accumulation would replace a full direct-fetch with sparse opponent data.
+    const fp = path.join(CACHE_DIR, `player-index-${pid}.json`);
+    if (fs.existsSync(fp)) {
+      try {
+        const existing = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+        const updatedToday = new Date((existing.updatedAt || 0) + 2 * 60 * 60 * 1000).toISOString().slice(0, 10) === today;
+        if (updatedToday) continue;
+      } catch {}
+    }
+    saveIndex(pid);
+    flushed++;
   }
   for (const pid of Object.keys(histories)) {
     saveHistory(pid);

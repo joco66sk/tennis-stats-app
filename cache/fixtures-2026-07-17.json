@@ -59,7 +59,7 @@
     },
     {
       "id": 16465447,
-      "date": "2026-07-17T11:20:00.000Z",
+      "date": "2026-07-17T12:00:00.000Z",
       "player1": {
         "id": 106755,
         "name": "Andrey Rublev",
@@ -87,7 +87,7 @@
     },
     {
       "id": 16465444,
-      "date": "2026-07-17T12:30:00.000Z",
+      "date": "2026-07-17T13:10:00.000Z",
       "player1": {
         "id": 102151,
         "name": "Alejandro Tabilo",
@@ -142,6 +142,34 @@
       }
     },
     {
+      "id": 16523877,
+      "date": "2026-07-17T10:00:00.000Z",
+      "player1": {
+        "id": 264344,
+        "name": "Aleksandr Shevchenko",
+        "countryAcr": "KZ"
+      },
+      "player2": {
+        "id": 296369,
+        "name": "Dominic Stricker",
+        "countryAcr": "CH"
+      },
+      "tournament": {
+        "id": 2416,
+        "name": "Gstaad",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16465662,
       "date": "2026-07-17T10:00:00.000Z",
       "player1": {
@@ -171,7 +199,7 @@
     },
     {
       "id": 16465667,
-      "date": "2026-07-17T10:00:00.000Z",
+      "date": "2026-07-17T10:15:00.000Z",
       "player1": {
         "id": 248861,
         "name": "Juan Manuel Cerundolo",
@@ -252,8 +280,36 @@
       "round": {
         "name": "Semifinals"
       }
+    },
+    {
+      "id": 16465691,
+      "date": "2026-07-17T19:00:00.000Z",
+      "player1": {
+        "id": 49172,
+        "name": "Damir Džumhur",
+        "countryAcr": "BA"
+      },
+      "player2": {
+        "id": 145130,
+        "name": "Alex Molčan",
+        "countryAcr": "SK"
+      },
+      "tournament": {
+        "id": 2426,
+        "name": "Umag",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
     }
   ],
-  "count": 9,
-  "fetchedAt": 1784230922835
+  "count": 11,
+  "fetchedAt": 1784248787532
 }
