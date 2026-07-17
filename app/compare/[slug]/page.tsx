@@ -303,6 +303,9 @@ export async function generateMetadata({
   return {
     title: `${p1Name} vs ${p2Name} ${surface} Stats | Tennis Deep Stats`,
     description,
+    alternates: {
+      canonical: `https://tennisdeepstats.com/compare/${slug}`,
+    },
     openGraph: {
       title: `${p1Name} vs ${p2Name} — ${surface} Stats`,
       description,
