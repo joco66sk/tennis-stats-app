@@ -309,17 +309,17 @@ export default function Home() {
                         rel="noopener noreferrer"
                         style={{
                           display: 'block',
-                          padding: '8px 14px',
+                          padding: '11px 14px',
                           borderTop: i > 0 ? '1px solid #27272a' : 'none',
                           textDecoration: 'none',
                         }}
                         className="hover:bg-zinc-800/50 active:bg-zinc-800"
                       >
                         {/* Meta row: time + round */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 6 }}>
-                          <span style={{ fontSize: 11, color: '#71717a', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
-                          {round && <span style={{ fontSize: 11, fontWeight: 700, color: '#52525b' }}>{round}</span>}
-                          <span style={{ marginLeft: 'auto', color: '#3f3f46', fontSize: 14 }}>›</span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+                          <span style={{ fontSize: 12, color: '#71717a', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
+                          {round && <span style={{ fontSize: 12, fontWeight: 700, color: '#52525b' }}>{round}</span>}
+                          <span style={{ marginLeft: 'auto', color: '#3f3f46', fontSize: 15 }}>›</span>
                         </div>
 
                         {/* Player rows */}
@@ -327,14 +327,14 @@ export default function Home() {
                           { name: fixture.player1?.name, country: fixture.player1?.countryAcr, stats: p1Stats },
                           { name: fixture.player2?.name, country: fixture.player2?.countryAcr, stats: p2Stats },
                         ] as const).map((player, pi) => (
-                          <div key={pi} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8, marginTop: pi === 1 ? 5 : 0 }}>
-                            <div style={{ fontSize: 15, fontWeight: 700, color: '#f4f4f5', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
+                          <div key={pi} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8, marginTop: pi === 1 ? 10 : 0 }}>
+                            <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
                               {player.name}
-                              {player.country && <span style={{ fontSize: 11, color: '#71717a', marginLeft: 5 }}>{player.country}</span>}
+                              {player.country && <span style={{ fontSize: 12, color: '#71717a', marginLeft: 6 }}>{player.country}</span>}
                             </div>
                             {isATP && (player.stats
-                              ? <span style={{ fontSize: 13, fontWeight: 800, color: player.stats.wins > player.stats.losses ? '#34d399' : '#f87171', flexShrink: 0 }}>{player.stats.wins}–{player.stats.losses}</span>
-                              : <span style={{ fontSize: 11, color: '#3f3f46', flexShrink: 0 }}>—</span>
+                              ? <span style={{ fontSize: 15, fontWeight: 800, color: player.stats.wins > player.stats.losses ? '#34d399' : '#f87171', flexShrink: 0 }}>{player.stats.wins}–{player.stats.losses}</span>
+                              : <span style={{ fontSize: 12, color: '#3f3f46', flexShrink: 0 }}>—</span>
                             )}
                           </div>
                         ))}
