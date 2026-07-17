@@ -192,45 +192,41 @@ export default async function MatchSlugPage({
           </div>
         )}
 
-        {/* Narrative paragraph for SEO */}
-        {narrative && (
-          <p style={{ fontSize: 13, color: '#a1a1aa', lineHeight: 1.6, marginBottom: 12, background: '#18181b', border: '1px solid #27272a', borderRadius: 10, padding: '12px 14px' }}>
-            {narrative}
-          </p>
-        )}
-
         {/* CTA */}
         <Link
           href={interactiveUrl}
-          style={{ display: 'block', background: '#1d4ed8', color: '#fff', textAlign: 'center', padding: '10px 16px', borderRadius: 10, fontWeight: 700, fontSize: 13, textDecoration: 'none', marginBottom: 12 }}
+          style={{ display: 'block', background: '#1d4ed8', color: '#fff', textAlign: 'center', padding: '9px 16px', borderRadius: 10, fontWeight: 700, fontSize: 13, textDecoration: 'none', marginBottom: 10 }}
         >
           View Interactive Comparison + Individual Match Stats →
         </Link>
 
-        {/* Match history */}
+        {/* Match history — compact single-line rows */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
           {[s1, s2].map((s, si) => (
-            <div key={si} style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, overflow: 'hidden' }}>
-              <div style={{ padding: '10px 12px', borderBottom: '1px solid #27272a', fontSize: 12, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+            <div key={si} style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 10, overflow: 'hidden' }}>
+              <div style={{ padding: '7px 10px', borderBottom: '1px solid #27272a', fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                 {s.playerName.split(' ').pop()} — Recent {surface}
               </div>
               {s.matches.slice(0, 10).map((m, i) => (
-                <div key={i} style={{ padding: '7px 12px', borderTop: i > 0 ? '1px solid #1f1f22' : 'none', display: 'flex', gap: 8, alignItems: 'flex-start' }}>
-                  <span style={{ fontSize: 11, fontWeight: 900, color: m.won ? '#34d399' : '#f87171', width: 12, flexShrink: 0, marginTop: 1 }}>{m.won ? 'W' : 'L'}</span>
-                  <div style={{ minWidth: 0 }}>
-                    <div style={{ fontSize: 12, color: '#d4d4d8', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>vs {m.opponentName}</div>
-                    <div style={{ fontSize: 11, color: '#52525b' }}>{m.result} · {fmtDate(m.date)}</div>
-                  </div>
+                <div key={i} style={{ padding: '4px 10px', borderTop: i > 0 ? '1px solid #1f1f22' : 'none', display: 'flex', gap: 6, alignItems: 'center', minWidth: 0 }}>
+                  <span style={{ fontSize: 10, fontWeight: 900, color: m.won ? '#34d399' : '#f87171', width: 10, flexShrink: 0 }}>{m.won ? 'W' : 'L'}</span>
+                  <span style={{ fontSize: 11, color: '#d4d4d8', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flex: 1 }}>
+                    {m.opponentName.split(' ').pop()}
+                  </span>
+                  <span style={{ fontSize: 10, color: '#52525b', flexShrink: 0 }}>{fmtDate(m.date)}</span>
                 </div>
               ))}
               {s.matches.length === 0 && (
-                <div style={{ padding: 12, fontSize: 12, color: '#52525b' }}>No matches found</div>
+                <div style={{ padding: '8px 10px', fontSize: 11, color: '#52525b' }}>No matches found</div>
               )}
             </div>
           ))}
         </div>
 
-        <div style={{ marginTop: 16, textAlign: 'center', fontSize: 11, color: '#3f3f46' }}>
+        {/* Hidden narrative for SEO crawlers only */}
+        {narrative && <p style={{ position: 'absolute', left: '-9999px', fontSize: 1 }}>{narrative}</p>}
+
+        <div style={{ marginTop: 12, textAlign: 'center', fontSize: 11, color: '#3f3f46' }}>
           tennisdeepstats.com — serve &amp; return stats before every ATP/WTA match
         </div>
 
