@@ -1,6 +1,606 @@
 {
   "date": "2026-07-18",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1784268811884
+  "fixtures": [
+    {
+      "id": 16465449,
+      "date": "2026-07-18T11:00:00.000Z",
+      "player1": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY",
+        "ranking": 71
+      },
+      "player2": {
+        "id": 308084,
+        "name": "Luciano Darderi",
+        "countryAcr": "IT",
+        "ranking": 18
+      },
+      "tournament": {
+        "id": 2413,
+        "name": "Bastad",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
+      "id": 16465450,
+      "date": "2026-07-18T12:30:00.000Z",
+      "player1": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU",
+        "ranking": 16
+      },
+      "player2": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL",
+        "ranking": 31
+      },
+      "tournament": {
+        "id": 2413,
+        "name": "Bastad",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
+      "id": 16465670,
+      "date": "2026-07-18T09:00:00.000Z",
+      "player1": {
+        "id": 355525,
+        "name": "Raphael Collignon",
+        "countryAcr": "BE",
+        "ranking": 42
+      },
+      "player2": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR",
+        "ranking": 45
+      },
+      "tournament": {
+        "id": 2416,
+        "name": "Gstaad",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
+      "id": 16465665,
+      "date": "2026-07-18T11:30:00.000Z",
+      "player1": {
+        "id": 264344,
+        "name": "Aleksandr Shevchenko",
+        "countryAcr": "KZ",
+        "ranking": 100
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR",
+        "ranking": 85
+      },
+      "tournament": {
+        "id": 2416,
+        "name": "Gstaad",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
+      "id": 16556579,
+      "date": "2026-07-18T11:00:00.000Z",
+      "player1": {
+        "id": 385592,
+        "name": "Edas Butvilas",
+        "countryAcr": "LT",
+        "ranking": 228
+      },
+      "player2": {
+        "id": 206602,
+        "name": "Clement Tabur",
+        "countryAcr": "FR",
+        "ranking": 178
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556581,
+      "date": "2026-07-18T11:00:00.000Z",
+      "player1": {
+        "id": 267577,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FR",
+        "ranking": 130
+      },
+      "player2": {
+        "id": 1107750,
+        "name": "Goncalo Da Rosa Castro",
+        "countryAcr": "PT"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556578,
+      "date": "2026-07-18T11:00:00.000Z",
+      "player1": {
+        "id": 48632,
+        "name": "Taro Daniel",
+        "countryAcr": "JP",
+        "ranking": 194
+      },
+      "player2": {
+        "id": 392072,
+        "name": "Juan Carlos Prado Angelo",
+        "countryAcr": "BO",
+        "ranking": 173
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556580,
+      "date": "2026-07-18T12:10:00.000Z",
+      "player1": {
+        "id": 228155,
+        "name": "Francisco Rocha",
+        "countryAcr": "PT",
+        "ranking": 832
+      },
+      "player2": {
+        "id": 299765,
+        "name": "Gonzalo Bueno",
+        "countryAcr": "PE",
+        "ranking": 176
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556585,
+      "date": "2026-07-18T12:10:00.000Z",
+      "player1": {
+        "id": 77223,
+        "name": "Pedro Martinez",
+        "countryAcr": "ES",
+        "ranking": 157
+      },
+      "player2": {
+        "id": 57155,
+        "name": "David Jorda Sanchis",
+        "countryAcr": "ES",
+        "ranking": 189
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556582,
+      "date": "2026-07-18T12:10:00.000Z",
+      "player1": {
+        "id": 322022,
+        "name": "Vilius Gaubas",
+        "countryAcr": "LT",
+        "ranking": 128
+      },
+      "player2": {
+        "id": 207034,
+        "name": "Chun-Hsin Tseng",
+        "countryAcr": "TW",
+        "ranking": 234
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556586,
+      "date": "2026-07-18T13:20:00.000Z",
+      "player1": {
+        "id": 93597,
+        "name": "Andrea Pellegrino",
+        "countryAcr": "IT",
+        "ranking": 138
+      },
+      "player2": {
+        "id": 458344,
+        "name": "Joao Silva",
+        "countryAcr": "PT",
+        "ranking": 1330
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556577,
+      "date": "2026-07-18T13:20:00.000Z",
+      "player1": {
+        "id": 57327,
+        "name": "Joao Domingues",
+        "countryAcr": "PT",
+        "ranking": 591
+      },
+      "player2": {
+        "id": 229275,
+        "name": "Timofey Skatov",
+        "countryAcr": "KZ",
+        "ranking": 163
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556981,
+      "date": "2026-07-18T09:30:00.000Z",
+      "player1": {
+        "id": 421761,
+        "name": "Federico Cinà",
+        "countryAcr": "IT",
+        "ranking": 184
+      },
+      "player2": {
+        "id": 257091,
+        "name": "Daniel Michalski",
+        "countryAcr": "PL",
+        "ranking": 299
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556980,
+      "date": "2026-07-18T09:30:00.000Z",
+      "player1": {
+        "id": 446858,
+        "name": "Nico Hipfl",
+        "countryAcr": "AT",
+        "ranking": 915
+      },
+      "player2": {
+        "id": 48626,
+        "name": "Lorenzo Giustino",
+        "countryAcr": "IT",
+        "ranking": 196
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556982,
+      "date": "2026-07-18T10:40:00.000Z",
+      "player1": {
+        "id": 54573,
+        "name": "Federico Coria",
+        "countryAcr": "AR",
+        "ranking": 783
+      },
+      "player2": {
+        "id": 100069,
+        "name": "Vitaliy Sachko",
+        "countryAcr": "UA",
+        "ranking": 195
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556933,
+      "date": "2026-07-18T10:40:00.000Z",
+      "player1": {
+        "id": 294348,
+        "name": "Niklas Waldner",
+        "countryAcr": "AT",
+        "ranking": 1254
+      },
+      "player2": {
+        "id": 97231,
+        "name": "Laslo Djere",
+        "countryAcr": "RS",
+        "ranking": 220
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556985,
+      "date": "2026-07-18T11:50:00.000Z",
+      "player1": {
+        "id": 302582,
+        "name": "Gustavo Heide",
+        "countryAcr": "BR",
+        "ranking": 136
+      },
+      "player2": {
+        "id": 377489,
+        "name": "Kilian Feldbausch",
+        "countryAcr": "CH",
+        "ranking": 262
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556983,
+      "date": "2026-07-18T12:00:00.000Z",
+      "player1": {
+        "id": 200159,
+        "name": "Jurij Rodionov",
+        "countryAcr": "AT",
+        "ranking": 143
+      },
+      "player2": {
+        "id": 188944,
+        "name": "Andrey Chepelev",
+        "countryAcr": "RU",
+        "ranking": 353
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556984,
+      "date": "2026-07-18T13:10:00.000Z",
+      "player1": {
+        "id": 199379,
+        "name": "Sandro Kopp",
+        "countryAcr": "AT",
+        "ranking": 291
+      },
+      "player2": {
+        "id": 44553,
+        "name": "Pierre-Hugues Herbert",
+        "countryAcr": "FR",
+        "ranking": 247
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 16556931,
+      "date": "2026-07-18T14:30:00.000Z",
+      "player1": {
+        "id": 57289,
+        "name": "Hugo Dellien",
+        "countryAcr": "BO",
+        "ranking": 144
+      },
+      "player2": {
+        "id": 462168,
+        "name": "Michele Ribecai",
+        "countryAcr": "IT",
+        "ranking": 265
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    }
+  ],
+  "count": 20,
+  "fetchedAt": 1784324951714
 }
