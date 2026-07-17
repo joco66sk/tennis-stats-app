@@ -283,7 +283,7 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
                           <div style={{ textAlign: 'right', minWidth: 0 }}>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 4, marginBottom: p1s ? 4 : 0 }}>
                               {p1.ranking && <span style={{ fontSize: 11, color: '#52525b', flexShrink: 0 }}>#{p1.ranking}</span>}
-                              <Link href={`/player/${p1.id}`} onClick={e => e.stopPropagation()}
+                              <Link href={`/player/${p1.id}`}
                                 style={{ fontSize: 15, fontWeight: 700, color: '#f4f4f5', textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                 {p1.name}
                               </Link>
@@ -309,7 +309,7 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
                           <div style={{ textAlign: 'left', minWidth: 0 }}>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 4, marginBottom: p2s ? 4 : 0 }}>
                               {p2.ranking && <span style={{ fontSize: 11, color: '#52525b', flexShrink: 0 }}>#{p2.ranking}</span>}
-                              <Link href={`/player/${p2.id}`} onClick={e => e.stopPropagation()}
+                              <Link href={`/player/${p2.id}`}
                                 style={{ fontSize: 15, fontWeight: 700, color: '#f4f4f5', textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                 {p2.name}
                               </Link>
