@@ -295,7 +295,7 @@ export default function Home() {
                     <span style={{ fontSize: 13, fontWeight: 700, color: accent.dot, opacity: 0.85 }}>{surface}</span>
                   </div>
 
-                  {/* Match rows — scoreboard style */}
+                  {/* Match rows — head-to-head card style */}
                   {matches.map((fixture, i) => {
                     const matchSurface = normalizeSurface(fixture.tournament?.court?.name) || 'Hard';
                     const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
@@ -309,35 +309,50 @@ export default function Home() {
                         rel="noopener noreferrer"
                         style={{
                           display: 'block',
-                          padding: '11px 14px',
+                          padding: '12px 14px',
                           borderTop: i > 0 ? '1px solid #27272a' : 'none',
                           textDecoration: 'none',
                         }}
                         className="hover:bg-zinc-800/50 active:bg-zinc-800"
                       >
-                        {/* Meta row: time + round */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                          <span style={{ fontSize: 13, color: '#71717a', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
-                          {round && <span style={{ fontSize: 13, fontWeight: 700, color: '#71717a' }}>{round}</span>}
-                          <span style={{ marginLeft: 'auto', color: '#52525b', fontSize: 16 }}>›</span>
-                        </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: 8 }}>
 
-                        {/* Player rows */}
-                        {([
-                          { name: fixture.player1?.name, country: fixture.player1?.countryAcr, stats: p1Stats },
-                          { name: fixture.player2?.name, country: fixture.player2?.countryAcr, stats: p2Stats },
-                        ] as const).map((player, pi) => (
-                          <div key={pi} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8, marginTop: pi === 1 ? 10 : 0 }}>
-                            <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
-                              {player.name}
-                              {player.country && <span style={{ fontSize: 12, color: '#71717a', marginLeft: 6 }}>{player.country}</span>}
+                          {/* P1 — right aligned */}
+                          <div style={{ textAlign: 'right', minWidth: 0 }}>
+                            <div style={{ fontSize: 15, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {fixture.player1?.name}
                             </div>
-                            {isATP && (player.stats
-                              ? <span style={{ fontSize: 15, fontWeight: 800, color: player.stats.wins > player.stats.losses ? '#34d399' : '#f87171', flexShrink: 0 }}>{player.stats.wins}–{player.stats.losses}</span>
-                              : <span style={{ fontSize: 12, color: '#3f3f46', flexShrink: 0 }}>—</span>
-                            )}
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 5, marginTop: 4 }}>
+                              {fixture.player1?.countryAcr && <span style={{ fontSize: 11, color: '#52525b' }}>{fixture.player1.countryAcr}</span>}
+                              {isATP && (p1Stats
+                                ? <span style={{ fontSize: 14, fontWeight: 800, color: p1Stats.wins > p1Stats.losses ? '#34d399' : '#f87171' }}>{p1Stats.wins}–{p1Stats.losses}</span>
+                                : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>
+                              )}
+                            </div>
                           </div>
-                        ))}
+
+                          {/* Center: VS + time + round */}
+                          <div style={{ textAlign: 'center', padding: '0 8px', flexShrink: 0 }}>
+                            <div style={{ fontSize: 11, fontWeight: 800, color: '#3f3f46', letterSpacing: '0.08em' }}>VS</div>
+                            <div style={{ fontSize: 11, color: '#52525b', marginTop: 3, fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{formatTime(fixture.date)}</div>
+                            {round && <div style={{ fontSize: 11, color: '#3f3f46', whiteSpace: 'nowrap' }}>{round}</div>}
+                          </div>
+
+                          {/* P2 — left aligned */}
+                          <div style={{ textAlign: 'left', minWidth: 0 }}>
+                            <div style={{ fontSize: 15, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {fixture.player2?.name}
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 5, marginTop: 4 }}>
+                              {isATP && (p2Stats
+                                ? <span style={{ fontSize: 14, fontWeight: 800, color: p2Stats.wins > p2Stats.losses ? '#34d399' : '#f87171' }}>{p2Stats.wins}–{p2Stats.losses}</span>
+                                : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>
+                              )}
+                              {fixture.player2?.countryAcr && <span style={{ fontSize: 11, color: '#52525b' }}>{fixture.player2.countryAcr}</span>}
+                            </div>
+                          </div>
+
+                        </div>
                       </Link>
                     );
                   })}
