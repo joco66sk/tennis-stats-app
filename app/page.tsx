@@ -292,62 +292,61 @@ export default function Home() {
                         <span style={{ fontSize: 11, fontWeight: 700, color: accent.dot, background: 'transparent', border: `1px solid ${accent.dot}`, borderRadius: 4, padding: '1px 6px', opacity: 0.9 }}>{categoryLabel}</span>
                       )}
                     </div>
-                    <span style={{ fontSize: 13, fontWeight: 700, color: accent.dot, opacity: 0.85 }}>{surface}</span>
+                    <span style={{ fontSize: 15, fontWeight: 800, color: accent.dot }}>{surface}</span>
                   </div>
 
-                  {/* Match rows — pill badge style */}
+                  {/* Match rows — side-by-side VS */}
                   {matches.map((fixture, i) => {
                     const matchSurface = normalizeSurface(fixture.tournament?.court?.name) || 'Hard';
                     const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
                     const p2Stats = fixture.player2?.id ? playerStats[`${fixture.player2.id}-${matchSurface}`] : undefined;
                     const round = formatRound(fixture.round?.name);
-                    const badge = (stats: typeof p1Stats) => {
-                      if (!isATP || !stats) return null;
-                      const win = stats.wins > stats.losses;
-                      return (
-                        <span style={{
-                          fontSize: 12, fontWeight: 800,
-                          color: win ? '#34d399' : '#f87171',
-                          background: win ? 'rgba(52,211,153,0.1)' : 'rgba(248,113,113,0.1)',
-                          border: `1px solid ${win ? 'rgba(52,211,153,0.25)' : 'rgba(248,113,113,0.25)'}`,
-                          borderRadius: 6, padding: '2px 7px', flexShrink: 0,
-                        }}>{stats.wins}–{stats.losses}</span>
-                      );
-                    };
                     return (
                       <Link
                         key={fixture.id}
                         href={matchUrl(fixture)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'block', padding: '11px 14px', borderTop: i > 0 ? '1px solid #27272a' : 'none', textDecoration: 'none' }}
+                        style={{ display: 'block', padding: '13px 14px', borderTop: i > 0 ? '1px solid #27272a' : 'none', textDecoration: 'none' }}
                         className="hover:bg-zinc-800/50 active:bg-zinc-800"
                       >
-                        {/* Player 1 */}
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
-                          <div style={{ fontSize: 16, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', minWidth: 0 }}>
-                            {fixture.player1?.name}
-                            {fixture.player1?.countryAcr && <span style={{ fontSize: 11, color: '#52525b', marginLeft: 6 }}>{fixture.player1.countryAcr}</span>}
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: 8 }}>
+
+                          {/* P1 — right aligned */}
+                          <div style={{ textAlign: 'right', minWidth: 0 }}>
+                            <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {fixture.player1?.name}
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 5, marginTop: 5 }}>
+                              {fixture.player1?.countryAcr && <span style={{ fontSize: 11, color: '#71717a' }}>{fixture.player1.countryAcr}</span>}
+                              {isATP && (p1Stats
+                                ? <span style={{ fontSize: 15, fontWeight: 800, color: p1Stats.wins > p1Stats.losses ? '#34d399' : '#f87171' }}>{p1Stats.wins}–{p1Stats.losses}</span>
+                                : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>
+                              )}
+                            </div>
                           </div>
-                          {badge(p1Stats)}
-                        </div>
 
-                        {/* Divider */}
-                        <div style={{ borderTop: '1px solid #27272a', margin: '8px 0' }} />
-
-                        {/* Player 2 */}
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
-                          <div style={{ fontSize: 16, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', minWidth: 0 }}>
-                            {fixture.player2?.name}
-                            {fixture.player2?.countryAcr && <span style={{ fontSize: 11, color: '#52525b', marginLeft: 6 }}>{fixture.player2.countryAcr}</span>}
+                          {/* Center: VS + time + round */}
+                          <div style={{ textAlign: 'center', padding: '0 10px', flexShrink: 0 }}>
+                            <div style={{ fontSize: 10, fontWeight: 700, color: '#3f3f46', letterSpacing: '0.1em' }}>VS</div>
+                            <div style={{ fontSize: 13, fontWeight: 600, color: '#d4d4d8', marginTop: 4, fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{formatTime(fixture.date)}</div>
+                            {round && <div style={{ fontSize: 12, fontWeight: 700, color: accent.dot, marginTop: 2, whiteSpace: 'nowrap' }}>{round}</div>}
                           </div>
-                          {badge(p2Stats)}
-                        </div>
 
-                        {/* Footer: time + round */}
-                        <div style={{ display: 'flex', gap: 6, alignItems: 'center', marginTop: 7 }}>
-                          <span style={{ fontSize: 11, color: '#52525b', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
-                          {round && <><span style={{ fontSize: 11, color: '#3f3f46' }}>·</span><span style={{ fontSize: 11, color: '#52525b' }}>{round}</span></>}
+                          {/* P2 — left aligned */}
+                          <div style={{ textAlign: 'left', minWidth: 0 }}>
+                            <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {fixture.player2?.name}
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 5, marginTop: 5 }}>
+                              {isATP && (p2Stats
+                                ? <span style={{ fontSize: 15, fontWeight: 800, color: p2Stats.wins > p2Stats.losses ? '#34d399' : '#f87171' }}>{p2Stats.wins}–{p2Stats.losses}</span>
+                                : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>
+                              )}
+                              {fixture.player2?.countryAcr && <span style={{ fontSize: 11, color: '#71717a' }}>{fixture.player2.countryAcr}</span>}
+                            </div>
+                          </div>
+
                         </div>
                       </Link>
                     );
