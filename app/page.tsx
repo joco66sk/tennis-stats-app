@@ -287,7 +287,7 @@ export default function Home() {
                   <div style={{ background: accent.bg, borderBottom: '1px solid #27272a', padding: '10px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <span style={{ width: 8, height: 8, borderRadius: '50%', background: accent.dot, display: 'inline-block', flexShrink: 0 }} />
-                      <span style={{ fontWeight: 800, color: '#fff', fontSize: 13, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{tournamentName}</span>
+                      <span style={{ fontWeight: 800, color: '#fff', fontSize: 14, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{tournamentName}</span>
                       {categoryLabel && categoryLabel !== 'ATP' && (
                         <span style={{ fontSize: 10, fontWeight: 700, color: accent.dot, background: 'transparent', border: `1px solid ${accent.dot}`, borderRadius: 4, padding: '1px 5px', opacity: 0.9 }}>{categoryLabel}</span>
                       )}
@@ -316,10 +316,10 @@ export default function Home() {
                         className="hover:bg-zinc-800/50 active:bg-zinc-800"
                       >
                         {/* Meta row: time + round */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 5 }}>
-                          <span style={{ fontSize: 10, color: '#52525b', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
-                          {round && <span style={{ fontSize: 10, fontWeight: 700, color: '#3f3f46' }}>{round}</span>}
-                          <span style={{ marginLeft: 'auto', color: '#3f3f46', fontSize: 13 }}>›</span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 6 }}>
+                          <span style={{ fontSize: 11, color: '#71717a', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
+                          {round && <span style={{ fontSize: 11, fontWeight: 700, color: '#52525b' }}>{round}</span>}
+                          <span style={{ marginLeft: 'auto', color: '#3f3f46', fontSize: 14 }}>›</span>
                         </div>
 
                         {/* Player rows */}
@@ -327,14 +327,14 @@ export default function Home() {
                           { name: fixture.player1?.name, country: fixture.player1?.countryAcr, stats: p1Stats },
                           { name: fixture.player2?.name, country: fixture.player2?.countryAcr, stats: p2Stats },
                         ] as const).map((player, pi) => (
-                          <div key={pi} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8, marginTop: pi === 1 ? 3 : 0 }}>
-                            <div style={{ fontSize: 13, fontWeight: 700, color: '#e4e4e7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
+                          <div key={pi} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8, marginTop: pi === 1 ? 5 : 0 }}>
+                            <div style={{ fontSize: 15, fontWeight: 700, color: '#f4f4f5', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
                               {player.name}
-                              {player.country && <span style={{ fontSize: 10, color: '#52525b', marginLeft: 4 }}>{player.country}</span>}
+                              {player.country && <span style={{ fontSize: 11, color: '#71717a', marginLeft: 5 }}>{player.country}</span>}
                             </div>
                             {isATP && (player.stats
-                              ? <span style={{ fontSize: 12, fontWeight: 800, color: player.stats.wins > player.stats.losses ? '#34d399' : '#f87171', flexShrink: 0 }}>{player.stats.wins}–{player.stats.losses}</span>
-                              : <span style={{ fontSize: 10, color: '#3f3f46', flexShrink: 0 }}>—</span>
+                              ? <span style={{ fontSize: 13, fontWeight: 800, color: player.stats.wins > player.stats.losses ? '#34d399' : '#f87171', flexShrink: 0 }}>{player.stats.wins}–{player.stats.losses}</span>
+                              : <span style={{ fontSize: 11, color: '#3f3f46', flexShrink: 0 }}>—</span>
                             )}
                           </div>
                         ))}
