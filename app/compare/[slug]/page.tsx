@@ -172,43 +172,43 @@ export default async function MatchSlugPage({
         `}</style>
         <div className="compare-body" style={{ marginBottom: 10 }}>
 
-          {/* Left column: stats numbers */}
-          {hasData ? (
-            <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 7.5rem 1fr', marginBottom: 4 }}>
-                <div style={{ textAlign: 'right', paddingRight: 8, fontSize: 10, fontWeight: 900, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{player1Name.split(' ').pop()}</div>
-                <div />
-                <div style={{ textAlign: 'left', paddingLeft: 8, fontSize: 10, fontWeight: 900, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{player2Name.split(' ').pop()}</div>
-              </div>
-              <SectionLabel color="#60a5fa">Serve</SectionLabel>
-              <Row label="1st Serve %" v1={s1.avg1stServe} v2={s2.avg1stServe} />
-              <Row label="1st Serve Won %" v1={s1.avg1stWon} v2={s2.avg1stWon} />
-              <Row label="2nd Serve Won %" v1={s1.avg2ndWon} v2={s2.avg2ndWon} />
-              <Row label="Aces / match" v1={s1.avgAces} v2={s2.avgAces} isPercent={false} />
-              <Row label="Dbl Faults" v1={s1.avgDf} v2={s2.avgDf} higherIsBetter={false} isPercent={false} />
-              <Row label="Serve Pts Won %" v1={s1.avgServeWon} v2={s2.avgServeWon} />
-              <SectionLabel color="#fbbf24">Return</SectionLabel>
-              <Row label="Return Pts Won %" v1={s1.avgReturnWon} v2={s2.avgReturnWon} />
-              <Row label="Ret 1st Srv Won %" v1={s1.avgReturn1stWon} v2={s2.avgReturn1stWon} />
-              <Row label="Ret 2nd Srv Won %" v1={s1.avgReturn2ndWon} v2={s2.avgReturn2ndWon} />
-              <SectionLabel color="#a78bfa">Combined</SectionLabel>
-              <Row label="Serve + Return %" v1={s1.avgServeWon + s1.avgReturnWon} v2={s2.avgServeWon + s2.avgReturnWon} />
-            </div>
-          ) : (
-            <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '16px', color: '#52525b', fontSize: 13, textAlign: 'center' }}>
-              No stats available
-            </div>
-          )}
-
-          {/* Right column: narrative + match history */}
+          {/* Left column: stats numbers + narrative at bottom */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {hasData ? (
+              <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 7.5rem 1fr', marginBottom: 4 }}>
+                  <div style={{ textAlign: 'right', paddingRight: 8, fontSize: 10, fontWeight: 900, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{player1Name.split(' ').pop()}</div>
+                  <div />
+                  <div style={{ textAlign: 'left', paddingLeft: 8, fontSize: 10, fontWeight: 900, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{player2Name.split(' ').pop()}</div>
+                </div>
+                <SectionLabel color="#60a5fa">Serve</SectionLabel>
+                <Row label="1st Serve %" v1={s1.avg1stServe} v2={s2.avg1stServe} />
+                <Row label="1st Serve Won %" v1={s1.avg1stWon} v2={s2.avg1stWon} />
+                <Row label="2nd Serve Won %" v1={s1.avg2ndWon} v2={s2.avg2ndWon} />
+                <Row label="Aces / match" v1={s1.avgAces} v2={s2.avgAces} isPercent={false} />
+                <Row label="Dbl Faults" v1={s1.avgDf} v2={s2.avgDf} higherIsBetter={false} isPercent={false} />
+                <Row label="Serve Pts Won %" v1={s1.avgServeWon} v2={s2.avgServeWon} />
+                <SectionLabel color="#fbbf24">Return</SectionLabel>
+                <Row label="Return Pts Won %" v1={s1.avgReturnWon} v2={s2.avgReturnWon} />
+                <Row label="Ret 1st Srv Won %" v1={s1.avgReturn1stWon} v2={s2.avgReturn1stWon} />
+                <Row label="Ret 2nd Srv Won %" v1={s1.avgReturn2ndWon} v2={s2.avgReturn2ndWon} />
+                <SectionLabel color="#a78bfa">Combined</SectionLabel>
+                <Row label="Serve + Return %" v1={s1.avgServeWon + s1.avgReturnWon} v2={s2.avgServeWon + s2.avgReturnWon} />
+              </div>
+            ) : (
+              <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '16px', color: '#52525b', fontSize: 13, textAlign: 'center' }}>
+                No stats available
+              </div>
+            )}
             {narrative && (
               <p style={{ fontSize: 12, color: '#a1a1aa', lineHeight: 1.6, background: '#18181b', border: '1px solid #27272a', borderRadius: 10, padding: '10px 12px', margin: 0 }}>
                 {narrative}
               </p>
             )}
+          </div>
 
-            {/* Match history — both players stacked */}
+          {/* Right column: match history both players */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {[s1, s2].map((s, si) => (
               <div key={si} style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 10, overflow: 'hidden' }}>
                 <div style={{ padding: '6px 10px', borderBottom: '1px solid #27272a', fontSize: 10, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
