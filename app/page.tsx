@@ -5,8 +5,8 @@ import Link from 'next/link';
 interface Fixture {
   id: number;
   date: string;
-  player1?: { id: number; name: string; countryAcr?: string };
-  player2?: { id: number; name: string; countryAcr?: string };
+  player1?: { id: number; name: string; countryAcr?: string; ranking?: number };
+  player2?: { id: number; name: string; countryAcr?: string; ranking?: number };
   tournament: {
     name: string;
     rankId?: number;
@@ -19,6 +19,7 @@ interface Fixture {
 interface PlayerSurfaceStat {
   wins: number;
   losses: number;
+  form: boolean[];
 }
 
 export default function Home() {
@@ -129,7 +130,7 @@ export default function Home() {
           if (!res.ok || cancelled) continue;
           const data = await res.json();
           if (!cancelled && (data.wins ?? 0) + (data.losses ?? 0) > 0) {
-            accumulated[key] = { wins: data.wins, losses: data.losses };
+            accumulated[key] = { wins: data.wins, losses: data.losses, form: data.form ?? [] };
             setPlayerStats(prev => ({ ...prev, [key]: accumulated[key] }));
             try { sessionStorage.setItem(dateKey, JSON.stringify(accumulated)); } catch {}
           }
@@ -343,14 +344,27 @@ export default function Home() {
                           {/* P1 — right aligned */}
                           <div style={{ textAlign: 'right', minWidth: 0 }}>
                             <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {fixture.player1?.ranking && <span style={{ fontSize: 12, fontWeight: 600, color: '#71717a', marginRight: 4 }}>#{fixture.player1.ranking}</span>}
                               {fixture.player1?.name}
                               {fixture.player1?.countryAcr && <span style={{ fontSize: 13, fontWeight: 400, color: '#a1a1aa', marginLeft: 5 }}>({toATPCode(fixture.player1.countryAcr)})</span>}
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 5, marginTop: 5 }}>
-                              {isATP && (p1Stats
-                                ? <span style={{ fontSize: 15, fontWeight: 800, color: p1Stats.wins > p1Stats.losses ? '#34d399' : '#f87171' }}>{p1Stats.wins}–{p1Stats.losses}</span>
-                                : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>
-                              )}
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 3, marginTop: 5 }}>
+                              {isATP && (p1Stats ? (() => {
+                                const total = p1Stats.wins + p1Stats.losses;
+                                const pct = total > 0 ? Math.round(p1Stats.wins / total * 100) : 0;
+                                const col = p1Stats.wins > p1Stats.losses ? '#34d399' : '#f87171';
+                                return <>
+                                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
+                                    <span style={{ fontSize: 15, fontWeight: 800, color: col }}>{pct}%</span>
+                                    <span style={{ fontSize: 11, color: '#52525b' }}>{p1Stats.wins}-{p1Stats.losses}</span>
+                                  </div>
+                                  {p1Stats.form.length > 0 && (
+                                    <div style={{ display: 'flex', gap: 3 }}>
+                                      {p1Stats.form.map((w, j) => <span key={j} style={{ width: 7, height: 7, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
+                                    </div>
+                                  )}
+                                </>;
+                              })() : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>)}
                             </div>
                           </div>
 
@@ -364,14 +378,27 @@ export default function Home() {
                           {/* P2 — left aligned */}
                           <div style={{ textAlign: 'left', minWidth: 0 }}>
                             <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {fixture.player2?.ranking && <span style={{ fontSize: 12, fontWeight: 600, color: '#71717a', marginRight: 4 }}>#{fixture.player2.ranking}</span>}
                               {fixture.player2?.name}
                               {fixture.player2?.countryAcr && <span style={{ fontSize: 13, fontWeight: 400, color: '#a1a1aa', marginLeft: 5 }}>({toATPCode(fixture.player2.countryAcr)})</span>}
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 5, marginTop: 5 }}>
-                              {isATP && (p2Stats
-                                ? <span style={{ fontSize: 15, fontWeight: 800, color: p2Stats.wins > p2Stats.losses ? '#34d399' : '#f87171' }}>{p2Stats.wins}–{p2Stats.losses}</span>
-                                : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>
-                              )}
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 3, marginTop: 5 }}>
+                              {isATP && (p2Stats ? (() => {
+                                const total = p2Stats.wins + p2Stats.losses;
+                                const pct = total > 0 ? Math.round(p2Stats.wins / total * 100) : 0;
+                                const col = p2Stats.wins > p2Stats.losses ? '#34d399' : '#f87171';
+                                return <>
+                                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
+                                    <span style={{ fontSize: 15, fontWeight: 800, color: col }}>{pct}%</span>
+                                    <span style={{ fontSize: 11, color: '#52525b' }}>{p2Stats.wins}-{p2Stats.losses}</span>
+                                  </div>
+                                  {p2Stats.form.length > 0 && (
+                                    <div style={{ display: 'flex', gap: 3 }}>
+                                      {p2Stats.form.map((w, j) => <span key={j} style={{ width: 7, height: 7, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
+                                    </div>
+                                  )}
+                                </>;
+                              })() : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>)}
                             </div>
                           </div>
 

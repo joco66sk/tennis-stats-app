@@ -223,6 +223,27 @@ export default async function MatchSlugPage({
                 <Row label="Ret 2nd Srv Won %" v1={s1.avgReturn2ndWon} v2={s2.avgReturn2ndWon} />
                 <SectionLabel color="#a78bfa">Combined</SectionLabel>
                 <Row label="Serve + Return %" v1={s1.avgServeWon + s1.avgReturnWon} v2={s2.avgServeWon + s2.avgReturnWon} />
+                {/* Win rate bars */}
+                <div style={{ borderTop: '1px solid #27272a', paddingTop: 8, marginTop: 4, paddingBottom: 2 }}>
+                  <div style={{ fontSize: 10, fontWeight: 700, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.08em', textAlign: 'center', marginBottom: 6 }}>Win Rate on {surface}</div>
+                  {[
+                    { name: player1Name.split(' ').pop()!, wins: s1.wins, losses: s1.losses },
+                    { name: player2Name.split(' ').pop()!, wins: s2.wins, losses: s2.losses },
+                  ].map((p, i) => {
+                    const total = p.wins + p.losses;
+                    const pct = total > 0 ? Math.round(p.wins / total * 100) : 0;
+                    const barColor = pct >= 50 ? '#34d399' : '#f87171';
+                    return (
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: i === 0 ? 0 : 5 }}>
+                        <span style={{ fontSize: 10, color: '#a1a1aa', width: 50, textAlign: 'right', flexShrink: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.name}</span>
+                        <div style={{ flex: 1, height: 5, background: '#27272a', borderRadius: 3, overflow: 'hidden' }}>
+                          <div style={{ width: `${pct}%`, height: '100%', background: barColor, borderRadius: 3 }} />
+                        </div>
+                        <span style={{ fontSize: 11, fontWeight: 700, color: barColor, width: 30, flexShrink: 0 }}>{pct}%</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             ) : (
               <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '16px', color: '#52525b', fontSize: 13, textAlign: 'center' }}>

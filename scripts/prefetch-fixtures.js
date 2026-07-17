@@ -63,11 +63,13 @@ function transformEvent(event) {
       id: event.homeTeam.id,
       name: event.homeTeam.name,
       countryAcr: event.homeTeam.country?.alpha2 || undefined,
+      ranking: event.homeTeam.ranking || undefined,
     } : undefined,
     player2: event.awayTeam ? {
       id: event.awayTeam.id,
       name: event.awayTeam.name,
       countryAcr: event.awayTeam.country?.alpha2 || undefined,
+      ranking: event.awayTeam.ranking || undefined,
     } : undefined,
     tournament: {
       id: event.tournament?.uniqueTournament?.id,

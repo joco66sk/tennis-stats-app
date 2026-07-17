@@ -75,7 +75,8 @@ export async function GET(request: NextRequest) {
     const losses = entries.length - wins;
     return NextResponse.json({
       playerId: pid, playerName, surface, wins, losses,
-      matchesWithStats: 0, matches: [], form: [],
+      matchesWithStats: 0, matches: [],
+      form: entries.slice(0, 5).map(e => e.won),
       avg1stServe: 0, avg1stWon: 0, avg2ndWon: 0, avgAces: 0, avgDf: 0,
       avgBpSaved: 0, avgServeWon: 0, avgReturnWon: 0, avgReturn1stWon: 0, avgReturn2ndWon: 0,
     });
