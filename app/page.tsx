@@ -316,9 +316,9 @@ export default function Home() {
                           <div style={{ textAlign: 'right', minWidth: 0 }}>
                             <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                               {fixture.player1?.name}
+                              {fixture.player1?.countryAcr && <span style={{ fontSize: 13, fontWeight: 400, color: '#a1a1aa', marginLeft: 5 }}>({fixture.player1.countryAcr})</span>}
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 5, marginTop: 5 }}>
-                              {fixture.player1?.countryAcr && <span style={{ fontSize: 11, color: '#71717a' }}>{fixture.player1.countryAcr}</span>}
                               {isATP && (p1Stats
                                 ? <span style={{ fontSize: 15, fontWeight: 800, color: p1Stats.wins > p1Stats.losses ? '#34d399' : '#f87171' }}>{p1Stats.wins}–{p1Stats.losses}</span>
                                 : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>
@@ -337,13 +337,13 @@ export default function Home() {
                           <div style={{ textAlign: 'left', minWidth: 0 }}>
                             <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                               {fixture.player2?.name}
+                              {fixture.player2?.countryAcr && <span style={{ fontSize: 13, fontWeight: 400, color: '#a1a1aa', marginLeft: 5 }}>({fixture.player2.countryAcr})</span>}
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 5, marginTop: 5 }}>
                               {isATP && (p2Stats
                                 ? <span style={{ fontSize: 15, fontWeight: 800, color: p2Stats.wins > p2Stats.losses ? '#34d399' : '#f87171' }}>{p2Stats.wins}–{p2Stats.losses}</span>
                                 : <span style={{ fontSize: 12, color: '#3f3f46' }}>—</span>
                               )}
-                              {fixture.player2?.countryAcr && <span style={{ fontSize: 11, color: '#71717a' }}>{fixture.player2.countryAcr}</span>}
                             </div>
                           </div>
 
