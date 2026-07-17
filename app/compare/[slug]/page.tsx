@@ -66,19 +66,30 @@ function SectionLabel({ children, color }: { children: string; color: string }) 
 
 // ── Page ───────────────────────────────────────────────────────────────────────
 
+function parseSlug(slug: string): { p1: string; p2: string; surface: string } | null {
+  // Format: {name1}-{name2}-{DDMMYY}-{surface}-{id1}-{id2}
+  // Parse from the right so hyphenated names work fine
+  const parts = slug.split('-');
+  if (parts.length < 4) return null;
+  const p2 = parts[parts.length - 1];
+  const p1 = parts[parts.length - 2];
+  const surface = parts[parts.length - 3];
+  if (!/^\d+$/.test(p1) || !/^\d+$/.test(p2)) return null;
+  if (!['Clay', 'Hard', 'Grass', 'All'].includes(surface)) return null;
+  return { p1, p2, surface };
+}
+
 export default async function MatchSlugPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ p1?: string; p2?: string; surface?: string }>;
 }) {
   const { slug } = await params;
-  const { p1, p2, surface: surfaceParam } = await searchParams;
 
-  if (!p1 || !p2 || !/^\d+$/.test(p1) || !/^\d+$/.test(p2)) redirect('/');
+  const parsed = parseSlug(slug);
+  if (!parsed) redirect('/');
 
-  const surface = surfaceParam || 'Clay';
+  const { p1, p2, surface } = parsed;
   const interactiveUrl = `/compare?p1=${p1}&p2=${p2}&surface=${surface}`;
 
   const [s1, s2] = await Promise.all([
@@ -98,7 +109,7 @@ export default async function MatchSlugPage({
     name: `${player1Name} vs ${player2Name}`,
     sport: 'Tennis',
     description: narrative || `${player1Name} vs ${player2Name} ${surface} surface stats — serve, return and combined performance data.`,
-    url: `https://tennisdeepstats.com/compare/${slug}?p1=${p1}&p2=${p2}&surface=${surface}`,
+    url: `https://tennisdeepstats.com/compare/${slug}`,
     competitor: [
       { '@type': 'Person', name: player1Name },
       { '@type': 'Person', name: player2Name },
