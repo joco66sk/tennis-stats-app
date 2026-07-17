@@ -275,8 +275,9 @@ export default function Home() {
               </button>
             )}
             <button onClick={handleRefresh} disabled={refreshing || loading}
-              className="text-zinc-600 hover:text-zinc-400 disabled:opacity-30 transition text-base leading-none">
-              ↻
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-400 hover:text-white hover:border-zinc-700 disabled:opacity-30 transition text-sm font-semibold">
+              <span className="text-base leading-none">↻</span>
+              Refresh
             </button>
           </div>
         </div>
