@@ -252,39 +252,32 @@ export default async function MatchSlugPage({
 
 export async function generateMetadata({
   params,
-  searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ p1?: string; p2?: string; surface?: string }>;
 }) {
   const { slug } = await params;
-  const { p1, p2, surface } = await searchParams;
+  const parsed = parseSlug(slug);
 
-  const parts = slug.split('-vs-');
-  const p1Name = toTitleCase(parts[0] || '');
-  const rest = parts[1] || '';
-  const p2Parts = rest.split('-');
-  const p2Name = toTitleCase(p2Parts.slice(0, 2).join('-'));
-  const surf = surface || 'Clay';
-
-  let description = `${p1Name} vs ${p2Name} ${surf} surface stats — serve %, return %, combined serve+return performance. Data from last 10 ATP matches on ${surf.toLowerCase()}.`;
-
-  if (p1 && p2) {
-    try {
-      const s1 = computePlayerSurfaceStats(p1, surf, 10);
-      const s2 = computePlayerSurfaceStats(p2, surf, 10);
-      const narrative = buildNarrative(s1, s2, surf);
-      if (narrative) description = narrative;
-    } catch {}
+  if (!parsed) {
+    return { title: 'Tennis Deep Stats', description: 'ATP tennis serve & return stats.' };
   }
 
+  const { p1, p2, surface } = parsed;
+  const s1 = computePlayerSurfaceStats(p1, surface, 10);
+  const s2 = computePlayerSurfaceStats(p2, surface, 10);
+  const p1Name = s1.playerName || toTitleCase(p1);
+  const p2Name = s2.playerName || toTitleCase(p2);
+  const narrative = buildNarrative(s1, s2, surface);
+  const description = narrative ||
+    `${p1Name} vs ${p2Name} ${surface} surface stats — serve %, return %, combined serve+return performance. Data from last 10 ATP matches on ${surface.toLowerCase()}.`;
+
   return {
-    title: `${p1Name} vs ${p2Name} ${surf} Stats | Tennis Deep Stats`,
+    title: `${p1Name} vs ${p2Name} ${surface} Stats | Tennis Deep Stats`,
     description,
     openGraph: {
-      title: `${p1Name} vs ${p2Name} — ${surf} Stats`,
+      title: `${p1Name} vs ${p2Name} — ${surface} Stats`,
       description,
-      url: `https://tennisdeepstats.com/compare/${slug}?p1=${p1}&p2=${p2}&surface=${surf}`,
+      url: `https://tennisdeepstats.com/compare/${slug}`,
       siteName: 'Tennis Deep Stats',
     },
   };
