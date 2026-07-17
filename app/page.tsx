@@ -169,13 +169,6 @@ export default function Home() {
     return null;
   };
 
-  const getCategoryColor = (label?: string | null) => {
-    if (label === 'GS') return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/40';
-    if (label === '1000') return 'bg-purple-500/20 text-purple-400 border border-purple-500/40';
-    if (label === 'ATP') return 'bg-blue-500/20 text-blue-400 border border-blue-500/40';
-    return 'bg-zinc-700/50 text-zinc-400 border border-zinc-600';
-  };
-
   const formatRound = (roundName?: string) => {
     if (!roundName) return null;
     const n = roundName.toLowerCase();
@@ -190,20 +183,6 @@ export default function Home() {
     if (n.includes('second') || n === 'r2') return 'R2';
     if (n.includes('third') || n === 'r3') return 'R3';
     return roundName;
-  };
-
-  const getSurfaceColor = (surface?: string) => {
-    if (surface === 'Clay') return 'bg-orange-500/20 text-orange-400 border border-orange-500/40';
-    if (surface === 'Hard') return 'bg-blue-500/20 text-blue-400 border border-blue-500/40';
-    if (surface === 'Grass') return 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
-    return 'bg-zinc-700/50 text-zinc-400 border border-zinc-600';
-  };
-
-  const getSurfaceBorder = (surface?: string) => {
-    if (surface === 'Clay') return 'border-l-orange-500';
-    if (surface === 'Hard') return 'border-l-blue-500';
-    if (surface === 'Grass') return 'border-l-emerald-500';
-    return 'border-l-zinc-600';
   };
 
   const formatTime = (dateStr: string) => {
@@ -243,120 +222,122 @@ export default function Home() {
     return bPriority - aPriority;
   });
 
-  return (
-    <div className="min-h-screen bg-zinc-950 p-3 md:p-4">
-      <div className="max-w-4xl mx-auto">
-        <header className="mb-3 flex items-start justify-between">
-          <div>
-            <h1 className="text-2xl font-black text-white tracking-tight uppercase">Tennis Deep Stats</h1>
-            <p className="text-zinc-500 text-xs mt-0.5 uppercase tracking-wider">ATP Matches · Click to compare</p>
-          </div>
-        </header>
+  const getSurfaceAccent = (surface?: string) => {
+    if (surface === 'Clay') return { bg: 'rgba(249,115,22,0.08)', border: '#f97316', dot: '#f97316' };
+    if (surface === 'Grass') return { bg: 'rgba(52,211,153,0.08)', border: '#34d399', dot: '#34d399' };
+    return { bg: 'rgba(96,165,250,0.08)', border: '#60a5fa', dot: '#60a5fa' };
+  };
 
-        <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-2.5 mb-3 flex items-center justify-between">
-          <button onClick={() => changeDate(-1)} className="px-4 py-1.5 text-blue-400 hover:bg-zinc-800 rounded-lg transition text-sm font-semibold">← Prev</button>
-          <div className="text-center">
-            <div className="font-bold text-white text-sm">
-              {selectedDate.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })}
+  return (
+    <div className="min-h-screen bg-zinc-950" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+      <div className="max-w-2xl mx-auto px-3 py-4">
+
+        {/* Header */}
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <div className="text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase mb-0.5">Tennis Deep Stats</div>
+            <div className="text-xl font-black text-white tracking-tight">
+              {selectedDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })}
             </div>
-            {formatDate(selectedDate) !== formatDate(new Date()) && (
-              <button onClick={() => setSelectedDate(new Date())} className="text-xs text-blue-400 hover:underline">Today</button>
-            )}
           </div>
-          <button onClick={() => changeDate(1)} className="px-4 py-1.5 text-blue-400 hover:bg-zinc-800 rounded-lg transition text-sm font-semibold">Next →</button>
+          <div className="flex items-center gap-2">
+            {formatDate(selectedDate) !== formatDate(new Date()) && (
+              <button onClick={() => setSelectedDate(new Date())}
+                className="px-3 py-1.5 text-xs font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-lg hover:bg-blue-500/20 transition">
+                Today
+              </button>
+            )}
+            <button onClick={handleRefresh} disabled={refreshing || loading}
+              className="text-zinc-600 hover:text-zinc-400 disabled:opacity-30 transition text-base leading-none">
+              ↻
+            </button>
+          </div>
         </div>
-        <div className="flex justify-end mb-2">
-          <button onClick={handleRefresh} disabled={refreshing || loading}
-            className="text-xs text-zinc-500 hover:text-zinc-300 disabled:opacity-40 transition">
-            {refreshing ? 'Refreshing...' : '↻ Refresh schedule'}
+
+        {/* Date navigation */}
+        <div className="flex items-center gap-2 mb-4">
+          <button onClick={() => changeDate(-1)}
+            className="flex-1 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-400 hover:text-white hover:border-zinc-700 transition text-sm font-semibold">
+            ← Prev
+          </button>
+          <button onClick={() => changeDate(1)}
+            className="flex-1 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-400 hover:text-white hover:border-zinc-700 transition text-sm font-semibold">
+            Next →
           </button>
         </div>
 
         {loading ? (
-          <div className="text-center py-16 text-zinc-500">Loading matches...</div>
+          <div className="text-center py-20 text-zinc-600 text-sm">Loading matches…</div>
         ) : error ? (
-          <div className="text-center py-16 text-red-400">Failed to load fixtures. API quota might be low.</div>
+          <div className="text-center py-20 text-red-400 text-sm">Failed to load fixtures.</div>
         ) : fixtures.length === 0 ? (
-          <div className="text-center py-16 text-zinc-500">No matches found for this date.</div>
+          <div className="text-center py-20 text-zinc-600 text-sm">No matches scheduled.</div>
         ) : (
-          <div className="space-y-2.5">
+          <div className="space-y-3">
             {sortedGroups.map(([tournamentName, matches]) => {
               const isATP = (matches[0]?.tournament?.rank?.id ?? 0) >= 2;
               const surface = matches[0]?.tournament?.court?.name;
               const categoryLabel = getCategoryLabel(matches[0]?.tournament?.rank?.id);
+              const accent = getSurfaceAccent(surface);
               return (
-                <div key={tournamentName} className={`bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden border-l-4 ${getSurfaceBorder(surface)}`}>
-                  <div className="px-4 py-2 flex items-center justify-between border-b border-zinc-800">
-                    <div className="flex items-center gap-2">
-                      <span className="font-black text-white text-sm uppercase tracking-wide">{tournamentName}</span>
-                      {categoryLabel && (
-                        <span className={`px-2 py-0.5 text-xs font-bold rounded uppercase tracking-wide ${getCategoryColor(categoryLabel)}`}>
-                          {categoryLabel}
-                        </span>
+                <div key={tournamentName}
+                  style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 16, overflow: 'hidden' }}>
+
+                  {/* Tournament header */}
+                  <div style={{ background: accent.bg, borderBottom: '1px solid #27272a', padding: '10px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <span style={{ width: 8, height: 8, borderRadius: '50%', background: accent.dot, display: 'inline-block', flexShrink: 0 }} />
+                      <span style={{ fontWeight: 800, color: '#fff', fontSize: 13, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{tournamentName}</span>
+                      {categoryLabel && categoryLabel !== 'ATP' && (
+                        <span style={{ fontSize: 10, fontWeight: 700, color: accent.dot, background: 'transparent', border: `1px solid ${accent.dot}`, borderRadius: 4, padding: '1px 5px', opacity: 0.9 }}>{categoryLabel}</span>
                       )}
                     </div>
-                    <span className={`px-2 py-0.5 text-xs font-bold rounded uppercase tracking-wide ${getSurfaceColor(surface)}`}>
-                      {surface || 'Unknown'}
-                    </span>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: accent.dot, opacity: 0.85 }}>{surface}</span>
                   </div>
 
+                  {/* Match rows — scoreboard style */}
                   {matches.map((fixture, i) => {
                     const matchSurface = normalizeSurface(fixture.tournament?.court?.name) || 'Hard';
                     const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
                     const p2Stats = fixture.player2?.id ? playerStats[`${fixture.player2.id}-${matchSurface}`] : undefined;
+                    const round = formatRound(fixture.round?.name);
                     return (
                       <Link
                         key={fixture.id}
                         href={matchUrl(fixture)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`block px-4 py-3 hover:bg-zinc-800/60 active:bg-zinc-800 transition ${i > 0 ? 'border-t border-zinc-800' : ''}`}
+                        style={{
+                          display: 'block',
+                          padding: '8px 14px',
+                          borderTop: i > 0 ? '1px solid #27272a' : 'none',
+                          textDecoration: 'none',
+                        }}
+                        className="hover:bg-zinc-800/50 active:bg-zinc-800"
                       >
-                        <div className="grid grid-cols-[1fr_2.5rem_1fr_1.25rem] gap-2 items-start">
-                          <div>
-                            <div className="font-semibold text-white text-sm leading-tight">
-                              {fixture.player1?.name}
-                              {fixture.player1?.countryAcr && (
-                                <span className="text-zinc-500 text-xs ml-1.5">{fixture.player1.countryAcr}</span>
-                              )}
-                            </div>
-                            {isATP && (
-                              <div className="mt-1">
-                                {p1Stats
-                                  ? <span className={`text-sm font-bold ${p1Stats.wins > p1Stats.losses ? 'text-emerald-400' : 'text-red-400'}`}>{p1Stats.wins}W-{p1Stats.losses}L</span>
-                                  : <span className="text-xs text-zinc-600">—</span>
-                                }
-                              </div>
-                            )}
-                          </div>
-
-                          <div className="text-center pt-0.5">
-                            <div className="text-zinc-500 font-mono text-xs leading-tight">{formatTime(fixture.date)}</div>
-                            {(() => { const r = formatRound(fixture.round?.name); return r && <div className="text-zinc-400 text-xs font-bold mt-0.5">{r}</div>; })()}
-                            <div className="text-zinc-600 text-xs font-black mt-0.5">VS</div>
-                          </div>
-
-                          <div className="text-right">
-                            <div className="font-semibold text-white text-sm leading-tight">
-                              {fixture.player2?.countryAcr && (
-                                <span className="text-zinc-500 text-xs mr-1.5">{fixture.player2.countryAcr}</span>
-                              )}
-                              {fixture.player2?.name}
-                            </div>
-                            {isATP && (
-                              <div className="mt-1">
-                                {p2Stats
-                                  ? <span className={`text-sm font-bold ${p2Stats.wins > p2Stats.losses ? 'text-emerald-400' : 'text-red-400'}`}>{p2Stats.wins}W-{p2Stats.losses}L</span>
-                                  : <span className="text-xs text-zinc-600">—</span>
-                                }
-                              </div>
-                            )}
-                          </div>
-
-                          <div className="flex items-start justify-end pt-0.5">
-                            <span className="text-blue-500 font-bold text-base leading-tight">→</span>
-                          </div>
+                        {/* Meta row: time + round */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 5 }}>
+                          <span style={{ fontSize: 10, color: '#52525b', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
+                          {round && <span style={{ fontSize: 10, fontWeight: 700, color: '#3f3f46' }}>{round}</span>}
+                          <span style={{ marginLeft: 'auto', color: '#3f3f46', fontSize: 13 }}>›</span>
                         </div>
+
+                        {/* Player rows */}
+                        {([
+                          { name: fixture.player1?.name, country: fixture.player1?.countryAcr, stats: p1Stats },
+                          { name: fixture.player2?.name, country: fixture.player2?.countryAcr, stats: p2Stats },
+                        ] as const).map((player, pi) => (
+                          <div key={pi} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8, marginTop: pi === 1 ? 3 : 0 }}>
+                            <div style={{ fontSize: 13, fontWeight: 700, color: '#e4e4e7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
+                              {player.name}
+                              {player.country && <span style={{ fontSize: 10, color: '#52525b', marginLeft: 4 }}>{player.country}</span>}
+                            </div>
+                            {isATP && (player.stats
+                              ? <span style={{ fontSize: 12, fontWeight: 800, color: player.stats.wins > player.stats.losses ? '#34d399' : '#f87171', flexShrink: 0 }}>{player.stats.wins}–{player.stats.losses}</span>
+                              : <span style={{ fontSize: 10, color: '#3f3f46', flexShrink: 0 }}>—</span>
+                            )}
+                          </div>
+                        ))}
                       </Link>
                     );
                   })}
@@ -365,19 +346,17 @@ export default function Home() {
             })}
           </div>
         )}
-        <footer className="mt-6 flex items-center justify-between">
+
+        <footer className="mt-8 flex items-center justify-between">
           <img src="https://s01.flagcounter.com/count/JxLo/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="" className="absolute w-px h-px opacity-0 pointer-events-none" />
           <a href="https://info.flagcounter.com/JxLo" target="_blank" rel="noopener noreferrer"
-            className="px-3 py-1.5 bg-zinc-800 border border-zinc-700 rounded-lg text-zinc-500 hover:text-zinc-300 hover:border-zinc-600 transition text-xs font-black tracking-widest uppercase">
+            className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-600 hover:text-zinc-400 transition text-xs font-bold tracking-widest uppercase">
             Visitor Counter
           </a>
-          <div className="text-right">
-            <div className="text-xs text-zinc-600 mb-1">For suggestions & business</div>
-            <a href="mailto:contact@tennisdeepstats.com"
-              className="px-3 py-1.5 bg-zinc-800 border border-zinc-700 rounded-lg text-zinc-500 hover:text-zinc-300 hover:border-zinc-600 transition text-xs font-black tracking-widest uppercase">
-              Contact
-            </a>
-          </div>
+          <a href="mailto:contact@tennisdeepstats.com"
+            className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-600 hover:text-zinc-400 transition text-xs font-bold tracking-widest uppercase">
+            Contact
+          </a>
         </footer>
       </div>
     </div>

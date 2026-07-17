@@ -221,6 +221,7 @@ async function fetchStats(eventId, homeId, awayId) {
     try {
       const res = await fetch(`https://${HOST}/api/tennis/event/${eventId}/statistics`, { headers: HEADERS });
       if (res.status === 429) { await sleep(attempt * 15000); continue; }
+      if (res.status === 405) { await sleep(attempt * 10000); continue; }
       if (!res.ok) break;
       const raw = await res.json();
       const parsed = parseMatchStats(raw, homeId, awayId, eventId);
@@ -229,7 +230,7 @@ async function fetchStats(eventId, homeId, awayId) {
         return 'fetched';
       }
       break;
-    } catch { break; }
+    } catch { if (attempt < 3) { await sleep(2000); continue; } break; }
   }
   return 'none';
 }
@@ -284,10 +285,11 @@ async function main() {
     for (const s of surfaces) {
       const entries = (index[s] || []).filter(e => e.date >= MIN_DATE).slice(0, LAST_N);
       for (const e of entries) {
-        if (e.tournamentId && !statsFileExists(e.tournamentId)) {
+        const eid = e.tournamentId || e.id;
+        if (eid && !statsFileExists(eid)) {
           const homeId = e.homeId ?? pid;
           const awayId = homeId === pid ? e.opponentId : pid;
-          missingStats.push({ eventId: e.tournamentId, homeId, awayId, surface: s, date: e.date });
+          missingStats.push({ eventId: eid, homeId, awayId, surface: s, date: e.date });
         }
       }
     }
@@ -304,7 +306,8 @@ async function main() {
     let fixed = 0;
     for (const { eventId, homeId, awayId } of missingStats) {
       const result = await fetchStats(eventId, homeId, awayId);
-      if (result === 'fetched') { fixed++; repairedStats++; await sleep(DELAY); }
+      if (result === 'fetched') { fixed++; repairedStats++; }
+      if (result !== 'cached') await sleep(DELAY);
     }
     console.log(` ${fixed}/${missingStats.length} fixed`);
   }
