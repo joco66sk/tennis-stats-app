@@ -284,15 +284,15 @@ export default function Home() {
                   style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 16, overflow: 'hidden' }}>
 
                   {/* Tournament header */}
-                  <div style={{ background: accent.bg, borderBottom: '1px solid #27272a', padding: '10px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ background: accent.bg, borderBottom: '1px solid #27272a', padding: '11px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <span style={{ width: 8, height: 8, borderRadius: '50%', background: accent.dot, display: 'inline-block', flexShrink: 0 }} />
-                      <span style={{ fontWeight: 800, color: '#fff', fontSize: 14, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{tournamentName}</span>
+                      <span style={{ width: 9, height: 9, borderRadius: '50%', background: accent.dot, display: 'inline-block', flexShrink: 0 }} />
+                      <span style={{ fontWeight: 800, color: '#fff', fontSize: 16, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{tournamentName}</span>
                       {categoryLabel && categoryLabel !== 'ATP' && (
-                        <span style={{ fontSize: 10, fontWeight: 700, color: accent.dot, background: 'transparent', border: `1px solid ${accent.dot}`, borderRadius: 4, padding: '1px 5px', opacity: 0.9 }}>{categoryLabel}</span>
+                        <span style={{ fontSize: 11, fontWeight: 700, color: accent.dot, background: 'transparent', border: `1px solid ${accent.dot}`, borderRadius: 4, padding: '1px 6px', opacity: 0.9 }}>{categoryLabel}</span>
                       )}
                     </div>
-                    <span style={{ fontSize: 11, fontWeight: 700, color: accent.dot, opacity: 0.85 }}>{surface}</span>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: accent.dot, opacity: 0.85 }}>{surface}</span>
                   </div>
 
                   {/* Match rows — scoreboard style */}
@@ -317,9 +317,9 @@ export default function Home() {
                       >
                         {/* Meta row: time + round */}
                         <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                          <span style={{ fontSize: 12, color: '#71717a', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
-                          {round && <span style={{ fontSize: 12, fontWeight: 700, color: '#52525b' }}>{round}</span>}
-                          <span style={{ marginLeft: 'auto', color: '#3f3f46', fontSize: 15 }}>›</span>
+                          <span style={{ fontSize: 13, color: '#71717a', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
+                          {round && <span style={{ fontSize: 13, fontWeight: 700, color: '#71717a' }}>{round}</span>}
+                          <span style={{ marginLeft: 'auto', color: '#52525b', fontSize: 16 }}>›</span>
                         </div>
 
                         {/* Player rows */}
