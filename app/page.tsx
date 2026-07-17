@@ -369,7 +369,7 @@ export default function Home() {
                                     <span style={{ fontSize: 15, fontWeight: 800, color: col }}>{pct}%</span>
                                     <span style={{ fontSize: 11, color: '#52525b' }}>{p1Stats.wins}-{p1Stats.losses}</span>
                                   </div>
-                                  {p1Stats.form.length > 0 && (
+                                  {(p1Stats.form?.length ?? 0) > 0 && (
                                     <div style={{ display: 'flex', gap: 3 }}>
                                       {p1Stats.form.map((w, j) => <span key={j} style={{ width: 7, height: 7, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
                                     </div>
@@ -403,7 +403,7 @@ export default function Home() {
                                     <span style={{ fontSize: 15, fontWeight: 800, color: col }}>{pct}%</span>
                                     <span style={{ fontSize: 11, color: '#52525b' }}>{p2Stats.wins}-{p2Stats.losses}</span>
                                   </div>
-                                  {p2Stats.form.length > 0 && (
+                                  {(p2Stats.form?.length ?? 0) > 0 && (
                                     <div style={{ display: 'flex', gap: 3 }}>
                                       {p2Stats.form.map((w, j) => <span key={j} style={{ width: 7, height: 7, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
                                     </div>
