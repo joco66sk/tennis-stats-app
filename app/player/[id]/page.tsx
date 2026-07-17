@@ -31,11 +31,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const s = computePlayerSurfaceStats(id, 'Clay', 1);
+  const s = computePlayerSurfaceStats(id, 'Clay', 30);
   const name = s.playerName || `Player ${id}`;
   return {
     title: `${name} Tennis Stats | Tennis Deep Stats`,
-    description: `${name} serve, return and win rate stats on Clay, Hard and Grass. Last 10 ATP matches per surface.`,
+    description: `${name} serve, return and win rate stats on Clay, Hard and Grass. Last 30 ATP matches per surface.`,
     alternates: { canonical: `https://tennisdeepstats.com/player/${id}` },
     openGraph: {
       title: `${name} — Surface Stats`,
@@ -52,9 +52,9 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
   if (!/^\d+$/.test(id)) redirect('/');
 
   const [clay, hard, grass] = [
-    computePlayerSurfaceStats(id, 'Clay', 10),
-    computePlayerSurfaceStats(id, 'Hard', 10),
-    computePlayerSurfaceStats(id, 'Grass', 10),
+    computePlayerSurfaceStats(id, 'Clay', 30),
+    computePlayerSurfaceStats(id, 'Hard', 30),
+    computePlayerSurfaceStats(id, 'Grass', 30),
   ];
 
   const name = clay.playerName || hard.playerName || grass.playerName;
@@ -81,7 +81,7 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
           <h1 style={{ fontSize: 22, fontWeight: 900, color: '#f4f4f5', margin: '0 0 4px', lineHeight: 1.2 }}>
             {name}
           </h1>
-          <div style={{ fontSize: 12, color: '#71717a' }}>ATP Surface Statistics — last 10 matches</div>
+          <div style={{ fontSize: 12, color: '#71717a' }}>ATP Surface Statistics — last 30 matches</div>
         </div>
 
         <PlayerTabs clay={clay} hard={hard} grass={grass} />

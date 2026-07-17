@@ -49,7 +49,7 @@ export async function GET(request: NextRequest) {
   const playerId = searchParams.get('playerId');
   const surface = normalizeSurface(searchParams.get('surface') || 'Clay');
   const limitRaw = parseInt(searchParams.get('limit') || '10');
-  const limit = isNaN(limitRaw) || limitRaw < 1 ? 10 : Math.min(limitRaw, 10);
+  const limit = isNaN(limitRaw) || limitRaw < 1 ? 10 : Math.min(limitRaw, 30);
   const basic = searchParams.get('basic') === 'true';
 
   if (!playerId || !/^\d+$/.test(playerId))

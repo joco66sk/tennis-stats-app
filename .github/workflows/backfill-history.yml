@@ -1,0 +1,48 @@
+name: Backfill Player History
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Matches per surface (default 30)'
+        required: false
+        default: '30'
+  schedule:
+    - cron: '0 2 * * 0'  # 04:00 CEST Sunday — weekly top-up
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create .env.local
+        run: |
+          echo "RAPIDAPI_KEY=${{ secrets.RAPIDAPI_KEY }}" > .env.local
+          echo "RAPIDAPI_HOST=tennisapi1.p.rapidapi.com" >> .env.local
+
+      - name: Backfill match history for top players
+        run: node scripts/backfill-history.js --limit=${{ github.event.inputs.limit || '30' }}
+
+      - name: Commit and push
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cache/
+          git diff --staged --quiet && echo "Nothing to commit" || git commit -m "Backfill player history $(date -u +%Y-%m-%d)"
+          git push

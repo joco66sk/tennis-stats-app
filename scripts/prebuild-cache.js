@@ -24,9 +24,9 @@ const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 const DELAY_BETWEEN_PAGES = 400;
 const DELAY_BETWEEN_PLAYERS = 800;
-const TARGET_PER_SURFACE = 10;
-const INDEX_LIMIT = 10;
-const MAX_PAGES = 20; // 20 pages × ~30 events = ~600 events to find 10 per surface
+const TARGET_PER_SURFACE = 30;
+const INDEX_LIMIT = 30;
+const MAX_PAGES = 20; // 20 pages × ~30 events = ~600 events to find 30 per surface
 const PAGE_SIZE = 20; // Sofascore returns ~20-30 events per page
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
