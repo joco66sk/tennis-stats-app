@@ -185,6 +185,33 @@ export default function Home() {
     return roundName;
   };
 
+  const toATPCode = (iso2?: string): string => {
+    if (!iso2) return '';
+    const map: Record<string, string> = {
+      AF:'AFG',AL:'ALB',DZ:'ALG',AD:'AND',AO:'ANG',AG:'ANT',AR:'ARG',AM:'ARM',AU:'AUS',AT:'AUT',
+      AZ:'AZE',BS:'BAH',BH:'BRN',BD:'BAN',BB:'BAR',BY:'BLR',BE:'BEL',BZ:'BIZ',BJ:'BEN',BT:'BHU',
+      BO:'BOL',BA:'BIH',BW:'BOT',BR:'BRA',BN:'BRU',BG:'BUL',BF:'BUR',BI:'BDI',CV:'CPV',KH:'CAM',
+      CM:'CMR',CA:'CAN',CF:'CAF',TD:'CHA',CL:'CHI',CN:'CHN',CO:'COL',KM:'COM',CG:'CGO',CD:'COD',
+      CR:'CRC',HR:'CRO',CU:'CUB',CY:'CYP',CZ:'CZE',DK:'DEN',DJ:'DJI',DM:'DMA',DO:'DOM',EC:'ECU',
+      EG:'EGY',SV:'ESA',GQ:'GEQ',ER:'ERI',EE:'EST',SZ:'SWZ',ET:'ETH',FJ:'FIJ',FI:'FIN',FR:'FRA',
+      GA:'GAB',GM:'GAM',GE:'GEO',DE:'GER',GH:'GHA',GR:'GRE',GD:'GRN',GT:'GUA',GN:'GUI',GW:'GBS',
+      GY:'GUY',HT:'HAI',HN:'HON',HK:'HKG',HU:'HUN',IS:'ISL',IN:'IND',ID:'INA',IR:'IRI',IQ:'IRQ',
+      IE:'IRL',IL:'ISR',IT:'ITA',JM:'JAM',JP:'JPN',JO:'JOR',KZ:'KAZ',KE:'KEN',KI:'KIR',KP:'PRK',
+      KR:'KOR',KW:'KUW',KG:'KGZ',LA:'LAO',LV:'LAT',LB:'LIB',LS:'LES',LR:'LBR',LY:'LBA',LI:'LIE',
+      LT:'LTU',LU:'LUX',MO:'MAC',MG:'MAD',MW:'MAW',MY:'MAS',MV:'MDV',ML:'MLI',MT:'MLT',MH:'MHL',
+      MR:'MTN',MU:'MRI',MX:'MEX',FM:'FSM',MD:'MDA',MC:'MON',MN:'MGL',ME:'MNE',MA:'MAR',MZ:'MOZ',
+      MM:'MYA',NA:'NAM',NR:'NRU',NP:'NEP',NL:'NED',NZ:'NZL',NI:'NCA',NE:'NIG',NG:'NGR',MK:'MKD',
+      NO:'NOR',OM:'OMA',PK:'PAK',PW:'PLW',PA:'PAN',PG:'PNG',PY:'PAR',PE:'PER',PH:'PHI',PL:'POL',
+      PT:'POR',PR:'PUR',QA:'QAT',RO:'ROU',RU:'RUS',RW:'RWA',KN:'SKN',LC:'LCA',VC:'VIN',WS:'SAM',
+      SM:'SMR',ST:'STP',SA:'KSA',SN:'SEN',RS:'SRB',SC:'SEY',SL:'SLE',SG:'SGP',SK:'SVK',SI:'SLO',
+      SB:'SOL',SO:'SOM',ZA:'RSA',SS:'SSD',ES:'ESP',LK:'SRI',SD:'SUD',SR:'SUR',SE:'SWE',CH:'SUI',
+      SY:'SYR',TW:'TPE',TJ:'TJK',TZ:'TAN',TH:'THA',TL:'TLS',TG:'TOG',TO:'TGA',TT:'TTO',TN:'TUN',
+      TR:'TUR',TM:'TKM',TV:'TUV',UG:'UGA',UA:'UKR',AE:'UAE',GB:'GBR',US:'USA',UY:'URU',UZ:'UZB',
+      VU:'VAN',VE:'VEN',VN:'VIE',YE:'YEM',ZM:'ZAM',ZW:'ZIM',
+    };
+    return map[iso2.toUpperCase()] || iso2;
+  };
+
   const formatTime = (dateStr: string) => {
     return new Date(dateStr).toLocaleTimeString('en-GB', {
       hour: '2-digit',
@@ -316,7 +343,7 @@ export default function Home() {
                           <div style={{ textAlign: 'right', minWidth: 0 }}>
                             <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                               {fixture.player1?.name}
-                              {fixture.player1?.countryAcr && <span style={{ fontSize: 13, fontWeight: 400, color: '#a1a1aa', marginLeft: 5 }}>({fixture.player1.countryAcr})</span>}
+                              {fixture.player1?.countryAcr && <span style={{ fontSize: 13, fontWeight: 400, color: '#a1a1aa', marginLeft: 5 }}>({toATPCode(fixture.player1.countryAcr)})</span>}
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 5, marginTop: 5 }}>
                               {isATP && (p1Stats
@@ -337,7 +364,7 @@ export default function Home() {
                           <div style={{ textAlign: 'left', minWidth: 0 }}>
                             <div style={{ fontSize: 17, fontWeight: 700, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                               {fixture.player2?.name}
-                              {fixture.player2?.countryAcr && <span style={{ fontSize: 13, fontWeight: 400, color: '#a1a1aa', marginLeft: 5 }}>({fixture.player2.countryAcr})</span>}
+                              {fixture.player2?.countryAcr && <span style={{ fontSize: 13, fontWeight: 400, color: '#a1a1aa', marginLeft: 5 }}>({toATPCode(fixture.player2.countryAcr)})</span>}
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 5, marginTop: 5 }}>
                               {isATP && (p2Stats
