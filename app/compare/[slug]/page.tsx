@@ -122,54 +122,50 @@ export default async function MatchSlugPage({
 
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
-        {/* Header */}
-        <div style={{ marginBottom: 16 }}>
+        {/* Header + record cards combined */}
+        <div style={{ marginBottom: 12 }}>
           <Link href="/" style={{ color: '#71717a', fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>← Fixtures</Link>
-          <div style={{ marginTop: 12 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#71717a' }}>Tennis Deep Stats</div>
-            <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-              {player1Name} <span style={{ color: '#52525b' }}>vs</span> {player2Name}
-            </h1>
-            <div style={{ marginTop: 4, fontSize: 13, color: '#71717a' }}>
-              <span style={{ color: sc, fontWeight: 700 }}>{surface}</span> · last 10 matches
-            </div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <Link
-          href={interactiveUrl}
-          style={{ display: 'block', background: '#1d4ed8', color: '#fff', textAlign: 'center', padding: '10px 16px', borderRadius: 10, fontWeight: 700, fontSize: 13, textDecoration: 'none', marginBottom: 16 }}
-        >
-          View Interactive Comparison + Individual Match Stats →
-        </Link>
-
-        {/* Player record cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 16 }}>
-          {[s1, s2].map((s, i) => (
-            <div key={i} style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '12px 14px' }}>
-              <div style={{ fontWeight: 900, fontSize: 14, marginBottom: 4 }}>{s.playerName}</div>
-              {s.wins + s.losses === 0 ? (
-                <div style={{ fontSize: 12, color: '#52525b' }}>No {surface.toLowerCase()} history</div>
+          <div style={{ marginTop: 10, fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#71717a' }}>Tennis Deep Stats</div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', gap: 8, marginTop: 8, alignItems: 'center' }}>
+            {/* P1 */}
+            <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}>
+              <div style={{ fontWeight: 900, fontSize: 14 }}>{player1Name}</div>
+              {s1.wins + s1.losses === 0 ? (
+                <div style={{ fontSize: 12, color: '#52525b', marginTop: 2 }}>No {surface.toLowerCase()} data</div>
               ) : (
                 <>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: s.wins >= s.losses ? '#34d399' : '#f87171' }}>
-                    {s.wins}W–{s.losses}L
-                  </div>
-                  <div style={{ display: 'flex', gap: 4, marginTop: 6 }}>
-                    {s.form.map((w, j) => (
-                      <span key={j} style={{ width: 10, height: 10, borderRadius: '50%', display: 'inline-block', background: w ? '#34d399' : '#ef4444' }} />
-                    ))}
+                  <div style={{ fontSize: 13, fontWeight: 700, color: s1.wins >= s1.losses ? '#34d399' : '#f87171', marginTop: 2 }}>{s1.wins}W–{s1.losses}L</div>
+                  <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
+                    {s1.form.map((w, j) => <span key={j} style={{ width: 9, height: 9, borderRadius: '50%', display: 'inline-block', background: w ? '#34d399' : '#ef4444' }} />)}
                   </div>
                 </>
               )}
             </div>
-          ))}
+            {/* VS */}
+            <div style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, color: '#52525b' }}>
+              <div>vs</div>
+              <div style={{ fontSize: 10, color: sc, fontWeight: 700, marginTop: 4 }}>{surface}</div>
+            </div>
+            {/* P2 */}
+            <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}>
+              <div style={{ fontWeight: 900, fontSize: 14 }}>{player2Name}</div>
+              {s2.wins + s2.losses === 0 ? (
+                <div style={{ fontSize: 12, color: '#52525b', marginTop: 2 }}>No {surface.toLowerCase()} data</div>
+              ) : (
+                <>
+                  <div style={{ fontSize: 13, fontWeight: 700, color: s2.wins >= s2.losses ? '#34d399' : '#f87171', marginTop: 2 }}>{s2.wins}W–{s2.losses}L</div>
+                  <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
+                    {s2.form.map((w, j) => <span key={j} style={{ width: 9, height: 9, borderRadius: '50%', display: 'inline-block', background: w ? '#34d399' : '#ef4444' }} />)}
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Stats panel */}
         {hasData && (
-          <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '12px 16px', marginBottom: 16 }}>
+          <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '12px 16px', marginBottom: 12 }}>
 
             {/* Column headers */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 9rem 1fr', marginBottom: 4 }}>
@@ -198,10 +194,18 @@ export default async function MatchSlugPage({
 
         {/* Narrative paragraph for SEO */}
         {narrative && (
-          <p style={{ fontSize: 13, color: '#a1a1aa', lineHeight: 1.6, marginBottom: 16, background: '#18181b', border: '1px solid #27272a', borderRadius: 10, padding: '12px 14px' }}>
+          <p style={{ fontSize: 13, color: '#a1a1aa', lineHeight: 1.6, marginBottom: 12, background: '#18181b', border: '1px solid #27272a', borderRadius: 10, padding: '12px 14px' }}>
             {narrative}
           </p>
         )}
+
+        {/* CTA */}
+        <Link
+          href={interactiveUrl}
+          style={{ display: 'block', background: '#1d4ed8', color: '#fff', textAlign: 'center', padding: '10px 16px', borderRadius: 10, fontWeight: 700, fontSize: 13, textDecoration: 'none', marginBottom: 12 }}
+        >
+          View Interactive Comparison + Individual Match Stats →
+        </Link>
 
         {/* Match history */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
@@ -226,14 +230,7 @@ export default async function MatchSlugPage({
           ))}
         </div>
 
-        {/* Footer CTA */}
-        <div style={{ marginTop: 16, textAlign: 'center' }}>
-          <Link href={interactiveUrl} style={{ color: '#60a5fa', fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>
-            Click individual matches to see match-level stats →
-          </Link>
-        </div>
-
-        <div style={{ marginTop: 20, textAlign: 'center', fontSize: 11, color: '#3f3f46' }}>
+        <div style={{ marginTop: 16, textAlign: 'center', fontSize: 11, color: '#3f3f46' }}>
           tennisdeepstats.com — serve &amp; return stats before every ATP/WTA match
         </div>
 
