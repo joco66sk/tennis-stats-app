@@ -103,16 +103,25 @@ export default async function MatchSlugPage({
   const narrative = buildNarrative(s1, s2, surface);
   const sc = surfaceColor(surface);
 
+  // Extract startDate from slug (DDMMYY at position -3 from end before surface/id1/id2)
+  const slugParts = slug.split('-');
+  const ddmmyy = slugParts[slugParts.length - 4] || '';
+  const startDate = ddmmyy.length === 6
+    ? `20${ddmmyy.slice(4, 6)}-${ddmmyy.slice(2, 4)}-${ddmmyy.slice(0, 2)}`
+    : new Date().toISOString().split('T')[0];
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SportsEvent',
     name: `${player1Name} vs ${player2Name}`,
     sport: 'Tennis',
+    startDate,
+    location: { '@type': 'Place', name: `${surface} Court` },
     description: narrative || `${player1Name} vs ${player2Name} ${surface} surface stats — serve, return and combined performance data.`,
     url: `https://tennisdeepstats.com/compare/${slug}`,
     competitor: [
-      { '@type': 'Person', name: player1Name },
-      { '@type': 'Person', name: player2Name },
+      { '@type': 'SportsTeam', name: player1Name },
+      { '@type': 'SportsTeam', name: player2Name },
     ],
   };
 
