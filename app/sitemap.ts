@@ -66,6 +66,32 @@ function fixtureUrls(): MetadataRoute.Sitemap {
   return entries;
 }
 
+function playerUrls(): MetadataRoute.Sitemap {
+  const dates = dateRange(0, 14);
+  const seen = new Set<string>();
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const date of dates) {
+    const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
+    if (!fs.existsSync(fp)) continue;
+    let fixtures: any[];
+    try { fixtures = JSON.parse(fs.readFileSync(fp, 'utf-8')).fixtures ?? []; }
+    catch { continue; }
+
+    for (const f of fixtures) {
+      for (const p of [f.player1, f.player2]) {
+        if (!p?.id) continue;
+        const url = `${BASE}/player/${p.id}`;
+        if (seen.has(url)) continue;
+        seen.add(url);
+        entries.push({ url, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 });
+      }
+    }
+  }
+
+  return entries;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -75,5 +101,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...fixtureUrls(),
+    ...playerUrls(),
   ];
 }

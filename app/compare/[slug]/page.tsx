@@ -157,38 +157,42 @@ export default async function MatchSlugPage({
           <div style={{ marginTop: 10, fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#71717a' }}>Tennis Deep Stats</div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', gap: 8, marginTop: 8, alignItems: 'center' }}>
             {/* P1 */}
-            <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}>
-              <div style={{ fontWeight: 900, fontSize: 14 }}>{player1Name}</div>
-              {s1.wins + s1.losses === 0 ? (
-                <div style={{ fontSize: 12, color: '#52525b', marginTop: 2 }}>No {surface.toLowerCase()} data</div>
-              ) : (
-                <>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: s1.wins >= s1.losses ? '#34d399' : '#f87171', marginTop: 2 }}>{s1.wins}W–{s1.losses}L</div>
-                  <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
-                    {s1.form.map((w, j) => <span key={j} style={{ width: 9, height: 9, borderRadius: '50%', display: 'inline-block', background: w ? '#34d399' : '#ef4444' }} />)}
-                  </div>
-                </>
-              )}
-            </div>
+            <Link href={`/player/${p1}`} style={{ textDecoration: 'none' }}>
+              <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px', cursor: 'pointer' }}>
+                <div style={{ fontWeight: 900, fontSize: 14, color: '#f4f4f5' }}>{player1Name}</div>
+                {s1.wins + s1.losses === 0 ? (
+                  <div style={{ fontSize: 12, color: '#52525b', marginTop: 2 }}>No {surface.toLowerCase()} data</div>
+                ) : (
+                  <>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: s1.wins >= s1.losses ? '#34d399' : '#f87171', marginTop: 2 }}>{s1.wins}W–{s1.losses}L</div>
+                    <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
+                      {s1.form.map((w, j) => <span key={j} style={{ width: 9, height: 9, borderRadius: '50%', display: 'inline-block', background: w ? '#34d399' : '#ef4444' }} />)}
+                    </div>
+                  </>
+                )}
+              </div>
+            </Link>
             {/* VS */}
             <div style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, color: '#52525b' }}>
               <div>vs</div>
               <div style={{ fontSize: 10, color: sc, fontWeight: 700, marginTop: 4 }}>{surface}</div>
             </div>
             {/* P2 */}
-            <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}>
-              <div style={{ fontWeight: 900, fontSize: 14 }}>{player2Name}</div>
-              {s2.wins + s2.losses === 0 ? (
-                <div style={{ fontSize: 12, color: '#52525b', marginTop: 2 }}>No {surface.toLowerCase()} data</div>
-              ) : (
-                <>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: s2.wins >= s2.losses ? '#34d399' : '#f87171', marginTop: 2 }}>{s2.wins}W–{s2.losses}L</div>
-                  <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
-                    {s2.form.map((w, j) => <span key={j} style={{ width: 9, height: 9, borderRadius: '50%', display: 'inline-block', background: w ? '#34d399' : '#ef4444' }} />)}
-                  </div>
-                </>
-              )}
-            </div>
+            <Link href={`/player/${p2}`} style={{ textDecoration: 'none' }}>
+              <div style={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px', cursor: 'pointer' }}>
+                <div style={{ fontWeight: 900, fontSize: 14, color: '#f4f4f5' }}>{player2Name}</div>
+                {s2.wins + s2.losses === 0 ? (
+                  <div style={{ fontSize: 12, color: '#52525b', marginTop: 2 }}>No {surface.toLowerCase()} data</div>
+                ) : (
+                  <>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: s2.wins >= s2.losses ? '#34d399' : '#f87171', marginTop: 2 }}>{s2.wins}W–{s2.losses}L</div>
+                    <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
+                      {s2.form.map((w, j) => <span key={j} style={{ width: 9, height: 9, borderRadius: '50%', display: 'inline-block', background: w ? '#34d399' : '#ef4444' }} />)}
+                    </div>
+                  </>
+                )}
+              </div>
+            </Link>
           </div>
         </div>
 
