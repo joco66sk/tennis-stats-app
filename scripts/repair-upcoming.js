@@ -155,6 +155,7 @@ async function fetchAndSaveIndex(playerId, targetSurface) {
       try {
         const res = await fetch(url, { headers: HEADERS });
         if (res.status === 429) { await sleep(attempt * 15000); continue; }
+        if (res.status === 405) { await sleep(attempt * 5000); continue; }
         if (!res.ok) break;
         events = (await res.json()).events ?? [];
         break;

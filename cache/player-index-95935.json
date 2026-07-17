@@ -100,15 +100,15 @@
       "result": "6-2 4-6 7-6"
     },
     {
-      "id": "13930025",
-      "date": "2025-05-27",
-      "tournamentId": 13930025,
-      "homeId": 163504,
+      "id": "13919829",
+      "date": "2025-06-02",
+      "tournamentId": 13919829,
+      "homeId": 95935,
       "tournamentName": "Roland Garros, Men",
-      "opponentId": 163504,
-      "opponentName": "Daniil Medvedev",
-      "won": true,
-      "result": "7-5 6-3 4-6 1-6 7-5"
+      "opponentId": 14882,
+      "opponentName": "Novak Djokovic",
+      "won": false,
+      "result": "2-6 3-6 2-6"
     }
   ],
   "Hard": [
@@ -190,6 +190,28 @@
       "result": "6-7 4-6"
     },
     {
+      "id": "14946188",
+      "date": "2025-10-27",
+      "tournamentId": 14946188,
+      "homeId": 95935,
+      "tournamentName": "Paris",
+      "opponentId": 221806,
+      "opponentName": "Sebastián Báez",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
+      "id": "14896629",
+      "date": "2025-10-23",
+      "tournamentId": 14896629,
+      "homeId": 112783,
+      "tournamentName": "Vienna",
+      "opponentId": 112783,
+      "opponentName": "Matteo Berrettini",
+      "won": false,
+      "result": "6-7 7-6 4-6"
+    },
+    {
       "id": "14909969",
       "date": "2025-10-21",
       "tournamentId": 14909969,
@@ -199,28 +221,6 @@
       "opponentName": "Andrey Rublev",
       "won": true,
       "result": "6-2 6-7 6-2"
-    },
-    {
-      "id": "14749446",
-      "date": "2025-09-26",
-      "tournamentId": 14749446,
-      "homeId": 163504,
-      "tournamentName": "Beijing",
-      "opponentId": 163504,
-      "opponentName": "Daniil Medvedev",
-      "won": false,
-      "result": "3-6 4-6"
-    },
-    {
-      "id": "14192217",
-      "date": "2025-07-24",
-      "tournamentId": 14192217,
-      "homeId": 235576,
-      "tournamentName": "Washington",
-      "opponentId": 235576,
-      "opponentName": "Brandon Nakashima",
-      "won": false,
-      "result": "6-7 3-6"
     }
   ],
   "Grass": [
@@ -258,6 +258,6 @@
       "result": "6-7 6-1 1-6"
     }
   ],
-  "updatedAt": 1784237025715,
+  "updatedAt": 1784245602484,
   "playerName": "Cameron Norrie"
 }

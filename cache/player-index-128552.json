@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "16214939",
+      "date": "2026-05-26",
+      "tournamentId": 16214939,
+      "homeId": 128552,
+      "tournamentName": "Roland Garros, Men",
+      "opponentId": 298247,
+      "opponentName": "Zachary Svajda",
+      "won": false,
+      "result": "6-3 3-6 6-7 5-7"
+    },
+    {
       "id": "16174806",
       "date": "2026-05-21",
       "tournamentId": 16174806,
@@ -10,6 +21,28 @@
       "opponentName": "Casper Ruud",
       "won": false,
       "result": "4-6 3-6"
+    },
+    {
+      "id": "16174802",
+      "date": "2026-05-20",
+      "tournamentId": 16174802,
+      "homeId": 136042,
+      "tournamentName": "Geneva",
+      "opponentId": 136042,
+      "opponentName": "Taylor Fritz",
+      "won": true,
+      "result": "6-4 6-4"
+    },
+    {
+      "id": "16196167",
+      "date": "2026-05-19",
+      "tournamentId": 16196167,
+      "homeId": 128552,
+      "tournamentName": "Geneva",
+      "opponentId": 206602,
+      "opponentName": "Clement Tabur",
+      "won": true,
+      "result": "7-6 6-7 6-4"
     },
     {
       "id": "16098941",
@@ -32,6 +65,17 @@
       "opponentName": "Jakub Menšik",
       "won": true,
       "result": "6-3 2-6 6-4"
+    },
+    {
+      "id": "16125575",
+      "date": "2026-05-07",
+      "tournamentId": 16125575,
+      "homeId": 128552,
+      "tournamentName": "ATP Rome Masters",
+      "opponentId": 112783,
+      "opponentName": "Matteo Berrettini",
+      "won": true,
+      "result": "6-2 6-3"
     },
     {
       "id": "15944218",
@@ -65,50 +109,6 @@
       "opponentName": "Patrick Kypson",
       "won": true,
       "result": "4-6 6-4 6-3"
-    },
-    {
-      "id": "13919856",
-      "date": "2025-06-01",
-      "tournamentId": 13919856,
-      "homeId": 128552,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 138546,
-      "opponentName": "Tommy Paul",
-      "won": false,
-      "result": "3-6 3-6 3-6"
-    },
-    {
-      "id": "13838232",
-      "date": "2025-05-11",
-      "tournamentId": 13838232,
-      "homeId": 128552,
-      "tournamentName": "ATP Rome Masters",
-      "opponentId": 163504,
-      "opponentName": "Daniil Medvedev",
-      "won": false,
-      "result": "4-6 1-6"
-    },
-    {
-      "id": "13773896",
-      "date": "2025-04-25",
-      "tournamentId": 13773896,
-      "homeId": 128552,
-      "tournamentName": "ATP Madrid Masters",
-      "opponentId": 163480,
-      "opponentName": "Alexander Bublik",
-      "won": false,
-      "result": "4-6 6-7"
-    },
-    {
-      "id": "11204467",
-      "date": "2023-04-19",
-      "tournamentId": 11204467,
-      "homeId": 128552,
-      "tournamentName": "Banja Luka",
-      "opponentId": 145130,
-      "opponentName": "Alex Molčan",
-      "won": false,
-      "result": "6-7 6-4 5-7"
     }
   ],
   "Hard": [
@@ -201,6 +201,17 @@
       "result": "4-6 3-6"
     },
     {
+      "id": "14909974",
+      "date": "2025-10-22",
+      "tournamentId": 14909974,
+      "homeId": 128552,
+      "tournamentName": "Vienna",
+      "opponentId": 112783,
+      "opponentName": "Matteo Berrettini",
+      "won": false,
+      "result": "6-7 3-6"
+    },
+    {
       "id": "14494893",
       "date": "2025-08-28",
       "tournamentId": 14494893,
@@ -210,17 +221,6 @@
       "opponentName": "Jannik Sinner",
       "won": false,
       "result": "3-6 2-6 2-6"
-    },
-    {
-      "id": "14265547",
-      "date": "2025-08-01",
-      "tournamentId": 14265547,
-      "homeId": 163504,
-      "tournamentName": "Toronto",
-      "opponentId": 163504,
-      "opponentName": "Daniil Medvedev",
-      "won": true,
-      "result": "5-7 6-4 6-4"
     }
   ],
   "Grass": [
@@ -258,6 +258,6 @@
       "result": "4-6 2-6"
     }
   ],
-  "updatedAt": 1784237025730,
+  "updatedAt": 1784245602494,
   "playerName": "Alexei Popyrin"
 }

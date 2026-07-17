@@ -36,6 +36,17 @@
   ],
   "Hard": [
     {
+      "id": "15708861",
+      "date": "2026-03-22",
+      "tournamentId": 15708861,
+      "homeId": 130400,
+      "tournamentName": "Miami",
+      "opponentId": 136042,
+      "opponentName": "Taylor Fritz",
+      "won": false,
+      "result": "3-6 4-6"
+    },
+    {
       "id": "15757468",
       "date": "2026-03-19",
       "tournamentId": 15757468,
@@ -113,6 +124,17 @@
       "result": "7-6 6-7 6-3"
     },
     {
+      "id": "14914055",
+      "date": "2025-10-21",
+      "tournamentId": 14914055,
+      "homeId": 221806,
+      "tournamentName": "Basel",
+      "opponentId": 221806,
+      "opponentName": "Sebastián Báez",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
       "id": "14910753",
       "date": "2025-10-19",
       "tournamentId": 14910753,
@@ -122,28 +144,6 @@
       "opponentName": "Botic Van de Zandschulp",
       "won": true,
       "result": "6-4 6-4"
-    },
-    {
-      "id": "14278227",
-      "date": "2025-07-27",
-      "tournamentId": 14278227,
-      "homeId": 83397,
-      "tournamentName": "Toronto",
-      "opponentId": 83397,
-      "opponentName": "Sebastian Ofner",
-      "won": true,
-      "result": "7-6 7-5"
-    },
-    {
-      "id": "14192223",
-      "date": "2025-07-23",
-      "tournamentId": 14192223,
-      "homeId": 163504,
-      "tournamentName": "Washington",
-      "opponentId": 163504,
-      "opponentName": "Daniil Medvedev",
-      "won": false,
-      "result": "6-3 5-7 1-6"
     }
   ],
   "Grass": [
@@ -192,6 +192,6 @@
       "result": "7-6 7-6"
     }
   ],
-  "updatedAt": 1784237025731,
+  "updatedAt": 1784245602494,
   "playerName": "Reilly Opelka"
 }

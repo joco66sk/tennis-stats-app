@@ -100,15 +100,15 @@
       "result": "6-4 6-3"
     },
     {
-      "id": "13711170",
-      "date": "2025-04-09",
-      "tournamentId": 13711170,
-      "homeId": 254742,
+      "id": "13711160",
+      "date": "2025-04-10",
+      "tournamentId": 13711160,
+      "homeId": 112783,
       "tournamentName": "Monte Carlo",
-      "opponentId": 254742,
-      "opponentName": "Jiri Lehečka",
+      "opponentId": 112783,
+      "opponentName": "Matteo Berrettini",
       "won": true,
-      "result": "1-6 7-5 6-2"
+      "result": "6-3 6-3"
     }
   ],
   "Hard": [
@@ -122,6 +122,28 @@
       "opponentName": "Marton Fucsovics",
       "won": false,
       "result": "5-7 1-6"
+    },
+    {
+      "id": "15345271",
+      "date": "2026-01-28",
+      "tournamentId": 15345271,
+      "homeId": 261015,
+      "tournamentName": "Australian Open, Men",
+      "opponentId": 14882,
+      "opponentName": "Novak Djokovic",
+      "won": false,
+      "result": "6-4 6-3 1-3"
+    },
+    {
+      "id": "15345270",
+      "date": "2026-01-26",
+      "tournamentId": 15345270,
+      "homeId": 261015,
+      "tournamentName": "Australian Open, Men",
+      "opponentId": 136042,
+      "opponentName": "Taylor Fritz",
+      "won": true,
+      "result": "6-2 7-5 6-4"
     },
     {
       "id": "15345243",
@@ -179,6 +201,17 @@
       "result": "6-7 6-2 6-4"
     },
     {
+      "id": "14956421",
+      "date": "2025-11-08",
+      "tournamentId": 14956421,
+      "homeId": 14882,
+      "tournamentName": "ATP Athens, Greece Men Singles",
+      "opponentId": 14882,
+      "opponentName": "Novak Djokovic",
+      "won": false,
+      "result": "6-4 3-6 5-7"
+    },
+    {
       "id": "14956419",
       "date": "2025-11-06",
       "tournamentId": 14956419,
@@ -188,42 +221,21 @@
       "opponentName": "Alexandre Muller",
       "won": true,
       "result": "6-2 6-4"
-    },
-    {
-      "id": "14956417",
-      "date": "2025-11-05",
-      "tournamentId": 14956417,
-      "homeId": 14548,
-      "tournamentName": "ATP Athens, Greece Men Singles",
-      "opponentId": 14548,
-      "opponentName": "Stan Wawrinka",
-      "won": true,
-      "result": "4-6 7-6 6-4"
-    },
-    {
-      "id": "14957714",
-      "date": "2025-10-29",
-      "tournamentId": 14957714,
-      "homeId": 261015,
-      "tournamentName": "Paris",
-      "opponentId": 104847,
-      "opponentName": "Lorenzo Sonego",
-      "won": false,
-      "result": "6-3 3-6 1-6"
-    },
-    {
-      "id": "14851754",
-      "date": "2025-10-16",
-      "tournamentId": 14851754,
-      "homeId": 261015,
-      "tournamentName": "ATP Brussels, Belgium Singles",
-      "opponentId": 47975,
-      "opponentName": "Yannick Hanfmann",
-      "won": true,
-      "result": "7-6 7-5"
     }
   ],
-  "Grass": [],
-  "updatedAt": 1784237025805,
+  "Grass": [
+    {
+      "id": "12396454",
+      "date": "2024-06-15",
+      "tournamentId": 12396454,
+      "homeId": 261015,
+      "tournamentName": "Stuttgart",
+      "opponentId": 112783,
+      "opponentName": "Matteo Berrettini",
+      "won": false,
+      "result": "4-6 0-6"
+    }
+  ],
+  "updatedAt": 1784245602551,
   "playerName": "Lorenzo Musetti"
 }

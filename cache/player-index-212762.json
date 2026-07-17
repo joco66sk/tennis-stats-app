@@ -56,6 +56,17 @@
       "result": "5-7 2-6"
     },
     {
+      "id": "15981268",
+      "date": "2026-04-19",
+      "tournamentId": 15981268,
+      "homeId": 212762,
+      "tournamentName": "Tallahassee, USA",
+      "opponentId": 206602,
+      "opponentName": "Clement Tabur",
+      "won": false,
+      "result": "4-6 0-1"
+    },
+    {
       "id": "15624021",
       "date": "2026-03-04",
       "tournamentId": 15624021,
@@ -98,20 +109,21 @@
       "opponentName": "Adolfo Daniel Vallejo",
       "won": false,
       "result": "6-3 3-6 1-6"
-    },
-    {
-      "id": "15430156",
-      "date": "2026-01-28",
-      "tournamentId": 15430156,
-      "homeId": 193644,
-      "tournamentName": "Concepcion, Chile",
-      "opponentId": 193644,
-      "opponentName": "Nikolas Sanchez Izquierdo",
-      "won": true,
-      "result": "6-4 6-2"
     }
   ],
-  "Hard": [],
+  "Hard": [
+    {
+      "id": "15345422",
+      "date": "2026-01-12",
+      "tournamentId": 15345422,
+      "homeId": 212762,
+      "tournamentName": "Australian Open, Men",
+      "opponentId": 341820,
+      "opponentName": "Henrique Rocha",
+      "won": false,
+      "result": "2-6 4-6"
+    }
+  ],
   "Grass": [
     {
       "id": "16373441",
@@ -125,6 +137,6 @@
       "result": "4-6 7-6 1-6"
     }
   ],
-  "updatedAt": 1784237025771,
+  "updatedAt": 1784245602527,
   "playerName": "Joao Lucas Reis da Silva"
 }

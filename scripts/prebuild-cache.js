@@ -22,12 +22,12 @@ if (!KEY) { console.error('RAPIDAPI_KEY not found in .env.local'); process.exit(
 
 const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
-const DELAY_BETWEEN_PAGES = 300;
-const DELAY_BETWEEN_PLAYERS = 600;
+const DELAY_BETWEEN_PAGES = 400;
+const DELAY_BETWEEN_PLAYERS = 800;
 const TARGET_PER_SURFACE = 10;
 const INDEX_LIMIT = 10;
-const MAX_PAGES = 15; // 15 pages × ~20 events = ~300 events to find 10 per surface
-const PAGE_SIZE = 20; // Sofascore returns ~20 events per page
+const MAX_PAGES = 20; // 20 pages × ~30 events = ~600 events to find 10 per surface
+const PAGE_SIZE = 20; // Sofascore returns ~20-30 events per page
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -160,6 +160,12 @@ async function fetchPage(playerId, pageNum) {
       if (res.status === 429) {
         const wait = attempt * 15000;
         console.log(`    page ${pageNum}: rate limited — waiting ${wait / 1000}s`);
+        await sleep(wait);
+        continue;
+      }
+      if (res.status === 405) {
+        const wait = attempt * 10000;
+        console.log(`    page ${pageNum}: HTTP 405 — waiting ${wait / 1000}s (attempt ${attempt})`);
         await sleep(wait);
         continue;
       }
