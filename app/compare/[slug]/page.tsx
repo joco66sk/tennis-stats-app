@@ -118,7 +118,19 @@ export default async function MatchSlugPage({
     startDate,
     endDate: startDate,
     eventStatus: 'https://schema.org/EventScheduled',
-    location: { '@type': 'Place', name: `${surface} Court` },
+    image: 'https://tennisdeepstats.com/android-chrome-512x512.png',
+    location: {
+      '@type': 'Place',
+      name: `${surface} Court`,
+      address: { '@type': 'PostalAddress', addressCountry: 'INT' },
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: `https://tennisdeepstats.com/compare/${slug}`,
+    },
     organizer: { '@type': 'Organization', name: 'ATP Tour', url: 'https://www.atptour.com' },
     performer: [
       { '@type': 'Person', name: player1Name },
