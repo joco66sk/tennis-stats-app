@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 interface PlayerBasicStats { wins: number; losses: number; form: boolean[]; pct: number; }
 interface MatchResult { score: string; p1Won: boolean; }
-interface FixturePlayer { id: number; name: string; countryAcr?: string; ranking?: number; }
+interface FixturePlayer { id: number; name: string; countryAcr?: string; ranking?: number; seed?: string; }
 interface DrawFixture {
   id: number; date: string;
   player1: FixturePlayer; player2: FixturePlayer;
@@ -173,11 +173,9 @@ export default function TournamentDrawClient({
                             background: p1Won ? 'rgba(52,211,153,0.06)' : 'transparent',
                             borderBottom: '1px solid #1f1f22',
                           }}>
-                            {p1.ranking && (
-                              <span style={{ fontSize: 9, color: '#3f3f46', flexShrink: 0, minWidth: 18, textAlign: 'right' }}>
-                                {p1.ranking}
-                              </span>
-                            )}
+                            <span style={{ fontSize: 9, color: '#52525b', flexShrink: 0, minWidth: 16, textAlign: 'right' }}>
+                              {p1.seed ?? (p1.ranking ? p1.ranking : '')}
+                            </span>
                             <Link
                               href={`/player/${p1.id}`}
                               onClick={e => e.stopPropagation()}
@@ -213,11 +211,9 @@ export default function TournamentDrawClient({
                             gap: 3,
                             background: p2Won ? 'rgba(52,211,153,0.06)' : 'transparent',
                           }}>
-                            {p2.ranking && (
-                              <span style={{ fontSize: 9, color: '#3f3f46', flexShrink: 0, minWidth: 18, textAlign: 'right' }}>
-                                {p2.ranking}
-                              </span>
-                            )}
+                            <span style={{ fontSize: 9, color: '#52525b', flexShrink: 0, minWidth: 16, textAlign: 'right' }}>
+                              {p2.seed ?? (p2.ranking ? p2.ranking : '')}
+                            </span>
                             <Link
                               href={`/player/${p2.id}`}
                               onClick={e => e.stopPropagation()}

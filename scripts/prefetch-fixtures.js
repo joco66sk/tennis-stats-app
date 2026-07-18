@@ -64,12 +64,14 @@ function transformEvent(event) {
       name: event.homeTeam.name,
       countryAcr: event.homeTeam.country?.alpha2 || undefined,
       ranking: event.homeTeam.ranking || undefined,
+      seed: event.homeTeamSeed || undefined,
     } : undefined,
     player2: event.awayTeam ? {
       id: event.awayTeam.id,
       name: event.awayTeam.name,
       countryAcr: event.awayTeam.country?.alpha2 || undefined,
       ranking: event.awayTeam.ranking || undefined,
+      seed: event.awayTeamSeed || undefined,
     } : undefined,
     tournament: {
       id: event.tournament?.uniqueTournament?.id,

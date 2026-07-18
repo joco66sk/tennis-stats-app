@@ -14,6 +14,7 @@ interface FixturePlayer {
   name: string;
   countryAcr?: string;
   ranking?: number;
+  seed?: string;
 }
 
 interface CachedFixture {
@@ -233,6 +234,18 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   const mainRoundsRaw = sortedRounds.filter(([r]) => roundOrder(r) >= 0);
   const qualRoundsRaw = sortedRounds.filter(([r]) => roundOrder(r) < 0);
 
+  // Bracket sort: seed 1 first, seed 2 last, others by seed number, unseeded by ranking
+  const parseSeed = (s?: string) => { const n = parseInt(s ?? ''); return isNaN(n) ? Infinity : n; };
+  const bracketKey = (f: CachedFixture) => {
+    const s1 = parseSeed(f.player1?.seed);
+    const s2 = parseSeed(f.player2?.seed);
+    const best = Math.min(s1, s2);
+    if (best === 1) return -1;
+    if (best === 2) return 1e9;
+    if (best < Infinity) return best;
+    return 500 + Math.min(f.player1?.ranking ?? 999, f.player2?.ranking ?? 999);
+  };
+
   // Serialize for client component
   const toDrawFixture = (f: CachedFixture) => ({
     id: f.id,
@@ -245,7 +258,7 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
 
   const mainRounds = mainRoundsRaw.map(([roundName, fixtures]) => ({
     roundName: formatRoundHeader(roundName),
-    fixtures: fixtures.map(toDrawFixture),
+    fixtures: [...fixtures].sort((a, b) => bracketKey(a) - bracketKey(b)).map(toDrawFixture),
   }));
 
   const qualRounds = qualRoundsRaw.map(([roundName, fixtures]) => ({
