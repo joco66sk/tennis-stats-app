@@ -174,6 +174,7 @@ export default function Home() {
   const formatRound = (roundName?: string) => {
     if (!roundName) return null;
     const n = roundName.toLowerCase();
+    if (n.includes('qualif')) { const num = roundName.match(/\d+/); return num ? `Q${num[0]}` : 'Q'; }
     if (n.includes('semi')) return 'SF';
     if (n.includes('quarter')) return 'QF';
     if (n.includes('final')) return 'F';
@@ -233,10 +234,10 @@ export default function Home() {
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#ccff00', marginBottom: 2 }}>Tennis Deep Stats</div>
-            <div style={{ fontSize: 20, fontWeight: 900, color: '#f4f4f5', lineHeight: 1.1 }}>
-              {selectedDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })}
-            </div>
+            <h1 style={{ fontSize: 24, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', textTransform: 'uppercase', margin: 0, lineHeight: 1 }}>Tennis Deep Stats</h1>
+            <p style={{ fontSize: 11, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 3, marginBottom: 0 }}>
+              ATP Fixtures · {selectedDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })}
+            </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             {formatDate(selectedDate) !== formatDate(new Date()) && (
@@ -306,12 +307,10 @@ export default function Home() {
 
                       const statBlock = (stats: PlayerSurfaceStat | undefined, align: 'left' | 'right') => {
                         if (!stats) return <span style={{ fontSize: 11, color: '#2a2a2e' }}>—</span>;
-                        const total = stats.wins + stats.losses;
-                        const pct = total > 0 ? Math.round(stats.wins / total * 100) : 0;
-                        const col = pct >= 50 ? '#34d399' : '#f87171';
+                        const col = stats.wins >= stats.losses ? '#34d399' : '#f87171';
                         return (
                           <div style={{ display: 'flex', flexDirection: 'column', alignItems: align === 'right' ? 'flex-end' : 'flex-start', gap: 3 }}>
-                            <span style={{ fontSize: 16, fontWeight: 900, color: col, fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{pct}%</span>
+                            <span style={{ fontSize: 13, fontWeight: 800, color: col, fontFamily: 'monospace', fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{stats.wins}–{stats.losses}</span>
                             {(stats.form?.length ?? 0) > 0 && (
                               <div style={{ display: 'flex', gap: 2 }}>
                                 {stats.form.map((w, j) => <span key={j} style={{ width: 6, height: 6, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
@@ -323,8 +322,8 @@ export default function Home() {
 
                       return (
                         <Link key={fixture.id} href={matchUrl(fixture)}
-                          style={{ display: 'block', textDecoration: 'none', background: '#111113', borderLeft: `3px solid ${sc}50`, borderRadius: '0 10px 10px 0', padding: '10px 12px 10px 10px' }}
-                          className="hover:bg-zinc-800/60 active:bg-zinc-800 transition-colors">
+                          style={{ display: 'block', textDecoration: 'none', background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}
+                          className="hover:bg-zinc-800/50 active:bg-zinc-800 transition-colors">
                           <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: 8 }}>
 
                             {/* P1 — right */}
@@ -338,9 +337,9 @@ export default function Home() {
 
                             {/* Center */}
                             <div style={{ textAlign: 'center', flexShrink: 0, padding: '0 6px' }}>
-                              <div style={{ fontSize: 9, fontWeight: 800, color: sc, letterSpacing: '0.12em', marginBottom: 3 }}>VS</div>
-                              <div style={{ fontSize: 12, fontWeight: 600, color: '#52525b', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{formatTime(fixture.date)}</div>
-                              {round && <div style={{ fontSize: 9, fontWeight: 700, color: '#3f3f46', marginTop: 2 }}>{round}</div>}
+                              <div style={{ fontSize: 9, fontWeight: 900, color: sc, letterSpacing: '0.14em', marginBottom: 3, textTransform: 'uppercase' }}>VS</div>
+                              <div style={{ fontSize: 11, fontWeight: 600, color: '#52525b', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{formatTime(fixture.date)}</div>
+                              {round && <div style={{ fontSize: 9, fontWeight: 700, color: sc, opacity: 0.6, marginTop: 2 }}>{round}</div>}
                             </div>
 
                             {/* P2 — left */}

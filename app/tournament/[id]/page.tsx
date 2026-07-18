@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import TournamentDrawClient from './TournamentDrawClient';
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -63,12 +63,6 @@ function formatRoundHeader(name?: string): string {
   if (n.includes('semi')) return 'Semifinals';
   if (n.includes('final')) return 'Final';
   return name;
-}
-
-function formatTime(dateStr: string): string {
-  return new Date(dateStr).toLocaleTimeString('en-GB', {
-    hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Stockholm',
-  });
 }
 
 function fmtShortDate(dateStr: string): string {
@@ -181,7 +175,6 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   const { id } = await params;
   if (!/^\d+$/.test(id)) redirect('/');
 
-  // Collect all matches for this tournament
   const seen = new Set<number>();
   const allFixtures: CachedFixture[] = [];
   for (const fp of getAllFixtureFiles()) {
@@ -205,11 +198,11 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   const tierLabel = rankId >= 4 ? 'Grand Slam' : rankId >= 3 ? 'Masters 1000' : rankId >= 2 ? 'ATP 250' : '';
 
   // Pre-compute stats for all unique players
-  const statsCache = new Map<number, ReturnType<typeof getBasicStats>>();
+  const statsCacheRaw = new Map<number, ReturnType<typeof getBasicStats>>();
   for (const f of allFixtures) {
     for (const p of [f.player1, f.player2]) {
-      if (p?.id && !statsCache.has(p.id)) {
-        statsCache.set(p.id, getBasicStats(p.id, surface));
+      if (p?.id && !statsCacheRaw.has(p.id)) {
+        statsCacheRaw.set(p.id, getBasicStats(p.id, surface));
       }
     }
   }
@@ -217,10 +210,10 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   const now = new Date();
 
   // Pre-compute match results for past fixtures
-  const resultsCache = new Map<number, { score: string; p1Won: boolean } | null>();
+  const resultsCacheRaw = new Map<number, { score: string; p1Won: boolean } | null>();
   for (const f of allFixtures) {
     if (new Date(f.date) < now && f.player1?.id) {
-      resultsCache.set(f.id, getMatchResult(f.id, f.player1.id));
+      resultsCacheRaw.set(f.id, getMatchResult(f.id, f.player1.id));
     }
   }
 
@@ -234,182 +227,51 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   const sortedRounds = [...byRound.entries()]
     .sort(([a], [b]) => roundOrder(a) - roundOrder(b));
 
-  // Date range
   const dates = [...new Set(allFixtures.map(f => f.date.slice(0, 10)))].sort();
+  const dateRange = `${fmtShortDate(dates[0])}${dates.length > 1 ? ` – ${fmtShortDate(dates[dates.length - 1])}` : ''}`;
 
-  // Separate main draw and qualifying
-  const mainRounds = sortedRounds.filter(([r]) => roundOrder(r) >= 0);
-  const qualRounds = sortedRounds.filter(([r]) => roundOrder(r) < 0);
+  const mainRoundsRaw = sortedRounds.filter(([r]) => roundOrder(r) >= 0);
+  const qualRoundsRaw = sortedRounds.filter(([r]) => roundOrder(r) < 0);
+
+  // Serialize for client component
+  const toDrawFixture = (f: CachedFixture) => ({
+    id: f.id,
+    date: f.date,
+    player1: f.player1!,
+    player2: f.player2!,
+    round: f.round?.name || '',
+    compareUrl: compareUrl(f, surface),
+  });
+
+  const mainRounds = mainRoundsRaw.map(([roundName, fixtures]) => ({
+    roundName: formatRoundHeader(roundName),
+    fixtures: fixtures.map(toDrawFixture),
+  }));
+
+  const qualRounds = qualRoundsRaw.map(([roundName, fixtures]) => ({
+    roundName,
+    fixtures: fixtures.map(toDrawFixture),
+  }));
+
+  // Convert Maps to plain objects for serialization
+  const statsCache: Record<number, ReturnType<typeof getBasicStats>> = {};
+  statsCacheRaw.forEach((v, k) => { statsCache[k] = v; });
+
+  const resultsCache: Record<number, { score: string; p1Won: boolean } | null> = {};
+  resultsCacheRaw.forEach((v, k) => { resultsCache[k] = v; });
 
   return (
-    <div style={{ minHeight: '100vh', background: '#09090b', color: '#fff', padding: '16px', fontFamily: 'system-ui, sans-serif' }}>
-      <div style={{ maxWidth: 640, margin: '0 auto' }}>
-
-        {/* Nav */}
-        <div style={{ marginBottom: 16 }}>
-          <Link href="/" style={{ color: '#71717a', fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>← Fixtures</Link>
-          <div style={{ marginTop: 8, fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#71717a' }}>Tennis Deep Stats</div>
-        </div>
-
-        {/* Tournament header */}
-        <div style={{ background: '#18181b', border: `1px solid #27272a`, borderRadius: 14, padding: '14px 16px', marginBottom: 20 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-            <span style={{ width: 10, height: 10, borderRadius: '50%', background: sc, display: 'inline-block', flexShrink: 0 }} />
-            <h1 style={{ fontSize: 20, fontWeight: 900, color: '#f4f4f5', margin: 0, lineHeight: 1 }}>{tournamentName}</h1>
-            <span style={{ fontSize: 12, fontWeight: 700, color: sc, border: `1px solid ${sc}40`, borderRadius: 5, padding: '2px 8px', background: `${sc}12` }}>{surface}</span>
-            {tierLabel && <span style={{ fontSize: 11, fontWeight: 700, color: '#71717a', border: '1px solid #27272a', borderRadius: 5, padding: '2px 7px' }}>{tierLabel}</span>}
-          </div>
-          <div style={{ fontSize: 12, color: '#52525b', marginTop: 8, paddingLeft: 20 }}>
-            {fmtShortDate(dates[0])}{dates.length > 1 ? ` – ${fmtShortDate(dates[dates.length - 1])}` : ''} &nbsp;·&nbsp; {allFixtures.length} matches
-          </div>
-        </div>
-
-        {/* Main draw */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-          {mainRounds.map(([roundName, roundFixtures]) => (
-            <section key={roundName}>
-              {/* Round header */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-                <div style={{ flex: 1, height: 1, background: `${sc}30` }} />
-                <span style={{ fontSize: 11, fontWeight: 900, letterSpacing: '0.12em', textTransform: 'uppercase', color: sc }}>
-                  {formatRoundHeader(roundName)}
-                </span>
-                <div style={{ flex: 1, height: 1, background: `${sc}30` }} />
-              </div>
-
-              {/* Match cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                {roundFixtures
-                  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-                  .map(f => {
-                    const p1 = f.player1!;
-                    const p2 = f.player2!;
-                    const p1s = statsCache.get(p1.id);
-                    const p2s = statsCache.get(p2.id);
-                    const isPast = new Date(f.date) < now;
-                    const result = isPast ? resultsCache.get(f.id) : undefined;
-                    const p1Won = result?.p1Won;
-                    const p2Won = result ? !result.p1Won : undefined;
-                    const cUrl = compareUrl(f, surface);
-
-                    return (
-                      <div key={f.id} style={{ position: 'relative', background: '#18181b', border: `1px solid ${isPast ? '#1f1f22' : '#27272a'}`, borderRadius: 12, padding: '11px 12px', opacity: isPast ? 0.7 : 1 }}>
-                        {/* Full-card compare link sits behind content */}
-                        <Link href={cUrl} target="_blank" rel="noopener noreferrer"
-                          aria-label={`${p1.name} vs ${p2.name} — view stats`}
-                          style={{ position: 'absolute', inset: 0, borderRadius: 12 }}
-                          className="hover:bg-zinc-800/40 active:bg-zinc-800/60"
-                        />
-                        {/* Content sits above the card link */}
-                        <div style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: 6 }}>
-
-                          {/* P1 — right aligned */}
-                          <div style={{ textAlign: 'right', minWidth: 0 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 4, marginBottom: p1s ? 4 : 0 }}>
-                              {p1.ranking && <span style={{ fontSize: 11, color: '#52525b', flexShrink: 0 }}>#{p1.ranking}</span>}
-                              <Link href={`/player/${p1.id}`}
-                                style={{ fontSize: 15, fontWeight: 700, color: p1Won ? '#f4f4f5' : p2Won ? '#52525b' : '#f4f4f5', textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                                {p1.name}
-                              </Link>
-                              {p1Won && <span style={{ fontSize: 11, color: '#34d399', flexShrink: 0 }}>W</span>}
-                            </div>
-                            {p1s && (
-                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 5 }}>
-                                <div style={{ display: 'flex', gap: 2 }}>
-                                  {p1s.form.map((w, i) => <span key={i} style={{ width: 6, height: 6, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
-                                </div>
-                                <span style={{ fontSize: 13, fontWeight: 800, color: p1s.wins > p1s.losses ? '#34d399' : '#f87171' }}>{p1s.pct}%</span>
-                                <span style={{ fontSize: 10, color: '#3f3f46' }}>{p1s.wins}-{p1s.losses}</span>
-                              </div>
-                            )}
-                          </div>
-
-                          {/* Center */}
-                          <div style={{ textAlign: 'center', padding: '0 8px', flexShrink: 0 }}>
-                            {result?.score ? (
-                              <div style={{ fontSize: 12, fontWeight: 800, color: '#e4e4e7', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>{result.score}</div>
-                            ) : (
-                              <>
-                                <div style={{ fontSize: 10, fontWeight: 700, color: '#3f3f46', letterSpacing: '0.1em' }}>VS</div>
-                                <div style={{ fontSize: 12, fontWeight: 600, color: '#a1a1aa', marginTop: 3, whiteSpace: 'nowrap' }}>{formatTime(f.date)}</div>
-                              </>
-                            )}
-                          </div>
-
-                          {/* P2 — left aligned */}
-                          <div style={{ textAlign: 'left', minWidth: 0 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 4, marginBottom: p2s ? 4 : 0 }}>
-                              {p2Won && <span style={{ fontSize: 11, color: '#34d399', flexShrink: 0 }}>W</span>}
-                              {p2.ranking && <span style={{ fontSize: 11, color: '#52525b', flexShrink: 0 }}>#{p2.ranking}</span>}
-                              <Link href={`/player/${p2.id}`}
-                                style={{ fontSize: 15, fontWeight: 700, color: p2Won ? '#f4f4f5' : p1Won ? '#52525b' : '#f4f4f5', textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                                {p2.name}
-                              </Link>
-                            </div>
-                            {p2s && (
-                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 5 }}>
-                                <span style={{ fontSize: 13, fontWeight: 800, color: p2s.wins > p2s.losses ? '#34d399' : '#f87171' }}>{p2s.pct}%</span>
-                                <span style={{ fontSize: 10, color: '#3f3f46' }}>{p2s.wins}-{p2s.losses}</span>
-                                <div style={{ display: 'flex', gap: 2 }}>
-                                  {p2s.form.map((w, i) => <span key={i} style={{ width: 6, height: 6, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
-                                </div>
-                              </div>
-                            )}
-                          </div>
-
-                        </div>
-                      </div>
-                    );
-                  })}
-              </div>
-            </section>
-          ))}
-        </div>
-
-        {/* Qualifying — collapsed at bottom */}
-        {qualRounds.length > 0 && (
-          <details style={{ marginTop: 24 }}>
-            <summary style={{ fontSize: 11, fontWeight: 700, color: '#52525b', textTransform: 'uppercase', letterSpacing: '0.1em', cursor: 'pointer', padding: '4px 0' }}>
-              Qualifying ({qualRounds.reduce((n, [, f]) => n + f.length, 0)} matches)
-            </summary>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 12 }}>
-              {qualRounds.map(([roundName, roundFixtures]) => (
-                <section key={roundName}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-                    <div style={{ flex: 1, height: 1, background: '#27272a' }} />
-                    <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#52525b' }}>{roundName}</span>
-                    <div style={{ flex: 1, height: 1, background: '#27272a' }} />
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    {roundFixtures
-                      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-                      .map(f => {
-                        const p1 = f.player1!;
-                        const p2 = f.player2!;
-                        const isPast = new Date(f.date) < now;
-                        return (
-                          <Link key={f.id} href={compareUrl(f, surface)} target="_blank" rel="noopener noreferrer"
-                            style={{ display: 'block', textDecoration: 'none', background: '#18181b', border: '1px solid #1f1f22', borderRadius: 10, padding: '8px 12px', opacity: isPast ? 0.5 : 0.8 }}
-                            className="hover:bg-zinc-800/40">
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                              <span style={{ fontSize: 13, color: '#a1a1aa', flex: 1 }}>{p1.name}</span>
-                              <span style={{ fontSize: 11, color: '#3f3f46' }}>vs</span>
-                              <span style={{ fontSize: 13, color: '#a1a1aa', flex: 1, textAlign: 'right' }}>{p2.name}</span>
-                            </div>
-                          </Link>
-                        );
-                      })}
-                  </div>
-                </section>
-              ))}
-            </div>
-          </details>
-        )}
-
-        <div style={{ textAlign: 'center', fontSize: 11, color: '#3f3f46', marginTop: 20 }}>
-          tennisdeepstats.com — serve &amp; return stats before every ATP match
-        </div>
-      </div>
-    </div>
+    <TournamentDrawClient
+      tournamentName={tournamentName}
+      surface={surface}
+      sc={sc}
+      tierLabel={tierLabel}
+      dateRange={dateRange}
+      totalMatches={allFixtures.length}
+      mainRounds={mainRounds}
+      qualRounds={qualRounds}
+      statsCache={statsCache}
+      resultsCache={resultsCache}
+    />
   );
 }

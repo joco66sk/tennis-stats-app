@@ -84,7 +84,7 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
           <div style={{ fontSize: 12, color: '#71717a' }}>ATP Surface Statistics — last 30 matches</div>
         </div>
 
-        <PlayerTabs clay={clay} hard={hard} grass={grass} />
+        <PlayerTabs playerId={id} clay={clay} hard={hard} grass={grass} />
 
         <div style={{ textAlign: 'center', fontSize: 11, color: '#3f3f46', marginTop: 16 }}>
           tennisdeepstats.com — serve &amp; return stats before every ATP match
