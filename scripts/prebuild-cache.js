@@ -310,7 +310,33 @@ async function main() {
     if (futureCount > 0) console.log(`Added ${futureCount} players from next 4 days`);
   }
 
-  const toFetch = [...playerSurfaces.entries()].filter(([id, surface]) => needsFetch(id, surface));
+  // Always re-fetch players with fixtures today — their matches may have just finished.
+  // Use a 90-minute cooldown so consecutive hourly runs don't hammer the same player.
+  const todayPlayerIds = new Set();
+  if (dates.includes(today)) {
+    const todayFp = path.join(CACHE_DIR, `fixtures-${today}.json`);
+    if (fs.existsSync(todayFp)) {
+      try {
+        const d = JSON.parse(fs.readFileSync(todayFp, 'utf-8'));
+        for (const f of (d.fixtures || [])) {
+          if (f.player1?.id) todayPlayerIds.add(String(f.player1.id));
+          if (f.player2?.id) todayPlayerIds.add(String(f.player2.id));
+        }
+      } catch {}
+    }
+  }
+  const COOLDOWN_MS = 90 * 60 * 1000;
+  const toFetch = [...playerSurfaces.entries()].filter(([id, surface]) => {
+    if (todayPlayerIds.has(id)) {
+      const fp = path.join(CACHE_DIR, `player-index-${id}.json`);
+      if (!fs.existsSync(fp)) return true;
+      try {
+        const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+        return (Date.now() - (data.updatedAt || 0)) > COOLDOWN_MS;
+      } catch { return true; }
+    }
+    return needsFetch(id, surface);
+  });
   const skip = playerSurfaces.size - toFetch.length;
 
   console.log(`\nTotal players: ${playerSurfaces.size} | Fresh (skip): ${skip} | To fetch: ${toFetch.length}`);
