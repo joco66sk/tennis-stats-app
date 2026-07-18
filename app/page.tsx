@@ -260,7 +260,7 @@ export default function Home() {
         ) : fixtures.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '80px 0', color: '#52525b', fontSize: 14 }}>No matches scheduled.</div>
         ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {sortedGroups.map(([tournamentName, matches]) => {
               const rawSurface = matches[0]?.tournament?.court?.name;
               const surface = normalizeSurface(rawSurface) || 'Hard';
@@ -269,58 +269,41 @@ export default function Home() {
               const tournamentId = matches[0]?.tournament?.id;
               return (
                 <div key={tournamentName}>
-                  {/* Tournament label — minimal divider */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-                    <span style={{ width: 8, height: 8, borderRadius: '50%', background: sc, display: 'inline-block', flexShrink: 0 }} />
-                    <span style={{ fontSize: 11, fontWeight: 900, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#a1a1aa', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tournamentName}</span>
+                  {/* Tournament header */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6, paddingBottom: 6, borderBottom: `1px solid ${sc}25` }}>
+                    <span style={{ width: 7, height: 7, borderRadius: '50%', background: sc, display: 'inline-block', flexShrink: 0 }} />
+                    <span style={{ fontSize: 10, fontWeight: 900, letterSpacing: '0.14em', textTransform: 'uppercase', color: sc, flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tournamentName}</span>
                     {categoryLabel && categoryLabel !== 'ATP' && (
-                      <span style={{ fontSize: 9, fontWeight: 800, color: sc, border: `1px solid ${sc}50`, borderRadius: 3, padding: '1px 5px', flexShrink: 0 }}>{categoryLabel}</span>
+                      <span style={{ fontSize: 9, fontWeight: 800, color: sc, opacity: 0.7, flexShrink: 0 }}>{categoryLabel}</span>
                     )}
-                    <div style={{ flex: 1, height: 1, background: '#1c1c1f' }} />
                     {tournamentId && (
                       <Link href={`/tournament/${tournamentId}`}
-                        style={{ fontSize: 10, fontWeight: 700, color: sc, textDecoration: 'none', border: `1px solid ${sc}40`, borderRadius: 4, padding: '2px 6px', flexShrink: 0 }}>
+                        style={{ fontSize: 10, fontWeight: 700, color: sc, textDecoration: 'none', opacity: 0.8, border: `1px solid ${sc}40`, borderRadius: 4, padding: '1px 6px', flexShrink: 0 }}>
                         Draw
                       </Link>
                     )}
                   </div>
 
-                  {/* Match cards — vertical stacked */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                  {/* Match rows */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                     {matches.map((fixture) => {
                       const matchSurface = normalizeSurface(fixture.tournament?.court?.name) || 'Hard';
                       const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
                       const p2Stats = fixture.player2?.id ? playerStats[`${fixture.player2.id}-${matchSurface}`] : undefined;
                       const round = formatRound(fixture.round?.name);
 
-                      const renderPlayer = (player: Fixture['player1'], stats: PlayerSurfaceStat | undefined) => {
-                        const total = stats ? stats.wins + stats.losses : 0;
-                        const pct = total > 0 ? Math.round(stats!.wins / total * 100) : 0;
+                      const statBlock = (stats: PlayerSurfaceStat | undefined, align: 'left' | 'right') => {
+                        if (!stats) return <span style={{ fontSize: 11, color: '#2a2a2e' }}>—</span>;
+                        const total = stats.wins + stats.losses;
+                        const pct = total > 0 ? Math.round(stats.wins / total * 100) : 0;
                         const col = pct >= 50 ? '#34d399' : '#f87171';
                         return (
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}>
-                            {/* Name + ranking */}
-                            <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'baseline', gap: 5, overflow: 'hidden' }}>
-                              {player?.ranking && <span style={{ fontSize: 10, fontWeight: 700, color: '#3f3f46', flexShrink: 0 }}>#{player.ranking}</span>}
-                              <span style={{ fontSize: 16, fontWeight: 800, color: '#f4f4f5', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                                {player?.name}
-                              </span>
-                            </div>
-                            {/* Stats: form + bar + pct */}
-                            {stats && total > 0 ? (
-                              <div style={{ display: 'flex', alignItems: 'center', gap: 7, flexShrink: 0 }}>
-                                {(stats.form?.length ?? 0) > 0 && (
-                                  <div style={{ display: 'flex', gap: 2 }}>
-                                    {stats.form.map((w, j) => <span key={j} style={{ width: 5, height: 5, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
-                                  </div>
-                                )}
-                                <div style={{ width: 44, height: 3, background: '#27272a', borderRadius: 2 }}>
-                                  <div style={{ width: `${pct}%`, height: '100%', background: col, borderRadius: 2 }} />
-                                </div>
-                                <span style={{ fontSize: 13, fontWeight: 900, color: col, width: 32, textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{pct}%</span>
+                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: align === 'right' ? 'flex-end' : 'flex-start', gap: 3 }}>
+                            <span style={{ fontSize: 16, fontWeight: 900, color: col, fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{pct}%</span>
+                            {(stats.form?.length ?? 0) > 0 && (
+                              <div style={{ display: 'flex', gap: 2 }}>
+                                {stats.form.map((w, j) => <span key={j} style={{ width: 6, height: 6, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
                               </div>
-                            ) : (
-                              <span style={{ fontSize: 12, color: '#2d2d30', flexShrink: 0 }}>—</span>
                             )}
                           </div>
                         );
@@ -328,24 +311,36 @@ export default function Home() {
 
                       return (
                         <Link key={fixture.id} href={matchUrl(fixture)}
-                          style={{ display: 'block', textDecoration: 'none', background: '#111113', border: '1px solid #1c1c1f', borderRadius: 12, padding: '10px 12px' }}
-                          className="hover:border-zinc-700 active:bg-zinc-900 transition-colors">
+                          style={{ display: 'block', textDecoration: 'none', background: '#111113', borderLeft: `3px solid ${sc}50`, borderRadius: '0 10px 10px 0', padding: '10px 12px 10px 10px' }}
+                          className="hover:bg-zinc-800/60 active:bg-zinc-800 transition-colors">
+                          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: 8 }}>
 
-                          {/* Time + round */}
-                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 6, marginBottom: 8 }}>
-                            <span style={{ fontSize: 11, color: '#52525b', fontVariantNumeric: 'tabular-nums' }}>{formatTime(fixture.date)}</span>
-                            {round && <span style={{ fontSize: 9, fontWeight: 800, color: sc, border: `1px solid ${sc}40`, borderRadius: 3, padding: '1px 5px', letterSpacing: '0.04em' }}>{round}</span>}
+                            {/* P1 — right */}
+                            <div style={{ textAlign: 'right', minWidth: 0 }}>
+                              <div style={{ fontSize: 15, fontWeight: 700, color: '#e4e4e7', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: 5 }}>
+                                {fixture.player1?.ranking && <span style={{ fontSize: 11, color: '#3f3f46', marginRight: 4 }}>#{fixture.player1.ranking}</span>}
+                                {fixture.player1?.name}
+                              </div>
+                              {statBlock(p1Stats, 'right')}
+                            </div>
+
+                            {/* Center */}
+                            <div style={{ textAlign: 'center', flexShrink: 0, padding: '0 6px' }}>
+                              <div style={{ fontSize: 9, fontWeight: 800, color: sc, letterSpacing: '0.12em', marginBottom: 3 }}>VS</div>
+                              <div style={{ fontSize: 12, fontWeight: 600, color: '#52525b', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{formatTime(fixture.date)}</div>
+                              {round && <div style={{ fontSize: 9, fontWeight: 700, color: '#3f3f46', marginTop: 2 }}>{round}</div>}
+                            </div>
+
+                            {/* P2 — left */}
+                            <div style={{ textAlign: 'left', minWidth: 0 }}>
+                              <div style={{ fontSize: 15, fontWeight: 700, color: '#e4e4e7', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: 5 }}>
+                                {fixture.player2?.ranking && <span style={{ fontSize: 11, color: '#3f3f46', marginRight: 4 }}>#{fixture.player2.ranking}</span>}
+                                {fixture.player2?.name}
+                              </div>
+                              {statBlock(p2Stats, 'left')}
+                            </div>
+
                           </div>
-
-                          {/* P1 */}
-                          {renderPlayer(fixture.player1, p1Stats)}
-
-                          {/* Separator */}
-                          <div style={{ height: 1, background: '#1c1c1f', margin: '8px 0' }} />
-
-                          {/* P2 */}
-                          {renderPlayer(fixture.player2, p2Stats)}
-
                         </Link>
                       );
                     })}
