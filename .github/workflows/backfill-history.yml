@@ -8,7 +8,7 @@ on:
         required: false
         default: '30'
   schedule:
-    - cron: '0 2 * * 0'  # 04:00 CEST Sunday — weekly top-up
+    - cron: '40 * * * *'  # every hour at :40
 
 jobs:
   backfill:

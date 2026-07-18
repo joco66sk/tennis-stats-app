@@ -2,7 +2,7 @@ name: Morning Fixture Refresh
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # 06:00 CEST — catches matches added after nightly build
+    - cron: '20 * * * *'  # every hour at :20
   workflow_dispatch:
 
 jobs:
