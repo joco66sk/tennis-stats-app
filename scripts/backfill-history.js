@@ -23,6 +23,7 @@ const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 
 const TARGET = parseInt(process.argv.find(a => a.startsWith('--limit='))?.split('=')[1] || '30');
+const TIME_LIMIT_MS = 10 * 60 * 1000; // stop after 10 minutes so the combined workflow stays under 30 min
 const MAX_PAGES = 20;
 const MIN_DATE = '2023-01-01'; // go back to 2023 for more matches
 const SURFACES = ['Clay', 'Hard', 'Grass'];
@@ -207,7 +208,8 @@ async function backfillPlayer(playerId, displayName, idx, total) {
 // ── Main ───────────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log(`\nBackfilling history (target: ${TARGET} per surface)\n${'─'.repeat(50)}`);
+  const startTime = Date.now();
+  console.log(`\nBackfilling history (target: ${TARGET} per surface, time limit: ${TIME_LIMIT_MS / 60000} min)\n${'─'.repeat(50)}`);
 
   // Get player list
   console.log('Getting player list...');
@@ -224,6 +226,10 @@ async function main() {
 
   let updated = 0;
   for (let i = 0; i < players.length; i++) {
+    if (Date.now() - startTime >= TIME_LIMIT_MS) {
+      console.log(`\nTime limit reached — stopped after ${i}/${players.length} players.`);
+      break;
+    }
     const { id, name } = players[i];
     try {
       const changed = await backfillPlayer(id, name, i + 1, players.length);
