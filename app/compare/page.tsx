@@ -434,6 +434,20 @@ function CompareContent() {
                       <span className="text-xs font-black text-violet-400 uppercase tracking-widest">Combined</span>
                     </div>
                     <StatRow label="Serve + Return %" v1={stats1.avgServeWon + stats1.avgReturnWon} v2={stats2.avgServeWon + stats2.avgReturnWon} />
+                    {stats1.matchesWithStats > 0 && stats2.matchesWithStats > 0 && (() => {
+                      const c1 = stats1.avgServeWon + stats1.avgReturnWon;
+                      const c2 = stats2.avgServeWon + stats2.avgReturnWon;
+                      const leader = c1 >= c2 ? stats1 : stats2;
+                      const trailer = c1 >= c2 ? stats2 : stats1;
+                      const gap = Math.abs(c1 - c2).toFixed(1);
+                      return (
+                        <div className="border-t border-zinc-800 pt-2 pb-1 mt-1 text-center">
+                          <p className="text-xs text-zinc-500 leading-snug">
+                            <span className="text-zinc-300 font-semibold">{leader.playerName.split(' ').pop()}</span> leads by {gap}pp combined · {leader.wins}W–{leader.losses}L vs {trailer.wins}W–{trailer.losses}L on {surface.toLowerCase()}
+                          </p>
+                        </div>
+                      );
+                    })()}
                   </>
                 )}
               </div>

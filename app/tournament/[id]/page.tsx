@@ -75,6 +75,19 @@ function fmtShortDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
+function getMatchResult(eventId: number, p1Id: number): { score: string; p1Won: boolean } | null {
+  const fp = path.join(CACHE_DIR, `player-index-${p1Id}.json`);
+  if (!fs.existsSync(fp)) return null;
+  try {
+    const index = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+    for (const s of ['Clay', 'Hard', 'Grass']) {
+      const entry = (index[s] ?? []).find((e: any) => e.tournamentId === eventId);
+      if (entry) return { score: entry.result || '', p1Won: entry.won };
+    }
+    return null;
+  } catch { return null; }
+}
+
 function getBasicStats(playerId: string | number, surface: string) {
   const fp = path.join(CACHE_DIR, `player-index-${playerId}.json`);
   if (!fs.existsSync(fp)) return null;
@@ -201,6 +214,16 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
     }
   }
 
+  const now = new Date();
+
+  // Pre-compute match results for past fixtures
+  const resultsCache = new Map<number, { score: string; p1Won: boolean } | null>();
+  for (const f of allFixtures) {
+    if (new Date(f.date) < now && f.player1?.id) {
+      resultsCache.set(f.id, getMatchResult(f.id, f.player1.id));
+    }
+  }
+
   // Group by round
   const byRound = new Map<string, CachedFixture[]>();
   for (const f of allFixtures) {
@@ -217,8 +240,6 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   // Separate main draw and qualifying
   const mainRounds = sortedRounds.filter(([r]) => roundOrder(r) >= 0);
   const qualRounds = sortedRounds.filter(([r]) => roundOrder(r) < 0);
-
-  const now = new Date();
 
   return (
     <div style={{ minHeight: '100vh', background: '#09090b', color: '#fff', padding: '16px', fontFamily: 'system-ui, sans-serif' }}>
@@ -266,10 +287,13 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
                     const p1s = statsCache.get(p1.id);
                     const p2s = statsCache.get(p2.id);
                     const isPast = new Date(f.date) < now;
+                    const result = isPast ? resultsCache.get(f.id) : undefined;
+                    const p1Won = result?.p1Won;
+                    const p2Won = result ? !result.p1Won : undefined;
                     const cUrl = compareUrl(f, surface);
 
                     return (
-                      <div key={f.id} style={{ position: 'relative', background: '#18181b', border: `1px solid ${isPast ? '#1f1f22' : '#27272a'}`, borderRadius: 12, padding: '11px 12px', opacity: isPast ? 0.65 : 1 }}>
+                      <div key={f.id} style={{ position: 'relative', background: '#18181b', border: `1px solid ${isPast ? '#1f1f22' : '#27272a'}`, borderRadius: 12, padding: '11px 12px', opacity: isPast ? 0.7 : 1 }}>
                         {/* Full-card compare link sits behind content */}
                         <Link href={cUrl} target="_blank" rel="noopener noreferrer"
                           aria-label={`${p1.name} vs ${p2.name} — view stats`}
@@ -284,9 +308,10 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 4, marginBottom: p1s ? 4 : 0 }}>
                               {p1.ranking && <span style={{ fontSize: 11, color: '#52525b', flexShrink: 0 }}>#{p1.ranking}</span>}
                               <Link href={`/player/${p1.id}`}
-                                style={{ fontSize: 15, fontWeight: 700, color: '#f4f4f5', textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                style={{ fontSize: 15, fontWeight: 700, color: p1Won ? '#f4f4f5' : p2Won ? '#52525b' : '#f4f4f5', textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                 {p1.name}
                               </Link>
+                              {p1Won && <span style={{ fontSize: 11, color: '#34d399', flexShrink: 0 }}>W</span>}
                             </div>
                             {p1s && (
                               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 5 }}>
@@ -301,16 +326,23 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
 
                           {/* Center */}
                           <div style={{ textAlign: 'center', padding: '0 8px', flexShrink: 0 }}>
-                            <div style={{ fontSize: 10, fontWeight: 700, color: '#3f3f46', letterSpacing: '0.1em' }}>VS</div>
-                            <div style={{ fontSize: 12, fontWeight: 600, color: '#a1a1aa', marginTop: 3, whiteSpace: 'nowrap' }}>{formatTime(f.date)}</div>
+                            {result?.score ? (
+                              <div style={{ fontSize: 12, fontWeight: 800, color: '#e4e4e7', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>{result.score}</div>
+                            ) : (
+                              <>
+                                <div style={{ fontSize: 10, fontWeight: 700, color: '#3f3f46', letterSpacing: '0.1em' }}>VS</div>
+                                <div style={{ fontSize: 12, fontWeight: 600, color: '#a1a1aa', marginTop: 3, whiteSpace: 'nowrap' }}>{formatTime(f.date)}</div>
+                              </>
+                            )}
                           </div>
 
                           {/* P2 — left aligned */}
                           <div style={{ textAlign: 'left', minWidth: 0 }}>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 4, marginBottom: p2s ? 4 : 0 }}>
+                              {p2Won && <span style={{ fontSize: 11, color: '#34d399', flexShrink: 0 }}>W</span>}
                               {p2.ranking && <span style={{ fontSize: 11, color: '#52525b', flexShrink: 0 }}>#{p2.ranking}</span>}
                               <Link href={`/player/${p2.id}`}
-                                style={{ fontSize: 15, fontWeight: 700, color: '#f4f4f5', textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                style={{ fontSize: 15, fontWeight: 700, color: p2Won ? '#f4f4f5' : p1Won ? '#52525b' : '#f4f4f5', textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                 {p2.name}
                               </Link>
                             </div>
