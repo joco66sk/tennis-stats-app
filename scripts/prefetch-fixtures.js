@@ -90,7 +90,7 @@ async function fetchFixtures(date) {
     const existing = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
     if ((existing.fixtures?.length ?? 0) > 0 && existing.fetchedAt) {
       const age = Date.now() - existing.fetchedAt;
-      if (age < 90 * 60 * 1000) {
+      if (age < 25 * 60 * 1000) {
         console.log(`  ${date}: skipped (fetched ${Math.round(age / 60000)}m ago)`);
         return;
       }
