@@ -1,9 +1,18 @@
-name: Daily Cache Update
+name: Cache Update
 
 on:
   schedule:
-    - cron: '0 * * * *'   # every hour at :00
-  workflow_dispatch:         # allow manual trigger from GitHub UI
+    - cron: '*/30 * * * *'  # every 30 minutes
+  workflow_dispatch:
+    inputs:
+      backfill_limit:
+        description: 'Matches per surface for backfill (default 30)'
+        required: false
+        default: '30'
+
+concurrency:
+  group: cache-update
+  cancel-in-progress: false  # queue rather than cancel — avoids partial cache writes
 
 jobs:
   update:
@@ -36,6 +45,9 @@ jobs:
       - name: Rebuild player indexes
         run: node scripts/prebuild-cache.js today || true
 
+      - name: Backfill match history for top players
+        run: node scripts/backfill-history.js --limit=${{ github.event.inputs.backfill_limit || '30' }} || true
+
       - name: Prebuild match stats
         run: node scripts/prebuild-match-stats.js upcoming || true
 
@@ -54,6 +66,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add cache/ app/api/cache/
-          git diff --staged --quiet && echo "Nothing to commit" || git commit -m "Daily cache update $(date -u +%Y-%m-%d)"
-          git pull --rebase
+          git diff --staged --quiet && echo "Nothing to commit" || git commit -m "Cache update $(date -u +%Y-%m-%dT%H:%M)"
           git push
