@@ -325,7 +325,7 @@ async function main() {
       } catch {}
     }
   }
-  const COOLDOWN_MS = 90 * 60 * 1000;
+  const COOLDOWN_MS = 25 * 60 * 1000;
   const toFetch = [...playerSurfaces.entries()].filter(([id, surface]) => {
     if (todayPlayerIds.has(id)) {
       const fp = path.join(CACHE_DIR, `player-index-${id}.json`);
