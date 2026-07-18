@@ -145,11 +145,23 @@ export default function Home() {
     return () => { cancelled = true; };
   }, [fixtures]);
 
+  const slugifyName = (name: string) =>
+    (name.split(/[\s-]/).pop() || name)
+      .toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]/g, '');
+
   const matchUrl = (fixture: Fixture) => {
     const p1id = fixture.player1?.id || '';
     const p2id = fixture.player2?.id || '';
     const surface = normalizeSurface(fixture.tournament?.court?.name) || 'Clay';
-    return `/compare?p1=${p1id}&p2=${p2id}&surface=${surface}`;
+    const p1slug = slugifyName(fixture.player1?.name || String(p1id));
+    const p2slug = slugifyName(fixture.player2?.name || String(p2id));
+    const d = new Date(fixture.date);
+    const dd = String(d.getUTCDate()).padStart(2, '0');
+    const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const yy = String(d.getUTCFullYear()).slice(-2);
+    return `/compare/${p1slug}-${p2slug}-${dd}${mm}${yy}-${surface}-${p1id}-${p2id}`;
   };
 
   const getCategoryLabel = (rankId?: number) => {
