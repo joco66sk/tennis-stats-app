@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "16465667",
+      "date": "2026-07-17",
+      "tournamentId": 16465667,
+      "homeId": 248861,
+      "tournamentName": "Gstaad",
+      "opponentId": 248861,
+      "opponentName": "Juan Manuel Cerundolo",
+      "won": false,
+      "result": "6-3 5-7 2-6"
+    },
+    {
       "id": "16465660",
       "date": "2026-07-16",
       "tournamentId": 16465660,
@@ -243,6 +254,17 @@
       "result": "6-3 6-4"
     },
     {
+      "id": "14147214",
+      "date": "2025-07-18",
+      "tournamentId": 14147214,
+      "homeId": 119248,
+      "tournamentName": "Gstaad",
+      "opponentId": 248861,
+      "opponentName": "Juan Manuel Cerundolo",
+      "won": false,
+      "result": "2-6 6-1 3-6"
+    },
+    {
       "id": "13838190",
       "date": "2025-05-15",
       "tournamentId": 13838190,
@@ -307,28 +329,6 @@
       "opponentName": "Francisco Cerundolo",
       "won": true,
       "result": "6-4 7-5"
-    },
-    {
-      "id": "13773881",
-      "date": "2025-05-01",
-      "tournamentId": 13773881,
-      "homeId": 119248,
-      "tournamentName": "ATP Madrid Masters",
-      "opponentId": 163504,
-      "opponentName": "Daniil Medvedev",
-      "won": true,
-      "result": "6-3 7-5"
-    },
-    {
-      "id": "13773886",
-      "date": "2025-04-29",
-      "tournamentId": 13773886,
-      "homeId": 136042,
-      "tournamentName": "ATP Madrid Masters",
-      "opponentId": 136042,
-      "opponentName": "Taylor Fritz",
-      "won": true,
-      "result": "7-5 6-4"
     }
   ],
   "Hard": [
@@ -721,5 +721,5 @@
     }
   ],
   "playerName": "Casper Ruud",
-  "updatedAt": 1784295085801
+  "updatedAt": 1784333936511
 }

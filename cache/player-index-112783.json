@@ -309,6 +309,17 @@
       "result": "6-4 6-4"
     },
     {
+      "id": "12532036",
+      "date": "2024-07-20",
+      "tournamentId": 12532036,
+      "homeId": 122366,
+      "tournamentName": "Gstaad",
+      "opponentId": 122366,
+      "opponentName": "Stefanos Tsitsipas",
+      "won": true,
+      "result": "7-6 7-5"
+    },
+    {
       "id": "12536446",
       "date": "2024-07-16",
       "tournamentId": 12536446,
@@ -318,17 +329,6 @@
       "opponentName": "Pedro Cachin",
       "won": true,
       "result": "6-4 7-6"
-    },
-    {
-      "id": "12227589",
-      "date": "2024-04-09",
-      "tournamentId": 12227589,
-      "homeId": 198592,
-      "tournamentName": "Monte Carlo",
-      "opponentId": 198592,
-      "opponentName": "Miomir Kecmanović",
-      "won": false,
-      "result": "3-6 1-6"
     }
   ],
   "Hard": [
@@ -520,6 +520,28 @@
       "result": "3-6 3-6"
     },
     {
+      "id": "13537563",
+      "date": "2025-03-09",
+      "tournamentId": 13537563,
+      "homeId": 112783,
+      "tournamentName": "Indian Wells",
+      "opponentId": 122366,
+      "opponentName": "Stefanos Tsitsipas",
+      "won": false,
+      "result": "3-6 3-6"
+    },
+    {
+      "id": "13498998",
+      "date": "2025-02-27",
+      "tournamentId": 13498998,
+      "homeId": 122366,
+      "tournamentName": "Dubai",
+      "opponentId": 122366,
+      "opponentName": "Stefanos Tsitsipas",
+      "won": false,
+      "result": "6-7 6-1 4-6"
+    },
+    {
       "id": "13463080",
       "date": "2025-02-19",
       "tournamentId": 13463080,
@@ -639,28 +661,6 @@
       "opponentName": "Dominic Stricker",
       "won": false,
       "result": "6-7 4-6"
-    },
-    {
-      "id": "12973230",
-      "date": "2024-10-14",
-      "tournamentId": 12973230,
-      "homeId": 308084,
-      "tournamentName": "Stockholm",
-      "opponentId": 308084,
-      "opponentName": "Luciano Darderi",
-      "won": true,
-      "result": "6-4 6-3"
-    },
-    {
-      "id": "12906202",
-      "date": "2024-10-07",
-      "tournamentId": 12906202,
-      "homeId": 112783,
-      "tournamentName": "Shanghai",
-      "opponentId": 283070,
-      "opponentName": "Holger Rune",
-      "won": false,
-      "result": "6-4 4-6 3-6"
     }
   ],
   "Grass": [
@@ -864,5 +864,5 @@
     }
   ],
   "playerName": "Matteo Berrettini",
-  "updatedAt": 1784295323931
+  "updatedAt": 1784333936510
 }

@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "16465447",
+      "date": "2026-07-17",
+      "tournamentId": 16465447,
+      "homeId": 106755,
+      "tournamentName": "Bastad",
+      "opponentId": 106755,
+      "opponentName": "Andrey Rublev",
+      "won": false,
+      "result": "1-6 2-6"
+    },
+    {
       "id": "16465457",
       "date": "2026-07-16",
       "tournamentId": 16465457,
@@ -276,6 +287,39 @@
       "result": "6-4 6-3"
     },
     {
+      "id": "14147193",
+      "date": "2025-07-18",
+      "tournamentId": 14147193,
+      "homeId": 221806,
+      "tournamentName": "Bastad",
+      "opponentId": 308084,
+      "opponentName": "Luciano Darderi",
+      "won": false,
+      "result": "0-6 2-6"
+    },
+    {
+      "id": "13773909",
+      "date": "2025-04-26",
+      "tournamentId": 13773909,
+      "homeId": 221806,
+      "tournamentName": "ATP Madrid Masters",
+      "opponentId": 49172,
+      "opponentName": "Damir Džumhur",
+      "won": false,
+      "result": "6-1 1-6 2-6"
+    },
+    {
+      "id": "13761617",
+      "date": "2025-04-15",
+      "tournamentId": 13761617,
+      "homeId": 221806,
+      "tournamentName": "Barcelona",
+      "opponentId": 49172,
+      "opponentName": "Damir Džumhur",
+      "won": true,
+      "result": "6-1 7-5"
+    },
+    {
       "id": "13499033",
       "date": "2025-03-02",
       "tournamentId": 13499033,
@@ -285,50 +329,6 @@
       "opponentName": "Laslo Djere",
       "won": false,
       "result": "4-6 6-3 5-7"
-    },
-    {
-      "id": "13499025",
-      "date": "2025-03-01",
-      "tournamentId": 13499025,
-      "homeId": 49172,
-      "tournamentName": "Santiago",
-      "opponentId": 49172,
-      "opponentName": "Damir Džumhur",
-      "won": true,
-      "result": "6-4 6-4"
-    },
-    {
-      "id": "13499027",
-      "date": "2025-03-01",
-      "tournamentId": 13499027,
-      "homeId": 221806,
-      "tournamentName": "Santiago",
-      "opponentId": 196122,
-      "opponentName": "Camilo Ugo Carabelli",
-      "won": true,
-      "result": "6-1 3-6 6-2"
-    },
-    {
-      "id": "13499021",
-      "date": "2025-02-27",
-      "tournamentId": 13499021,
-      "homeId": 255420,
-      "tournamentName": "Santiago",
-      "opponentId": 255420,
-      "opponentName": "Francisco Comesaña",
-      "won": true,
-      "result": "6-3 5-7 7-6"
-    },
-    {
-      "id": "13463106",
-      "date": "2025-02-23",
-      "tournamentId": 13463106,
-      "homeId": 88992,
-      "tournamentName": "Rio de Janeiro",
-      "opponentId": 88992,
-      "opponentName": "Alexandre Muller",
-      "won": true,
-      "result": "6-2 6-3"
     }
   ],
   "Hard": [
@@ -754,5 +754,5 @@
     }
   ],
   "playerName": "Sebastián Báez",
-  "updatedAt": 1784295448039
+  "updatedAt": 1784333936539
 }

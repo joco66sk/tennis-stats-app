@@ -122,6 +122,36 @@
       }
     },
     {
+      "id": 16465692,
+      "date": "2026-07-18T17:00:00.000Z",
+      "player1": {
+        "id": 338890,
+        "name": "Daniel Merida",
+        "countryAcr": "ES",
+        "ranking": 82
+      },
+      "player2": {
+        "id": 49172,
+        "name": "Damir Džumhur",
+        "countryAcr": "BA",
+        "ranking": 108
+      },
+      "tournament": {
+        "id": 2426,
+        "name": "Umag",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
+    },
+    {
       "id": 16556579,
       "date": "2026-07-18T11:00:00.000Z",
       "player1": {
@@ -601,6 +631,6 @@
       }
     }
   ],
-  "count": 20,
-  "fetchedAt": 1784324951714
+  "count": 21,
+  "fetchedAt": 1784333614914
 }

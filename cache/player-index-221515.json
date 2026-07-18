@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "16465444",
+      "date": "2026-07-17",
+      "tournamentId": 16465444,
+      "homeId": 102151,
+      "tournamentName": "Bastad",
+      "opponentId": 102151,
+      "opponentName": "Alejandro Tabilo",
+      "won": false,
+      "result": ""
+    },
+    {
       "id": "16465454",
       "date": "2026-07-16",
       "tournamentId": 16465454,
@@ -243,6 +254,39 @@
       "result": "7-5 6-3"
     },
     {
+      "id": "14888346",
+      "date": "2025-10-25",
+      "tournamentId": 14888346,
+      "homeId": 221515,
+      "tournamentName": "ATP Challenger Costa do Sauipe, Brazil Men Singles",
+      "opponentId": 326949,
+      "opponentName": "Adolfo Daniel Vallejo",
+      "won": false,
+      "result": "4-6 2-6"
+    },
+    {
+      "id": "14601376",
+      "date": "2025-09-12",
+      "tournamentId": 14601376,
+      "homeId": 100069,
+      "tournamentName": "Szczecin, Poland",
+      "opponentId": 100069,
+      "opponentName": "Vitaliy Sachko",
+      "won": true,
+      "result": "6-2 7-6"
+    },
+    {
+      "id": "14552568",
+      "date": "2025-09-03",
+      "tournamentId": 14552568,
+      "homeId": 377489,
+      "tournamentName": "Genoa, Italy",
+      "opponentId": 377489,
+      "opponentName": "Kilian Feldbausch",
+      "won": false,
+      "result": "3-6 4-6"
+    },
+    {
       "id": "14192189",
       "date": "2025-07-23",
       "tournamentId": 14192189,
@@ -265,70 +309,26 @@
       "result": "6-2 6-2"
     },
     {
-      "id": "13934916",
-      "date": "2025-05-25",
-      "tournamentId": 13934916,
-      "homeId": 221515,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 49172,
-      "opponentName": "Damir Džumhur",
-      "won": false,
-      "result": "6-3 4-6 3-6 5-7"
-    },
-    {
-      "id": "13924662",
-      "date": "2025-05-22",
-      "tournamentId": 13924662,
-      "homeId": 334293,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 334293,
-      "opponentName": "Ethan Quinn",
-      "won": false,
-      "result": "3-6 6-4 6-7"
-    },
-    {
-      "id": "13916732",
-      "date": "2025-05-21",
-      "tournamentId": 13916732,
-      "homeId": 207089,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 207089,
-      "opponentName": "August Holmgren",
+      "id": "14137417",
+      "date": "2025-07-16",
+      "tournamentId": 14137417,
+      "homeId": 421761,
+      "tournamentName": "San Marino, San Marino",
+      "opponentId": 421761,
+      "opponentName": "Federico Cinà",
       "won": true,
-      "result": "6-3 6-4"
+      "result": "6-3 6-3"
     },
     {
-      "id": "13914522",
-      "date": "2025-05-19",
-      "tournamentId": 13914522,
-      "homeId": 113979,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 113979,
-      "opponentName": "Juan Pablo Ficovich",
+      "id": "13994075",
+      "date": "2025-06-19",
+      "tournamentId": 13994075,
+      "homeId": 48626,
+      "tournamentName": "Poznan, Poland",
+      "opponentId": 48626,
+      "opponentName": "Lorenzo Giustino",
       "won": true,
-      "result": "6-2 6-2"
-    },
-    {
-      "id": "13852524",
-      "date": "2025-05-05",
-      "tournamentId": 13852524,
-      "homeId": 40800,
-      "tournamentName": "ATP Rome Masters",
-      "opponentId": 40800,
-      "opponentName": "Pablo Carreño Busta",
-      "won": false,
-      "result": "6-7 1-2"
-    },
-    {
-      "id": "13448227",
-      "date": "2025-02-08",
-      "tournamentId": 13448227,
-      "homeId": 54573,
-      "tournamentName": "Buenos Aires",
-      "opponentId": 54573,
-      "opponentName": "Federico Coria",
-      "won": false,
-      "result": "7-5 6-7 1-4"
+      "result": "6-1 6-1"
     }
   ],
   "Hard": [
@@ -619,6 +619,17 @@
       "result": "7-6 4-6 6-4"
     },
     {
+      "id": "13036809",
+      "date": "2024-10-29",
+      "tournamentId": 13036809,
+      "homeId": 44553,
+      "tournamentName": "Bratislava, Slovakia",
+      "opponentId": 44553,
+      "opponentName": "Pierre-Hugues Herbert",
+      "won": false,
+      "result": "3-6 2-6"
+    },
+    {
       "id": "12973526",
       "date": "2024-10-13",
       "tournamentId": 12973526,
@@ -650,17 +661,6 @@
       "opponentName": "Diego Schwartzman",
       "won": false,
       "result": "5-7 4-6"
-    },
-    {
-      "id": "12709357",
-      "date": "2024-08-19",
-      "tournamentId": 12709357,
-      "homeId": 221515,
-      "tournamentName": "US Open, Men",
-      "opponentId": 50901,
-      "opponentName": "Dmitry Popko",
-      "won": true,
-      "result": "3-6 6-1 6-2"
     }
   ],
   "Grass": [
@@ -743,5 +743,5 @@
     }
   ],
   "playerName": "Thiago Agustin Tirante",
-  "updatedAt": 1784295500180
+  "updatedAt": 1784333936538
 }

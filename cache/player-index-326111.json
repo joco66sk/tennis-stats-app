@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "13919867",
+      "date": "2025-05-28",
+      "tournamentId": 13919867,
+      "homeId": 326111,
+      "tournamentName": "Roland Garros, Men",
+      "opponentId": 122366,
+      "opponentName": "Stefanos Tsitsipas",
+      "won": true,
+      "result": "6-4 5-7 6-2 6-4"
+    },
+    {
       "id": "13916751",
       "date": "2025-05-21",
       "tournamentId": 13916751,
@@ -43,9 +54,64 @@
       "opponentName": "Arthur Rinderknech",
       "won": true,
       "result": "7-6 7-6"
+    },
+    {
+      "id": "13773714",
+      "date": "2025-04-25",
+      "tournamentId": 13773714,
+      "homeId": 199379,
+      "tournamentName": "Rome, Italy",
+      "opponentId": 199379,
+      "opponentName": "Sandro Kopp",
+      "won": true,
+      "result": "0-0"
+    },
+    {
+      "id": "13790960",
+      "date": "2025-04-22",
+      "tournamentId": 13790960,
+      "homeId": 326111,
+      "tournamentName": "Rome, Italy",
+      "opponentId": 48626,
+      "opponentName": "Lorenzo Giustino",
+      "won": true,
+      "result": "3-6 6-1 6-2"
+    },
+    {
+      "id": "12593687",
+      "date": "2024-08-01",
+      "tournamentId": 12593687,
+      "homeId": 267577,
+      "tournamentName": "San Marino, San Marino",
+      "opponentId": 267577,
+      "opponentName": "Kyrian Jacquet",
+      "won": true,
+      "result": "6-3 6-3"
     }
   ],
   "Hard": [
+    {
+      "id": "14680274",
+      "date": "2025-09-16",
+      "tournamentId": 14680274,
+      "homeId": 385592,
+      "tournamentName": "Saint Tropez, France",
+      "opponentId": 385592,
+      "opponentName": "Edas Butvilas",
+      "won": false,
+      "result": "6-4 3-6 3-6"
+    },
+    {
+      "id": "14466721",
+      "date": "2025-08-18",
+      "tournamentId": 14466721,
+      "homeId": 326111,
+      "tournamentName": "US Open, Men",
+      "opponentId": 385592,
+      "opponentName": "Edas Butvilas",
+      "won": true,
+      "result": "3-6 6-4 6-2"
+    },
     {
       "id": "14350772",
       "date": "2025-08-05",
@@ -80,7 +146,19 @@
       "result": "2-6 2-6"
     }
   ],
-  "Grass": [],
-  "updatedAt": 1784245602576,
+  "Grass": [
+    {
+      "id": "12455032",
+      "date": "2024-06-24",
+      "tournamentId": 12455032,
+      "homeId": 267577,
+      "tournamentName": "Wimbledon, Men",
+      "opponentId": 267577,
+      "opponentName": "Kyrian Jacquet",
+      "won": true,
+      "result": "6-4 7-6"
+    }
+  ],
+  "updatedAt": 1784333936563,
   "playerName": "Matteo Gigante"
 }
