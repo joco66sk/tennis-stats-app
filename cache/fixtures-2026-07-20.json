@@ -33,37 +33,6 @@
       }
     },
     {
-      "id": 16564422,
-      "date": "2026-07-20T11:00:00.000Z",
-      "player1": {
-        "id": 66484,
-        "name": "Frederico Ferreira Silva",
-        "countryAcr": "PT",
-        "ranking": 233,
-        "seed": "WC"
-      },
-      "player2": {
-        "id": 335102,
-        "name": "Luca Van Assche",
-        "countryAcr": "FR",
-        "ranking": 86
-      },
-      "tournament": {
-        "id": 2541,
-        "name": "Estoril",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
       "id": 16564412,
       "date": "2026-07-20T11:00:00.000Z",
       "player1": {
@@ -185,8 +154,40 @@
       }
     },
     {
-      "id": 16564419,
+      "id": 16564421,
       "date": "2026-07-20T11:00:00.000Z",
+      "player1": {
+        "id": 322022,
+        "name": "Vilius Gaubas",
+        "countryAcr": "LT",
+        "ranking": 128,
+        "seed": "A"
+      },
+      "player2": {
+        "id": 40800,
+        "name": "Pablo Carreño Busta",
+        "countryAcr": "ES",
+        "ranking": 65,
+        "seed": "8"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16564419,
+      "date": "2026-07-20T12:30:00.000Z",
       "player1": {
         "id": 243925,
         "name": "Titouan Droguet",
@@ -216,21 +217,20 @@
       }
     },
     {
-      "id": 16564421,
-      "date": "2026-07-20T11:00:00.000Z",
+      "id": 16564422,
+      "date": "2026-07-20T13:40:00.000Z",
       "player1": {
-        "id": 322022,
-        "name": "Vilius Gaubas",
-        "countryAcr": "LT",
-        "ranking": 128,
-        "seed": "A"
+        "id": 66484,
+        "name": "Frederico Ferreira Silva",
+        "countryAcr": "PT",
+        "ranking": 233,
+        "seed": "WC"
       },
       "player2": {
-        "id": 40800,
-        "name": "Pablo Carreño Busta",
-        "countryAcr": "ES",
-        "ranking": 65,
-        "seed": "8"
+        "id": 335102,
+        "name": "Luca Van Assche",
+        "countryAcr": "FR",
+        "ranking": 86
       },
       "tournament": {
         "id": 2541,
@@ -495,5 +495,5 @@
     }
   ],
   "count": 16,
-  "fetchedAt": 1784469780400
+  "fetchedAt": 1784475094069
 }
