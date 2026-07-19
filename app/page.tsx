@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface Fixture {
@@ -23,6 +23,9 @@ interface PlayerSurfaceStat {
   form: boolean[];
 }
 
+interface TopPlayer { id: number; name: string; ranking: number; }
+interface SearchResults { players: { id: number; name: string; ranking?: number }[]; tournaments: { id: number; name: string }[]; }
+
 export default function Home() {
   const [fixtures, setFixtures] = useState<Fixture[]>([]);
   const [loading, setLoading] = useState(true);
@@ -30,6 +33,10 @@ export default function Home() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [playerStats, setPlayerStats] = useState<Record<string, PlayerSurfaceStat>>({});
   const [refreshing, setRefreshing] = useState(false);
+  const [topPlayers, setTopPlayers] = useState<TopPlayer[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<SearchResults>({ players: [], tournaments: [] });
+  const searchRef = useRef<HTMLInputElement>(null);
 
   const normalizeSurface = (s?: string) => {
     if (!s) return s;
@@ -51,7 +58,7 @@ export default function Home() {
   const loadFixtures = (date: Date, force = false, retryCount = 0) => {
     setLoading(true);
     setError(false);
-    setPlayerStats({});  // clear when changing date so stale stats don't show for wrong players
+    setPlayerStats({});
     const url = `/api/fixtures?date=${formatDate(date)}${force ? '&refresh=true' : ''}`;
     fetch(url)
       .then(r => {
@@ -105,7 +112,6 @@ export default function Home() {
     }
 
     const atpFixtures = fixtures.filter(f => (f.tournament?.rank?.id ?? 0) >= 2);
-
     const toFetch = new Map<string, { playerId: number; surface: string }>();
     atpFixtures.forEach(f => {
       const surface = normalizeSurface(f.tournament?.court?.name) || 'Hard';
@@ -144,6 +150,26 @@ export default function Home() {
 
     return () => { cancelled = true; };
   }, [fixtures]);
+
+  // Fetch top players once
+  useEffect(() => {
+    fetch('/api/top-players')
+      .then(r => r.json())
+      .then(d => setTopPlayers(d.players || []))
+      .catch(() => {});
+  }, []);
+
+  // Debounced search
+  useEffect(() => {
+    if (searchQuery.length < 2) { setSearchResults({ players: [], tournaments: [] }); return; }
+    const t = setTimeout(() => {
+      fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`)
+        .then(r => r.json())
+        .then(d => setSearchResults(d))
+        .catch(() => {});
+    }, 300);
+    return () => clearTimeout(t);
+  }, [searchQuery]);
 
   const slugifyName = (name: string) =>
     (name.split(/[\s-]/).pop() || name)
@@ -190,9 +216,7 @@ export default function Home() {
 
   const formatTime = (dateStr: string) => {
     return new Date(dateStr).toLocaleTimeString('en-GB', {
-      hour: '2-digit',
-      minute: '2-digit',
-      timeZone: 'Europe/Stockholm',
+      hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Stockholm',
     });
   };
 
@@ -227,9 +251,61 @@ export default function Home() {
 
   const surfaceHex = (s?: string) => s === 'Clay' ? '#f97316' : s === 'Grass' ? '#34d399' : '#60a5fa';
 
+  const panelStyle = { background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '12px 10px' };
+  const panelLabel = { fontSize: 9, fontWeight: 900, color: '#52525b', letterSpacing: '0.12em', textTransform: 'uppercase' as const, marginBottom: 10 };
+
+  const hasSearchResults = searchQuery.length >= 2 && (searchResults.players.length > 0 || searchResults.tournaments.length > 0);
+  const noSearchResults = searchQuery.length >= 2 && searchResults.players.length === 0 && searchResults.tournaments.length === 0;
+
+  const searchPanel = (
+    <div style={panelStyle}>
+      <div style={panelLabel}>Search</div>
+      <input
+        ref={searchRef}
+        type="text"
+        value={searchQuery}
+        onChange={e => setSearchQuery(e.target.value)}
+        placeholder="Player or tournament…"
+        style={{ width: '100%', background: '#09090b', border: '1px solid #27272a', borderRadius: 8, padding: '7px 10px', color: '#e4e4e7', fontSize: 12, outline: 'none', boxSizing: 'border-box' }}
+      />
+      {hasSearchResults && (
+        <div style={{ marginTop: 8 }}>
+          {searchResults.players.length > 0 && (
+            <>
+              <div style={{ fontSize: 9, color: '#3f3f46', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 4 }}>Players</div>
+              {searchResults.players.map(p => (
+                <Link key={p.id} href={`/player/${p.id}`} onClick={() => setSearchQuery('')}
+                  style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 4px', borderRadius: 6, textDecoration: 'none' }}
+                  className="hover:bg-zinc-800 transition-colors">
+                  {p.ranking && <span style={{ fontSize: 10, color: '#3f3f46', width: 22, flexShrink: 0 }}>#{p.ranking}</span>}
+                  <span style={{ fontSize: 12, fontWeight: 600, color: '#d4d4d8' }}>{p.name}</span>
+                </Link>
+              ))}
+            </>
+          )}
+          {searchResults.tournaments.length > 0 && (
+            <>
+              <div style={{ fontSize: 9, color: '#3f3f46', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 4, marginTop: searchResults.players.length > 0 ? 10 : 0 }}>Tournaments</div>
+              {searchResults.tournaments.map(t => (
+                <Link key={t.id} href={`/tournament/${t.id}`} onClick={() => setSearchQuery('')}
+                  style={{ display: 'block', padding: '5px 4px', borderRadius: 6, textDecoration: 'none', fontSize: 12, fontWeight: 600, color: '#d4d4d8' }}
+                  className="hover:bg-zinc-800 transition-colors">
+                  {t.name}
+                </Link>
+              ))}
+            </>
+          )}
+        </div>
+      )}
+      {noSearchResults && (
+        <div style={{ marginTop: 8, fontSize: 11, color: '#52525b', padding: '4px 4px' }}>No results</div>
+      )}
+    </div>
+  );
+
   return (
     <div style={{ minHeight: '100vh', background: '#09090b', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#fff' }}>
-      <div style={{ maxWidth: 560, margin: '0 auto', padding: '14px 14px 32px' }}>
+      <div style={{ maxWidth: 1020, margin: '0 auto', padding: '14px 14px 32px' }}>
 
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
@@ -254,113 +330,152 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Date navigation */}
-        <div style={{ display: 'flex', gap: 6, marginBottom: 16 }}>
-          <button onClick={() => changeDate(-1)}
-            style={{ flex: 1, padding: '8px 0', background: '#18181b', border: '1px solid #27272a', borderRadius: 10, color: '#71717a', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-            ← Prev
-          </button>
-          <button onClick={() => changeDate(1)}
-            style={{ flex: 1, padding: '8px 0', background: '#18181b', border: '1px solid #27272a', borderRadius: 10, color: '#71717a', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-            Next →
-          </button>
+        {/* 3-column layout on desktop, single column on mobile */}
+        <div className="md:grid md:grid-cols-[180px_1fr_180px] md:gap-5">
+
+          {/* Left: Top Players — desktop only */}
+          <aside className="hidden md:block">
+            <div style={{ position: 'sticky', top: 16 }}>
+              <div style={panelStyle}>
+                <div style={panelLabel}>Top Players</div>
+                {topPlayers.map(p => (
+                  <Link key={p.id} href={`/player/${p.id}`}
+                    style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 4px', borderRadius: 6, textDecoration: 'none' }}
+                    className="hover:bg-zinc-800 transition-colors">
+                    <span style={{ fontSize: 10, color: '#3f3f46', fontVariantNumeric: 'tabular-nums', width: 20, textAlign: 'right', flexShrink: 0 }}>#{p.ranking}</span>
+                    <span style={{ fontSize: 12, fontWeight: 600, color: '#d4d4d8', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {p.name.split(' ').pop()}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </aside>
+
+          {/* Center: Fixtures */}
+          <main>
+            {/* Mobile search — hidden on desktop */}
+            <div className="md:hidden" style={{ marginBottom: 12 }}>
+              {searchPanel}
+            </div>
+
+            {/* Date navigation */}
+            <div style={{ display: 'flex', gap: 6, marginBottom: 16 }}>
+              <button onClick={() => changeDate(-1)}
+                style={{ flex: 1, padding: '8px 0', background: '#18181b', border: '1px solid #27272a', borderRadius: 10, color: '#71717a', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                ← Prev
+              </button>
+              <button onClick={() => changeDate(1)}
+                style={{ flex: 1, padding: '8px 0', background: '#18181b', border: '1px solid #27272a', borderRadius: 10, color: '#71717a', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                Next →
+              </button>
+            </div>
+
+            {loading ? (
+              <div style={{ textAlign: 'center', padding: '80px 0', color: '#52525b', fontSize: 14 }}>Loading matches…</div>
+            ) : error ? (
+              <div style={{ textAlign: 'center', padding: '80px 0', color: '#f87171', fontSize: 14 }}>Failed to load fixtures.</div>
+            ) : fixtures.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: '80px 0', color: '#52525b', fontSize: 14 }}>No matches scheduled.</div>
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                {sortedGroups.map(([tournamentName, matches]) => {
+                  const rawSurface = matches[0]?.tournament?.court?.name;
+                  const surface = normalizeSurface(rawSurface) || 'Hard';
+                  const sc = surfaceHex(surface);
+                  const categoryLabel = getCategoryLabel(matches[0]?.tournament?.rank?.id);
+                  const tournamentId = matches[0]?.tournament?.id;
+                  return (
+                    <div key={tournamentName}>
+                      {/* Tournament header */}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6, paddingBottom: 6, borderBottom: `1px solid ${sc}25` }}>
+                        <span style={{ width: 7, height: 7, borderRadius: '50%', background: sc, display: 'inline-block', flexShrink: 0 }} />
+                        <span style={{ fontSize: 10, fontWeight: 900, letterSpacing: '0.14em', textTransform: 'uppercase', color: sc, flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tournamentName}</span>
+                        {categoryLabel && categoryLabel !== 'ATP' && (
+                          <span style={{ fontSize: 9, fontWeight: 800, color: sc, opacity: 0.7, flexShrink: 0 }}>{categoryLabel}</span>
+                        )}
+                        {tournamentId && (
+                          <Link href={`/tournament/${tournamentId}`}
+                            style={{ fontSize: 10, fontWeight: 700, color: sc, textDecoration: 'none', opacity: 0.8, border: `1px solid ${sc}40`, borderRadius: 4, padding: '1px 6px', flexShrink: 0 }}>
+                            Draw
+                          </Link>
+                        )}
+                      </div>
+
+                      {/* Match rows */}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                        {matches.map((fixture) => {
+                          const matchSurface = normalizeSurface(fixture.tournament?.court?.name) || 'Hard';
+                          const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
+                          const p2Stats = fixture.player2?.id ? playerStats[`${fixture.player2.id}-${matchSurface}`] : undefined;
+                          const round = formatRound(fixture.round?.name);
+
+                          const statBlock = (stats: PlayerSurfaceStat | undefined, align: 'left' | 'right') => {
+                            if (!stats) return <span style={{ fontSize: 11, color: '#2a2a2e' }}>—</span>;
+                            const col = stats.wins >= stats.losses ? '#34d399' : '#f87171';
+                            return (
+                              <div style={{ display: 'flex', flexDirection: 'column', alignItems: align === 'right' ? 'flex-end' : 'flex-start', gap: 3 }}>
+                                <span style={{ fontSize: 13, fontWeight: 800, color: col, fontFamily: 'monospace', fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{stats.wins}–{stats.losses}</span>
+                                {(stats.form?.length ?? 0) > 0 && (
+                                  <div style={{ display: 'flex', gap: 2 }}>
+                                    {stats.form.map((w, j) => <span key={j} style={{ width: 6, height: 6, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          };
+
+                          return (
+                            <Link key={fixture.id} href={matchUrl(fixture)}
+                              style={{ display: 'block', textDecoration: 'none', background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}
+                              className="hover:bg-zinc-800/50 active:bg-zinc-800 transition-colors">
+                              <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: 8 }}>
+
+                                {/* P1 — right */}
+                                <div style={{ textAlign: 'right', minWidth: 0 }}>
+                                  <div style={{ fontSize: 15, fontWeight: 700, color: '#e4e4e7', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: 5 }}>
+                                    {fixture.player1?.ranking && <span style={{ fontSize: 11, color: '#3f3f46', marginRight: 4 }}>#{fixture.player1.ranking}</span>}
+                                    {fixture.player1?.name}
+                                  </div>
+                                  {statBlock(p1Stats, 'right')}
+                                </div>
+
+                                {/* Center */}
+                                <div style={{ textAlign: 'center', flexShrink: 0, padding: '0 6px' }}>
+                                  <div style={{ fontSize: 9, fontWeight: 900, color: sc, letterSpacing: '0.14em', marginBottom: 3, textTransform: 'uppercase' }}>VS</div>
+                                  <div style={{ fontSize: 11, fontWeight: 600, color: '#52525b', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{formatTime(fixture.date)}</div>
+                                  {round && <div style={{ fontSize: 9, fontWeight: 700, color: sc, opacity: 0.6, marginTop: 2 }}>{round}</div>}
+                                </div>
+
+                                {/* P2 — left */}
+                                <div style={{ textAlign: 'left', minWidth: 0 }}>
+                                  <div style={{ fontSize: 15, fontWeight: 700, color: '#e4e4e7', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: 5 }}>
+                                    {fixture.player2?.ranking && <span style={{ fontSize: 11, color: '#3f3f46', marginRight: 4 }}>#{fixture.player2.ranking}</span>}
+                                    {fixture.player2?.name}
+                                  </div>
+                                  {statBlock(p2Stats, 'left')}
+                                </div>
+
+                              </div>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </main>
+
+          {/* Right: Search — desktop only */}
+          <aside className="hidden md:block">
+            <div style={{ position: 'sticky', top: 16 }}>
+              {searchPanel}
+            </div>
+          </aside>
+
         </div>
-
-        {loading ? (
-          <div style={{ textAlign: 'center', padding: '80px 0', color: '#52525b', fontSize: 14 }}>Loading matches…</div>
-        ) : error ? (
-          <div style={{ textAlign: 'center', padding: '80px 0', color: '#f87171', fontSize: 14 }}>Failed to load fixtures.</div>
-        ) : fixtures.length === 0 ? (
-          <div style={{ textAlign: 'center', padding: '80px 0', color: '#52525b', fontSize: 14 }}>No matches scheduled.</div>
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            {sortedGroups.map(([tournamentName, matches]) => {
-              const rawSurface = matches[0]?.tournament?.court?.name;
-              const surface = normalizeSurface(rawSurface) || 'Hard';
-              const sc = surfaceHex(surface);
-              const categoryLabel = getCategoryLabel(matches[0]?.tournament?.rank?.id);
-              const tournamentId = matches[0]?.tournament?.id;
-              return (
-                <div key={tournamentName}>
-                  {/* Tournament header */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6, paddingBottom: 6, borderBottom: `1px solid ${sc}25` }}>
-                    <span style={{ width: 7, height: 7, borderRadius: '50%', background: sc, display: 'inline-block', flexShrink: 0 }} />
-                    <span style={{ fontSize: 10, fontWeight: 900, letterSpacing: '0.14em', textTransform: 'uppercase', color: sc, flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tournamentName}</span>
-                    {categoryLabel && categoryLabel !== 'ATP' && (
-                      <span style={{ fontSize: 9, fontWeight: 800, color: sc, opacity: 0.7, flexShrink: 0 }}>{categoryLabel}</span>
-                    )}
-                    {tournamentId && (
-                      <Link href={`/tournament/${tournamentId}`}
-                        style={{ fontSize: 10, fontWeight: 700, color: sc, textDecoration: 'none', opacity: 0.8, border: `1px solid ${sc}40`, borderRadius: 4, padding: '1px 6px', flexShrink: 0 }}>
-                        Draw
-                      </Link>
-                    )}
-                  </div>
-
-                  {/* Match rows */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                    {matches.map((fixture) => {
-                      const matchSurface = normalizeSurface(fixture.tournament?.court?.name) || 'Hard';
-                      const p1Stats = fixture.player1?.id ? playerStats[`${fixture.player1.id}-${matchSurface}`] : undefined;
-                      const p2Stats = fixture.player2?.id ? playerStats[`${fixture.player2.id}-${matchSurface}`] : undefined;
-                      const round = formatRound(fixture.round?.name);
-
-                      const statBlock = (stats: PlayerSurfaceStat | undefined, align: 'left' | 'right') => {
-                        if (!stats) return <span style={{ fontSize: 11, color: '#2a2a2e' }}>—</span>;
-                        const col = stats.wins >= stats.losses ? '#34d399' : '#f87171';
-                        return (
-                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: align === 'right' ? 'flex-end' : 'flex-start', gap: 3 }}>
-                            <span style={{ fontSize: 13, fontWeight: 800, color: col, fontFamily: 'monospace', fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{stats.wins}–{stats.losses}</span>
-                            {(stats.form?.length ?? 0) > 0 && (
-                              <div style={{ display: 'flex', gap: 2 }}>
-                                {stats.form.map((w, j) => <span key={j} style={{ width: 6, height: 6, borderRadius: '50%', background: w ? '#34d399' : '#ef4444', display: 'inline-block' }} />)}
-                              </div>
-                            )}
-                          </div>
-                        );
-                      };
-
-                      return (
-                        <Link key={fixture.id} href={matchUrl(fixture)}
-                          style={{ display: 'block', textDecoration: 'none', background: '#18181b', border: '1px solid #27272a', borderRadius: 12, padding: '10px 12px' }}
-                          className="hover:bg-zinc-800/50 active:bg-zinc-800 transition-colors">
-                          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: 8 }}>
-
-                            {/* P1 — right */}
-                            <div style={{ textAlign: 'right', minWidth: 0 }}>
-                              <div style={{ fontSize: 15, fontWeight: 700, color: '#e4e4e7', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: 5 }}>
-                                {fixture.player1?.ranking && <span style={{ fontSize: 11, color: '#3f3f46', marginRight: 4 }}>#{fixture.player1.ranking}</span>}
-                                {fixture.player1?.name}
-                              </div>
-                              {statBlock(p1Stats, 'right')}
-                            </div>
-
-                            {/* Center */}
-                            <div style={{ textAlign: 'center', flexShrink: 0, padding: '0 6px' }}>
-                              <div style={{ fontSize: 9, fontWeight: 900, color: sc, letterSpacing: '0.14em', marginBottom: 3, textTransform: 'uppercase' }}>VS</div>
-                              <div style={{ fontSize: 11, fontWeight: 600, color: '#52525b', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{formatTime(fixture.date)}</div>
-                              {round && <div style={{ fontSize: 9, fontWeight: 700, color: sc, opacity: 0.6, marginTop: 2 }}>{round}</div>}
-                            </div>
-
-                            {/* P2 — left */}
-                            <div style={{ textAlign: 'left', minWidth: 0 }}>
-                              <div style={{ fontSize: 15, fontWeight: 700, color: '#e4e4e7', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: 5 }}>
-                                {fixture.player2?.ranking && <span style={{ fontSize: 11, color: '#3f3f46', marginRight: 4 }}>#{fixture.player2.ranking}</span>}
-                                {fixture.player2?.name}
-                              </div>
-                              {statBlock(p2Stats, 'left')}
-                            </div>
-
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
 
         <footer style={{ marginTop: 32, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <img src="https://s01.flagcounter.com/count/JxLo/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="" style={{ position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }} />
