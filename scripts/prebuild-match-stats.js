@@ -153,13 +153,35 @@ async function main() {
       .filter(f => /^fixtures-\d{4}-\d{2}-\d{2}\.json$/.test(f))
       .map(f => f.replace('fixtures-', '').replace('.json', ''))
       .sort();
-  } else {
+  } else if (arg !== 'recent') {
     dates = [arg];
   }
 
   if (surfaces.length < ALL_SURFACES.length) console.log(`Surface filter: ${surfaces.join(', ')} only`);
 
-  const playerIds = getPlayerIdsFromFixtures(dates);
+  const playerArg = process.argv.find(a => a.startsWith('--player='))?.split('=')[1];
+  const hoursArg = parseInt(process.argv.find(a => a.startsWith('--hours='))?.split('=')[1] || '2');
+
+  let playerIds;
+  if (playerArg) {
+    playerIds = playerArg.split(',').map(s => s.trim());
+    console.log(`Player mode: ${playerIds.join(', ')}`);
+  } else if (arg === 'recent') {
+    const cutoff = Date.now() - hoursArg * 60 * 60 * 1000;
+    playerIds = fs.readdirSync(CACHE_DIR)
+      .filter(f => /^player-index-\d+\.json$/.test(f))
+      .filter(f => {
+        try {
+          const d = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, f), 'utf-8'));
+          return (d.updatedAt || 0) >= cutoff;
+        } catch { return false; }
+      })
+      .map(f => f.match(/player-index-(\d+)\.json/)[1]);
+    console.log(`Recent mode (last ${hoursArg}h): ${playerIds.length} player indexes`);
+  } else {
+    playerIds = getPlayerIdsFromFixtures(dates);
+  }
+
   if (playerIds.length === 0) {
     console.log('No players found. Make sure fixture files exist in cache/');
     process.exit(0);

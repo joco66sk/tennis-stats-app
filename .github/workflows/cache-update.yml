@@ -54,6 +54,9 @@ jobs:
       - name: Prebuild match stats
         run: node scripts/prebuild-match-stats.js upcoming || true
 
+      - name: Fill gaps for recently updated players
+        run: node scripts/prebuild-match-stats.js recent || true
+
       - name: Repair missing indexes and stats
         run: node scripts/repair-upcoming.js || true
 
