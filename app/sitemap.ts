@@ -108,7 +108,7 @@ function playerUrls(): MetadataRoute.Sitemap {
         const url = `${BASE}/player/${p.id}`;
         if (seen.has(url)) continue;
         seen.add(url);
-        entries.push({ url, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 });
+        entries.push({ url, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 });
       }
     }
   }
