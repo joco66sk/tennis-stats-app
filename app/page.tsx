@@ -177,6 +177,14 @@ export default function Home() {
       .normalize('NFD').replace(/[̀-ͯ]/g, '')
       .replace(/[^a-z0-9]/g, '');
 
+  const playerUrl = (id: number, name: string) => {
+    const slug = name.toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+    return `/player/${id}-${slug}`;
+  };
+
   const matchUrl = (fixture: Fixture) => {
     const p1id = fixture.player1?.id || '';
     const p2id = fixture.player2?.id || '';
@@ -274,7 +282,7 @@ export default function Home() {
             <>
               <div style={{ fontSize: 9, color: '#3f3f46', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 4 }}>Players</div>
               {searchResults.players.map(p => (
-                <Link key={p.id} href={`/player/${p.id}`} onClick={() => setSearchQuery('')}
+                <Link key={p.id} href={playerUrl(p.id, p.name)} onClick={() => setSearchQuery('')}
                   style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 4px', borderRadius: 6, textDecoration: 'none' }}
                   className="hover:bg-zinc-800 transition-colors">
                   {p.ranking && <span style={{ fontSize: 10, color: '#3f3f46', width: 22, flexShrink: 0 }}>#{p.ranking}</span>}
@@ -339,7 +347,7 @@ export default function Home() {
               <div style={panelStyle}>
                 <div style={panelLabel}>Top Players</div>
                 {topPlayers.map(p => (
-                  <Link key={p.id} href={`/player/${p.id}`}
+                  <Link key={p.id} href={playerUrl(p.id, p.name)}
                     style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 4px', borderRadius: 6, textDecoration: 'none' }}
                     className="hover:bg-zinc-800 transition-colors">
                     <span style={{ fontSize: 10, color: '#3f3f46', fontVariantNumeric: 'tabular-nums', width: 20, textAlign: 'right', flexShrink: 0 }}>#{p.ranking}</span>

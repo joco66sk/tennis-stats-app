@@ -64,16 +64,32 @@ interface Props {
 
 export default function PlayerTabs({ playerId, clay, hard, grass }: Props) {
   const [active, setActive] = useState<'Clay' | 'Hard' | 'Grass'>('Clay');
+  const [limit, setLimit] = useState<5 | 10 | 20 | 30>(30);
+  const [statsCache, setStatsCache] = useState<Record<string, PlayerSurfaceStats>>({
+    'Clay-30': clay, 'Hard-30': hard, 'Grass-30': grass,
+  });
+  const [fetchingStats, setFetchingStats] = useState(false);
   const [selectedMatchKey, setSelectedMatchKey] = useState<string | null>(null);
   const [selectedMatch, setSelectedMatch] = useState<{ tournamentId: number; opponentId: number; homeId?: number; playerName: string; opponentName: string } | null>(null);
   const [matchDetail, setMatchDetail] = useState<{ my: SingleMatchStats; opp: SingleMatchStats; playerName: string; opponentName: string } | null>(null);
   const [matchDetailLoading, setMatchDetailLoading] = useState(false);
 
-  const statsMap = { Clay: clay, Hard: hard, Grass: grass };
-  const s = statsMap[active];
+  const cacheKey = `${active}-${limit}`;
+
+  useEffect(() => {
+    if (statsCache[cacheKey]) return;
+    setFetchingStats(true);
+    fetch(`/api/player-surface-stats?playerId=${playerId}&surface=${active}&limit=${limit}`)
+      .then(r => r.json())
+      .then(data => setStatsCache(prev => ({ ...prev, [cacheKey]: data })))
+      .catch(() => {})
+      .finally(() => setFetchingStats(false));
+  }, [cacheKey, playerId, active, limit, statsCache]);
+
+  const s = statsCache[cacheKey];
   const sc = surfaceColor(active);
-  const total = s.wins + s.losses;
-  const winColor = s.wins >= s.losses ? '#34d399' : '#f87171';
+  const total = s ? s.wins + s.losses : 0;
+  const winColor = s && s.wins >= s.losses ? '#34d399' : '#f87171';
 
   useEffect(() => {
     if (!selectedMatch) { setMatchDetail(null); return; }
@@ -111,9 +127,9 @@ export default function PlayerTabs({ playerId, clay, hard, grass }: Props) {
   return (
     <>
       {/* Surface tabs */}
-      <div style={{ display: 'flex', gap: 8, marginBottom: 14 }}>
+      <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
         {(['Clay', 'Hard', 'Grass'] as const).map(surf => {
-          const st = statsMap[surf];
+          const st = statsCache[`${surf}-${limit}`] ?? statsCache[`${surf}-30`];
           const isActive = active === surf;
           const col = surfaceColor(surf);
           return (
@@ -127,14 +143,32 @@ export default function PlayerTabs({ playerId, clay, hard, grass }: Props) {
             }}>
               {surf}
               <span style={{ display: 'block', fontSize: 11, fontWeight: 500, marginTop: 2, color: isActive ? col : '#3f3f46' }}>
-                {(st.wins + st.losses) > 0 ? `${st.wins}–${st.losses}` : '—'}
+                {st && (st.wins + st.losses) > 0 ? `${st.wins}–${st.losses}` : '—'}
               </span>
             </button>
           );
         })}
       </div>
 
-      {total === 0 ? (
+      {/* Limit filter */}
+      <div style={{ display: 'flex', gap: 4, marginBottom: 14 }}>
+        {([5, 10, 20, 30] as const).map(n => (
+          <button key={n} onClick={() => { setLimit(n); setSelectedMatchKey(null); setSelectedMatch(null); }}
+            style={{
+              flex: 1, padding: '4px 0', borderRadius: 6, fontSize: 11, fontWeight: 700,
+              border: `1px solid ${limit === n ? sc : '#27272a'}`,
+              background: limit === n ? `${sc}15` : 'transparent',
+              color: limit === n ? sc : '#52525b',
+              cursor: 'pointer',
+            }}>
+            Last {n}
+          </button>
+        ))}
+      </div>
+
+      {fetchingStats ? (
+        <div style={{ textAlign: 'center', color: '#52525b', fontSize: 13, padding: '32px 0' }}>Loading…</div>
+      ) : !s || total === 0 ? (
         <div style={{ textAlign: 'center', color: '#52525b', fontSize: 13, padding: '32px 0' }}>
           No {active.toLowerCase()} matches found
         </div>
@@ -196,7 +230,7 @@ export default function PlayerTabs({ playerId, clay, hard, grass }: Props) {
             <div style={{ padding: '8px 14px', borderBottom: '1px solid #27272a', fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               Recent {active} Matches
             </div>
-            {s.matches.slice(0, 10).map((m, i) => {
+            {s.matches.map((m, i) => {
               const key = `${m.tournamentId}-${m.opponentId}`;
               const isSelected = selectedMatchKey === key;
               return (
@@ -231,7 +265,7 @@ export default function PlayerTabs({ playerId, clay, hard, grass }: Props) {
 
                   {/* Inline match stats */}
                   {isSelected && (
-                    <div style={{ background: '#111115', borderTop: `1px solid ${sc}30`, borderBottom: i < s.matches.slice(0, 10).length - 1 ? '1px solid #1f1f22' : 'none', padding: '0 0 8px' }}>
+                    <div style={{ background: '#111115', borderTop: `1px solid ${sc}30`, borderBottom: i < s.matches.length - 1 ? '1px solid #1f1f22' : 'none', padding: '0 0 8px' }}>
                       {matchDetailLoading ? (
                         <div style={{ textAlign: 'center', padding: '16px', color: '#52525b', fontSize: 12 }}>Loading stats…</div>
                       ) : matchDetail ? (
