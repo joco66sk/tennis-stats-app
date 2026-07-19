@@ -312,7 +312,7 @@ export default function Home() {
           <div>
             <h1 style={{ fontSize: 24, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', textTransform: 'uppercase', margin: 0, lineHeight: 1 }}>Tennis Deep Stats</h1>
             <p style={{ fontSize: 11, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 3, marginBottom: 0 }}>
-              ATP Fixtures · {selectedDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })}
+              ATP Fixtures
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -360,14 +360,17 @@ export default function Home() {
             </div>
 
             {/* Date navigation */}
-            <div style={{ display: 'flex', gap: 6, marginBottom: 16 }}>
+            <div style={{ display: 'flex', gap: 6, marginBottom: 16, alignItems: 'center' }}>
               <button onClick={() => changeDate(-1)}
-                style={{ flex: 1, padding: '8px 0', background: '#18181b', border: '1px solid #27272a', borderRadius: 10, color: '#71717a', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-                ← Prev
+                style={{ padding: '8px 14px', background: '#18181b', border: '1px solid #27272a', borderRadius: 10, color: '#71717a', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                ←
               </button>
+              <div style={{ flex: 1, textAlign: 'center', fontSize: 13, fontWeight: 700, color: '#a1a1aa' }}>
+                {selectedDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })}
+              </div>
               <button onClick={() => changeDate(1)}
-                style={{ flex: 1, padding: '8px 0', background: '#18181b', border: '1px solid #27272a', borderRadius: 10, color: '#71717a', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-                Next →
+                style={{ padding: '8px 14px', background: '#18181b', border: '1px solid #27272a', borderRadius: 10, color: '#71717a', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                →
               </button>
             </div>
 

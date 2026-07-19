@@ -42,6 +42,9 @@ jobs:
       - name: Prefetch fixtures (past 2 days + today + 6 days ahead)
         run: node scripts/prefetch-fixtures.js 6 --past=2 || true
 
+      - name: Fetch ATP rankings
+        run: node scripts/fetch-rankings.js || true
+
       - name: Rebuild player indexes
         run: node scripts/prebuild-cache.js today || true
 
