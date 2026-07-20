@@ -1,6 +1,39 @@
 {
   "date": "2026-07-22",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1784546626807
+  "fixtures": [
+    {
+      "id": 16515714,
+      "date": "2026-07-22T11:00:00.000Z",
+      "player1": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL",
+        "ranking": 30,
+        "seed": "3"
+      },
+      "player2": {
+        "id": 283476,
+        "name": "Tiago Torres",
+        "countryAcr": "PT",
+        "ranking": 427,
+        "seed": "WC"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1784554044251
 }
