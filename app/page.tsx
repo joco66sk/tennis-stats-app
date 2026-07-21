@@ -24,7 +24,7 @@ interface PlayerSurfaceStat {
 }
 
 interface TopPlayer { id: number; name: string; ranking: number; }
-interface SearchResults { players: { id: number; name: string; ranking?: number }[]; tournaments: { id: number; name: string }[]; }
+interface SearchResults { players: { id: number; name: string; ranking?: number }[]; tournaments: { name: string; slug: string }[]; }
 
 export default function Home() {
   const [fixtures, setFixtures] = useState<Fixture[]>([]);
@@ -177,6 +177,16 @@ export default function Home() {
       .normalize('NFD').replace(/[̀-ͯ]/g, '')
       .replace(/[^a-z0-9]/g, '');
 
+  const tournamentUrl = (id: number | undefined, name: string, date: string) => {
+    if (!id) return '#';
+    const year = date.slice(0, 4);
+    const slug = name.toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+    return `/tournament/${id}-${slug}-${year}`;
+  };
+
   const playerUrl = (id: number, name: string) => {
     const slug = name.toLowerCase()
       .normalize('NFD').replace(/[̀-ͯ]/g, '')
@@ -295,7 +305,7 @@ export default function Home() {
             <>
               <div style={{ fontSize: 9, color: '#3f3f46', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 4, marginTop: searchResults.players.length > 0 ? 10 : 0 }}>Tournaments</div>
               {searchResults.tournaments.map(t => (
-                <Link key={t.id} href={`/tournament/${t.id}`} onClick={() => setSearchQuery('')}
+                <Link key={t.slug} href={`/tournament/${t.slug}`} onClick={() => setSearchQuery('')}
                   style={{ display: 'block', padding: '5px 4px', borderRadius: 6, textDecoration: 'none', fontSize: 12, fontWeight: 600, color: '#d4d4d8' }}
                   className="hover:bg-zinc-800 transition-colors">
                   {t.name}
@@ -396,6 +406,7 @@ export default function Home() {
                   const sc = surfaceHex(surface);
                   const categoryLabel = getCategoryLabel(matches[0]?.tournament?.rank?.id);
                   const tournamentId = matches[0]?.tournament?.id;
+                  const tournamentDate = matches[0]?.date || '';
                   return (
                     <div key={tournamentName}>
                       {/* Tournament header */}
@@ -406,7 +417,7 @@ export default function Home() {
                           <span style={{ fontSize: 9, fontWeight: 800, color: sc, opacity: 0.7, flexShrink: 0 }}>{categoryLabel}</span>
                         )}
                         {tournamentId && (
-                          <Link href={`/tournament/${tournamentId}`}
+                          <Link href={tournamentUrl(tournamentId, tournamentName, tournamentDate)}
                             style={{ fontSize: 10, fontWeight: 700, color: sc, textDecoration: 'none', opacity: 0.8, border: `1px solid ${sc}40`, borderRadius: 4, padding: '1px 6px', flexShrink: 0 }}>
                             Draw
                           </Link>

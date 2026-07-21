@@ -70,6 +70,25 @@ function fmtShortDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
+function tournamentNameSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+export function toTournamentSlug(id: string | number, name: string, year: string | number): string {
+  return `${id}-${tournamentNameSlug(name)}-${year}`;
+}
+
+function loadArchive(): Record<string, { id: number; name: string; surface: string; tier: number; year: string; startDate: string; endDate: string }> {
+  const fp = path.join(CACHE_DIR, 'tournament-archive.json');
+  if (!fs.existsSync(fp)) return {};
+  try { return JSON.parse(fs.readFileSync(fp, 'utf-8')).tournaments || {}; }
+  catch { return {}; }
+}
+
 function getMatchResult(eventId: number, p1Id: number): { score: string; p1Won: boolean } | null {
   const fp = path.join(CACHE_DIR, `player-index-${p1Id}.json`);
   if (!fs.existsSync(fp)) return null;
@@ -103,6 +122,18 @@ function getBasicStats(playerId: string | number, surface: string) {
   } catch { return null; }
 }
 
+function playerNameSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+function playerUrl(id: number, name: string): string {
+  return `/player/${id}-${playerNameSlug(name)}`;
+}
+
 function slugifyName(name: string): string {
   return (name.split(/[\s-]/).pop() || name)
     .toLowerCase()
@@ -134,47 +165,78 @@ function getAllFixtureFiles(): string[] {
 }
 
 export async function generateStaticParams() {
-  const ids = new Set<string>();
+  const slugs = new Set<string>();
+
+  // Current fixture window
   for (const fp of getAllFixtureFiles()) {
     try {
       const { fixtures = [] } = JSON.parse(fs.readFileSync(fp, 'utf-8'));
       for (const f of fixtures) {
-        if (f.tournament?.id) ids.add(String(f.tournament.id));
+        const t = f.tournament;
+        if (!t?.id || !t.name) continue;
+        const year = (f.date || '').slice(0, 4) || new Date().getFullYear().toString();
+        slugs.add(toTournamentSlug(t.id, t.name, year));
       }
     } catch {}
   }
-  return Array.from(ids).map(id => ({ id }));
+
+  // All archived tournaments
+  const archive = loadArchive();
+  for (const entry of Object.values(archive)) {
+    slugs.add(toTournamentSlug(entry.id, entry.name, entry.year));
+  }
+
+  return Array.from(slugs).map(id => ({ id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  const numericId = id.split('-')[0];
+
+  // Try fixture files first, then archive
   for (const fp of getAllFixtureFiles()) {
     try {
       const { fixtures = [] } = JSON.parse(fs.readFileSync(fp, 'utf-8'));
-      const f = fixtures.find((x: CachedFixture) => String(x.tournament?.id) === id);
+      const f = fixtures.find((x: CachedFixture) => String(x.tournament?.id) === numericId);
       if (f) {
         const name = f.tournament.name;
         const surface = normalizeSurface(f.tournament?.court?.name);
+        const year = (f.date || '').slice(0, 4);
+        const slug = toTournamentSlug(numericId, name, year);
         return {
-          title: `${name} Draw & Stats | Tennis Deep Stats`,
-          description: `${name} full draw on ${surface} — serve, return and win rate for every player.`,
-          alternates: { canonical: `https://tennisdeepstats.com/tournament/${id}` },
+          title: `${name} ${year} Draw & Stats | Tennis Deep Stats`,
+          description: `${name} ${year} full draw on ${surface} — serve, return and win rate for every player.`,
+          alternates: { canonical: `https://tennisdeepstats.com/tournament/${slug}` },
           openGraph: {
-            title: `${name} Draw & Stats`,
-            description: `${name} full draw with ${surface.toLowerCase()} surface stats.`,
-            url: `https://tennisdeepstats.com/tournament/${id}`,
+            title: `${name} ${year} Draw & Stats`,
+            description: `${name} ${year} full draw with ${surface.toLowerCase()} surface stats.`,
+            url: `https://tennisdeepstats.com/tournament/${slug}`,
             siteName: 'Tennis Deep Stats',
           },
         };
       }
     } catch {}
   }
+
+  const archive = loadArchive();
+  const entry = archive[numericId];
+  if (entry) {
+    const slug = toTournamentSlug(entry.id, entry.name, entry.year);
+    return {
+      title: `${entry.name} ${entry.year} Draw & Stats | Tennis Deep Stats`,
+      description: `${entry.name} ${entry.year} full draw on ${entry.surface} — serve, return and win rate for every player.`,
+      alternates: { canonical: `https://tennisdeepstats.com/tournament/${slug}` },
+    };
+  }
+
   return { title: 'Tournament Draw | Tennis Deep Stats', description: 'ATP tournament draw with surface stats.' };
 }
 
 export default async function TournamentPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  if (!/^\d+$/.test(id)) redirect('/');
+
+  const numericId = id.split('-')[0];
+  if (!/^\d+$/.test(numericId)) redirect('/');
 
   const seen = new Set<number>();
   const allFixtures: CachedFixture[] = [];
@@ -182,7 +244,7 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
     try {
       const { fixtures = [] } = JSON.parse(fs.readFileSync(fp, 'utf-8'));
       for (const f of fixtures) {
-        if (String(f.tournament?.id) === id && f.player1 && f.player2 && !seen.has(f.id)) {
+        if (String(f.tournament?.id) === numericId && f.player1 && f.player2 && !seen.has(f.id)) {
           seen.add(f.id);
           allFixtures.push(f);
         }
@@ -194,9 +256,13 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
 
   const surface = normalizeSurface(allFixtures[0].tournament?.court?.name);
   const tournamentName = allFixtures[0].tournament?.name || 'Tournament';
+  const year = (allFixtures[0].date || '').slice(0, 4);
   const sc = surfaceColor(surface);
   const rankId = allFixtures[0].tournament?.rank?.id ?? 0;
   const tierLabel = rankId >= 4 ? 'Grand Slam' : rankId >= 3 ? 'Masters 1000' : rankId >= 2 ? 'ATP 250' : '';
+
+  // Redirect old numeric-only URLs to slug
+  if (/^\d+$/.test(id)) redirect(`/tournament/${toTournamentSlug(numericId, tournamentName, year)}`);
 
   // Pre-compute stats for all unique players
   const statsCacheRaw = new Map<number, ReturnType<typeof getBasicStats>>();
@@ -234,7 +300,6 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   const mainRoundsRaw = sortedRounds.filter(([r]) => roundOrder(r) >= 0);
   const qualRoundsRaw = sortedRounds.filter(([r]) => roundOrder(r) < 0);
 
-  // Bracket sort: seed 1 first, seed 2 last, others by seed number, unseeded by ranking
   const parseSeed = (s?: string) => { const n = parseInt(s ?? ''); return isNaN(n) ? Infinity : n; };
   const bracketKey = (f: CachedFixture) => {
     const s1 = parseSeed(f.player1?.seed);
@@ -246,7 +311,6 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
     return 500 + Math.min(f.player1?.ranking ?? 999, f.player2?.ranking ?? 999);
   };
 
-  // Serialize for client component
   const toDrawFixture = (f: CachedFixture) => ({
     id: f.id,
     date: f.date,
@@ -254,6 +318,8 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
     player2: f.player2!,
     round: f.round?.name || '',
     compareUrl: compareUrl(f, surface),
+    player1Url: playerUrl(f.player1!.id, f.player1!.name),
+    player2Url: playerUrl(f.player2!.id, f.player2!.name),
   });
 
   const mainRounds = mainRoundsRaw.map(([roundName, fixtures]) => ({
@@ -266,7 +332,6 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
     fixtures: fixtures.map(toDrawFixture),
   }));
 
-  // Convert Maps to plain objects for serialization
   const statsCache: Record<number, ReturnType<typeof getBasicStats>> = {};
   statsCacheRaw.forEach((v, k) => { statsCache[k] = v; });
 
@@ -276,6 +341,7 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   return (
     <TournamentDrawClient
       tournamentName={tournamentName}
+      year={year}
       surface={surface}
       sc={sc}
       tierLabel={tierLabel}

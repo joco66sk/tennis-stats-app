@@ -9,6 +9,7 @@ interface DrawFixture {
   id: number; date: string;
   player1: FixturePlayer; player2: FixturePlayer;
   round: string; compareUrl: string;
+  player1Url: string; player2Url: string;
 }
 interface SingleMatchStats {
   firstServePct: number; firstServeWonPct: number; secondServeWonPct: number;
@@ -17,7 +18,7 @@ interface SingleMatchStats {
 }
 
 export interface Props {
-  tournamentName: string; surface: string; sc: string; tierLabel: string;
+  tournamentName: string; year: string; surface: string; sc: string; tierLabel: string;
   dateRange: string; totalMatches: number;
   mainRounds: { roundName: string; fixtures: DrawFixture[] }[];
   qualRounds: { roundName: string; fixtures: DrawFixture[] }[];
@@ -67,7 +68,7 @@ const ROUND_W = 185;   // px — width of each round column
 const CONN_W  = 28;    // px — width of SVG connector between rounds
 
 export default function TournamentDrawClient({
-  tournamentName, surface, sc, tierLabel, dateRange, totalMatches,
+  tournamentName, year, surface, sc, tierLabel, dateRange, totalMatches,
   mainRounds, qualRounds, statsCache, resultsCache,
 }: Props) {
   const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -177,7 +178,7 @@ export default function TournamentDrawClient({
                               {p1.seed ?? (p1.ranking ? p1.ranking : '')}
                             </span>
                             <Link
-                              href={`/player/${p1.id}`}
+                              href={f.player1Url}
                               onClick={e => e.stopPropagation()}
                               style={{
                                 fontSize: ROW_H >= 44 ? 12 : 11,
@@ -215,7 +216,7 @@ export default function TournamentDrawClient({
                               {p2.seed ?? (p2.ranking ? p2.ranking : '')}
                             </span>
                             <Link
-                              href={`/player/${p2.id}`}
+                              href={f.player2Url}
                               onClick={e => e.stopPropagation()}
                               style={{
                                 fontSize: ROW_H >= 44 ? 12 : 11,
@@ -304,7 +305,7 @@ export default function TournamentDrawClient({
         <div className="bg-zinc-900 border border-zinc-800 rounded-xl" style={{ padding: '14px 16px', marginBottom: 8 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
             <span style={{ width: 10, height: 10, borderRadius: '50%', background: sc, display: 'inline-block', flexShrink: 0 }} />
-            <h1 style={{ fontSize: 20, fontWeight: 900, color: '#f4f4f5', margin: 0, lineHeight: 1 }}>{tournamentName}</h1>
+            <h1 style={{ fontSize: 20, fontWeight: 900, color: '#f4f4f5', margin: 0, lineHeight: 1 }}>{tournamentName} {year}</h1>
             <span style={{ fontSize: 12, fontWeight: 700, color: sc, border: `1px solid ${sc}40`, borderRadius: 5, padding: '2px 8px', background: `${sc}12` }}>{surface}</span>
             {tierLabel && <span style={{ fontSize: 11, fontWeight: 700, color: '#71717a', border: '1px solid #27272a', borderRadius: 5, padding: '2px 7px' }}>{tierLabel}</span>}
           </div>
@@ -349,9 +350,9 @@ export default function TournamentDrawClient({
             ) : matchDetail ? (
               <>
                 <div className="grid grid-cols-[1fr_10rem_1fr] items-center pb-2">
-                  <Link href={`/player/${selectedFixture.player1.id}`} className="text-right text-xs font-black text-white truncate pr-2 hover:text-emerald-400 transition">{matchDetail.p1Name}</Link>
+                  <Link href={selectedFixture.player1Url} className="text-right text-xs font-black text-white truncate pr-2 hover:text-emerald-400 transition">{matchDetail.p1Name}</Link>
                   <div className="text-center text-xs text-zinc-500">Match Stats</div>
-                  <Link href={`/player/${selectedFixture.player2.id}`} className="text-left text-xs font-black text-white truncate pl-2 hover:text-emerald-400 transition">{matchDetail.p2Name}</Link>
+                  <Link href={selectedFixture.player2Url} className="text-left text-xs font-black text-white truncate pl-2 hover:text-emerald-400 transition">{matchDetail.p2Name}</Link>
                 </div>
                 <div className="text-xs font-black text-blue-400 uppercase tracking-widest py-1">Serve</div>
                 <StatRow label="1st Serve %" v1={matchDetail.left.firstServePct} v2={matchDetail.right.firstServePct} />
