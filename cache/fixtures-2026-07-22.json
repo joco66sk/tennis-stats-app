@@ -159,6 +159,37 @@
       }
     },
     {
+      "id": 16515727,
+      "date": "2026-07-22T11:00:00.000Z",
+      "player1": {
+        "id": 125006,
+        "name": "Nuno Borges",
+        "countryAcr": "PT",
+        "ranking": 48,
+        "seed": "5"
+      },
+      "player2": {
+        "id": 287181,
+        "name": "Roman Andres Burruchaga",
+        "countryAcr": "AR",
+        "ranking": 60
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16515726,
       "date": "2026-07-22T11:00:00.000Z",
       "player1": {
@@ -178,130 +209,6 @@
       "tournament": {
         "id": 2541,
         "name": "Estoril",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
-      "id": 16515759,
-      "date": "2026-07-22T09:00:00.000Z",
-      "player1": {
-        "id": 163480,
-        "name": "Alexander Bublik",
-        "countryAcr": "KZ",
-        "ranking": 11,
-        "seed": "1"
-      },
-      "player2": {
-        "id": 264372,
-        "name": "Facundo Diaz Acosta",
-        "countryAcr": "AR",
-        "ranking": 108
-      },
-      "tournament": {
-        "id": 2501,
-        "name": "Kitzbuhel",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
-      "id": 16515769,
-      "date": "2026-07-22T09:00:00.000Z",
-      "player1": {
-        "id": 46391,
-        "name": "Jan-Lennard Struff",
-        "countryAcr": "DE",
-        "ranking": 41,
-        "seed": "6"
-      },
-      "player2": {
-        "id": 271389,
-        "name": "Mariano Navone",
-        "countryAcr": "AR",
-        "ranking": 47
-      },
-      "tournament": {
-        "id": 2501,
-        "name": "Kitzbuhel",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
-      "id": 16515762,
-      "date": "2026-07-22T09:00:00.000Z",
-      "player1": {
-        "id": 377489,
-        "name": "Kilian Feldbausch",
-        "countryAcr": "CH",
-        "ranking": 284,
-        "seed": "Q"
-      },
-      "player2": {
-        "id": 322082,
-        "name": "Ignacio Buse",
-        "countryAcr": "PE",
-        "ranking": 35,
-        "seed": "5"
-      },
-      "tournament": {
-        "id": 2501,
-        "name": "Kitzbuhel",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
-      "id": 16515772,
-      "date": "2026-07-22T09:00:00.000Z",
-      "player1": {
-        "id": 38517,
-        "name": "Marco Trungelliti",
-        "countryAcr": "AR",
-        "ranking": 95
-      },
-      "player2": {
-        "id": 47975,
-        "name": "Yannick Hanfmann",
-        "countryAcr": "DE",
-        "ranking": 52
-      },
-      "tournament": {
-        "id": 2501,
-        "name": "Kitzbuhel",
         "court": {
           "name": "Clay"
         },
@@ -377,8 +284,131 @@
       }
     },
     {
+      "id": 16515769,
+      "date": "2026-07-22T10:10:00.000Z",
+      "player1": {
+        "id": 46391,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "DE",
+        "ranking": 41,
+        "seed": "6"
+      },
+      "player2": {
+        "id": 271389,
+        "name": "Mariano Navone",
+        "countryAcr": "AR",
+        "ranking": 47
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16515762,
+      "date": "2026-07-22T10:10:00.000Z",
+      "player1": {
+        "id": 377489,
+        "name": "Kilian Feldbausch",
+        "countryAcr": "CH",
+        "ranking": 284,
+        "seed": "Q"
+      },
+      "player2": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE",
+        "ranking": 35,
+        "seed": "5"
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16515772,
+      "date": "2026-07-22T10:10:00.000Z",
+      "player1": {
+        "id": 38517,
+        "name": "Marco Trungelliti",
+        "countryAcr": "AR",
+        "ranking": 95
+      },
+      "player2": {
+        "id": 47975,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "DE",
+        "ranking": 52
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16515761,
+      "date": "2026-07-22T11:20:00.000Z",
+      "player1": {
+        "id": 145130,
+        "name": "Alex Molčan",
+        "countryAcr": "SK",
+        "ranking": 81
+      },
+      "player2": {
+        "id": 127208,
+        "name": "Daniel Altmaier",
+        "countryAcr": "DE",
+        "ranking": 61
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16515768,
-      "date": "2026-07-22T09:00:00.000Z",
+      "date": "2026-07-22T11:20:00.000Z",
       "player1": {
         "id": 169496,
         "name": "Tomas Martin Etcheverry",
@@ -407,8 +437,39 @@
       "round": {
         "name": "Round of 16"
       }
+    },
+    {
+      "id": 16515759,
+      "date": "2026-07-22T12:30:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ",
+        "ranking": 11,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 264372,
+        "name": "Facundo Diaz Acosta",
+        "countryAcr": "AR",
+        "ranking": 108
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
     }
   ],
-  "count": 13,
-  "fetchedAt": 1784647787843
+  "count": 15,
+  "fetchedAt": 1784653633177
 }
