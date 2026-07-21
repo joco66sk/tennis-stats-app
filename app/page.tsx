@@ -372,6 +372,23 @@ export default function Home() {
 
           {/* Center: Fixtures */}
           <main>
+            {/* Mobile: Top Players horizontal strip — hidden on desktop */}
+            {topPlayers.length > 0 && (
+              <div className="md:hidden" style={{ marginBottom: 10, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+                <div style={{ display: 'flex', gap: 5, paddingBottom: 4 }}>
+                  {topPlayers.slice(0, 15).map(p => (
+                    <Link key={p.id} href={playerUrl(p.id, p.name)}
+                      style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 4,
+                        background: '#18181b', border: '1px solid #27272a', borderRadius: 8,
+                        padding: '5px 8px', textDecoration: 'none' }}>
+                      <span style={{ fontSize: 10, fontWeight: 700, color: '#71717a' }}>{p.ranking}</span>
+                      <span style={{ fontSize: 12, fontWeight: 600, color: '#d4d4d8' }}>{p.name.split(' ').pop()}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Mobile search — hidden on desktop */}
             <div className="md:hidden" style={{ marginBottom: 12 }}>
               {searchPanel}

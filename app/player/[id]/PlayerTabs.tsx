@@ -222,6 +222,9 @@ export default function PlayerTabs({ playerId, clay, hard, grass }: Props) {
                 <span style={{ fontSize: 12, color: '#71717a' }}>Serve + Return %</span>
                 <span style={{ fontFamily: 'monospace', fontSize: 13, fontWeight: 700, color: '#d4d4d8' }}>{(s.avgServeWon + s.avgReturnWon).toFixed(1)}%</span>
               </div>
+              <div style={{ marginTop: 10, fontSize: 10, color: '#3f3f46', textAlign: 'right' }}>
+                avg from {s.matchesWithStats} of {total} matches
+              </div>
             </div>
           )}
 
