@@ -4,14 +4,37 @@ import path from 'path';
 
 const BASE = 'https://tennisdeepstats.com';
 const CACHE_DIR = path.join(process.cwd(), 'cache');
+
 function normalizeSurface(s?: string): string {
   if (!s) return 'Hard';
   if (s === 'I.hard' || s === 'Carpet') return 'Hard';
   return s;
 }
 
-function toSlug(s: string) {
-  return s.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+// Must match slugifyName in app/page.tsx — last-name only
+function slugifyName(name: string): string {
+  return (name.split(/[\s-]/).pop() || name)
+    .toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+// Must match playerNameSlug in app/player/[id]/page.tsx
+function playerNameSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+// Must match tournamentNameSlug in app/tournament/[id]/page.tsx
+function tournamentNameSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
 function dateRange(daysBack: number, daysAhead: number): string[] {
@@ -21,20 +44,22 @@ function dateRange(daysBack: number, daysAhead: number): string[] {
   });
 }
 
-function fixtureUrls(): MetadataRoute.Sitemap {
-  const dates = dateRange(30, 14);
+function loadFixtures(date: string): any[] {
+  const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
+  if (!fs.existsSync(fp)) return [];
+  try { return JSON.parse(fs.readFileSync(fp, 'utf-8')).fixtures ?? []; }
+  catch { return []; }
+}
+
+// Only upcoming matches — past compare pages are too thin for Google
+function compareUrls(): MetadataRoute.Sitemap {
+  const today = new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString().split('T')[0];
+  const dates = dateRange(0, 6); // today + 6 days ahead only
   const seen = new Set<string>();
   const entries: MetadataRoute.Sitemap = [];
 
   for (const date of dates) {
-    const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
-    if (!fs.existsSync(fp)) continue;
-
-    let fixtures: any[];
-    try { fixtures = JSON.parse(fs.readFileSync(fp, 'utf-8')).fixtures ?? []; }
-    catch { continue; }
-
-    const isPast = date < new Date().toISOString().split('T')[0];
+    const fixtures = loadFixtures(date);
     const dd = date.slice(8, 10);
     const mm = date.slice(5, 7);
     const yy = date.slice(2, 4);
@@ -46,8 +71,8 @@ function fixtureUrls(): MetadataRoute.Sitemap {
       if (!f.player1?.id || !f.player2?.id) continue;
 
       const surface = normalizeSurface(f.tournament?.court?.name) || 'Hard';
-      const p1Slug = toSlug(f.player1.name);
-      const p2Slug = toSlug(f.player2.name);
+      const p1Slug = slugifyName(f.player1.name);
+      const p2Slug = slugifyName(f.player2.name);
       const slug = `${p1Slug}-${p2Slug}-${dd}${mm}${yy}-${surface}-${f.player1.id}-${f.player2.id}`;
       const url = `${BASE}/compare/${slug}`;
 
@@ -57,8 +82,8 @@ function fixtureUrls(): MetadataRoute.Sitemap {
       entries.push({
         url,
         lastModified: new Date(date),
-        changeFrequency: isPast ? 'monthly' : 'daily',
-        priority: isPast ? 0.6 : 0.9,
+        changeFrequency: date === today ? 'hourly' : 'daily',
+        priority: 0.7,
       });
     }
   }
@@ -67,45 +92,40 @@ function fixtureUrls(): MetadataRoute.Sitemap {
 }
 
 function tournamentUrls(): MetadataRoute.Sitemap {
-  const dates = dateRange(0, 14);
   const seen = new Set<string>();
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const date of dates) {
-    const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
-    if (!fs.existsSync(fp)) continue;
-    let fixtures: any[];
-    try { fixtures = JSON.parse(fs.readFileSync(fp, 'utf-8')).fixtures ?? []; }
-    catch { continue; }
-
-    for (const f of fixtures) {
-      if (!f.tournament?.id) continue;
-      const url = `${BASE}/tournament/${f.tournament.id}`;
-      if (seen.has(url)) continue;
-      seen.add(url);
-      entries.push({ url, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 });
-    }
+  // From archive (covers past tournaments)
+  const archivePath = path.join(CACHE_DIR, 'tournament-archive.json');
+  if (fs.existsSync(archivePath)) {
+    try {
+      const { tournaments = {} } = JSON.parse(fs.readFileSync(archivePath, 'utf-8'));
+      for (const t of Object.values(tournaments) as any[]) {
+        if (!t?.id || !t.name) continue;
+        const slug = `${t.id}-${tournamentNameSlug(t.name)}-${t.year}`;
+        const url = `${BASE}/tournament/${slug}`;
+        if (seen.has(url)) continue;
+        seen.add(url);
+        entries.push({ url, lastModified: new Date(t.endDate || t.startDate), changeFrequency: 'weekly', priority: 0.7 });
+      }
+    } catch {}
   }
 
   return entries;
 }
 
 function playerUrls(): MetadataRoute.Sitemap {
-  const dates = dateRange(0, 14);
   const seen = new Set<string>();
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const date of dates) {
-    const fp = path.join(CACHE_DIR, `fixtures-${date}.json`);
-    if (!fs.existsSync(fp)) continue;
-    let fixtures: any[];
-    try { fixtures = JSON.parse(fs.readFileSync(fp, 'utf-8')).fixtures ?? []; }
-    catch { continue; }
-
+  // All players from upcoming + recent fixtures
+  for (const date of dateRange(7, 14)) {
+    const fixtures = loadFixtures(date);
     for (const f of fixtures) {
       for (const p of [f.player1, f.player2]) {
-        if (!p?.id) continue;
-        const url = `${BASE}/player/${p.id}`;
+        if (!p?.id || !p.name) continue;
+        const slug = `${p.id}-${playerNameSlug(p.name)}`;
+        const url = `${BASE}/player/${slug}`;
         if (seen.has(url)) continue;
         seen.add(url);
         entries.push({ url, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 });
@@ -118,14 +138,9 @@ function playerUrls(): MetadataRoute.Sitemap {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: BASE,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    ...fixtureUrls(),
-    ...tournamentUrls(),
+    { url: BASE, lastModified: new Date(), changeFrequency: 'hourly', priority: 1 },
     ...playerUrls(),
+    ...tournamentUrls(),
+    ...compareUrls(),
   ];
 }
