@@ -1,6 +1,38 @@
 {
   "date": "2026-07-23",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1784653634178
+  "fixtures": [
+    {
+      "id": 16515720,
+      "date": "2026-07-23T11:00:00.000Z",
+      "player1": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT",
+        "ranking": 88
+      },
+      "player2": {
+        "id": 299765,
+        "name": "Gonzalo Bueno",
+        "countryAcr": "PE",
+        "ranking": 180,
+        "seed": "Q"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1784660692305
 }
