@@ -360,7 +360,7 @@ export default function Home() {
                   <Link key={p.id} href={playerUrl(p.id, p.name)}
                     style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '5px 4px', borderRadius: 6, textDecoration: 'none' }}
                     className="hover:bg-zinc-800 transition-colors">
-                    <span style={{ fontSize: 10, fontWeight: 700, color: '#71717a', fontVariantNumeric: 'tabular-nums', width: 20, textAlign: 'right', flexShrink: 0 }}>{p.ranking}</span>
+                    <span style={{ fontSize: 10, fontWeight: 700, color: '#a1a1aa', fontVariantNumeric: 'tabular-nums', width: 20, textAlign: 'right', flexShrink: 0 }}>{p.ranking}</span>
                     <span style={{ fontSize: 12, fontWeight: 600, color: '#d4d4d8', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {p.name.split(' ').pop()}
                     </span>
@@ -381,7 +381,7 @@ export default function Home() {
                       style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 4,
                         background: '#18181b', border: '1px solid #27272a', borderRadius: 8,
                         padding: '5px 8px', textDecoration: 'none' }}>
-                      <span style={{ fontSize: 10, fontWeight: 700, color: '#71717a' }}>{p.ranking}</span>
+                      <span style={{ fontSize: 10, fontWeight: 700, color: '#a1a1aa' }}>{p.ranking}</span>
                       <span style={{ fontSize: 12, fontWeight: 600, color: '#d4d4d8' }}>{p.name.split(' ').pop()}</span>
                     </Link>
                   ))}
