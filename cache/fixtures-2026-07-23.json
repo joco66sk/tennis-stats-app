@@ -2,6 +2,38 @@
   "date": "2026-07-23",
   "fixtures": [
     {
+      "id": 16515715,
+      "date": "2026-07-23T11:00:00.000Z",
+      "player1": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU",
+        "ranking": 14,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 229275,
+        "name": "Timofey Skatov",
+        "countryAcr": "KZ",
+        "ranking": 163,
+        "seed": "LL"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16515720,
       "date": "2026-07-23T11:00:00.000Z",
       "player1": {
@@ -31,8 +63,71 @@
       "round": {
         "name": "Round of 16"
       }
+    },
+    {
+      "id": 16515719,
+      "date": "2026-07-23T11:00:00.000Z",
+      "player1": {
+        "id": 335102,
+        "name": "Luca Van Assche",
+        "countryAcr": "FR",
+        "ranking": 78
+      },
+      "player2": {
+        "id": 40800,
+        "name": "Pablo Carreño Busta",
+        "countryAcr": "ES",
+        "ranking": 65,
+        "seed": "8"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16515726,
+      "date": "2026-07-23T11:00:00.000Z",
+      "player1": {
+        "id": 77223,
+        "name": "Pedro Martinez",
+        "countryAcr": "ES",
+        "ranking": 159,
+        "seed": "Q"
+      },
+      "player2": {
+        "id": 308084,
+        "name": "Luciano Darderi",
+        "countryAcr": "IT",
+        "ranking": 21,
+        "seed": "2"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1784660692305
+  "count": 4,
+  "fetchedAt": 1784667510395
 }
