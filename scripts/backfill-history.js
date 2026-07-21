@@ -23,7 +23,7 @@ const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const HEADERS = { 'x-rapidapi-host': HOST, 'x-rapidapi-key': KEY };
 
 const TARGET = parseInt(process.argv.find(a => a.startsWith('--limit='))?.split('=')[1] || '30');
-const TIME_LIMIT_MS = 10 * 60 * 1000; // stop after 10 minutes so the combined workflow stays under 30 min
+const TIME_LIMIT_MS = 20 * 60 * 1000; // stop after 20 minutes
 const MAX_PAGES = 20;
 const MIN_DATE = '2023-01-01'; // go back to 2023 for more matches
 const SURFACES = ['Clay', 'Hard', 'Grass'];
