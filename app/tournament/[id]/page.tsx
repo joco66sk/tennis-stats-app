@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { redirect } from 'next/navigation';
+import { toPlayerSlug, slugifyLastName, toTournamentSlug, tournamentNameSlug } from '@/lib/slugs';
 import TournamentDrawClient from './TournamentDrawClient';
 
 export const revalidate = 3600;
@@ -70,17 +71,6 @@ function fmtShortDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
-function tournamentNameSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
-
-export function toTournamentSlug(id: string | number, name: string, year: string | number): string {
-  return `${id}-${tournamentNameSlug(name)}-${year}`;
-}
 
 function loadArchive(): Record<string, { id: number; name: string; surface: string; tier: number; year: string; startDate: string; endDate: string }> {
   const fp = path.join(CACHE_DIR, 'tournament-archive.json');
@@ -122,30 +112,15 @@ function getBasicStats(playerId: string | number, surface: string) {
   } catch { return null; }
 }
 
-function playerNameSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
-
 function playerUrl(id: number, name: string): string {
-  return `/player/${id}-${playerNameSlug(name)}`;
-}
-
-function slugifyName(name: string): string {
-  return (name.split(/[\s-]/).pop() || name)
-    .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]/g, '');
+  return `/player/${toPlayerSlug(id, name)}`;
 }
 
 function compareUrl(f: CachedFixture, surface: string): string {
   const p1id = f.player1?.id || '';
   const p2id = f.player2?.id || '';
-  const p1slug = slugifyName(f.player1?.name || String(p1id));
-  const p2slug = slugifyName(f.player2?.name || String(p2id));
+  const p1slug = slugifyLastName(f.player1?.name || String(p1id));
+  const p2slug = slugifyLastName(f.player2?.name || String(p2id));
   const d = new Date(f.date);
   const dd = String(d.getUTCDate()).padStart(2, '0');
   const mm = String(d.getUTCMonth() + 1).padStart(2, '0');

@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { playerUrl, slugifyLastName, tournamentUrl } from '@/lib/slugs';
 
 interface Fixture {
   id: number;
@@ -171,36 +172,12 @@ export default function Home() {
     return () => clearTimeout(t);
   }, [searchQuery]);
 
-  const slugifyName = (name: string) =>
-    (name.split(/[\s-]/).pop() || name)
-      .toLowerCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/[^a-z0-9]/g, '');
-
-  const tournamentUrl = (id: number | undefined, name: string, date: string) => {
-    if (!id) return '#';
-    const year = date.slice(0, 4);
-    const slug = name.toLowerCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '');
-    return `/tournament/${id}-${slug}-${year}`;
-  };
-
-  const playerUrl = (id: number, name: string) => {
-    const slug = name.toLowerCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '');
-    return `/player/${id}-${slug}`;
-  };
-
   const matchUrl = (fixture: Fixture) => {
     const p1id = fixture.player1?.id || '';
     const p2id = fixture.player2?.id || '';
     const surface = normalizeSurface(fixture.tournament?.court?.name) || 'Clay';
-    const p1slug = slugifyName(fixture.player1?.name || String(p1id));
-    const p2slug = slugifyName(fixture.player2?.name || String(p2id));
+    const p1slug = slugifyLastName(fixture.player1?.name || String(p1id));
+    const p2slug = slugifyLastName(fixture.player2?.name || String(p2id));
     const d = new Date(fixture.date);
     const dd = String(d.getUTCDate()).padStart(2, '0');
     const mm = String(d.getUTCMonth() + 1).padStart(2, '0');

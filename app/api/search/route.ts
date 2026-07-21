@@ -1,20 +1,9 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { toTournamentSlug } from '@/lib/slugs';
 
 const CACHE_DIR = path.join(process.cwd(), 'cache');
-
-function tournamentNameSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
-
-function toTournamentSlug(id: number, name: string, year: string): string {
-  return `${id}-${tournamentNameSlug(name)}-${year}`;
-}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

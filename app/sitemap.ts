@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { slugifyLastName, playerNameSlug, tournamentNameSlug } from '@/lib/slugs';
 
 const BASE = 'https://tennisdeepstats.com';
 const CACHE_DIR = path.join(process.cwd(), 'cache');
@@ -9,32 +10,6 @@ function normalizeSurface(s?: string): string {
   if (!s) return 'Hard';
   if (s === 'I.hard' || s === 'Carpet') return 'Hard';
   return s;
-}
-
-// Must match slugifyName in app/page.tsx — last-name only
-function slugifyName(name: string): string {
-  return (name.split(/[\s-]/).pop() || name)
-    .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]/g, '');
-}
-
-// Must match playerNameSlug in app/player/[id]/page.tsx
-function playerNameSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
-
-// Must match tournamentNameSlug in app/tournament/[id]/page.tsx
-function tournamentNameSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
 }
 
 function dateRange(daysBack: number, daysAhead: number): string[] {
@@ -71,8 +46,8 @@ function compareUrls(): MetadataRoute.Sitemap {
       if (!f.player1?.id || !f.player2?.id) continue;
 
       const surface = normalizeSurface(f.tournament?.court?.name) || 'Hard';
-      const p1Slug = slugifyName(f.player1.name);
-      const p2Slug = slugifyName(f.player2.name);
+      const p1Slug = slugifyLastName(f.player1.name);
+      const p2Slug = slugifyLastName(f.player2.name);
       const slug = `${p1Slug}-${p2Slug}-${dd}${mm}${yy}-${surface}-${f.player1.id}-${f.player2.id}`;
       const url = `${BASE}/compare/${slug}`;
 

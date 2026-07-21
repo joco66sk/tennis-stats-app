@@ -397,15 +397,18 @@ export default function TournamentDrawClient({
                       const p1Won = result?.p1Won;
                       const p2Won = result ? !result.p1Won : undefined;
                       return (
-                        <Link key={f.id} href={f.compareUrl}
-                          className="block bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-zinc-800/50 transition-colors"
-                          style={{ padding: '8px 12px', textDecoration: 'none' }}>
+                        <div key={f.id}
+                          className="block bg-zinc-900 border border-zinc-800 rounded-xl"
+                          style={{ padding: '8px 12px' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                            <span style={{ fontSize: 13, color: p1Won ? '#f4f4f5' : p2Won ? '#52525b' : '#a1a1aa', flex: 1, fontWeight: p1Won ? 700 : 400 }}>{f.player1.name}</span>
-                            <span style={{ fontSize: 11, color: '#3f3f46' }}>{result?.score || 'vs'}</span>
-                            <span style={{ fontSize: 13, color: p2Won ? '#f4f4f5' : p1Won ? '#52525b' : '#a1a1aa', flex: 1, textAlign: 'right', fontWeight: p2Won ? 700 : 400 }}>{f.player2.name}</span>
+                            <Link href={f.player1Url} style={{ fontSize: 13, color: p1Won ? '#f4f4f5' : p2Won ? '#52525b' : '#a1a1aa', flex: 1, fontWeight: p1Won ? 700 : 400, textDecoration: 'none' }}
+                              className="hover:text-white transition-colors">{f.player1.name}</Link>
+                            <Link href={f.compareUrl} style={{ fontSize: 11, color: '#3f3f46', textDecoration: 'none', flexShrink: 0 }}
+                              className="hover:text-zinc-400 transition-colors">{result?.score || 'vs'}</Link>
+                            <Link href={f.player2Url} style={{ fontSize: 13, color: p2Won ? '#f4f4f5' : p1Won ? '#52525b' : '#a1a1aa', flex: 1, textAlign: 'right', fontWeight: p2Won ? 700 : 400, textDecoration: 'none' }}
+                              className="hover:text-white transition-colors">{f.player2.name}</Link>
                           </div>
-                        </Link>
+                        </div>
                       );
                     })}
                   </div>

@@ -3,6 +3,7 @@ import path from 'path';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { computePlayerSurfaceStats } from '@/lib/player-stats';
+import { toPlayerSlug } from '@/lib/slugs';
 import PlayerTabs from './PlayerTabs';
 
 export const revalidate = 3600;
@@ -10,17 +11,7 @@ export const dynamicParams = true;
 
 const CACHE_DIR = path.join(process.cwd(), 'cache');
 
-function playerNameSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
-
-function toSlug(id: string | number, name: string): string {
-  return `${id}-${playerNameSlug(name)}`;
-}
+const toSlug = toPlayerSlug;
 
 export async function generateStaticParams() {
   const players = new Map<string, string>(); // id → name
