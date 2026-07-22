@@ -2,6 +2,37 @@
   "date": "2026-07-24",
   "fixtures": [
     {
+      "id": 16515717,
+      "date": "2026-07-24T11:00:00.000Z",
+      "player1": {
+        "id": 287181,
+        "name": "Roman Andres Burruchaga",
+        "countryAcr": "AR",
+        "ranking": 60
+      },
+      "player2": {
+        "id": 390214,
+        "name": "Alexander Blockx",
+        "countryAcr": "BE",
+        "ranking": 38,
+        "seed": "4"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
       "id": 16515721,
       "date": "2026-07-24T11:00:00.000Z",
       "player1": {
@@ -33,6 +64,6 @@
       }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1784750847903
+  "count": 2,
+  "fetchedAt": 1784757498044
 }
