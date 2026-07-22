@@ -1,6 +1,38 @@
 {
   "date": "2026-07-24",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1784743381375
+  "fixtures": [
+    {
+      "id": 16515721,
+      "date": "2026-07-24T11:00:00.000Z",
+      "player1": {
+        "id": 283476,
+        "name": "Tiago Torres",
+        "countryAcr": "PT",
+        "ranking": 427,
+        "seed": "WC"
+      },
+      "player2": {
+        "id": 205906,
+        "name": "Hugo Gaston",
+        "countryAcr": "FR",
+        "ranking": 109
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1784750847903
 }
