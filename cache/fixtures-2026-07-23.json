@@ -2,69 +2,6 @@
   "date": "2026-07-23",
   "fixtures": [
     {
-      "id": 16515715,
-      "date": "2026-07-23T11:00:00.000Z",
-      "player1": {
-        "id": 106755,
-        "name": "Andrey Rublev",
-        "countryAcr": "RU",
-        "ranking": 14,
-        "seed": "1"
-      },
-      "player2": {
-        "id": 229275,
-        "name": "Timofey Skatov",
-        "countryAcr": "KZ",
-        "ranking": 163,
-        "seed": "LL"
-      },
-      "tournament": {
-        "id": 2541,
-        "name": "Estoril",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
-      "id": 16515720,
-      "date": "2026-07-23T11:00:00.000Z",
-      "player1": {
-        "id": 341818,
-        "name": "Jaime Faria",
-        "countryAcr": "PT",
-        "ranking": 88
-      },
-      "player2": {
-        "id": 299765,
-        "name": "Gonzalo Bueno",
-        "countryAcr": "PE",
-        "ranking": 180,
-        "seed": "Q"
-      },
-      "tournament": {
-        "id": 2541,
-        "name": "Estoril",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
       "id": 16515719,
       "date": "2026-07-23T11:00:00.000Z",
       "player1": {
@@ -96,8 +33,71 @@
       }
     },
     {
+      "id": 16515720,
+      "date": "2026-07-23T13:00:00.000Z",
+      "player1": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT",
+        "ranking": 88
+      },
+      "player2": {
+        "id": 299765,
+        "name": "Gonzalo Bueno",
+        "countryAcr": "PE",
+        "ranking": 180,
+        "seed": "Q"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16515715,
+      "date": "2026-07-23T16:00:00.000Z",
+      "player1": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU",
+        "ranking": 14,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 229275,
+        "name": "Timofey Skatov",
+        "countryAcr": "KZ",
+        "ranking": 163,
+        "seed": "LL"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16515726,
-      "date": "2026-07-23T11:00:00.000Z",
+      "date": "2026-07-23T17:10:00.000Z",
       "player1": {
         "id": 77223,
         "name": "Pedro Martinez",
@@ -218,8 +218,39 @@
       "round": {
         "name": "Quarterfinals"
       }
+    },
+    {
+      "id": 16515775,
+      "date": "2026-07-23T12:30:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ",
+        "ranking": 11,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 145130,
+        "name": "Alex Molčan",
+        "countryAcr": "SK",
+        "ranking": 81
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
     }
   ],
-  "count": 7,
-  "fetchedAt": 1784737094214
+  "count": 8,
+  "fetchedAt": 1784743380448
 }
