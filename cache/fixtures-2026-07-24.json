@@ -64,8 +64,40 @@
       }
     },
     {
+      "id": 16515765,
+      "date": "2026-07-24T09:00:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ",
+        "ranking": 11,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 169496,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "AR",
+        "ranking": 31,
+        "seed": "4"
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
       "id": 16515770,
-      "date": "2026-07-24T10:30:00.000Z",
+      "date": "2026-07-24T09:00:00.000Z",
       "player1": {
         "id": 47975,
         "name": "Yannick Hanfmann",
@@ -94,6 +126,6 @@
       }
     }
   ],
-  "count": 3,
-  "fetchedAt": 1784821712050
+  "count": 4,
+  "fetchedAt": 1784826636298
 }
