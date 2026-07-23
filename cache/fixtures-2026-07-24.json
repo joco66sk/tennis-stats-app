@@ -64,6 +64,68 @@
       }
     },
     {
+      "id": 16515722,
+      "date": "2026-07-24T12:10:00.000Z",
+      "player1": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU",
+        "ranking": 14,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 335102,
+        "name": "Luca Van Assche",
+        "countryAcr": "FR",
+        "ranking": 78
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 16515725,
+      "date": "2026-07-24T17:10:00.000Z",
+      "player1": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT",
+        "ranking": 88
+      },
+      "player2": {
+        "id": 308084,
+        "name": "Luciano Darderi",
+        "countryAcr": "IT",
+        "ranking": 21,
+        "seed": "2"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
       "id": 16515765,
       "date": "2026-07-24T09:00:00.000Z",
       "player1": {
@@ -126,6 +188,6 @@
       }
     }
   ],
-  "count": 4,
-  "fetchedAt": 1784826636298
+  "count": 6,
+  "fetchedAt": 1784833205829
 }
