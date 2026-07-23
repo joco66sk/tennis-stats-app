@@ -2,37 +2,6 @@
   "date": "2026-07-24",
   "fixtures": [
     {
-      "id": 16515717,
-      "date": "2026-07-24T11:00:00.000Z",
-      "player1": {
-        "id": 287181,
-        "name": "Roman Andres Burruchaga",
-        "countryAcr": "AR",
-        "ranking": 60
-      },
-      "player2": {
-        "id": 390214,
-        "name": "Alexander Blockx",
-        "countryAcr": "BE",
-        "ranking": 38,
-        "seed": "4"
-      },
-      "tournament": {
-        "id": 2541,
-        "name": "Estoril",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Quarterfinals"
-      }
-    },
-    {
       "id": 16515721,
       "date": "2026-07-24T11:00:00.000Z",
       "player1": {
@@ -95,6 +64,37 @@
       }
     },
     {
+      "id": 16515717,
+      "date": "2026-07-24T16:00:00.000Z",
+      "player1": {
+        "id": 287181,
+        "name": "Roman Andres Burruchaga",
+        "countryAcr": "AR",
+        "ranking": 60
+      },
+      "player2": {
+        "id": 390214,
+        "name": "Alexander Blockx",
+        "countryAcr": "BE",
+        "ranking": 38,
+        "seed": "4"
+      },
+      "tournament": {
+        "id": 2541,
+        "name": "Estoril",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
       "id": 16515725,
       "date": "2026-07-24T17:10:00.000Z",
       "player1": {
@@ -126,8 +126,38 @@
       }
     },
     {
+      "id": 16515770,
+      "date": "2026-07-24T10:30:00.000Z",
+      "player1": {
+        "id": 47975,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "DE",
+        "ranking": 52
+      },
+      "player2": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR",
+        "ranking": 83
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
       "id": 16515765,
-      "date": "2026-07-24T09:00:00.000Z",
+      "date": "2026-07-24T12:00:00.000Z",
       "player1": {
         "id": 163480,
         "name": "Alexander Bublik",
@@ -156,38 +186,8 @@
       "round": {
         "name": "Semifinals"
       }
-    },
-    {
-      "id": 16515770,
-      "date": "2026-07-24T09:00:00.000Z",
-      "player1": {
-        "id": 47975,
-        "name": "Yannick Hanfmann",
-        "countryAcr": "DE",
-        "ranking": 52
-      },
-      "player2": {
-        "id": 90798,
-        "name": "Quentin Halys",
-        "countryAcr": "FR",
-        "ranking": 83
-      },
-      "tournament": {
-        "id": 2501,
-        "name": "Kitzbuhel",
-        "court": {
-          "name": "Clay"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Semifinals"
-      }
     }
   ],
   "count": 6,
-  "fetchedAt": 1784833205829
+  "fetchedAt": 1784837783064
 }
