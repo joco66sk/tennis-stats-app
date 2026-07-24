@@ -1,6 +1,38 @@
 {
   "date": "2026-07-25",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1784895213238
+  "fixtures": [
+    {
+      "id": 16515767,
+      "date": "2026-07-25T11:00:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ",
+        "ranking": 11,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR",
+        "ranking": 83
+      },
+      "tournament": {
+        "id": 2501,
+        "name": "Kitzbuhel",
+        "court": {
+          "name": "Clay"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1784904352524
 }
