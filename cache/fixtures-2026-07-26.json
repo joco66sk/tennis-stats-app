@@ -2,6 +2,38 @@
   "date": "2026-07-26",
   "fixtures": [
     {
+      "id": 16628287,
+      "date": "2026-07-26T14:00:00.000Z",
+      "player1": {
+        "id": 124656,
+        "name": "Aleksandar Vukić",
+        "countryAcr": "AU",
+        "ranking": 102,
+        "seed": "3"
+      },
+      "player2": {
+        "id": 58369,
+        "name": "Alex Bolt",
+        "countryAcr": "AU",
+        "ranking": 167,
+        "seed": "10"
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
       "id": 16621420,
       "date": "2026-07-26T01:00:00.000Z",
       "player1": {
@@ -254,6 +286,6 @@
       }
     }
   ],
-  "count": 8,
-  "fetchedAt": 1784998401447
+  "count": 9,
+  "fetchedAt": 1785001921042
 }
