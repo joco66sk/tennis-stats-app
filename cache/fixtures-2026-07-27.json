@@ -1,6 +1,367 @@
 {
   "date": "2026-07-27",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1785010020473
+  "fixtures": [
+    {
+      "id": 16629766,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR",
+        "ranking": 46
+      },
+      "player2": {
+        "id": 412818,
+        "name": "Learner Tien",
+        "countryAcr": "US",
+        "ranking": 16
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629761,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL",
+        "ranking": 30
+      },
+      "player2": {
+        "id": 122368,
+        "name": "Tallon Griekspoor",
+        "countryAcr": "NL",
+        "ranking": 66
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629767,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US",
+        "ranking": 44
+      },
+      "player2": {
+        "id": 258749,
+        "name": "Jack Draper",
+        "countryAcr": "GB",
+        "ranking": 147
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629771,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 5
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR",
+        "ranking": 51
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629765,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR",
+        "ranking": 23
+      },
+      "player2": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 25
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629770,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US",
+        "ranking": 32
+      },
+      "player2": {
+        "id": 169496,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "AR",
+        "ranking": 31
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629759,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 334293,
+        "name": "Ethan Quinn",
+        "countryAcr": "US",
+        "ranking": 45
+      },
+      "player2": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US",
+        "ranking": 6
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629762,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US",
+        "ranking": 17
+      },
+      "player2": {
+        "id": 273679,
+        "name": "Terence Atmane",
+        "countryAcr": "FR",
+        "ranking": 49
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629768,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 108709,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "PL",
+        "ranking": 71
+      },
+      "player2": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US",
+        "ranking": 24
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629764,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 15733,
+        "name": "Kei Nishikori",
+        "countryAcr": "JP",
+        "ranking": 719
+      },
+      "player2": {
+        "id": 348853,
+        "name": "Juncheng Shang",
+        "countryAcr": "CN",
+        "ranking": 270
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629763,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 299538,
+        "name": "Matteo Arnaldi",
+        "countryAcr": "IT",
+        "ranking": 33
+      },
+      "player2": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT",
+        "ranking": 15
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629769,
+      "date": "2026-07-27T14:00:00.000Z",
+      "player1": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US",
+        "ranking": 10
+      },
+      "player2": {
+        "id": 170946,
+        "name": "Zizou Bergs",
+        "countryAcr": "BE",
+        "ranking": 34
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 12,
+  "fetchedAt": 1785015885586
 }
