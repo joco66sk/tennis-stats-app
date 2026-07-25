@@ -1,6 +1,246 @@
 {
   "date": "2026-07-26",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1784937618275
+  "fixtures": [
+    {
+      "id": 16621420,
+      "date": "2026-07-26T01:00:00.000Z",
+      "player1": {
+        "id": 272535,
+        "name": "Alan Magadan",
+        "countryAcr": "MX",
+        "ranking": 650
+      },
+      "player2": {
+        "id": 239967,
+        "name": "Garrett Johns",
+        "countryAcr": "US",
+        "ranking": 375
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16621425,
+      "date": "2026-07-26T01:00:00.000Z",
+      "player1": {
+        "id": 406660,
+        "name": "Luis Carlos Alvarez Valdes",
+        "countryAcr": "MX"
+      },
+      "player2": {
+        "id": 338420,
+        "name": "Edward Winter",
+        "countryAcr": "AU",
+        "ranking": 400
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16621426,
+      "date": "2026-07-26T01:00:00.000Z",
+      "player1": {
+        "id": 451986,
+        "name": "Miguel Tobon",
+        "countryAcr": "CO",
+        "ranking": 473
+      },
+      "player2": {
+        "id": 17080,
+        "name": "Bernard Tomić",
+        "countryAcr": "AU",
+        "ranking": 170
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16621424,
+      "date": "2026-07-26T02:10:00.000Z",
+      "player1": {
+        "id": 187218,
+        "name": "Nicolas Mejia",
+        "countryAcr": "CO",
+        "ranking": 136
+      },
+      "player2": {
+        "id": 258977,
+        "name": "Alex Hernandez",
+        "countryAcr": "MX",
+        "ranking": 499
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16621423,
+      "date": "2026-07-26T02:10:00.000Z",
+      "player1": {
+        "id": 97647,
+        "name": "Soonwoo Kwon",
+        "countryAcr": "KR",
+        "ranking": 157
+      },
+      "player2": {
+        "id": 199198,
+        "name": "Alan Fernando Rubio Fierros",
+        "countryAcr": "MX",
+        "ranking": 573
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16621422,
+      "date": "2026-07-26T02:10:00.000Z",
+      "player1": {
+        "id": 232036,
+        "name": "Tristan Boyer",
+        "countryAcr": "US",
+        "ranking": 166
+      },
+      "player2": {
+        "id": 339453,
+        "name": "Lorenzo Claverie",
+        "countryAcr": "IT",
+        "ranking": 869
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16621419,
+      "date": "2026-07-26T03:20:00.000Z",
+      "player1": {
+        "id": 124916,
+        "name": "Borna Gojo",
+        "countryAcr": "HR",
+        "ranking": 169
+      },
+      "player2": {
+        "id": 309157,
+        "name": "Aidan Mayo",
+        "countryAcr": "US",
+        "ranking": 634
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16621421,
+      "date": "2026-07-26T03:20:00.000Z",
+      "player1": {
+        "id": 398771,
+        "name": "Roger Pascual Ferra",
+        "countryAcr": "ES",
+        "ranking": 808
+      },
+      "player2": {
+        "id": 391865,
+        "name": "Colton Smith",
+        "countryAcr": "US",
+        "ranking": 174
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 8,
+  "fetchedAt": 1784948204009
 }

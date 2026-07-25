@@ -111,6 +111,17 @@
       "result": "6-4 6-3"
     },
     {
+      "id": "15023323",
+      "date": "2025-11-11",
+      "tournamentId": 15023323,
+      "homeId": 303307,
+      "tournamentName": "Montevideo, Uruguay",
+      "opponentId": 232036,
+      "opponentName": "Tristan Boyer",
+      "won": true,
+      "result": "6-7 7-5 6-1"
+    },
+    {
       "id": "14957179",
       "date": "2025-11-06",
       "tournamentId": 14957179,
@@ -155,6 +166,17 @@
       "result": "6-1 1-0"
     },
     {
+      "id": "14137173",
+      "date": "2025-07-19",
+      "tournamentId": 14137173,
+      "homeId": 54955,
+      "tournamentName": "Bunschoten, Netherlands",
+      "opponentId": 54955,
+      "opponentName": "Kimmer Coppejans",
+      "won": false,
+      "result": "6-3 2-6 6-7"
+    },
+    {
       "id": "14137172",
       "date": "2025-07-17",
       "tournamentId": 14137172,
@@ -177,7 +199,30 @@
       "result": "6-7 7-6 1-6"
     }
   ],
-  "Hard": [],
+  "Hard": [
+    {
+      "id": "15345397",
+      "date": "2026-01-12",
+      "tournamentId": 15345397,
+      "homeId": 232036,
+      "tournamentName": "Australian Open, Men",
+      "opponentId": 232036,
+      "opponentName": "Tristan Boyer",
+      "won": false,
+      "result": "2-6 7-6 2-6"
+    },
+    {
+      "id": "14466740",
+      "date": "2025-08-19",
+      "tournamentId": 14466740,
+      "homeId": 303307,
+      "tournamentName": "US Open, Men",
+      "opponentId": 54955,
+      "opponentName": "Kimmer Coppejans",
+      "won": false,
+      "result": "4-6 7-6 3-6"
+    }
+  ],
   "Grass": [
     {
       "id": "16373448",
@@ -191,6 +236,6 @@
       "result": "3-6 6-7"
     }
   ],
-  "updatedAt": 1784847238730,
+  "updatedAt": 1784948486721,
   "playerName": "Alex Barrena"
 }

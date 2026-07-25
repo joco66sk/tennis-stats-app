@@ -1,6 +1,392 @@
 {
-  "Clay": [],
+  "Clay": [
+    {
+      "id": "16446258",
+      "date": "2026-07-07",
+      "tournamentId": 16446258,
+      "homeId": 258977,
+      "tournamentName": "Bogota, Colombia",
+      "opponentId": 186885,
+      "opponentName": "Nick Hardt",
+      "won": false,
+      "result": "6-7 6-4 2-6"
+    },
+    {
+      "id": "16402997",
+      "date": "2026-06-30",
+      "tournamentId": 16402997,
+      "homeId": 379442,
+      "tournamentName": "Quito, Ecuador Men Singles",
+      "opponentId": 379442,
+      "opponentName": "Juan Manuel La Serna",
+      "won": false,
+      "result": "3-6 6-4 1-6"
+    },
+    {
+      "id": "16370563",
+      "date": "2026-06-22",
+      "tournamentId": 16370563,
+      "homeId": 315774,
+      "tournamentName": "Piracicaba, Brazil",
+      "opponentId": 315774,
+      "opponentName": "Juan Bautista Torres",
+      "won": false,
+      "result": "6-3 2-6 0-6"
+    },
+    {
+      "id": "16325442",
+      "date": "2026-06-16",
+      "tournamentId": 16325442,
+      "homeId": 255418,
+      "tournamentName": "Asuncion 2, Paraguay",
+      "opponentId": 255418,
+      "opponentName": "Guido Ivan Justo",
+      "won": false,
+      "result": "0-6 1-6"
+    },
+    {
+      "id": "15921204",
+      "date": "2026-04-10",
+      "tournamentId": 15921204,
+      "homeId": 255448,
+      "tournamentName": "Mexico City, Mexico",
+      "opponentId": 255448,
+      "opponentName": "Tibo Colson",
+      "won": false,
+      "result": "6-7 6-2 5-7"
+    },
+    {
+      "id": "15921198",
+      "date": "2026-04-09",
+      "tournamentId": 15921198,
+      "homeId": 258977,
+      "tournamentName": "Mexico City, Mexico",
+      "opponentId": 113979,
+      "opponentName": "Juan Pablo Ficovich",
+      "won": true,
+      "result": "7-5 4-6 6-4"
+    },
+    {
+      "id": "15965687",
+      "date": "2026-04-07",
+      "tournamentId": 15965687,
+      "homeId": 258977,
+      "tournamentName": "Mexico City, Mexico",
+      "opponentId": 199453,
+      "opponentName": "Karl Poling",
+      "won": true,
+      "result": "7-5 6-4"
+    },
+    {
+      "id": "15903142",
+      "date": "2026-04-01",
+      "tournamentId": 15903142,
+      "homeId": 258977,
+      "tournamentName": "San Luis, Mexico",
+      "opponentId": 187218,
+      "opponentName": "Nicolas Mejia",
+      "won": false,
+      "result": "3-6 7-6 3-6"
+    },
+    {
+      "id": "15125782",
+      "date": "2025-11-26",
+      "tournamentId": 15125782,
+      "homeId": 48646,
+      "tournamentName": "Bogota (Los Lagartos), Colombia",
+      "opponentId": 48646,
+      "opponentName": "Nicolas Barrientos",
+      "won": false,
+      "result": "3-6 4-6"
+    },
+    {
+      "id": "15137273",
+      "date": "2025-11-25",
+      "tournamentId": 15137273,
+      "homeId": 258977,
+      "tournamentName": "Bogota (Los Lagartos), Colombia",
+      "opponentId": 239967,
+      "opponentName": "Garrett Johns",
+      "won": true,
+      "result": "7-6 6-2"
+    },
+    {
+      "id": "15109470",
+      "date": "2025-11-17",
+      "tournamentId": 15109470,
+      "homeId": 54975,
+      "tournamentName": "Guayaquil, Ecuador",
+      "opponentId": 54975,
+      "opponentName": "Hernan Casanova",
+      "won": false,
+      "result": "2-6 6-4 2-6"
+    },
+    {
+      "id": "14915376",
+      "date": "2025-10-20",
+      "tournamentId": 14915376,
+      "homeId": 265627,
+      "tournamentName": "Costa do Sauipe, Brazil",
+      "opponentId": 265627,
+      "opponentName": "Sebastian Gima",
+      "won": false,
+      "result": "6-4 6-7 4-6"
+    },
+    {
+      "id": "14911160",
+      "date": "2025-10-19",
+      "tournamentId": 14911160,
+      "homeId": 414275,
+      "tournamentName": "Costa do Sauipe, Brazil",
+      "opponentId": 414275,
+      "opponentName": "Victor De Castro Rocha",
+      "won": true,
+      "result": "6-2 6-3"
+    },
+    {
+      "id": "14852141",
+      "date": "2025-10-16",
+      "tournamentId": 14852141,
+      "homeId": 258977,
+      "tournamentName": "Curitiba, Brazil",
+      "opponentId": 391794,
+      "opponentName": "Joao Eduardo Schiessl",
+      "won": false,
+      "result": "3-6 7-5 4-6"
+    },
+    {
+      "id": "14881574",
+      "date": "2025-10-14",
+      "tournamentId": 14881574,
+      "homeId": 264978,
+      "tournamentName": "Curitiba, Brazil",
+      "opponentId": 264978,
+      "opponentName": "Matheus Pucinelli de Almeida",
+      "won": true,
+      "result": "4-6 7-5 6-0"
+    },
+    {
+      "id": "14875944",
+      "date": "2025-10-13",
+      "tournamentId": 14875944,
+      "homeId": 1106192,
+      "tournamentName": "Curitiba, Brazil",
+      "opponentId": 1106192,
+      "opponentName": "Jefferson Wendler Filho",
+      "won": true,
+      "result": "6-4 6-3"
+    },
+    {
+      "id": "14872366",
+      "date": "2025-10-12",
+      "tournamentId": 14872366,
+      "homeId": 16564,
+      "tournamentName": "Curitiba, Brazil",
+      "opponentId": 16564,
+      "opponentName": "Jose Pereira",
+      "won": true,
+      "result": "6-4 6-2"
+    },
+    {
+      "id": "14841301",
+      "date": "2025-10-07",
+      "tournamentId": 14841301,
+      "homeId": 132834,
+      "tournamentName": "Cali, Colombia",
+      "opponentId": 132834,
+      "opponentName": "Tomás Barrios Vera",
+      "won": false,
+      "result": "1-6 2-6"
+    },
+    {
+      "id": "14833926",
+      "date": "2025-10-06",
+      "tournamentId": 14833926,
+      "homeId": 258977,
+      "tournamentName": "Cali, Colombia",
+      "opponentId": 204776,
+      "opponentName": "Mateus Alves",
+      "won": false,
+      "result": "4-6 1-6"
+    },
+    {
+      "id": "14830831",
+      "date": "2025-10-05",
+      "tournamentId": 14830831,
+      "homeId": 258977,
+      "tournamentName": "Cali, Colombia",
+      "opponentId": 195971,
+      "opponentName": "Frazier Rengifo",
+      "won": true,
+      "result": "6-1 6-1"
+    },
+    {
+      "id": "14591243",
+      "date": "2025-09-02",
+      "tournamentId": 14591243,
+      "homeId": 107357,
+      "tournamentName": "Istanbul, Türkiye",
+      "opponentId": 107357,
+      "opponentName": "Hugo Grenier",
+      "won": false,
+      "result": "6-7 3-6"
+    },
+    {
+      "id": "14585586",
+      "date": "2025-09-01",
+      "tournamentId": 14585586,
+      "homeId": 258977,
+      "tournamentName": "Istanbul, Türkiye",
+      "opponentId": 53483,
+      "opponentName": "Daniel Masur",
+      "won": true,
+      "result": "6-2 6-4"
+    },
+    {
+      "id": "14579711",
+      "date": "2025-08-31",
+      "tournamentId": 14579711,
+      "homeId": 258977,
+      "tournamentName": "Istanbul, Türkiye",
+      "opponentId": 245111,
+      "opponentName": "Connor Thomson",
+      "won": true,
+      "result": "6-2 6-2"
+    },
+    {
+      "id": "14528391",
+      "date": "2025-08-25",
+      "tournamentId": 14528391,
+      "homeId": 258977,
+      "tournamentName": "Porto 2, Portugal",
+      "opponentId": 169486,
+      "opponentName": "Genaro Alberto Olivieri",
+      "won": false,
+      "result": "4-6 2-6"
+    },
+    {
+      "id": "14037365",
+      "date": "2025-06-24",
+      "tournamentId": 14037365,
+      "homeId": 85877,
+      "tournamentName": "Lima, Peru",
+      "opponentId": 85877,
+      "opponentName": "Gonzalo Villanueva",
+      "won": false,
+      "result": "1-6 1-6"
+    },
+    {
+      "id": "13996351",
+      "date": "2025-06-19",
+      "tournamentId": 13996351,
+      "homeId": 258977,
+      "tournamentName": "Santa Cruz, Bolivia",
+      "opponentId": 379442,
+      "opponentName": "Juan Manuel La Serna",
+      "won": false,
+      "result": "1-6 4-6"
+    },
+    {
+      "id": "14011123",
+      "date": "2025-06-17",
+      "tournamentId": 14011123,
+      "homeId": 258977,
+      "tournamentName": "Santa Cruz, Bolivia",
+      "opponentId": 54975,
+      "opponentName": "Hernan Casanova",
+      "won": true,
+      "result": "6-3 6-1"
+    },
+    {
+      "id": "13759640",
+      "date": "2025-04-15",
+      "tournamentId": 13759640,
+      "homeId": 187218,
+      "tournamentName": "San Luis, Mexico",
+      "opponentId": 187218,
+      "opponentName": "Nicolas Mejia",
+      "won": false,
+      "result": "3-6 2-6"
+    },
+    {
+      "id": "13713336",
+      "date": "2025-04-10",
+      "tournamentId": 13713336,
+      "homeId": 258977,
+      "tournamentName": "Mexico City, Mexico",
+      "opponentId": 17080,
+      "opponentName": "Bernard Tomić",
+      "won": false,
+      "result": "4-6 2-6"
+    },
+    {
+      "id": "13731463",
+      "date": "2025-04-08",
+      "tournamentId": 13731463,
+      "homeId": 258977,
+      "tournamentName": "Mexico City, Mexico",
+      "opponentId": 65576,
+      "opponentName": "Pedro Sakamoto",
+      "won": true,
+      "result": "6-3 6-1"
+    }
+  ],
   "Hard": [
+    {
+      "id": "16181403",
+      "date": "2026-05-21",
+      "tournamentId": 16181403,
+      "homeId": 89320,
+      "tournamentName": "Bengaluru 3, India",
+      "opponentId": 89320,
+      "opponentName": "Ilya Ivashka",
+      "won": false,
+      "result": "1-6 2-6"
+    },
+    {
+      "id": "16181401",
+      "date": "2026-05-20",
+      "tournamentId": 16181401,
+      "homeId": 258977,
+      "tournamentName": "Bengaluru 3, India",
+      "opponentId": 460273,
+      "opponentName": "Naoya Honda",
+      "won": true,
+      "result": "5-7 7-5 6-4"
+    },
+    {
+      "id": "16199917",
+      "date": "2026-05-19",
+      "tournamentId": 16199917,
+      "homeId": 124934,
+      "tournamentName": "Bengaluru 3, India",
+      "opponentId": 124934,
+      "opponentName": "Grigoriy Lomakin",
+      "won": true,
+      "result": "6-4 7-6"
+    },
+    {
+      "id": "16154701",
+      "date": "2026-05-11",
+      "tournamentId": 16154701,
+      "homeId": 258977,
+      "tournamentName": "Bengaluru 2, India",
+      "opponentId": 216820,
+      "opponentName": "Yuta Kawahashi",
+      "won": false,
+      "result": "3-6 6-3 4-6"
+    },
+    {
+      "id": "15847202",
+      "date": "2026-03-25",
+      "tournamentId": 15847202,
+      "homeId": 258977,
+      "tournamentName": "Morelia, Mexico",
+      "opponentId": 168420,
+      "opponentName": "Andres Andrade",
+      "won": false,
+      "result": "4-6 4-6"
+    },
     {
       "id": "15710139",
       "date": "2026-03-19",
@@ -13,6 +399,50 @@
       "result": "3-6 2-6"
     },
     {
+      "id": "15758291",
+      "date": "2026-03-17",
+      "tournamentId": 15758291,
+      "homeId": 258977,
+      "tournamentName": "Morelos, Mexico",
+      "opponentId": 255448,
+      "opponentName": "Tibo Colson",
+      "won": true,
+      "result": "6-4 6-0"
+    },
+    {
+      "id": "15591863",
+      "date": "2026-02-22",
+      "tournamentId": 15591863,
+      "homeId": 258977,
+      "tournamentName": "Acapulco",
+      "opponentId": 289106,
+      "opponentName": "Coleman Wong",
+      "won": false,
+      "result": "3-6 2-6"
+    },
+    {
+      "id": "15428363",
+      "date": "2026-01-26",
+      "tournamentId": 15428363,
+      "homeId": 111857,
+      "tournamentName": "Manama, Bahrain",
+      "opponentId": 111857,
+      "opponentName": "Vadym Ursu",
+      "won": false,
+      "result": "3-6 6-2 2-6"
+    },
+    {
+      "id": "15390956",
+      "date": "2026-01-19",
+      "tournamentId": 15390956,
+      "homeId": 258977,
+      "tournamentName": "Soma Bay, Egypt",
+      "opponentId": 42152,
+      "opponentName": "Stefano Napolitano",
+      "won": false,
+      "result": "4-6 6-7"
+    },
+    {
       "id": "15386427",
       "date": "2026-01-18",
       "tournamentId": 15386427,
@@ -22,6 +452,28 @@
       "opponentName": "Niels McDonald",
       "won": true,
       "result": "6-4 7-5"
+    },
+    {
+      "id": "15342196",
+      "date": "2026-01-11",
+      "tournamentId": 15342196,
+      "homeId": 390992,
+      "tournamentName": "Nonthaburi 2, Thailand",
+      "opponentId": 390992,
+      "opponentName": "Markus Malaszszak",
+      "won": false,
+      "result": "6-3 3-6 2-6"
+    },
+    {
+      "id": "14407271",
+      "date": "2025-08-12",
+      "tournamentId": 14407271,
+      "homeId": 258977,
+      "tournamentName": "Cancun, Mexico Men Singles",
+      "opponentId": 260122,
+      "opponentName": "Dalibor Svrčina",
+      "won": false,
+      "result": "1-6 3-6"
     },
     {
       "id": "14147239",
@@ -46,6 +498,17 @@
       "result": "3-6 7-5 6-4"
     },
     {
+      "id": "13692161",
+      "date": "2025-04-02",
+      "tournamentId": 13692161,
+      "homeId": 258977,
+      "tournamentName": "Cuernavaca, Mexico",
+      "opponentId": 113979,
+      "opponentName": "Juan Pablo Ficovich",
+      "won": false,
+      "result": "1-6 6-7"
+    },
+    {
       "id": "13637723",
       "date": "2025-03-28",
       "tournamentId": 13637723,
@@ -55,9 +518,152 @@
       "opponentName": "James Duckworth",
       "won": false,
       "result": "4-6 6-7"
+    },
+    {
+      "id": "13637716",
+      "date": "2025-03-26",
+      "tournamentId": 13637716,
+      "homeId": 258977,
+      "tournamentName": "Morelia, Mexico",
+      "opponentId": 113979,
+      "opponentName": "Juan Pablo Ficovich",
+      "won": true,
+      "result": "7-5 6-2"
+    },
+    {
+      "id": "13658892",
+      "date": "2025-03-24",
+      "tournamentId": 13658892,
+      "homeId": 187218,
+      "tournamentName": "Morelia, Mexico",
+      "opponentId": 187218,
+      "opponentName": "Nicolas Mejia",
+      "won": true,
+      "result": "6-4 3-6 6-4"
+    },
+    {
+      "id": "13530188",
+      "date": "2025-02-25",
+      "tournamentId": 13530188,
+      "homeId": 258977,
+      "tournamentName": "San Diego, USA",
+      "opponentId": 288748,
+      "opponentName": "Eliot Spizzirri",
+      "won": false,
+      "result": "3-6 1-6"
+    },
+    {
+      "id": "13524959",
+      "date": "2025-02-24",
+      "tournamentId": 13524959,
+      "homeId": 251784,
+      "tournamentName": "San Diego, USA",
+      "opponentId": 251784,
+      "opponentName": "Patrick Maloney",
+      "won": true,
+      "result": "7-6 6-2"
+    },
+    {
+      "id": "13521172",
+      "date": "2025-02-23",
+      "tournamentId": 13521172,
+      "homeId": 324576,
+      "tournamentName": "San Diego, USA",
+      "opponentId": 324576,
+      "opponentName": "Filip Pieczonka",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
+      "id": "13162456",
+      "date": "2024-11-26",
+      "tournamentId": 13162456,
+      "homeId": 103625,
+      "tournamentName": "Manzanillo  Mexico ",
+      "opponentId": 103625,
+      "opponentName": "Michael Geerts",
+      "won": false,
+      "result": "6-7 6-4 3-6"
+    },
+    {
+      "id": "13120637",
+      "date": "2024-11-20",
+      "tournamentId": 13120637,
+      "homeId": 223513,
+      "tournamentName": "Puerto Vallarta, Mexico ",
+      "opponentId": 223513,
+      "opponentName": "Liam Draxl",
+      "won": false,
+      "result": "0-6 0-6"
+    },
+    {
+      "id": "13135583",
+      "date": "2024-11-19",
+      "tournamentId": 13135583,
+      "homeId": 258324,
+      "tournamentName": "Puerto Vallarta, Mexico ",
+      "opponentId": 258324,
+      "opponentName": "Saba Purtseladze",
+      "won": true,
+      "result": "6-2 7-5"
+    },
+    {
+      "id": "12249936",
+      "date": "2024-04-15",
+      "tournamentId": 12249936,
+      "homeId": 187230,
+      "tournamentName": "Acapulco, Mexico",
+      "opponentId": 187230,
+      "opponentName": "Christian Langmo",
+      "won": false,
+      "result": "6-4 6-7 1-6"
+    },
+    {
+      "id": "12234301",
+      "date": "2024-04-09",
+      "tournamentId": 12234301,
+      "homeId": 187230,
+      "tournamentName": "Morelos, Mexico",
+      "opponentId": 187230,
+      "opponentName": "Christian Langmo",
+      "won": false,
+      "result": "4-6 4-6"
+    },
+    {
+      "id": "12231472",
+      "date": "2024-04-08",
+      "tournamentId": 12231472,
+      "homeId": 258977,
+      "tournamentName": "Morelos, Mexico",
+      "opponentId": 162144,
+      "opponentName": "Evan Zhu",
+      "won": true,
+      "result": "6-0 6-2"
+    },
+    {
+      "id": "12229980",
+      "date": "2024-04-07",
+      "tournamentId": 12229980,
+      "homeId": 210033,
+      "tournamentName": "Morelos, Mexico",
+      "opponentId": 210033,
+      "opponentName": "Daniil Glinka",
+      "won": true,
+      "result": "6-3 7-6"
+    },
+    {
+      "id": "11084995",
+      "date": "2023-02-25",
+      "tournamentId": 11084995,
+      "homeId": 48632,
+      "tournamentName": "Acapulco",
+      "opponentId": 48632,
+      "opponentName": "Taro Daniel",
+      "won": false,
+      "result": "2-6 1-6"
     }
   ],
   "Grass": [],
-  "updatedAt": 1784847238724,
+  "updatedAt": 1784948425671,
   "playerName": "Alex Hernandez"
 }
