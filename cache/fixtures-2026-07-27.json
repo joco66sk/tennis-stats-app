@@ -14,7 +14,8 @@
         "id": 412818,
         "name": "Learner Tien",
         "countryAcr": "US",
-        "ranking": 16
+        "ranking": 16,
+        "seed": "5"
       },
       "tournament": {
         "id": 2368,
@@ -74,7 +75,8 @@
         "id": 258749,
         "name": "Jack Draper",
         "countryAcr": "GB",
-        "ranking": 147
+        "ranking": 147,
+        "seed": "WC"
       },
       "tournament": {
         "id": 2368,
@@ -98,13 +100,15 @@
         "id": 201239,
         "name": "Alex de Minaur",
         "countryAcr": "AU",
-        "ranking": 5
+        "ranking": 5,
+        "seed": "1"
       },
       "player2": {
         "id": 122366,
         "name": "Stefanos Tsitsipas",
         "countryAcr": "GR",
-        "ranking": 51
+        "ranking": 51,
+        "seed": "WC"
       },
       "tournament": {
         "id": 2368,
@@ -128,7 +132,8 @@
         "id": 338500,
         "name": "Arthur Fils",
         "countryAcr": "FR",
-        "ranking": 23
+        "ranking": 23,
+        "seed": "8"
       },
       "player2": {
         "id": 458834,
@@ -194,7 +199,8 @@
         "id": 385485,
         "name": "Ben Shelton",
         "countryAcr": "US",
-        "ranking": 6
+        "ranking": 6,
+        "seed": "2"
       },
       "tournament": {
         "id": 2368,
@@ -218,7 +224,8 @@
         "id": 101101,
         "name": "Frances Tiafoe",
         "countryAcr": "US",
-        "ranking": 17
+        "ranking": 17,
+        "seed": "6"
       },
       "player2": {
         "id": 273679,
@@ -278,7 +285,8 @@
         "id": 15733,
         "name": "Kei Nishikori",
         "countryAcr": "JP",
-        "ranking": 719
+        "ranking": 719,
+        "seed": "WC"
       },
       "player2": {
         "id": 348853,
@@ -314,7 +322,8 @@
         "id": 261015,
         "name": "Lorenzo Musetti",
         "countryAcr": "IT",
-        "ranking": 15
+        "ranking": 15,
+        "seed": "4"
       },
       "tournament": {
         "id": 2368,
@@ -338,7 +347,8 @@
         "id": 136042,
         "name": "Taylor Fritz",
         "countryAcr": "US",
-        "ranking": 10
+        "ranking": 10,
+        "seed": "3"
       },
       "player2": {
         "id": 170946,
@@ -451,6 +461,9 @@
           "id": 2,
           "name": "ATP250"
         }
+      },
+      "round": {
+        "name": "Qualification Final"
       }
     },
     {
@@ -486,5 +499,5 @@
     }
   ],
   "count": 16,
-  "fetchedAt": 1785070836200
+  "fetchedAt": 1785077819606
 }
