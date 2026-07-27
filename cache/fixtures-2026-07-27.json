@@ -63,19 +63,20 @@
       }
     },
     {
-      "id": 16638199,
-      "date": "2026-07-27T15:00:00.000Z",
+      "id": 16629763,
+      "date": "2026-07-27T16:10:00.000Z",
       "player1": {
-        "id": 124656,
-        "name": "Aleksandar Vukić",
-        "countryAcr": "AU",
-        "ranking": 102
+        "id": 299538,
+        "name": "Matteo Arnaldi",
+        "countryAcr": "IT",
+        "ranking": 33
       },
       "player2": {
-        "id": 298247,
-        "name": "Zachary Svajda",
-        "countryAcr": "US",
-        "ranking": 73
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT",
+        "ranking": 15,
+        "seed": "4"
       },
       "tournament": {
         "id": 2368,
@@ -93,20 +94,19 @@
       }
     },
     {
-      "id": 16629763,
-      "date": "2026-07-27T16:10:00.000Z",
+      "id": 16638199,
+      "date": "2026-07-27T18:50:00.000Z",
       "player1": {
-        "id": 299538,
-        "name": "Matteo Arnaldi",
-        "countryAcr": "IT",
-        "ranking": 33
+        "id": 124656,
+        "name": "Aleksandar Vukić",
+        "countryAcr": "AU",
+        "ranking": 102
       },
       "player2": {
-        "id": 261015,
-        "name": "Lorenzo Musetti",
-        "countryAcr": "IT",
-        "ranking": 15,
-        "seed": "4"
+        "id": 298247,
+        "name": "Zachary Svajda",
+        "countryAcr": "US",
+        "ranking": 73
       },
       "tournament": {
         "id": 2368,
@@ -186,6 +186,37 @@
       }
     },
     {
+      "id": 16631087,
+      "date": "2026-07-27T01:00:00.000Z",
+      "player1": {
+        "id": 258977,
+        "name": "Alex Hernandez",
+        "countryAcr": "MX",
+        "ranking": 499
+      },
+      "player2": {
+        "id": 272535,
+        "name": "Alan Magadan",
+        "countryAcr": "MX",
+        "ranking": 650,
+        "seed": "A"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
       "id": 16631059,
       "date": "2026-07-27T01:00:00.000Z",
       "player1": {
@@ -251,7 +282,7 @@
     },
     {
       "id": 16633720,
-      "date": "2026-07-27T02:10:00.000Z",
+      "date": "2026-07-27T02:00:00.000Z",
       "player1": {
         "id": 309157,
         "name": "Aidan Mayo",
@@ -279,39 +310,8 @@
       "round": {
         "name": "Qualification Final"
       }
-    },
-    {
-      "id": 16631087,
-      "date": "2026-07-27T02:10:00.000Z",
-      "player1": {
-        "id": 258977,
-        "name": "Alex Hernandez",
-        "countryAcr": "MX",
-        "ranking": 499
-      },
-      "player2": {
-        "id": 272535,
-        "name": "Alan Magadan",
-        "countryAcr": "MX",
-        "ranking": 650,
-        "seed": "A"
-      },
-      "tournament": {
-        "id": 2369,
-        "name": "Los Cabos",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Qualification Final"
-      }
     }
   ],
   "count": 10,
-  "fetchedAt": 1785109969298
+  "fetchedAt": 1785117678917
 }
