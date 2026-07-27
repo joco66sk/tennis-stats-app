@@ -2,19 +2,49 @@
   "date": "2026-07-29",
   "fixtures": [
     {
+      "id": 16639621,
+      "date": "2026-07-29T01:00:00.000Z",
+      "player1": {
+        "id": 309157,
+        "name": "Aidan Mayo",
+        "countryAcr": "US",
+        "ranking": 689
+      },
+      "player2": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU",
+        "ranking": 83
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16630745,
       "date": "2026-07-29T01:00:00.000Z",
       "player1": {
         "id": 260122,
         "name": "Dalibor Svrčina",
         "countryAcr": "CZ",
-        "ranking": 115
+        "ranking": 116
       },
       "player2": {
         "id": 207575,
         "name": "Adam Walton",
         "countryAcr": "AU",
-        "ranking": 99
+        "ranking": 96
       },
       "tournament": {
         "id": 2369,
@@ -38,14 +68,14 @@
         "id": 117916,
         "name": "Denis Shapovalov",
         "countryAcr": "CA",
-        "ranking": 67,
+        "ranking": 68,
         "seed": "8"
       },
       "player2": {
         "id": 237452,
         "name": "Rinky Hijikata",
         "countryAcr": "AU",
-        "ranking": 96
+        "ranking": 93
       },
       "tournament": {
         "id": 2369,
@@ -69,13 +99,13 @@
         "id": 191873,
         "name": "Jenson Brooksby",
         "countryAcr": "US",
-        "ranking": 74
+        "ranking": 77
       },
       "player2": {
         "id": 175014,
         "name": "Corentin Moutet",
         "countryAcr": "FR",
-        "ranking": 40,
+        "ranking": 57,
         "seed": "6"
       },
       "tournament": {
@@ -100,13 +130,13 @@
         "id": 385285,
         "name": "Michael Zheng",
         "countryAcr": "US",
-        "ranking": 120
+        "ranking": 118
       },
       "player2": {
         "id": 417196,
         "name": "Martin Landaluce",
         "countryAcr": "ES",
-        "ranking": 62,
+        "ranking": 63,
         "seed": "7"
       },
       "tournament": {
@@ -131,14 +161,14 @@
         "id": 522369,
         "name": "Moise Kouame",
         "countryAcr": "FR",
-        "ranking": 212,
+        "ranking": 213,
         "seed": "WC"
       },
       "player2": {
         "id": 23581,
         "name": "Grigor Dimitrov",
         "countryAcr": "BG",
-        "ranking": 142,
+        "ranking": 140,
         "seed": "WC"
       },
       "tournament": {
@@ -163,14 +193,44 @@
         "id": 216154,
         "name": "Sho Shimabukuro",
         "countryAcr": "JP",
-        "ranking": 97
+        "ranking": 94
       },
       "player2": {
         "id": 386107,
         "name": "Rodrigo Pacheco Mendez",
         "countryAcr": "MX",
-        "ranking": 323,
+        "ranking": 320,
         "seed": "WC"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16639624,
+      "date": "2026-07-29T01:00:00.000Z",
+      "player1": {
+        "id": 97647,
+        "name": "Soonwoo Kwon",
+        "countryAcr": "KR",
+        "ranking": 158
+      },
+      "player2": {
+        "id": 383987,
+        "name": "Arthur Gea",
+        "countryAcr": "FR",
+        "ranking": 127
       },
       "tournament": {
         "id": 2369,
@@ -188,6 +248,6 @@
       }
     }
   ],
-  "count": 6,
-  "fetchedAt": 1785117681556
+  "count": 8,
+  "fetchedAt": 1785133101454
 }

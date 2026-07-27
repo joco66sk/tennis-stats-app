@@ -8,13 +8,13 @@
         "id": 334293,
         "name": "Ethan Quinn",
         "countryAcr": "US",
-        "ranking": 45
+        "ranking": 46
       },
       "player2": {
         "id": 385485,
         "name": "Ben Shelton",
         "countryAcr": "US",
-        "ranking": 6,
+        "ranking": 8,
         "seed": "2"
       },
       "tournament": {
@@ -45,7 +45,7 @@
         "id": 122368,
         "name": "Tallon Griekspoor",
         "countryAcr": "NL",
-        "ranking": 66
+        "ranking": 67
       },
       "tournament": {
         "id": 2368,
@@ -69,7 +69,7 @@
         "id": 299538,
         "name": "Matteo Arnaldi",
         "countryAcr": "IT",
-        "ranking": 33
+        "ranking": 35
       },
       "player2": {
         "id": 261015,
@@ -100,13 +100,13 @@
         "id": 124656,
         "name": "Aleksandar Vukić",
         "countryAcr": "AU",
-        "ranking": 102
+        "ranking": 105
       },
       "player2": {
         "id": 298247,
         "name": "Zachary Svajda",
         "countryAcr": "US",
-        "ranking": 73
+        "ranking": 76
       },
       "tournament": {
         "id": 2368,
@@ -137,7 +137,7 @@
         "id": 170946,
         "name": "Zizou Bergs",
         "countryAcr": "BE",
-        "ranking": 34
+        "ranking": 36
       },
       "tournament": {
         "id": 2368,
@@ -161,7 +161,7 @@
         "id": 15733,
         "name": "Kei Nishikori",
         "countryAcr": "JP",
-        "ranking": 719,
+        "ranking": 721,
         "seed": "WC"
       },
       "player2": {
@@ -186,51 +186,20 @@
       }
     },
     {
-      "id": 16631087,
-      "date": "2026-07-27T01:00:00.000Z",
-      "player1": {
-        "id": 258977,
-        "name": "Alex Hernandez",
-        "countryAcr": "MX",
-        "ranking": 499
-      },
-      "player2": {
-        "id": 272535,
-        "name": "Alan Magadan",
-        "countryAcr": "MX",
-        "ranking": 650,
-        "seed": "A"
-      },
-      "tournament": {
-        "id": 2369,
-        "name": "Los Cabos",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Qualification Final"
-      }
-    },
-    {
       "id": 16631059,
       "date": "2026-07-27T01:00:00.000Z",
       "player1": {
         "id": 97647,
         "name": "Soonwoo Kwon",
         "countryAcr": "KR",
-        "ranking": 157,
+        "ranking": 158,
         "seed": "2"
       },
       "player2": {
         "id": 338420,
         "name": "Edward Winter",
         "countryAcr": "AU",
-        "ranking": 400,
+        "ranking": 391,
         "seed": "8"
       },
       "tournament": {
@@ -255,14 +224,14 @@
         "id": 232036,
         "name": "Tristan Boyer",
         "countryAcr": "US",
-        "ranking": 166,
+        "ranking": 162,
         "seed": "3"
       },
       "player2": {
         "id": 17080,
         "name": "Bernard Tomić",
         "countryAcr": "AU",
-        "ranking": 170,
+        "ranking": 171,
         "seed": "5"
       },
       "tournament": {
@@ -287,14 +256,45 @@
         "id": 309157,
         "name": "Aidan Mayo",
         "countryAcr": "US",
-        "ranking": 634
+        "ranking": 689
       },
       "player2": {
         "id": 398771,
         "name": "Roger Pascual Ferra",
         "countryAcr": "ES",
-        "ranking": 808,
+        "ranking": 729,
         "seed": "WC"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16631087,
+      "date": "2026-07-27T02:55:00.000Z",
+      "player1": {
+        "id": 258977,
+        "name": "Alex Hernandez",
+        "countryAcr": "MX",
+        "ranking": 498
+      },
+      "player2": {
+        "id": 272535,
+        "name": "Alan Magadan",
+        "countryAcr": "MX",
+        "ranking": 579,
+        "seed": "A"
       },
       "tournament": {
         "id": 2369,
@@ -313,5 +313,5 @@
     }
   ],
   "count": 10,
-  "fetchedAt": 1785117678917
+  "fetchedAt": 1785133099874
 }
