@@ -2,6 +2,38 @@
   "date": "2026-07-29",
   "fixtures": [
     {
+      "id": 16629771,
+      "date": "2026-07-28T22:00:00.000Z",
+      "player1": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 6,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR",
+        "ranking": 51,
+        "seed": "WC"
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16639621,
       "date": "2026-07-29T01:00:00.000Z",
       "player1": {
@@ -250,6 +282,6 @@
       }
     }
   ],
-  "count": 8,
-  "fetchedAt": 1785183264834
+  "count": 9,
+  "fetchedAt": 1785189402815
 }
