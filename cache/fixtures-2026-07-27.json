@@ -64,7 +64,7 @@
     },
     {
       "id": 16629763,
-      "date": "2026-07-27T16:35:00.000Z",
+      "date": "2026-07-27T17:45:00.000Z",
       "player1": {
         "id": 299538,
         "name": "Matteo Arnaldi",
@@ -77,38 +77,6 @@
         "countryAcr": "IT",
         "ranking": 15,
         "seed": "4"
-      },
-      "tournament": {
-        "id": 2368,
-        "name": "Washington",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 16638199,
-      "date": "2026-07-27T18:50:00.000Z",
-      "player1": {
-        "id": 124656,
-        "name": "Aleksandar Vukić",
-        "countryAcr": "AU",
-        "ranking": 105,
-        "seed": "Q"
-      },
-      "player2": {
-        "id": 298247,
-        "name": "Zachary Svajda",
-        "countryAcr": "US",
-        "ranking": 76,
-        "seed": "LL"
       },
       "tournament": {
         "id": 2368,
@@ -140,6 +108,38 @@
         "name": "Zizou Bergs",
         "countryAcr": "BE",
         "ranking": 36
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16638199,
+      "date": "2026-07-27T20:25:00.000Z",
+      "player1": {
+        "id": 124656,
+        "name": "Aleksandar Vukić",
+        "countryAcr": "AU",
+        "ranking": 105,
+        "seed": "Q"
+      },
+      "player2": {
+        "id": 298247,
+        "name": "Zachary Svajda",
+        "countryAcr": "US",
+        "ranking": 76,
+        "seed": "LL"
       },
       "tournament": {
         "id": 2368,
@@ -315,5 +315,5 @@
     }
   ],
   "count": 10,
-  "fetchedAt": 1785168506073
+  "fetchedAt": 1785176283361
 }
