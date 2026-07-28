@@ -1,6 +1,71 @@
 {
   "date": "2026-07-30",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1785204264653
+  "fixtures": [
+    {
+      "id": 16593345,
+      "date": "2026-07-30T01:00:00.000Z",
+      "player1": {
+        "id": 17080,
+        "name": "Bernard Tomić",
+        "countryAcr": "AU",
+        "ranking": 171,
+        "seed": "LL"
+      },
+      "player2": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU",
+        "ranking": 26,
+        "seed": "4"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16593338,
+      "date": "2026-07-30T01:00:00.000Z",
+      "player1": {
+        "id": 221012,
+        "name": "Francisco Cerundolo",
+        "countryAcr": "AR",
+        "ranking": 20,
+        "seed": "3"
+      },
+      "player2": {
+        "id": 232036,
+        "name": "Tristan Boyer",
+        "countryAcr": "US",
+        "ranking": 162,
+        "seed": "Q"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1785217112297
 }
