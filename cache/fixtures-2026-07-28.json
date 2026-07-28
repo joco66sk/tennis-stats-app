@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "id": 16629762,
-      "date": "2026-07-27T23:10:00.000Z",
+      "date": "2026-07-28T01:00:00.000Z",
       "player1": {
         "id": 101101,
         "name": "Frances Tiafoe",
@@ -16,37 +16,6 @@
         "name": "Terence Atmane",
         "countryAcr": "FR",
         "ranking": 56
-      },
-      "tournament": {
-        "id": 2368,
-        "name": "Washington",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 16629765,
-      "date": "2026-07-28T15:00:00.000Z",
-      "player1": {
-        "id": 338500,
-        "name": "Arthur Fils",
-        "countryAcr": "FR",
-        "ranking": 22,
-        "seed": "8"
-      },
-      "player2": {
-        "id": 458834,
-        "name": "Rafael Jodar",
-        "countryAcr": "ES",
-        "ranking": 24
       },
       "tournament": {
         "id": 2368,
@@ -200,6 +169,37 @@
         "name": "Mackenzie McDonald",
         "countryAcr": "US",
         "ranking": 145
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16629765,
+      "date": "2026-07-28T16:30:00.000Z",
+      "player1": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR",
+        "ranking": 22,
+        "seed": "8"
+      },
+      "player2": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 24
       },
       "tournament": {
         "id": 2368,
@@ -407,7 +407,7 @@
     },
     {
       "id": 16630747,
-      "date": "2026-07-28T02:10:00.000Z",
+      "date": "2026-07-28T02:20:00.000Z",
       "player1": {
         "id": 95935,
         "name": "Cameron Norrie",
@@ -468,5 +468,5 @@
     }
   ],
   "count": 15,
-  "fetchedAt": 1785196626586
+  "fetchedAt": 1785204262928
 }
