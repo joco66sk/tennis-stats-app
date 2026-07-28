@@ -94,37 +94,6 @@
       }
     },
     {
-      "id": 16629766,
-      "date": "2026-07-28T16:30:00.000Z",
-      "player1": {
-        "id": 15894,
-        "name": "Adrian Mannarino",
-        "countryAcr": "FR",
-        "ranking": 47
-      },
-      "player2": {
-        "id": 412818,
-        "name": "Learner Tien",
-        "countryAcr": "US",
-        "ranking": 16,
-        "seed": "5"
-      },
-      "tournament": {
-        "id": 2368,
-        "name": "Washington",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
       "id": 16629767,
       "date": "2026-07-28T16:30:00.000Z",
       "player1": {
@@ -187,7 +156,7 @@
     },
     {
       "id": 16629765,
-      "date": "2026-07-28T16:30:00.000Z",
+      "date": "2026-07-28T17:20:00.000Z",
       "player1": {
         "id": 338500,
         "name": "Arthur Fils",
@@ -217,19 +186,20 @@
       }
     },
     {
-      "id": 16629770,
+      "id": 16629766,
       "date": "2026-07-28T17:40:00.000Z",
       "player1": {
-        "id": 235576,
-        "name": "Brandon Nakashima",
-        "countryAcr": "US",
-        "ranking": 33
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR",
+        "ranking": 47
       },
       "player2": {
-        "id": 169496,
-        "name": "Tomas Martin Etcheverry",
-        "countryAcr": "AR",
-        "ranking": 31
+        "id": 412818,
+        "name": "Learner Tien",
+        "countryAcr": "US",
+        "ranking": 16,
+        "seed": "5"
       },
       "tournament": {
         "id": 2368,
@@ -311,8 +281,38 @@
       }
     },
     {
-      "id": 16638205,
+      "id": 16629770,
       "date": "2026-07-28T18:50:00.000Z",
+      "player1": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US",
+        "ranking": 33
+      },
+      "player2": {
+        "id": 169496,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "AR",
+        "ranking": 31
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16638205,
+      "date": "2026-07-28T20:00:00.000Z",
       "player1": {
         "id": 417424,
         "name": "Trevor Svajda",
@@ -468,5 +468,5 @@
     }
   ],
   "count": 15,
-  "fetchedAt": 1785254348873
+  "fetchedAt": 1785259693221
 }
