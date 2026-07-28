@@ -2,6 +2,36 @@
   "date": "2026-07-30",
   "fixtures": [
     {
+      "id": 16603188,
+      "date": "2026-07-29T22:00:00.000Z",
+      "player1": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US",
+        "ranking": 40
+      },
+      "player2": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR",
+        "ranking": 47
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16603180,
       "date": "2026-07-29T23:40:00.000Z",
       "player1": {
@@ -128,6 +158,6 @@
       }
     }
   ],
-  "count": 4,
-  "fetchedAt": 1785272377969
+  "count": 5,
+  "fetchedAt": 1785276336943
 }
