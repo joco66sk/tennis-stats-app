@@ -63,6 +63,38 @@
       }
     },
     {
+      "id": 16603191,
+      "date": "2026-07-30T15:00:00.000Z",
+      "player1": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 6,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 490667,
+        "name": "Cruz Hewitt",
+        "countryAcr": "AU",
+        "ranking": 612,
+        "seed": "Q"
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16603186,
       "date": "2026-07-30T15:00:00.000Z",
       "player1": {
@@ -405,6 +437,6 @@
       }
     }
   ],
-  "count": 13,
-  "fetchedAt": 1785351521964
+  "count": 14,
+  "fetchedAt": 1785355971947
 }
