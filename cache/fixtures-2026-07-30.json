@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "id": 16603188,
-      "date": "2026-07-29T22:00:00.000Z",
+      "date": "2026-07-29T23:00:00.000Z",
       "player1": {
         "id": 406728,
         "name": "Alex Michelsen",
@@ -63,38 +63,6 @@
       }
     },
     {
-      "id": 16603191,
-      "date": "2026-07-30T15:00:00.000Z",
-      "player1": {
-        "id": 201239,
-        "name": "Alex de Minaur",
-        "countryAcr": "AU",
-        "ranking": 6,
-        "seed": "1"
-      },
-      "player2": {
-        "id": 490667,
-        "name": "Cruz Hewitt",
-        "countryAcr": "AU",
-        "ranking": 612,
-        "seed": "Q"
-      },
-      "tournament": {
-        "id": 2368,
-        "name": "Washington",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
       "id": 16603186,
       "date": "2026-07-30T15:00:00.000Z",
       "player1": {
@@ -126,19 +94,21 @@
       }
     },
     {
-      "id": 16603184,
-      "date": "2026-07-30T15:00:00.000Z",
+      "id": 16603191,
+      "date": "2026-07-30T16:10:00.000Z",
       "player1": {
-        "id": 273679,
-        "name": "Terence Atmane",
-        "countryAcr": "FR",
-        "ranking": 56
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 6,
+        "seed": "1"
       },
       "player2": {
-        "id": 102151,
-        "name": "Alejandro Tabilo",
-        "countryAcr": "CL",
-        "ranking": 30
+        "id": 490667,
+        "name": "Cruz Hewitt",
+        "countryAcr": "AU",
+        "ranking": 612,
+        "seed": "Q"
       },
       "tournament": {
         "id": 2368,
@@ -156,20 +126,19 @@
       }
     },
     {
-      "id": 16603182,
-      "date": "2026-07-30T15:00:00.000Z",
+      "id": 16603184,
+      "date": "2026-07-30T20:30:00.000Z",
       "player1": {
-        "id": 185388,
-        "name": "Ugo Humbert",
+        "id": 273679,
+        "name": "Terence Atmane",
         "countryAcr": "FR",
-        "ranking": 29
+        "ranking": 56
       },
       "player2": {
-        "id": 385485,
-        "name": "Ben Shelton",
-        "countryAcr": "US",
-        "ranking": 8,
-        "seed": "2"
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL",
+        "ranking": 30
       },
       "tournament": {
         "id": 2368,
@@ -437,6 +406,6 @@
       }
     }
   ],
-  "count": 14,
-  "fetchedAt": 1785355971947
+  "count": 13,
+  "fetchedAt": 1785361847796
 }
