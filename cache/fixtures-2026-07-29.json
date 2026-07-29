@@ -2,68 +2,6 @@
   "date": "2026-07-29",
   "fixtures": [
     {
-      "id": 16629771,
-      "date": "2026-07-28T22:00:00.000Z",
-      "player1": {
-        "id": 201239,
-        "name": "Alex de Minaur",
-        "countryAcr": "AU",
-        "ranking": 6,
-        "seed": "1"
-      },
-      "player2": {
-        "id": 122366,
-        "name": "Stefanos Tsitsipas",
-        "countryAcr": "GR",
-        "ranking": 51,
-        "seed": "WC"
-      },
-      "tournament": {
-        "id": 2368,
-        "name": "Washington",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 16603184,
-      "date": "2026-07-29T15:00:00.000Z",
-      "player1": {
-        "id": 273679,
-        "name": "Terence Atmane",
-        "countryAcr": "FR",
-        "ranking": 56
-      },
-      "player2": {
-        "id": 102151,
-        "name": "Alejandro Tabilo",
-        "countryAcr": "CL",
-        "ranking": 30
-      },
-      "tournament": {
-        "id": 2368,
-        "name": "Washington",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
       "id": 16603181,
       "date": "2026-07-29T17:00:00.000Z",
       "player1": {
@@ -93,6 +31,38 @@
       },
       "round": {
         "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16629771,
+      "date": "2026-07-29T17:00:00.000Z",
+      "player1": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 6,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR",
+        "ranking": 51,
+        "seed": "WC"
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
       }
     },
     {
@@ -406,6 +376,6 @@
       }
     }
   ],
-  "count": 13,
-  "fetchedAt": 1785282733026
+  "count": 12,
+  "fetchedAt": 1785289550711
 }
