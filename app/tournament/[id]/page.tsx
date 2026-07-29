@@ -227,7 +227,15 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
     } catch {}
   }
 
-  if (allFixtures.length === 0) redirect('/');
+  if (allFixtures.length === 0) {
+    // Past tournament with expired fixtures — redirect numeric IDs to slug via archive
+    if (/^\d+$/.test(id)) {
+      const archive = loadArchive();
+      const entry = archive[numericId];
+      if (entry) redirect(`/tournament/${toTournamentSlug(entry.id, entry.name, entry.year)}`);
+    }
+    redirect('/');
+  }
 
   const surface = normalizeSurface(allFixtures[0].tournament?.court?.name);
   const tournamentName = allFixtures[0].tournament?.name || 'Tournament';
