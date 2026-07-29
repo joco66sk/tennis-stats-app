@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  outputFileTracingExcludes: {
-    '*': ['./cache/**', './app/api/cache/**'],
-  },
+  /* config options here */
 };
 
 export default nextConfig;
