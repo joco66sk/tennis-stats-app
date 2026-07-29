@@ -155,21 +155,20 @@
       }
     },
     {
-      "id": 16593345,
+      "id": 16593348,
       "date": "2026-07-30T01:00:00.000Z",
       "player1": {
-        "id": 17080,
-        "name": "Bernard Tomić",
+        "id": 338420,
+        "name": "Edward Winter",
         "countryAcr": "AU",
-        "ranking": 171,
+        "ranking": 391,
         "seed": "LL"
       },
       "player2": {
-        "id": 90080,
-        "name": "Karen Khachanov",
-        "countryAcr": "RU",
-        "ranking": 26,
-        "seed": "4"
+        "id": 191873,
+        "name": "Jenson Brooksby",
+        "countryAcr": "US",
+        "ranking": 77
       },
       "tournament": {
         "id": 2369,
@@ -248,8 +247,103 @@
       "round": {
         "name": "Round of 16"
       }
+    },
+    {
+      "id": 16593345,
+      "date": "2026-07-30T02:10:00.000Z",
+      "player1": {
+        "id": 17080,
+        "name": "Bernard Tomić",
+        "countryAcr": "AU",
+        "ranking": 171,
+        "seed": "LL"
+      },
+      "player2": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU",
+        "ranking": 26,
+        "seed": "4"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16593351,
+      "date": "2026-07-30T02:10:00.000Z",
+      "player1": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA",
+        "ranking": 68,
+        "seed": "8"
+      },
+      "player2": {
+        "id": 386107,
+        "name": "Rodrigo Pacheco Mendez",
+        "countryAcr": "MX",
+        "ranking": 320,
+        "seed": "WC"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16593337,
+      "date": "2026-07-30T03:20:00.000Z",
+      "player1": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB",
+        "ranking": 39,
+        "seed": "5"
+      },
+      "player2": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU",
+        "ranking": 83
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
     }
   ],
-  "count": 8,
-  "fetchedAt": 1785305699520
+  "count": 11,
+  "fetchedAt": 1785313321891
 }
