@@ -95,8 +95,39 @@
       }
     },
     {
-      "id": 16593349,
+      "id": 16593343,
       "date": "2026-07-31T01:00:00.000Z",
+      "player1": {
+        "id": 221012,
+        "name": "Francisco Cerundolo",
+        "countryAcr": "AR",
+        "ranking": 20,
+        "seed": "3"
+      },
+      "player2": {
+        "id": 383987,
+        "name": "Arthur Gea",
+        "countryAcr": "FR",
+        "ranking": 127
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 16593349,
+      "date": "2026-07-31T02:00:00.000Z",
       "player1": {
         "id": 289106,
         "name": "Coleman Wong",
@@ -123,8 +154,71 @@
       "round": {
         "name": "Quarterfinals"
       }
+    },
+    {
+      "id": 16593334,
+      "date": "2026-07-31T02:10:00.000Z",
+      "player1": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA",
+        "ranking": 68,
+        "seed": "8"
+      },
+      "player2": {
+        "id": 260122,
+        "name": "Dalibor Svrčina",
+        "countryAcr": "CZ",
+        "ranking": 116
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 16593344,
+      "date": "2026-07-31T04:00:00.000Z",
+      "player1": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB",
+        "ranking": 39,
+        "seed": "5"
+      },
+      "player2": {
+        "id": 17080,
+        "name": "Bernard Tomić",
+        "countryAcr": "AU",
+        "ranking": 171,
+        "seed": "LL"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
     }
   ],
-  "count": 4,
-  "fetchedAt": 1785386957898
+  "count": 7,
+  "fetchedAt": 1785396500390
 }
