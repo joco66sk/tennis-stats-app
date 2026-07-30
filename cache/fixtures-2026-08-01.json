@@ -1,6 +1,38 @@
 {
   "date": "2026-08-01",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1785449271643
+  "fixtures": [
+    {
+      "id": 16603183,
+      "date": "2026-07-31T22:00:00.000Z",
+      "player1": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 24
+      },
+      "player2": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT",
+        "ranking": 15,
+        "seed": "4"
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1785455668306
 }
