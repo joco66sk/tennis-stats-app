@@ -33,6 +33,37 @@
       }
     },
     {
+      "id": 16603194,
+      "date": "2026-07-31T15:00:00.000Z",
+      "player1": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 6,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US",
+        "ranking": 33
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
       "id": 16603183,
       "date": "2026-07-31T15:00:00.000Z",
       "player1": {
@@ -219,6 +250,6 @@
       }
     }
   ],
-  "count": 7,
-  "fetchedAt": 1785431752888
+  "count": 8,
+  "fetchedAt": 1785438636274
 }
