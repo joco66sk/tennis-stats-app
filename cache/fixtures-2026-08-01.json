@@ -65,7 +65,7 @@
     },
     {
       "id": 16593346,
-      "date": "2026-08-01T01:00:00.000Z",
+      "date": "2026-08-01T02:30:00.000Z",
       "player1": {
         "id": 289106,
         "name": "Coleman Wong",
@@ -92,8 +92,40 @@
       "round": {
         "name": "Semifinals"
       }
+    },
+    {
+      "id": 16593342,
+      "date": "2026-08-01T04:00:00.000Z",
+      "player1": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB",
+        "ranking": 39,
+        "seed": "5"
+      },
+      "player2": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA",
+        "ranking": 68,
+        "seed": "8"
+      },
+      "tournament": {
+        "id": 2369,
+        "name": "Los Cabos",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
     }
   ],
-  "count": 3,
-  "fetchedAt": 1785475630285
+  "count": 4,
+  "fetchedAt": 1785486917281
 }
