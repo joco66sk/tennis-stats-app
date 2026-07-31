@@ -111,6 +111,17 @@
       "result": "7-5 6-3"
     },
     {
+      "id": "16075770",
+      "date": "2026-04-28",
+      "tournamentId": 16075770,
+      "homeId": 210490,
+      "tournamentName": "Cagliari, Italy",
+      "opponentId": 210490,
+      "opponentName": "Patrick Kypson",
+      "won": true,
+      "result": "6-4 6-7 7-6"
+    },
+    {
       "id": "16048483",
       "date": "2026-04-22",
       "tournamentId": 16048483,
@@ -309,26 +320,15 @@
       "result": "6-4 6-4"
     },
     {
-      "id": "12532034",
-      "date": "2024-07-21",
-      "tournamentId": 12532034,
-      "homeId": 112783,
-      "tournamentName": "Gstaad",
-      "opponentId": 90798,
-      "opponentName": "Quentin Halys",
+      "id": "12565688",
+      "date": "2024-07-27",
+      "tournamentId": 12565688,
+      "homeId": 205906,
+      "tournamentName": "Kitzbuhel",
+      "opponentId": 205906,
+      "opponentName": "Hugo Gaston",
       "won": true,
-      "result": "6-3 6-1"
-    },
-    {
-      "id": "12532036",
-      "date": "2024-07-20",
-      "tournamentId": 12532036,
-      "homeId": 122366,
-      "tournamentName": "Gstaad",
-      "opponentId": 122366,
-      "opponentName": "Stefanos Tsitsipas",
-      "won": true,
-      "result": "7-6 7-5"
+      "result": "7-5 6-3"
     }
   ],
   "Hard": [
@@ -531,6 +531,17 @@
       "result": "5-7 7-6 5-7"
     },
     {
+      "id": "13610774",
+      "date": "2025-03-25",
+      "tournamentId": 13610774,
+      "homeId": 201239,
+      "tournamentName": "Miami",
+      "opponentId": 201239,
+      "opponentName": "Alex de Minaur",
+      "won": true,
+      "result": "6-3 7-6"
+    },
+    {
       "id": "13610750",
       "date": "2025-03-24",
       "tournamentId": 13610750,
@@ -564,6 +575,17 @@
       "result": "3-6 3-6"
     },
     {
+      "id": "13537599",
+      "date": "2025-03-07",
+      "tournamentId": 13537599,
+      "homeId": 112783,
+      "tournamentName": "Indian Wells",
+      "opponentId": 58221,
+      "opponentName": "Christopher O'Connell",
+      "won": true,
+      "result": "6-2 7-6"
+    },
+    {
       "id": "13498998",
       "date": "2025-02-27",
       "tournamentId": 13498998,
@@ -573,6 +595,28 @@
       "opponentName": "Stefanos Tsitsipas",
       "won": false,
       "result": "6-7 6-1 4-6"
+    },
+    {
+      "id": "13498996",
+      "date": "2025-02-26",
+      "tournamentId": 13498996,
+      "homeId": 112783,
+      "tournamentName": "Dubai",
+      "opponentId": 58221,
+      "opponentName": "Christopher O'Connell",
+      "won": true,
+      "result": "7-6 6-2"
+    },
+    {
+      "id": "13517340",
+      "date": "2025-02-25",
+      "tournamentId": 13517340,
+      "homeId": 14844,
+      "tournamentName": "Dubai",
+      "opponentId": 14844,
+      "opponentName": "Gael Monfils",
+      "won": true,
+      "result": "7-5 6-4"
     },
     {
       "id": "13463089",
@@ -617,50 +661,6 @@
       "opponentName": "Tallon Griekspoor",
       "won": false,
       "result": "3-6 7-6 6-7"
-    },
-    {
-      "id": "13300913",
-      "date": "2025-01-16",
-      "tournamentId": 13300913,
-      "homeId": 112783,
-      "tournamentName": "Australian Open, Men",
-      "opponentId": 283070,
-      "opponentName": "Holger Rune",
-      "won": false,
-      "result": "6-7 6-2 3-6 6-7"
-    },
-    {
-      "id": "13314127",
-      "date": "2025-01-14",
-      "tournamentId": 13314127,
-      "homeId": 112783,
-      "tournamentName": "Australian Open, Men",
-      "opponentId": 95935,
-      "opponentName": "Cameron Norrie",
-      "won": true,
-      "result": "6-7 6-4 6-1 6-3"
-    },
-    {
-      "id": "13278114",
-      "date": "2024-12-30",
-      "tournamentId": 13278114,
-      "homeId": 87690,
-      "tournamentName": "Brisbane",
-      "opponentId": 87690,
-      "opponentName": "Jordan Thompson",
-      "won": false,
-      "result": "6-3 3-6 4-6"
-    },
-    {
-      "id": "13033747",
-      "date": "2024-10-29",
-      "tournamentId": 13033747,
-      "homeId": 128552,
-      "tournamentName": "Paris",
-      "opponentId": 128552,
-      "opponentName": "Alexei Popyrin",
-      "won": false,
-      "result": "5-7 6-7"
     }
   ],
   "Grass": [
@@ -864,5 +864,5 @@
     }
   ],
   "playerName": "Matteo Berrettini",
-  "updatedAt": 1785449328062
+  "updatedAt": 1785538758521
 }
