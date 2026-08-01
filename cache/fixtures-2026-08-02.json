@@ -2,6 +2,36 @@
   "date": "2026-08-02",
   "fixtures": [
     {
+      "id": 16686602,
+      "date": "2026-08-02T15:00:00.000Z",
+      "player1": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY",
+        "ranking": 65
+      },
+      "player2": {
+        "id": 348853,
+        "name": "Juncheng Shang",
+        "countryAcr": "CN",
+        "ranking": 270
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16686537,
       "date": "2026-08-02T15:00:00.000Z",
       "player1": {
@@ -480,8 +510,39 @@
       "round": {
         "name": "Round of 128"
       }
+    },
+    {
+      "id": 16603187,
+      "date": "2026-08-01T22:30:00.000Z",
+      "player1": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US",
+        "ranking": 33
+      },
+      "player2": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US",
+        "ranking": 10,
+        "seed": "3"
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
     }
   ],
-  "count": 16,
-  "fetchedAt": 1785538634159
+  "count": 18,
+  "fetchedAt": 1785542298011
 }
