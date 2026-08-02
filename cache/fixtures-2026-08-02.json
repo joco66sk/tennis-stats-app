@@ -363,6 +363,37 @@
       }
     },
     {
+      "id": 16603190,
+      "date": "2026-08-02T18:30:00.000Z",
+      "player1": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US",
+        "ranking": 10,
+        "seed": "3"
+      },
+      "player2": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 24
+      },
+      "tournament": {
+        "id": 2368,
+        "name": "Washington",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
+    },
+    {
       "id": 16593340,
       "date": "2026-08-02T03:00:00.000Z",
       "player1": {
@@ -394,6 +425,6 @@
       }
     }
   ],
-  "count": 13,
-  "fetchedAt": 1785635563986
+  "count": 14,
+  "fetchedAt": 1785647919415
 }
