@@ -321,19 +321,41 @@ export default async function TournamentPage({ params }: { params: Promise<{ id:
   const resultsCache: Record<number, { score: string; p1Won: boolean } | null> = {};
   resultsCacheRaw.forEach((v, k) => { resultsCache[k] = v; });
 
+  const startDate = dates[0];
+  const endDate = dates[dates.length - 1];
+  const isPast = new Date(endDate) < now;
+  const tournamentSlug = toTournamentSlug(numericId, tournamentName, year);
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SportsEvent',
+    name: `${tournamentName} ${year}`,
+    sport: 'Tennis',
+    startDate,
+    endDate,
+    eventStatus: isPast ? 'https://schema.org/EventPassed' : 'https://schema.org/EventScheduled',
+    location: { '@type': 'Place', name: tournamentName },
+    organizer: { '@type': 'Organization', name: 'ATP Tour', url: 'https://www.atptour.com' },
+    image: 'https://tennisdeepstats.com/android-chrome-512x512.png',
+    description: `${tournamentName} ${year} full draw on ${surface} — serve, return and win rate for every player.`,
+    url: `https://tennisdeepstats.com/tournament/${tournamentSlug}`,
+  };
+
   return (
-    <TournamentDrawClient
-      tournamentName={tournamentName}
-      year={year}
-      surface={surface}
-      sc={sc}
-      tierLabel={tierLabel}
-      dateRange={dateRange}
-      totalMatches={allFixtures.length}
-      mainRounds={mainRounds}
-      qualRounds={qualRounds}
-      statsCache={statsCache}
-      resultsCache={resultsCache}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <TournamentDrawClient
+        tournamentName={tournamentName}
+        year={year}
+        surface={surface}
+        sc={sc}
+        tierLabel={tierLabel}
+        dateRange={dateRange}
+        totalMatches={allFixtures.length}
+        mainRounds={mainRounds}
+        qualRounds={qualRounds}
+        statsCache={statsCache}
+        resultsCache={resultsCache}
+      />
+    </>
   );
 }
