@@ -1,6 +1,69 @@
 {
   "date": "2026-08-05",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1785798201561
+  "fixtures": [
+    {
+      "id": 16661662,
+      "date": "2026-08-04T22:00:00.000Z",
+      "player1": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU",
+        "ranking": 83
+      },
+      "player2": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 6,
+        "seed": "3"
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16661659,
+      "date": "2026-08-04T23:10:00.000Z",
+      "player1": {
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT",
+        "ranking": 9,
+        "seed": "6"
+      },
+      "player2": {
+        "id": 47975,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "DE",
+        "ranking": 45
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1785807026883
 }
