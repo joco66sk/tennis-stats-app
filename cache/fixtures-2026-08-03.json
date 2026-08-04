@@ -2,6 +2,37 @@
   "date": "2026-08-03",
   "fixtures": [
     {
+      "id": 16696337,
+      "date": "2026-08-03T15:05:00.000Z",
+      "player1": {
+        "id": 385285,
+        "name": "Michael Zheng",
+        "countryAcr": "US",
+        "ranking": 118,
+        "seed": "Q"
+      },
+      "player2": {
+        "id": 198592,
+        "name": "Miomir Kecmanović",
+        "countryAcr": "RS",
+        "ranking": 60
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16686606,
       "date": "2026-08-03T17:05:00.000Z",
       "player1": {
@@ -187,6 +218,6 @@
       }
     }
   ],
-  "count": 6,
-  "fetchedAt": 1785839265458
+  "count": 7,
+  "fetchedAt": 1785848018476
 }
