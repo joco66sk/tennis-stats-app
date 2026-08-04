@@ -189,6 +189,37 @@
       }
     },
     {
+      "id": 16661671,
+      "date": "2026-08-05T15:00:00.000Z",
+      "player1": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE",
+        "ranking": 34,
+        "seed": "29"
+      },
+      "player2": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB",
+        "ranking": 39
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16661655,
       "date": "2026-08-05T15:00:00.000Z",
       "player1": {
@@ -407,39 +438,8 @@
       "round": {
         "name": "Round of 64"
       }
-    },
-    {
-      "id": 16661671,
-      "date": "2026-08-05T16:10:00.000Z",
-      "player1": {
-        "id": 322082,
-        "name": "Ignacio Buse",
-        "countryAcr": "PE",
-        "ranking": 34,
-        "seed": "29"
-      },
-      "player2": {
-        "id": 95935,
-        "name": "Cameron Norrie",
-        "countryAcr": "GB",
-        "ranking": 39
-      },
-      "tournament": {
-        "id": 2390,
-        "name": "Montreal",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
     }
   ],
   "count": 14,
-  "fetchedAt": 1785828659528
+  "fetchedAt": 1785839267042
 }
