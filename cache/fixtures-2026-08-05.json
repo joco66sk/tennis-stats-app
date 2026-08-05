@@ -64,37 +64,6 @@
       }
     },
     {
-      "id": 16661662,
-      "date": "2026-08-04T22:50:00.000Z",
-      "player1": {
-        "id": 39711,
-        "name": "James Duckworth",
-        "countryAcr": "AU",
-        "ranking": 83
-      },
-      "player2": {
-        "id": 201239,
-        "name": "Alex de Minaur",
-        "countryAcr": "AU",
-        "ranking": 6,
-        "seed": "3"
-      },
-      "tournament": {
-        "id": 2390,
-        "name": "Montreal",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
-    },
-    {
       "id": 16661666,
       "date": "2026-08-04T23:00:00.000Z",
       "player1": {
@@ -140,6 +109,37 @@
         "name": "Yannick Hanfmann",
         "countryAcr": "DE",
         "ranking": 45
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16661662,
+      "date": "2026-08-04T23:25:00.000Z",
+      "player1": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU",
+        "ranking": 83
+      },
+      "player2": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 6,
+        "seed": "3"
       },
       "tournament": {
         "id": 2390,
@@ -814,5 +814,5 @@
     }
   ],
   "count": 26,
-  "fetchedAt": 1785883989794
+  "fetchedAt": 1785887747510
 }
