@@ -1,6 +1,70 @@
 {
   "date": "2026-08-09",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1786131903136
+  "fixtures": [
+    {
+      "id": 16661619,
+      "date": "2026-08-08T22:00:00.000Z",
+      "player1": {
+        "id": 254742,
+        "name": "Jiri Lehečka",
+        "countryAcr": "CZ",
+        "ranking": 12,
+        "seed": "8"
+      },
+      "player2": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 24,
+        "seed": "20"
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16661641,
+      "date": "2026-08-08T23:10:00.000Z",
+      "player1": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR",
+        "ranking": 22,
+        "seed": "18"
+      },
+      "player2": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB",
+        "ranking": 39
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1786134629859
 }
