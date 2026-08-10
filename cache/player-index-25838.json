@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "16201229",
+      "date": "2026-05-20",
+      "tournamentId": 16201229,
+      "homeId": 321791,
+      "tournamentName": "Roland Garros, Men",
+      "opponentId": 321791,
+      "opponentName": "Toby Samuel",
+      "won": false,
+      "result": "7-5 3-6 3-6"
+    },
+    {
       "id": "16195948",
       "date": "2026-05-18",
       "tournamentId": 16195948,
@@ -157,6 +168,17 @@
       "result": "6-4 3-6 4-6"
     },
     {
+      "id": "14948920",
+      "date": "2025-10-26",
+      "tournamentId": 14948920,
+      "homeId": 255420,
+      "tournamentName": "Paris",
+      "opponentId": 255420,
+      "opponentName": "Francisco Comesaña",
+      "won": false,
+      "result": "1-6 0-0"
+    },
+    {
       "id": "14946122",
       "date": "2025-10-25",
       "tournamentId": 14946122,
@@ -188,6 +210,28 @@
       "opponentName": "Marin Čilić",
       "won": false,
       "result": "1-6 6-7"
+    },
+    {
+      "id": "14906081",
+      "date": "2025-10-18",
+      "tournamentId": 14906081,
+      "homeId": 255420,
+      "tournamentName": "Basel",
+      "opponentId": 255420,
+      "opponentName": "Francisco Comesaña",
+      "won": true,
+      "result": "6-2 7-6"
+    },
+    {
+      "id": "14870663",
+      "date": "2025-10-14",
+      "tournamentId": 14870663,
+      "homeId": 255420,
+      "tournamentName": "ATP Brussels, Belgium Singles",
+      "opponentId": 255420,
+      "opponentName": "Francisco Comesaña",
+      "won": false,
+      "result": "6-7 4-6"
     },
     {
       "id": "14762079",
@@ -311,6 +355,17 @@
       "result": "4-6 4-6"
     },
     {
+      "id": "14226499",
+      "date": "2025-07-22",
+      "tournamentId": 14226499,
+      "homeId": 25838,
+      "tournamentName": "Washington",
+      "opponentId": 254227,
+      "opponentName": "Yunchaokete Bu",
+      "won": false,
+      "result": "4-6 5-7"
+    },
+    {
       "id": "13610777",
       "date": "2025-03-23",
       "tournamentId": 13610777,
@@ -419,39 +474,6 @@
       "opponentName": "Yannick Hanfmann",
       "won": true,
       "result": "6-7 6-1 6-4"
-    },
-    {
-      "id": "12709516",
-      "date": "2024-08-23",
-      "tournamentId": 12709516,
-      "homeId": 25838,
-      "tournamentName": "Winston Salem",
-      "opponentId": 104847,
-      "opponentName": "Lorenzo Sonego",
-      "won": false,
-      "result": "3-6 2-6"
-    },
-    {
-      "id": "12679895",
-      "date": "2024-08-20",
-      "tournamentId": 12679895,
-      "homeId": 25838,
-      "tournamentName": "Winston Salem",
-      "opponentId": 308084,
-      "opponentName": "Luciano Darderi",
-      "won": true,
-      "result": "6-2 6-4"
-    },
-    {
-      "id": "12607204",
-      "date": "2024-07-29",
-      "tournamentId": 12607204,
-      "homeId": 25838,
-      "tournamentName": "Washington",
-      "opponentId": 196122,
-      "opponentName": "Camilo Ugo Carabelli",
-      "won": true,
-      "result": "6-2 7-5"
     }
   ],
   "Grass": [
@@ -467,6 +489,6 @@
       "result": "6-3 5-7 2-6"
     }
   ],
-  "updatedAt": 1786314076502,
+  "updatedAt": 1786401137592,
   "playerName": "David Goffin"
 }
