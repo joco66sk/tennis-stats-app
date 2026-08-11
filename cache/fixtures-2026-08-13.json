@@ -1,6 +1,39 @@
 {
   "date": "2026-08-13",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1786487538695
+  "fixtures": [
+    {
+      "id": 16661633,
+      "date": "2026-08-12T22:00:00.000Z",
+      "player1": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 24,
+        "seed": "20"
+      },
+      "player2": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US",
+        "ranking": 33,
+        "seed": "28"
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1786491050334
 }
