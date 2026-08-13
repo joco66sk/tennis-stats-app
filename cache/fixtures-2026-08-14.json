@@ -1,6 +1,101 @@
 {
   "date": "2026-08-14",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1786583360765
+  "fixtures": [
+    {
+      "id": 16797612,
+      "date": "2026-08-13T23:00:00.000Z",
+      "player1": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU",
+        "ranking": 93,
+        "seed": "WC"
+      },
+      "player2": {
+        "id": 14844,
+        "name": "Gael Monfils",
+        "countryAcr": "FR",
+        "ranking": 326,
+        "seed": "WC"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16797615,
+      "date": "2026-08-14T00:10:00.000Z",
+      "player1": {
+        "id": 298247,
+        "name": "Zachary Svajda",
+        "countryAcr": "US",
+        "ranking": 76
+      },
+      "player2": {
+        "id": 294337,
+        "name": "Mattia Bellucci",
+        "countryAcr": "IT",
+        "ranking": 81
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16661629,
+      "date": "2026-08-14T00:00:00.000Z",
+      "player1": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US",
+        "ranking": 8,
+        "seed": "5"
+      },
+      "player2": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US",
+        "ranking": 33,
+        "seed": "28"
+      },
+      "tournament": {
+        "id": 2390,
+        "name": "Montreal",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
+    }
+  ],
+  "count": 3,
+  "fetchedAt": 1786593652505
 }
