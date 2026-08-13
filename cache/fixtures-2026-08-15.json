@@ -2,6 +2,66 @@
   "date": "2026-08-15",
   "fixtures": [
     {
+      "id": 16823017,
+      "date": "2026-08-14T23:00:00.000Z",
+      "player1": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT",
+        "ranking": 79
+      },
+      "player2": {
+        "id": 191873,
+        "name": "Jenson Brooksby",
+        "countryAcr": "US",
+        "ranking": 77
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16797602,
+      "date": "2026-08-15T00:10:00.000Z",
+      "player1": {
+        "id": 187608,
+        "name": "Aleksandar Kovačević",
+        "countryAcr": "US",
+        "ranking": 95
+      },
+      "player2": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU",
+        "ranking": 26
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16737492,
       "date": "2026-08-15T15:00:00.000Z",
       "player1": {
@@ -16,6 +76,37 @@
         "name": "Cameron Norrie",
         "countryAcr": "GB",
         "ranking": 39
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16737509,
+      "date": "2026-08-15T15:00:00.000Z",
+      "player1": {
+        "id": 46391,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "DE",
+        "ranking": 42
+      },
+      "player2": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL",
+        "ranking": 30,
+        "seed": "22"
       },
       "tournament": {
         "id": 2373,
@@ -62,8 +153,39 @@
       "round": {
         "name": "Round of 64"
       }
+    },
+    {
+      "id": 16737515,
+      "date": "2026-08-15T15:00:00.000Z",
+      "player1": {
+        "id": 198592,
+        "name": "Miomir Kecmanović",
+        "countryAcr": "RS",
+        "ranking": 60
+      },
+      "player2": {
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT",
+        "ranking": 9,
+        "seed": "7"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
     }
   ],
-  "count": 2,
-  "fetchedAt": 1786656935837
+  "count": 6,
+  "fetchedAt": 1786660321193
 }
