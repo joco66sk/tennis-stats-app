@@ -123,36 +123,6 @@
       }
     },
     {
-      "id": 16797613,
-      "date": "2026-08-13T19:15:00.000Z",
-      "player1": {
-        "id": 47770,
-        "name": "Marton Fucsovics",
-        "countryAcr": "HU",
-        "ranking": 84
-      },
-      "player2": {
-        "id": 273679,
-        "name": "Terence Atmane",
-        "countryAcr": "FR",
-        "ranking": 56
-      },
-      "tournament": {
-        "id": 2373,
-        "name": "Cincinnati",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 128"
-      }
-    },
-    {
       "id": 16797608,
       "date": "2026-08-13T19:25:00.000Z",
       "player1": {
@@ -213,8 +183,38 @@
       }
     },
     {
+      "id": 16797613,
+      "date": "2026-08-13T20:20:00.000Z",
+      "player1": {
+        "id": 47770,
+        "name": "Marton Fucsovics",
+        "countryAcr": "HU",
+        "ranking": 84
+      },
+      "player2": {
+        "id": 273679,
+        "name": "Terence Atmane",
+        "countryAcr": "FR",
+        "ranking": 56
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16797621,
-      "date": "2026-08-13T20:10:00.000Z",
+      "date": "2026-08-13T20:25:00.000Z",
       "player1": {
         "id": 196122,
         "name": "Camilo Ugo Carabelli",
@@ -840,5 +840,5 @@
     }
   ],
   "count": 27,
-  "fetchedAt": 1786650716928
+  "fetchedAt": 1786653084532
 }
