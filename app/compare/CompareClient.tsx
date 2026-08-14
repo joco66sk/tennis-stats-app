@@ -199,7 +199,7 @@ export default function CompareClient({ p1Id, p2Id, surface }: { p1Id: string; p
           <div className="flex items-center gap-3">
             <Link href="/" className="text-zinc-400 hover:text-white text-sm font-semibold transition">← Back</Link>
             <div>
-              <h1 className="text-2xl font-black text-white tracking-tight uppercase">Tennis Deep Stats</h1>
+              <Link href="/" className="text-2xl font-black text-white tracking-tight uppercase hover:text-zinc-300 transition" style={{ textDecoration: 'none' }}>Tennis Deep Stats</Link>
               <p className="text-zinc-500 text-xs uppercase tracking-wider">
                 Player Comparison · <span className={surfaceColor()}>{surface}</span>
               </p>

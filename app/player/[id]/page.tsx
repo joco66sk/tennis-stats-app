@@ -82,9 +82,9 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
           <Link href="/" style={{ color: '#71717a', fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>
             ← Fixtures
           </Link>
-          <div style={{ marginTop: 10, fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#71717a' }}>
+          <Link href="/" style={{ marginTop: 10, display: 'block', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#71717a', textDecoration: 'none' }}>
             Tennis Deep Stats
-          </div>
+          </Link>
         </div>
 
         {/* Player header */}

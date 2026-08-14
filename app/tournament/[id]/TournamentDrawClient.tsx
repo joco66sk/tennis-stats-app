@@ -298,7 +298,7 @@ export default function TournamentDrawClient({
         {/* Nav */}
         <div style={{ marginBottom: 16 }}>
           <Link href="/" className="text-zinc-500 hover:text-white text-sm font-semibold transition">← Fixtures</Link>
-          <div style={{ marginTop: 6, fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#71717a' }}>Tennis Deep Stats</div>
+          <Link href="/" style={{ marginTop: 6, display: 'block', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#71717a', textDecoration: 'none' }}>Tennis Deep Stats</Link>
         </div>
 
         {/* Tournament header */}
