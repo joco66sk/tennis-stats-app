@@ -1,6 +1,131 @@
 {
   "date": "2026-08-16",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1786736547733
+  "fixtures": [
+    {
+      "id": 16737510,
+      "date": "2026-08-15T23:00:00.000Z",
+      "player1": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 24,
+        "seed": "12"
+      },
+      "player2": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA",
+        "ranking": 68
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16737492,
+      "date": "2026-08-16T00:10:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE",
+        "ranking": 2,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB",
+        "ranking": 39
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16737589,
+      "date": "2026-08-16T15:00:00.000Z",
+      "player1": {
+        "id": 63606,
+        "name": "Arthur Rinderknech",
+        "countryAcr": "FR",
+        "ranking": 28,
+        "seed": "25"
+      },
+      "player2": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR",
+        "ranking": 50
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16737506,
+      "date": "2026-08-16T15:00:00.000Z",
+      "player1": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US",
+        "ranking": 10,
+        "seed": "6"
+      },
+      "player2": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US",
+        "ranking": 40
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    }
+  ],
+  "count": 4,
+  "fetchedAt": 1786738926707
 }
