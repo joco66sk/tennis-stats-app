@@ -2,6 +2,69 @@
   "date": "2026-08-17",
   "fixtures": [
     {
+      "id": 16737475,
+      "date": "2026-08-16T23:00:00.000Z",
+      "player1": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US",
+        "ranking": 8,
+        "seed": "8"
+      },
+      "player2": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT",
+        "ranking": 79,
+        "seed": "Q"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16737594,
+      "date": "2026-08-17T00:10:00.000Z",
+      "player1": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT",
+        "ranking": 80
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US",
+        "ranking": 19,
+        "seed": "17"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16737485,
       "date": "2026-08-17T15:00:00.000Z",
       "player1": {
@@ -34,6 +97,6 @@
       }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1786821320933
+  "count": 3,
+  "fetchedAt": 1786824754900
 }
