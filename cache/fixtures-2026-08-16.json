@@ -2,6 +2,37 @@
   "date": "2026-08-16",
   "fixtures": [
     {
+      "id": 16737501,
+      "date": "2026-08-15T22:10:00.000Z",
+      "player1": {
+        "id": 254742,
+        "name": "Jiri Lehečka",
+        "countryAcr": "CZ",
+        "ranking": 12,
+        "seed": "9"
+      },
+      "player2": {
+        "id": 112783,
+        "name": "Matteo Berrettini",
+        "countryAcr": "IT",
+        "ranking": 41
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16737510,
       "date": "2026-08-15T23:00:00.000Z",
       "player1": {
@@ -501,6 +532,6 @@
       }
     }
   ],
-  "count": 16,
-  "fetchedAt": 1786828338651
+  "count": 17,
+  "fetchedAt": 1786831872522
 }
