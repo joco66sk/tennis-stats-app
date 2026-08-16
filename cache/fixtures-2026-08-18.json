@@ -64,6 +64,69 @@
       }
     },
     {
+      "id": 16737518,
+      "date": "2026-08-18T15:00:00.000Z",
+      "player1": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU",
+        "ranking": 14,
+        "seed": "13"
+      },
+      "player2": {
+        "id": 125006,
+        "name": "Nuno Borges",
+        "countryAcr": "PT",
+        "ranking": 49
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16737482,
+      "date": "2026-08-18T15:00:00.000Z",
+      "player1": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US",
+        "ranking": 33,
+        "seed": "27"
+      },
+      "player2": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU",
+        "ranking": 7,
+        "seed": "4"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16737488,
       "date": "2026-08-18T15:00:00.000Z",
       "player1": {
@@ -79,6 +142,37 @@
         "countryAcr": "AU",
         "ranking": 126,
         "seed": "Q"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16737487,
+      "date": "2026-08-18T15:00:00.000Z",
+      "player1": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR",
+        "ranking": 50
+      },
+      "player2": {
+        "id": 192013,
+        "name": "Felix Auger-Aliassime",
+        "countryAcr": "CA",
+        "ranking": 4,
+        "seed": "2"
       },
       "tournament": {
         "id": 2373,
@@ -128,6 +222,6 @@
       }
     }
   ],
-  "count": 4,
-  "fetchedAt": 1786911106440
+  "count": 7,
+  "fetchedAt": 1786914687573
 }
