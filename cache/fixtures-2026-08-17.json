@@ -97,6 +97,38 @@
       }
     },
     {
+      "id": 16737491,
+      "date": "2026-08-17T15:00:00.000Z",
+      "player1": {
+        "id": 321789,
+        "name": "Arthur Fery",
+        "countryAcr": "GB",
+        "ranking": 37,
+        "seed": "32"
+      },
+      "player2": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU",
+        "ranking": 6,
+        "seed": "5"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16737489,
       "date": "2026-08-17T15:00:00.000Z",
       "player1": {
@@ -157,8 +189,39 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 16737588,
+      "date": "2026-08-17T15:00:00.000Z",
+      "player1": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US",
+        "ranking": 21,
+        "seed": "18"
+      },
+      "player2": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY",
+        "ranking": 65
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
-  "count": 5,
-  "fetchedAt": 1786835513724
+  "count": 7,
+  "fetchedAt": 1786841002474
 }
