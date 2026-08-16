@@ -346,37 +346,6 @@
       }
     },
     {
-      "id": 16737478,
-      "date": "2026-08-16T18:00:00.000Z",
-      "player1": {
-        "id": 106755,
-        "name": "Andrey Rublev",
-        "countryAcr": "RU",
-        "ranking": 14,
-        "seed": "13"
-      },
-      "player2": {
-        "id": 40800,
-        "name": "Pablo Carreño Busta",
-        "countryAcr": "ES",
-        "ranking": 66
-      },
-      "tournament": {
-        "id": 2373,
-        "name": "Cincinnati",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
-    },
-    {
       "id": 16737506,
       "date": "2026-08-16T18:25:00.000Z",
       "player1": {
@@ -440,7 +409,7 @@
     },
     {
       "id": 16737590,
-      "date": "2026-08-16T19:10:00.000Z",
+      "date": "2026-08-16T19:05:00.000Z",
       "player1": {
         "id": 125006,
         "name": "Nuno Borges",
@@ -453,6 +422,37 @@
         "countryAcr": "AR",
         "ranking": 20,
         "seed": "20"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16737478,
+      "date": "2026-08-16T19:25:00.000Z",
+      "player1": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU",
+        "ranking": 14,
+        "seed": "13"
+      },
+      "player2": {
+        "id": 40800,
+        "name": "Pablo Carreño Busta",
+        "countryAcr": "ES",
+        "ranking": 66
       },
       "tournament": {
         "id": 2373,
@@ -502,7 +502,7 @@
     },
     {
       "id": 16737507,
-      "date": "2026-08-16T20:30:00.000Z",
+      "date": "2026-08-16T20:20:00.000Z",
       "player1": {
         "id": 338890,
         "name": "Daniel Merida",
@@ -533,7 +533,7 @@
     },
     {
       "id": 16737466,
-      "date": "2026-08-16T20:45:00.000Z",
+      "date": "2026-08-16T21:10:00.000Z",
       "player1": {
         "id": 207575,
         "name": "Adam Walton",
@@ -564,5 +564,5 @@
     }
   ],
   "count": 18,
-  "fetchedAt": 1786907675230
+  "fetchedAt": 1786911105132
 }
