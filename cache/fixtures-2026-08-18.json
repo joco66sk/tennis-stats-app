@@ -2,6 +2,70 @@
   "date": "2026-08-18",
   "fixtures": [
     {
+      "id": 16737468,
+      "date": "2026-08-17T22:00:00.000Z",
+      "player1": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 11,
+        "seed": "12"
+      },
+      "player2": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL",
+        "ranking": 29,
+        "seed": "22"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16737489,
+      "date": "2026-08-17T22:40:00.000Z",
+      "player1": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU",
+        "ranking": 95,
+        "seed": "WC"
+      },
+      "player2": {
+        "id": 372312,
+        "name": "Jakub Menšik",
+        "countryAcr": "CZ",
+        "ranking": 16,
+        "seed": "14"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16737586,
       "date": "2026-08-17T23:00:00.000Z",
       "player1": {
@@ -33,8 +97,40 @@
       }
     },
     {
+      "id": 16737467,
+      "date": "2026-08-17T23:50:00.000Z",
+      "player1": {
+        "id": 254742,
+        "name": "Jiri Lehečka",
+        "countryAcr": "CZ",
+        "ranking": 14,
+        "seed": "9"
+      },
+      "player2": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR",
+        "ranking": 21,
+        "seed": "21"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16737588,
-      "date": "2026-08-18T00:10:00.000Z",
+      "date": "2026-08-18T00:50:00.000Z",
       "player1": {
         "id": 138546,
         "name": "Tommy Paul",
@@ -316,6 +412,6 @@
       }
     }
   ],
-  "count": 10,
-  "fetchedAt": 1787001444684
+  "count": 13,
+  "fetchedAt": 1787004890397
 }
