@@ -1,6 +1,102 @@
 {
   "date": "2026-08-19",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1787008437013
+  "fixtures": [
+    {
+      "id": 16737487,
+      "date": "2026-08-18T23:00:00.000Z",
+      "player1": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR",
+        "ranking": 51
+      },
+      "player2": {
+        "id": 192013,
+        "name": "Felix Auger-Aliassime",
+        "countryAcr": "CA",
+        "ranking": 4,
+        "seed": "2"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16737486,
+      "date": "2026-08-19T00:10:00.000Z",
+      "player1": {
+        "id": 412818,
+        "name": "Learner Tien",
+        "countryAcr": "US",
+        "ranking": 12,
+        "seed": "16"
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US",
+        "ranking": 23,
+        "seed": "17"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16737480,
+      "date": "2026-08-19T15:00:00.000Z",
+      "player1": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES",
+        "ranking": 11,
+        "seed": "12"
+      },
+      "player2": {
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT",
+        "ranking": 10,
+        "seed": "7"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 3,
+  "fetchedAt": 1787013636845
 }
