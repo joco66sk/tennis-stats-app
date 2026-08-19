@@ -2,6 +2,38 @@
   "date": "2026-08-20",
   "fixtures": [
     {
+      "id": 16737517,
+      "date": "2026-08-19T22:20:00.000Z",
+      "player1": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT",
+        "ranking": 79,
+        "seed": "Q"
+      },
+      "player2": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT",
+        "ranking": 15,
+        "seed": "10"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16737495,
       "date": "2026-08-19T23:00:00.000Z",
       "player1": {
@@ -66,6 +98,6 @@
       }
     }
   ],
-  "count": 2,
-  "fetchedAt": 1787167101219
+  "count": 3,
+  "fetchedAt": 1787170611252
 }
