@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "id": 16737494,
-      "date": "2026-08-19T22:10:00.000Z",
+      "date": "2026-08-19T22:35:00.000Z",
       "player1": {
         "id": 125006,
         "name": "Nuno Borges",
@@ -158,8 +158,40 @@
       "round": {
         "name": "Quarterfinals"
       }
+    },
+    {
+      "id": 16737498,
+      "date": "2026-08-20T19:00:00.000Z",
+      "player1": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US",
+        "ranking": 24,
+        "seed": "18"
+      },
+      "player2": {
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT",
+        "ranking": 10,
+        "seed": "7"
+      },
+      "tournament": {
+        "id": 2373,
+        "name": "Cincinnati",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
     }
   ],
-  "count": 5,
-  "fetchedAt": 1787177689270
+  "count": 6,
+  "fetchedAt": 1787181280596
 }
