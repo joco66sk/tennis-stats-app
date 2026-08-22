@@ -1,6 +1,218 @@
 {
   "date": "2026-08-24",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1787426163690
+  "fixtures": [
+    {
+      "id": 16892208,
+      "date": "2026-08-23T22:30:00.000Z",
+      "player1": {
+        "id": 40800,
+        "name": "Pablo Carreño Busta",
+        "countryAcr": "ES",
+        "ranking": 72
+      },
+      "player2": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY",
+        "ranking": 70
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16892210,
+      "date": "2026-08-23T23:40:00.000Z",
+      "player1": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU",
+        "ranking": 95
+      },
+      "player2": {
+        "id": 407392,
+        "name": "Darwin Blanch",
+        "countryAcr": "US",
+        "ranking": 224,
+        "seed": "WC"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16892211,
+      "date": "2026-08-24T17:00:00.000Z",
+      "player1": {
+        "id": 207575,
+        "name": "Adam Walton",
+        "countryAcr": "AU",
+        "ranking": 98
+      },
+      "player2": {
+        "id": 244420,
+        "name": "Jesper De Jong",
+        "countryAcr": "NL",
+        "ranking": 106
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16892209,
+      "date": "2026-08-24T17:00:00.000Z",
+      "player1": {
+        "id": 108709,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "PL",
+        "ranking": 68
+      },
+      "player2": {
+        "id": 94485,
+        "name": "Benjamin Bonzi",
+        "countryAcr": "FR",
+        "ranking": 100
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16892217,
+      "date": "2026-08-24T17:00:00.000Z",
+      "player1": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT",
+        "ranking": 88
+      },
+      "player2": {
+        "id": 199395,
+        "name": "Vit Kopřiva",
+        "countryAcr": "CZ",
+        "ranking": 71
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16892213,
+      "date": "2026-08-24T17:00:00.000Z",
+      "player1": {
+        "id": 124930,
+        "name": "Roman Safiullin",
+        "countryAcr": "RU",
+        "ranking": 103
+      },
+      "player2": {
+        "id": 47770,
+        "name": "Marton Fucsovics",
+        "countryAcr": "HU",
+        "ranking": 82
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16892214,
+      "date": "2026-08-24T17:00:00.000Z",
+      "player1": {
+        "id": 255449,
+        "name": "Valentin Royer",
+        "countryAcr": "FR",
+        "ranking": 78
+      },
+      "player2": {
+        "id": 42379,
+        "name": "Marcos Giron",
+        "countryAcr": "US",
+        "ranking": 83
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    }
+  ],
+  "count": 7,
+  "fetchedAt": 1787429550346
 }
