@@ -1,6 +1,69 @@
 {
   "date": "2026-08-25",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1787515922318
+  "fixtures": [
+    {
+      "id": 16868118,
+      "date": "2026-08-24T22:30:00.000Z",
+      "player1": {
+        "id": 191873,
+        "name": "Jenson Brooksby",
+        "countryAcr": "US",
+        "ranking": 74
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR",
+        "ranking": 49,
+        "seed": "7"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16868110,
+      "date": "2026-08-24T22:30:00.000Z",
+      "player1": {
+        "id": 198592,
+        "name": "Miomir Kecmanović",
+        "countryAcr": "RS",
+        "ranking": 66
+      },
+      "player2": {
+        "id": 218259,
+        "name": "Fábián Marozsán",
+        "countryAcr": "HU",
+        "ranking": 63,
+        "seed": "15"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1787519568654
 }
