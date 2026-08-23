@@ -333,6 +333,28 @@
   ],
   "Hard": [
     {
+      "id": "16806959",
+      "date": "2026-08-23",
+      "tournamentId": 16806959,
+      "homeId": 302567,
+      "tournamentName": "Quebec City, Canada",
+      "opponentId": 302567,
+      "opponentName": "Stefanos Sakellaridis",
+      "won": true,
+      "result": "6-1 6-4"
+    },
+    {
+      "id": "16806963",
+      "date": "2026-08-22",
+      "tournamentId": 16806963,
+      "homeId": 205906,
+      "tournamentName": "Quebec City, Canada",
+      "opponentId": 205906,
+      "opponentName": "Hugo Gaston",
+      "won": true,
+      "result": "6-4 6-4"
+    },
+    {
       "id": "16806962",
       "date": "2026-08-21",
       "tournamentId": 16806962,
@@ -342,6 +364,17 @@
       "opponentName": "Benjamin Bonzi",
       "won": true,
       "result": "7-6 7-5"
+    },
+    {
+      "id": "16806965",
+      "date": "2026-08-20",
+      "tournamentId": 16806965,
+      "homeId": 413296,
+      "tournamentName": "Quebec City, Canada",
+      "opponentId": 413296,
+      "opponentName": "Rei Sakamoto",
+      "won": true,
+      "result": "4-6 6-4 7-6"
     },
     {
       "id": "16823023",
@@ -628,39 +661,6 @@
       "opponentName": "Daniil Glinka",
       "won": true,
       "result": "6-3 6-0"
-    },
-    {
-      "id": "15345409",
-      "date": "2026-01-12",
-      "tournamentId": 15345409,
-      "homeId": 335102,
-      "tournamentName": "Australian Open, Men",
-      "opponentId": 153826,
-      "opponentName": "Moez Echargui",
-      "won": true,
-      "result": "6-4 6-4"
-    },
-    {
-      "id": "15310686",
-      "date": "2026-01-04",
-      "tournamentId": 15310686,
-      "homeId": 102151,
-      "tournamentName": "Hong Kong Men Singles",
-      "opponentId": 102151,
-      "opponentName": "Alejandro Tabilo",
-      "won": false,
-      "result": "6-7 6-3 3-6"
-    },
-    {
-      "id": "15011945",
-      "date": "2025-11-12",
-      "tournamentId": 15011945,
-      "homeId": 335102,
-      "tournamentName": "ATP Challenger Lyon (Decines-Charpieu), France Men Singles",
-      "opponentId": 16683,
-      "opponentName": "Mikhail Kukushkin",
-      "won": false,
-      "result": "2-6 6-7"
     }
   ],
   "Grass": [
@@ -809,5 +809,5 @@
     }
   ],
   "playerName": "Luca Van Assche",
-  "updatedAt": 1787436901639
+  "updatedAt": 1787524189065
 }

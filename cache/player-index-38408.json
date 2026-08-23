@@ -1,5 +1,28 @@
 {
-  "Clay": [],
+  "Clay": [
+    {
+      "id": "10314492",
+      "date": "2022-05-16",
+      "tournamentId": 10314492,
+      "homeId": 158748,
+      "tournamentName": "Roland Garros, Men",
+      "opponentId": 158748,
+      "opponentName": "Felipe Meligeni Alves",
+      "won": false,
+      "result": "3-6 3-6"
+    },
+    {
+      "id": "9000035",
+      "date": "2020-09-13",
+      "tournamentId": 9000035,
+      "homeId": 38408,
+      "tournamentName": "ATP Rome Masters",
+      "opponentId": 44549,
+      "opponentName": "Marco Cecchinato",
+      "won": false,
+      "result": "1-6 4-6"
+    }
+  ],
   "Hard": [
     {
       "id": "10978053",
@@ -11,9 +34,20 @@
       "opponentName": "Frederico Ferreira Silva",
       "won": true,
       "result": "3-6 6-7"
+    },
+    {
+      "id": "8538226",
+      "date": "2020-01-06",
+      "tournamentId": 8538226,
+      "homeId": 72248,
+      "tournamentName": "Canberra, Australia",
+      "opponentId": 72248,
+      "opponentName": "Juan Pablo Varillas",
+      "won": true,
+      "result": "7-5 6-3"
     }
   ],
   "Grass": [],
-  "updatedAt": 1784229511723,
+  "updatedAt": 1787524188983,
   "playerName": "Bradley Klahn"
 }

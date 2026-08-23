@@ -333,6 +333,17 @@
   ],
   "Hard": [
     {
+      "id": "16806963",
+      "date": "2026-08-22",
+      "tournamentId": 16806963,
+      "homeId": 205906,
+      "tournamentName": "Quebec City, Canada",
+      "opponentId": 335102,
+      "opponentName": "Luca Van Assche",
+      "won": false,
+      "result": "4-6 4-6"
+    },
+    {
       "id": "16806958",
       "date": "2026-08-21",
       "tournamentId": 16806958,
@@ -342,6 +353,17 @@
       "opponentName": "Jesper De Jong",
       "won": true,
       "result": "7-6 6-1"
+    },
+    {
+      "id": "16806954",
+      "date": "2026-08-20",
+      "tournamentId": 16806954,
+      "homeId": 128552,
+      "tournamentName": "Quebec City, Canada",
+      "opponentId": 128552,
+      "opponentName": "Alexei Popyrin",
+      "won": true,
+      "result": "5-2"
     },
     {
       "id": "16784140",
@@ -639,28 +661,6 @@
       "opponentName": "Otto Virtanen",
       "won": false,
       "result": "1-6 6-3 3-6"
-    },
-    {
-      "id": "14807135",
-      "date": "2025-10-11",
-      "tournamentId": 14807135,
-      "homeId": 420876,
-      "tournamentName": "ATP Challenger Roanne, France, Men Singles",
-      "opponentId": 420876,
-      "opponentName": "Matej Dodig",
-      "won": true,
-      "result": "3-6 6-3 6-3"
-    },
-    {
-      "id": "14807136",
-      "date": "2025-10-10",
-      "tournamentId": 14807136,
-      "homeId": 483188,
-      "tournamentName": "ATP Challenger Roanne, France, Men Singles",
-      "opponentId": 483188,
-      "opponentName": "Nicolai Budkov Kjaer",
-      "won": true,
-      "result": "6-4 3-6 6-1"
     }
   ],
   "Grass": [
@@ -765,5 +765,5 @@
     }
   ],
   "playerName": "Hugo Gaston",
-  "updatedAt": 1787436901598
+  "updatedAt": 1787523263102
 }
