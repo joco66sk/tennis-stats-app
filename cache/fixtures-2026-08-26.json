@@ -2,37 +2,99 @@
   "date": "2026-08-26",
   "fixtures": [
     {
-      "id": 16868114,
-      "date": "2026-08-25T23:30:00.000Z",
+      "id": 16909696,
+      "date": "2026-08-26T14:00:00.000Z",
       "player1": {
-        "id": 355525,
-        "name": "Raphael Collignon",
-        "countryAcr": "BE",
-        "ranking": 38,
-        "seed": "5"
+        "id": 267577,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FR",
+        "ranking": 119,
+        "seed": "10"
       },
       "player2": {
-        "id": 237452,
-        "name": "Rinky Hijikata",
-        "countryAcr": "AU",
-        "ranking": 95
+        "id": 172482,
+        "name": "Aziz Dougaz",
+        "countryAcr": "TN",
+        "ranking": 629
       },
       "tournament": {
-        "id": 2439,
-        "name": "Winston Salem",
+        "id": 2449,
+        "name": "US Open, Men",
         "court": {
           "name": "Hard"
         },
         "rank": {
-          "id": 2,
-          "name": "ATP250"
+          "id": 4,
+          "name": "Grand Slam"
         }
       },
       "round": {
-        "name": "Round of 32"
+        "name": "Qualification Round 2"
+      }
+    },
+    {
+      "id": 16909698,
+      "date": "2026-08-26T15:00:00.000Z",
+      "player1": {
+        "id": 169486,
+        "name": "Genaro Alberto Olivieri",
+        "countryAcr": "AR",
+        "ranking": 225
+      },
+      "player2": {
+        "id": 132834,
+        "name": "Tomás Barrios Vera",
+        "countryAcr": "CL",
+        "ranking": 147,
+        "seed": "31"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
+      "id": 16909697,
+      "date": "2026-08-26T15:00:00.000Z",
+      "player1": {
+        "id": 322022,
+        "name": "Vilius Gaubas",
+        "countryAcr": "LT",
+        "ranking": 123,
+        "seed": "14"
+      },
+      "player2": {
+        "id": 44549,
+        "name": "Marco Cecchinato",
+        "countryAcr": "IT",
+        "ranking": 173
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
       }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1787543105977
+  "count": 3,
+  "fetchedAt": 1787602754696
 }
