@@ -2,6 +2,67 @@
   "date": "2026-08-26",
   "fixtures": [
     {
+      "id": 16910217,
+      "date": "2026-08-26T14:00:00.000Z",
+      "player1": {
+        "id": 190877,
+        "name": "Andrea Guerrieri",
+        "countryAcr": "IT",
+        "ranking": 189
+      },
+      "player2": {
+        "id": 448184,
+        "name": "Joel Schwaerzler",
+        "countryAcr": "AT",
+        "ranking": 150
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
+      "id": 16909968,
+      "date": "2026-08-26T14:00:00.000Z",
+      "player1": {
+        "id": 83661,
+        "name": "Elias Ymer",
+        "countryAcr": "SE",
+        "ranking": 212
+      },
+      "player2": {
+        "id": 64570,
+        "name": "Cristian Garin",
+        "countryAcr": "CL",
+        "ranking": 137,
+        "seed": "24"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
       "id": 16909696,
       "date": "2026-08-26T14:00:00.000Z",
       "player1": {
@@ -16,6 +77,37 @@
         "name": "Aziz Dougaz",
         "countryAcr": "TN",
         "ranking": 629
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
+      "id": 16910216,
+      "date": "2026-08-26T14:00:00.000Z",
+      "player1": {
+        "id": 321791,
+        "name": "Toby Samuel",
+        "countryAcr": "GB",
+        "ranking": 113,
+        "seed": "7"
+      },
+      "player2": {
+        "id": 111837,
+        "name": "Billy Harris",
+        "countryAcr": "GB",
+        "ranking": 167
       },
       "tournament": {
         "id": 2449,
@@ -93,8 +185,39 @@
       "round": {
         "name": "Qualification Round 2"
       }
+    },
+    {
+      "id": 16868110,
+      "date": "2026-08-25T23:40:00.000Z",
+      "player1": {
+        "id": 198592,
+        "name": "Miomir Kecmanović",
+        "countryAcr": "RS",
+        "ranking": 66
+      },
+      "player2": {
+        "id": 218259,
+        "name": "Fábián Marozsán",
+        "countryAcr": "HU",
+        "ranking": 63,
+        "seed": "15"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
-  "count": 3,
-  "fetchedAt": 1787602754696
+  "count": 7,
+  "fetchedAt": 1787606395177
 }

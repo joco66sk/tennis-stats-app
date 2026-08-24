@@ -2,8 +2,38 @@
   "date": "2026-08-25",
   "fixtures": [
     {
+      "id": 16908656,
+      "date": "2026-08-24T22:20:00.000Z",
+      "player1": {
+        "id": 197809,
+        "name": "Jay Clarke",
+        "countryAcr": "GB",
+        "ranking": 241
+      },
+      "player2": {
+        "id": 413296,
+        "name": "Rei Sakamoto",
+        "countryAcr": "JP",
+        "ranking": 165
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
       "id": 16902561,
-      "date": "2026-08-24T22:30:00.000Z",
+      "date": "2026-08-24T22:40:00.000Z",
       "player1": {
         "id": 321790,
         "name": "Jack Pinnington Jones",
@@ -1167,6 +1197,68 @@
       }
     },
     {
+      "id": 16868111,
+      "date": "2026-08-25T18:00:00.000Z",
+      "player1": {
+        "id": 207575,
+        "name": "Adam Walton",
+        "countryAcr": "AU",
+        "ranking": 98
+      },
+      "player2": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE",
+        "ranking": 36,
+        "seed": "3"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16868125,
+      "date": "2026-08-25T18:00:00.000Z",
+      "player1": {
+        "id": 94485,
+        "name": "Benjamin Bonzi",
+        "countryAcr": "FR",
+        "ranking": 100
+      },
+      "player2": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR",
+        "ranking": 57,
+        "seed": "12"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16868117,
       "date": "2026-08-25T18:00:00.000Z",
       "player1": {
@@ -1181,69 +1273,6 @@
         "name": "Adolfo Daniel Vallejo",
         "countryAcr": "PY",
         "ranking": 70
-      },
-      "tournament": {
-        "id": 2439,
-        "name": "Winston Salem",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 16868113,
-      "date": "2026-08-25T18:00:00.000Z",
-      "player1": {
-        "id": 39711,
-        "name": "James Duckworth",
-        "countryAcr": "AU",
-        "ranking": 86
-      },
-      "player2": {
-        "id": 271389,
-        "name": "Mariano Navone",
-        "countryAcr": "AR",
-        "ranking": 44,
-        "seed": "6"
-      },
-      "tournament": {
-        "id": 2439,
-        "name": "Winston Salem",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 16868122,
-      "date": "2026-08-25T18:00:00.000Z",
-      "player1": {
-        "id": 248861,
-        "name": "Juan Manuel Cerundolo",
-        "countryAcr": "AR",
-        "ranking": 51,
-        "seed": "8"
-      },
-      "player2": {
-        "id": 231728,
-        "name": "Dhakshineswar Suresh",
-        "countryAcr": "IN",
-        "ranking": 400,
-        "seed": "LL"
       },
       "tournament": {
         "id": 2439,
@@ -1292,20 +1321,21 @@
       }
     },
     {
-      "id": 16868110,
-      "date": "2026-08-25T18:00:00.000Z",
+      "id": 16868122,
+      "date": "2026-08-25T19:10:00.000Z",
       "player1": {
-        "id": 198592,
-        "name": "Miomir Kecmanović",
-        "countryAcr": "RS",
-        "ranking": 66
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR",
+        "ranking": 51,
+        "seed": "8"
       },
       "player2": {
-        "id": 218259,
-        "name": "Fábián Marozsán",
-        "countryAcr": "HU",
-        "ranking": 63,
-        "seed": "15"
+        "id": 231728,
+        "name": "Dhakshineswar Suresh",
+        "countryAcr": "IN",
+        "ranking": 400,
+        "seed": "LL"
       },
       "tournament": {
         "id": 2439,
@@ -1324,7 +1354,7 @@
     },
     {
       "id": 16868114,
-      "date": "2026-08-25T18:00:00.000Z",
+      "date": "2026-08-25T19:10:00.000Z",
       "player1": {
         "id": 355525,
         "name": "Raphael Collignon",
@@ -1352,8 +1382,70 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 16868113,
+      "date": "2026-08-25T20:20:00.000Z",
+      "player1": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU",
+        "ranking": 86
+      },
+      "player2": {
+        "id": 271389,
+        "name": "Mariano Navone",
+        "countryAcr": "AR",
+        "ranking": 44,
+        "seed": "6"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16868115,
+      "date": "2026-08-25T21:30:00.000Z",
+      "player1": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR",
+        "ranking": 52,
+        "seed": "9"
+      },
+      "player2": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT",
+        "ranking": 88
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
-  "count": 44,
-  "fetchedAt": 1787602753581
+  "count": 47,
+  "fetchedAt": 1787606394300
 }
