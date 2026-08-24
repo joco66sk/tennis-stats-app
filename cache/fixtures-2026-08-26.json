@@ -1,6 +1,38 @@
 {
   "date": "2026-08-26",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1787532152014
+  "fixtures": [
+    {
+      "id": 16868114,
+      "date": "2026-08-25T23:30:00.000Z",
+      "player1": {
+        "id": 355525,
+        "name": "Raphael Collignon",
+        "countryAcr": "BE",
+        "ranking": 38,
+        "seed": "5"
+      },
+      "player2": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU",
+        "ranking": 95
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1787537843836
 }
