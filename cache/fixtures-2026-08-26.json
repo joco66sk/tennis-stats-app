@@ -2,37 +2,6 @@
   "date": "2026-08-26",
   "fixtures": [
     {
-      "id": 16909696,
-      "date": "2026-08-26T14:00:00.000Z",
-      "player1": {
-        "id": 267577,
-        "name": "Kyrian Jacquet",
-        "countryAcr": "FR",
-        "ranking": 119,
-        "seed": "10"
-      },
-      "player2": {
-        "id": 172482,
-        "name": "Aziz Dougaz",
-        "countryAcr": "TN",
-        "ranking": 629
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Qualification Round 2"
-      }
-    },
-    {
       "id": 16910217,
       "date": "2026-08-26T15:00:00.000Z",
       "player1": {
@@ -125,6 +94,36 @@
       }
     },
     {
+      "id": 16909573,
+      "date": "2026-08-26T15:00:00.000Z",
+      "player1": {
+        "id": 307391,
+        "name": "Daniel Rincon",
+        "countryAcr": "ES",
+        "ranking": 206
+      },
+      "player2": {
+        "id": 938332,
+        "name": "Jordan Lee",
+        "countryAcr": "US",
+        "seed": "WC"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
       "id": 16909968,
       "date": "2026-08-26T15:00:00.000Z",
       "player1": {
@@ -187,6 +186,37 @@
       }
     },
     {
+      "id": 16909571,
+      "date": "2026-08-26T15:00:00.000Z",
+      "player1": {
+        "id": 66484,
+        "name": "Frederico Ferreira Silva",
+        "countryAcr": "PT",
+        "ranking": 231
+      },
+      "player2": {
+        "id": 200159,
+        "name": "Jurij Rodionov",
+        "countryAcr": "AT",
+        "ranking": 134,
+        "seed": "21"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
       "id": 16909698,
       "date": "2026-08-26T15:00:00.000Z",
       "player1": {
@@ -201,6 +231,68 @@
         "countryAcr": "CL",
         "ranking": 147,
         "seed": "31"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
+      "id": 16909572,
+      "date": "2026-08-26T15:00:00.000Z",
+      "player1": {
+        "id": 275948,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GB",
+        "ranking": 107,
+        "seed": "4"
+      },
+      "player2": {
+        "id": 224534,
+        "name": "Luka Pavlović",
+        "countryAcr": "FR",
+        "ranking": 207
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
+      "id": 16909696,
+      "date": "2026-08-26T15:00:00.000Z",
+      "player1": {
+        "id": 267577,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FR",
+        "ranking": 119,
+        "seed": "10"
+      },
+      "player2": {
+        "id": 172482,
+        "name": "Aziz Dougaz",
+        "countryAcr": "TN",
+        "ranking": 629
       },
       "tournament": {
         "id": 2449,
@@ -466,6 +558,6 @@
       }
     }
   ],
-  "count": 15,
-  "fetchedAt": 1787653353326
+  "count": 18,
+  "fetchedAt": 1787656709492
 }
