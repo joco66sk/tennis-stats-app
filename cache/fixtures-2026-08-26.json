@@ -279,6 +279,38 @@
       }
     },
     {
+      "id": 16918674,
+      "date": "2026-08-26T15:00:00.000Z",
+      "player1": {
+        "id": 15733,
+        "name": "Kei Nishikori",
+        "countryAcr": "JP",
+        "ranking": 479,
+        "seed": "WC"
+      },
+      "player2": {
+        "id": 1108293,
+        "name": "Michael Antonius",
+        "countryAcr": "US",
+        "ranking": 691,
+        "seed": "WC"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
       "id": 16909696,
       "date": "2026-08-26T15:00:00.000Z",
       "player1": {
@@ -558,6 +590,6 @@
       }
     }
   ],
-  "count": 18,
-  "fetchedAt": 1787675117771
+  "count": 19,
+  "fetchedAt": 1787678589352
 }
