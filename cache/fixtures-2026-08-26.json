@@ -527,6 +527,37 @@
       }
     },
     {
+      "id": 16920044,
+      "date": "2026-08-26T15:00:00.000Z",
+      "player1": {
+        "id": 229275,
+        "name": "Timofey Skatov",
+        "countryAcr": "KZ",
+        "ranking": 149
+      },
+      "player2": {
+        "id": 23581,
+        "name": "Grigor Dimitrov",
+        "countryAcr": "BG",
+        "ranking": 138,
+        "seed": "25"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
       "id": 16910216,
       "date": "2026-08-26T15:00:00.000Z",
       "player1": {
@@ -652,6 +683,6 @@
       }
     }
   ],
-  "count": 21,
-  "fetchedAt": 1787682310770
+  "count": 22,
+  "fetchedAt": 1787685849372
 }
