@@ -893,7 +893,7 @@
     },
     {
       "id": 16902582,
-      "date": "2026-08-25T21:20:00.000Z",
+      "date": "2026-08-25T21:30:00.000Z",
       "player1": {
         "id": 309071,
         "name": "Jerome Kym",
@@ -905,68 +905,6 @@
         "name": "Dan Added",
         "countryAcr": "FR",
         "ranking": 223
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Qualification Round 1"
-      }
-    },
-    {
-      "id": 16902551,
-      "date": "2026-08-25T21:30:00.000Z",
-      "player1": {
-        "id": 153826,
-        "name": "Moez Echargui",
-        "countryAcr": "TN",
-        "ranking": 197
-      },
-      "player2": {
-        "id": 57289,
-        "name": "Hugo Dellien",
-        "countryAcr": "BO",
-        "ranking": 141,
-        "seed": "27"
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Qualification Round 1"
-      }
-    },
-    {
-      "id": 16902546,
-      "date": "2026-08-25T21:30:00.000Z",
-      "player1": {
-        "id": 187218,
-        "name": "Nicolas Mejia",
-        "countryAcr": "CO",
-        "ranking": 122,
-        "seed": "13"
-      },
-      "player2": {
-        "id": 223513,
-        "name": "Liam Draxl",
-        "countryAcr": "CA",
-        "ranking": 216
       },
       "tournament": {
         "id": 2449,
@@ -1388,38 +1326,6 @@
       }
     },
     {
-      "id": 16868116,
-      "date": "2026-08-25T21:10:00.000Z",
-      "player1": {
-        "id": 445470,
-        "name": "Mees Rottgering",
-        "countryAcr": "NL",
-        "ranking": 418,
-        "seed": "Q"
-      },
-      "player2": {
-        "id": 238300,
-        "name": "Tomaš Machač",
-        "countryAcr": "CZ",
-        "ranking": 62,
-        "seed": "14"
-      },
-      "tournament": {
-        "id": 2439,
-        "name": "Winston Salem",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
       "id": 16868109,
       "date": "2026-08-25T21:20:00.000Z",
       "player1": {
@@ -1481,8 +1387,39 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 16868115,
+      "date": "2026-08-25T21:40:00.000Z",
+      "player1": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR",
+        "ranking": 52,
+        "seed": "9"
+      },
+      "player2": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT",
+        "ranking": 88
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
-  "count": 48,
-  "fetchedAt": 1787692727175
+  "count": 46,
+  "fetchedAt": 1787696204288
 }
