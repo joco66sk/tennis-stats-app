@@ -52,7 +52,7 @@ jobs:
         run: node scripts/prebuild-cache.js today || true
 
       - name: Backfill match history for top players
-        run: node scripts/backfill-history.js --limit=${{ github.event.inputs.backfill_limit || '30' }} || true
+        run: node scripts/backfill-history.js --limit=${{ github.event.inputs.backfill_limit || '10' }} || true
 
       - name: Prebuild match stats
         run: node scripts/prebuild-match-stats.js upcoming || true
