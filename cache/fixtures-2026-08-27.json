@@ -2,6 +2,37 @@
   "date": "2026-08-27",
   "fixtures": [
     {
+      "id": 16922706,
+      "date": "2026-08-26T23:20:00.000Z",
+      "player1": {
+        "id": 421761,
+        "name": "Federico Cinà",
+        "countryAcr": "IT",
+        "ranking": 174
+      },
+      "player2": {
+        "id": 57289,
+        "name": "Hugo Dellien",
+        "countryAcr": "BO",
+        "ranking": 141,
+        "seed": "27"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
       "id": 16930129,
       "date": "2026-08-27T15:00:00.000Z",
       "player1": {
@@ -15,6 +46,38 @@
         "name": "Andrea Guerrieri",
         "countryAcr": "IT",
         "ranking": 189
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16930945,
+      "date": "2026-08-27T15:00:00.000Z",
+      "player1": {
+        "id": 289106,
+        "name": "Coleman Wong",
+        "countryAcr": "HK",
+        "ranking": 93,
+        "seed": "2"
+      },
+      "player2": {
+        "id": 39234,
+        "name": "Dušan Lajović",
+        "countryAcr": "RS",
+        "ranking": 146,
+        "seed": "30"
       },
       "tournament": {
         "id": 2449,
@@ -46,6 +109,70 @@
         "countryAcr": "CL",
         "ranking": 147,
         "seed": "31"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16930942,
+      "date": "2026-08-27T15:00:00.000Z",
+      "player1": {
+        "id": 275948,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GB",
+        "ranking": 107,
+        "seed": "4"
+      },
+      "player2": {
+        "id": 200159,
+        "name": "Jurij Rodionov",
+        "countryAcr": "AT",
+        "ranking": 134,
+        "seed": "21"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16930947,
+      "date": "2026-08-27T15:00:00.000Z",
+      "player1": {
+        "id": 229218,
+        "name": "Otto Virtanen",
+        "countryAcr": "FI",
+        "ranking": 116,
+        "seed": "9"
+      },
+      "player2": {
+        "id": 23581,
+        "name": "Grigor Dimitrov",
+        "countryAcr": "BG",
+        "ranking": 138,
+        "seed": "25"
       },
       "tournament": {
         "id": 2449,
@@ -124,8 +251,39 @@
       "round": {
         "name": "Round of 16"
       }
+    },
+    {
+      "id": 16868101,
+      "date": "2026-08-27T18:00:00.000Z",
+      "player1": {
+        "id": 94485,
+        "name": "Benjamin Bonzi",
+        "countryAcr": "FR",
+        "ranking": 100
+      },
+      "player2": {
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL",
+        "ranking": 59,
+        "seed": "13"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
     }
   ],
-  "count": 4,
-  "fetchedAt": 1787770192636
+  "count": 9,
+  "fetchedAt": 1787779743540
 }
