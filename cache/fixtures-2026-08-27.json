@@ -1,6 +1,38 @@
 {
   "date": "2026-08-27",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1787699836039
+  "fixtures": [
+    {
+      "id": 16868106,
+      "date": "2026-08-26T23:40:00.000Z",
+      "player1": {
+        "id": 187608,
+        "name": "Aleksandar Kovačević",
+        "countryAcr": "US",
+        "ranking": 96
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR",
+        "ranking": 49,
+        "seed": "7"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1787704987604
 }
