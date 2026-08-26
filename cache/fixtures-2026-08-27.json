@@ -2,6 +2,67 @@
   "date": "2026-08-27",
   "fixtures": [
     {
+      "id": 16930129,
+      "date": "2026-08-27T15:00:00.000Z",
+      "player1": {
+        "id": 172482,
+        "name": "Aziz Dougaz",
+        "countryAcr": "TN",
+        "ranking": 629
+      },
+      "player2": {
+        "id": 190877,
+        "name": "Andrea Guerrieri",
+        "countryAcr": "IT",
+        "ranking": 189
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16929872,
+      "date": "2026-08-27T15:00:00.000Z",
+      "player1": {
+        "id": 307391,
+        "name": "Daniel Rincon",
+        "countryAcr": "ES",
+        "ranking": 206
+      },
+      "player2": {
+        "id": 132834,
+        "name": "Tomás Barrios Vera",
+        "countryAcr": "CL",
+        "ranking": 147,
+        "seed": "31"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
       "id": 16868106,
       "date": "2026-08-26T22:30:00.000Z",
       "player1": {
@@ -65,6 +126,6 @@
       }
     }
   ],
-  "count": 2,
-  "fetchedAt": 1787760628718
+  "count": 4,
+  "fetchedAt": 1787770192636
 }
