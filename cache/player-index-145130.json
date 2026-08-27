@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "16694704",
+      "date": "2026-08-04",
+      "tournamentId": 16694704,
+      "homeId": 145130,
+      "tournamentName": "Hagen, Germany",
+      "opponentId": 207034,
+      "opponentName": "Chun-Hsin Tseng",
+      "won": false,
+      "result": "6-2 3-6 0-2"
+    },
+    {
       "id": "16515775",
       "date": "2026-07-23",
       "tournamentId": 16515775,
@@ -318,17 +329,6 @@
       "opponentName": "Stefano Travaglia",
       "won": false,
       "result": "2-6 0-0"
-    },
-    {
-      "id": "15710407",
-      "date": "2026-03-19",
-      "tournamentId": 15710407,
-      "homeId": 281447,
-      "tournamentName": "Zadar, Croatia",
-      "opponentId": 281447,
-      "opponentName": "Max Alcala Gurri",
-      "won": true,
-      "result": "1-6 6-3 6-2"
     }
   ],
   "Hard": [
@@ -487,6 +487,39 @@
       "result": "0-1"
     },
     {
+      "id": "13064528",
+      "date": "2024-11-03",
+      "tournamentId": 13064528,
+      "homeId": 141882,
+      "tournamentName": "Helsinki, Finland",
+      "opponentId": 141882,
+      "opponentName": "Geoffrey Blancaneaux",
+      "won": false,
+      "result": "3-6 0-1"
+    },
+    {
+      "id": "12974485",
+      "date": "2024-10-13",
+      "tournamentId": 12974485,
+      "homeId": 145130,
+      "tournamentName": "Olbia, Italy",
+      "opponentId": 341853,
+      "opponentName": "Miloš Karol",
+      "won": false,
+      "result": "4-6 1-3"
+    },
+    {
+      "id": "12148636",
+      "date": "2024-03-11",
+      "tournamentId": 12148636,
+      "homeId": 145130,
+      "tournamentName": "Phoenix, USA",
+      "opponentId": 83661,
+      "opponentName": "Elias Ymer",
+      "won": false,
+      "result": "3-6 0-3"
+    },
+    {
       "id": "12128178",
       "date": "2024-03-05",
       "tournamentId": 12128178,
@@ -542,15 +575,92 @@
       "result": "6-4 6-4"
     },
     {
-      "id": "11578539",
-      "date": "2023-08-29",
-      "tournamentId": 11578539,
+      "id": "11932279",
+      "date": "2024-01-01",
+      "tournamentId": 11932279,
       "homeId": 145130,
-      "tournamentName": "US Open, Men",
-      "opponentId": 23581,
-      "opponentName": "Grigor Dimitrov",
+      "tournamentName": "Canberra, Australia",
+      "opponentId": 50847,
+      "opponentName": "Denis Yevseyev",
       "won": false,
-      "result": "7-6 7-6 1-6 5-7 6-7"
+      "result": "5-7 4-6"
+    },
+    {
+      "id": "11785823",
+      "date": "2023-11-09",
+      "tournamentId": 11785823,
+      "homeId": 145130,
+      "tournamentName": "Helsinki, Finland",
+      "opponentId": 167370,
+      "opponentName": "Emil Ruusuvuori",
+      "won": false,
+      "result": "2-6 5-7"
+    },
+    {
+      "id": "11804853",
+      "date": "2023-11-07",
+      "tournamentId": 11804853,
+      "homeId": 294337,
+      "tournamentName": "Helsinki, Finland",
+      "opponentId": 294337,
+      "opponentName": "Mattia Bellucci",
+      "won": true,
+      "result": "6-0 2-6 6-1"
+    },
+    {
+      "id": "11774212",
+      "date": "2023-11-03",
+      "tournamentId": 11774212,
+      "homeId": 25838,
+      "tournamentName": "Bergamo, Italy",
+      "opponentId": 25838,
+      "opponentName": "David Goffin",
+      "won": false,
+      "result": "5-7 2-6"
+    },
+    {
+      "id": "11774210",
+      "date": "2023-11-01",
+      "tournamentId": 11774210,
+      "homeId": 104967,
+      "tournamentName": "Bergamo, Italy",
+      "opponentId": 104967,
+      "opponentName": "Gijs Brouwer",
+      "won": true,
+      "result": "3-6 7-6 7-6"
+    },
+    {
+      "id": "11781948",
+      "date": "2023-10-30",
+      "tournamentId": 11781948,
+      "homeId": 326111,
+      "tournamentName": "Bergamo, Italy",
+      "opponentId": 326111,
+      "opponentName": "Matteo Gigante",
+      "won": true,
+      "result": "6-2 6-2"
+    },
+    {
+      "id": "11732802",
+      "date": "2023-10-21",
+      "tournamentId": 11732802,
+      "homeId": 145130,
+      "tournamentName": "Olbia, Italy",
+      "opponentId": 273680,
+      "opponentName": "Flavio Cobolli",
+      "won": false,
+      "result": "4-6 1-6"
+    },
+    {
+      "id": "11732803",
+      "date": "2023-10-20",
+      "tournamentId": 11732803,
+      "homeId": 294337,
+      "tournamentName": "Olbia, Italy",
+      "opponentId": 294337,
+      "opponentName": "Mattia Bellucci",
+      "won": true,
+      "result": "6-3 6-2"
     }
   ],
   "Grass": [
@@ -666,5 +776,5 @@
     }
   ],
   "playerName": "Alex Molčan",
-  "updatedAt": 1787793031640
+  "updatedAt": 1787873072122
 }
