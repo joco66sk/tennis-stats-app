@@ -1,6 +1,38 @@
 {
   "date": "2026-08-28",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1787779744418
+  "fixtures": [
+    {
+      "id": 16868100,
+      "date": "2026-08-27T22:30:00.000Z",
+      "player1": {
+        "id": 321789,
+        "name": "Arthur Fery",
+        "countryAcr": "GB",
+        "ranking": 37,
+        "seed": "4"
+      },
+      "player2": {
+        "id": 187608,
+        "name": "Aleksandar Kovačević",
+        "countryAcr": "US",
+        "ranking": 96
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1787792824550
 }

@@ -2,8 +2,39 @@
   "date": "2026-08-27",
   "fixtures": [
     {
+      "id": 16921048,
+      "date": "2026-08-26T22:00:00.000Z",
+      "player1": {
+        "id": 100069,
+        "name": "Vitaliy Sachko",
+        "countryAcr": "UA",
+        "ranking": 191
+      },
+      "player2": {
+        "id": 264358,
+        "name": "Pablo Llamas Ruiz",
+        "countryAcr": "ES",
+        "ranking": 130,
+        "seed": "18"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
       "id": 16922706,
-      "date": "2026-08-26T23:20:00.000Z",
+      "date": "2026-08-26T22:45:00.000Z",
       "player1": {
         "id": 421761,
         "name": "Federico Cinà",
@@ -16,6 +47,65 @@
         "countryAcr": "BO",
         "ranking": 141,
         "seed": "27"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
+      "id": 16923308,
+      "date": "2026-08-26T22:55:00.000Z",
+      "player1": {
+        "id": 275471,
+        "name": "Tristan Schoolkate",
+        "countryAcr": "AU",
+        "ranking": 188
+      },
+      "player2": {
+        "id": 97977,
+        "name": "Seongchan Hong",
+        "countryAcr": "KR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
+    },
+    {
+      "id": 16922711,
+      "date": "2026-08-26T23:20:00.000Z",
+      "player1": {
+        "id": 309071,
+        "name": "Jerome Kym",
+        "countryAcr": "CH",
+        "ranking": 179
+      },
+      "player2": {
+        "id": 391865,
+        "name": "Colton Smith",
+        "countryAcr": "US",
+        "ranking": 200
       },
       "tournament": {
         "id": 2449,
@@ -158,8 +248,135 @@
       }
     },
     {
-      "id": 16930947,
+      "id": 16931537,
       "date": "2026-08-27T15:00:00.000Z",
+      "player1": {
+        "id": 321791,
+        "name": "Toby Samuel",
+        "countryAcr": "GB",
+        "ranking": 113,
+        "seed": "7"
+      },
+      "player2": {
+        "id": 64570,
+        "name": "Cristian Garin",
+        "countryAcr": "CL",
+        "ranking": 137,
+        "seed": "24"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16931533,
+      "date": "2026-08-27T15:00:00.000Z",
+      "player1": {
+        "id": 322022,
+        "name": "Vilius Gaubas",
+        "countryAcr": "LT",
+        "ranking": 123,
+        "seed": "14"
+      },
+      "player2": {
+        "id": 267242,
+        "name": "Harry Wendelken",
+        "countryAcr": "GB",
+        "ranking": 203
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16931538,
+      "date": "2026-08-27T16:30:00.000Z",
+      "player1": {
+        "id": 383987,
+        "name": "Arthur Gea",
+        "countryAcr": "FR",
+        "ranking": 85,
+        "seed": "1"
+      },
+      "player2": {
+        "id": 407164,
+        "name": "Nishesh Basavareddy",
+        "countryAcr": "US",
+        "ranking": 148,
+        "seed": "32"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16931534,
+      "date": "2026-08-27T16:30:00.000Z",
+      "player1": {
+        "id": 260122,
+        "name": "Dalibor Svrčina",
+        "countryAcr": "CZ",
+        "ranking": 114,
+        "seed": "8"
+      },
+      "player2": {
+        "id": 63438,
+        "name": "Mackenzie McDonald",
+        "countryAcr": "US",
+        "ranking": 144,
+        "seed": "28"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16930947,
+      "date": "2026-08-27T16:30:00.000Z",
       "player1": {
         "id": 229218,
         "name": "Otto Virtanen",
@@ -187,6 +404,130 @@
       },
       "round": {
         "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16931496,
+      "date": "2026-08-27T16:30:00.000Z",
+      "player1": {
+        "id": 298795,
+        "name": "Shintaro Mochizuki",
+        "countryAcr": "JP",
+        "ranking": 112,
+        "seed": "6"
+      },
+      "player2": {
+        "id": 258908,
+        "name": "Francesco Passaro",
+        "countryAcr": "IT",
+        "ranking": 222
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16931541,
+      "date": "2026-08-27T17:00:00.000Z",
+      "player1": {
+        "id": 205795,
+        "name": "Zsombor Piros",
+        "countryAcr": "HU",
+        "ranking": 121,
+        "seed": "12"
+      },
+      "player2": {
+        "id": 58221,
+        "name": "Christopher O'Connell",
+        "countryAcr": "AU",
+        "ranking": 129,
+        "seed": "17"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16931540,
+      "date": "2026-08-27T17:40:00.000Z",
+      "player1": {
+        "id": 15733,
+        "name": "Kei Nishikori",
+        "countryAcr": "JP",
+        "ranking": 479,
+        "seed": "WC"
+      },
+      "player2": {
+        "id": 413296,
+        "name": "Rei Sakamoto",
+        "countryAcr": "JP",
+        "ranking": 165
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 16868127,
+      "date": "2026-08-26T22:00:00.000Z",
+      "player1": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT",
+        "ranking": 88
+      },
+      "player2": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU",
+        "ranking": 86
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
       }
     },
     {
@@ -222,7 +563,7 @@
     },
     {
       "id": 16868120,
-      "date": "2026-08-26T23:40:00.000Z",
+      "date": "2026-08-27T00:20:00.000Z",
       "player1": {
         "id": 51345,
         "name": "Martin Damm Jr",
@@ -282,8 +623,40 @@
       "round": {
         "name": "Quarterfinals"
       }
+    },
+    {
+      "id": 16868103,
+      "date": "2026-08-27T20:00:00.000Z",
+      "player1": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR",
+        "ranking": 51,
+        "seed": "8"
+      },
+      "player2": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE",
+        "ranking": 36,
+        "seed": "3"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
     }
   ],
-  "count": 9,
-  "fetchedAt": 1787779743540
+  "count": 21,
+  "fetchedAt": 1787792823755
 }
