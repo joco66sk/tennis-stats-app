@@ -142,6 +142,34 @@
       }
     },
     {
+      "id": 16931533,
+      "date": "2026-08-28T15:00:00.000Z",
+      "player1": {
+        "id": 322022,
+        "name": "Vilius Gaubas",
+        "countryAcr": "LT"
+      },
+      "player2": {
+        "id": 267242,
+        "name": "Harry Wendelken",
+        "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
       "id": 16931541,
       "date": "2026-08-28T15:00:00.000Z",
       "player1": {
@@ -283,7 +311,7 @@
     },
     {
       "id": 16868100,
-      "date": "2026-08-27T22:30:00.000Z",
+      "date": "2026-08-28T00:10:00.000Z",
       "player1": {
         "id": 321789,
         "name": "Arthur Fery",
@@ -311,7 +339,7 @@
     },
     {
       "id": 16868108,
-      "date": "2026-08-27T23:40:00.000Z",
+      "date": "2026-08-28T01:20:00.000Z",
       "player1": {
         "id": 218259,
         "name": "Fábián Marozsán",
@@ -336,8 +364,36 @@
       "round": {
         "name": "Quarterfinals"
       }
+    },
+    {
+      "id": 16868098,
+      "date": "2026-08-28T20:00:00.000Z",
+      "player1": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE"
+      },
+      "player2": {
+        "id": 94485,
+        "name": "Benjamin Bonzi",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
     }
   ],
-  "count": 12,
-  "fetchedAt": 1787872954311
+  "count": 14,
+  "fetchedAt": 1787876102978
 }
