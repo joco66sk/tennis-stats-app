@@ -1,6 +1,63 @@
 {
   "date": "2026-09-02",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1788026517644
+  "fixtures": [
+    {
+      "id": 16940133,
+      "date": "2026-09-01T23:00:00.000Z",
+      "player1": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY"
+      },
+      "player2": {
+        "id": 14844,
+        "name": "Gael Monfils",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940149,
+      "date": "2026-09-02T00:10:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1788038644458
 }
