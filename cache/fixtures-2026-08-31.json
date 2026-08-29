@@ -1,6 +1,1155 @@
 {
   "date": "2026-08-31",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1787948996979
+  "fixtures": [
+    {
+      "id": 16940115,
+      "date": "2026-08-30T23:00:00.000Z",
+      "player1": {
+        "id": 271389,
+        "name": "Mariano Navone",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 14882,
+        "name": "Novak Djokovic",
+        "countryAcr": "RS"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940108,
+      "date": "2026-08-31T00:10:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ"
+      },
+      "player2": {
+        "id": 210479,
+        "name": "Jeffrey John Wolf",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940133,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY"
+      },
+      "player2": {
+        "id": 14844,
+        "name": "Gael Monfils",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940135,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 145130,
+        "name": "Alex Molčan",
+        "countryAcr": "SK"
+      },
+      "player2": {
+        "id": 94485,
+        "name": "Benjamin Bonzi",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948989,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 390214,
+        "name": "Alexander Blockx",
+        "countryAcr": "BE"
+      },
+      "player2": {
+        "id": 132834,
+        "name": "Tomás Barrios Vera",
+        "countryAcr": "CL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940149,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948995,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 190877,
+        "name": "Andrea Guerrieri",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940145,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 321789,
+        "name": "Arthur Fery",
+        "countryAcr": "GB"
+      },
+      "player2": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940120,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 221806,
+        "name": "Sebastián Báez",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940130,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 196122,
+        "name": "Camilo Ugo Carabelli",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 46391,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948996,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 260122,
+        "name": "Dalibor Svrčina",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 255449,
+        "name": "Valentin Royer",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940113,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 49172,
+        "name": "Damir Džumhur",
+        "countryAcr": "BA"
+      },
+      "player2": {
+        "id": 158896,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "PL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940146,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 233126,
+        "name": "Dane Sweeny",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 175014,
+        "name": "Corentin Moutet",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940138,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 192013,
+        "name": "Felix Auger-Aliassime",
+        "countryAcr": "CA"
+      },
+      "player2": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940129,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 216488,
+        "name": "Filip Misolic",
+        "countryAcr": "AT"
+      },
+      "player2": {
+        "id": 221012,
+        "name": "Francisco Cerundolo",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940127,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 255420,
+        "name": "Francisco Comesaña",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948993,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 23581,
+        "name": "Grigor Dimitrov",
+        "countryAcr": "BG"
+      },
+      "player2": {
+        "id": 128552,
+        "name": "Alexei Popyrin",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948990,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 372312,
+        "name": "Jakub Menšik",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 298795,
+        "name": "Shintaro Mochizuki",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940139,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 105607,
+        "name": "Jan Choinski",
+        "countryAcr": "GB"
+      },
+      "player2": {
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948991,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 244420,
+        "name": "Jesper De Jong",
+        "countryAcr": "NL"
+      },
+      "player2": {
+        "id": 258908,
+        "name": "Francesco Passaro",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940141,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 119248,
+        "name": "Casper Ruud",
+        "countryAcr": "NO"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940128,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 348853,
+        "name": "Juncheng Shang",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 38517,
+        "name": "Marco Trungelliti",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948988,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 200159,
+        "name": "Jurij Rodionov",
+        "countryAcr": "AT"
+      },
+      "player2": {
+        "id": 289146,
+        "name": "Giovanni Mpetshi Perricard",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948992,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 308084,
+        "name": "Luciano Darderi",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 267242,
+        "name": "Harry Wendelken",
+        "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940134,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 42379,
+        "name": "Marcos Giron",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940118,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 15387,
+        "name": "Marin Čilić",
+        "countryAcr": "HR"
+      },
+      "player2": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940105,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 299538,
+        "name": "Matteo Arnaldi",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940116,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 112783,
+        "name": "Matteo Berrettini",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 14548,
+        "name": "Stan Wawrinka",
+        "countryAcr": "CH"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948997,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 294337,
+        "name": "Mattia Bellucci",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 205795,
+        "name": "Zsombor Piros",
+        "countryAcr": "HU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948994,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 407164,
+        "name": "Nishesh Basavareddy",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 275471,
+        "name": "Tristan Schoolkate",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940132,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 125006,
+        "name": "Nuno Borges",
+        "countryAcr": "PT"
+      },
+      "player2": {
+        "id": 412818,
+        "name": "Learner Tien",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940148,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 264372,
+        "name": "Facundo Diaz Acosta",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940144,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 71280,
+        "name": "Thanasi Kokkinakis",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940137,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 287181,
+        "name": "Roman Andres Burruchaga",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940109,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR"
+      },
+      "player2": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940131,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 407392,
+        "name": "Darwin Blanch",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940123,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 158912,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MC"
+      },
+      "player2": {
+        "id": 187608,
+        "name": "Aleksandar Kovačević",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940147,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 47975,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940142,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 298247,
+        "name": "Zachary Svajda",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 127208,
+        "name": "Daniel Altmaier",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940140,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 170946,
+        "name": "Zizou Bergs",
+        "countryAcr": "BE"
+      },
+      "player2": {
+        "id": 108559,
+        "name": "Carlos Taberner",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940102,
+      "date": "2026-08-31T16:40:00.000Z",
+      "player1": {
+        "id": 124930,
+        "name": "Roman Safiullin",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 275923,
+        "name": "Carlos Alcaraz",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    }
+  ],
+  "count": 41,
+  "fetchedAt": 1787972214175
 }

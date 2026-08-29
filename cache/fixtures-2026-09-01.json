@@ -1,6 +1,63 @@
 {
   "date": "2026-09-01",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1787948997757
+  "fixtures": [
+    {
+      "id": 16940114,
+      "date": "2026-08-31T23:00:00.000Z",
+      "player1": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 122368,
+        "name": "Tallon Griekspoor",
+        "countryAcr": "NL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940121,
+      "date": "2026-09-01T00:10:00.000Z",
+      "player1": {
+        "id": 51345,
+        "name": "Martin Damm Jr",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1787972215044
 }

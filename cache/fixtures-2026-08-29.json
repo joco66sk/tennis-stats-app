@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "id": 16868099,
-      "date": "2026-08-28T22:30:00.000Z",
+      "date": "2026-08-28T23:05:00.000Z",
       "player1": {
         "id": 39711,
         "name": "James Duckworth",
@@ -28,8 +28,36 @@
       "round": {
         "name": "Semifinals"
       }
+    },
+    {
+      "id": 16868097,
+      "date": "2026-08-29T20:00:00.000Z",
+      "player1": {
+        "id": 321789,
+        "name": "Arthur Fery",
+        "countryAcr": "GB"
+      },
+      "player2": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE"
+      },
+      "tournament": {
+        "id": 2439,
+        "name": "Winston Salem",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1787948995062
+  "count": 2,
+  "fetchedAt": 1787972212500
 }
