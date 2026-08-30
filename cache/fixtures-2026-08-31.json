@@ -86,6 +86,34 @@
       }
     },
     {
+      "id": 16960444,
+      "date": "2026-08-31T15:00:00.000Z",
+      "player1": {
+        "id": 229218,
+        "name": "Otto Virtanen",
+        "countryAcr": "FI"
+      },
+      "player2": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16940109,
       "date": "2026-08-31T15:00:00.000Z",
       "player1": {
@@ -618,6 +646,6 @@
       }
     }
   ],
-  "count": 22,
-  "fetchedAt": 1788098792440
+  "count": 23,
+  "fetchedAt": 1788113773836
 }

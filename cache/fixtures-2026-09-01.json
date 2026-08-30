@@ -366,6 +366,34 @@
       }
     },
     {
+      "id": 16960039,
+      "date": "2026-09-01T15:00:00.000Z",
+      "player1": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 383987,
+        "name": "Arthur Gea",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16940134,
       "date": "2026-09-01T15:00:00.000Z",
       "player1": {
@@ -562,6 +590,6 @@
       }
     }
   ],
-  "count": 20,
-  "fetchedAt": 1788098793156
+  "count": 21,
+  "fetchedAt": 1788113774764
 }
