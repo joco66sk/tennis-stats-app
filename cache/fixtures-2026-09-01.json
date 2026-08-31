@@ -2,6 +2,34 @@
   "date": "2026-09-01",
   "fixtures": [
     {
+      "id": 16940148,
+      "date": "2026-08-31T22:10:00.000Z",
+      "player1": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 264372,
+        "name": "Facundo Diaz Acosta",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16940114,
       "date": "2026-08-31T23:00:00.000Z",
       "player1": {
@@ -590,6 +618,6 @@
       }
     }
   ],
-  "count": 21,
-  "fetchedAt": 1788187052126
+  "count": 22,
+  "fetchedAt": 1788208198691
 }
