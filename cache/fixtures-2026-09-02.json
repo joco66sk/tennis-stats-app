@@ -58,6 +58,34 @@
       }
     },
     {
+      "id": 16901501,
+      "date": "2026-09-02T15:00:00.000Z",
+      "player1": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA"
+      },
+      "player2": {
+        "id": 335102,
+        "name": "Luca Van Assche",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901490,
       "date": "2026-09-02T15:00:00.000Z",
       "player1": {
@@ -69,6 +97,34 @@
         "id": 138546,
         "name": "Tommy Paul",
         "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901475,
+      "date": "2026-09-02T15:00:00.000Z",
+      "player1": {
+        "id": 126356,
+        "name": "Jaume Munar",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 63606,
+        "name": "Arthur Rinderknech",
+        "countryAcr": "FR"
       },
       "tournament": {
         "id": 2449,
@@ -114,6 +170,6 @@
       }
     }
   ],
-  "count": 4,
-  "fetchedAt": 1788126269896
+  "count": 6,
+  "fetchedAt": 1788134551208
 }

@@ -2,17 +2,45 @@
   "date": "2026-08-31",
   "fixtures": [
     {
-      "id": 16948842,
-      "date": "2026-08-30T22:15:00.000Z",
+      "id": 16940126,
+      "date": "2026-08-30T22:05:00.000Z",
       "player1": {
-        "id": 417196,
-        "name": "Martin Landaluce",
-        "countryAcr": "ES"
+        "id": 408344,
+        "name": "Sebastian Gorzny",
+        "countryAcr": "US"
       },
       "player2": {
-        "id": 275948,
-        "name": "Jacob Fearnley",
-        "countryAcr": "GB"
+        "id": 355525,
+        "name": "Raphael Collignon",
+        "countryAcr": "BE"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948854,
+      "date": "2026-08-30T23:05:00.000Z",
+      "player1": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 421761,
+        "name": "Federico Cinà",
+        "countryAcr": "IT"
       },
       "tournament": {
         "id": 2449,
@@ -31,7 +59,7 @@
     },
     {
       "id": 16940115,
-      "date": "2026-08-30T23:00:00.000Z",
+      "date": "2026-08-30T23:15:00.000Z",
       "player1": {
         "id": 271389,
         "name": "Mariano Navone",
@@ -58,8 +86,36 @@
       }
     },
     {
+      "id": 16948842,
+      "date": "2026-08-30T23:15:00.000Z",
+      "player1": {
+        "id": 417196,
+        "name": "Martin Landaluce",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 275948,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16940108,
-      "date": "2026-08-31T00:10:00.000Z",
+      "date": "2026-08-31T00:25:00.000Z",
       "player1": {
         "id": 163480,
         "name": "Alexander Bublik",
@@ -674,6 +730,6 @@
       }
     }
   ],
-  "count": 24,
-  "fetchedAt": 1788126268213
+  "count": 26,
+  "fetchedAt": 1788134549298
 }
