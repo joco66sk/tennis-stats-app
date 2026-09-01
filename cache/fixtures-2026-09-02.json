@@ -2,6 +2,62 @@
   "date": "2026-09-02",
   "fixtures": [
     {
+      "id": 16948995,
+      "date": "2026-09-01T22:45:00.000Z",
+      "player1": {
+        "id": 190877,
+        "name": "Andrea Guerrieri",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16940134,
+      "date": "2026-09-01T22:45:00.000Z",
+      "player1": {
+        "id": 42379,
+        "name": "Marcos Giron",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16940133,
       "date": "2026-09-01T23:00:00.000Z",
       "player1": {
@@ -646,6 +702,6 @@
       }
     }
   ],
-  "count": 23,
-  "fetchedAt": 1788275936705
+  "count": 25,
+  "fetchedAt": 1788289240260
 }
