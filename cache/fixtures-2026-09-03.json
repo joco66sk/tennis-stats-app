@@ -1,6 +1,63 @@
 {
   "date": "2026-09-03",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1788289241082
+  "fixtures": [
+    {
+      "id": 16901477,
+      "date": "2026-09-02T23:00:00.000Z",
+      "player1": {
+        "id": 413296,
+        "name": "Rei Sakamoto",
+        "countryAcr": "JP"
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901495,
+      "date": "2026-09-03T00:10:00.000Z",
+      "player1": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT"
+      },
+      "player2": {
+        "id": 275923,
+        "name": "Carlos Alcaraz",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1788300713205
 }
