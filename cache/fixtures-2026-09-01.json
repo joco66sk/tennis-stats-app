@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "id": 16940148,
-      "date": "2026-08-31T22:10:00.000Z",
+      "date": "2026-08-31T22:00:00.000Z",
       "player1": {
         "id": 90798,
         "name": "Quentin Halys",
@@ -30,8 +30,36 @@
       }
     },
     {
+      "id": 16940132,
+      "date": "2026-08-31T22:50:00.000Z",
+      "player1": {
+        "id": 125006,
+        "name": "Nuno Borges",
+        "countryAcr": "PT"
+      },
+      "player2": {
+        "id": 412818,
+        "name": "Learner Tien",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16940114,
-      "date": "2026-08-31T23:00:00.000Z",
+      "date": "2026-08-31T23:10:00.000Z",
       "player1": {
         "id": 385485,
         "name": "Ben Shelton",
@@ -58,8 +86,92 @@
       }
     },
     {
+      "id": 16940138,
+      "date": "2026-08-31T23:10:00.000Z",
+      "player1": {
+        "id": 192013,
+        "name": "Felix Auger-Aliassime",
+        "countryAcr": "CA"
+      },
+      "player2": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948993,
+      "date": "2026-08-31T23:15:00.000Z",
+      "player1": {
+        "id": 23581,
+        "name": "Grigor Dimitrov",
+        "countryAcr": "BG"
+      },
+      "player2": {
+        "id": 128552,
+        "name": "Alexei Popyrin",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 16948990,
+      "date": "2026-08-31T23:20:00.000Z",
+      "player1": {
+        "id": 372312,
+        "name": "Jakub Menšik",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 298795,
+        "name": "Shintaro Mochizuki",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
       "id": 16940121,
-      "date": "2026-09-01T00:10:00.000Z",
+      "date": "2026-09-01T00:25:00.000Z",
       "player1": {
         "id": 51345,
         "name": "Martin Damm Jr",
@@ -618,6 +730,6 @@
       }
     }
   ],
-  "count": 22,
-  "fetchedAt": 1788208198691
+  "count": 26,
+  "fetchedAt": 1788221594478
 }
