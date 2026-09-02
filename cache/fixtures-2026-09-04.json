@@ -2,6 +2,62 @@
   "date": "2026-09-04",
   "fixtures": [
     {
+      "id": 16901478,
+      "date": "2026-09-03T23:00:00.000Z",
+      "player1": {
+        "id": 14844,
+        "name": "Gael Monfils",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 412818,
+        "name": "Learner Tien",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901474,
+      "date": "2026-09-04T00:10:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901521,
       "date": "2026-09-04T15:00:00.000Z",
       "player1": {
@@ -28,8 +84,36 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 16901492,
+      "date": "2026-09-04T15:00:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 63606,
+        "name": "Arthur Rinderknech",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1788372861380
+  "count": 4,
+  "fetchedAt": 1788384394622
 }
