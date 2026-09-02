@@ -86,6 +86,34 @@
       }
     },
     {
+      "id": 16901474,
+      "date": "2026-09-03T15:00:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901488,
       "date": "2026-09-03T15:00:00.000Z",
       "player1": {
@@ -338,6 +366,6 @@
       }
     }
   ],
-  "count": 12,
-  "fetchedAt": 1788326146651
+  "count": 13,
+  "fetchedAt": 1788343937934
 }
