@@ -2,8 +2,64 @@
   "date": "2026-09-03",
   "fixtures": [
     {
+      "id": 16901504,
+      "date": "2026-09-02T22:05:00.000Z",
+      "player1": {
+        "id": 254742,
+        "name": "Jiri Lehečka",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 321791,
+        "name": "Toby Samuel",
+        "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901486,
+      "date": "2026-09-02T22:40:00.000Z",
+      "player1": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 194186,
+        "name": "Yibing Wu",
+        "countryAcr": "CN"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901498,
-      "date": "2026-09-02T22:20:00.000Z",
+      "date": "2026-09-02T22:55:00.000Z",
       "player1": {
         "id": 112783,
         "name": "Matteo Berrettini",
@@ -30,36 +86,8 @@
       }
     },
     {
-      "id": 16901490,
-      "date": "2026-09-02T22:30:00.000Z",
-      "player1": {
-        "id": 349089,
-        "name": "Dino Prižmić",
-        "countryAcr": "HR"
-      },
-      "player2": {
-        "id": 138546,
-        "name": "Tommy Paul",
-        "countryAcr": "US"
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
-    },
-    {
       "id": 16901477,
-      "date": "2026-09-02T23:00:00.000Z",
+      "date": "2026-09-02T23:05:00.000Z",
       "player1": {
         "id": 413296,
         "name": "Rei Sakamoto",
@@ -87,7 +115,7 @@
     },
     {
       "id": 16901493,
-      "date": "2026-09-02T23:35:00.000Z",
+      "date": "2026-09-02T23:25:00.000Z",
       "player1": {
         "id": 158912,
         "name": "Valentin Vacherot",
@@ -97,6 +125,62 @@
         "id": 108709,
         "name": "Kamil Majchrzak",
         "countryAcr": "PL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901490,
+      "date": "2026-09-02T23:30:00.000Z",
+      "player1": {
+        "id": 349089,
+        "name": "Dino Prižmić",
+        "countryAcr": "HR"
+      },
+      "player2": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901489,
+      "date": "2026-09-02T23:40:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ"
+      },
+      "player2": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR"
       },
       "tournament": {
         "id": 2449,
@@ -142,90 +226,6 @@
       }
     },
     {
-      "id": 16901480,
-      "date": "2026-09-03T15:00:00.000Z",
-      "player1": {
-        "id": 390214,
-        "name": "Alexander Blockx",
-        "countryAcr": "BE"
-      },
-      "player2": {
-        "id": 38517,
-        "name": "Marco Trungelliti",
-        "countryAcr": "AR"
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
-    },
-    {
-      "id": 16901488,
-      "date": "2026-09-03T15:00:00.000Z",
-      "player1": {
-        "id": 128552,
-        "name": "Alexei Popyrin",
-        "countryAcr": "AU"
-      },
-      "player2": {
-        "id": 102151,
-        "name": "Alejandro Tabilo",
-        "countryAcr": "CL"
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
-    },
-    {
-      "id": 16901506,
-      "date": "2026-09-03T15:00:00.000Z",
-      "player1": {
-        "id": 233126,
-        "name": "Dane Sweeny",
-        "countryAcr": "AU"
-      },
-      "player2": {
-        "id": 261015,
-        "name": "Lorenzo Musetti",
-        "countryAcr": "IT"
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
-    },
-    {
       "id": 16901481,
       "date": "2026-09-03T15:00:00.000Z",
       "player1": {
@@ -237,34 +237,6 @@
         "id": 90080,
         "name": "Karen Khachanov",
         "countryAcr": "RU"
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
-    },
-    {
-      "id": 16901484,
-      "date": "2026-09-03T15:00:00.000Z",
-      "player1": {
-        "id": 372312,
-        "name": "Jakub Menšik",
-        "countryAcr": "CZ"
-      },
-      "player2": {
-        "id": 200159,
-        "name": "Jurij Rodionov",
-        "countryAcr": "AT"
       },
       "tournament": {
         "id": 2449,
@@ -338,8 +310,148 @@
       }
     },
     {
+      "id": 16901506,
+      "date": "2026-09-03T16:10:00.000Z",
+      "player1": {
+        "id": 233126,
+        "name": "Dane Sweeny",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901480,
+      "date": "2026-09-03T16:40:00.000Z",
+      "player1": {
+        "id": 390214,
+        "name": "Alexander Blockx",
+        "countryAcr": "BE"
+      },
+      "player2": {
+        "id": 38517,
+        "name": "Marco Trungelliti",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901473,
+      "date": "2026-09-03T17:00:00.000Z",
+      "player1": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 294337,
+        "name": "Mattia Bellucci",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901488,
+      "date": "2026-09-03T17:20:00.000Z",
+      "player1": {
+        "id": 128552,
+        "name": "Alexei Popyrin",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901484,
+      "date": "2026-09-03T17:20:00.000Z",
+      "player1": {
+        "id": 372312,
+        "name": "Jakub Menšik",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 200159,
+        "name": "Jurij Rodionov",
+        "countryAcr": "AT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901476,
-      "date": "2026-09-03T15:00:00.000Z",
+      "date": "2026-09-03T17:20:00.000Z",
       "player1": {
         "id": 275471,
         "name": "Tristan Schoolkate",
@@ -366,8 +478,64 @@
       }
     },
     {
+      "id": 16901494,
+      "date": "2026-09-03T20:00:00.000Z",
+      "player1": {
+        "id": 94485,
+        "name": "Benjamin Bonzi",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901470,
+      "date": "2026-09-03T20:00:00.000Z",
+      "player1": {
+        "id": 254227,
+        "name": "Yunchaokete Bu",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 385285,
+        "name": "Michael Zheng",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901487,
-      "date": "2026-09-03T15:00:00.000Z",
+      "date": "2026-09-03T20:00:00.000Z",
       "player1": {
         "id": 298247,
         "name": "Zachary Svajda",
@@ -394,17 +562,45 @@
       }
     },
     {
-      "id": 16901473,
-      "date": "2026-09-03T16:40:00.000Z",
+      "id": 16901482,
+      "date": "2026-09-03T20:00:00.000Z",
       "player1": {
-        "id": 136042,
-        "name": "Taylor Fritz",
-        "countryAcr": "US"
+        "id": 170946,
+        "name": "Zizou Bergs",
+        "countryAcr": "BE"
       },
       "player2": {
-        "id": 294337,
-        "name": "Mattia Bellucci",
-        "countryAcr": "IT"
+        "id": 244420,
+        "name": "Jesper De Jong",
+        "countryAcr": "NL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901479,
+      "date": "2026-09-03T20:30:00.000Z",
+      "player1": {
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL"
+      },
+      "player2": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU"
       },
       "tournament": {
         "id": 2449,
@@ -422,6 +618,6 @@
       }
     }
   ],
-  "count": 15,
-  "fetchedAt": 1788384393715
+  "count": 22,
+  "fetchedAt": 1788392491851
 }
