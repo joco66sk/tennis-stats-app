@@ -1,6 +1,35 @@
 {
   "date": "2026-09-04",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1788360532010
+  "fixtures": [
+    {
+      "id": 16901521,
+      "date": "2026-09-04T15:00:00.000Z",
+      "player1": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 338890,
+        "name": "Daniel Merida",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1788372861380
 }
