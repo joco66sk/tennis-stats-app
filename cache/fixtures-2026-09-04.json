@@ -2,6 +2,34 @@
   "date": "2026-09-04",
   "fixtures": [
     {
+      "id": 16901470,
+      "date": "2026-09-03T22:00:00.000Z",
+      "player1": {
+        "id": 254227,
+        "name": "Yunchaokete Bu",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 385285,
+        "name": "Michael Zheng",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901478,
       "date": "2026-09-03T23:00:00.000Z",
       "player1": {
@@ -226,6 +254,6 @@
       }
     }
   ],
-  "count": 8,
-  "fetchedAt": 1788463814489
+  "count": 9,
+  "fetchedAt": 1788472842622
 }
