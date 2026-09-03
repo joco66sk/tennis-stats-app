@@ -142,34 +142,6 @@
       }
     },
     {
-      "id": 16901490,
-      "date": "2026-09-02T23:30:00.000Z",
-      "player1": {
-        "id": 349089,
-        "name": "Dino Prižmić",
-        "countryAcr": "HR"
-      },
-      "player2": {
-        "id": 138546,
-        "name": "Tommy Paul",
-        "countryAcr": "US"
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 64"
-      }
-    },
-    {
       "id": 16901489,
       "date": "2026-09-02T23:40:00.000Z",
       "player1": {
@@ -198,8 +170,36 @@
       }
     },
     {
+      "id": 16901490,
+      "date": "2026-09-02T23:50:00.000Z",
+      "player1": {
+        "id": 349089,
+        "name": "Dino Prižmić",
+        "countryAcr": "HR"
+      },
+      "player2": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901495,
-      "date": "2026-09-03T00:10:00.000Z",
+      "date": "2026-09-03T00:30:00.000Z",
       "player1": {
         "id": 341818,
         "name": "Jaime Faria",
@@ -619,5 +619,5 @@
     }
   ],
   "count": 22,
-  "fetchedAt": 1788392491851
+  "fetchedAt": 1788401218307
 }
