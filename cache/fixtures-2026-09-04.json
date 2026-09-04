@@ -2,17 +2,73 @@
   "date": "2026-09-04",
   "fixtures": [
     {
-      "id": 16901470,
-      "date": "2026-09-03T22:00:00.000Z",
+      "id": 16901479,
+      "date": "2026-09-03T22:05:00.000Z",
       "player1": {
-        "id": 254227,
-        "name": "Yunchaokete Bu",
-        "countryAcr": "CN"
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL"
       },
       "player2": {
-        "id": 385285,
-        "name": "Michael Zheng",
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901482,
+      "date": "2026-09-03T22:15:00.000Z",
+      "player1": {
+        "id": 170946,
+        "name": "Zizou Bergs",
+        "countryAcr": "BE"
+      },
+      "player2": {
+        "id": 244420,
+        "name": "Jesper De Jong",
+        "countryAcr": "NL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
+      "id": 16901487,
+      "date": "2026-09-03T22:30:00.000Z",
+      "player1": {
+        "id": 298247,
+        "name": "Zachary Svajda",
         "countryAcr": "US"
+      },
+      "player2": {
+        "id": 383987,
+        "name": "Arthur Gea",
+        "countryAcr": "FR"
       },
       "tournament": {
         "id": 2449,
@@ -31,7 +87,7 @@
     },
     {
       "id": 16901478,
-      "date": "2026-09-03T23:00:00.000Z",
+      "date": "2026-09-03T23:05:00.000Z",
       "player1": {
         "id": 14844,
         "name": "Gael Monfils",
@@ -58,8 +114,36 @@
       }
     },
     {
+      "id": 16901470,
+      "date": "2026-09-03T23:30:00.000Z",
+      "player1": {
+        "id": 254227,
+        "name": "Yunchaokete Bu",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 385285,
+        "name": "Michael Zheng",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 16901474,
-      "date": "2026-09-04T00:10:00.000Z",
+      "date": "2026-09-04T00:40:00.000Z",
       "player1": {
         "id": 57163,
         "name": "Alexander Zverev",
@@ -254,6 +338,6 @@
       }
     }
   ],
-  "count": 9,
-  "fetchedAt": 1788472842622
+  "count": 12,
+  "fetchedAt": 1788482235592
 }

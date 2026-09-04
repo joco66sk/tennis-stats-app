@@ -58,6 +58,62 @@
       }
     },
     {
+      "id": 16901515,
+      "date": "2026-09-05T15:00:00.000Z",
+      "player1": {
+        "id": 390214,
+        "name": "Alexander Blockx",
+        "countryAcr": "BE"
+      },
+      "player2": {
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16901522,
+      "date": "2026-09-05T15:00:00.000Z",
+      "player1": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 94485,
+        "name": "Benjamin Bonzi",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16901485,
       "date": "2026-09-05T15:00:00.000Z",
       "player1": {
@@ -114,6 +170,6 @@
       }
     }
   ],
-  "count": 4,
-  "fetchedAt": 1788472843189
+  "count": 6,
+  "fetchedAt": 1788482236345
 }
