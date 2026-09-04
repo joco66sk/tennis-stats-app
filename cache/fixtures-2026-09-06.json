@@ -1,6 +1,63 @@
 {
   "date": "2026-09-06",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1788544452502
+  "fixtures": [
+    {
+      "id": 16901491,
+      "date": "2026-09-06T00:10:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 16901523,
+      "date": "2026-09-06T00:10:00.000Z",
+      "player1": {
+        "id": 372312,
+        "name": "Jakub Menšik",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 412818,
+        "name": "Learner Tien",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1788552156254
 }
