@@ -86,6 +86,34 @@
       }
     },
     {
+      "id": 16901491,
+      "date": "2026-09-05T15:00:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 16901523,
       "date": "2026-09-05T15:00:00.000Z",
       "player1": {
@@ -254,6 +282,6 @@
       }
     }
   ],
-  "count": 9,
-  "fetchedAt": 1788498965726
+  "count": 10,
+  "fetchedAt": 1788516953451
 }
