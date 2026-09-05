@@ -58,6 +58,62 @@
       }
     },
     {
+      "id": 16901528,
+      "date": "2026-09-06T15:00:00.000Z",
+      "player1": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 169496,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 16901529,
+      "date": "2026-09-06T15:00:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16901519,
       "date": "2026-09-06T15:00:00.000Z",
       "player1": {
@@ -86,6 +142,6 @@
       }
     }
   ],
-  "count": 3,
-  "fetchedAt": 1788568127213
+  "count": 5,
+  "fetchedAt": 1788584640486
 }
