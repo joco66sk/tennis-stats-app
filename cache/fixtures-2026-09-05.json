@@ -142,36 +142,8 @@
       }
     },
     {
-      "id": 16901522,
-      "date": "2026-09-05T18:30:00.000Z",
-      "player1": {
-        "id": 90080,
-        "name": "Karen Khachanov",
-        "countryAcr": "RU"
-      },
-      "player2": {
-        "id": 94485,
-        "name": "Benjamin Bonzi",
-        "countryAcr": "FR"
-      },
-      "tournament": {
-        "id": 2449,
-        "name": "US Open, Men",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 4,
-          "name": "Grand Slam"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
       "id": 16901485,
-      "date": "2026-09-05T18:50:00.000Z",
+      "date": "2026-09-05T19:00:00.000Z",
       "player1": {
         "id": 308084,
         "name": "Luciano Darderi",
@@ -198,16 +170,16 @@
       }
     },
     {
-      "id": 16901483,
+      "id": 16901522,
       "date": "2026-09-05T19:05:00.000Z",
       "player1": {
-        "id": 385285,
-        "name": "Michael Zheng",
-        "countryAcr": "US"
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU"
       },
       "player2": {
-        "id": 383987,
-        "name": "Arthur Gea",
+        "id": 94485,
+        "name": "Benjamin Bonzi",
         "countryAcr": "FR"
       },
       "tournament": {
@@ -252,8 +224,36 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 16901483,
+      "date": "2026-09-05T20:45:00.000Z",
+      "player1": {
+        "id": 385285,
+        "name": "Michael Zheng",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 383987,
+        "name": "Arthur Gea",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
   "count": 9,
-  "fetchedAt": 1788633628933
+  "fetchedAt": 1788641395248
 }
