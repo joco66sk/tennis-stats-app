@@ -86,6 +86,34 @@
       }
     },
     {
+      "id": 16901525,
+      "date": "2026-09-06T15:00:00.000Z",
+      "player1": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR"
+      },
+      "tournament": {
+        "id": 2449,
+        "name": "US Open, Men",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 4,
+          "name": "Grand Slam"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 16901529,
       "date": "2026-09-06T15:00:00.000Z",
       "player1": {
@@ -142,6 +170,6 @@
       }
     }
   ],
-  "count": 5,
-  "fetchedAt": 1788584640486
+  "count": 6,
+  "fetchedAt": 1788601205452
 }
