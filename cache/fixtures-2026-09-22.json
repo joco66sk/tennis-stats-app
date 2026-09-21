@@ -338,34 +338,6 @@
       }
     },
     {
-      "id": 17149666,
-      "date": "2026-09-22T05:10:00.000Z",
-      "player1": {
-        "id": 17080,
-        "name": "Bernard Tomić",
-        "countryAcr": "AU"
-      },
-      "player2": {
-        "id": 156664,
-        "name": "Te Rigele",
-        "countryAcr": "CN"
-      },
-      "tournament": {
-        "id": 23614,
-        "name": "Hangzhou",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Qualification Round 1"
-      }
-    },
-    {
       "id": 17149670,
       "date": "2026-09-22T05:10:00.000Z",
       "player1": {
@@ -394,17 +366,17 @@
       }
     },
     {
-      "id": 17149667,
-      "date": "2026-09-22T06:20:00.000Z",
+      "id": 17149666,
+      "date": "2026-09-22T05:30:00.000Z",
       "player1": {
-        "id": 163438,
-        "name": "Fajing Sun",
-        "countryAcr": "CN"
+        "id": 17080,
+        "name": "Bernard Tomić",
+        "countryAcr": "AU"
       },
       "player2": {
-        "id": 192246,
-        "name": "Matthew Dellavedova",
-        "countryAcr": "AU"
+        "id": 156664,
+        "name": "Te Rigele",
+        "countryAcr": "CN"
       },
       "tournament": {
         "id": 23614,
@@ -448,8 +420,36 @@
       "round": {
         "name": "Qualification Round 1"
       }
+    },
+    {
+      "id": 17149667,
+      "date": "2026-09-22T06:40:00.000Z",
+      "player1": {
+        "id": 163438,
+        "name": "Fajing Sun",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 192246,
+        "name": "Matthew Dellavedova",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
     }
   ],
   "count": 16,
-  "fetchedAt": 1790001454023
+  "fetchedAt": 1790021367417
 }
