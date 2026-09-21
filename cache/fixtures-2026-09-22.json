@@ -1,6 +1,455 @@
 {
   "date": "2026-09-22",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1789955905500
+  "fixtures": [
+    {
+      "id": 17149649,
+      "date": "2026-09-22T05:00:00.000Z",
+      "player1": {
+        "id": 88992,
+        "name": "Alexandre Muller",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 224534,
+        "name": "Luka Pavlović",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149647,
+      "date": "2026-09-22T05:00:00.000Z",
+      "player1": {
+        "id": 83661,
+        "name": "Elias Ymer",
+        "countryAcr": "SE"
+      },
+      "player2": {
+        "id": 187236,
+        "name": "Alexis Galarneau",
+        "countryAcr": "CA"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149648,
+      "date": "2026-09-22T05:00:00.000Z",
+      "player1": {
+        "id": 373829,
+        "name": "Petr Bar Biryukov",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 244985,
+        "name": "Andre Ilagan",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149643,
+      "date": "2026-09-22T06:10:00.000Z",
+      "player1": {
+        "id": 157808,
+        "name": "Lloyd Harris",
+        "countryAcr": "ZA"
+      },
+      "player2": {
+        "id": 191305,
+        "name": "Kenta Miyoshi",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149644,
+      "date": "2026-09-22T06:10:00.000Z",
+      "player1": {
+        "id": 92667,
+        "name": "Luca Castelnuovo",
+        "countryAcr": "CH"
+      },
+      "player2": {
+        "id": 203258,
+        "name": "Pavel Kotov",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149650,
+      "date": "2026-09-22T06:10:00.000Z",
+      "player1": {
+        "id": 298795,
+        "name": "Shintaro Mochizuki",
+        "countryAcr": "JP"
+      },
+      "player2": {
+        "id": 275466,
+        "name": "Linang Xiao",
+        "countryAcr": "CN"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149645,
+      "date": "2026-09-22T07:20:00.000Z",
+      "player1": {
+        "id": 82579,
+        "name": "Kaichi Uchida",
+        "countryAcr": "JP"
+      },
+      "player2": {
+        "id": 421761,
+        "name": "Federico Cinà",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149646,
+      "date": "2026-09-22T07:20:00.000Z",
+      "player1": {
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
+      },
+      "player2": {
+        "id": 1269213,
+        "name": "Hanlei Lu",
+        "countryAcr": "CN"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149664,
+      "date": "2026-09-22T04:00:00.000Z",
+      "player1": {
+        "id": 58369,
+        "name": "Alex Bolt",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 79467,
+        "name": "Omar Jasika",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149668,
+      "date": "2026-09-22T04:00:00.000Z",
+      "player1": {
+        "id": 1166325,
+        "name": "Kaigaoge Kang",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 83263,
+        "name": "Akira Santillan",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149671,
+      "date": "2026-09-22T04:00:00.000Z",
+      "player1": {
+        "id": 48632,
+        "name": "Taro Daniel",
+        "countryAcr": "JP"
+      },
+      "player2": {
+        "id": 79223,
+        "name": "Jake Delaney",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149669,
+      "date": "2026-09-22T05:10:00.000Z",
+      "player1": {
+        "id": 245513,
+        "name": "Arthur Weber",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 420914,
+        "name": "Hayato Matsuoka",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149666,
+      "date": "2026-09-22T05:10:00.000Z",
+      "player1": {
+        "id": 17080,
+        "name": "Bernard Tomić",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 156664,
+        "name": "Te Rigele",
+        "countryAcr": "CN"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149670,
+      "date": "2026-09-22T05:10:00.000Z",
+      "player1": {
+        "id": 260122,
+        "name": "Dalibor Svrčina",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 299481,
+        "name": "Philip Sekulic",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149667,
+      "date": "2026-09-22T06:20:00.000Z",
+      "player1": {
+        "id": 163438,
+        "name": "Fajing Sun",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 192246,
+        "name": "Matthew Dellavedova",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17149665,
+      "date": "2026-09-22T06:20:00.000Z",
+      "player1": {
+        "id": 197935,
+        "name": "Masamichi Imamura",
+        "countryAcr": "JP"
+      },
+      "player2": {
+        "id": 217464,
+        "name": "Rio Noguchi",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    }
+  ],
+  "count": 16,
+  "fetchedAt": 1790001454023
 }
