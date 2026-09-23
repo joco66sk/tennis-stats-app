@@ -2,6 +2,34 @@
   "date": "2026-09-25",
   "fixtures": [
     {
+      "id": 17108468,
+      "date": "2026-09-25T05:00:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 255449,
+        "name": "Valentin Royer",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 17108479,
       "date": "2026-09-25T05:00:00.000Z",
       "player1": {
@@ -30,6 +58,6 @@
       }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1790168695301
+  "count": 2,
+  "fetchedAt": 1790191008006
 }
