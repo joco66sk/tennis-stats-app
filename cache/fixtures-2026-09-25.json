@@ -1,6 +1,35 @@
 {
   "date": "2026-09-25",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1790129013050
+  "fixtures": [
+    {
+      "id": 17108479,
+      "date": "2026-09-25T05:00:00.000Z",
+      "player1": {
+        "id": 267577,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 169496,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1790168695301
 }

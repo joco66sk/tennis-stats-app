@@ -31,7 +31,7 @@
     },
     {
       "id": 17149656,
-      "date": "2026-09-23T06:10:00.000Z",
+      "date": "2026-09-23T07:00:00.000Z",
       "player1": {
         "id": 199395,
         "name": "Vit Kopřiva",
@@ -59,7 +59,7 @@
     },
     {
       "id": 17149259,
-      "date": "2026-09-23T08:00:00.000Z",
+      "date": "2026-09-23T08:10:00.000Z",
       "player1": {
         "id": 124656,
         "name": "Aleksandar Vukić",
@@ -170,17 +170,17 @@
       }
     },
     {
-      "id": 17159303,
-      "date": "2026-09-23T06:10:00.000Z",
+      "id": 17159223,
+      "date": "2026-09-23T06:35:00.000Z",
       "player1": {
-        "id": 26204,
-        "name": "Nikoloz Basilashvili",
-        "countryAcr": "GE"
+        "id": 298795,
+        "name": "Shintaro Mochizuki",
+        "countryAcr": "JP"
       },
       "player2": {
-        "id": 421761,
-        "name": "Federico Cinà",
-        "countryAcr": "IT"
+        "id": 203258,
+        "name": "Pavel Kotov",
+        "countryAcr": "RU"
       },
       "tournament": {
         "id": 9402,
@@ -198,17 +198,17 @@
       }
     },
     {
-      "id": 17159223,
-      "date": "2026-09-23T06:10:00.000Z",
+      "id": 17159303,
+      "date": "2026-09-23T06:55:00.000Z",
       "player1": {
-        "id": 298795,
-        "name": "Shintaro Mochizuki",
-        "countryAcr": "JP"
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
       },
       "player2": {
-        "id": 203258,
-        "name": "Pavel Kotov",
-        "countryAcr": "RU"
+        "id": 421761,
+        "name": "Federico Cinà",
+        "countryAcr": "IT"
       },
       "tournament": {
         "id": 9402,
@@ -282,36 +282,8 @@
       }
     },
     {
-      "id": 17156943,
-      "date": "2026-09-23T05:10:00.000Z",
-      "player1": {
-        "id": 260122,
-        "name": "Dalibor Svrčina",
-        "countryAcr": "CZ"
-      },
-      "player2": {
-        "id": 217464,
-        "name": "Rio Noguchi",
-        "countryAcr": "JP"
-      },
-      "tournament": {
-        "id": 23614,
-        "name": "Hangzhou",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Qualification Final"
-      }
-    },
-    {
       "id": 17159183,
-      "date": "2026-09-23T05:30:00.000Z",
+      "date": "2026-09-23T06:15:00.000Z",
       "player1": {
         "id": 17080,
         "name": "Bernard Tomić",
@@ -336,8 +308,36 @@
       "round": {
         "name": "Qualification Final"
       }
+    },
+    {
+      "id": 17156943,
+      "date": "2026-09-23T06:25:00.000Z",
+      "player1": {
+        "id": 260122,
+        "name": "Dalibor Svrčina",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 217464,
+        "name": "Rio Noguchi",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
     }
   ],
   "count": 12,
-  "fetchedAt": 1790129011505
+  "fetchedAt": 1790168693648
 }
