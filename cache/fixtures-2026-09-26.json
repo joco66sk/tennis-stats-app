@@ -1,6 +1,91 @@
 {
   "date": "2026-09-26",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1790214733017
+  "fixtures": [
+    {
+      "id": 17108567,
+      "date": "2026-09-26T03:00:00.000Z",
+      "player1": {
+        "id": 421761,
+        "name": "Federico Cinà",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 88992,
+        "name": "Alexandre Muller",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108468,
+      "date": "2026-09-26T05:30:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 255449,
+        "name": "Valentin Royer",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108476,
+      "date": "2026-09-26T05:30:00.000Z",
+      "player1": {
+        "id": 254227,
+        "name": "Yunchaokete Bu",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 108709,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "PL"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 3,
+  "fetchedAt": 1790254660209
 }

@@ -2,17 +2,185 @@
   "date": "2026-09-25",
   "fixtures": [
     {
-      "id": 17108468,
+      "id": 17108568,
       "date": "2026-09-25T05:00:00.000Z",
       "player1": {
-        "id": 163504,
-        "name": "Daniil Medvedev",
-        "countryAcr": "RU"
+        "id": 191873,
+        "name": "Jenson Brooksby",
+        "countryAcr": "US"
       },
       "player2": {
-        "id": 255449,
-        "name": "Valentin Royer",
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108572,
+      "date": "2026-09-25T05:00:00.000Z",
+      "player1": {
+        "id": 51345,
+        "name": "Martin Damm Jr",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 158896,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "PL"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108579,
+      "date": "2026-09-25T05:00:00.000Z",
+      "player1": {
+        "id": 158912,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MC"
+      },
+      "player2": {
+        "id": 157808,
+        "name": "Lloyd Harris",
+        "countryAcr": "ZA"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108569,
+      "date": "2026-09-25T05:00:00.000Z",
+      "player1": {
+        "id": 199395,
+        "name": "Vit Kopřiva",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108565,
+      "date": "2026-09-25T06:10:00.000Z",
+      "player1": {
+        "id": 102151,
+        "name": "Alejandro Tabilo",
+        "countryAcr": "CL"
+      },
+      "player2": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
         "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108566,
+      "date": "2026-09-25T08:30:00.000Z",
+      "player1": {
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
+      },
+      "player2": {
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108477,
+      "date": "2026-09-25T02:00:00.000Z",
+      "player1": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 124930,
+        "name": "Roman Safiullin",
+        "countryAcr": "RU"
       },
       "tournament": {
         "id": 23614,
@@ -31,7 +199,7 @@
     },
     {
       "id": 17108479,
-      "date": "2026-09-25T05:00:00.000Z",
+      "date": "2026-09-25T05:30:00.000Z",
       "player1": {
         "id": 267577,
         "name": "Kyrian Jacquet",
@@ -56,8 +224,92 @@
       "round": {
         "name": "Round of 16"
       }
+    },
+    {
+      "id": 17108475,
+      "date": "2026-09-25T06:40:00.000Z",
+      "player1": {
+        "id": 218259,
+        "name": "Fábián Marozsán",
+        "countryAcr": "HU"
+      },
+      "player2": {
+        "id": 48632,
+        "name": "Taro Daniel",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108471,
+      "date": "2026-09-25T07:50:00.000Z",
+      "player1": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17108480,
+      "date": "2026-09-25T11:30:00.000Z",
+      "player1": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT"
+      },
+      "player2": {
+        "id": 205906,
+        "name": "Hugo Gaston",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
     }
   ],
-  "count": 2,
-  "fetchedAt": 1790214732274
+  "count": 11,
+  "fetchedAt": 1790254659207
 }
