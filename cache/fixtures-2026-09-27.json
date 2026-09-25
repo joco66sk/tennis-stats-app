@@ -1,6 +1,91 @@
 {
   "date": "2026-09-27",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1790302115369
+  "fixtures": [
+    {
+      "id": 17108577,
+      "date": "2026-09-27T05:00:00.000Z",
+      "player1": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 17108574,
+      "date": "2026-09-27T05:00:00.000Z",
+      "player1": {
+        "id": 191873,
+        "name": "Jenson Brooksby",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 17108474,
+      "date": "2026-09-27T05:30:00.000Z",
+      "player1": {
+        "id": 218259,
+        "name": "Fábián Marozsán",
+        "countryAcr": "HU"
+      },
+      "player2": {
+        "id": 267577,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    }
+  ],
+  "count": 3,
+  "fetchedAt": 1790341458563
 }
