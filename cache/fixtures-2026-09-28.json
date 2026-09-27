@@ -1,6 +1,63 @@
 {
   "date": "2026-09-28",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1790474884033
+  "fixtures": [
+    {
+      "id": 17108573,
+      "date": "2026-09-28T09:00:00.000Z",
+      "player1": {
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
+      },
+      "player2": {
+        "id": 157456,
+        "name": "Alejandro Davidovich Fokina",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
+      "id": 17108478,
+      "date": "2026-09-28T09:30:00.000Z",
+      "player1": {
+        "id": 267577,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1790515332737
 }

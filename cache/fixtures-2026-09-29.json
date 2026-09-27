@@ -1,6 +1,35 @@
 {
   "date": "2026-09-29",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1790474884827
+  "fixtures": [
+    {
+      "id": 17200744,
+      "date": "2026-09-29T03:00:00.000Z",
+      "player1": {
+        "id": 201681,
+        "name": "Jie Cui",
+        "countryAcr": "CN"
+      },
+      "player2": {
+        "id": 127208,
+        "name": "Daniel Altmaier",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1790515334155
 }
