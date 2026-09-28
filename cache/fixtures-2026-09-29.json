@@ -2,17 +2,73 @@
   "date": "2026-09-29",
   "fixtures": [
     {
-      "id": 17200744,
-      "date": "2026-09-29T03:00:00.000Z",
+      "id": 17108576,
+      "date": "2026-09-29T11:00:00.000Z",
       "player1": {
-        "id": 201681,
-        "name": "Jie Cui",
-        "countryAcr": "CN"
+        "id": 158896,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "PL"
       },
       "player2": {
-        "id": 127208,
-        "name": "Daniel Altmaier",
-        "countryAcr": "DE"
+        "id": 157456,
+        "name": "Alejandro Davidovich Fokina",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 9402,
+        "name": "Chengdu",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
+    },
+    {
+      "id": 17108482,
+      "date": "2026-09-29T11:30:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 23614,
+        "name": "Hangzhou",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
+    },
+    {
+      "id": 17208181,
+      "date": "2026-09-29T02:00:00.000Z",
+      "player1": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 40800,
+        "name": "Pablo Carreño Busta",
+        "countryAcr": "ES"
       },
       "tournament": {
         "id": 2436,
@@ -26,10 +82,206 @@
         }
       },
       "round": {
-        "name": "Qualification Round 1"
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17206666,
+      "date": "2026-09-29T02:00:00.000Z",
+      "player1": {
+        "id": 38517,
+        "name": "Marco Trungelliti",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 145130,
+        "name": "Alex Molčan",
+        "countryAcr": "SK"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17206241,
+      "date": "2026-09-29T03:00:00.000Z",
+      "player1": {
+        "id": 238300,
+        "name": "Tomaš Machač",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 383987,
+        "name": "Arthur Gea",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17207417,
+      "date": "2026-09-29T04:10:00.000Z",
+      "player1": {
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL"
+      },
+      "player2": {
+        "id": 201681,
+        "name": "Jie Cui",
+        "countryAcr": "CN"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17204710,
+      "date": "2026-09-29T02:00:00.000Z",
+      "player1": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR"
+      },
+      "player2": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17206508,
+      "date": "2026-09-29T03:00:00.000Z",
+      "player1": {
+        "id": 126356,
+        "name": "Jaume Munar",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 187608,
+        "name": "Aleksandar Kovačević",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17206735,
+      "date": "2026-09-29T03:30:00.000Z",
+      "player1": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 108709,
+        "name": "Kamil Majchrzak",
+        "countryAcr": "PL"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17206642,
+      "date": "2026-09-29T04:40:00.000Z",
+      "player1": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY"
+      },
+      "player2": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
       }
     }
   ],
-  "count": 1,
-  "fetchedAt": 1790515334155
+  "count": 10,
+  "fetchedAt": 1790611758026
 }
