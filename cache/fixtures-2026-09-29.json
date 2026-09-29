@@ -58,62 +58,6 @@
       }
     },
     {
-      "id": 17208181,
-      "date": "2026-09-29T02:00:00.000Z",
-      "player1": {
-        "id": 15894,
-        "name": "Adrian Mannarino",
-        "countryAcr": "FR"
-      },
-      "player2": {
-        "id": 40800,
-        "name": "Pablo Carreño Busta",
-        "countryAcr": "ES"
-      },
-      "tournament": {
-        "id": 2436,
-        "name": "Beijing",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Qualification Final"
-      }
-    },
-    {
-      "id": 17206666,
-      "date": "2026-09-29T02:00:00.000Z",
-      "player1": {
-        "id": 38517,
-        "name": "Marco Trungelliti",
-        "countryAcr": "AR"
-      },
-      "player2": {
-        "id": 145130,
-        "name": "Alex Molčan",
-        "countryAcr": "SK"
-      },
-      "tournament": {
-        "id": 2436,
-        "name": "Beijing",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Qualification Final"
-      }
-    },
-    {
       "id": 17206241,
       "date": "2026-09-29T03:00:00.000Z",
       "player1": {
@@ -142,8 +86,36 @@
       }
     },
     {
+      "id": 17206666,
+      "date": "2026-09-29T04:00:00.000Z",
+      "player1": {
+        "id": 38517,
+        "name": "Marco Trungelliti",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 145130,
+        "name": "Alex Molčan",
+        "countryAcr": "SK"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
       "id": 17207417,
-      "date": "2026-09-29T04:10:00.000Z",
+      "date": "2026-09-29T05:00:00.000Z",
       "player1": {
         "id": 102339,
         "name": "Botic Van de Zandschulp",
@@ -153,6 +125,34 @@
         "id": 201681,
         "name": "Jie Cui",
         "countryAcr": "CN"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17208181,
+      "date": "2026-09-29T05:10:00.000Z",
+      "player1": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 40800,
+        "name": "Pablo Carreño Busta",
+        "countryAcr": "ES"
       },
       "tournament": {
         "id": 2436,
@@ -283,5 +283,5 @@
     }
   ],
   "count": 10,
-  "fetchedAt": 1790611758026
+  "fetchedAt": 1790650691834
 }
