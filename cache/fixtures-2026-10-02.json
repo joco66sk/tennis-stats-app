@@ -2,8 +2,36 @@
   "date": "2026-10-02",
   "fixtures": [
     {
+      "id": 17189896,
+      "date": "2026-10-02T05:00:00.000Z",
+      "player1": {
+        "id": 145130,
+        "name": "Alex Molčan",
+        "countryAcr": "SK"
+      },
+      "player2": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 17212773,
-      "date": "2026-10-02T02:00:00.000Z",
+      "date": "2026-10-02T07:00:00.000Z",
       "player1": {
         "id": 163504,
         "name": "Daniil Medvedev",
@@ -30,8 +58,36 @@
       }
     },
     {
+      "id": 17189901,
+      "date": "2026-10-02T11:00:00.000Z",
+      "player1": {
+        "id": 158896,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "PL"
+      },
+      "player2": {
+        "id": 383987,
+        "name": "Arthur Gea",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 17189889,
-      "date": "2026-10-02T03:00:00.000Z",
+      "date": "2026-10-02T12:30:00.000Z",
       "player1": {
         "id": 254227,
         "name": "Yunchaokete Bu",
@@ -56,8 +112,120 @@
       "round": {
         "name": "Round of 16"
       }
+    },
+    {
+      "id": 17189852,
+      "date": "2026-10-02T02:00:00.000Z",
+      "player1": {
+        "id": 126356,
+        "name": "Jaume Munar",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 341818,
+        "name": "Jaime Faria",
+        "countryAcr": "PT"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17189850,
+      "date": "2026-10-02T03:10:00.000Z",
+      "player1": {
+        "id": 158912,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MC"
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17189851,
+      "date": "2026-10-02T07:00:00.000Z",
+      "player1": {
+        "id": 267577,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 308084,
+        "name": "Luciano Darderi",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17189848,
+      "date": "2026-10-02T08:10:00.000Z",
+      "player1": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
     }
   ],
-  "count": 2,
-  "fetchedAt": 1790822650364
+  "count": 8,
+  "fetchedAt": 1790866365631
 }
