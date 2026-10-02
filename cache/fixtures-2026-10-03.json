@@ -2,34 +2,6 @@
   "date": "2026-10-03",
   "fixtures": [
     {
-      "id": 17189888,
-      "date": "2026-10-03T03:00:00.000Z",
-      "player1": {
-        "id": 57163,
-        "name": "Alexander Zverev",
-        "countryAcr": "DE"
-      },
-      "player2": {
-        "id": 348853,
-        "name": "Juncheng Shang",
-        "countryAcr": "CN"
-      },
-      "tournament": {
-        "id": 2436,
-        "name": "Beijing",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
       "id": 17189890,
       "date": "2026-10-03T03:00:00.000Z",
       "player1": {
@@ -59,7 +31,7 @@
     },
     {
       "id": 17189894,
-      "date": "2026-10-03T03:00:00.000Z",
+      "date": "2026-10-03T05:00:00.000Z",
       "player1": {
         "id": 106755,
         "name": "Andrey Rublev",
@@ -86,8 +58,36 @@
       }
     },
     {
+      "id": 17189893,
+      "date": "2026-10-03T09:00:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 46391,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 17189892,
-      "date": "2026-10-03T03:00:00.000Z",
+      "date": "2026-10-03T09:00:00.000Z",
       "player1": {
         "id": 221012,
         "name": "Francisco Cerundolo",
@@ -114,21 +114,21 @@
       }
     },
     {
-      "id": 17189855,
-      "date": "2026-10-03T02:00:00.000Z",
+      "id": 17189888,
+      "date": "2026-10-03T11:00:00.000Z",
       "player1": {
-        "id": 275923,
-        "name": "Carlos Alcaraz",
-        "countryAcr": "ES"
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
       },
       "player2": {
-        "id": 299538,
-        "name": "Matteo Arnaldi",
-        "countryAcr": "IT"
+        "id": 348853,
+        "name": "Juncheng Shang",
+        "countryAcr": "CN"
       },
       "tournament": {
-        "id": 2435,
-        "name": "Tokyo",
+        "id": 2436,
+        "name": "Beijing",
         "court": {
           "name": "Hard"
         },
@@ -170,8 +170,36 @@
       }
     },
     {
+      "id": 17189855,
+      "date": "2026-10-03T03:30:00.000Z",
+      "player1": {
+        "id": 275923,
+        "name": "Carlos Alcaraz",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 299538,
+        "name": "Matteo Arnaldi",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 17189858,
-      "date": "2026-10-03T02:00:00.000Z",
+      "date": "2026-10-03T07:00:00.000Z",
       "player1": {
         "id": 112783,
         "name": "Matteo Berrettini",
@@ -199,7 +227,7 @@
     },
     {
       "id": 17189849,
-      "date": "2026-10-03T02:00:00.000Z",
+      "date": "2026-10-03T08:10:00.000Z",
       "player1": {
         "id": 185388,
         "name": "Ugo Humbert",
@@ -226,6 +254,6 @@
       }
     }
   ],
-  "count": 8,
-  "fetchedAt": 1790909284724
+  "count": 9,
+  "fetchedAt": 1790950436116
 }

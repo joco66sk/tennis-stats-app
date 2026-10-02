@@ -1,6 +1,91 @@
 {
   "date": "2026-10-04",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1790909285475
+  "fixtures": [
+    {
+      "id": 17189898,
+      "date": "2026-10-04T03:00:00.000Z",
+      "player1": {
+        "id": 158896,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "PL"
+      },
+      "player2": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 17189847,
+      "date": "2026-10-04T02:00:00.000Z",
+      "player1": {
+        "id": 126356,
+        "name": "Jaume Munar",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 267577,
+        "name": "Kyrian Jacquet",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 17189861,
+      "date": "2026-10-04T02:00:00.000Z",
+      "player1": {
+        "id": 158912,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MC"
+      },
+      "player2": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    }
+  ],
+  "count": 3,
+  "fetchedAt": 1790950436835
 }
