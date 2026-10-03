@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "id": 17189898,
-      "date": "2026-10-04T03:00:00.000Z",
+      "date": "2026-10-04T05:00:00.000Z",
       "player1": {
         "id": 158896,
         "name": "Hubert Hurkacz",
@@ -13,6 +13,62 @@
         "id": 90080,
         "name": "Karen Khachanov",
         "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 17189891,
+      "date": "2026-10-04T06:10:00.000Z",
+      "player1": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 17189897,
+      "date": "2026-10-04T11:00:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 14882,
+        "name": "Novak Djokovic",
+        "countryAcr": "RS"
       },
       "tournament": {
         "id": 2436,
@@ -58,8 +114,36 @@
       }
     },
     {
+      "id": 17189859,
+      "date": "2026-10-04T04:00:00.000Z",
+      "player1": {
+        "id": 275923,
+        "name": "Carlos Alcaraz",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
       "id": 17189861,
-      "date": "2026-10-04T02:00:00.000Z",
+      "date": "2026-10-04T07:00:00.000Z",
       "player1": {
         "id": 158912,
         "name": "Valentin Vacherot",
@@ -84,8 +168,36 @@
       "round": {
         "name": "Quarterfinals"
       }
+    },
+    {
+      "id": 17189857,
+      "date": "2026-10-04T08:10:00.000Z",
+      "player1": {
+        "id": 254742,
+        "name": "Jiri Lehečka",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY"
+      },
+      "tournament": {
+        "id": 2435,
+        "name": "Tokyo",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
     }
   ],
-  "count": 3,
-  "fetchedAt": 1790994867445
+  "count": 7,
+  "fetchedAt": 1791031674550
 }
