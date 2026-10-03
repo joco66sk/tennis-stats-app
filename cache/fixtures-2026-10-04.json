@@ -58,6 +58,34 @@
       }
     },
     {
+      "id": 17189899,
+      "date": "2026-10-04T08:30:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 221012,
+        "name": "Francisco Cerundolo",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
       "id": 17189897,
       "date": "2026-10-04T11:00:00.000Z",
       "player1": {
@@ -198,6 +226,6 @@
       }
     }
   ],
-  "count": 7,
-  "fetchedAt": 1791031674550
+  "count": 8,
+  "fetchedAt": 1791053520508
 }
