@@ -702,6 +702,34 @@
       }
     },
     {
+      "id": 17189900,
+      "date": "2026-10-05T11:00:00.000Z",
+      "player1": {
+        "id": 14882,
+        "name": "Novak Djokovic",
+        "countryAcr": "RS"
+      },
+      "player2": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2436,
+        "name": "Beijing",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
       "id": 17189856,
       "date": "2026-10-05T07:00:00.000Z",
       "player1": {
@@ -758,6 +786,6 @@
       }
     }
   ],
-  "count": 27,
-  "fetchedAt": 1791120681168
+  "count": 28,
+  "fetchedAt": 1791139915872
 }
