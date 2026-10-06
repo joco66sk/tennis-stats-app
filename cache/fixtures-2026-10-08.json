@@ -1,6 +1,371 @@
 {
   "date": "2026-10-08",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1791257535938
+  "fixtures": [
+    {
+      "id": 17257102,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 326949,
+        "name": "Adolfo Daniel Vallejo",
+        "countryAcr": "PY"
+      },
+      "player2": {
+        "id": 255449,
+        "name": "Valentin Royer",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257377,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL"
+      },
+      "player2": {
+        "id": 338890,
+        "name": "Daniel Merida",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17269451,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB"
+      },
+      "player2": {
+        "id": 260122,
+        "name": "Dalibor Svrčina",
+        "countryAcr": "CZ"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257104,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 218259,
+        "name": "Fábián Marozsán",
+        "countryAcr": "HU"
+      },
+      "player2": {
+        "id": 298247,
+        "name": "Zachary Svajda",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257106,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 158896,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "PL"
+      },
+      "player2": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257107,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 126356,
+        "name": "Jaume Munar",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 191873,
+        "name": "Jenson Brooksby",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257375,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 335102,
+        "name": "Luca Van Assche",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 254227,
+        "name": "Yunchaokete Bu",
+        "countryAcr": "CN"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257372,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 42379,
+        "name": "Marcos Giron",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 221806,
+        "name": "Sebastián Báez",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257374,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 271389,
+        "name": "Mariano Navone",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 40800,
+        "name": "Pablo Carreño Busta",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257103,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 417196,
+        "name": "Martin Landaluce",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 46391,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257376,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 125006,
+        "name": "Nuno Borges",
+        "countryAcr": "PT"
+      },
+      "player2": {
+        "id": 264372,
+        "name": "Facundo Diaz Acosta",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257105,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 221515,
+        "name": "Thiago Agustin Tirante",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 321404,
+        "name": "Hamad Medjedović",
+        "countryAcr": "RS"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    },
+    {
+      "id": 17257371,
+      "date": "2026-10-08T04:00:00.000Z",
+      "player1": {
+        "id": 199395,
+        "name": "Vit Kopřiva",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 170946,
+        "name": "Zizou Bergs",
+        "countryAcr": "BE"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 128"
+      }
+    }
+  ],
+  "count": 13,
+  "fetchedAt": 1791297184721
 }
