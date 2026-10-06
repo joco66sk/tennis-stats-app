@@ -1,6 +1,28 @@
 {
   "Clay": [
     {
+      "id": "17086520",
+      "date": "2026-09-15",
+      "tournamentId": 17086520,
+      "homeId": 264372,
+      "tournamentName": "Szczecin, Poland",
+      "opponentId": 92074,
+      "opponentName": "Daniel Elahi Galan",
+      "won": false,
+      "result": "7-5 2-6 3-6"
+    },
+    {
+      "id": "16979788",
+      "date": "2026-09-13",
+      "tournamentId": 16979788,
+      "homeId": 264372,
+      "tournamentName": "Sevilla, Spain",
+      "opponentId": 39234,
+      "opponentName": "Dušan Lajović",
+      "won": true,
+      "result": "6-2 6-1"
+    },
+    {
       "id": "16979784",
       "date": "2026-09-12",
       "tournamentId": 16979784,
@@ -10,6 +32,39 @@
       "opponentName": "Jaume Munar",
       "won": true,
       "result": "4-6 6-3 7-6"
+    },
+    {
+      "id": "16979786",
+      "date": "2026-09-11",
+      "tournamentId": 16979786,
+      "homeId": 264372,
+      "tournamentName": "Sevilla, Spain",
+      "opponentId": 83397,
+      "opponentName": "Sebastian Ofner",
+      "won": true,
+      "result": "7-5 6-2"
+    },
+    {
+      "id": "16979781",
+      "date": "2026-09-09",
+      "tournamentId": 16979781,
+      "homeId": 264372,
+      "tournamentName": "Sevilla, Spain",
+      "opponentId": 250857,
+      "opponentName": "Alejandro Moro Canas",
+      "won": true,
+      "result": "6-1 7-5"
+    },
+    {
+      "id": "17014432",
+      "date": "2026-09-07",
+      "tournamentId": 17014432,
+      "homeId": 264372,
+      "tournamentName": "Sevilla, Spain",
+      "opponentId": 217448,
+      "opponentName": "Pol Martin Tiffon",
+      "won": true,
+      "result": "6-3 2-6 6-2"
     },
     {
       "id": "16593366",
@@ -274,61 +329,6 @@
       "opponentName": "Zhizhen Zhang",
       "won": true,
       "result": "6-1 6-4 6-3"
-    },
-    {
-      "id": "16209358",
-      "date": "2026-05-21",
-      "tournamentId": 16209358,
-      "homeId": 207089,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 207089,
-      "opponentName": "August Holmgren",
-      "won": true,
-      "result": "6-7 6-4 6-2"
-    },
-    {
-      "id": "16200623",
-      "date": "2026-05-20",
-      "tournamentId": 16200623,
-      "homeId": 264372,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 145108,
-      "opponentName": "Remy Bertola",
-      "won": true,
-      "result": "6-4 6-3"
-    },
-    {
-      "id": "16195960",
-      "date": "2026-05-18",
-      "tournamentId": 16195960,
-      "homeId": 264372,
-      "tournamentName": "Roland Garros, Men",
-      "opponentId": 58221,
-      "opponentName": "Christopher O'Connell",
-      "won": true,
-      "result": "7-6 4-6 6-4"
-    },
-    {
-      "id": "16155461",
-      "date": "2026-05-12",
-      "tournamentId": 16155461,
-      "homeId": 264372,
-      "tournamentName": "Oeiras 4, Portugal",
-      "opponentId": 57289,
-      "opponentName": "Hugo Dellien",
-      "won": false,
-      "result": "2-6 6-7"
-    },
-    {
-      "id": "16096947",
-      "date": "2026-05-10",
-      "tournamentId": 16096947,
-      "homeId": 302582,
-      "tournamentName": "Francavilla, Italy",
-      "opponentId": 302582,
-      "opponentName": "Gustavo Heide",
-      "won": true,
-      "result": "5-7 6-1 6-2"
     }
   ],
   "Hard": [
@@ -710,5 +710,5 @@
     }
   ],
   "playerName": "Facundo Diaz Acosta",
-  "updatedAt": 1791168147418
+  "updatedAt": 1791257732815
 }
