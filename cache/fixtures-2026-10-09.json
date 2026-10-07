@@ -142,6 +142,34 @@
       }
     },
     {
+      "id": 17278691,
+      "date": "2026-10-09T04:00:00.000Z",
+      "player1": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 127208,
+        "name": "Daniel Altmaier",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 64"
+      }
+    },
+    {
       "id": 17218886,
       "date": "2026-10-09T04:00:00.000Z",
       "player1": {
@@ -366,6 +394,6 @@
       }
     }
   ],
-  "count": 13,
-  "fetchedAt": 1791384582000
+  "count": 14,
+  "fetchedAt": 1791406325482
 }
