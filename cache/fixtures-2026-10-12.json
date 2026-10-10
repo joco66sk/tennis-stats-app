@@ -1,6 +1,147 @@
 {
   "date": "2026-10-12",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1791601198603
+  "fixtures": [
+    {
+      "id": 17300662,
+      "date": "2026-10-12T04:00:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 260122,
+        "name": "Dalibor Svrčina",
+        "countryAcr": "CZ"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17299122,
+      "date": "2026-10-12T04:00:00.000Z",
+      "player1": {
+        "id": 254742,
+        "name": "Jiri Lehečka",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17300663,
+      "date": "2026-10-12T04:00:00.000Z",
+      "player1": {
+        "id": 412818,
+        "name": "Learner Tien",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 119248,
+        "name": "Casper Ruud",
+        "countryAcr": "NO"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17300344,
+      "date": "2026-10-12T04:00:00.000Z",
+      "player1": {
+        "id": 40800,
+        "name": "Pablo Carreño Busta",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 192013,
+        "name": "Felix Auger-Aliassime",
+        "countryAcr": "CA"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17300664,
+      "date": "2026-10-12T04:00:00.000Z",
+      "player1": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR"
+      },
+      "player2": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 5,
+  "fetchedAt": 1791640923010
 }

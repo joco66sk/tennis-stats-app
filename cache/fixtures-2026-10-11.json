@@ -2,118 +2,6 @@
   "date": "2026-10-11",
   "fixtures": [
     {
-      "id": 17292241,
-      "date": "2026-10-11T04:00:00.000Z",
-      "player1": {
-        "id": 157456,
-        "name": "Alejandro Davidovich Fokina",
-        "countryAcr": "ES"
-      },
-      "player2": {
-        "id": 101101,
-        "name": "Frances Tiafoe",
-        "countryAcr": "US"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17295053,
-      "date": "2026-10-11T04:00:00.000Z",
-      "player1": {
-        "id": 163480,
-        "name": "Alexander Bublik",
-        "countryAcr": "KZ"
-      },
-      "player2": {
-        "id": 235576,
-        "name": "Brandon Nakashima",
-        "countryAcr": "US"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17291586,
-      "date": "2026-10-11T04:00:00.000Z",
-      "player1": {
-        "id": 57163,
-        "name": "Alexander Zverev",
-        "countryAcr": "DE"
-      },
-      "player2": {
-        "id": 90798,
-        "name": "Quentin Halys",
-        "countryAcr": "FR"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17290800,
-      "date": "2026-10-11T04:00:00.000Z",
-      "player1": {
-        "id": 201239,
-        "name": "Alex de Minaur",
-        "countryAcr": "AU"
-      },
-      "player2": {
-        "id": 413296,
-        "name": "Rei Sakamoto",
-        "countryAcr": "JP"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
       "id": 17291292,
       "date": "2026-10-11T04:00:00.000Z",
       "player1": {
@@ -125,62 +13,6 @@
         "id": 383987,
         "name": "Arthur Gea",
         "countryAcr": "FR"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17293222,
-      "date": "2026-10-11T04:00:00.000Z",
-      "player1": {
-        "id": 221012,
-        "name": "Francisco Cerundolo",
-        "countryAcr": "AR"
-      },
-      "player2": {
-        "id": 372312,
-        "name": "Jakub Menšik",
-        "countryAcr": "CZ"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17295055,
-      "date": "2026-10-11T04:00:00.000Z",
-      "player1": {
-        "id": 158896,
-        "name": "Hubert Hurkacz",
-        "countryAcr": "PL"
-      },
-      "player2": {
-        "id": 450685,
-        "name": "Yi Zhou",
-        "countryAcr": "CN"
       },
       "tournament": {
         "id": 2519,
@@ -224,8 +56,176 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 17290800,
+      "date": "2026-10-11T05:10:00.000Z",
+      "player1": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 413296,
+        "name": "Rei Sakamoto",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17295055,
+      "date": "2026-10-11T05:10:00.000Z",
+      "player1": {
+        "id": 158896,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "PL"
+      },
+      "player2": {
+        "id": 450685,
+        "name": "Yi Zhou",
+        "countryAcr": "CN"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17293222,
+      "date": "2026-10-11T06:20:00.000Z",
+      "player1": {
+        "id": 221012,
+        "name": "Francisco Cerundolo",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 372312,
+        "name": "Jakub Menšik",
+        "countryAcr": "CZ"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17295053,
+      "date": "2026-10-11T07:30:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ"
+      },
+      "player2": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17291586,
+      "date": "2026-10-11T10:00:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17292241,
+      "date": "2026-10-11T11:10:00.000Z",
+      "player1": {
+        "id": 157456,
+        "name": "Alejandro Davidovich Fokina",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
   "count": 8,
-  "fetchedAt": 1791601197787
+  "fetchedAt": 1791640922275
 }
