@@ -2,44 +2,16 @@
   "date": "2026-10-12",
   "fixtures": [
     {
-      "id": 17302013,
-      "date": "2026-10-12T04:00:00.000Z",
+      "id": 17305916,
+      "date": "2026-10-12T02:00:00.000Z",
       "player1": {
-        "id": 338500,
-        "name": "Arthur Fils",
+        "id": 383987,
+        "name": "Arthur Gea",
         "countryAcr": "FR"
       },
       "player2": {
-        "id": 102339,
-        "name": "Botic Van de Zandschulp",
-        "countryAcr": "NL"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17300662,
-      "date": "2026-10-12T04:00:00.000Z",
-      "player1": {
-        "id": 163504,
-        "name": "Daniil Medvedev",
-        "countryAcr": "RU"
-      },
-      "player2": {
-        "id": 260122,
-        "name": "Dalibor Svrčina",
+        "id": 372312,
+        "name": "Jakub Menšik",
         "countryAcr": "CZ"
       },
       "tournament": {
@@ -54,35 +26,7 @@
         }
       },
       "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17299122,
-      "date": "2026-10-12T04:00:00.000Z",
-      "player1": {
-        "id": 254742,
-        "name": "Jiri Lehečka",
-        "countryAcr": "CZ"
-      },
-      "player2": {
-        "id": 458834,
-        "name": "Rafael Jodar",
-        "countryAcr": "ES"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
+        "name": "Round of 16"
       }
     },
     {
@@ -142,8 +86,36 @@
       }
     },
     {
+      "id": 17299122,
+      "date": "2026-10-12T05:10:00.000Z",
+      "player1": {
+        "id": 254742,
+        "name": "Jiri Lehečka",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 17300664,
-      "date": "2026-10-12T04:00:00.000Z",
+      "date": "2026-10-12T05:10:00.000Z",
       "player1": {
         "id": 122366,
         "name": "Stefanos Tsitsipas",
@@ -170,17 +142,45 @@
       }
     },
     {
-      "id": 17301671,
-      "date": "2026-10-12T04:00:00.000Z",
+      "id": 17300662,
+      "date": "2026-10-12T06:20:00.000Z",
       "player1": {
-        "id": 138546,
-        "name": "Tommy Paul",
-        "countryAcr": "US"
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
       },
       "player2": {
-        "id": 158912,
-        "name": "Valentin Vacherot",
-        "countryAcr": "MC"
+        "id": 260122,
+        "name": "Dalibor Svrčina",
+        "countryAcr": "CZ"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17302013,
+      "date": "2026-10-12T07:30:00.000Z",
+      "player1": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL"
       },
       "tournament": {
         "id": 2519,
@@ -199,7 +199,7 @@
     },
     {
       "id": 17302014,
-      "date": "2026-10-12T04:00:00.000Z",
+      "date": "2026-10-12T10:00:00.000Z",
       "player1": {
         "id": 170946,
         "name": "Zizou Bergs",
@@ -224,8 +224,36 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 17301671,
+      "date": "2026-10-12T11:10:00.000Z",
+      "player1": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 158912,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MC"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
-  "count": 8,
-  "fetchedAt": 1791685800373
+  "count": 9,
+  "fetchedAt": 1791728826044
 }
