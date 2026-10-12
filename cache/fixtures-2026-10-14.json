@@ -1,6 +1,119 @@
 {
   "date": "2026-10-14",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1791773669177
+  "fixtures": [
+    {
+      "id": 17318725,
+      "date": "2026-10-14T04:00:00.000Z",
+      "player1": {
+        "id": 102339,
+        "name": "Botic Van de Zandschulp",
+        "countryAcr": "NL"
+      },
+      "player2": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17313615,
+      "date": "2026-10-14T04:00:00.000Z",
+      "player1": {
+        "id": 119248,
+        "name": "Casper Ruud",
+        "countryAcr": "NO"
+      },
+      "player2": {
+        "id": 192013,
+        "name": "Felix Auger-Aliassime",
+        "countryAcr": "CA"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17315384,
+      "date": "2026-10-14T04:00:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17318150,
+      "date": "2026-10-14T04:00:00.000Z",
+      "player1": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 170946,
+        "name": "Zizou Bergs",
+        "countryAcr": "BE"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 4,
+  "fetchedAt": 1791824682616
 }

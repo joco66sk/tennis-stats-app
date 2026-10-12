@@ -2,34 +2,6 @@
   "date": "2026-10-13",
   "fixtures": [
     {
-      "id": 17307292,
-      "date": "2026-10-13T04:00:00.000Z",
-      "player1": {
-        "id": 57163,
-        "name": "Alexander Zverev",
-        "countryAcr": "DE"
-      },
-      "player2": {
-        "id": 163480,
-        "name": "Alexander Bublik",
-        "countryAcr": "KZ"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 16"
-      }
-    },
-    {
       "id": 17305441,
       "date": "2026-10-13T04:00:00.000Z",
       "player1": {
@@ -59,7 +31,7 @@
     },
     {
       "id": 17305916,
-      "date": "2026-10-13T04:00:00.000Z",
+      "date": "2026-10-13T05:10:00.000Z",
       "player1": {
         "id": 383987,
         "name": "Arthur Gea",
@@ -86,8 +58,36 @@
       }
     },
     {
+      "id": 17307292,
+      "date": "2026-10-13T10:00:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 17310022,
-      "date": "2026-10-13T04:00:00.000Z",
+      "date": "2026-10-13T11:10:00.000Z",
       "player1": {
         "id": 158896,
         "name": "Hubert Hurkacz",
@@ -115,5 +115,5 @@
     }
   ],
   "count": 4,
-  "fetchedAt": 1791773668435
+  "fetchedAt": 1791824681666
 }
