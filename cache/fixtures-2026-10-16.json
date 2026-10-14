@@ -1,6 +1,35 @@
 {
   "date": "2026-10-16",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1791944603694
+  "fixtures": [
+    {
+      "id": 17329653,
+      "date": "2026-10-16T04:00:00.000Z",
+      "player1": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 119248,
+        "name": "Casper Ruud",
+        "countryAcr": "NO"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1791983333152
 }

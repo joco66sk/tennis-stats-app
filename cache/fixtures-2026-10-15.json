@@ -2,36 +2,8 @@
   "date": "2026-10-15",
   "fixtures": [
     {
-      "id": 17325622,
-      "date": "2026-10-15T04:00:00.000Z",
-      "player1": {
-        "id": 57163,
-        "name": "Alexander Zverev",
-        "countryAcr": "DE"
-      },
-      "player2": {
-        "id": 201239,
-        "name": "Alex de Minaur",
-        "countryAcr": "AU"
-      },
-      "tournament": {
-        "id": 2519,
-        "name": "Shanghai",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Quarterfinals"
-      }
-    },
-    {
       "id": 17326876,
-      "date": "2026-10-15T04:00:00.000Z",
+      "date": "2026-10-15T06:30:00.000Z",
       "player1": {
         "id": 383987,
         "name": "Arthur Gea",
@@ -56,8 +28,36 @@
       "round": {
         "name": "Quarterfinals"
       }
+    },
+    {
+      "id": 17325622,
+      "date": "2026-10-15T10:00:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 201239,
+        "name": "Alex de Minaur",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2519,
+        "name": "Shanghai",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
     }
   ],
   "count": 2,
-  "fetchedAt": 1791944602922
+  "fetchedAt": 1791983332427
 }
