@@ -142,6 +142,34 @@
       }
     },
     {
+      "id": 17357625,
+      "date": "2026-10-19T10:00:00.000Z",
+      "player1": {
+        "id": 421761,
+        "name": "Federico Cinà",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 126356,
+        "name": "Jaume Munar",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 30070,
+        "name": "ATP Brussels, Belgium Singles",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 17345445,
       "date": "2026-10-19T10:30:00.000Z",
       "player1": {
@@ -170,17 +198,45 @@
       }
     },
     {
-      "id": 17345447,
-      "date": "2026-10-19T10:30:00.000Z",
+      "id": 17357622,
+      "date": "2026-10-19T11:10:00.000Z",
       "player1": {
-        "id": 283070,
-        "name": "Holger Rune",
-        "countryAcr": "DK"
+        "id": 47975,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "DE"
       },
       "player2": {
-        "id": 355525,
-        "name": "Raphael Collignon",
-        "countryAcr": "BE"
+        "id": 51345,
+        "name": "Martin Damm Jr",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 30070,
+        "name": "ATP Brussels, Belgium Singles",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17357623,
+      "date": "2026-10-19T13:30:00.000Z",
+      "player1": {
+        "id": 190877,
+        "name": "Andrea Guerrieri",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US"
       },
       "tournament": {
         "id": 30070,
@@ -364,8 +420,36 @@
       "round": {
         "name": "Qualification Round 2"
       }
+    },
+    {
+      "id": 17357868,
+      "date": "2026-10-19T11:10:00.000Z",
+      "player1": {
+        "id": 206602,
+        "name": "Clement Tabur",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 483188,
+        "name": "Nicolai Budkov Kjaer",
+        "countryAcr": "NO"
+      },
+      "tournament": {
+        "id": 2498,
+        "name": "Lyon",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 2"
+      }
     }
   ],
-  "count": 13,
-  "fetchedAt": 1792347578702
+  "count": 16,
+  "fetchedAt": 1792375443245
 }
