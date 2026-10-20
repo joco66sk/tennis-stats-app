@@ -1,6 +1,63 @@
 {
   "date": "2026-10-22",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1792462864245
+  "fixtures": [
+    {
+      "id": 17331294,
+      "date": "2026-10-22T06:30:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ"
+      },
+      "player2": {
+        "id": 218259,
+        "name": "Fábián Marozsán",
+        "countryAcr": "HU"
+      },
+      "tournament": {
+        "id": 23849,
+        "name": "Almaty",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17331288,
+      "date": "2026-10-22T06:30:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 216154,
+        "name": "Sho Shimabukuro",
+        "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 23849,
+        "name": "Almaty",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1792501549678
 }
