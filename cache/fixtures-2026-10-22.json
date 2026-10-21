@@ -2,17 +2,45 @@
   "date": "2026-10-22",
   "fixtures": [
     {
-      "id": 17331294,
+      "id": 17331301,
       "date": "2026-10-22T06:30:00.000Z",
       "player1": {
-        "id": 163480,
-        "name": "Alexander Bublik",
-        "countryAcr": "KZ"
+        "id": 273679,
+        "name": "Terence Atmane",
+        "countryAcr": "FR"
       },
       "player2": {
-        "id": 218259,
-        "name": "Fábián Marozsán",
-        "countryAcr": "HU"
+        "id": 294337,
+        "name": "Mattia Bellucci",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 23849,
+        "name": "Almaty",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17331300,
+      "date": "2026-10-22T08:00:00.000Z",
+      "player1": {
+        "id": 238300,
+        "name": "Tomaš Machač",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU"
       },
       "tournament": {
         "id": 23849,
@@ -31,7 +59,7 @@
     },
     {
       "id": 17331288,
-      "date": "2026-10-22T06:30:00.000Z",
+      "date": "2026-10-22T09:10:00.000Z",
       "player1": {
         "id": 163504,
         "name": "Daniil Medvedev",
@@ -41,6 +69,34 @@
         "id": 216154,
         "name": "Sho Shimabukuro",
         "countryAcr": "JP"
+      },
+      "tournament": {
+        "id": 23849,
+        "name": "Almaty",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17331294,
+      "date": "2026-10-22T14:30:00.000Z",
+      "player1": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ"
+      },
+      "player2": {
+        "id": 218259,
+        "name": "Fábián Marozsán",
+        "countryAcr": "HU"
       },
       "tournament": {
         "id": 23849,
@@ -87,7 +143,7 @@
     },
     {
       "id": 17331478,
-      "date": "2026-10-22T09:30:00.000Z",
+      "date": "2026-10-22T11:30:00.000Z",
       "player1": {
         "id": 355525,
         "name": "Raphael Collignon",
@@ -97,6 +153,34 @@
         "id": 254742,
         "name": "Jiri Lehečka",
         "countryAcr": "CZ"
+      },
+      "tournament": {
+        "id": 30070,
+        "name": "ATP Brussels, Belgium Singles",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17331485,
+      "date": "2026-10-22T15:00:00.000Z",
+      "player1": {
+        "id": 49172,
+        "name": "Damir Džumhur",
+        "countryAcr": "BA"
+      },
+      "player2": {
+        "id": 170946,
+        "name": "Zizou Bergs",
+        "countryAcr": "BE"
       },
       "tournament": {
         "id": 30070,
@@ -199,7 +283,7 @@
     },
     {
       "id": 17331358,
-      "date": "2026-10-22T10:00:00.000Z",
+      "date": "2026-10-22T12:00:00.000Z",
       "player1": {
         "id": 158912,
         "name": "Valentin Vacherot",
@@ -226,6 +310,6 @@
       }
     }
   ],
-  "count": 8,
-  "fetchedAt": 1792548853256
+  "count": 11,
+  "fetchedAt": 1792588631664
 }
