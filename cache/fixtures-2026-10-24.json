@@ -1,6 +1,35 @@
 {
   "date": "2026-10-24",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1792721636073
+  "fixtures": [
+    {
+      "id": 17331299,
+      "date": "2026-10-24T10:00:00.000Z",
+      "player1": {
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR"
+      },
+      "tournament": {
+        "id": 23849,
+        "name": "Almaty",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1792760090725
 }
