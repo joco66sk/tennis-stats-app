@@ -282,6 +282,34 @@
       }
     },
     {
+      "id": 17331349,
+      "date": "2026-10-23T17:00:00.000Z",
+      "player1": {
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2498,
+        "name": "Lyon",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
       "id": 17331359,
       "date": "2026-10-23T18:10:00.000Z",
       "player1": {
@@ -310,6 +338,6 @@
       }
     }
   ],
-  "count": 11,
-  "fetchedAt": 1792697737171
+  "count": 12,
+  "fetchedAt": 1792721635406
 }
