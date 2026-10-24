@@ -86,6 +86,34 @@
       }
     },
     {
+      "id": 17331480,
+      "date": "2026-10-24T16:30:00.000Z",
+      "player1": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 46391,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 30070,
+        "name": "ATP Brussels, Belgium Singles",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Semifinals"
+      }
+    },
+    {
       "id": 17331360,
       "date": "2026-10-24T12:00:00.000Z",
       "player1": {
@@ -114,21 +142,21 @@
       }
     },
     {
-      "id": 17399174,
-      "date": "2026-10-24T08:00:00.000Z",
+      "id": 17331350,
+      "date": "2026-10-24T14:00:00.000Z",
       "player1": {
-        "id": 187608,
-        "name": "Aleksandar Kovačević",
-        "countryAcr": "US"
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT"
       },
       "player2": {
-        "id": 39711,
-        "name": "James Duckworth",
-        "countryAcr": "AU"
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT"
       },
       "tournament": {
-        "id": 2406,
-        "name": "Basel",
+        "id": 2498,
+        "name": "Lyon",
         "court": {
           "name": "Hard"
         },
@@ -138,7 +166,7 @@
         }
       },
       "round": {
-        "name": "Qualification Round 1"
+        "name": "Semifinals"
       }
     },
     {
@@ -265,6 +293,34 @@
         "id": 289146,
         "name": "Giovanni Mpetshi Perricard",
         "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Round 1"
+      }
+    },
+    {
+      "id": 17399174,
+      "date": "2026-10-24T12:30:00.000Z",
+      "player1": {
+        "id": 187608,
+        "name": "Aleksandar Kovačević",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 39711,
+        "name": "James Duckworth",
+        "countryAcr": "AU"
       },
       "tournament": {
         "id": 2406,
@@ -534,6 +590,6 @@
       }
     }
   ],
-  "count": 19,
-  "fetchedAt": 1792784158072
+  "count": 21,
+  "fetchedAt": 1792807932797
 }

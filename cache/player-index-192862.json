@@ -1,6 +1,17 @@
 {
   "Clay": [
     {
+      "id": "17028026",
+      "date": "2026-09-08",
+      "tournamentId": 17028026,
+      "homeId": 192862,
+      "tournamentName": "Tulln, Austria",
+      "opponentId": 362612,
+      "opponentName": "Mika Brunold",
+      "won": false,
+      "result": "3-6 0-4"
+    },
+    {
       "id": "16842452",
       "date": "2026-08-17",
       "tournamentId": 16842452,
@@ -10,6 +21,17 @@
       "opponentName": "Kimmer Coppejans",
       "won": false,
       "result": "5-7 1-6"
+    },
+    {
+      "id": "16579954",
+      "date": "2026-07-21",
+      "tournamentId": 16579954,
+      "homeId": 192862,
+      "tournamentName": "Zug, Switzerland",
+      "opponentId": 362612,
+      "opponentName": "Mika Brunold",
+      "won": false,
+      "result": "1-6 0-6"
     },
     {
       "id": "16511580",
@@ -188,6 +210,17 @@
       "result": "1-6 0-6"
     },
     {
+      "id": "16050290",
+      "date": "2026-04-30",
+      "tournamentId": 16050290,
+      "homeId": 192862,
+      "tournamentName": "Mauthausen, Austria",
+      "opponentId": 362612,
+      "opponentName": "Mika Brunold",
+      "won": true,
+      "result": "6-3 6-1"
+    },
+    {
       "id": "16079836",
       "date": "2026-04-28",
       "tournamentId": 16079836,
@@ -197,6 +230,17 @@
       "opponentName": "Francesco Maestrelli",
       "won": true,
       "result": "7-6 6-4"
+    },
+    {
+      "id": "16031388",
+      "date": "2026-04-19",
+      "tournamentId": 16031388,
+      "homeId": 192862,
+      "tournamentName": "Rome, Italy",
+      "opponentId": 362612,
+      "opponentName": "Mika Brunold",
+      "won": true,
+      "result": "6-3 6-3"
     },
     {
       "id": "15886279",
@@ -285,50 +329,6 @@
       "opponentName": "Zdenek Kolar",
       "won": true,
       "result": "6-7 6-3 6-2"
-    },
-    {
-      "id": "15042535",
-      "date": "2025-11-19",
-      "tournamentId": 15042535,
-      "homeId": 192862,
-      "tournamentName": "ATP Challenger Montemar, Spain Men Singles",
-      "opponentId": 48626,
-      "opponentName": "Lorenzo Giustino",
-      "won": false,
-      "result": "3-6 4-6"
-    },
-    {
-      "id": "14838656",
-      "date": "2025-10-07",
-      "tournamentId": 14838656,
-      "homeId": 105607,
-      "tournamentName": "Valencia, Spain",
-      "opponentId": 105607,
-      "opponentName": "Jan Choinski",
-      "won": false,
-      "result": "7-6 3-6 3-6"
-    },
-    {
-      "id": "14654897",
-      "date": "2025-09-20",
-      "tournamentId": 14654897,
-      "homeId": 197809,
-      "tournamentName": "Targu Mures 2, Romania",
-      "opponentId": 197809,
-      "opponentName": "Jay Clarke",
-      "won": false,
-      "result": "3-6 0-6"
-    },
-    {
-      "id": "13697722",
-      "date": "2025-03-31",
-      "tournamentId": 13697722,
-      "homeId": 205795,
-      "tournamentName": "Menorca, Spain",
-      "opponentId": 205795,
-      "opponentName": "Zsombor Piros",
-      "won": false,
-      "result": "3-6 1-6"
     }
   ],
   "Hard": [
@@ -444,6 +444,6 @@
     }
   ],
   "Grass": [],
-  "updatedAt": 1792721712611,
+  "updatedAt": 1792808089959,
   "playerName": "Miguel Damas"
 }
