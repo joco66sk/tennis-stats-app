@@ -2,6 +2,62 @@
   "date": "2026-10-25",
   "fixtures": [
     {
+      "id": 17404044,
+      "date": "2026-10-25T09:00:00.000Z",
+      "player1": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 119248,
+        "name": "Casper Ruud",
+        "countryAcr": "NO"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17404040,
+      "date": "2026-10-25T09:00:00.000Z",
+      "player1": {
+        "id": 296369,
+        "name": "Dominic Stricker",
+        "countryAcr": "CH"
+      },
+      "player2": {
+        "id": 163480,
+        "name": "Alexander Bublik",
+        "countryAcr": "KZ"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 17403267,
       "date": "2026-10-25T09:00:00.000Z",
       "player1": {
@@ -336,8 +392,232 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 17331292,
+      "date": "2026-10-25T10:00:00.000Z",
+      "player1": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
+      },
+      "tournament": {
+        "id": 23849,
+        "name": "Almaty",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
+    },
+    {
+      "id": 17331361,
+      "date": "2026-10-25T13:30:00.000Z",
+      "player1": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2498,
+        "name": "Lyon",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Final"
+      }
+    },
+    {
+      "id": 17404032,
+      "date": "2026-10-25T11:00:00.000Z",
+      "player1": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU"
+      },
+      "player2": {
+        "id": 47975,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17404824,
+      "date": "2026-10-25T12:00:00.000Z",
+      "player1": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 127208,
+        "name": "Daniel Altmaier",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17405034,
+      "date": "2026-10-25T12:10:00.000Z",
+      "player1": {
+        "id": 289146,
+        "name": "Giovanni Mpetshi Perricard",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 187608,
+        "name": "Aleksandar Kovačević",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17405402,
+      "date": "2026-10-25T13:20:00.000Z",
+      "player1": {
+        "id": 362612,
+        "name": "Mika Brunold",
+        "countryAcr": "CH"
+      },
+      "player2": {
+        "id": 145108,
+        "name": "Remy Bertola",
+        "countryAcr": "CH"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17404891,
+      "date": "2026-10-25T09:00:00.000Z",
+      "player1": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 275948,
+        "name": "Jacob Fearnley",
+        "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    },
+    {
+      "id": 17404892,
+      "date": "2026-10-25T12:00:00.000Z",
+      "player1": {
+        "id": 339450,
+        "name": "Lukas Neumayer",
+        "countryAcr": "AT"
+      },
+      "player2": {
+        "id": 243925,
+        "name": "Titouan Droguet",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
     }
   ],
-  "count": 12,
-  "fetchedAt": 1792844275391
+  "count": 22,
+  "fetchedAt": 1792866299231
 }
