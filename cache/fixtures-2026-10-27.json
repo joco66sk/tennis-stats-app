@@ -1,6 +1,455 @@
 {
   "date": "2026-10-27",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1792932543833
+  "fixtures": [
+    {
+      "id": 17411700,
+      "date": "2026-10-27T11:00:00.000Z",
+      "player1": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 187608,
+        "name": "Aleksandar Kovačević",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17411702,
+      "date": "2026-10-27T11:00:00.000Z",
+      "player1": {
+        "id": 289146,
+        "name": "Giovanni Mpetshi Perricard",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17411701,
+      "date": "2026-10-27T11:00:00.000Z",
+      "player1": {
+        "id": 145108,
+        "name": "Remy Bertola",
+        "countryAcr": "CH"
+      },
+      "player2": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17404035,
+      "date": "2026-10-27T11:00:00.000Z",
+      "player1": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 122366,
+        "name": "Stefanos Tsitsipas",
+        "countryAcr": "GR"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17411703,
+      "date": "2026-10-27T11:00:00.000Z",
+      "player1": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 237452,
+        "name": "Rinky Hijikata",
+        "countryAcr": "AU"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17411704,
+      "date": "2026-10-27T11:00:00.000Z",
+      "player1": {
+        "id": 47975,
+        "name": "Yannick Hanfmann",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 46391,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "DE"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17411408,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403267,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 417196,
+        "name": "Martin Landaluce",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403261,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB"
+      },
+      "player2": {
+        "id": 221012,
+        "name": "Francisco Cerundolo",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403260,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 338890,
+        "name": "Daniel Merida",
+        "countryAcr": "ES"
+      },
+      "player2": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403264,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 273680,
+        "name": "Flavio Cobolli",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 23581,
+        "name": "Grigor Dimitrov",
+        "countryAcr": "BG"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403257,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 200159,
+        "name": "Jurij Rodionov",
+        "countryAcr": "AT"
+      },
+      "player2": {
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403255,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU"
+      },
+      "player2": {
+        "id": 275923,
+        "name": "Carlos Alcaraz",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403265,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403266,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 122368,
+        "name": "Tallon Griekspoor",
+        "countryAcr": "NL"
+      },
+      "player2": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403259,
+      "date": "2026-10-27T12:30:00.000Z",
+      "player1": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 106755,
+        "name": "Andrey Rublev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 16,
+  "fetchedAt": 1792953337970
 }
