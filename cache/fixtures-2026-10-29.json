@@ -1,6 +1,119 @@
 {
   "date": "2026-10-29",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1793108501223
+  "fixtures": [
+    {
+      "id": 17377311,
+      "date": "2026-10-29T10:00:00.000Z",
+      "player1": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17377317,
+      "date": "2026-10-29T10:00:00.000Z",
+      "player1": {
+        "id": 385485,
+        "name": "Ben Shelton",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 309071,
+        "name": "Jerome Kym",
+        "countryAcr": "CH"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17377316,
+      "date": "2026-10-29T10:00:00.000Z",
+      "player1": {
+        "id": 158912,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MC"
+      },
+      "player2": {
+        "id": 458834,
+        "name": "Rafael Jodar",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17377284,
+      "date": "2026-10-29T12:00:00.000Z",
+      "player1": {
+        "id": 138546,
+        "name": "Tommy Paul",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 308084,
+        "name": "Luciano Darderi",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 4,
+  "fetchedAt": 1793132217517
 }
