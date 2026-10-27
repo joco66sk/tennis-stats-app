@@ -2,6 +2,34 @@
   "date": "2026-10-28",
   "fixtures": [
     {
+      "id": 17377301,
+      "date": "2026-10-28T11:00:00.000Z",
+      "player1": {
+        "id": 158896,
+        "name": "Hubert Hurkacz",
+        "countryAcr": "PL"
+      },
+      "player2": {
+        "id": 283070,
+        "name": "Holger Rune",
+        "countryAcr": "DK"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 17404041,
       "date": "2026-10-28T11:00:00.000Z",
       "player1": {
@@ -143,7 +171,7 @@
     },
     {
       "id": 17403260,
-      "date": "2026-10-28T10:30:00.000Z",
+      "date": "2026-10-28T12:30:00.000Z",
       "player1": {
         "id": 338890,
         "name": "Daniel Merida",
@@ -170,8 +198,64 @@
       }
     },
     {
+      "id": 17403266,
+      "date": "2026-10-28T12:30:00.000Z",
+      "player1": {
+        "id": 122368,
+        "name": "Tallon Griekspoor",
+        "countryAcr": "NL"
+      },
+      "player2": {
+        "id": 235576,
+        "name": "Brandon Nakashima",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17403265,
+      "date": "2026-10-28T13:40:00.000Z",
+      "player1": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 101101,
+        "name": "Frances Tiafoe",
+        "countryAcr": "US"
+      },
+      "tournament": {
+        "id": 2428,
+        "name": "Vienna",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 17403257,
-      "date": "2026-10-28T10:30:00.000Z",
+      "date": "2026-10-28T16:30:00.000Z",
       "player1": {
         "id": 200159,
         "name": "Jurij Rodionov",
@@ -199,7 +283,7 @@
     },
     {
       "id": 17377290,
-      "date": "2026-10-28T10:30:00.000Z",
+      "date": "2026-10-28T19:00:00.000Z",
       "player1": {
         "id": 412818,
         "name": "Learner Tien",
@@ -224,64 +308,8 @@
       "round": {
         "name": "Round of 16"
       }
-    },
-    {
-      "id": 17403265,
-      "date": "2026-10-28T10:30:00.000Z",
-      "player1": {
-        "id": 261015,
-        "name": "Lorenzo Musetti",
-        "countryAcr": "IT"
-      },
-      "player2": {
-        "id": 101101,
-        "name": "Frances Tiafoe",
-        "countryAcr": "US"
-      },
-      "tournament": {
-        "id": 2428,
-        "name": "Vienna",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17403266,
-      "date": "2026-10-28T10:30:00.000Z",
-      "player1": {
-        "id": 122368,
-        "name": "Tallon Griekspoor",
-        "countryAcr": "NL"
-      },
-      "player2": {
-        "id": 235576,
-        "name": "Brandon Nakashima",
-        "countryAcr": "US"
-      },
-      "tournament": {
-        "id": 2428,
-        "name": "Vienna",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
     }
   ],
-  "count": 10,
-  "fetchedAt": 1793068670178
+  "count": 11,
+  "fetchedAt": 1793108500396
 }
