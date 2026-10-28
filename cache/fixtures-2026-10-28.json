@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "id": 17411704,
-      "date": "2026-10-28T11:10:00.000Z",
+      "date": "2026-10-28T11:35:00.000Z",
       "player1": {
         "id": 47975,
         "name": "Yannick Hanfmann",
@@ -13,34 +13,6 @@
         "id": 46391,
         "name": "Jan-Lennard Struff",
         "countryAcr": "DE"
-      },
-      "tournament": {
-        "id": 2406,
-        "name": "Basel",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17411701,
-      "date": "2026-10-28T12:20:00.000Z",
-      "player1": {
-        "id": 145108,
-        "name": "Remy Bertola",
-        "countryAcr": "CH"
-      },
-      "player2": {
-        "id": 117916,
-        "name": "Denis Shapovalov",
-        "countryAcr": "CA"
       },
       "tournament": {
         "id": 2406,
@@ -86,8 +58,36 @@
       }
     },
     {
+      "id": 17411701,
+      "date": "2026-10-28T13:00:00.000Z",
+      "player1": {
+        "id": 145108,
+        "name": "Remy Bertola",
+        "countryAcr": "CH"
+      },
+      "player2": {
+        "id": 117916,
+        "name": "Denis Shapovalov",
+        "countryAcr": "CA"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 17404041,
-      "date": "2026-10-28T14:10:00.000Z",
+      "date": "2026-10-28T14:45:00.000Z",
       "player1": {
         "id": 14882,
         "name": "Novak Djokovic",
@@ -227,7 +227,7 @@
     },
     {
       "id": 17403265,
-      "date": "2026-10-28T13:40:00.000Z",
+      "date": "2026-10-28T14:15:00.000Z",
       "player1": {
         "id": 261015,
         "name": "Lorenzo Musetti",
@@ -255,7 +255,7 @@
     },
     {
       "id": 17377282,
-      "date": "2026-10-28T14:50:00.000Z",
+      "date": "2026-10-28T16:00:00.000Z",
       "player1": {
         "id": 372312,
         "name": "Jakub Menšik",
@@ -339,5 +339,5 @@
     }
   ],
   "count": 12,
-  "fetchedAt": 1793155573080
+  "fetchedAt": 1793198190502
 }
