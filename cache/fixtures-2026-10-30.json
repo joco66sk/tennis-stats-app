@@ -1,6 +1,35 @@
 {
   "date": "2026-10-30",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1793243258953
+  "fixtures": [
+    {
+      "id": 17377325,
+      "date": "2026-10-30T13:00:00.000Z",
+      "player1": {
+        "id": 283070,
+        "name": "Holger Rune",
+        "countryAcr": "DK"
+      },
+      "player2": {
+        "id": 158912,
+        "name": "Valentin Vacherot",
+        "countryAcr": "MC"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    }
+  ],
+  "count": 1,
+  "fetchedAt": 1793285175837
 }
