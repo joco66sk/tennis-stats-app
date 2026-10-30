@@ -58,6 +58,62 @@
       }
     },
     {
+      "id": 17377314,
+      "date": "2026-10-30T17:00:00.000Z",
+      "player1": {
+        "id": 46391,
+        "name": "Jan-Lennard Struff",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 125006,
+        "name": "Nuno Borges",
+        "countryAcr": "PT"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
+      "id": 17377304,
+      "date": "2026-10-30T18:10:00.000Z",
+      "player1": {
+        "id": 309071,
+        "name": "Jerome Kym",
+        "countryAcr": "CH"
+      },
+      "player2": {
+        "id": 254742,
+        "name": "Jiri Lehečka",
+        "countryAcr": "CZ"
+      },
+      "tournament": {
+        "id": 2406,
+        "name": "Basel",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Quarterfinals"
+      }
+    },
+    {
       "id": 17377280,
       "date": "2026-10-30T12:30:00.000Z",
       "player1": {
@@ -170,6 +226,6 @@
       }
     }
   ],
-  "count": 6,
-  "fetchedAt": 1793306574245
+  "count": 8,
+  "fetchedAt": 1793329904150
 }
