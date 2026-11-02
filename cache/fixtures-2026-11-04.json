@@ -1,6 +1,91 @@
 {
   "date": "2026-11-04",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1793588286272
+  "fixtures": [
+    {
+      "id": 17428213,
+      "date": "2026-11-04T09:00:00.000Z",
+      "player1": {
+        "id": 338500,
+        "name": "Arthur Fils",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 238300,
+        "name": "Tomaš Machač",
+        "countryAcr": "CZ"
+      },
+      "tournament": {
+        "id": 2404,
+        "name": "Paris",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17428224,
+      "date": "2026-11-04T10:00:00.000Z",
+      "player1": {
+        "id": 57163,
+        "name": "Alexander Zverev",
+        "countryAcr": "DE"
+      },
+      "player2": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT"
+      },
+      "tournament": {
+        "id": 2404,
+        "name": "Paris",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17428214,
+      "date": "2026-11-04T10:00:00.000Z",
+      "player1": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE"
+      },
+      "player2": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2404,
+        "name": "Paris",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 3,
+  "fetchedAt": 1793640600554
 }
