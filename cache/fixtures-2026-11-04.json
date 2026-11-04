@@ -59,7 +59,7 @@
     },
     {
       "id": 17428220,
-      "date": "2026-11-04T11:10:00.000Z",
+      "date": "2026-11-04T11:20:00.000Z",
       "player1": {
         "id": 335102,
         "name": "Luca Van Assche",
@@ -87,7 +87,7 @@
     },
     {
       "id": 17428225,
-      "date": "2026-11-04T11:30:00.000Z",
+      "date": "2026-11-04T11:45:00.000Z",
       "player1": {
         "id": 138546,
         "name": "Tommy Paul",
@@ -97,34 +97,6 @@
         "id": 338890,
         "name": "Daniel Merida",
         "countryAcr": "ES"
-      },
-      "tournament": {
-        "id": 2404,
-        "name": "Paris",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17428214,
-      "date": "2026-11-04T12:20:00.000Z",
-      "player1": {
-        "id": 322082,
-        "name": "Ignacio Buse",
-        "countryAcr": "PE"
-      },
-      "player2": {
-        "id": 163504,
-        "name": "Daniil Medvedev",
-        "countryAcr": "RU"
       },
       "tournament": {
         "id": 2404,
@@ -171,7 +143,7 @@
     },
     {
       "id": 17428200,
-      "date": "2026-11-04T12:40:00.000Z",
+      "date": "2026-11-04T12:55:00.000Z",
       "player1": {
         "id": 169496,
         "name": "Tomas Martin Etcheverry",
@@ -198,8 +170,36 @@
       }
     },
     {
+      "id": 17428214,
+      "date": "2026-11-04T13:45:00.000Z",
+      "player1": {
+        "id": 322082,
+        "name": "Ignacio Buse",
+        "countryAcr": "PE"
+      },
+      "player2": {
+        "id": 163504,
+        "name": "Daniil Medvedev",
+        "countryAcr": "RU"
+      },
+      "tournament": {
+        "id": 2404,
+        "name": "Paris",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
       "id": 17428208,
-      "date": "2026-11-04T13:40:00.000Z",
+      "date": "2026-11-04T14:45:00.000Z",
       "player1": {
         "id": 14882,
         "name": "Novak Djokovic",
@@ -227,7 +227,7 @@
     },
     {
       "id": 17428228,
-      "date": "2026-11-04T13:50:00.000Z",
+      "date": "2026-11-04T15:15:00.000Z",
       "player1": {
         "id": 145130,
         "name": "Alex Molčan",
@@ -254,36 +254,8 @@
       }
     },
     {
-      "id": 17428198,
-      "date": "2026-11-04T14:30:00.000Z",
-      "player1": {
-        "id": 125006,
-        "name": "Nuno Borges",
-        "countryAcr": "PT"
-      },
-      "player2": {
-        "id": 90080,
-        "name": "Karen Khachanov",
-        "countryAcr": "RU"
-      },
-      "tournament": {
-        "id": 2404,
-        "name": "Paris",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 3,
-          "name": "Masters 1000"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
       "id": 17428223,
-      "date": "2026-11-04T15:00:00.000Z",
+      "date": "2026-11-04T16:00:00.000Z",
       "player1": {
         "id": 221515,
         "name": "Thiago Agustin Tirante",
@@ -311,7 +283,7 @@
     },
     {
       "id": 17428227,
-      "date": "2026-11-04T15:40:00.000Z",
+      "date": "2026-11-04T16:10:00.000Z",
       "player1": {
         "id": 112783,
         "name": "Matteo Berrettini",
@@ -321,6 +293,34 @@
         "id": 185388,
         "name": "Ugo Humbert",
         "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2404,
+        "name": "Paris",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 3,
+          "name": "Masters 1000"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17428198,
+      "date": "2026-11-04T16:15:00.000Z",
+      "player1": {
+        "id": 125006,
+        "name": "Nuno Borges",
+        "countryAcr": "PT"
+      },
+      "player2": {
+        "id": 90080,
+        "name": "Karen Khachanov",
+        "countryAcr": "RU"
       },
       "tournament": {
         "id": 2404,
@@ -395,5 +395,5 @@
     }
   ],
   "count": 14,
-  "fetchedAt": 1793763319456
+  "fetchedAt": 1793807419935
 }
