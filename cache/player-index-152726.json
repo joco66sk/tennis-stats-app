@@ -1,6 +1,326 @@
 {
-  "Clay": [],
+  "Clay": [
+    {
+      "id": "11849840",
+      "date": "2023-11-29",
+      "tournamentId": 11849840,
+      "homeId": 152726,
+      "tournamentName": "Maia, Portugal",
+      "opponentId": 95801,
+      "opponentName": "Andrea Vavassori",
+      "won": false,
+      "result": "2-6 3-6"
+    },
+    {
+      "id": "11862620",
+      "date": "2023-11-28",
+      "tournamentId": 11862620,
+      "homeId": 71950,
+      "tournamentName": "Maia, Portugal",
+      "opponentId": 71950,
+      "opponentName": "Sebastian Fanselow",
+      "won": true,
+      "result": "3-6 6-3 6-4"
+    },
+    {
+      "id": "11859836",
+      "date": "2023-11-27",
+      "tournamentId": 11859836,
+      "homeId": 152726,
+      "tournamentName": "Maia, Portugal",
+      "opponentId": 208160,
+      "opponentName": "Aleksandr Braynin",
+      "won": true,
+      "result": "5-7 6-1 6-3"
+    },
+    {
+      "id": "11858033",
+      "date": "2023-11-26",
+      "tournamentId": 11858033,
+      "homeId": 152726,
+      "tournamentName": "Maia, Portugal",
+      "opponentId": 409264,
+      "opponentName": "Tiago Pereira",
+      "won": true,
+      "result": "4-6 6-3 6-1"
+    },
+    {
+      "id": "11585750",
+      "date": "2023-08-27",
+      "tournamentId": 11585750,
+      "homeId": 185434,
+      "tournamentName": "Como, Italy",
+      "opponentId": 185434,
+      "opponentName": "Santiago Rodriguez Taverna",
+      "won": false,
+      "result": "5-7 6-7"
+    },
+    {
+      "id": "11463962",
+      "date": "2023-07-23",
+      "tournamentId": 11463962,
+      "homeId": 112987,
+      "tournamentName": "Zug, Switzerland",
+      "opponentId": 112987,
+      "opponentName": "Tim Handel",
+      "won": false,
+      "result": "4-6 6-4 6-7"
+    },
+    {
+      "id": "11436658",
+      "date": "2023-07-16",
+      "tournamentId": 11436658,
+      "homeId": 216488,
+      "tournamentName": "Bastad",
+      "opponentId": 216488,
+      "opponentName": "Filip Misolic",
+      "won": false,
+      "result": "6-0 1-6 4-6"
+    },
+    {
+      "id": "11421368",
+      "date": "2023-07-11",
+      "tournamentId": 11421368,
+      "homeId": 152726,
+      "tournamentName": "Braunschweig, Germany",
+      "opponentId": 48632,
+      "opponentName": "Taro Daniel",
+      "won": false,
+      "result": "4-6 6-7"
+    },
+    {
+      "id": "11419734",
+      "date": "2023-07-10",
+      "tournamentId": 11419734,
+      "homeId": 108767,
+      "tournamentName": "Braunschweig, Germany",
+      "opponentId": 108767,
+      "opponentName": "Benjamin Hassan",
+      "won": false,
+      "result": "6-7 7-5 3-6"
+    },
+    {
+      "id": "11417291",
+      "date": "2023-07-09",
+      "tournamentId": 11417291,
+      "homeId": 81275,
+      "tournamentName": "Braunschweig, Germany",
+      "opponentId": 81275,
+      "opponentName": "Oscar Jose Gutierrez",
+      "won": true,
+      "result": "6-0 2-6 6-3"
+    },
+    {
+      "id": "11399399",
+      "date": "2023-07-03",
+      "tournamentId": 11399399,
+      "homeId": 152726,
+      "tournamentName": "Karlsruhe, Germany",
+      "opponentId": 83263,
+      "opponentName": "Akira Santillan",
+      "won": false,
+      "result": "6-7 7-5 1-6"
+    },
+    {
+      "id": "11397874",
+      "date": "2023-07-02",
+      "tournamentId": 11397874,
+      "homeId": 152726,
+      "tournamentName": "Karlsruhe, Germany",
+      "opponentId": 372311,
+      "opponentName": "Jakub Nicod",
+      "won": true,
+      "result": "7-6 6-3"
+    },
+    {
+      "id": "11303348",
+      "date": "2023-06-01",
+      "tournamentId": 11303348,
+      "homeId": 152726,
+      "tournamentName": "Troisdorf, Germany",
+      "opponentId": 232615,
+      "opponentName": "Oleksii Krutykh",
+      "won": false,
+      "result": "6-1 1-6 4-6"
+    },
+    {
+      "id": "11318406",
+      "date": "2023-05-30",
+      "tournamentId": 11318406,
+      "homeId": 216488,
+      "tournamentName": "Troisdorf, Germany",
+      "opponentId": 216488,
+      "opponentName": "Filip Misolic",
+      "won": true,
+      "result": "7-5 4-6 6-4"
+    },
+    {
+      "id": "11316479",
+      "date": "2023-05-29",
+      "tournamentId": 11316479,
+      "homeId": 16564,
+      "tournamentName": "Troisdorf, Germany",
+      "opponentId": 16564,
+      "opponentName": "Jose Pereira",
+      "won": false,
+      "result": "4-6 6-4 3-6"
+    },
+    {
+      "id": "11314525",
+      "date": "2023-05-28",
+      "tournamentId": 11314525,
+      "homeId": 41473,
+      "tournamentName": "Troisdorf, Germany",
+      "opponentId": 41473,
+      "opponentName": "Kenny De Schepper",
+      "won": true,
+      "result": "6-2 1-6 6-1"
+    },
+    {
+      "id": "11232762",
+      "date": "2023-04-24",
+      "tournamentId": 11232762,
+      "homeId": 47295,
+      "tournamentName": "Ostrava, Czech Republic",
+      "opponentId": 47295,
+      "opponentName": "Guido Andreozzi",
+      "won": false,
+      "result": "3-6 3-6"
+    },
+    {
+      "id": "11230766",
+      "date": "2023-04-23",
+      "tournamentId": 11230766,
+      "homeId": 197502,
+      "tournamentName": "Ostrava, Czech Republic",
+      "opponentId": 197502,
+      "opponentName": "Robert Galloway",
+      "won": true,
+      "result": "7-6 6-4"
+    },
+    {
+      "id": "10450066",
+      "date": "2022-07-10",
+      "tournamentId": 10450066,
+      "homeId": 15434,
+      "tournamentName": "Bastad",
+      "opponentId": 15434,
+      "opponentName": "Fabio Fognini",
+      "won": false,
+      "result": "4-6 4-6"
+    },
+    {
+      "id": "7903783",
+      "date": "2018-07-29",
+      "tournamentId": 7903783,
+      "homeId": 55787,
+      "tournamentName": "Sopot  Poland ",
+      "opponentId": 55787,
+      "opponentName": "Renzo Olivo",
+      "won": false,
+      "result": "4-6 6-7"
+    },
+    {
+      "id": "7903280",
+      "date": "2018-07-28",
+      "tournamentId": 7903280,
+      "homeId": 16852,
+      "tournamentName": "Sopot  Poland ",
+      "opponentId": 16852,
+      "opponentName": "Volodoymyr Uzhylovskyi",
+      "won": true,
+      "result": "7-6 2-1"
+    },
+    {
+      "id": "7890874",
+      "date": "2018-07-21",
+      "tournamentId": 7890874,
+      "homeId": 57035,
+      "tournamentName": "Tampere, Finland",
+      "opponentId": 57035,
+      "opponentName": "T. Kocevar-Desman",
+      "won": false,
+      "result": "4-6 6-7"
+    },
+    {
+      "id": "7864319",
+      "date": "2018-07-08",
+      "tournamentId": 7864319,
+      "homeId": 152726,
+      "tournamentName": "Bastad, Sweden Men Singles",
+      "opponentId": 113859,
+      "opponentName": "Antoine Bellier",
+      "won": true,
+      "result": "6-2 6-4"
+    },
+    {
+      "id": "7866200",
+      "date": "2018-07-08",
+      "tournamentId": 7866200,
+      "homeId": 121172,
+      "tournamentName": "Bastad, Sweden Men Singles",
+      "opponentId": 121172,
+      "opponentName": "Jules Okala",
+      "won": false,
+      "result": "0-6 0-6"
+    },
+    {
+      "id": "7862134",
+      "date": "2018-07-07",
+      "tournamentId": 7862134,
+      "homeId": 38915,
+      "tournamentName": "Bastad, Sweden Men Singles",
+      "opponentId": 38915,
+      "opponentName": "Ruben Gonzalez",
+      "won": true,
+      "result": "6-2 6-1"
+    },
+    {
+      "id": "7830787",
+      "date": "2018-06-16",
+      "tournamentId": 7830787,
+      "homeId": 152726,
+      "tournamentName": "Poprad Tatry, Slovakia Men Singles",
+      "opponentId": 199395,
+      "opponentName": "Vit Kopřiva",
+      "won": false,
+      "result": "1-6 1-6"
+    },
+    {
+      "id": "7471121",
+      "date": "2017-07-08",
+      "tournamentId": 7471121,
+      "homeId": 152726,
+      "tournamentName": "Bastad, Sweden Men Singles",
+      "opponentId": 53671,
+      "opponentName": "Lucas Renard",
+      "won": false,
+      "result": "6-2 2-6 6-7"
+    }
+  ],
   "Hard": [
+    {
+      "id": "11953665",
+      "date": "2024-01-07",
+      "tournamentId": 11953665,
+      "homeId": 152726,
+      "tournamentName": "Oeiras 2, Portugal",
+      "opponentId": 325141,
+      "opponentName": "Samuel Vincent Ruggeri",
+      "won": false,
+      "result": "3-6 2-6"
+    },
+    {
+      "id": "11823037",
+      "date": "2023-11-15",
+      "tournamentId": 11823037,
+      "homeId": 50847,
+      "tournamentName": "Danderyd, Sweden",
+      "opponentId": 50847,
+      "opponentName": "Denis Yevseyev",
+      "won": false,
+      "result": "2-6 3-6"
+    },
     {
       "id": "11742818",
       "date": "2023-10-16",
@@ -11,6 +331,116 @@
       "opponentName": "Miomir Kecmanović",
       "won": false,
       "result": "4-6 2-6"
+    },
+    {
+      "id": "11609184",
+      "date": "2023-09-04",
+      "tournamentId": 11609184,
+      "homeId": 152726,
+      "tournamentName": "Cassis, France ",
+      "opponentId": 58877,
+      "opponentName": "Ramkumar Ramanathan",
+      "won": false,
+      "result": "3-6 0-6"
+    },
+    {
+      "id": "11606408",
+      "date": "2023-09-03",
+      "tournamentId": 11606408,
+      "homeId": 152726,
+      "tournamentName": "Cassis, France ",
+      "opponentId": 399578,
+      "opponentName": "Hugo Cardinaud",
+      "won": true,
+      "result": "6-3 6-1"
+    },
+    {
+      "id": "11129076",
+      "date": "2023-03-23",
+      "tournamentId": 11129076,
+      "homeId": 152726,
+      "tournamentName": "Las Franquesas del Valles, Spain",
+      "opponentId": 38517,
+      "opponentName": "Marco Trungelliti",
+      "won": false,
+      "result": "3-6 1-6"
+    },
+    {
+      "id": "11145846",
+      "date": "2023-03-21",
+      "tournamentId": 11145846,
+      "homeId": 152726,
+      "tournamentName": "Las Franquesas del Valles, Spain",
+      "opponentId": 76251,
+      "opponentName": "Bogdan Bobrov",
+      "won": true,
+      "result": "6-4 5-7 6-1"
+    },
+    {
+      "id": "11143214",
+      "date": "2023-03-20",
+      "tournamentId": 11143214,
+      "homeId": 249463,
+      "tournamentName": "Las Franquesas del Valles, Spain",
+      "opponentId": 249463,
+      "opponentName": "Bruno Pujol Navarro",
+      "won": true,
+      "result": "6-2 6-3"
+    },
+    {
+      "id": "11140832",
+      "date": "2023-03-19",
+      "tournamentId": 11140832,
+      "homeId": 101319,
+      "tournamentName": "Las Franquesas del Valles, Spain",
+      "opponentId": 101319,
+      "opponentName": "I. de Rueda de Genover",
+      "won": true,
+      "result": "6-2 3-6 6-3"
+    },
+    {
+      "id": "11072365",
+      "date": "2023-02-20",
+      "tournamentId": 11072365,
+      "homeId": 152726,
+      "tournamentName": "Rovereto, Italy",
+      "opponentId": 58371,
+      "opponentName": "Mathias Bourgue",
+      "won": false,
+      "result": "3-6 6-7"
+    },
+    {
+      "id": "11071163",
+      "date": "2023-02-19",
+      "tournamentId": 11071163,
+      "homeId": 180446,
+      "tournamentName": "Rovereto, Italy",
+      "opponentId": 180446,
+      "opponentName": "Louis Wessels",
+      "won": true,
+      "result": "6-2 6-2"
+    },
+    {
+      "id": "11059988",
+      "date": "2023-02-14",
+      "tournamentId": 11059988,
+      "homeId": 107357,
+      "tournamentName": "Cherbourg, France",
+      "opponentId": 107357,
+      "opponentName": "Hugo Grenier",
+      "won": false,
+      "result": "5-7 4-6"
+    },
+    {
+      "id": "11058325",
+      "date": "2023-02-13",
+      "tournamentId": 11058325,
+      "homeId": 152726,
+      "tournamentName": "Cherbourg, France",
+      "opponentId": 339606,
+      "opponentName": "Antoine Ghibaudo",
+      "won": true,
+      "result": "6-3 4-6 6-4"
     },
     {
       "id": "11056243",
@@ -24,6 +454,105 @@
       "result": "7-6 2-6 7-6"
     },
     {
+      "id": "11043803",
+      "date": "2023-02-06",
+      "tournamentId": 11043803,
+      "homeId": 95829,
+      "tournamentName": "Vilnius, Lithuania",
+      "opponentId": 95829,
+      "opponentName": "Julian Ocleppo",
+      "won": false,
+      "result": "3-6 6-7"
+    },
+    {
+      "id": "11040197",
+      "date": "2023-02-05",
+      "tournamentId": 11040197,
+      "homeId": 56087,
+      "tournamentName": "Vilnius, Lithuania",
+      "opponentId": 56087,
+      "opponentName": "Aleksandre Metreveli",
+      "won": true,
+      "result": "6-4 7-6"
+    },
+    {
+      "id": "10978452",
+      "date": "2023-01-09",
+      "tournamentId": 10978452,
+      "homeId": 349089,
+      "tournamentName": "Oeiras 2, Portugal",
+      "opponentId": 349089,
+      "opponentName": "Dino Prižmić",
+      "won": false,
+      "result": "3-6 0-6"
+    },
+    {
+      "id": "10977339",
+      "date": "2023-01-08",
+      "tournamentId": 10977339,
+      "homeId": 152726,
+      "tournamentName": "Oeiras 2, Portugal",
+      "opponentId": 107625,
+      "opponentName": "Maxime Janvier",
+      "won": true,
+      "result": "6-3 6-4"
+    },
+    {
+      "id": "10962804",
+      "date": "2023-01-01",
+      "tournamentId": 10962804,
+      "homeId": 41473,
+      "tournamentName": "Oeiras, Portugal",
+      "opponentId": 41473,
+      "opponentName": "Kenny De Schepper",
+      "won": false,
+      "result": "3-6 3-6"
+    },
+    {
+      "id": "10864255",
+      "date": "2022-11-07",
+      "tournamentId": 10864255,
+      "homeId": 152726,
+      "tournamentName": "Bratislava, Slovakia",
+      "opponentId": 16192,
+      "opponentName": "Illya Marchenko",
+      "won": false,
+      "result": "2-6 3-6"
+    },
+    {
+      "id": "10862656",
+      "date": "2022-11-06",
+      "tournamentId": 10862656,
+      "homeId": 108767,
+      "tournamentName": "Bratislava, Slovakia",
+      "opponentId": 108767,
+      "opponentName": "Benjamin Hassan",
+      "won": true,
+      "result": "7-6 6-1"
+    },
+    {
+      "id": "10787127",
+      "date": "2022-10-16",
+      "tournamentId": 10787127,
+      "homeId": 152726,
+      "tournamentName": "Stockholm",
+      "opponentId": 113859,
+      "opponentName": "Antoine Bellier",
+      "won": false,
+      "result": "3-6 6-7"
+    },
+    {
+      "id": "10780311",
+      "date": "2022-10-15",
+      "tournamentId": 10780311,
+      "homeId": 15432,
+      "tournamentName": "Stockholm",
+      "opponentId": 15432,
+      "opponentName": "Pablo Andujar",
+      "won": true,
+      "result": "6-3 6-2"
+    },
+    {
       "id": "10682046",
       "date": "2022-09-13",
       "tournamentId": 10682046,
@@ -33,9 +562,53 @@
       "opponentName": "Ugo Humbert",
       "won": false,
       "result": "3-6 4-6"
+    },
+    {
+      "id": "10680084",
+      "date": "2022-09-12",
+      "tournamentId": 10680084,
+      "homeId": 152726,
+      "tournamentName": "Rennes, France",
+      "opponentId": 108755,
+      "opponentName": "Hendrik Jebens",
+      "won": true,
+      "result": "6-4 6-4"
+    },
+    {
+      "id": "10678314",
+      "date": "2022-09-11",
+      "tournamentId": 10678314,
+      "homeId": 152726,
+      "tournamentName": "Rennes, France",
+      "opponentId": 47966,
+      "opponentName": "Albano Olivetti",
+      "won": true,
+      "result": "6-4 6-4"
+    },
+    {
+      "id": "8022768",
+      "date": "2018-10-14",
+      "tournamentId": 8022768,
+      "homeId": 16174,
+      "tournamentName": "Stockholm",
+      "opponentId": 16174,
+      "opponentName": "Peter Polansky",
+      "won": false,
+      "result": "4-6 1-6"
+    },
+    {
+      "id": "7621959",
+      "date": "2017-10-15",
+      "tournamentId": 7621959,
+      "homeId": 47770,
+      "tournamentName": "Stockholm",
+      "opponentId": 47770,
+      "opponentName": "Marton Fucsovics",
+      "won": false,
+      "result": "0-6 3-6"
     }
   ],
   "Grass": [],
-  "updatedAt": 1792288342372,
+  "updatedAt": 1793999374168,
   "playerName": "Karl Friberg"
 }
