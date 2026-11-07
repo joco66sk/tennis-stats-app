@@ -1,6 +1,91 @@
 {
   "date": "2026-11-08",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1794022076238
+  "fixtures": [
+    {
+      "id": 17511571,
+      "date": "2026-11-08T15:00:00.000Z",
+      "player1": {
+        "id": 83661,
+        "name": "Elias Ymer",
+        "countryAcr": "SE"
+      },
+      "player2": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17511569,
+      "date": "2026-11-08T16:10:00.000Z",
+      "player1": {
+        "id": 221515,
+        "name": "Thiago Agustin Tirante",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 126356,
+        "name": "Jaume Munar",
+        "countryAcr": "ES"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17512431,
+      "date": "2026-11-08T11:00:00.000Z",
+      "player1": {
+        "id": 26204,
+        "name": "Nikoloz Basilashvili",
+        "countryAcr": "GE"
+      },
+      "player2": {
+        "id": 124916,
+        "name": "Borna Gojo",
+        "countryAcr": "HR"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Qualification Final"
+      }
+    }
+  ],
+  "count": 3,
+  "fetchedAt": 1794061659826
 }
