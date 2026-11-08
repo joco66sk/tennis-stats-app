@@ -2,62 +2,6 @@
   "date": "2026-11-09",
   "fixtures": [
     {
-      "id": 17511575,
-      "date": "2026-11-09T11:00:00.000Z",
-      "player1": {
-        "id": 63606,
-        "name": "Arthur Rinderknech",
-        "countryAcr": "FR"
-      },
-      "player2": {
-        "id": 198592,
-        "name": "Miomir Kecmanović",
-        "countryAcr": "RS"
-      },
-      "tournament": {
-        "id": 2382,
-        "name": "Stockholm",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17511574,
-      "date": "2026-11-09T11:00:00.000Z",
-      "player1": {
-        "id": 283070,
-        "name": "Holger Rune",
-        "countryAcr": "DK"
-      },
-      "player2": {
-        "id": 170946,
-        "name": "Zizou Bergs",
-        "countryAcr": "BE"
-      },
-      "tournament": {
-        "id": 2382,
-        "name": "Stockholm",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
       "id": 17511572,
       "date": "2026-11-09T11:10:00.000Z",
       "player1": {
@@ -97,6 +41,34 @@
         "id": 95935,
         "name": "Cameron Norrie",
         "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17520223,
+      "date": "2026-11-09T12:20:00.000Z",
+      "player1": {
+        "id": 238300,
+        "name": "Tomaš Machač",
+        "countryAcr": "CZ"
+      },
+      "player2": {
+        "id": 124916,
+        "name": "Borna Gojo",
+        "countryAcr": "HR"
       },
       "tournament": {
         "id": 2382,
@@ -168,8 +140,36 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 17520224,
+      "date": "2026-11-09T18:10:00.000Z",
+      "player1": {
+        "id": 341148,
+        "name": "Leo Borg",
+        "countryAcr": "SE"
+      },
+      "player2": {
+        "id": 321791,
+        "name": "Toby Samuel",
+        "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
     }
   ],
   "count": 6,
-  "fetchedAt": 1794148597519
+  "fetchedAt": 1794168049341
 }

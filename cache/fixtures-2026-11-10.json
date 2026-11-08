@@ -1,6 +1,119 @@
 {
   "date": "2026-11-10",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1794148598317
+  "fixtures": [
+    {
+      "id": 17511575,
+      "date": "2026-11-10T10:00:00.000Z",
+      "player1": {
+        "id": 63606,
+        "name": "Arthur Rinderknech",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 198592,
+        "name": "Miomir Kecmanović",
+        "countryAcr": "RS"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17511574,
+      "date": "2026-11-10T10:00:00.000Z",
+      "player1": {
+        "id": 283070,
+        "name": "Holger Rune",
+        "countryAcr": "DK"
+      },
+      "player2": {
+        "id": 170946,
+        "name": "Zizou Bergs",
+        "countryAcr": "BE"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17520227,
+      "date": "2026-11-10T10:00:00.000Z",
+      "player1": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17520226,
+      "date": "2026-11-10T10:00:00.000Z",
+      "player1": {
+        "id": 335102,
+        "name": "Luca Van Assche",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 264344,
+        "name": "Aleksandr Shevchenko",
+        "countryAcr": "KZ"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    }
+  ],
+  "count": 4,
+  "fetchedAt": 1794168050116
 }
