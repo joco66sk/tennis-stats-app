@@ -1,6 +1,63 @@
 {
   "date": "2026-11-11",
-  "fixtures": [],
-  "count": 0,
-  "fetchedAt": 1794194275202
+  "fixtures": [
+    {
+      "id": 17489487,
+      "date": "2026-11-11T12:00:00.000Z",
+      "player1": {
+        "id": 124916,
+        "name": "Borna Gojo",
+        "countryAcr": "HR"
+      },
+      "player2": {
+        "id": 185388,
+        "name": "Ugo Humbert",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17489491,
+      "date": "2026-11-11T12:00:00.000Z",
+      "player1": {
+        "id": 136042,
+        "name": "Taylor Fritz",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 95935,
+        "name": "Cameron Norrie",
+        "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    }
+  ],
+  "count": 2,
+  "fetchedAt": 1794246808849
 }

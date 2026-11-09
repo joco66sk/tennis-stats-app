@@ -2,8 +2,120 @@
   "date": "2026-11-10",
   "fixtures": [
     {
-      "id": 17511575,
+      "id": 17520226,
       "date": "2026-11-10T10:00:00.000Z",
+      "player1": {
+        "id": 335102,
+        "name": "Luca Van Assche",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 264344,
+        "name": "Aleksandr Shevchenko",
+        "countryAcr": "KZ"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17525794,
+      "date": "2026-11-10T12:00:00.000Z",
+      "player1": {
+        "id": 15894,
+        "name": "Adrian Mannarino",
+        "countryAcr": "FR"
+      },
+      "player2": {
+        "id": 264344,
+        "name": "Aleksandr Shevchenko",
+        "countryAcr": "KZ"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17489489,
+      "date": "2026-11-10T12:00:00.000Z",
+      "player1": {
+        "id": 406728,
+        "name": "Alex Michelsen",
+        "countryAcr": "US"
+      },
+      "player2": {
+        "id": 248861,
+        "name": "Juan Manuel Cerundolo",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
+      "id": 17520227,
+      "date": "2026-11-10T13:10:00.000Z",
+      "player1": {
+        "id": 104847,
+        "name": "Lorenzo Sonego",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 90798,
+        "name": "Quentin Halys",
+        "countryAcr": "FR"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 32"
+      }
+    },
+    {
+      "id": 17511575,
+      "date": "2026-11-10T14:20:00.000Z",
       "player1": {
         "id": 63606,
         "name": "Arthur Rinderknech",
@@ -31,7 +143,7 @@
     },
     {
       "id": 17511574,
-      "date": "2026-11-10T10:00:00.000Z",
+      "date": "2026-11-10T17:00:00.000Z",
       "player1": {
         "id": 283070,
         "name": "Holger Rune",
@@ -56,64 +168,8 @@
       "round": {
         "name": "Round of 32"
       }
-    },
-    {
-      "id": 17520227,
-      "date": "2026-11-10T10:00:00.000Z",
-      "player1": {
-        "id": 104847,
-        "name": "Lorenzo Sonego",
-        "countryAcr": "IT"
-      },
-      "player2": {
-        "id": 90798,
-        "name": "Quentin Halys",
-        "countryAcr": "FR"
-      },
-      "tournament": {
-        "id": 2382,
-        "name": "Stockholm",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
-    },
-    {
-      "id": 17520226,
-      "date": "2026-11-10T10:00:00.000Z",
-      "player1": {
-        "id": 335102,
-        "name": "Luca Van Assche",
-        "countryAcr": "FR"
-      },
-      "player2": {
-        "id": 264344,
-        "name": "Aleksandr Shevchenko",
-        "countryAcr": "KZ"
-      },
-      "tournament": {
-        "id": 2382,
-        "name": "Stockholm",
-        "court": {
-          "name": "Hard"
-        },
-        "rank": {
-          "id": 2,
-          "name": "ATP250"
-        }
-      },
-      "round": {
-        "name": "Round of 32"
-      }
     }
   ],
-  "count": 4,
-  "fetchedAt": 1794194274495
+  "count": 6,
+  "fetchedAt": 1794246808136
 }
