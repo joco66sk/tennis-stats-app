@@ -114,6 +114,34 @@
       }
     },
     {
+      "id": 17489488,
+      "date": "2026-11-10T13:30:00.000Z",
+      "player1": {
+        "id": 169496,
+        "name": "Tomas Martin Etcheverry",
+        "countryAcr": "AR"
+      },
+      "player2": {
+        "id": 221515,
+        "name": "Thiago Agustin Tirante",
+        "countryAcr": "AR"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
+    },
+    {
       "id": 17511575,
       "date": "2026-11-10T14:20:00.000Z",
       "player1": {
@@ -168,8 +196,36 @@
       "round": {
         "name": "Round of 32"
       }
+    },
+    {
+      "id": 17489477,
+      "date": "2026-11-10T18:10:00.000Z",
+      "player1": {
+        "id": 261015,
+        "name": "Lorenzo Musetti",
+        "countryAcr": "IT"
+      },
+      "player2": {
+        "id": 321791,
+        "name": "Toby Samuel",
+        "countryAcr": "GB"
+      },
+      "tournament": {
+        "id": 2382,
+        "name": "Stockholm",
+        "court": {
+          "name": "Hard"
+        },
+        "rank": {
+          "id": 2,
+          "name": "ATP250"
+        }
+      },
+      "round": {
+        "name": "Round of 16"
+      }
     }
   ],
-  "count": 6,
-  "fetchedAt": 1794246808136
+  "count": 8,
+  "fetchedAt": 1794286572877
 }
